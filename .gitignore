@@ -1,5 +1,6 @@
 # Large data, not committed
 axes_pipeline/data/
+stimulus_pipeline/data/
 
 # Python caches and environments
 __pycache__/
