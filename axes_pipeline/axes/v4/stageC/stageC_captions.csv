@@ -1,0 +1,345 @@
+text_id,axis_id,text,text_class,caption,how,restored_from_context,form_changes,added,deleted,content_deleted,quote,phrase_ids,documents,n_phrases
+T0701,A01,The world around me seems very fake,not_specific,as if the world around seems fake,"review: suggestion, claude (convention 1,3,4)",,,as if,me very,,The world around me seems very fake,PIENKOS2022-P0114,PIENKOS2022,1
+T0838,A01,happening but not really happening,not_specific,,review: dropped (not_scene),,,,,,happening but not really happening,SIMEON2023-P0259,SIMEON2023,1
+T0504,A01,It was all unreal,not_specific,as if it was all unreal,"review: suggestion, claude (convention 1)",,,as if,,,It was all unreal,SIMEON2023-P0258,SIMEON2023,1
+T0284,A01,everything else past or present or connected to a name is an illusion,not_specific,,review: dropped (not_scene),,,,,,everything else past or present or connected to a name is an illusion,SIMEON2023-P0481,SIMEON2023,1
+T0237,A01,a feeling of unreality,not_specific,unreal,review: claude,,unreality->unreal,,a feeling of,feeling,a feeling of unreality,MIYAZONO2021-P0030;SIMEON2023-P0118,MIYAZONO2021;SIMEON2023,2
+T0999,A01,as if these were “unreal”,not_specific,as if these were unreal,agreed,,,,,,as if these were “unreal”,FINO2024-P0002,FINO2024,1
+T0408,A01,Everything besides my limbs feel like they don’t have much of a presence,not_specific,as if everything besides the limbs feels like they don't have much of a presence,"review: suggestion, claude (convention 1,3)",,they->the feel->feels,as if,my,,Everything besides my limbs feel like they don't have much of a presence,CIAUNICA2022-P0179,CIAUNICA2022,1
+T0295,A01,I don’t feel like the world exists,not_specific,,dropped by both (outside / outside),,,,,,I don't feel like the world exists,PIENKOS2022-P0141,PIENKOS2022,1
+T0648,A01,"other people, objects, and the world around them are not real",not_specific,"as if other people, objects, and the world around them are not real","review: suggestion, claude (convention 1)",,,as if,,,"other people, objects, and the world around them are not real",SIMEON2023-P0152,SIMEON2023,1
+T0711,A01,Life seems unreal,not_specific,,review: dropped (not_scene),,,,,,Life seems unreal,SIMEON2023-P0143,SIMEON2023,1
+T0178,A01,the world around is unreal,not_specific,as if the world around is unreal,"review: suggestion, claude (convention 1)",,,as if,,,the world around is unreal,FINO2024-P0007,FINO2024,1
+T0206,A01,a copy of the real world but not quite real,mixed,like a copy of the real world but not quite real,agreed,,,like,,,a copy of the real world but not quite real,CIAUNICA2022-P0026,CIAUNICA2022,1
+T0430,A01,You seem unreal,not_specific,,review: dropped (not_scene),,,,,,You seem unreal,SIMEON2023-P0669,SIMEON2023,1
+T0678,A01,unreal,not_specific,unreal,agreed,,,,,,unreal,CIAUNICA2022-P0064;DILKES2024-P0009;MIYAZONO2021-P0074;PIENKOS2022-P0130;SIERRA2001-P0004;SIERRA2001-P0008;SIMEON2023-P0001;SIMEON2023-P0037;SIMEON2023-P0040;SIMEON2023-P0164;SIMEON2023-P0396;SIMEON2023-P0435,CIAUNICA2022;DILKES2024;MIYAZONO2021;PIENKOS2022;SIERRA2001;SIMEON2023,12
+T0302,A01,unreality,not_specific,unreal,review: claude,,unreality->unreal,,,,unreality,DILKES2024-P0001;DILKES2024-P0003;MIYAZONO2021-P0001;MIYAZONO2021-P0010;MIYAZONO2021-P0024;SIMEON2023-P0220;SIMEON2023-P0224,DILKES2024;MIYAZONO2021;SIMEON2023,7
+T0281,A01,detached or unreal,not_specific,detached or unreal,agreed,,,,,,detached or unreal,RADOVIC2002-P0018,RADOVIC2002,1
+T0388,A01,it feels like it is not,not_specific,,dropped by both (cannot / cannot),,,,,,it feels like it is not,PIENKOS2022-P0140,PIENKOS2022,1
+T0690,A01,all was unreal,not_specific,like all was unreal,agreed,,,like,,,all was unreal,SIMEON2023-P0263,SIMEON2023,1
+T1111,A01,somewhere on the border of the real and the unreal,not_specific,as if it is somewhere on the border of the real and the unreal,"review: suggestion, claude (convention 1)",,,as if it is,,,somewhere on the border of the real and the unreal,SIMEON2023-P0628,SIMEON2023,1
+T0139,A01,the self or the world is judged as unreal,not_specific,,review: dropped (not_scene),,,,,,the self or the world is judged as unreal,RADOVIC2002-P0062,RADOVIC2002,1
+T0074,A01,something real that is unreal at the same time,not_specific,like something real that is unreal at the same time,agreed,,,like,,,something real that is unreal at the same time,FINO2024-P0015,FINO2024,1
+T0333,A01,things around them seem unreal,not_specific,as if things around them seem unreal,"review: suggestion, claude (convention 1)",,,as if,,,things around them seem unreal,TANAKA2018-P0012,TANAKA2018,1
+T1063,A01,not quite real,not_specific,not quite real,agreed,,,,,,not quite real,SIMEON2023-P0314,SIMEON2023,1
+T0485,A01,the outside world is unreal,not_specific,as if the outside world is unreal,"review: suggestion, claude (convention 1)",,,as if,,,the outside world is unreal,SIMEON2023-P0038;TANAKA2018-P0007,SIMEON2023;TANAKA2018,2
+T0260,A01,unreal and pointless,not_specific,unreal and pointless,agreed,,,,,,unreal and pointless,SIMEON2023-P0409,SIMEON2023,1
+T1109,A01,feelings of ‘unreality’,not_specific,unreal,review: claude,,unreality->unreal,,feelings of,,feelings of 'unreality',TANAKA2018-P0019,TANAKA2018,1
+T0375,A01,the unreality of things,not_specific,like the unreality of things,agreed,,,like,,,the unreality of things,SIMEON2023-P0122,SIMEON2023,1
+T0162,A01,unreal or detached from yourself or your surroundings,not_specific,,review: dropped (not_scene),,,,,,unreal or detached from yourself or your surroundings,SIMEON2023-P0276,SIMEON2023,1
+T0421,A01,the loss of the feeling of reality,not_specific,,review: dropped (not_scene),,,,,,the loss of the feeling of reality,SIMEON2023-P0093,SIMEON2023,1
+T0486,A01,things become unreal,not_specific,as if things become unreal,"review: suggestion, claude (convention 1)",,,as if,,,things become unreal,SIMEON2023-P0107,SIMEON2023,1
+T0086,A01,everything is an illusion,not_specific,as if everything is an illusion,"review: suggestion, claude (convention 1)",,,as if,,,everything is an illusion,DILKES2024-P0125,DILKES2024,1
+T1078,A01,like there is a zipper to unzip,vision,like there is a zipper to unzip,agreed,,,,,,like there is a zipper to unzip,SIMEON2023-P0025,SIMEON2023,1
+T0993,A01,the world feeling unreal,not_specific,as if the world feels unreal,review: your caption,,feeling->feels,as if,,,the world feeling unreal,CIAUNICA2022-P0023,CIAUNICA2022,1
+T0869,A01,renders it unreal,not_specific,rendered unreal,review: claude,,renders->rendered,,it,,renders it unreal,SIMEON2023-P0128,SIMEON2023,1
+T0313,A01,so unreal,not_specific,so unreal,agreed,,,,,,so unreal,RADOVIC2002-P0005;RADOVIC2002-P0034,RADOVIC2002,2
+T1060,A01,strong feelings of unreality of oneself and the surrounding world,not_specific,,review: dropped (not_scene),,,,,,strong feelings of unreality of oneself and the surrounding world,PIENKOS2022-P0007,PIENKOS2022,1
+T0271,A01,unreal and detached from the self or from surroundings,not_specific,,review: dropped (not_scene),,,,,,unreal and detached from the self or from surroundings,SIMEON2023-P0570,SIMEON2023,1
+T0410,A01,the world does not exist,not_specific,,dropped by both (outside / outside),,,,,,the world does not exist,SIMEON2023-P0277,SIMEON2023,1
+T0793,A01,an effectual experience of unreality that does not have a factual ground,not_specific,,review: dropped (not_scene),,,,,,an effectual experience of unreality that does not have a factual ground,SIMEON2023-P0653,SIMEON2023,1
+T0871,A01,the world is unreal,not_specific,as if the world is unreal,"review: suggestion, claude (convention 1)",,,as if,,,the world is unreal,RADOVIC2002-P0066,RADOVIC2002,1
+T0147,A01,day-to-day life as unreal,not_specific,,review: dropped (not_scene),,,,,,day-to-day life as unreal,SIMEON2023-P0680,SIMEON2023,1
+T0370,A01,None of this is real!,not_specific,as if none of this is real,"review: suggestion, claude (convention 1)",,,as if,,,None of this is real!,TANAKA2018-P0020,TANAKA2018,1
+T0298,A01,artificial,not_specific,artificial,review: claude,,,,,,artificial,DILKES2024-P0040;SIMEON2023-P0051;SIMEON2023-P0232,DILKES2024;SIMEON2023,3
+T1054,A01,constantly at risk of turning “unreal,not_specific,constantly at risk of turning unreal,agreed,,,,,,constantly at risk of turning “unreal,FINO2024-P0006,FINO2024,1
+T0125,A01,nothing was real,not_specific,like nothing was real,agreed,,,like,,,nothing was real,DILKES2024-P0089;TANAKA2018-P0022,DILKES2024;TANAKA2018,2
+T0138,A01,The world feels fake or deadened,not_specific,as if the world feels fake or deadened,"review: suggestion, claude (convention 1)",,,as if,,,The world feels fake or deadened,PIENKOS2022-P0009,PIENKOS2022,1
+T1090,A01,Nothing exists or is real,not_specific,as if nothing exists or is real,"review: suggestion, claude (convention 1)",,,as if,,,Nothing exists or is real,SIMEON2023-P0574,SIMEON2023,1
+T0414,A01,a loss or lack of reality,not_specific,,review: dropped (not_scene),,,,,,a loss or lack of reality,PIENKOS2022-P0042,PIENKOS2022,1
+T0720,A01,reality is just not there,not_specific,as if reality is not there,"review: suggestion, claude (convention 1,4)",,,as if,just,,reality is just not there,PIENKOS2022-P0097,PIENKOS2022,1
+T0636,A01,‘as-if ’ unreality,not_specific,,review: dropped (not_scene),,,,,,'as-if ' unreality,SIMEON2023-P0655,SIMEON2023,1
+T0994,A01,feelings of unreality,not_specific,unreal,review: claude,,unreality->unreal,,feelings of,,feelings of unreality,SIERRA2001-P0009,SIERRA2001,1
+T0860,A01,without substance,not_specific,as if it is without substance,agreed,,,as if it is,,,without substance,SIMEON2023-P0398,SIMEON2023,1
+T0775,A01,the unreality of external objects,not_specific,like the unreality of external objects,agreed,,,like,,,the unreality of external objects,MIYAZONO2021-P0146,MIYAZONO2021,1
+T0267,A01,unreality or detachment from one’s surroundings,not_specific,unreal or detached from one's surroundings,review: claude,,unreality->unreal detachment->detached,,,,unreality or detachment from one's surroundings,SIMEON2023-P0222,SIMEON2023,1
+T0479,A01,“unreality” concerning visual modality,vision,,review: dropped (not_scene),,,,,,“unreality” concerning visual modality,SIERRA2001-P0010,SIERRA2001,1
+T0376,A01,nothing seems real,not_specific,as if nothing seems real,"review: suggestion, claude (convention 1)",,,as if,,,nothing seems real,RADOVIC2002-P0007,RADOVIC2002,1
+T0404,A01,glimpse behind the façade of life,not_specific,,review: dropped (not_scene),,,,,,glimpse behind the façade of life,SIMEON2023-P0485,SIMEON2023,1
+T0799,A01,the world were made of cellophane or glass,mixed,as if the world were made of cellophane or glass,agreed,,,as if,,,the world were made of cellophane or glass,SIMEON2023-P0191,SIMEON2023,1
+T0401,A01,things around me don’t feel real,not_specific,as if the things around don't feel real,"review: suggestion, claude (convention 1,3)",,,as if the,me,,things around me don't feel real,DILKES2024-P0123,DILKES2024,1
+T1062,A01,the boundaries of the real and the unreal are momentarily suspended,not_specific,,review: dropped (not_scene),,,,,,the boundaries of the real and the unreal are momentarily suspended,SIMEON2023-P0392,SIMEON2023,1
+T1033,A01,complaints of unreality are directed toward some aspect of (or the whole) external world,not_specific,,review: dropped (not_scene),,,,,,complaints of unreality are directed toward some aspect of (or the whole) external world,RADOVIC2002-P0021,RADOVIC2002,1
+T0069,A01,made of cellophane,mixed,made of cellophane,agreed,,,,,,made of cellophane,MIYAZONO2021-P0067,MIYAZONO2021,1
+T0545,A01,experiences of unreality or detachment with respect to surroundings,not_specific,unreal or detached with respect to surroundings,review: claude,,unreality->unreal detachment->detached,,experiences of,,experiences of unreality or detachment with respect to surroundings,DILKES2024-P0005,DILKES2024,1
+T0211,A01,not as real as before,not_specific,not as real as before,agreed,,,,,,not as real as before,RADOVIC2002-P0011,RADOVIC2002,1
+T0714,A01,making everything feel less real and more distant,not_specific,as if it is making everything feel less real and more distant,"review: suggestion, claude (convention 1)",,,as if it is,,,making everything feel less real and more distant,PIENKOS2022-P0147,PIENKOS2022,1
+T0721,A01,experiences of unreality,not_specific,unreal,review: claude,,unreality->unreal,,experiences of,,experiences of unreality,PIENKOS2022-P0002,PIENKOS2022,1
+T0307,A01,the illusion which lives with us day by day,not_specific,,review: dropped (not_scene),,,,,,the illusion which lives with us day by day,SIMEON2023-P0400,SIMEON2023,1
+T1110,A01,the present seems so unreal,not_specific,as if the present seems unreal,"review: suggestion, claude (convention 1,4)",,,as if,so,,the present seems so unreal,PIENKOS2022-P0111,PIENKOS2022,1
+T0654,A01,some real thing behind appearances,not_specific,like some real thing behind appearances,agreed,,,like,,,some real thing behind appearances,SIMEON2023-P0429,SIMEON2023,1
+T0042,A01,a dimming or blurring both of the person’s sense of identity and of his sense of reality,not_specific,,review: dropped (not_scene),,,,,,a dimming or blurring both of the person's sense of identity and of his sense of reality,RADOVIC2002-P0065,RADOVIC2002,1
+T0555,A01,Sometimes I think people do not exist,not_specific,,dropped by both (outside / outside),,,,,,Sometimes I think people do not exist,CIAUNICA2022-P0184,CIAUNICA2022,1
+T0001,A01,in a place of ‘unreality’,not_specific,as if seen in a place of unreality,agreed,,,as if seen,,,in a place of 'unreality',TANAKA2018-P0095,TANAKA2018,1
+T0693,A01,it seems a bit fake,not_specific,fake,review: your caption,,,,it seems a bit,,it seems a bit fake,PIENKOS2022-P0075,PIENKOS2022,1
+T1133,A01,things feel unreal to me,not_specific,as if things feel unreal,"review: suggestion, claude (convention 1)",,,as if,to me,,things feel unreal to me,SIMEON2023-P0009,SIMEON2023,1
+T1026,A01,a blurring of reality,not_specific,like a blurring of reality,agreed,,,like,,,a blurring of reality,SIMEON2023-P0142,SIMEON2023,1
+T1106,A01,Everything seems unreal,not_specific,as if everything seems unreal,"review: suggestion, claude (convention 1)",,,as if,,,Everything seems unreal,SIMEON2023-P0670,SIMEON2023,1
+T0573,A01,nothing exists,not_specific,,dropped by both (outside / outside),,,,,,nothing exists,DILKES2024-P0124,DILKES2024,1
+T0071,A01,"static, half-true",not_specific,"static, half-true",review: claude,,,,,,"static, half-true",SIMEON2023-P0415,SIMEON2023,1
+T0083,A01,the world disappearing under my feet,not_specific,like the world disappearing under the feet,"review: suggestion, claude (convention 3)",,,like,my,,the world disappearing under my feet,RADOVIC2002-P0067,RADOVIC2002,1
+T0675,A01,it could not really be happening,not_specific,,review: dropped (not_scene),,,,,,it could not really be happening,SIMEON2023-P0321,SIMEON2023,1
+T0884,A01,Everything seemed intensely unreal,not_specific,as if everything seemed intensely unreal,"review: suggestion, claude (convention 1)",,,as if,,,Everything seemed intensely unreal,SIMEON2023-P0315,SIMEON2023,1
+T0626,A01,the world feels unreal,not_specific,as if the world feels unreal,"review: suggestion, claude (convention 1)",,,as if,,,the world feels unreal,RADOVIC2002-P0008,RADOVIC2002,1
+T0614,A01,which aspect of the self or the world it is that feels unreal,not_specific,,dropped by both (cannot / cannot),,,,,,which aspect of the self or the world it is that feels unreal,RADOVIC2002-P0023,RADOVIC2002,1
+T0088,A01,appear meaningless and fake,not_specific,,review: dropped (not_scene),,,,,,appear meaningless and fake,PIENKOS2022-P0039,PIENKOS2022,1
+T0364,A01,life feels unreal,not_specific,,review: dropped (not_scene),,,,,,life feels unreal,SIMEON2023-P0145,SIMEON2023,1
+T1011,A01,"whatever appears in its experience, it is nothing more than unreality",not_specific,,review: dropped (not_scene),,,,,,"whatever appears in its experience, it is nothing more than unreality",TANAKA2018-P0035,TANAKA2018,1
+T0559,A01,things seem unreal,not_specific,as if things seem unreal,"review: suggestion, claude (convention 1)",,,as if,,,things seem unreal,CIAUNICA2022-P0013,CIAUNICA2022,1
+T0665,A01,nothing is real,not_specific,as if nothing is real,"review: suggestion, claude (convention 1)",,,as if,,,nothing is real,SIMEON2023-P0012,SIMEON2023,1
+T0334,A01,they don’t seem real,mixed,as if they don't seem real,"review: suggestion, claude (convention 1)",,,as if,,,they don't seem real,MIYAZONO2021-P0050,MIYAZONO2021,1
+T0771,A02,her life was literally a dream,not_specific,,review: dropped (not_scene),,,,,,her life was literally a dream,SIMEON2023-P0274,SIMEON2023,1
+T0996,A02,just the dream of a sleeping god,not_specific,like the dream of a sleeping god,agreed,,,like,just,,just the dream of a sleeping god,CIAUNICA2022-P0182,CIAUNICA2022,1
+T0535,A02,everything seems like a dream.,not_specific,as if everything seems like a dream,"review: suggestion, claude (convention 1)",,,as if,,,everything seems like a dream.,SIMEON2023-P0679,SIMEON2023,1
+T1068,A02,a dreamlike scene,not_specific,like a dreamlike scene,agreed,,,like,,,a dreamlike scene,RADOVIC2002-P0059,RADOVIC2002,1
+T0934,A02,"you wake up from a dream, into another dream",not_specific,,review: dropped (not_scene),,,,,,"you wake up from a dream, into another dream",SIMEON2023-P0677,SIMEON2023,1
+T0133,A02,looks sort of dreamy,vision,dreamy,review: claude,,,,looks sort of,,looks sort of dreamy,DILKES2024-P0044,DILKES2024,1
+T0091,A02,dream-like,not_specific,dream-like,agreed,,,,,,dream-like,FINO2024-P0003;SIMEON2023-P0101;SIMEON2023-P0147;TANAKA2018-P0016,FINO2024;SIMEON2023;TANAKA2018,4
+T0853,A02,dream,not_specific,like a dream,agreed,,,like a,,,dream,DILKES2024-P0077;MIYAZONO2021-P0037;MIYAZONO2021-P0078;SIMEON2023-P0044;SIMEON2023-P0047;SIMEON2023-P0228;SIMEON2023-P0311,DILKES2024;MIYAZONO2021;SIMEON2023,7
+T0898,A02,this could only be a dream,not_specific,as if this could only be a dream,"review: suggestion, claude (convention 1)",,,as if,,,this could only be a dream,SIMEON2023-P0261,SIMEON2023,1
+T0768,A02,it was all a dream,not_specific,as if it was all a dream,"review: suggestion, claude (convention 1)",,,as if,,,it was all a dream,SIMEON2023-P0257,SIMEON2023,1
+T0263,A02,dream state,not_specific,like a dream state,agreed,,,like a,,,dream state,SIMEON2023-P0146,SIMEON2023,1
+T0637,A02,like in a dream,not_specific,as if seen in a dream,"review: suggestion, chatgpt (convention 2)",,,as if seen,like,,like in a dream,CIAUNICA2022-P0008;DILKES2024-P0107;SIMEON2023-P0649,CIAUNICA2022;DILKES2024;SIMEON2023,3
+T1073,A02,living “in a dream”,not_specific,like living in a dream,agreed,,,like,,,living “in a dream”,FINO2024-P0019,FINO2024,1
+T0756,A02,living in a dream or a movie,not_specific,like living in a dream or a movie,agreed,,,like,,,living in a dream or a movie,RADOVIC2002-P0014;SIERRA2001-P0001,RADOVIC2002;SIERRA2001,2
+T0249,A02,my dream kind of autopilot world,not_specific,like a dream kind of autopilot world,review: claude,,,like a,my,,my dream kind of autopilot world,PIENKOS2022-P0115,PIENKOS2022,1
+T0072,A02,Like Inception but in real life,not_specific,like Inception but in real life,review: claude,,,,,,Like Inception but in real life,SIMEON2023-P0678,SIMEON2023,1
+T0452,A02,the whole situation was dreamlike,not_specific,as if the whole situation was dreamlike,"review: suggestion, claude (convention 1)",,,as if,,,the whole situation was dreamlike,RADOVIC2002-P0056,RADOVIC2002,1
+T0471,A02,dreamlike,not_specific,dreamlike,agreed,,,,,,dreamlike,DILKES2024-P0010,DILKES2024,1
+T0305,A02,its all dream,not_specific,as if it is all a dream,review: claude,,,as if it is a,its,,its all dream,DILKES2024-P0023,DILKES2024,1
+T0580,A02,all the places he had been now seemed like dreams,not_specific,,review: dropped (not_scene),,,,,,all the places he had been now seemed like dreams,SIMEON2023-P0072,SIMEON2023,1
+T0487,A02,i was in a dream,not_specific,as if seen in a dream,"review: suggestion, claude (convention 2,3)",,,as if seen,i was,,i was in a dream,DILKES2024-P0090,DILKES2024,1
+T0232,A02,the world looks like a dream,vision,as if the world looks like a dream,"review: suggestion, claude (convention 1)",,,as if,,,the world looks like a dream,TANAKA2018-P0017,TANAKA2018,1
+T0530,A02,not able to pick out one specific item in the scenario that carries the dreamlikeness,not_specific,,review: dropped (not_scene),,,,,,not able to pick out one specific item in the scenario that carries the dreamlikeness,RADOVIC2002-P0057,RADOVIC2002,1
+T0235,A02,akin to living in a dream,not_specific,akin to living in a dream,agreed,,,,,,akin to living in a dream,PIENKOS2022-P0043,PIENKOS2022,1
+T0205,A02,as if they are living in dreams,not_specific,as if living in dreams,review: your caption,,,,they are,,as if they are living in dreams,TANAKA2018-P0097,TANAKA2018,1
+T0722,A02,like if I were in a dream,not_specific,as if seen in a dream,review: your caption,,,as seen,like i were,,like if I were in a dream,CIAUNICA2022-P0185,CIAUNICA2022,1
+T0682,A02,a dream,not_specific,like a dream,agreed,,,like,,,a dream,DILKES2024-P0071;PIENKOS2022-P0108,DILKES2024;PIENKOS2022,2
+T0867,A02,dreams feel more real than waking life,not_specific,,review: dropped (not_scene),,,,,,dreams feel more real than waking life,SIMEON2023-P0211,SIMEON2023,1
+T0783,A02,feeling as if in a dream,not_specific,as if in a dream,review: claude,,,,feeling,,feeling as if in a dream,SIMEON2023-P0129,SIMEON2023,1
+T0883,A02,life being real or a dream,not_specific,,review: dropped (not_scene),,,,,,life being real or a dream,SIMEON2023-P0384,SIMEON2023,1
+T0145,A02,in a dream,not_specific,as if seen in a dream,agreed,,,as if seen,,,in a dream,DILKES2024-P0021;DILKES2024-P0038;DILKES2024-P0110;DILKES2024-P0157;SIMEON2023-P0304,DILKES2024;SIMEON2023,5
+T0174,A02,cannot tell reality from my dreams,not_specific,,review: dropped (not_scene),,,,,,cannot tell reality from my dreams,DILKES2024-P0024,DILKES2024,1
+T0197,A02,special dream quality or particular dream atmosphere,not_specific,like a special dream quality or particular dream atmosphere,review: chatgpt,,,like a,,,special dream quality or particular dream atmosphere,RADOVIC2002-P0061,RADOVIC2002,1
+T0395,A02,living in a dream,not_specific,like living in a dream,agreed,,,like,,,living in a dream,DILKES2024-P0007;DILKES2024-P0019;DILKES2024-P0087,DILKES2024,3
+T0115,A02,feel dreamlike,not_specific,dreamlike,agreed,,,,feel,,feel dreamlike,RADOVIC2002-P0052,RADOVIC2002,1
+T0168,A02,I’m dreaming…,not_specific,dreamlike,review: chatgpt,,dreaming->dreamlike,,i'm,,I'm dreaming...,TANAKA2018-P0021,TANAKA2018,1
+T0277,A02,a strange feeling of being in a dream,not_specific,like being in a dream,review: your caption,,,like,strange feeling of,strange feeling,a strange feeling of being in a dream,SIMEON2023-P0121,SIMEON2023,1
+T0903,A02,this must be a dream,not_specific,as if this must be a dream,agreed,,,as if,,,this must be a dream,SIMEON2023-P0320,SIMEON2023,1
+T0998,A02,as though in a dream,not_specific,as though in a dream,agreed,,,,,,as though in a dream,DILKES2024-P0006,DILKES2024,1
+T0794,A02,as if living in a continuous dream,not_specific,as if living in a continuous dream,agreed,,,,,,as if living in a continuous dream,SIMEON2023-P0086,SIMEON2023,1
+T0117,A02,dream state come true,not_specific,like a dream state come true,agreed,,,like a,,,dream state come true,SIMEON2023-P0010,SIMEON2023,1
+T0610,A02,more like our dreams than is usually the case,not_specific,more like dreams than is usually the case,"review: suggestion, claude (convention 3)",,,,our,,more like our dreams than is usually the case,RADOVIC2002-P0058,RADOVIC2002,1
+T0942,A03,some sort of Truman Show plot,not_specific,like some sort of Truman Show plot,agreed,,,like,,,some sort of Truman Show plot,SIMEON2023-P0672,SIMEON2023,1
+T0992,A03,kind of like a camera,vision,like a camera,agreed,,,,kind of,,kind of like a camera,PIENKOS2022-P0082,PIENKOS2022,1
+T0908,A03,picture,vision,like a picture,agreed,,,like a,,,picture,MIYAZONO2021-P0090;MIYAZONO2021-P0129,MIYAZONO2021,2
+T1046,A03,a fictional narrative,not_specific,like a fictional narrative,agreed,,,like,,,a fictional narrative,PIENKOS2022-P0109,PIENKOS2022,1
+T0605,A03,as if I were looking at a picture,vision,as if looking at a picture,"review: suggestion, claude (convention 3)",,,,i were,,as if I were looking at a picture,MIYAZONO2021-P0072;SIMEON2023-P0159,MIYAZONO2021;SIMEON2023,2
+T0347,A03,real life “seemed like a movie”,not_specific,as if real life seemed like a movie,review: claude,,,as if,,,real life “seemed like a movie”,SIMEON2023-P0139,SIMEON2023,1
+T0122,A03,looking at a “picture”,vision,as if looking at a picture,"review: suggestion, chatgpt (convention 1)",,,as if,,,looking at a “picture”,MIYAZONO2021-P0082,MIYAZONO2021,1
+T0170,A03,like camera vision,vision,like camera vision,agreed,,,,,,like camera vision,PIENKOS2022-P0083,PIENKOS2022,1
+T0988,A03,a movie,not_specific,like a movie,agreed,,,like,,,a movie,DILKES2024-P0008;DILKES2024-P0088,DILKES2024,2
+T0013,A03,picked up out of my real world and put down into a film set,mixed,as if picked up out of the real world and put down into a film set,agreed,,,as if the,my,,picked up out of my real world and put down into a film set,CIAUNICA2022-P0025,CIAUNICA2022,1
+T1135,A03,the whole world is a work of art,not_specific,as if the whole world is a work of art,"review: suggestion, claude (convention 1)",,,as if,,,the whole world is a work of art,SIMEON2023-P0430,SIMEON2023,1
+T0084,A03,life as if it were played like a film in a cinema,vision,as if it were life played like a film in a cinema,review: chatgpt,,,,,,life as if it were played like a film in a cinema,SIMEON2023-P0063,SIMEON2023,1
+T0340,A03,living in a movie,not_specific,like living in a movie,agreed,,,like,,,living in a movie,DILKES2024-P0070,DILKES2024,1
+T1030,A03,seems just a painted picture,vision,like a painted picture,agreed,,,like,seems just,,seems just a painted picture,SIERRA2001-P0011,SIERRA2001,1
+T1010,A03,a “movie”,vision,like a movie,agreed,,,like,,,a “movie”,MIYAZONO2021-P0083,MIYAZONO2021,1
+T0978,A04,glitches in the system,not_specific,like glitches in the system,agreed,,,like,,,glitches in the system,SIMEON2023-P0676,SIMEON2023,1
+T0103,A04,a video game,not_specific,like a video game,agreed,,,like,,,a video game,DILKES2024-P0172,DILKES2024,1
+T0909,A04,in a simulation,not_specific,as if seen in a simulation,agreed,,,as if seen,,,in a simulation,DILKES2024-P0111,DILKES2024,1
+T1125,A04,a hologram,vision,like a hologram,agreed,,,like,,,a hologram,DILKES2024-P0136,DILKES2024,1
+T0937,A04,a simulation,not_specific,like a simulation,agreed,,,like,,,a simulation,DILKES2024-P0145;DILKES2024-P0173,DILKES2024,2
+T0323,A04,a really bad sims game,not_specific,like a really bad sims game,agreed,,,like,,,a really bad sims game,DILKES2024-P0101;DILKES2024-P0146,DILKES2024,2
+T0719,A04,playing a video game inside a video game,not_specific,like playing a video game inside a video game,agreed,,,like,,,playing a video game inside a video game,DILKES2024-P0098,DILKES2024,1
+T0750,A04,the life game,not_specific,like the life game,review: claude,,,like,,,the life game,DILKES2024-P0100,DILKES2024,1
+T0979,A04,like running scripts,not_specific,,review: dropped (not_scene),,,,,,like running scripts,DILKES2024-P0084,DILKES2024,1
+T0372,A04,some sort of simulation,not_specific,like some sort of simulation,agreed,,,like,,,some sort of simulation,SIMEON2023-P0674,SIMEON2023,1
+T0666,A04,suffocated by the surroundings of “false digital surrogacy,not_specific,,review: dropped (not_scene),,,,,,suffocated by the surroundings of “false digital surrogacy,SIMEON2023-P0647,SIMEON2023,1
+T0315,A04,in a digital world,not_specific,as if seen in a digital world,agreed,,,as if seen,,,in a digital world,DILKES2024-P0171,DILKES2024,1
+T1070,A04,being inside a video game,not_specific,like being inside a video game,agreed,,,like,,,being inside a video game,DILKES2024-P0095,DILKES2024,1
+T0212,A04,another layer of simulation,not_specific,like another layer of simulation,agreed,,,like,,,another layer of simulation,DILKES2024-P0097,DILKES2024,1
+T0960,A04,‘reality’ feel more like a vr headset,not_specific,as if reality feels more like a vr headset,agreed,,feel->feels,as if,,,'reality' feel more like a vr headset,DILKES2024-P0067,DILKES2024,1
+T1108,A04,being in a video game,not_specific,like being in a video game,agreed,,,like,,,being in a video game,DILKES2024-P0143;DILKES2024-P0144,DILKES2024,2
+T1124,A04,the matrix,not_specific,like the matrix,agreed,,,like,,,the matrix,DILKES2024-P0102;DILKES2024-P0147;DILKES2024-P0175,DILKES2024,3
+T0392,A04,playing the life game,not_specific,like playing the life game,review: claude,,,like,,,playing the life game,DILKES2024-P0148;DILKES2024-P0176,DILKES2024,2
+T0457,A04,"as if I’m in some fake, virtual reality",not_specific,"as if in some fake, virtual reality",agreed,,,,i'm,,"as if I'm in some fake, virtual reality",SIMEON2023-P0675,SIMEON2023,1
+T0269,A04,unreal world of these simulations,not_specific,like the unreal world of these simulations,agreed,,,like the,,,unreal world of these simulations,SIMEON2023-P0652,SIMEON2023,1
+T0834,A04,other digital worlds,not_specific,like other digital worlds,agreed,,,like,,,other digital worlds,DILKES2024-P0099,DILKES2024,1
+T1052,A04,a cyberspace with allowed doses of human interaction,not_specific,,review: dropped (not_scene),,,,,,a cyberspace with allowed doses of human interaction,SIMEON2023-P0663,SIMEON2023,1
+T1115,A04,being unplugged from the matrix,not_specific,like being unplugged from the matrix,agreed,,,like,,,being unplugged from the matrix,DILKES2024-P0103,DILKES2024,1
+T0330,A04,new virtual reality,not_specific,like a new virtual reality,agreed,,,like a,,,new virtual reality,SIMEON2023-P0657,SIMEON2023,1
+T1126,A04,a sims game,not_specific,like a sims game,agreed,,,like,,,a sims game,DILKES2024-P0174,DILKES2024,1
+T0695,A04,being in a simulation,not_specific,like being in a simulation,agreed,,,like,,,being in a simulation,DILKES2024-P0096;DILKES2024-P0109,DILKES2024,2
+T1023,A04,nonexistent virtuality,not_specific,like nonexistent virtuality,agreed,,,like,,,nonexistent virtuality,SIMEON2023-P0664,SIMEON2023,1
+T0186,A05,a foot thick steel barrier,not_specific,as if behind a foot thick steel barrier,review: your caption,,,as if behind,,,a foot thick steel barrier,DILKES2024-P0105,DILKES2024,1
+T0561,A05,being in a bubble,not_specific,like being in a bubble,agreed,,,like,,,being in a bubble,TANAKA2018-P0013,TANAKA2018,1
+T0606,A05,something stands in the way,mixed,as if something stands in the way,agreed,,,as if,,,something stands in the way,CIAUNICA2022-P0207,CIAUNICA2022,1
+T0958,A05,separated by a glass wall,not_specific,as if separated by a glass wall,"review: suggestion, chatgpt (convention 1)",,,as if,,,separated by a glass wall,DILKES2024-P0073,DILKES2024,1
+T0943,A05,as if there was a wall between me and the external world,not_specific,as if there was a wall between me and the external world,agreed,,,,,,as if there was a wall between me and the external world,SIMEON2023-P0092,SIMEON2023,1
+T0082,A05,separated from the world by an invisible barrier,not_specific,as if separated from the world by an invisible barrier,"review: suggestion, chatgpt (convention 1)",,,as if,,,separated from the world by an invisible barrier,TANAKA2018-P0014,TANAKA2018,1
+T0464,A05,glass,mixed,as if seen through glass,"review: suggestion, claude (convention 2)",,,as if seen through,,,glass,MIYAZONO2021-P0068;SIMEON2023-P0050;SIMEON2023-P0231,MIYAZONO2021;SIMEON2023,3
+T0321,A05,a screen or a film between the participant and the rest of the world,not_specific,as if seen through a screen or a film between the participant and the rest of the world,"review: suggestion, claude (convention 2)",,,as if seen through,,,a screen or a film between the participant and the rest of the world,PIENKOS2022-P0048,PIENKOS2022,1
+T0030,A05,like glass over my eyes,vision,like glass over the eyes,"review: suggestion, claude (convention 3)",,,the,my,,like glass over my eyes,SIMEON2023-P0026,SIMEON2023,1
+T0433,A05,like I’m wearing glasses that I can’t see through,vision,like I'm wearing glasses that I can't see through,agreed,,,,,,like I'm wearing glasses that I can't see through,SIMEON2023-P0024,SIMEON2023,1
+T0741,A05,a glass wall between the individual and the world around,not_specific,as if seen through a glass wall between the individual and the world around,"review: suggestion, claude (convention 2)",,,as if seen through,,,a glass wall between the individual and the world around,DILKES2024-P0017,DILKES2024,1
+T1128,A05,there’s a wall that separates me from everybody else,not_specific,,review: dropped (not_scene),,,,,,there's a wall that separates me from everybody else,CIAUNICA2022-P0055,CIAUNICA2022,1
+T0527,A05,I see a veil,vision,as if seen through a veil,"review: suggestion, claude (convention 2)",,see->seen,as if through,i,,I see a veil,MIYAZONO2021-P0111,MIYAZONO2021,1
+T0791,A05,an invisible barrier between themself and the world,not_specific,as if seen through an invisible barrier between themself and the world,"review: suggestion, claude (convention 2)",,,as if seen through,,,an invisible barrier between themself and the world,DILKES2024-P0164,DILKES2024,1
+T0700,A05,a barrier that separates me from reality,not_specific,as if seen through a barrier that separates me from reality,"review: suggestion, claude (convention 2)",,,as if seen through,,,a barrier that separates me from reality,DILKES2024-P0113,DILKES2024,1
+T0918,A05,a crack in the pane of glass,vision,like a crack in the pane of glass,agreed,,,like,,,a crack in the pane of glass,CIAUNICA2022-P0199,CIAUNICA2022,1
+T0306,A05,the cracked window itself as a visible observable entity,vision,like the cracked window itself as a visible observable entity,agreed,,,like,,,the cracked window itself as a visible observable entity,CIAUNICA2022-P0200,CIAUNICA2022,1
+T0931,A05,an invisible barrier between the self and the world,not_specific,as if seen through an invisible barrier between the self and the world,"review: suggestion, claude (convention 2)",,,as if seen through,,,an invisible barrier between the self and the world,DILKES2024-P0064;DILKES2024-P0074,DILKES2024,2
+T0439,A05,the hallucinatory experience of a veil,vision,,review: dropped (not_scene),,,,,,the hallucinatory experience of a veil,MIYAZONO2021-P0103,MIYAZONO2021,1
+T0953,A05,having a pane of glass,not_specific,like having a pane of glass,agreed,,,like,,,having a pane of glass,CIAUNICA2022-P0212,CIAUNICA2022,1
+T0702,A05,feeling surrounded by an invisible wall,not_specific,as if surrounded by an invisible wall,"review: suggestion, chatgpt (convention 1)",,,as if,feeling,,feeling surrounded by an invisible wall,CIAUNICA2022-P0215,CIAUNICA2022,1
+T1071,A05,invisible wall,not_specific,as if seen through an invisible wall,"review: suggestion, claude (convention 2)",,,as if seen through an,,,invisible wall,DILKES2024-P0093;DILKES2024-P0150;DILKES2024-P0168,DILKES2024,3
+T0986,A05,cast a deep veil over everything,vision,as if a deep veil is cast over everything,agreed,,,as if is,,,cast a deep veil over everything,MIYAZONO2021-P0063;SIMEON2023-P0187,MIYAZONO2021;SIMEON2023,2
+T0661,A05,a “veil”,not_specific,as if seen through a veil,"review: suggestion, claude (convention 2)",,,as if seen through,,,a “veil”,MIYAZONO2021-P0080,MIYAZONO2021,1
+T0578,A05,sealed in plastic wrap,not_specific,as if sealed in plastic wrap,"review: suggestion, chatgpt (convention 1)",,,as if,,,sealed in plastic wrap,MIYAZONO2021-P0064;SIMEON2023-P0188,MIYAZONO2021;SIMEON2023,2
+T1084,A05,like a wall before me,not_specific,like a wall before me,agreed,,,,,,like a wall before me,RADOVIC2002-P0004;RADOVIC2002-P0033,RADOVIC2002,2
+T0758,A05,screen,not_specific,as if seen through a screen,"review: suggestion, claude (convention 2)",,,as if seen through a,,,screen,DILKES2024-P0149;DILKES2024-P0169,DILKES2024,2
+T1079,A05,living in a bubble,not_specific,like living in a bubble,agreed,,,like,,,living in a bubble,CIAUNICA2022-P0214,CIAUNICA2022,1
+T0320,A05,almost like i’m in a bubble,not_specific,as if in a bubble,"review: suggestion, chatgpt (convention 1)",,,as if,almost like i'm,,almost like i'm in a bubble,DILKES2024-P0045,DILKES2024,1
+T0647,A05,behind a cloudy glass wall permanently,not_specific,as if seen behind a cloudy glass wall permanently,agreed,,,as if seen,,,behind a cloudy glass wall permanently,DILKES2024-P0065,DILKES2024,1
+T1082,A05,as through a veil,vision,as if seen through a veil,agreed,,,if seen,,,as through a veil,MIYAZONO2021-P0041,MIYAZONO2021,1
+T0607,A05,a glass wall that separates you from the world,not_specific,as if seen through a glass wall that separates you from the world,"review: suggestion, claude (convention 2)",,,as if seen through,,,a glass wall that separates you from the world,DILKES2024-P0068,DILKES2024,1
+T0308,A05,a veil placed over your senses,not_specific,as if seen through a veil placed over your senses,"review: suggestion, claude (convention 2)",,,as if seen through,,,a veil placed over your senses,DILKES2024-P0051,DILKES2024,1
+T0056,A05,an invisible film,not_specific,as if seen through an invisible film,"review: suggestion, claude (convention 2)",,,as if seen through,,,an invisible film,SIMEON2023-P0492,SIMEON2023,1
+T0101,A05,an obscuring barrier,not_specific,as if seen through an obscuring barrier,"review: suggestion, claude (convention 2)",,,as if seen through,,,an obscuring barrier,DILKES2024-P0050;DILKES2024-P0056,DILKES2024,2
+T1069,A05,veil,mixed,as if seen through a veil,"review: suggestion, claude (convention 2)",,,as if seen through a,,,veil,DILKES2024-P0166;MIYAZONO2021-P0089;MIYAZONO2021-P0098;MIYAZONO2021-P0108;SIMEON2023-P0230,DILKES2024;MIYAZONO2021;SIMEON2023,5
+T0470,A05,a “veil” between himself and the real world,mixed,as if seen through a veil between himself and the real world,"review: suggestion, claude (convention 2)",,,as if seen through,,,a “veil” between himself and the real world,SIMEON2023-P0124,SIMEON2023,1
+T0763,A05,surrounded by a glass wall,not_specific,as if surrounded by a glass wall,"review: suggestion, chatgpt (convention 1)",,,as if,,,surrounded by a glass wall,DILKES2024-P0075,DILKES2024,1
+T1049,A05,a glass wall between the individual and world around,not_specific,as if seen through a glass wall between the individual and world around,"review: suggestion, claude (convention 2)",,,as if seen through,,,a glass wall between the individual and world around,DILKES2024-P0080;MIYAZONO2021-P0040,DILKES2024;MIYAZONO2021,2
+T1095,A05,through a screen,mixed,as if seen through a screen,agreed,,,as if seen,,,through a screen,DILKES2024-P0116,DILKES2024,1
+T1047,A05,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,not_specific,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,review: claude,,,,,,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,SIMEON2023-P0095,SIMEON2023,1
+T0987,A05,watching life from behind glass,vision,like life watched from behind glass,review: chatgpt,,watching->watched,like,,,watching life from behind glass,DILKES2024-P0018,DILKES2024,1
+T0435,A05,punctured his cocoon,not_specific,,review: dropped (not_scene),,,,,,punctured his cocoon,SIMEON2023-P0616,SIMEON2023,1
+T0447,A05,living in a clear bubble,not_specific,like living in a clear bubble,agreed,,,like,,,living in a clear bubble,DILKES2024-P0047,DILKES2024,1
+T0916,A05,a “glass wall”,not_specific,as if seen through a glass wall,"review: suggestion, claude (convention 2)",,,as if seen through,,,a “glass wall”,MIYAZONO2021-P0081,MIYAZONO2021,1
+T0863,A05,perceive the outer landscape through the cracked window,vision,like the outer landscape perceived through the cracked window,agreed,,perceive->perceived,like,,,perceive the outer landscape through the cracked window,CIAUNICA2022-P0205,CIAUNICA2022,1
+T0318,A05,being trapped in a bubble,not_specific,like being trapped in a bubble,agreed,,,like,,,being trapped in a bubble,PIENKOS2022-P0044,PIENKOS2022,1
+T0227,A05,I feel as if there were a veil in front of me,not_specific,as if there were a veil in front of me,agreed,,,,i feel,,I feel as if there were a veil in front of me,MIYAZONO2021-P0113;MIYAZONO2021-P0115,MIYAZONO2021,2
+T0405,A05,separated from reality by a protective covering,not_specific,as if separated from reality by a protective covering,"review: suggestion, chatgpt (convention 1)",,,as if,,,separated from reality by a protective covering,SIMEON2023-P0419,SIMEON2023,1
+T0645,A05,enclosed in a kind of bubble,not_specific,as if enclosed in a kind of bubble,"review: suggestion, chatgpt (convention 1)",,,as if,,,enclosed in a kind of bubble,SIMEON2023-P0505,SIMEON2023,1
+T0266,A05,as if there were a veil,mixed,as if there were a veil,agreed,,,,,,as if there were a veil,MIYAZONO2021-P0039,MIYAZONO2021,1
+T0764,A05,as if the invisible envelope surrounding him was starting to melt,not_specific,as if the invisible envelope surrounding him was starting to melt,review: claude,,,,,,as if the invisible envelope surrounding him was starting to melt,SIMEON2023-P0611,SIMEON2023,1
+T0963,A05,a veil that was coming over my vision slowly,vision,like a veil that was coming over the vision slowly,"review: suggestion, claude (convention 3)",,,like the,my,,a veil that was coming over my vision slowly,DILKES2024-P0059,DILKES2024,1
+T0024,A05,thin veil,not_specific,as if seen through a thin veil,"review: suggestion, claude (convention 2)",,,as if seen through a,,,thin veil,SIMEON2023-P0493,SIMEON2023,1
+T0733,A05,being behind a screen,not_specific,like being behind a screen,agreed,,,like,,,being behind a screen,DILKES2024-P0115,DILKES2024,1
+T0296,A05,a bubble,not_specific,as if in a bubble,"review: suggestion, claude (convention 1)",,,as if in,,,a bubble,DILKES2024-P0165,DILKES2024,1
+T0550,A05,"“veil” interposed between one’s self, body and the world",not_specific,"as if seen through a veil interposed between one's self, body and the world","review: suggestion, claude (convention 2)",,,as if seen through a,,,"“veil” interposed between one's self, body and the world",CIAUNICA2022-P0213,CIAUNICA2022,1
+T0738,A05,come between real life and me,not_specific,,review: dropped (not_scene),,,,,,come between real life and me,SIMEON2023-P0404,SIMEON2023,1
+T0615,A05,as if there was a veil between me and the outside world,mixed,as if there was a veil between me and the outside world,agreed,,,,,,as if there was a veil between me and the outside world,SIMEON2023-P0165,SIMEON2023,1
+T0192,A05,a filter over my eyes,vision,as if seen through a filter over the eyes,"review: suggestion, claude (convention 2,3)",,,as if seen through the,my,,a filter over my eyes,DILKES2024-P0127,DILKES2024,1
+T0851,A05,an invisible wall,not_specific,as if seen through an invisible wall,"review: suggestion, claude (convention 2)",,,as if seen through,,,an invisible wall,DILKES2024-P0112,DILKES2024,1
+T0727,A05,less transparent,not_specific,less transparent,agreed,,,,,,less transparent,CIAUNICA2022-P0248,CIAUNICA2022,1
+T0848,A05,this veil between your eyes and the real world,vision,as if seen through this veil between your eyes and the real world,"review: suggestion, claude (convention 2)",,,as if seen through,,,this veil between your eyes and the real world,DILKES2024-P0055,DILKES2024,1
+T0152,A05,bubble,not_specific,as if in a bubble,"review: suggestion, claude (convention 1)",,,as if in a,,,bubble,DILKES2024-P0015;DILKES2024-P0078;MIYAZONO2021-P0038;MIYAZONO2021-P0079;SIMEON2023-P0048;SIMEON2023-P0229,DILKES2024;MIYAZONO2021;SIMEON2023,6
+T1098,A05,a veil between me and the outside world,not_specific,as if seen through a veil between me and the outside world,"review: suggestion, claude (convention 2)",,,as if seen through,,,a veil between me and the outside world,RADOVIC2002-P0019,RADOVIC2002,1
+T0976,A05,I see something like a veil,vision,as if seen through something like a veil,"review: suggestion, claude (convention 2)",,see->seen,as if through,i,,I see something like a veil,MIYAZONO2021-P0112,MIYAZONO2021,1
+T0389,A05,this veil separating me from everyone else,not_specific,,review: dropped (not_scene),,,,,,this veil separating me from everyone else,DILKES2024-P0057,DILKES2024,1
+T0865,A05,like an invisible wall,not_specific,like an invisible wall,agreed,,,,,,like an invisible wall,DILKES2024-P0114,DILKES2024,1
+T0974,A05,a veil,mixed,as if seen through a veil,"review: suggestion, claude (convention 2)",,,as if seen through,,,a veil,DILKES2024-P0016;DILKES2024-P0066;DILKES2024-P0079;SIMEON2023-P0049;SIMEON2023-P0084,DILKES2024;SIMEON2023,5
+T0526,A05,watching from inside a shell,mixed,as if watched from inside a shell,review: chatgpt,,watching->watched,as if,,,watching from inside a shell,CIAUNICA2022-P0178,CIAUNICA2022,1
+T1088,A05,as if seen through a veil,vision,as if seen through a veil,agreed,,,,,,as if seen through a veil,SIMEON2023-P0103,SIMEON2023,1
+T0923,A05,as if there were a veil between me and the outside world,mixed,as if there were a veil between me and the outside world,agreed,,,,,,as if there were a veil between me and the outside world,MIYAZONO2021-P0075,MIYAZONO2021,1
+T0755,A05,"What glass screen has, as it were, interposed itself between me",mixed,as if a glass screen has interposed itself,review: claude,,,if a,what it were between me,between,"What glass screen has, as it were, interposed itself between me",SIMEON2023-P0405,SIMEON2023,1
+T0604,A05,our access to the landscape more “opaque”,vision,as if access to the landscape is more opaque,"review: suggestion, claude (convention 3)",,,as if is,our,,our access to the landscape more “opaque”,CIAUNICA2022-P0203,CIAUNICA2022,1
+T0577,A05,through the window,vision,as if seen through the window,agreed,seen,,as if,,,through the window,MIYAZONO2021-P0122,MIYAZONO2021,1
+T0451,A05,glass wall,not_specific,as if seen through a glass wall,"review: suggestion, claude (convention 2)",,,as if seen through a,,,glass wall,DILKES2024-P0167,DILKES2024,1
+T1132,A05,life is through a veil,vision,as if life is through a veil,review: claude,,,as if,,,life is through a veil,DILKES2024-P0091,DILKES2024,1
+T0087,A05,an invisible wall between me and the things i love,not_specific,as if seen through an invisible wall between me and the things i love,"review: suggestion, claude (convention 2)",,,as if seen through,,,an invisible wall between me and the things i love,DILKES2024-P0094,DILKES2024,1
+T0258,A07,in a “fog”,not_specific,as if seen in a fog,agreed,,,as if seen,,,in a “fog”,MIYAZONO2021-P0077,MIYAZONO2021,1
+T0558,A07,objects looked as if surrounded by a cloud,vision,as if objects were surrounded by a cloud,review: your caption,,,were,looked,looked,objects looked as if surrounded by a cloud,SIMEON2023-P0087,SIMEON2023,1
+T0668,A07,its blurriness,vision,blurry,agreed,,blurriness->blurry,,its,,its blurriness,SIMEON2023-P0583,SIMEON2023,1
+T0922,A07,foggy,not_specific,foggy,agreed,,,,,,foggy,DILKES2024-P0011;FINO2024-P0009,DILKES2024;FINO2024,2
+T0680,A07,unclear,vision,unclear,review: claude,,,,,,unclear,SIMEON2023-P0155,SIMEON2023,1
+T0560,A07,things look more or less foggy,vision,as if things look more or less foggy,"review: suggestion, claude (convention 1)",,,as if,,,things look more or less foggy,SIMEON2023-P0569,SIMEON2023,1
+T0256,A07,a fog,mixed,as if seen in a fog,"review: suggestion, claude (convention 2)",,,as if seen in,,,a fog,DILKES2024-P0027;SIMEON2023-P0046,DILKES2024;SIMEON2023,2
+T0933,A07,indefinite,vision,indefinite,review: claude,,,,,,indefinite,MIYAZONO2021-P0126,MIYAZONO2021,1
+T0692,A07,shadowy,vision,shadowy,review: claude,,,,,,shadowy,SIMEON2023-P0102,SIMEON2023,1
+T0921,A07,cloudy,not_specific,cloudy,review: claude,,,,,,cloudy,SIMEON2023-P0298,SIMEON2023,1
+T0970,A07,navigating through fog in slow motion,mixed,as if navigating through fog in slow motion,"review: suggestion, chatgpt (convention 1)",,,as if,,,navigating through fog in slow motion,SIMEON2023-P0305,SIMEON2023,1
+T1094,A07,peering at the world through a fog,vision,like peering at the world through a fog,agreed,,,like,,,peering at the world through a fog,DILKES2024-P0135,DILKES2024,1
+T0067,A07,vague shapes,vision,like vague shapes,agreed,,,like,,,vague shapes,CIAUNICA2022-P0154,CIAUNICA2022,1
+T0969,A07,the focus is never quite right,vision,as if the focus is never right,review: your caption,,,as if,quite,,the focus is never quite right,DILKES2024-P0046,DILKES2024,1
+T0343,A07,blurriness and fog,vision,blurry and foggy,agreed,,blurriness->blurry fog->foggy,,,,blurriness and fog,SIMEON2023-P0579,SIMEON2023,1
+T0889,A07,foggy and veiled,vision,foggy and veiled,agreed,,,,,,foggy and veiled,TANAKA2018-P0015,TANAKA2018,1
+T0222,A07,through a fog,vision,as if seen through a fog,agreed,seen,,as if,,,through a fog,MIYAZONO2021-P0061;SIMEON2023-P0185,MIYAZONO2021;SIMEON2023,2
+T1103,A07,in a fog,not_specific,as if seen in a fog,agreed,,,as if seen,,,in a fog,DILKES2024-P0014;DILKES2024-P0076;MIYAZONO2021-P0036,DILKES2024;MIYAZONO2021,3
+T0193,A07,more blurred,not_specific,more blurred,agreed,,,,,,more blurred,CIAUNICA2022-P0246,CIAUNICA2022,1
+T0537,A07,their vision is foggy,vision,as if their vision is foggy,"review: suggestion, claude (convention 1)",,,as if,,,their vision is foggy,SIMEON2023-P0566,SIMEON2023,1
+T0154,A07,blurry vision,vision,as if seen with blurry vision,"review: suggestion, claude (convention 2)",,,as if seen with,,,blurry vision,DILKES2024-P0061,DILKES2024,1
+T0901,A07,vague,not_specific,vague,review: claude,,,,,,vague,PIENKOS2022-P0057,PIENKOS2022,1
+T0085,A07,fog,mixed,as if seen in fog,"review: suggestion, claude (convention 2)",,,as if seen in,,,fog,DILKES2024-P0158;MIYAZONO2021-P0088;MIYAZONO2021-P0099;MIYAZONO2021-P0109;MIYAZONO2021-P0128;SIMEON2023-P0227,DILKES2024;MIYAZONO2021;SIMEON2023,6
+T0643,A07,a thick cloud,vision,as if seen through a thick cloud,"review: suggestion, claude (convention 2)",,,as if seen through,,,a thick cloud,SIMEON2023-P0083,SIMEON2023,1
+T0090,A07,hazy,vision,hazy,agreed,,,,,,hazy,SIMEON2023-P0098,SIMEON2023,1
+T0047,A07,its clarity is hindered,vision,as if its clarity is hindered,"review: suggestion, claude (convention 1)",,,as if,,,its clarity is hindered,CIAUNICA2022-P0206,CIAUNICA2022,1
+T0506,A07,like someone has put dirty fingerprints on my sunglasses – but its my eyes,vision,like someone has put dirty fingerprints on the sunglasses – but it is the eyes,"review: suggestion, claude (convention 3)",,,the it is the,my its my,,like someone has put dirty fingerprints on my sunglasses – but its my eyes,CIAUNICA2022-P0098,CIAUNICA2022,1
+T0165,A07,blurriness,vision,blurry,agreed,,blurriness->blurry,,,,blurriness,PIENKOS2022-P0163;SIMEON2023-P0055;SIMEON2023-P0236,PIENKOS2022;SIMEON2023,3
+T0252,A07,One’s vision could be blurred,vision,as if one's vision is blurred,review: claude,,be->is,as if,could,,One's vision could be blurred,CIAUNICA2022-P0097,CIAUNICA2022,1
+T0440,A07,blinded by a mist,vision,as if blinded by a mist,agreed,,,as if,,,blinded by a mist,DILKES2024-P0026,DILKES2024,1
+T0068,A07,the dpdr fog,not_specific,as if seen in the fog,review: your caption,,,as if seen in,dpdr,dpdr,the dpdr fog,SIMEON2023-P0563,SIMEON2023,1
+T0767,A07,as if they are looking at the world through a fog,vision,as if they are looking at the world through a fog,review: claude,,,,,,as if they are looking at the world through a fog,SIMEON2023-P0153,SIMEON2023,1
+T0031,A07,a visual fog,vision,as if seen in a visual fog,"review: suggestion, claude (convention 2)",,,as if seen in,,,a visual fog,SIMEON2023-P0027,SIMEON2023,1
+T0208,A11,totally flat and two-dimensional,vision,flat and two-dimensional,"review: suggestion, chatgpt (convention 4)",,,,totally,,totally flat and two-dimensional,SIMEON2023-P0028,SIMEON2023,1
+T0055,A11,external objects were “flat”,vision,as if external objects were flat,"review: suggestion, claude (convention 1)",,,as if,,,external objects were “flat”,MIYAZONO2021-P0084,MIYAZONO2021,1
+T0540,A11,objects or space being flattened,mixed,like objects or space being flattened,agreed,,,like,,,objects or space being flattened,CIAUNICA2022-P0133,CIAUNICA2022,1
+T0564,A11,two-dimensionality,vision,two-dimensional,agreed,,dimensionality->dimensional,,,,two-dimensionality,SIMEON2023-P0240,SIMEON2023,1
+T0972,A11,two-dimensional,vision,two-dimensional,agreed,,,,,,two-dimensional,MIYAZONO2021-P0045,MIYAZONO2021,1
+T1107,A11,looking flat,vision,flat,review: claude,,,,looking,,looking flat,SIERRA2001-P0036,SIERRA2001,1
+T0562,A11,2d people,not_specific,,review: dropped (not_scene),,,,,,2d people,DILKES2024-P0119;DILKES2024-P0160,DILKES2024,2
+T0920,A11,my world becoming two dimensional,mixed,like the world becoming two dimensional,"review: suggestion, claude (equivalent)",,,like the,my,,my world becoming two dimensional,FINO2024-P0016,FINO2024,1
+T0683,A11,flat,vision,flat,review: claude,,,,,,'flat',MIYAZONO2021-P0070;RADOVIC2002-P0031;SIERRA2001-P0014;SIMEON2023-P0157,MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,4
+T0633,A11,flatness,vision,flat,review: claude,,flatness->flat,,,,flatness,PIENKOS2022-P0164;SIMEON2023-P0241,PIENKOS2022;SIMEON2023,2
+T1007,A13,less vivid,not_specific,less vivid,agreed,,,,,,less vivid,PIENKOS2022-P0085,PIENKOS2022,1
+T0839,A13,dull,mixed,dull,agreed,,,,,,dull,PIENKOS2022-P0168;RADOVIC2002-P0030;SIERRA2001-P0013,PIENKOS2022;RADOVIC2002;SIERRA2001,3
+T0137,A13,reduced in intensity,not_specific,reduced in intensity,agreed,,,,,,reduced in intensity,PIENKOS2022-P0086,PIENKOS2022,1
+T0983,A13,lacking in perceptual or emotional vividness,not_specific,lacking in perceptual or emotional vividness,review: claude,,,,,,lacking in perceptual or emotional vividness,TANAKA2018-P0008,TANAKA2018,1
+T0600,A13,things lacking vividness,vision,like things lacking vividness,agreed,,,like,,,things lacking vividness,SIERRA2001-P0035,SIERRA2001,1
+T0172,A13,much less vivid or intense,not_specific,less vivid or intense,"review: suggestion, chatgpt (convention 4)",,,,much,,much less vivid or intense,PIENKOS2022-P0047,PIENKOS2022,1
+T0501,A13,colorless,vision,colorless,agreed,,,,,,colorless,PIENKOS2022-P0019;SIMEON2023-P0052;SIMEON2023-P0233,PIENKOS2022;SIMEON2023,3
+T0817,A13,lacking in vibrancy or depth,mixed,lacking in vibrancy or depth,agreed,,,,,,lacking in vibrancy or depth,CIAUNICA2022-P0024,CIAUNICA2022,1
+T0226,A13,duller,not_specific,duller,review: claude,,,,,,duller,PIENKOS2022-P0084,PIENKOS2022,1
+T0200,A13,lacking in normal color and vividness,vision,lacking in normal color and vividness,agreed,,,,,,lacking in normal color and vividness,SIMEON2023-P0042,SIMEON2023,1
+T1003,A13,awareness of its attenuation,not_specific,,review: dropped (not_scene),,,,,,awareness of its attenuation,PIENKOS2022-P0174,PIENKOS2022,1
+T0804,A13,attenuated perception,not_specific,as if seen with attenuated perception,"review: suggestion, claude (convention 2)",,,as if seen with,,,attenuated perception,DILKES2024-P0063,DILKES2024,1
+T1116,A14,Everything looks quite kind of lifeless,vision,as if everything looks lifeless,"review: suggestion, claude (convention 1)",,,as if,quite kind of,,Everything looks quite kind of lifeless,PIENKOS2022-P0016,PIENKOS2022,1
+T0185,A14,the insidious nothingness choking the life out of everything,not_specific,like the insidious nothingness choking the life out of everything,review: claude,,,like,,,the insidious nothingness choking the life out of everything,SIMEON2023-P0502,SIMEON2023,1
+T0900,A14,emptiness—which is pure consciousness—of all phenomena,not_specific,,review: dropped (not_scene),,,,,,emptiness—which is pure consciousness—of all phenomena,SIMEON2023-P0518,SIMEON2023,1
+T0236,A14,No living being was on earth,not_specific,as if no living being was on earth,"review: suggestion, claude (convention 1)",,,as if,,,No living being was on earth,RADOVIC2002-P0003,RADOVIC2002,1
+T0446,A14,the dark and the void,mixed,like the dark and the void,agreed,,,like,,,the dark and the void,SIMEON2023-P0635,SIMEON2023,1
+T0124,A14,everything I look at just gives me the same experiences of blackness,vision,like everything gives the same experiences of blackness,review: claude,,,like,i look at just me,,everything I look at just gives me the same experiences of blackness,PIENKOS2022-P0018,PIENKOS2022,1
+T0868,A14,lifeless,mixed,lifeless,agreed,,,,,,lifeless,DILKES2024-P0012;FINO2024-P0008;MIYAZONO2021-P0071;RADOVIC2002-P0032;RADOVIC2002-P0040;SIERRA2001-P0015;SIMEON2023-P0053;SIMEON2023-P0158;SIMEON2023-P0234,DILKES2024;FINO2024;MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,9
+T0246,A14,dead,not_specific,dead,review: claude,,,,,,dead,PIENKOS2022-P0167;RADOVIC2002-P0043,PIENKOS2022;RADOVIC2002,2
+T0444,A14,deathlike,not_specific,deathlike,agreed,,,,,,deathlike,SIMEON2023-P0416,SIMEON2023,1
+T1119,A14,“detached void”,not_specific,like a detached void,agreed,,,like a,,,“detached void”,DILKES2024-P0121,DILKES2024,1
+T0270,A14,There was nothing on earth,not_specific,as if there was nothing on earth,"review: suggestion, claude (convention 1)",,,as if,,,There was nothing on earth,RADOVIC2002-P0002,RADOVIC2002,1
+T0111,A14,Emptiness was everywhere,not_specific,as if emptiness was everywhere,"review: suggestion, claude (convention 1)",,,as if,,,Emptiness was everywhere,SIMEON2023-P0509,SIMEON2023,1
+T1112,A14,an emptiness to landscapes,mixed,as if with an emptiness to landscapes,"review: suggestion, claude (convention 1)",,,as if with,,,an emptiness to landscapes,MIYAZONO2021-P0135,MIYAZONO2021,1
+T1042,A14,objects look kind of like dead,vision,as if objects look dead,"review: suggestion, claude (convention 1)",,,as if,kind of like,,objects look kind of like dead,PIENKOS2022-P0015,PIENKOS2022,1
+T0770,A14,empty,not_specific,empty,review: claude,,,,,,empty,SIMEON2023-P0032,SIMEON2023,1
+T0448,A15,as if the glass had become an electron microscope,vision,as if the glass had become an electron microscope,agreed,,,,,,as if the glass had become an electron microscope,SIMEON2023-P0535,SIMEON2023,1
+T0411,A15,vibrant colors,vision,as if seen in vibrant colors,"review: suggestion, claude (convention 2)",,,as if seen in,,,vibrant colors,SIMEON2023-P0546,SIMEON2023,1
+T1122,A15,intensely detailed,vision,intensely detailed,agreed,,,,,,intensely detailed,SIMEON2023-P0534,SIMEON2023,1
+T0362,A15,perceive things more accurately,not_specific,,review: dropped (not_scene),,,,,,perceive things more accurately,PIENKOS2022-P0120,PIENKOS2022,1
+T0786,A15,heightened acuity,vision,as if seen with heightened acuity,"review: suggestion, claude (convention 2)",,,as if seen with,,,heightened acuity,SIMEON2023-P0237,SIMEON2023,1
+T0107,A15,overly bright and sterile,mixed,overly bright and sterile,agreed,,,,,,overly bright and sterile,PIENKOS2022-P0022,PIENKOS2022,1
+T0724,A15,how strongly things exist today,not_specific,like how strongly things exist today,agreed,,,like,,,how strongly things exist today,SIMEON2023-P0442,SIMEON2023,1
+T0247,A15,a repeated flow from beauty to heightened beauty,vision,like a repeated flow from beauty to heightened beauty,agreed,,,like,,,a repeated flow from beauty to heightened beauty,SIMEON2023-P0526,SIMEON2023,1
+T0576,A15,things can seem more realistic than before,not_specific,,dropped by both (outside / outside),,,,,,things can seem more realistic than before,PIENKOS2022-P0046,PIENKOS2022,1
+T0400,A15,not seen through the ordinary filters of the experiencing self,not_specific,,review: dropped (not_scene),,,,,,not seen through the ordinary filters of the experiencing self,SIMEON2023-P0484,SIMEON2023,1
+T0203,A15,too real,not_specific,,dropped by both (outside / outside),,,,,,too real,SIMEON2023-P0436,SIMEON2023,1
+T0480,A15,a more accurate way to experience things,not_specific,,review: dropped (not_scene),,,,,,a more accurate way to experience things,PIENKOS2022-P0105,PIENKOS2022,1
+T0696,A15,a Van Gogh-like intensity,vision,as if seen with a Van Gogh-like intensity,"review: suggestion, claude (convention 2)",,,as if seen with,,,a Van Gogh-like intensity,SIMEON2023-P0531,SIMEON2023,1
+T0081,A15,sharply and distinctly,mixed,sharp and distinct,agreed,,sharply->sharp distinctly->distinct,,,,sharply and distinctly,MIYAZONO2021-P0117,MIYAZONO2021,1
+T1083,A15,more ‘real’,not_specific,,dropped by both (outside / outside),,,,,,more 'real',SIMEON2023-P0610,SIMEON2023,1
+T0331,A15,exaggerated three-dimensionality,vision,as if seen with exaggerated three-dimensionality,"review: suggestion, claude (convention 2)",,,as if seen with,,,exaggerated three-dimensionality,SIMEON2023-P0242,SIMEON2023,1
+T0336,A15,wincing from light colored things especially,vision,,review: dropped (not_scene),,,,,,wincing from light colored things especially,CIAUNICA2022-P0239,CIAUNICA2022,1
+T0810,A15,clear and bright,vision,clear and bright,agreed,,,,,,clear and bright,SIMEON2023-P0533,SIMEON2023,1
+T0566,A15,their living light,vision,as if seen in their living light,"review: suggestion, claude (convention 2)",,,as if seen in,,,their living light,SIMEON2023-P0524,SIMEON2023,1
+T0021,A15,blinded by the light,vision,as if blinded by the light,agreed,,,as if,,,blinded by the light,SIMEON2023-P0491,SIMEON2023,1
+T0476,A15,as if a veil has been lifted,vision,as if a veil has been lifted,agreed,,,,,,as if a veil has been lifted,SIMEON2023-P0553,SIMEON2023,1
+T1087,A15,especially and unusually lively,not_specific,especially and unusually lively,agreed,,,,,,especially and unusually lively,CIAUNICA2022-P0069,CIAUNICA2022,1
+T0326,A15,the grey-green creases of the bark,vision,like the grey-green creases of the bark,agreed,,,like,,,the grey-green creases of the bark,SIMEON2023-P0426,SIMEON2023,1

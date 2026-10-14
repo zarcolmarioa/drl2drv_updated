@@ -1,0 +1,1141 @@
+text_id,text,n_phrases,n_documents,documents,n_first_person,n_vision,n_not_specific,n_disputed,text_class
+T0001,in a place of ‘unreality’,1,1,TANAKA2018,0,0,1,0,not_specific
+T0002,"the cold, unfeeling night that lasts forever",1,1,SIMEON2023,1,0,1,0,not_specific
+T0003,the memories of the unreal things seem unreal as well,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0004,I couldn’t remember it was a root anymore,1,1,SIMEON2023,0,0,1,0,not_specific
+T0005,zombie,1,1,DILKES2024,0,0,1,0,not_specific
+T0006,belief in both everyday reality and a delusional or solipsistic reality are maintained simultaneously,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0007,I live in an alternate reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0008,a tendency not to notice certain things,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0009,the future might not occur,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0010,vulnerable feeling,1,1,CIAUNICA2022,1,1,0,0,vision
+T0011,unfounded,1,1,SIMEON2023,0,0,1,0,not_specific
+T0012,one out of the body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0013,picked up out of my real world and put down into a film set,1,1,CIAUNICA2022,1,0,0,1,mixed
+T0014,highly disruptive alterations to their perception of themselves and their surroundings,1,1,FINO2024,0,0,1,0,not_specific
+T0015,colors and shapes on a piece of cloth,1,1,SIMEON2023,1,1,0,0,vision
+T0016,what seemed like an eternity,1,1,SIMEON2023,1,0,1,0,not_specific
+T0017,a few seconds can seem like days,1,1,SIMEON2023,1,0,1,0,not_specific
+T0018,in very slowed motion,1,1,SIMEON2023,1,0,1,0,not_specific
+T0019,the perspective through which the surrounding world appears,1,1,TANAKA2018,0,0,1,0,not_specific
+T0020,like Alice in Wonderland,1,1,SIMEON2023,1,0,1,0,not_specific
+T0021,blinded by the light,1,1,SIMEON2023,0,1,0,0,vision
+T0022,a common-sense understanding of reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0023,getting lost in familiar places,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0024,thin veil,1,1,SIMEON2023,1,0,1,0,not_specific
+T0025,fascinated by their physical properties,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0026,"An abyss, they say, separates them from the external world",1,1,SIMEON2023,1,0,1,0,not_specific
+T0027,the present seems to be like the distant past,1,1,SIMEON2023,0,0,1,0,not_specific
+T0028,speeding up,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0029,were “seen through.”,1,1,SIMEON2023,1,1,0,0,vision
+T0030,like glass over my eyes,1,1,SIMEON2023,1,1,0,0,vision
+T0031,a visual fog,1,1,SIMEON2023,1,1,0,0,vision
+T0032,confused about whether they were imagining or thinking something vs. perceiving or remembering it,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0033,Nothing is physically changed,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0034,I was a part of everything,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0035,as if the present was re-living a past memory,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0036,no longer drawn to (or repelled by) others in the same way,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0037,this aperture is making that,1,1,PIENKOS2022,1,0,0,1,mixed
+T0038,this morning feels as if it were done weeks ago,1,1,SIMEON2023,0,0,1,0,not_specific
+T0039,not just looking at a flower arrangement,1,1,SIMEON2023,1,1,0,0,vision
+T0040,participants recognize what things are,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0041,as the water closes over me,1,1,SIMEON2023,0,0,1,0,not_specific
+T0042,a dimming or blurring both of the person’s sense of identity and of his sense of reality,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0043,sense of ownership from the real body to the virtual body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0044,can't feel present in the moment,1,1,FINO2024,1,0,1,0,not_specific
+T0045,heightened connectedness to the humanity or the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0046,language has a certain degree of power or autonomy,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0047,its clarity is hindered,1,1,CIAUNICA2022,0,1,0,0,vision
+T0048,hard to imagine if there’s anyone on the other side of the line,2,1,CIAUNICA2022,2,0,2,0,not_specific
+T0049,that was the real flower,1,1,SIMEON2023,1,1,0,0,vision
+T0050,watching like a detached observer,1,1,SIMEON2023,1,0,0,1,mixed
+T0051,just skeletons walking around the place,1,1,DILKES2024,1,0,0,1,mixed
+T0052,concerns about the meaning of one’s presence in the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0053,"being watched by observers, judging my behaviour",1,1,CIAUNICA2022,1,0,0,1,mixed
+T0054,see but do not comprehend,1,1,DILKES2024,1,1,0,0,vision
+T0055,external objects were “flat”,1,1,MIYAZONO2021,0,1,0,0,vision
+T0056,an invisible film,1,1,SIMEON2023,1,0,1,0,not_specific
+T0057,I know this is real,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0058,miss what is going on around me,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0059,I’m trying to convince myself that it’s real,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0060,detachment from the senses or surrounding events,2,1,DILKES2024,0,0,2,0,not_specific
+T0061,somehow different in the morning light,1,1,SIMEON2023,1,1,0,0,vision
+T0062,detached from reality,1,1,DILKES2024,1,0,1,0,not_specific
+T0063,had taken place a long time ago,1,1,SIMEON2023,0,0,1,0,not_specific
+T0064,cannot enjoy that sense of beauty that nature brings,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0065,I miss the surroundings,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0066,thinking in frames,1,1,DILKES2024,1,0,1,0,not_specific
+T0067,vague shapes,1,1,CIAUNICA2022,0,1,0,0,vision
+T0068,the dpdr fog,1,1,SIMEON2023,0,0,1,0,not_specific
+T0069,made of cellophane,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0070,head in a fog,1,1,SIMEON2023,1,1,0,0,vision
+T0071,"static, half-true",1,1,SIMEON2023,0,0,1,0,not_specific
+T0072,Like Inception but in real life,1,1,SIMEON2023,1,0,1,0,not_specific
+T0073,this vast mass that we call the world,1,1,SIMEON2023,1,0,1,0,not_specific
+T0074,something real that is unreal at the same time,1,1,FINO2024,1,0,1,0,not_specific
+T0075,inability to set functional boundaries between inner and outer stimuli,1,1,FINO2024,0,0,1,0,not_specific
+T0076,“contaminated” by other people,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0077,lack of immersion in the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0078,I doubt of everything,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0079,I don’t get any emotions from anybody,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0080,the end of the world could happen any time,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0081,sharply and distinctly,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0082,separated from the world by an invisible barrier,1,1,TANAKA2018,1,0,1,0,not_specific
+T0083,the world disappearing under my feet,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0084,life as if it were played like a film in a cinema,1,1,SIMEON2023,1,1,0,0,vision
+T0085,fog,6,3,DILKES2024;MIYAZONO2021;SIMEON2023,0,0,5,1,mixed
+T0086,everything is an illusion,1,1,DILKES2024,1,0,1,0,not_specific
+T0087,an invisible wall between me and the things i love,1,1,DILKES2024,1,0,1,0,not_specific
+T0088,appear meaningless and fake,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0089,feeling detached from others,1,1,SIMEON2023,0,0,1,0,not_specific
+T0090,hazy,1,1,SIMEON2023,1,1,0,0,vision
+T0091,dream-like,4,3,FINO2024;SIMEON2023;TANAKA2018,2,0,4,0,not_specific
+T0092,strange and foreign,3,2,MIYAZONO2021;SIMEON2023,2,2,1,0,mixed
+T0093,peculiar,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0094,being disconnected or distant from other people,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0095,less aroused by and responsive to negative emotional stimuli,1,1,SIMEON2023,0,0,1,0,not_specific
+T0096,a fundamental trust in the everyday that persists in the background,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0097,a trance,1,1,SIMEON2023,0,0,1,0,not_specific
+T0098,"a profound sense of connectedness with the rest of humanity, God, or the Universe",1,1,SIMEON2023,0,0,1,0,not_specific
+T0099,sense of presence in the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0100,closed off,2,2,MIYAZONO2021;SIMEON2023,2,0,2,0,not_specific
+T0101,an obscuring barrier,2,1,DILKES2024,0,0,2,0,not_specific
+T0102,with them the significance of things,1,1,SIMEON2023,0,0,1,0,not_specific
+T0103,a video game,1,1,DILKES2024,0,0,1,0,not_specific
+T0104,objects were communicating with them,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0105,even though it’s doesn’t feel like it,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0106,geometric patterns,1,1,CIAUNICA2022,0,1,0,0,vision
+T0107,overly bright and sterile,1,1,PIENKOS2022,0,0,0,1,mixed
+T0108,in their anterior extra-personal space,1,1,TANAKA2018,0,1,0,0,vision
+T0109,objects are an extension of one’s body,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0110,my experience of it has changed,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0111,Emptiness was everywhere,1,1,SIMEON2023,1,0,1,0,not_specific
+T0112,watching herself as if she were in a movie with the sound turned down,1,1,SIMEON2023,0,0,1,0,not_specific
+T0113,"I see the hills, the trees, the colours",1,1,MIYAZONO2021,1,1,0,0,vision
+T0114,spaces and places having moods emanating from them,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0115,feel dreamlike,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0116,robots,1,1,DILKES2024,0,0,1,0,not_specific
+T0117,dream state come true,1,1,SIMEON2023,0,0,1,0,not_specific
+T0118,"continuing to hear or see something that was previously, but no longer, present",1,1,CIAUNICA2022,0,0,0,1,mixed
+T0119,an ineffable atmosphere,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0120,it feels very different,1,1,SIMEON2023,0,0,1,0,not_specific
+T0121,sounds or images that were not actually present,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0122,looking at a “picture”,1,1,MIYAZONO2021,0,1,0,0,vision
+T0123,"stuck on the other side, watching",1,1,SIMEON2023,1,0,0,1,mixed
+T0124,everything I look at just gives me the same experiences of blackness,1,1,PIENKOS2022,1,1,0,0,vision
+T0125,nothing was real,2,2,DILKES2024;TANAKA2018,2,0,2,0,not_specific
+T0126,smaller than reality,1,1,CIAUNICA2022,0,1,0,0,vision
+T0127,fake expressions of emotions,1,1,DILKES2024,1,0,0,1,mixed
+T0128,but one among two or more optional universes,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0129,being cut off from the surrounding social and physical work,1,1,SIMEON2023,0,0,1,0,not_specific
+T0130,doesn't seem to be leading up to the future,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0131,a frightening sense of strangeness and unreality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0132,greater concern for the purpose and path of the humanity as a whole,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0133,looks sort of dreamy,1,1,DILKES2024,1,1,0,0,vision
+T0134,the rod that approaches his/her chest in the visual field,1,1,TANAKA2018,0,1,0,0,vision
+T0135,beyond the veil of the day-to-day world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0136,they do not identify themselves with my being,1,1,SIMEON2023,1,0,1,0,not_specific
+T0137,reduced in intensity,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0138,The world feels fake or deadened,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0139,the self or the world is judged as unreal,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0140,far away,1,1,SIMEON2023,0,0,0,1,mixed
+T0141,objects no longer have their normal aesthetic qualities,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0142,the room seems so big,1,1,CIAUNICA2022,1,1,0,0,vision
+T0143,Detachment from the world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0144,seems to be floating without a particular location,1,1,TANAKA2018,0,0,1,0,not_specific
+T0145,in a dream,5,2,DILKES2024;SIMEON2023,4,0,5,0,not_specific
+T0146,an observer of oneself or the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0147,day-to-day life as unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0148,watching a rubber hand that is being stroked,1,1,TANAKA2018,0,1,0,0,vision
+T0149,precepts that were not present,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0150,The first-person perspective through which they observe reality would be floating,1,1,TANAKA2018,0,0,1,0,not_specific
+T0151,it doesn’t feel like I know it any more,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0152,bubble,6,3,DILKES2024;MIYAZONO2021;SIMEON2023,0,0,6,0,not_specific
+T0153,difficult for the person to experience affective empathy toward others,1,1,TANAKA2018,0,0,1,0,not_specific
+T0154,blurry vision,1,1,DILKES2024,1,1,0,0,vision
+T0155,cut her off from the rest of the scene,1,1,SIMEON2023,0,0,1,0,not_specific
+T0156,disgusting,1,1,SIMEON2023,0,0,1,0,not_specific
+T0157,perceptual detachment,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0158,see colours when you listen to music,1,1,CIAUNICA2022,0,1,0,0,vision
+T0159,enhanced sense of observations of others’ behavior and character,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0160,virtual tactile sensation occurring ‘there’,1,1,TANAKA2018,0,1,0,0,vision
+T0161,they don’t look the same,1,1,MIYAZONO2021,1,1,0,0,vision
+T0162,unreal or detached from yourself or your surroundings,1,1,SIMEON2023,0,0,1,0,not_specific
+T0163,spots,1,1,CIAUNICA2022,0,1,0,0,vision
+T0164,"I simply cannot understand people, anymore",1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0165,blurriness,3,2,PIENKOS2022;SIMEON2023,0,3,0,0,vision
+T0166,the overall atmosphere or feeling for the world seemed to change,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0167,lack of trust in common-sense reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0168,I’m dreaming…,1,1,TANAKA2018,1,0,1,0,not_specific
+T0169,short,1,1,SIMEON2023,1,0,1,0,not_specific
+T0170,like camera vision,1,1,PIENKOS2022,1,1,0,0,vision
+T0171,grotesque in their materiality or organicity,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0172,much less vivid or intense,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0173,"unfamiliarity with, the world",1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0174,cannot tell reality from my dreams,1,1,DILKES2024,1,0,1,0,not_specific
+T0175,All is strange to me,3,1,SIMEON2023,1,0,3,0,not_specific
+T0176,on the paper the shape of a swan,1,1,SIMEON2023,0,1,0,0,vision
+T0177,people seemed to move like shadows,1,1,SIMEON2023,1,1,0,0,vision
+T0178,the world around is unreal,1,1,FINO2024,0,0,1,0,not_specific
+T0179,“for real”,1,1,SIMEON2023,1,0,1,0,not_specific
+T0180,surroundings look weird and unreal,1,1,DILKES2024,1,1,0,0,vision
+T0181,individuals,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0182,feelings of disorientation,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0183,life takes me whenever it wants,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0184,no conscious awareness of the stimuli in the blind field,1,1,MIYAZONO2021,0,1,0,0,vision
+T0185,the insidious nothingness choking the life out of everything,1,1,SIMEON2023,1,0,1,0,not_specific
+T0186,a foot thick steel barrier,1,1,DILKES2024,1,0,1,0,not_specific
+T0187,the world is a reflection of how we feel inside,1,1,DILKES2024,1,0,1,0,not_specific
+T0188,a stronger sense of empathy toward and understanding of others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0189,seeping through the pores of every face I gazed upon,1,1,SIMEON2023,1,1,0,0,vision
+T0190,it seems to drag along,1,1,SIMEON2023,0,0,1,0,not_specific
+T0191,charged with a hateful significance,1,1,SIMEON2023,0,0,1,0,not_specific
+T0192,a filter over my eyes,1,1,DILKES2024,1,1,0,0,vision
+T0193,more blurred,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0194,no longer experience it as colored with their affective responses to it,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0195,part earth; part flower,1,1,SIMEON2023,1,1,0,0,vision
+T0196,a separation from the world,1,1,DILKES2024,0,0,1,0,not_specific
+T0197,special dream quality or particular dream atmosphere,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0198,one’s own thoughts or memories are projected into the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0199,never connects with the world around him,1,1,SIMEON2023,0,0,1,0,not_specific
+T0200,lacking in normal color and vividness,1,1,SIMEON2023,0,1,0,0,vision
+T0201,"familiarity in a factual sense, but not in a feeling sense",1,1,PIENKOS2022,1,0,1,0,not_specific
+T0202,I cannot receive the sensation,1,1,SIMEON2023,1,0,1,0,not_specific
+T0203,too real,1,1,SIMEON2023,0,0,1,0,not_specific
+T0204,not part of anything,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0205,as if they are living in dreams,1,1,TANAKA2018,0,0,1,0,not_specific
+T0206,a copy of the real world but not quite real,1,1,CIAUNICA2022,1,0,0,1,mixed
+T0207,white wolves,1,1,SIMEON2023,1,1,0,0,vision
+T0208,totally flat and two-dimensional,1,1,SIMEON2023,1,1,0,0,vision
+T0209,"shapes, objects, things",1,1,SIMEON2023,1,0,0,1,mixed
+T0210,sunk in the ground just under my bench,1,1,SIMEON2023,0,1,0,0,vision
+T0211,not as real as before,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0212,another layer of simulation,1,1,DILKES2024,1,0,1,0,not_specific
+T0213,distorted vision,3,1,DILKES2024,0,3,0,0,vision
+T0214,stuck between two worlds,1,1,SIMEON2023,0,0,1,0,not_specific
+T0215,no longer have the familiar affective “flavor”,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0216,strangeness,1,1,SIMEON2023,0,0,1,0,not_specific
+T0217,blurriness of the self/other boundaries,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0218,a fundamental commitment to the independent existence of the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0219,upsets me a lot,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0220,a thousand years can seem like an hour,1,1,SIMEON2023,1,0,1,0,not_specific
+T0221,commitment to reality as typically conceived,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0222,through a fog,2,2,MIYAZONO2021;SIMEON2023,2,2,0,0,vision
+T0223,widened,1,1,SIMEON2023,0,1,0,0,vision
+T0224,from deeper to ever deeper meaning,1,1,SIMEON2023,1,0,0,1,mixed
+T0225,all visual objects either faded from the mind,1,1,SIMEON2023,1,1,0,0,vision
+T0226,duller,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0227,I feel as if there were a veil in front of me,2,1,MIYAZONO2021,0,0,2,0,not_specific
+T0228,others put on a mask or facade,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0229,a strong belief in the conventions of socially agreed-up reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0230,contaminate them in some way,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0231,without words,1,1,SIMEON2023,0,0,1,0,not_specific
+T0232,the world looks like a dream,1,1,TANAKA2018,1,1,0,0,vision
+T0233,moving faster around him than before,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0234,feeling cutoff from the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0235,akin to living in a dream,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0236,No living being was on earth,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0237,a feeling of unreality,2,2,MIYAZONO2021;SIMEON2023,0,0,2,0,not_specific
+T0238,difficult for others around them to detect that their actions are different,1,1,TANAKA2018,0,0,1,0,not_specific
+T0239,seem different,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0240,through changed eyes,1,1,SIMEON2023,1,0,0,1,mixed
+T0241,time appears to pass outside of or without the individual,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0242,apparent colors may change,1,1,CIAUNICA2022,0,1,0,0,vision
+T0243,the end of the world being imminent,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0244,others having access to or being able to control one’s own thoughts and feelings,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0245,forever stuck on an acid trip,1,1,DILKES2024,1,0,1,0,not_specific
+T0246,dead,2,2,PIENKOS2022;RADOVIC2002,0,0,2,0,not_specific
+T0247,a repeated flow from beauty to heightened beauty,1,1,SIMEON2023,1,1,0,0,vision
+T0248,mannequins,2,1,CIAUNICA2022,2,0,0,2,mixed
+T0249,my dream kind of autopilot world,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0250,unreal and somehow nightmarish,1,1,SIMEON2023,1,0,0,1,mixed
+T0251,ungraspable world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0252,One’s vision could be blurred,1,1,CIAUNICA2022,0,1,0,0,vision
+T0253,the houses close around me,1,1,SIMEON2023,0,0,0,1,mixed
+T0254,“off ” and strange,1,1,SIMEON2023,1,0,1,0,not_specific
+T0255,erosion of self/world boundaries,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0256,a fog,2,2,DILKES2024;SIMEON2023,1,1,0,1,mixed
+T0257,all just there,2,2,MIYAZONO2021;SIMEON2023,2,0,2,0,not_specific
+T0258,in a “fog”,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0259,feeling uncomfortable around or exhausted by others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0260,unreal and pointless,1,1,SIMEON2023,0,0,1,0,not_specific
+T0261,"Things, yourself, feel strange",1,1,SIMEON2023,1,0,1,0,not_specific
+T0262,I feel indifferent about it,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0263,dream state,1,1,SIMEON2023,0,0,1,0,not_specific
+T0264,a lived alternate reality,1,1,DILKES2024,0,0,1,0,not_specific
+T0265,depersonalizing,1,1,SIMEON2023,0,0,1,0,not_specific
+T0266,as if there were a veil,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0267,unreality or detachment from one’s surroundings,1,1,SIMEON2023,0,0,1,0,not_specific
+T0268,detached feeling derives from the external world,1,1,TANAKA2018,0,0,1,0,not_specific
+T0269,unreal world of these simulations,1,1,SIMEON2023,0,0,1,0,not_specific
+T0270,There was nothing on earth,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0271,unreal and detached from the self or from surroundings,1,1,SIMEON2023,0,0,1,0,not_specific
+T0272,being an outside observer,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0273,the “membrane” separating the self from others was highly permeable,1,1,SIMEON2023,1,0,1,0,not_specific
+T0274,the flower itself was a part of the earth,1,1,SIMEON2023,1,1,0,0,vision
+T0275,somehow altered,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0276,an inherent detachment from day-to-day reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0277,a strange feeling of being in a dream,1,1,SIMEON2023,0,0,1,0,not_specific
+T0278,the “unreal” aspect of his mourning process,1,1,SIMEON2023,0,0,1,0,not_specific
+T0279,objects or the world were communicating with them in some way,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0280,i’m not even there,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0281,detached or unreal,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0282,floating somewhere around the body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0283,inability to judge the length of time,1,1,SIMEON2023,0,0,1,0,not_specific
+T0284,everything else past or present or connected to a name is an illusion,1,1,SIMEON2023,0,0,1,0,not_specific
+T0285,a part and yet not a part,1,1,SIERRA2001,1,0,1,0,not_specific
+T0286,a broader reality than perceived in ordinary day-to-day life,1,1,SIMEON2023,0,0,1,0,not_specific
+T0287,"strange, and foreign",1,1,SIMEON2023,0,0,1,0,not_specific
+T0288,detaches itself from the surroundings,1,1,SIMEON2023,0,0,1,0,not_specific
+T0289,which frightened me,1,1,SIMEON2023,0,0,1,0,not_specific
+T0290,internal and/or external change,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0291,I don’t really perceive people the same,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0292,transient,1,1,SIMEON2023,1,0,1,0,not_specific
+T0293,stretched out and lasting longer than they actually did,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0294,just walking automatons,1,1,DILKES2024,1,0,1,0,not_specific
+T0295,I don’t feel like the world exists,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0296,a bubble,1,1,DILKES2024,0,0,1,0,not_specific
+T0297,loss of the ability to feel emotionally attached to others,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0298,artificial,3,2,DILKES2024;SIMEON2023,1,0,3,0,not_specific
+T0299,visual disturbances,1,1,SIMEON2023,0,1,0,0,vision
+T0300,ordinary,1,1,MIYAZONO2021,1,1,0,0,vision
+T0301,changed in some way,1,1,SIMEON2023,0,0,1,0,not_specific
+T0302,unreality,7,3,DILKES2024;MIYAZONO2021;SIMEON2023,0,0,7,0,not_specific
+T0303,having to apply intellectualized strategies to understand and interact with others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0304,daze,1,1,SIMEON2023,0,0,1,0,not_specific
+T0305,its all dream,1,1,DILKES2024,1,0,1,0,not_specific
+T0306,the cracked window itself as a visible observable entity,1,1,CIAUNICA2022,0,1,0,0,vision
+T0307,the illusion which lives with us day by day,1,1,SIMEON2023,1,0,1,0,not_specific
+T0308,a veil placed over your senses,1,1,DILKES2024,1,0,1,0,not_specific
+T0309,the time seems to fly faster than before experiencing DP,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0310,foreign and new to him,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0311,I didn’t think about them as being lips,1,1,PIENKOS2022,1,1,0,0,vision
+T0312,peak connectedness with the world she’s embedded in,1,1,SIMEON2023,0,0,1,0,not_specific
+T0313,so unreal,2,1,RADOVIC2002,2,0,2,0,not_specific
+T0314,things that are not actually/currently present,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0315,in a digital world,1,1,DILKES2024,0,0,1,0,not_specific
+T0316,seeming remoteness of the recent past,1,1,SIMEON2023,0,0,1,0,not_specific
+T0317,may appear larger,1,1,CIAUNICA2022,0,1,0,0,vision
+T0318,being trapped in a bubble,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0319,disappeared,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0320,almost like i’m in a bubble,1,1,DILKES2024,1,0,1,0,not_specific
+T0321,a screen or a film between the participant and the rest of the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0322,greater significance,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0323,a really bad sims game,2,1,DILKES2024,0,0,2,0,not_specific
+T0324,being able to predict or anticipate future events,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0325,at the location of the video camera,2,1,TANAKA2018,0,1,1,0,mixed
+T0326,the grey-green creases of the bark,1,1,SIMEON2023,1,1,0,0,vision
+T0327,estranged perceptions,1,1,FINO2024,0,0,1,0,not_specific
+T0328,closing in,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0329,automaton,2,1,DILKES2024,0,0,2,0,not_specific
+T0330,new virtual reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0331,exaggerated three-dimensionality,1,1,SIMEON2023,0,1,0,0,vision
+T0332,a heightened state of blissful intimacy,1,1,SIMEON2023,0,0,1,0,not_specific
+T0333,things around them seem unreal,1,1,TANAKA2018,0,0,1,0,not_specific
+T0334,they don’t seem real,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0335,evanescent,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0336,wincing from light colored things especially,1,1,CIAUNICA2022,1,1,0,0,vision
+T0337,feeling uncomfortable and pressured in one’s interactions with others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0338,the rod that strokes his/her back,1,1,TANAKA2018,0,1,0,0,vision
+T0339,foreign,1,1,SIMEON2023,1,0,0,1,mixed
+T0340,living in a movie,1,1,DILKES2024,0,0,1,0,not_specific
+T0341,lack of agency,1,1,DILKES2024,0,0,1,0,not_specific
+T0342,a lack of affective attunement with the environment,1,1,TANAKA2018,0,0,1,0,not_specific
+T0343,blurriness and fog,1,1,SIMEON2023,0,1,0,0,vision
+T0344,lack of commitment to intersubjective reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0345,affective contact with the environment through the body is lost,1,1,TANAKA2018,0,0,1,0,not_specific
+T0346,"the black, knotty hands reaching towards the sky",1,1,SIMEON2023,0,1,0,0,vision
+T0347,real life “seemed like a movie”,1,1,SIMEON2023,0,0,1,0,not_specific
+T0348,don’t look at people as people anymore,1,1,DILKES2024,1,0,1,0,not_specific
+T0349,a floating mind in space,2,1,TANAKA2018,2,0,2,0,not_specific
+T0350,alienation from the perceptual world,2,1,MIYAZONO2021,0,0,2,0,not_specific
+T0351,it feels as if I have been through it before,1,1,SIMEON2023,0,0,1,0,not_specific
+T0352,no more familiar than a baby with two heads,1,1,SIMEON2023,1,1,0,0,vision
+T0353,a strange opening that has these two shapes that we call lips,1,1,PIENKOS2022,1,1,0,0,vision
+T0354,aloneness in one’s own private world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0355,a ring enclosed what was the flower,1,1,SIMEON2023,1,1,0,0,vision
+T0356,cannot convey their beauty to me,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0357,impossible for the mind to perceive or retain any individuality,1,1,SIMEON2023,1,1,0,0,vision
+T0358,being detached from or not a part of the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0359,Intrusive threats to her wellbeing were everywhere,1,1,SIMEON2023,1,0,1,0,not_specific
+T0360,repetitions or patterns of events or objects,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0361,detachment,4,3,CIAUNICA2022;PIENKOS2022;SIMEON2023,0,0,4,0,not_specific
+T0362,perceive things more accurately,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0363,more disorganized,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0364,life feels unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0365,“black hole”,1,1,DILKES2024,0,0,1,0,not_specific
+T0366,I don't feel like I'm here,1,1,FINO2024,1,0,1,0,not_specific
+T0367,the world feels less interesting or appealing,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0368,distinguish the present from the past or future,1,1,SIMEON2023,0,0,1,0,not_specific
+T0369,dolls,2,1,DILKES2024,0,0,2,0,not_specific
+T0370,None of this is real!,1,1,TANAKA2018,1,0,1,0,not_specific
+T0371,Rather than feeling as though there is something changed about the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0372,some sort of simulation,1,1,SIMEON2023,1,0,1,0,not_specific
+T0373,detachment from internal/external stimuli,1,1,FINO2024,0,0,1,0,not_specific
+T0374,familiar with people who the participant was in fact unfamiliar with,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0375,the unreality of things,1,1,SIMEON2023,0,0,1,0,not_specific
+T0376,nothing seems real,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0377,a robot that looked like my mother,1,1,PIENKOS2022,1,1,0,0,vision
+T0378,too slow,1,1,SIMEON2023,0,0,1,0,not_specific
+T0379,everyone was robots,1,1,DILKES2024,1,0,1,0,not_specific
+T0380,objects and their properties are felt to be distinct from the very experience of them,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0381,moved very quickly,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0382,like I had fallen into another dimension,1,1,SIMEON2023,1,0,1,0,not_specific
+T0383,further away,1,1,SIMEON2023,0,1,0,0,vision
+T0384,everything is strange,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0385,feeling disconnected from others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0386,Spatial relationships meant nothing,1,1,SIMEON2023,0,1,0,0,vision
+T0387,things that are happening to me are related in some way with my purpose in life,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0388,it feels like it is not,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0389,this veil separating me from everyone else,1,1,DILKES2024,1,0,1,0,not_specific
+T0390,"this black, knotty mass",1,1,SIMEON2023,0,1,0,0,vision
+T0391,strong ties to conventional reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0392,playing the life game,2,1,DILKES2024,0,0,2,0,not_specific
+T0393,extraordinary new,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0394,other people are robots,2,1,DILKES2024,0,0,2,0,not_specific
+T0395,living in a dream,3,1,DILKES2024,0,0,3,0,not_specific
+T0396,all surroundings,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0397,someone is telling me what to do and say,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0398,an increased awareness of space itself,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0399,a tendency to be skeptical of accepted aspects of reality,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0400,not seen through the ordinary filters of the experiencing self,1,1,SIMEON2023,0,0,1,0,not_specific
+T0401,things around me don’t feel real,1,1,DILKES2024,1,0,1,0,not_specific
+T0402,sense of realness,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0403,a dampening of personalized affective resonance with the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0404,glimpse behind the façade of life,1,1,SIMEON2023,0,0,1,0,not_specific
+T0405,separated from reality by a protective covering,1,1,SIMEON2023,0,0,1,0,not_specific
+T0406,there’s no emotions,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0407,at the location of the virtual body presented in the display,1,1,TANAKA2018,0,0,1,0,not_specific
+T0408,Everything besides my limbs feel like they don’t have much of a presence,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0409,no longer imbued with the subjective coloring or affective amplification,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0410,the world does not exist,1,1,SIMEON2023,0,0,1,0,not_specific
+T0411,vibrant colors,1,1,SIMEON2023,0,1,0,0,vision
+T0412,cannot grasp the beauty of nature,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0413,engaging in meaningless behaviors,1,1,DILKES2024,1,0,1,0,not_specific
+T0414,a loss or lack of reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0415,time seems to them to be at a standstill,1,1,SIMEON2023,0,0,1,0,not_specific
+T0416,feeling able to predict others’ thoughts and behaviors,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0417,feeling distracted by certain words,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0418,I cannot appreciate them,1,1,MIYAZONO2021,1,0,1,0,not_specific
+T0419,unpleasantly strange,1,1,SIMEON2023,1,0,1,0,not_specific
+T0420,an inability “to resonate with the world”,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0421,the loss of the feeling of reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0422,nauseating,1,1,SIMEON2023,0,0,1,0,not_specific
+T0423,robots without feelings,1,1,DILKES2024,1,0,1,0,not_specific
+T0424,their felt lack of resonance with the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0425,it doesn’t mean anything to me at all,1,1,SIERRA2001,1,1,0,0,vision
+T0426,perched in a tree,1,1,SIMEON2023,1,1,0,0,vision
+T0427,observing reality in a detached manner,1,1,TANAKA2018,0,0,1,0,not_specific
+T0428,all strange somehow,2,2,MIYAZONO2021;SIMEON2023,2,0,2,0,not_specific
+T0429,a feeling of perceptual alteration of surroundings and the external world,1,1,FINO2024,0,0,1,0,not_specific
+T0430,You seem unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0431,less functional,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0432,seem as though they are merely acting,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0433,like I’m wearing glasses that I can’t see through,1,1,SIMEON2023,1,1,0,0,vision
+T0434,closer than they really were,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0435,punctured his cocoon,1,1,SIMEON2023,1,0,1,0,not_specific
+T0436,crisis of common sense,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0437,"Disconnection from the world, or other people",1,1,DILKES2024,0,0,1,0,not_specific
+T0438,something disturbing and depersonalizing,1,1,SIMEON2023,0,0,1,0,not_specific
+T0439,the hallucinatory experience of a veil,1,1,MIYAZONO2021,0,1,0,0,vision
+T0440,blinded by a mist,1,1,DILKES2024,1,1,0,0,vision
+T0441,mediated,1,1,CIAUNICA2022,0,1,0,0,vision
+T0442,located out of ‘my body’,1,1,TANAKA2018,0,0,1,0,not_specific
+T0443,occupying a distinct location in extrapersonal space,2,1,TANAKA2018,0,0,2,0,not_specific
+T0444,deathlike,1,1,SIMEON2023,0,0,1,0,not_specific
+T0445,disrupts our full immersion into the reality of the landscape,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0446,the dark and the void,1,1,SIMEON2023,0,0,0,1,mixed
+T0447,living in a clear bubble,1,1,DILKES2024,1,0,1,0,not_specific
+T0448,as if the glass had become an electron microscope,1,1,SIMEON2023,0,1,0,0,vision
+T0449,other people had control over their private thoughts or feelings,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0450,intending one harm in some way,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0451,glass wall,1,1,DILKES2024,0,0,1,0,not_specific
+T0452,the whole situation was dreamlike,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0453,floating around,1,1,TANAKA2018,0,0,1,0,not_specific
+T0454,alien,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0455,less aversive,1,1,SIMEON2023,0,0,0,1,mixed
+T0456,not reaching the surroundings with their inner selves,1,1,SIMEON2023,1,0,1,0,not_specific
+T0457,"as if I’m in some fake, virtual reality",1,1,SIMEON2023,1,0,1,0,not_specific
+T0458,events that conveyed a special meaning to them,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0459,out of this world,1,1,SIMEON2023,1,0,1,0,not_specific
+T0460,as if from another world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0461,"regarding existence as though beyond the tomb, from another world",1,1,SIMEON2023,0,0,1,0,not_specific
+T0462,two time zones at once,1,1,SIMEON2023,0,0,1,0,not_specific
+T0463,"deeply absorbed, almost hypnotized, by a concert poster on her bedroom wall",1,1,SIMEON2023,0,1,0,0,vision
+T0464,glass,3,2,MIYAZONO2021;SIMEON2023,1,2,0,1,mixed
+T0465,a bit strange,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0466,defenseless,1,1,SIMEON2023,0,0,1,0,not_specific
+T0467,the endlessness of time,1,1,SIMEON2023,1,0,1,0,not_specific
+T0468,walking on eggshells at home,1,1,SIMEON2023,1,0,1,0,not_specific
+T0469,orbs of light,1,1,CIAUNICA2022,0,1,0,0,vision
+T0470,a “veil” between himself and the real world,1,1,SIMEON2023,1,0,0,1,mixed
+T0471,dreamlike,1,1,DILKES2024,0,0,1,0,not_specific
+T0472,faster time perception,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0473,a strange stillness,1,1,SIMEON2023,1,0,1,0,not_specific
+T0474,non-responsiveness to the external world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0475,a feeling of greater concern or responsibility for others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0476,as if a veil has been lifted,1,1,SIMEON2023,0,1,0,0,vision
+T0477,they had a self,1,1,SIMEON2023,1,1,0,0,vision
+T0478,their thoughts or feelings were somehow public and exposed to others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0479,“unreality” concerning visual modality,1,1,SIERRA2001,0,1,0,0,vision
+T0480,a more accurate way to experience things,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0481,no longer arouses me,1,1,SIMEON2023,1,0,1,0,not_specific
+T0482,a black hole of time somehow,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0483,the purely observing experience was left at the location of the real body,1,1,TANAKA2018,0,1,0,0,vision
+T0484,as if there were grey spots at the intersections of the grid,1,1,MIYAZONO2021,0,1,0,0,vision
+T0485,the outside world is unreal,2,2,SIMEON2023;TANAKA2018,0,0,2,0,not_specific
+T0486,things become unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0487,i was in a dream,1,1,DILKES2024,1,0,1,0,not_specific
+T0488,feel different from ordinary and familiar reality,1,1,TANAKA2018,0,0,1,0,not_specific
+T0489,sense of oneness with the universe,1,1,SIMEON2023,0,0,1,0,not_specific
+T0490,difficulty identifying the shape or sound that one is perceiving,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0491,feel as if everything were different to them,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0492,others as threatening,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0493,like being trapped in a carnival fun house where mirrors distort everything,1,1,SIMEON2023,1,1,0,0,vision
+T0494,time is leaving one behind,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0495,time warps,1,1,SIMEON2023,1,0,1,0,not_specific
+T0496,located out of the body,2,1,TANAKA2018,0,0,2,0,not_specific
+T0497,from the perspective of another person,1,1,TANAKA2018,0,1,0,0,vision
+T0498,"like an anthropologist on another planet, studying the human species",1,1,SIMEON2023,1,0,0,1,mixed
+T0499,"the miracle, moment by moment of naked existence",1,1,SIMEON2023,1,1,0,0,vision
+T0500,sees through those things being enjoyed by everyone else,1,1,SIMEON2023,0,0,1,0,not_specific
+T0501,colorless,3,2,PIENKOS2022;SIMEON2023,0,3,0,0,vision
+T0502,not interested in me at all,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0503,a unique disruption of the underlying engagement with the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0504,It was all unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0505,it refuses to go and put itself on the thing,1,1,SIMEON2023,0,0,1,0,not_specific
+T0506,like someone has put dirty fingerprints on my sunglasses – but its my eyes,1,1,CIAUNICA2022,1,1,0,0,vision
+T0507,clones,2,1,CIAUNICA2022,2,0,0,2,mixed
+T0508,Time seemed to move very slowly,1,1,SIMEON2023,1,0,1,0,not_specific
+T0509,alienated from or unfamiliar with your surroundings,1,1,DILKES2024,0,0,1,0,not_specific
+T0510,being detached from the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0511,a strong sense of ownership of the virtual body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0512,acute feelings of alienation from the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0513,objects do not have immediate value or relevance,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0514,they don’t look familiar anymore,1,1,MIYAZONO2021,1,1,0,0,vision
+T0515,damaging,1,1,SIMEON2023,0,0,1,0,not_specific
+T0516,"greater reality to their private, delusional world",1,1,PIENKOS2022,0,0,1,0,not_specific
+T0517,the qualitative equivalent of breathing,1,1,SIMEON2023,1,1,0,0,vision
+T0518,that familiarity should be there,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0519,do something human-like,2,1,CIAUNICA2022,2,2,0,0,vision
+T0520,flowing through the crevices of seemingly solid objects,1,1,SIMEON2023,1,1,0,0,vision
+T0521,located at the visuospatial perspective through which I observe the world,1,1,TANAKA2018,0,1,0,0,vision
+T0522,not fully present to or engaged in behaviors or events,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0523,look unfamiliar,1,1,MIYAZONO2021,0,1,0,0,vision
+T0524,language and words are meaningless or absurd,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0525,less aware of their surroundings,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0526,watching from inside a shell,1,1,CIAUNICA2022,1,0,0,1,mixed
+T0527,I see a veil,1,1,MIYAZONO2021,0,1,0,0,vision
+T0528,machinations of my own mind,1,1,SIMEON2023,1,0,1,0,not_specific
+T0529,people who were known to them were suddenly unfamiliar,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0530,not able to pick out one specific item in the scenario that carries the dreamlikeness,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0531,talking to her dolls,1,1,DILKES2024,1,0,1,0,not_specific
+T0532,an npc,1,1,DILKES2024,1,0,1,0,not_specific
+T0533,"as though from beyond the tomb, from another world",1,1,SIMEON2023,1,0,1,0,not_specific
+T0534,the felt vividness and reality of the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0535,everything seems like a dream.,1,1,SIMEON2023,1,0,1,0,not_specific
+T0536,difficult for them to locate their own first-person perspective in an extracorporeal space,1,1,TANAKA2018,0,0,1,0,not_specific
+T0537,their vision is foggy,1,1,SIMEON2023,0,1,0,0,vision
+T0538,words being unable to convey experiences,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0539,looking through someone else’s eye,1,1,MIYAZONO2021,1,1,0,0,vision
+T0540,objects or space being flattened,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0541,"manifests the presence of an In-swelling Horror, infinite, all-powerful, eternal",1,1,SIMEON2023,0,0,1,0,not_specific
+T0542,sense of connection with others,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0543,as if someone was watching my every move and making fun,1,1,SIMEON2023,1,0,1,0,not_specific
+T0544,"in the world, yet not in it",1,1,SIMEON2023,1,0,1,0,not_specific
+T0545,experiences of unreality or detachment with respect to surroundings,1,1,DILKES2024,0,0,1,0,not_specific
+T0546,a sense of reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0547,what an odd thing,1,1,PIENKOS2022,1,0,0,1,mixed
+T0548,time less reliable that before,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0549,being separated from the universe,1,1,SIMEON2023,1,0,1,0,not_specific
+T0550,"“veil” interposed between one’s self, body and the world",1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0551,narrowed visual field,1,1,SIMEON2023,0,1,0,0,vision
+T0552,was impossible to affect with one’s actions,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0553,just floating around the body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0554,her experiences feel unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0555,Sometimes I think people do not exist,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0556,not understanding others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0557,do not look as before,1,1,MIYAZONO2021,1,1,0,0,vision
+T0558,objects looked as if surrounded by a cloud,1,1,SIMEON2023,1,1,0,0,vision
+T0559,things seem unreal,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0560,things look more or less foggy,1,1,SIMEON2023,0,1,0,0,vision
+T0561,being in a bubble,1,1,TANAKA2018,1,0,1,0,not_specific
+T0562,2d people,2,1,DILKES2024,0,0,2,0,not_specific
+T0563,their perceptions and embodied experiences were significantly altered,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0564,two-dimensionality,1,1,SIMEON2023,0,1,0,0,vision
+T0565,a kind of “oneness” with all that exists,1,1,SIMEON2023,1,0,1,0,not_specific
+T0566,their living light,1,1,SIMEON2023,1,1,0,0,vision
+T0567,their immediate experience is somewhat inconsistent with this faith,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0568,the quality of imagination,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0569,disengagement from the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0570,others as automata,1,1,DILKES2024,0,0,1,0,not_specific
+T0571,immediately means something to everyone,1,1,SIMEON2023,1,0,1,0,not_specific
+T0572,more complete indifference to time,1,1,SIMEON2023,0,0,1,0,not_specific
+T0573,nothing exists,1,1,DILKES2024,1,0,1,0,not_specific
+T0574,having access to others’ thoughts and feelings,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0575,the way her mouth was moving,1,1,PIENKOS2022,1,1,0,0,vision
+T0576,things can seem more realistic than before,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0577,through the window,1,1,MIYAZONO2021,1,1,0,0,vision
+T0578,sealed in plastic wrap,2,2,MIYAZONO2021;SIMEON2023,2,0,2,0,not_specific
+T0579,meaningless,1,1,SIMEON2023,1,0,1,0,not_specific
+T0580,all the places he had been now seemed like dreams,1,1,SIMEON2023,0,0,1,0,not_specific
+T0581,objects had merged with their body somehow,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0582,everyone is automaton,1,1,DILKES2024,1,0,1,0,not_specific
+T0583,zombies,4,2,CIAUNICA2022;DILKES2024,2,0,2,2,mixed
+T0584,I don’t understand what I saw in them that made me love them,1,1,SIMEON2023,1,0,1,0,not_specific
+T0585,all excitedly pursuing pure chimeras,1,1,SIMEON2023,0,0,1,0,not_specific
+T0586,passing without awareness,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0587,rather than a change in the features of the world itself,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0588,unhomelike-and-uncanny,1,1,SIMEON2023,0,0,1,0,not_specific
+T0589,things failed to draw and hold their attention,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0590,the universe was changed for me altogether,1,1,SIMEON2023,1,0,1,0,not_specific
+T0591,slowing down,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0592,the stability and reality of our perceptions,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0593,"more detached from their selves, their bodies, and others",1,1,SIMEON2023,0,0,1,0,not_specific
+T0594,others are influencing one’s actions or thoughts,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0595,do nothing,1,1,SIMEON2023,1,0,1,0,not_specific
+T0596,as if she were seeing them for the first time,1,1,SIMEON2023,1,1,0,0,vision
+T0597,feeling strongly influenced by others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0598,objects seeming different,1,1,SIERRA2001,0,0,1,0,not_specific
+T0599,that reality can no longer be accessed,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0600,things lacking vividness,1,1,SIERRA2001,0,1,0,0,vision
+T0601,feelings of indifference toward others or humankind or the world as a whole,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0602,objects look bigger,1,1,MIYAZONO2021,0,1,0,0,vision
+T0603,what Adam had seen on the morning of his creation,1,1,SIMEON2023,1,1,0,0,vision
+T0604,our access to the landscape more “opaque”,1,1,CIAUNICA2022,0,1,0,0,vision
+T0605,as if I were looking at a picture,2,2,MIYAZONO2021;SIMEON2023,0,2,0,0,vision
+T0606,something stands in the way,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0607,a glass wall that separates you from the world,1,1,DILKES2024,1,0,1,0,not_specific
+T0608,gigantic,1,1,SIMEON2023,0,0,0,1,mixed
+T0609,"the whole world, sometimes the whole universe was in a sense a part of me",1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0610,more like our dreams than is usually the case,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0611,a virtual body as if it were their own,1,1,TANAKA2018,0,0,1,0,not_specific
+T0612,call into question the realness of others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0613,both moving through and being made of the ‘substance’ of everything,1,1,SIMEON2023,1,0,1,0,not_specific
+T0614,which aspect of the self or the world it is that feels unreal,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0615,as if there was a veil between me and the outside world,1,1,SIMEON2023,0,0,0,1,mixed
+T0616,a robot,1,1,DILKES2024,1,0,1,0,not_specific
+T0617,the spectator of some mystery,1,1,SIMEON2023,1,0,1,0,not_specific
+T0618,grotesque,1,1,SIMEON2023,0,0,0,1,mixed
+T0619,sometimes it went faster,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0620,dystonic self and world-perceptions,1,1,FINO2024,0,0,1,0,not_specific
+T0621,alienating feelings of “opacity”,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0622,difficult for them to feel affectively in touch with the world,1,1,TANAKA2018,0,0,1,0,not_specific
+T0623,the universe can be transfigured—but for the worse,1,1,SIMEON2023,0,0,1,0,not_specific
+T0624,Lack of immersiveness or presence in the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0625,"they surround me, are beneath me, behind me, above me",1,1,SIMEON2023,0,0,0,1,mixed
+T0626,the world feels unreal,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0627,distant and strange,1,1,SIMEON2023,0,0,1,0,not_specific
+T0628,increased quickness with which time passes,1,1,SIMEON2023,0,0,1,0,not_specific
+T0629,dazed and semi-aware of what was going on around her,1,1,SIMEON2023,1,0,1,0,not_specific
+T0630,detached,2,2,MIYAZONO2021;SIMEON2023,0,0,2,0,not_specific
+T0631,indifference to space,1,1,SIMEON2023,0,0,1,0,not_specific
+T0632,this is just how the world kind of is,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0633,flatness,2,2,PIENKOS2022;SIMEON2023,0,2,0,0,vision
+T0634,a commonsense commitment to reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0635,visually distorted,1,1,DILKES2024,0,1,0,0,vision
+T0636,‘as-if ’ unreality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0637,like in a dream,3,3,CIAUNICA2022;DILKES2024;SIMEON2023,2,0,3,0,not_specific
+T0638,"the individual’s relation to the outer world, seems to deteriorate",1,1,SIMEON2023,0,0,1,0,not_specific
+T0639,frightening experiences,1,1,SIMEON2023,0,0,1,0,not_specific
+T0640,"alternative experiential worlds, with different meanings, laws, and truths",1,1,PIENKOS2022,0,0,1,0,not_specific
+T0641,entirely beastly,1,1,SIMEON2023,0,0,0,1,mixed
+T0642,as direct as the experience of a red apple on the table,1,1,MIYAZONO2021,0,1,0,0,vision
+T0643,a thick cloud,1,1,SIMEON2023,1,1,0,0,vision
+T0644,some indistinct grey spots at the intersections,1,1,MIYAZONO2021,0,1,0,0,vision
+T0645,enclosed in a kind of bubble,1,1,SIMEON2023,1,0,1,0,not_specific
+T0646,newly blurred perceptual boundaries,1,1,FINO2024,0,0,1,0,not_specific
+T0647,behind a cloudy glass wall permanently,1,1,DILKES2024,1,0,1,0,not_specific
+T0648,"other people, objects, and the world around them are not real",1,1,SIMEON2023,0,0,1,0,not_specific
+T0649,feeling especially close to,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0650,an alteration in the perception or experience of the external world,1,1,SIERRA2001,0,0,1,0,not_specific
+T0651,the gradual slipping away of both self and world into an all-encompassing anxious indifference,1,1,SIMEON2023,0,0,1,0,not_specific
+T0652,distant,3,1,PIENKOS2022,0,0,3,0,not_specific
+T0653,"lost their familiar, habitual imprinting of the self onto the world",1,1,PIENKOS2022,0,0,1,0,not_specific
+T0654,some real thing behind appearances,1,1,SIMEON2023,1,0,1,0,not_specific
+T0655,"sounds, tastes, textures, smells, colors, and general brightness could all feel more intense or less intense than usual",1,1,CIAUNICA2022,0,0,0,1,mixed
+T0656,it was kind of repulsive,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0657,dimensionality,1,1,SIMEON2023,0,1,0,0,vision
+T0658,altered time experience,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0659,their experience of self and world have been profoundly changed,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0660,it seems as though it was further away,1,1,CIAUNICA2022,1,1,0,0,vision
+T0661,a “veil”,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0662,chronic alterations to experiences within one's self and the environment,1,1,FINO2024,0,0,1,0,not_specific
+T0663,others are especially focused on or watching/observing one,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0664,"floating over their bed, watching all that was transpiring",1,1,SIMEON2023,1,1,0,0,vision
+T0665,nothing is real,1,1,SIMEON2023,1,0,1,0,not_specific
+T0666,suffocated by the surroundings of “false digital surrogacy,1,1,SIMEON2023,0,0,1,0,not_specific
+T0667,detachment from everything,1,1,SIMEON2023,0,0,1,0,not_specific
+T0668,its blurriness,1,1,SIMEON2023,0,1,0,0,vision
+T0669,They are there,2,1,SIMEON2023,0,0,2,0,not_specific
+T0670,the altered awareness of the self and the world around,1,1,SIMEON2023,0,0,1,0,not_specific
+T0671,momentary and timeless,1,1,SIMEON2023,0,0,1,0,not_specific
+T0672,missing the normal immediacy and familiarity of experience,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0673,maintain a connection with the world,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0674,with its focus on external reality,1,1,TANAKA2018,0,0,1,0,not_specific
+T0675,it could not really be happening,1,1,SIMEON2023,1,0,1,0,not_specific
+T0676,a corresponding instability in one’s experience of the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0677,"disconnected from one’s body, self, and the world",1,1,SIMEON2023,0,0,1,0,not_specific
+T0678,unreal,12,6,CIAUNICA2022;DILKES2024;MIYAZONO2021;PIENKOS2022;SIERRA2001;SIMEON2023,0,0,12,0,not_specific
+T0679,like a robot,1,1,PIENKOS2022,1,0,0,1,mixed
+T0680,unclear,1,1,SIMEON2023,0,1,0,0,vision
+T0681,the view is torn away,1,1,SIMEON2023,0,1,0,0,vision
+T0682,a dream,2,2,DILKES2024;PIENKOS2022,0,0,2,0,not_specific
+T0683,flat,4,4,MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,2,4,0,0,vision
+T0684,characters without a meaning,1,1,SIMEON2023,1,1,0,0,vision
+T0685,a piece of reality or that a piece of his own self is strange to him,2,2,SIMEON2023;TANAKA2018,0,0,2,0,not_specific
+T0686,persistence of this familiarity,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0687,either as a heightening or as a diminishment of its reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0688,appear to lose their immediate sense of humanity,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0689,do not feel familiar and real,1,1,SIMEON2023,0,0,1,0,not_specific
+T0690,all was unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0691,strangeness or unreality,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0692,shadowy,1,1,SIMEON2023,1,1,0,0,vision
+T0693,it seems a bit fake,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0694,robotic,2,1,DILKES2024,1,0,2,0,not_specific
+T0695,being in a simulation,2,1,DILKES2024,0,0,2,0,not_specific
+T0696,a Van Gogh-like intensity,1,1,SIMEON2023,0,1,0,0,vision
+T0697,through which ‘I’ observe the whole reality,1,1,TANAKA2018,0,0,1,0,not_specific
+T0698,the first-person perspective is separate from the real body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0699,the object does not reach me,1,1,SIMEON2023,1,0,1,0,not_specific
+T0700,a barrier that separates me from reality,1,1,DILKES2024,1,0,1,0,not_specific
+T0701,The world around me seems very fake,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0702,feeling surrounded by an invisible wall,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0703,like one is suspended in time,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0704,They demand nothing,1,1,SIMEON2023,0,0,1,0,not_specific
+T0705,detachment from,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0706,robot,3,1,DILKES2024,0,0,3,0,not_specific
+T0707,blurred boundaries between oneself and one's surroundings,1,1,FINO2024,0,0,1,0,not_specific
+T0708,changes in visual field,1,1,SIMEON2023,0,1,0,0,vision
+T0709,was irrelevant,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0710,far off and out of this world,1,1,SIMEON2023,1,0,1,0,not_specific
+T0711,Life seems unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0712,awareness of the conventional or mundane reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0713,ownership transferred toward the virtual body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0714,making everything feel less real and more distant,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0715,not felt to be located within the body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0716,loss of the impression that objects and their properties are immediately presented,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0717,the safer (emotionally irrelevant) colors of the surrounding environment,1,1,SIMEON2023,0,1,0,0,vision
+T0718,the very existence or reality of the self and the world are called into question,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0719,playing a video game inside a video game,1,1,DILKES2024,1,0,1,0,not_specific
+T0720,reality is just not there,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0721,experiences of unreality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0722,like if I were in a dream,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0723,time itself is flowing faster,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0724,how strongly things exist today,1,1,SIMEON2023,0,0,1,0,not_specific
+T0725,Previously familiar places look unfamiliar,1,1,SIMEON2023,0,1,0,0,vision
+T0726,observing reality without having a clear sense of location,1,1,TANAKA2018,0,0,1,0,not_specific
+T0727,less transparent,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0728,the object’s distinctness was lost to my mind,1,1,SIMEON2023,1,1,0,0,vision
+T0729,passing in the external world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0730,I could no longer see the words on the page,1,1,SIMEON2023,1,1,0,0,vision
+T0731,located outside their physical bodies,1,1,TANAKA2018,0,0,1,0,not_specific
+T0732,not felt to be located in a particular place,1,1,TANAKA2018,0,0,1,0,not_specific
+T0733,being behind a screen,1,1,DILKES2024,0,0,1,0,not_specific
+T0734,"as if I am everyone, and everything, and the spaces between things",1,1,SIMEON2023,1,0,1,0,not_specific
+T0735,Their charm doesn’t enter my mind any more,1,1,MIYAZONO2021,1,0,0,1,mixed
+T0736,a kind of privileged access to others’ thoughts and private feelings,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0737,detachment from reality,2,2,FINO2024;PIENKOS2022,0,0,2,0,not_specific
+T0738,come between real life and me,1,1,SIMEON2023,1,0,1,0,not_specific
+T0739,others are lifeless,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0740,the infinite sky above me,1,1,SIMEON2023,1,1,0,0,vision
+T0741,a glass wall between the individual and the world around,1,1,DILKES2024,0,0,1,0,not_specific
+T0742,time no longer provided a reliable medium in which events unfold with relative consistency,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0743,I don’t know anything about them,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0744,upside down,1,1,SIMEON2023,1,0,0,1,mixed
+T0745,great black tree trunks,1,1,SIMEON2023,0,1,0,0,vision
+T0746,people’s movements are programmed,1,1,CIAUNICA2022,1,1,0,0,vision
+T0747,too fast,1,1,SIMEON2023,0,0,1,0,not_specific
+T0748,difficult it is for the self to be located in the world,1,1,TANAKA2018,0,0,1,0,not_specific
+T0749,evoke no feelings of familiarity or any emotion at all,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0750,the life game,1,1,DILKES2024,0,0,1,0,not_specific
+T0751,with no personal connection to me,1,1,SIMEON2023,1,0,1,0,not_specific
+T0752,strange,4,3,MIYAZONO2021;SIERRA2001;SIMEON2023,1,0,3,1,mixed
+T0753,seeming to emanate from the sensory objects themselves,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0754,not noticing things that were obvious to others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0755,"What glass screen has, as it were, interposed itself between me",1,1,SIMEON2023,1,0,0,1,mixed
+T0756,living in a dream or a movie,2,2,RADOVIC2002;SIERRA2001,0,0,2,0,not_specific
+T0757,as if I were cut off from the world,2,2,MIYAZONO2021;SIMEON2023,0,0,2,0,not_specific
+T0758,screen,2,1,DILKES2024,0,0,2,0,not_specific
+T0759,compromised vision,4,1,DILKES2024,0,4,0,0,vision
+T0760,as though reliving a moment rather than living fully in the moment,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0761,studied versions of human movements,1,1,CIAUNICA2022,1,1,0,0,vision
+T0762,don’t feel anything when I see them,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0763,surrounded by a glass wall,1,1,DILKES2024,1,0,1,0,not_specific
+T0764,as if the invisible envelope surrounding him was starting to melt,1,1,SIMEON2023,1,0,1,0,not_specific
+T0765,just looking on in fascination,1,1,PIENKOS2022,1,1,0,0,vision
+T0766,loss of time,1,1,SIMEON2023,0,0,1,0,not_specific
+T0767,as if they are looking at the world through a fog,1,1,SIMEON2023,0,1,0,0,vision
+T0768,it was all a dream,1,1,SIMEON2023,1,0,1,0,not_specific
+T0769,unfamiliarity,2,1,SIMEON2023,0,0,2,0,not_specific
+T0770,empty,1,1,SIMEON2023,1,0,1,0,not_specific
+T0771,her life was literally a dream,1,1,SIMEON2023,0,0,1,0,not_specific
+T0772,the sensory and emotional distancing from overwhelming experience,1,1,SIMEON2023,0,0,1,0,not_specific
+T0773,Alone,1,1,SIMEON2023,0,0,1,0,not_specific
+T0774,several hours seem to pass as quickly as several minutes,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0775,the unreality of external objects,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0776,objects are no longer directly presented to them,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0777,emotionally disconnected from people you care about,1,1,DILKES2024,0,0,1,0,not_specific
+T0778,seeing the world but not feeling part of it,1,1,DILKES2024,1,0,0,1,mixed
+T0779,isolated from the world,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0780,"a spectator, so to speak, of the molecular whirlwind which men call individual life",1,1,SIMEON2023,1,0,1,0,not_specific
+T0781,a new reality rather than an unreality,1,1,SIMEON2023,0,0,1,0,not_specific
+T0782,like I’m in the Twilight Zone,1,1,SIMEON2023,1,0,1,0,not_specific
+T0783,feeling as if in a dream,1,1,SIMEON2023,0,0,1,0,not_specific
+T0784,the vastness of the universe,1,1,SIMEON2023,1,0,1,0,not_specific
+T0785,no greater claim to shared reality than the alternative worlds,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0786,heightened acuity,1,1,SIMEON2023,0,1,0,0,vision
+T0787,never feel fully engaged or connected to things,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0788,a set of isolated elements,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0789,as if they are presented before the mind,1,1,MIYAZONO2021,0,1,0,0,vision
+T0790,look smaller,1,1,SIMEON2023,0,1,0,0,vision
+T0791,an invisible barrier between themself and the world,1,1,DILKES2024,0,0,1,0,not_specific
+T0792,difficulty seeing distinctions between separate objects,1,1,CIAUNICA2022,0,1,0,0,vision
+T0793,an effectual experience of unreality that does not have a factual ground,1,1,SIMEON2023,0,0,1,0,not_specific
+T0794,as if living in a continuous dream,1,1,SIMEON2023,1,0,1,0,not_specific
+T0795,feel alone with it as they always did,1,1,SIMEON2023,0,0,1,0,not_specific
+T0796,nearly indistinguishable from the real reality of the objective world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0797,a lack of emotional response or connection to events or objects in the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0798,all I could see were stars,1,1,SIMEON2023,1,1,0,0,vision
+T0799,the world were made of cellophane or glass,1,1,SIMEON2023,1,0,0,1,mixed
+T0800,doubt about the real feelings of my friends and my boyfriend towards me,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0801,they don’t impose themselves,1,1,SIMEON2023,0,0,1,0,not_specific
+T0802,teacher looked like a robot,1,1,SIMEON2023,1,1,0,0,vision
+T0803,I’m seeing things differently from how I used to,1,1,MIYAZONO2021,1,1,0,0,vision
+T0804,attenuated perception,1,1,DILKES2024,0,0,1,0,not_specific
+T0805,simply marveling at their existence,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0806,everything seems to big,1,1,CIAUNICA2022,1,1,0,0,vision
+T0807,detachment from one’s surroundings,3,1,MIYAZONO2021,0,0,3,0,not_specific
+T0808,detachment and distance from their loved ones,1,1,SIMEON2023,1,0,1,0,not_specific
+T0809,as if I had not seen it for a long time,1,1,MIYAZONO2021,1,1,0,0,vision
+T0810,clear and bright,1,1,SIMEON2023,0,1,0,0,vision
+T0811,a transient predictive uncertainty as to which of the two competing reality models is the more veridical one,1,1,SIMEON2023,0,0,1,0,not_specific
+T0812,No longer grounded by familiar sensations or surroundings,1,1,SIMEON2023,0,0,1,0,not_specific
+T0813,various changes in the passage of time,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0814,behind my body looking out at the world without using the body’s eyes,1,1,SIMEON2023,1,1,0,0,vision
+T0815,seem like objects or machines,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0816,size of objects,2,1,SIMEON2023,0,2,0,0,vision
+T0817,lacking in vibrancy or depth,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0818,if someone appeared next to me,1,1,CIAUNICA2022,1,1,0,0,vision
+T0819,objects or places being unfamiliar,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0820,feels cut off from the world,1,1,TANAKA2018,0,0,1,0,not_specific
+T0821,perception being altered,2,1,DILKES2024,0,0,2,0,not_specific
+T0822,the sense of location is not clearly added to the observing experience,1,1,TANAKA2018,0,0,1,0,not_specific
+T0823,what a strange shape it is,1,1,PIENKOS2022,1,1,0,0,vision
+T0824,npc,1,1,DILKES2024,0,0,1,0,not_specific
+T0825,the speed of one’s own movements or the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0826,slower than it seems like it should,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0827,time has stopped or disappeared,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0828,feeling the need to scrutinize and observe others’ behavior to understand them,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0829,through the visuospatial perspective of the real body,1,1,TANAKA2018,0,1,0,0,vision
+T0830,"persistent awareness of, and a certain lingering commitment to, everyday reality",1,1,PIENKOS2022,0,0,1,0,not_specific
+T0831,the other within the body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0832,subjective detachment from the external world,1,1,SIMEON2023,0,0,1,0,not_specific
+T0833,do not convey the familiar picture of everyday reality,1,1,SIMEON2023,1,0,0,1,mixed
+T0834,other digital worlds,1,1,DILKES2024,0,0,1,0,not_specific
+T0835,fuse with the object being perceived and represented,1,1,SIMEON2023,0,1,0,0,vision
+T0836,"existence penetrates me everywhere, through the eyes, the nose, the mouth",1,1,SIMEON2023,0,0,1,0,not_specific
+T0837,strange and unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0838,happening but not really happening,1,1,SIMEON2023,1,0,1,0,not_specific
+T0839,dull,3,3,PIENKOS2022;RADOVIC2002;SIERRA2001,2,2,1,0,mixed
+T0840,cold,2,2,PIENKOS2022;RADOVIC2002,0,0,2,0,not_specific
+T0841,a window opened upon the mystery of the world,1,1,SIMEON2023,1,0,0,1,mixed
+T0842,cut off from the world,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0843,this strange opening,1,1,PIENKOS2022,1,1,0,0,vision
+T0844,a current strange or otherwise altered appearance,1,1,RADOVIC2002,0,0,0,1,mixed
+T0845,a moonlit night,1,1,SIMEON2023,1,1,0,0,vision
+T0846,It could just as well be a dead donkey,1,1,SIMEON2023,0,0,1,0,not_specific
+T0847,I cannot empathise with the tragic things that happen in the world,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0848,this veil between your eyes and the real world,1,1,DILKES2024,1,1,0,0,vision
+T0849,"watching the whole scene like a spectator, totally removed",1,1,SIMEON2023,1,0,0,1,mixed
+T0850,as if I had never seen them before,1,1,SIMEON2023,0,1,0,0,vision
+T0851,an invisible wall,1,1,DILKES2024,0,0,1,0,not_specific
+T0852,lost in space,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0853,dream,7,3,DILKES2024;MIYAZONO2021;SIMEON2023,0,0,7,0,not_specific
+T0854,others do not experience emotion,1,1,DILKES2024,0,0,1,0,not_specific
+T0855,visual problems,1,1,DILKES2024,1,1,0,0,vision
+T0856,looked less familiar,1,1,SIMEON2023,1,1,0,0,vision
+T0857,nameless things,1,1,SIMEON2023,0,0,1,0,not_specific
+T0858,his gay friend was coming on to him,1,1,SIMEON2023,0,0,1,0,not_specific
+T0859,mindless robots programmed by evolution and evolution only,1,1,DILKES2024,1,0,1,0,not_specific
+T0860,without substance,1,1,SIMEON2023,0,0,1,0,not_specific
+T0861,he never really felt himself to be part of it,1,1,SIMEON2023,0,0,1,0,not_specific
+T0862,its peculiar quality,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0863,perceive the outer landscape through the cracked window,1,1,CIAUNICA2022,0,1,0,0,vision
+T0864,very far away,1,1,SIMEON2023,1,0,1,0,not_specific
+T0865,like an invisible wall,1,1,DILKES2024,1,0,1,0,not_specific
+T0866,feelings of déjà vu,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0867,dreams feel more real than waking life,1,1,SIMEON2023,1,0,1,0,not_specific
+T0868,lifeless,9,6,DILKES2024;FINO2024;MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,2,4,5,0,mixed
+T0869,renders it unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T0870,much more recent than reality,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0871,the world is unreal,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0872,dangerous,1,1,SIMEON2023,0,0,1,0,not_specific
+T0873,a heightened sense of concern or responsibility for caring for other people or for the world/humanity as a whole,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0874,the world as no longer appealing or mattering to oneself,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0875,exhausted by others,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0876,instantly recognizable,1,1,SIMEON2023,1,1,0,0,vision
+T0877,located in a certain extracorporeal space,1,1,TANAKA2018,0,0,1,0,not_specific
+T0878,specific objects,1,1,CIAUNICA2022,0,0,0,1,mixed
+T0879,everything’s a bit suspended in the moment,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0880,the apple tree was connected with the horror of Mr Valpy’s suicide,1,1,SIMEON2023,1,0,1,0,not_specific
+T0881,intrusive feeling,1,1,CIAUNICA2022,1,1,0,0,vision
+T0882,formal visual details,1,1,PIENKOS2022,0,1,0,0,vision
+T0883,life being real or a dream,1,1,SIMEON2023,0,0,1,0,not_specific
+T0884,Everything seemed intensely unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0885,profound alterations in the feel of the everyday,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0886,there is no self for whom worldly objectives are relevant or important,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0887,as ephemeral and incomprehensible as I am myself,1,1,SIMEON2023,0,0,1,0,not_specific
+T0888,flustered by noise and crowds,1,1,SIMEON2023,1,0,1,0,not_specific
+T0889,foggy and veiled,1,1,TANAKA2018,1,1,0,0,vision
+T0890,observing the scene as a third party,1,1,SIMEON2023,1,0,0,1,mixed
+T0891,it feels like it happened ages ago,1,1,SIMEON2023,1,0,1,0,not_specific
+T0892,not noticing the passage of time at all,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0893,gave way to something else,1,1,SIMEON2023,1,1,0,0,vision
+T0894,no ties at all with anyone or anything,1,1,RADOVIC2002,1,0,1,0,not_specific
+T0895,dots,1,1,CIAUNICA2022,0,1,0,0,vision
+T0896,do not question the factual reality of the world around them,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0897,the gulf between one’s immediate experience and what one has always believed to be true,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0898,this could only be a dream,1,1,SIMEON2023,1,0,1,0,not_specific
+T0899,as if they are constitutive aspects of the very experience of them,1,1,MIYAZONO2021,0,1,0,0,vision
+T0900,emptiness—which is pure consciousness—of all phenomena,1,1,SIMEON2023,0,0,1,0,not_specific
+T0901,vague,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0902,the world seems strange,1,1,SIMEON2023,0,0,1,0,not_specific
+T0903,this must be a dream,1,1,SIMEON2023,1,0,1,0,not_specific
+T0904,so alien like and robotic,1,1,DILKES2024,1,0,1,0,not_specific
+T0905,as though it was out of reach,1,1,CIAUNICA2022,1,1,0,0,vision
+T0906,captured or owned by the other,1,1,TANAKA2018,0,0,1,0,not_specific
+T0907,nothing terrible is really happening,1,1,SIMEON2023,0,0,1,0,not_specific
+T0908,picture,2,1,MIYAZONO2021,0,2,0,0,vision
+T0909,in a simulation,1,1,DILKES2024,1,0,1,0,not_specific
+T0910,“blurriness” or confusion between oneself and the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0911,scrapes at the earth under my feet with a black nail,1,1,SIMEON2023,0,1,0,0,vision
+T0912,the familiar is experienced as unfamiliar,1,1,SIMEON2023,0,0,1,0,not_specific
+T0913,trusted this vision of the everyday,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0914,"reality, was shaken as never before",1,1,SIMEON2023,0,0,1,0,not_specific
+T0915,close contact with others could infect,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0916,a “glass wall”,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T0917,intensify the horrible sensation,2,2,MIYAZONO2021;SIMEON2023,2,1,1,0,mixed
+T0918,a crack in the pane of glass,1,1,CIAUNICA2022,0,1,0,0,vision
+T0919,the personal feel of everything is gone,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0920,my world becoming two dimensional,1,1,FINO2024,1,0,0,1,mixed
+T0921,cloudy,1,1,SIMEON2023,1,0,1,0,not_specific
+T0922,foggy,2,2,DILKES2024;FINO2024,0,0,2,0,not_specific
+T0923,as if there were a veil between me and the outside world,1,1,MIYAZONO2021,0,0,0,1,mixed
+T0924,mechanical,2,2,RADOVIC2002;SIERRA2001,0,0,2,0,not_specific
+T0925,they are not a part of the world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0926,"like being outside the pilot’s chair, looking at, but not controlling, the gauges",1,1,SIMEON2023,1,0,0,1,mixed
+T0927,the beauty or other qualities of one’s environment,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0928,to abolish distances,1,1,SIMEON2023,1,1,0,0,vision
+T0929,illusory self-localization to a position outside one’s body,1,1,TANAKA2018,0,0,1,0,not_specific
+T0930,others as judging one negatively,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0931,an invisible barrier between the self and the world,2,1,DILKES2024,0,0,2,0,not_specific
+T0932,a larger perspective than just their immediate view or that of the human race,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0933,indefinite,1,1,MIYAZONO2021,1,1,0,0,vision
+T0934,"you wake up from a dream, into another dream",1,1,SIMEON2023,1,0,1,0,not_specific
+T0935,it’s familiar in some sense,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0936,people and objects appear far away,1,1,SIMEON2023,0,1,0,0,vision
+T0937,a simulation,2,1,DILKES2024,0,0,2,0,not_specific
+T0938,detach themselves from disturbing happenings around them,1,1,SIMEON2023,0,0,1,0,not_specific
+T0939,as if I am looking at them for the first time,1,1,SIMEON2023,1,1,0,0,vision
+T0940,located at the place of visuospatial perspective,1,1,TANAKA2018,0,1,0,0,vision
+T0941,"disconnection from the world, or others",1,1,DILKES2024,0,0,1,0,not_specific
+T0942,some sort of Truman Show plot,1,1,SIMEON2023,1,0,1,0,not_specific
+T0943,as if there was a wall between me and the external world,1,1,SIMEON2023,1,0,1,0,not_specific
+T0944,located at the place of visual representation of the body,1,1,TANAKA2018,0,1,0,0,vision
+T0945,an illusory sense of ownership for a rubber hand,1,1,TANAKA2018,0,0,1,0,not_specific
+T0946,the universe has a special meaning,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0947,feels unreal that he isn’t around any more,1,1,RADOVIC2002,0,0,1,0,not_specific
+T0948,my college graduation feels like yesterday,1,1,SIMEON2023,1,0,1,0,not_specific
+T0949,shapes may look different,1,1,CIAUNICA2022,0,1,0,0,vision
+T0950,time seeming eternal,1,1,SIMEON2023,1,0,1,0,not_specific
+T0951,it's not natural anymore,1,1,FINO2024,1,0,1,0,not_specific
+T0952,nothing stands out or captures the attention,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0953,having a pane of glass,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0954,egodystonic inner/outer states,1,1,FINO2024,0,0,1,0,not_specific
+T0955,the sense of disconnection from her baby,1,1,SIMEON2023,0,0,1,0,not_specific
+T0956,a kind of merging with objects in the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0957,lack of immediate emotional response,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0958,separated by a glass wall,1,1,DILKES2024,0,0,1,0,not_specific
+T0959,uncanny,2,2,MIYAZONO2021;PIENKOS2022,0,1,1,0,mixed
+T0960,‘reality’ feel more like a vr headset,1,1,DILKES2024,1,0,1,0,not_specific
+T0961,a marked magnification of perceptions,1,1,SIMEON2023,0,0,1,0,not_specific
+T0962,lack of emotion,1,1,DILKES2024,0,0,1,0,not_specific
+T0963,a veil that was coming over my vision slowly,1,1,DILKES2024,1,1,0,0,vision
+T0964,at the location of the virtual body shown in the display,1,1,TANAKA2018,0,1,0,0,vision
+T0965,"as a second wave of perception, I saw the distinctions",1,1,SIMEON2023,1,1,0,0,vision
+T0966,loss of vital contact with reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0967,feels like I am not looking out of my eyes,1,1,PIENKOS2022,1,1,0,0,vision
+T0968,time has stopped,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0969,the focus is never quite right,1,1,DILKES2024,1,1,0,0,vision
+T0970,navigating through fog in slow motion,1,1,SIMEON2023,1,0,0,1,mixed
+T0971,"past, present, and future can seem indistinguishable",1,1,SIMEON2023,0,0,1,0,not_specific
+T0972,two-dimensional,1,1,MIYAZONO2021,1,1,0,0,vision
+T0973,appear strange,1,1,SIMEON2023,0,0,1,0,not_specific
+T0974,a veil,5,2,DILKES2024;SIMEON2023,2,2,3,0,mixed
+T0975,irrelevant,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0976,I see something like a veil,1,1,MIYAZONO2021,0,1,0,0,vision
+T0977,headstrong,1,1,SIMEON2023,0,0,1,0,not_specific
+T0978,glitches in the system,1,1,SIMEON2023,1,0,1,0,not_specific
+T0979,like running scripts,1,1,DILKES2024,1,0,1,0,not_specific
+T0980,not being fully engaged with or thrown into the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0981,inside out,1,1,SIMEON2023,1,0,0,1,mixed
+T0982,Things are divorced from their names,1,1,SIMEON2023,0,0,1,0,not_specific
+T0983,lacking in perceptual or emotional vividness,1,1,TANAKA2018,0,0,1,0,not_specific
+T0984,no longer notices the commonsense meaning or relevance of objects,1,1,PIENKOS2022,0,0,1,0,not_specific
+T0985,I don’t realize what’s happening around me,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0986,cast a deep veil over everything,2,2,MIYAZONO2021;SIMEON2023,2,2,0,0,vision
+T0987,watching life from behind glass,1,1,DILKES2024,0,1,0,0,vision
+T0988,a movie,2,1,DILKES2024,0,0,2,0,not_specific
+T0989,there’s a sense of reality there,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0990,as if I’ve forgotten ever seeing the flag before,1,1,SIMEON2023,1,1,0,0,vision
+T0991,space expanding,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0992,kind of like a camera,1,1,PIENKOS2022,1,1,0,0,vision
+T0993,the world feeling unreal,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T0994,feelings of unreality,1,1,SIERRA2001,0,0,1,0,not_specific
+T0995,kind of floating,1,1,PIENKOS2022,1,0,1,0,not_specific
+T0996,just the dream of a sleeping god,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T0997,suppress in myself the results of the long education of sight,1,1,SIMEON2023,1,1,0,0,vision
+T0998,as though in a dream,1,1,DILKES2024,0,0,1,0,not_specific
+T0999,as if these were “unreal”,1,1,FINO2024,0,0,1,0,not_specific
+T1000,a world that does not resonate,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1001,the town transitions from fog world to nightmare world,1,1,DILKES2024,1,0,1,0,not_specific
+T1002,time is moving incredibly fast,2,1,CIAUNICA2022,2,0,2,0,not_specific
+T1003,awareness of its attenuation,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1004,kind of suspended in time,1,1,PIENKOS2022,1,0,1,0,not_specific
+T1005,odd,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T1006,I didn’t recognize that person.,2,1,TANAKA2018,2,2,0,0,vision
+T1007,less vivid,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1008,altered distance or size of objects,1,1,PIENKOS2022,0,1,0,0,vision
+T1009,do not arouse specific impressions such as ‘praecox feeling’,1,1,TANAKA2018,0,0,1,0,not_specific
+T1010,a “movie”,1,1,MIYAZONO2021,0,1,0,0,vision
+T1011,"whatever appears in its experience, it is nothing more than unreality",1,1,TANAKA2018,0,0,1,0,not_specific
+T1012,inanimate objects,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T1013,everything seemed more fluid,1,1,SIMEON2023,1,1,0,0,vision
+T1014,onlooker of one’s mental and bodily processes or even of reality itself,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1015,The qualities of sensory objects could also change,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1016,a loss of this immediately felt everyday familiarity,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1017,the world feels less crisp and more distant,1,1,PIENKOS2022,0,0,0,1,mixed
+T1018,a feeling of distance,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1019,altered perception more generally,1,1,DILKES2024,0,0,1,0,not_specific
+T1020,temporarily or partially blinded,1,1,CIAUNICA2022,0,1,0,0,vision
+T1021,unsafe,1,1,SIMEON2023,0,0,1,0,not_specific
+T1022,almost like I’m looking at something I know,1,1,MIYAZONO2021,1,1,0,0,vision
+T1023,nonexistent virtuality,1,1,SIMEON2023,0,0,1,0,not_specific
+T1024,look at things with the eyes of a blind man recently operated upon,1,1,SIMEON2023,1,1,0,0,vision
+T1025,oddly detached from her body and from everything happening around her,1,1,SIMEON2023,1,0,1,0,not_specific
+T1026,a blurring of reality,1,1,SIMEON2023,0,0,1,0,not_specific
+T1027,"still known to be real, largely because in the past they have always been felt as such",1,1,PIENKOS2022,0,0,1,0,not_specific
+T1028,doubt about my own and other’s existence,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T1029,eerie,1,1,MIYAZONO2021,0,0,1,0,not_specific
+T1030,seems just a painted picture,1,1,SIERRA2001,1,1,0,0,vision
+T1031,with respect to surroundings,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1032,change is present in the ego as well as in the outside world,1,1,RADOVIC2002,0,0,1,0,not_specific
+T1033,complaints of unreality are directed toward some aspect of (or the whole) external world,1,1,RADOVIC2002,0,0,1,0,not_specific
+T1034,smaller,1,1,MIYAZONO2021,0,1,0,0,vision
+T1035,Nothing evokes any emotions in me,1,1,PIENKOS2022,1,0,1,0,not_specific
+T1036,disconnected from the future,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1037,nothing bad really happened,1,1,SIMEON2023,1,0,1,0,not_specific
+T1038,as if everyone was watching and judging her,1,1,SIMEON2023,1,0,1,0,not_specific
+T1039,an illusory ownership of the rubber hand,1,1,TANAKA2018,0,0,1,0,not_specific
+T1040,who are these people?,1,1,DILKES2024,1,0,1,0,not_specific
+T1041,anomalies in these sensory experiences,1,1,SIMEON2023,0,1,0,0,vision
+T1042,objects look kind of like dead,1,1,PIENKOS2022,1,1,0,0,vision
+T1043,changes the hue and aspects of objects,1,1,SIMEON2023,1,1,0,0,vision
+T1044,objects seeming further away,1,1,CIAUNICA2022,0,0,0,1,mixed
+T1045,leaving me only the role of the looker-on,1,1,SIMEON2023,1,0,0,1,mixed
+T1046,a fictional narrative,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1047,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,1,1,SIMEON2023,1,0,1,0,not_specific
+T1048,problems with the accurate perception of distances,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1049,a glass wall between the individual and world around,2,2,DILKES2024;MIYAZONO2021,0,0,2,0,not_specific
+T1050,you’re all robots,1,1,SIMEON2023,1,0,1,0,not_specific
+T1051,were all losing their differences,1,1,SIMEON2023,1,1,0,0,vision
+T1052,a cyberspace with allowed doses of human interaction,1,1,SIMEON2023,0,0,1,0,not_specific
+T1053,life is meaningless,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1054,constantly at risk of turning “unreal,1,1,FINO2024,0,0,1,0,not_specific
+T1055,the particularity would recede into a nebulous Oneness,1,1,SIMEON2023,1,1,0,0,vision
+T1056,unique steadiness of time,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1057,It’s an eerie feeling,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T1058,as something quite remote and of no concern at all,1,1,SIMEON2023,1,0,0,1,mixed
+T1059,altered ability to attribute to perceived objects or concrete situations with emotional feeling,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1060,strong feelings of unreality of oneself and the surrounding world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1061,the miseries of his home,1,1,SIMEON2023,0,0,1,0,not_specific
+T1062,the boundaries of the real and the unreal are momentarily suspended,1,1,SIMEON2023,0,0,1,0,not_specific
+T1063,not quite real,1,1,SIMEON2023,0,0,1,0,not_specific
+T1064,a sense of separation from the world,1,1,DILKES2024,0,0,1,0,not_specific
+T1065,others do not notice these subjective changes,1,1,TANAKA2018,0,0,1,0,not_specific
+T1066,Objects do not come to me,1,1,SIMEON2023,1,0,1,0,not_specific
+T1067,unspeakably sinister,1,1,SIMEON2023,0,0,1,0,not_specific
+T1068,a dreamlike scene,1,1,RADOVIC2002,0,0,1,0,not_specific
+T1069,veil,5,3,DILKES2024;MIYAZONO2021;SIMEON2023,0,1,4,0,mixed
+T1070,being inside a video game,1,1,DILKES2024,0,0,1,0,not_specific
+T1071,invisible wall,3,1,DILKES2024,0,0,3,0,not_specific
+T1072,the attentional disengagement from both self and world,1,1,SIMEON2023,0,0,1,0,not_specific
+T1073,living “in a dream”,1,1,FINO2024,0,0,1,0,not_specific
+T1074,the virtual body is ‘my body’,1,1,TANAKA2018,0,0,1,0,not_specific
+T1075,eye contacts very unsettling,1,1,CIAUNICA2022,1,1,0,0,vision
+T1076,nor clearly located in an extracorporeal space,1,1,TANAKA2018,0,0,1,0,not_specific
+T1077,unfamiliar,3,3,MIYAZONO2021;PIENKOS2022;SIERRA2001,0,1,2,0,mixed
+T1078,like there is a zipper to unzip,1,1,SIMEON2023,1,1,0,0,vision
+T1079,living in a bubble,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T1080,not something immediately lived,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1081,a blurring of the borders between self and non-self,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1082,as through a veil,1,1,MIYAZONO2021,1,1,0,0,vision
+T1083,more ‘real’,1,1,SIMEON2023,0,0,1,0,not_specific
+T1084,like a wall before me,2,1,RADOVIC2002,2,0,2,0,not_specific
+T1085,cast a ghoulish haze on all the merchandise,1,1,SIMEON2023,1,1,0,0,vision
+T1086,I was somewhere above looking down on the scene,1,1,SIERRA2001,1,1,0,0,vision
+T1087,especially and unusually lively,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1088,as if seen through a veil,1,1,SIMEON2023,1,1,0,0,vision
+T1089,"a different, and in their eyes just as true, reality",1,1,SIMEON2023,0,0,1,0,not_specific
+T1090,Nothing exists or is real,1,1,SIMEON2023,0,0,1,0,not_specific
+T1091,difficulties understanding speech or written language,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1092,make the latter visible,1,1,CIAUNICA2022,0,1,0,0,vision
+T1093,altered distance,1,1,SIMEON2023,0,1,0,0,vision
+T1094,peering at the world through a fog,1,1,DILKES2024,1,1,0,0,vision
+T1095,through a screen,1,1,DILKES2024,1,0,0,1,mixed
+T1096,unremarkable,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1097,"a felt loss of immediate, familiar, engaged experience in the world",1,1,PIENKOS2022,0,0,1,0,not_specific
+T1098,a veil between me and the outside world,1,1,RADOVIC2002,0,0,1,0,not_specific
+T1099,everything around me felt so different,1,1,DILKES2024,1,0,1,0,not_specific
+T1100,fundamental doubt in reality,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1101,unfamiliarity and estrangement from the surrounding world,1,1,SIMEON2023,0,0,1,0,not_specific
+T1102,"oceanic, expansive “oneness” with all around",1,1,SIMEON2023,0,0,1,0,not_specific
+T1103,in a fog,3,2,DILKES2024;MIYAZONO2021,0,0,3,0,not_specific
+T1104,what I saw first was how they were one,1,1,SIMEON2023,1,1,0,0,vision
+T1105,no passage of time anymore,1,1,PIENKOS2022,1,0,1,0,not_specific
+T1106,Everything seems unreal,1,1,SIMEON2023,1,0,1,0,not_specific
+T1107,looking flat,1,1,SIERRA2001,0,1,0,0,vision
+T1108,being in a video game,2,1,DILKES2024,0,0,2,0,not_specific
+T1109,feelings of ‘unreality’,1,1,TANAKA2018,0,0,1,0,not_specific
+T1110,the present seems so unreal,1,1,PIENKOS2022,1,0,1,0,not_specific
+T1111,somewhere on the border of the real and the unreal,1,1,SIMEON2023,0,0,1,0,not_specific
+T1112,an emptiness to landscapes,1,1,MIYAZONO2021,1,0,0,1,mixed
+T1113,the minuteness of individual human presence,1,1,SIMEON2023,1,0,1,0,not_specific
+T1114,the basic features of reality such as the passage of time,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1115,being unplugged from the matrix,1,1,DILKES2024,1,0,1,0,not_specific
+T1116,Everything looks quite kind of lifeless,1,1,PIENKOS2022,1,1,0,0,vision
+T1117,seeing and understanding the world in ways they never have before,1,1,SIMEON2023,0,1,0,0,vision
+T1118,sometimes slower,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1119,“detached void”,1,1,DILKES2024,0,0,1,0,not_specific
+T1120,inability to evoke the past readily or clearly,1,1,SIMEON2023,0,0,1,0,not_specific
+T1121,diminished stability of basic self and the experienced world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1122,intensely detailed,1,1,SIMEON2023,0,1,0,0,vision
+T1123,seeing similarities or connections that others might not recognize,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1124,the matrix,3,1,DILKES2024,0,0,3,0,not_specific
+T1125,a hologram,1,1,DILKES2024,1,1,0,0,vision
+T1126,a sims game,1,1,DILKES2024,0,0,1,0,not_specific
+T1127,being unsure about whether something was objectively perceived or simply imagined or thought,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1128,there’s a wall that separates me from everybody else,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T1129,unable to perceive objects or landscapes as integrated wholes,1,1,CIAUNICA2022,0,0,0,1,mixed
+T1130,seeing these things for the first time,1,1,SIMEON2023,1,1,0,0,vision
+T1131,words cant properly describe them,1,1,CIAUNICA2022,1,0,1,0,not_specific
+T1132,life is through a veil,1,1,DILKES2024,1,1,0,0,vision
+T1133,things feel unreal to me,1,1,SIMEON2023,1,0,1,0,not_specific
+T1134,staring at him,1,1,SIMEON2023,1,1,0,0,vision
+T1135,the whole world is a work of art,1,1,SIMEON2023,1,0,1,0,not_specific
+T1136,detachment from one’s immediate experiences of oneself and the surrounding world,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1137,useless,1,1,PIENKOS2022,0,0,1,0,not_specific
+T1138,a sense of stronger concern toward others and the world,1,1,CIAUNICA2022,0,0,1,0,not_specific
+T1139,Visual distortions,2,1,SIMEON2023,0,2,0,0,vision
+T1140,Everything seemed to be dissolving right in front of my eyes,1,1,SIMEON2023,1,1,0,0,vision

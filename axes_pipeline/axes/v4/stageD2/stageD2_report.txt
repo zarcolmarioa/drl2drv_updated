@@ -1,0 +1,55 @@
+STAGE D2: MANUAL REVISION OF THE PAIRS (v4_protocol.md 1.12, section 6.4a)
+==============================================================================
+Date: 2026-10-06 14:37
+Pairs of Stage D: 232; final pairs: 191
+
+1. PROPOSED ACTIONS
+------------------------------------------------------------------------------
+  keep        152
+  replace      40
+  drop         24
+  open         16
+  reasons:
+      47  decision 17 (R1b)
+      17  check
+       9  negation
+       4  not_scene: judgement
+       3  not_scene: story or reference
+       3  negative brings in a town
+       2  negative brings in a material
+       2  not_scene: life
+       2  not_scene: self-world
+       2  negative brings in people
+       1  not_scene: time
+       1  not_scene: body
+       1  not_scene: touch or action
+       1  negative brings in a mood
+       1  negative brings in light
+       1  not_scene: emotion
+
+2. FINAL ACTIONS (after your decisions)
+------------------------------------------------------------------------------
+  kept                                151
+  replaced (proposed)                  32
+  dropped (proposed)                   24
+  dropped by you                       17
+  your negative                         8
+
+3. A05 NEGATIVES AFTER THE REVISION (words added by the final negatives)
+------------------------------------------------------------------------------
+  direct 24, view 9, link 9, sight 7, world 4, scene 3, bond 2, setting 1, located 1, passage 1, transparent 1, lens 1, connected 1, joined 1, clears 1
+
+4. AXES (keeping rules as in Stage B)
+------------------------------------------------------------------------------
+  axis  name                                   D pairs drop repl open docs  1st  kept all/vis/n-s  largest document
+  A01   unreal, fake, artificial              45    33   12    1    0    9   14  Y/-/Y            SIMEON2023 39%
+  A02   dreamlike, in a dream                 28    25    3    0    0    9   19  Y/-/Y            DILKES2024 29%
+  A03   movie, picture, film set              13    11    2    3    0    6    6  Y/Y/-            MIYAZONO2021 31%
+  A04   simulation, video game                24    21    3    1    0    2    8  Y/-/Y            DILKES2024 78%
+  A05   veil, glass wall, barrier, bubble     61    44   17   33    0    7   27  Y/Y/Y            DILKES2024 39%
+  A07   fog, blurry, hazy                     30    29    1    0    0    7   16  Y/Y/Y            SIMEON2023 43%
+  A11   flat, two-dimensional                  6     6    0    0    0    7    5  Y/Y/-            SIMEON2023 31%
+  A13   dull, less vivid, colorless           11    10    1    0    0    6    2  Y/-/-            PIENKOS2022 43%
+  A14   lifeless, dead, empty                 14    12    2    2    0    7    9  Y/-/Y            SIMEON2023 38%
+
+STAGE D2 COMPLETE: axes/v4/stageD2/axes_v4.yaml written. Next: run v4_check17_scene_properties.py on it.

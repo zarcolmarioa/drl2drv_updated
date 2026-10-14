@@ -1,0 +1,33 @@
+template,control,pole,other_pole,pair_cosine,cos_with_control
+a scene that looks {},enclosure,enclosed,open,0.9357,0.2869
+a scene that looks {},enclosure,cramped,spacious,0.8600,0.5175
+a scene that looks {},enclosure,like a closed room,like a wide open landscape,0.8251,0.7873
+a scene that looks {},enclosure,like an indoor room,like the outdoors,0.8246,0.7571
+a scene that looks {},darkness,dark,bright,0.9004,0.8289
+a scene that looks {},darkness,dimly lit,brightly lit,0.9066,0.7370
+a scene that looks {},darkness,like nighttime,like daytime,0.9188,0.4915
+a scene that looks {},darkness,shadowy,sunlit,0.9001,0.7991
+a photo that looks {},enclosure,enclosed,open,0.9130,0.3210
+a photo that looks {},enclosure,cramped,spacious,0.8619,0.4917
+a photo that looks {},enclosure,like a closed room,like a wide open landscape,0.8205,0.7391
+a photo that looks {},enclosure,like an indoor room,like the outdoors,0.8143,0.7147
+a photo that looks {},darkness,dark,bright,0.8922,0.8141
+a photo that looks {},darkness,dimly lit,brightly lit,0.9239,0.7074
+a photo that looks {},darkness,like nighttime,like daytime,0.9125,0.5421
+a photo that looks {},darkness,shadowy,sunlit,0.8922,0.7925
+a place that looks {},enclosure,enclosed,open,0.9224,0.3146
+a place that looks {},enclosure,cramped,spacious,0.8544,0.5248
+a place that looks {},enclosure,like a closed room,like a wide open landscape,0.8253,0.7395
+a place that looks {},enclosure,like an indoor room,like the outdoors,0.8254,0.7075
+a place that looks {},darkness,dark,bright,0.8965,0.8051
+a place that looks {},darkness,dimly lit,brightly lit,0.9088,0.6862
+a place that looks {},darkness,like nighttime,like daytime,0.8739,0.5674
+a place that looks {},darkness,shadowy,sunlit,0.8880,0.7842
+the world looks {},enclosure,enclosed,open,0.9194,0.4234
+the world looks {},enclosure,cramped,spacious,0.8367,0.6305
+the world looks {},enclosure,like a closed room,like a wide open landscape,0.8992,0.6157
+the world looks {},enclosure,like an indoor room,like the outdoors,0.8768,0.7006
+the world looks {},darkness,dark,bright,0.8807,0.8231
+the world looks {},darkness,dimly lit,brightly lit,0.9052,0.7205
+the world looks {},darkness,like nighttime,like daytime,0.9023,0.4765
+the world looks {},darkness,shadowy,sunlit,0.8712,0.7729

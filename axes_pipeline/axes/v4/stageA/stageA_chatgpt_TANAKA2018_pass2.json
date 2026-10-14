@@ -1,0 +1,93 @@
+[
+  {
+    "id": "TANAKA2018-092",
+    "quote": "I didn’t recognize that person.",
+    "context": "I didn’t recognize that person.",
+    "pdf_page": 2,
+    "printed_page": "240",
+    "speaker": "participant_or_patient",
+    "quoted_from": "Bradshaw, 2016, chapter 1",
+    "target": "other_people",
+    "sense": "vision",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-093",
+    "quote": "I didn’t recognize that person",
+    "context": "In the case quoted above, the self in DD is disconnected from the body but is experienced as a thinking subject (‘blunted, blurry thoughts’) and is even easier to know than the body (‘forgot what gender I was… my body… in the mirror… I didn’t recognize that person’).",
+    "pdf_page": 3,
+    "printed_page": "241",
+    "speaker": "participant_or_patient",
+    "quoted_from": "Bradshaw, 2016, chapter 1",
+    "target": "other_people",
+    "sense": "vision",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-094",
+    "quote": "the quality of ‘here’",
+    "context": "However, it should be noted that virtual tactile stimuli do not erase real tactile stimuli that are received at the location of the real chest, which involves the quality of ‘here’.",
+    "pdf_page": 15,
+    "printed_page": "253",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "touch",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-095",
+    "quote": "receiving the real tactile stimuli ‘here’",
+    "context": "By watching the virtual tactile sensation occurring ‘there’ while receiving the real tactile stimuli ‘here’, the participant starts to feel as if the real tactile sensation is occurring ‘there’.",
+    "pdf_page": 16,
+    "printed_page": "254",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "touch",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-096",
+    "quote": "through the visuospatial perspective of the real body",
+    "context": "Even though a strong sense of ownership of the virtual body is induced during an experiment, it depends entirely on the observing experience that occurs through the visuospatial perspective of the real body.",
+    "pdf_page": 16,
+    "printed_page": "254",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "vision",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-097",
+    "quote": "the purely observing experience was left at the location of the real body",
+    "context": "As a result, the purely observing experience was left at the location of the real body.",
+    "pdf_page": 17,
+    "printed_page": "255",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "vision",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "TANAKA2018-098",
+    "quote": "the sense of location is not clearly added to the observing experience",
+    "context": "People with DD do not seem to have this sort of sensory integration and, as a result, the sense of location is not clearly added to the observing experience.",
+    "pdf_page": 17,
+    "printed_page": "255",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  }
+]

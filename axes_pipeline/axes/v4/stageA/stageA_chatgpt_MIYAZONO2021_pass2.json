@@ -1,0 +1,80 @@
+[
+  {
+    "id": "MIYAZONO2021-128",
+    "quote": "no conscious awareness of the stimuli in the blind field",
+    "context": "“Type-1” blindsight (Weiskrantz 2009), where the subject has no conscious awareness of the stimuli in the blind field, does not count as a visual experience.",
+    "pdf_page": 3,
+    "printed_page": "553",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "unclear",
+    "sense": "vision",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "MIYAZONO2021-129",
+    "quote": "alienation from the perceptual world",
+    "context": "Jaspers calls derealization “alienation from the perceptual world” and says that it is characterized by “odd, peculiar, eerie” (1997: 62) perceptual experiences.",
+    "pdf_page": 9,
+    "printed_page": "559",
+    "speaker": "other",
+    "quoted_from": "Jaspers 1997: 62",
+    "target": "surroundings",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "MIYAZONO2021-130",
+    "quote": "odd",
+    "context": "Jaspers calls derealization “alienation from the perceptual world” and says that it is characterized by “odd, peculiar, eerie” (1997: 62) perceptual experiences.",
+    "pdf_page": 9,
+    "printed_page": "559",
+    "speaker": "other",
+    "quoted_from": "Jaspers 1997: 62",
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "MIYAZONO2021-131",
+    "quote": "peculiar",
+    "context": "Jaspers calls derealization “alienation from the perceptual world” and says that it is characterized by “odd, peculiar, eerie” (1997: 62) perceptual experiences.",
+    "pdf_page": 9,
+    "printed_page": "559",
+    "speaker": "other",
+    "quoted_from": "Jaspers 1997: 62",
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "MIYAZONO2021-132",
+    "quote": "eerie",
+    "context": "Jaspers calls derealization “alienation from the perceptual world” and says that it is characterized by “odd, peculiar, eerie” (1997: 62) perceptual experiences.",
+    "pdf_page": 9,
+    "printed_page": "559",
+    "speaker": "other",
+    "quoted_from": "Jaspers 1997: 62",
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  },
+  {
+    "id": "MIYAZONO2021-133",
+    "quote": "alienation from the perceptual world",
+    "context": "For example, Jaspers carefully considers the phenomenology of derealization (“alienation from the perceptual world”), and clearly distinguishes it from illusions and hallucinations (“false perceptions”).",
+    "pdf_page": 14,
+    "printed_page": "564",
+    "speaker": "other",
+    "quoted_from": "Jaspers 1997: 62",
+    "target": "surroundings",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": null
+  }
+]

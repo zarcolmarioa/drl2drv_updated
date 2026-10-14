@@ -1,0 +1,37 @@
+group,name,definition,n_texts,n_phrases,texts_vision,texts_not_specific,texts_mixed,share_vision,all_texts,all_docs,all_first_person,all_passes,vision_texts,vision_docs,vision_first_person,vision_passes,not_specific_texts,not_specific_docs,not_specific_first_person,not_specific_passes,best_match_other_model,share_in_best_match
+G01,"unreal, not real","The world or things in it seem unreal, fake or artificial, or as if they do not exist.",100,123,2,94,4,0.020,100,9,41,True,2,2,1,False,94,9,36,True,G01,0.690
+G02,"dreamlike, in a dream",The world or one's life seems like a dream or like being in a dream.,42,61,2,40,0,0.048,42,9,25,True,2,2,2,False,40,9,23,True,G02,0.905
+G03,"movie, picture, film set","The world appears as a film, picture or staged scene that is being viewed rather than lived.",16,19,8,7,1,0.500,16,6,7,True,8,4,4,True,7,3,2,True,OTHER,0.438
+G04,"simulation, video game","The world seems to be a simulation, video game or other digital or virtual reality.",26,33,1,25,0,0.038,26,2,9,True,1,1,1,False,25,2,8,True,G03,0.885
+G05,"veil, glass wall, barrier","Something like a veil, film, pane of glass or invisible wall seems to stand between the person and the world.",66,85,19,37,10,0.288,66,7,36,True,22,4,12,True,39,7,20,True,G09,0.909
+G06,in a bubble,"The person feels enclosed in a bubble, shell, cocoon or wrapping that seals them off from the surroundings.",14,20,0,13,1,0.000,14,6,11,True,0,0,0,False,13,6,10,True,G09,1.000
+G07,"fog, blurry, hazy","The world appears foggy, blurred, cloudy or indistinct.",34,46,24,7,3,0.706,34,7,18,True,25,6,16,True,8,6,1,True,G15,0.882
+G08,"detached, cut off from world","The person feels disconnected, separated or cut off from the world, not part of it or immersed in it.",74,85,1,69,4,0.014,74,9,19,True,1,1,0,False,69,9,18,True,G08,0.554
+G09,watching as detached observer,"The world is experienced as something watched from outside, as a spectator or onlooker rather than a participant.",16,16,1,8,7,0.062,16,4,11,True,1,1,1,False,8,4,3,True,G10,0.500
+G10,"far away, distant","People, objects or the world seem remote, far off or out of reach.",15,17,5,6,4,0.333,15,3,5,True,5,2,2,True,6,2,2,True,G13,0.867
+G11,"flat, two-dimensional","Objects, people or the world look flat and lacking depth.",11,16,8,1,2,0.727,11,8,5,True,8,5,4,True,1,1,0,False,G14,0.909
+G12,altered size of objects,"Objects or spaces look larger, smaller or otherwise changed in size compared with how they really are.",13,14,10,2,1,0.769,13,4,3,True,10,4,2,True,2,2,1,False,G18,0.385
+G13,"dull, less vivid, colorless","The world appears dimmed, faded or reduced in color, vividness and intensity.",13,17,4,7,2,0.308,13,7,3,True,5,4,3,True,8,3,0,False,G16,0.923
+G14,"lifeless, dead, empty","The world or the things in it appear dead, lifeless, empty or void.",17,27,3,11,3,0.176,17,7,11,True,4,5,5,False,12,5,5,True,G61,0.529
+G15,"heightened, vivid, more real","The world appears brighter, sharper, more intense, more detailed or more real than usual.",36,36,19,14,3,0.528,36,4,10,True,19,3,8,True,14,3,2,True,OTHER,0.250
+G16,"strange, foreign, uncanny","The world or things in it feel strange, odd, alien or eerie.",39,49,2,31,6,0.051,39,9,20,True,4,4,4,False,34,8,13,True,G05,0.487
+G17,familiar looks unfamiliar,"Known places, people or objects no longer look or feel familiar, as if seen for the first time.",35,39,14,18,3,0.400,35,7,19,True,15,3,12,True,19,6,5,True,G06,0.543
+G18,"different, changed, altered","The world or things in it seem somehow changed or different from before, without the change being specified.",35,36,9,24,2,0.257,35,9,13,True,9,3,6,True,24,9,5,True,OTHER,0.829
+G19,no emotional resonance,"The world, its objects and its beauty no longer evoke feeling, interest or a sense of mattering to the person.",44,44,1,39,4,0.023,44,6,14,True,1,1,0,False,39,6,12,True,G33,0.409
+G20,"meaningless, things without names","Things appear stripped of their ordinary meaning, name or relevance, reduced to bare shapes or mere existence.",35,37,13,19,3,0.371,35,6,16,True,13,4,10,True,19,4,4,True,G56,0.343
+G21,"special meaning, significance","Objects, events or the world seem charged with a special meaning or to be communicating something to the person.",11,11,0,9,2,0.000,11,3,5,True,0,0,0,False,9,3,3,True,G55,0.818
+G22,"others as robots, automatons","Other people appear as robots, automatons, dolls, zombies or actors rather than living, feeling beings.",41,54,6,28,7,0.146,41,7,29,True,6,3,7,True,29,7,13,True,G36,0.512
+G23,disconnected from other people,"The person feels emotionally distant from other people, unable to feel attached to them or understand them.",18,19,0,18,0,0.000,18,5,7,True,0,0,0,False,18,5,7,True,G35,0.556
+G24,"others watching, threatening","Other people seem to be watching, judging, threatening, influencing or intruding upon the person.",20,20,2,16,2,0.100,20,4,6,True,2,2,2,False,16,4,3,True,G42,0.300
+G25,"oneness, connectedness with world","The person feels unusually connected to or at one with other people, humanity or the universe.",18,18,0,18,0,0.000,18,3,5,True,0,0,0,False,18,3,5,True,G44,0.444
+G26,blurred self/world boundaries,"The boundary between oneself and other people or objects seems blurred or permeable, so that things merge with the self.",14,14,1,13,0,0.071,14,4,1,True,1,1,0,False,13,4,1,True,G46,0.500
+G27,time faster or slower,Time seems to pass faster or slower than normal.,23,24,0,23,0,0.000,23,3,7,True,0,0,0,False,23,3,7,True,G25,0.522
+G28,"time stopped, eternal","Time seems to have stopped, to be suspended or to last forever.",15,15,0,15,0,0.000,15,3,8,True,0,0,0,False,15,3,8,True,G26,0.533
+G29,"present, past seem displaced","Events feel misplaced in time, so that the recent seems long ago, the present seems like a past memory, or past, present and future are hard to tell apart.",16,16,0,16,0,0.000,16,2,4,True,0,0,0,False,16,2,4,True,G29,0.375
+G30,viewpoint outside the body,"The point from which the world is seen seems to be located outside the body, floating or without a clear location.",36,40,11,24,1,0.306,36,5,8,True,12,5,5,True,25,2,3,True,NOT_WORLD,0.972
+G31,doubt in common-sense reality,"The reality or existence of the world is doubted, or held alongside an alternate reality, rather than taken for granted.",27,27,0,27,0,0.000,27,4,3,True,0,0,0,False,27,4,3,True,G50,0.407
+G32,not noticing surroundings,The person is less aware of the surroundings and misses or fails to notice what is going on around them.,9,9,0,9,0,0.000,9,3,4,True,0,0,0,False,9,3,4,True,G58,0.778
+G33,seeing things not present,"Things such as spots, patterns, sounds or images are perceived although they are not actually there.",10,10,6,2,2,0.600,10,2,0,False,6,2,0,False,2,1,0,False,G22,0.400
+G34,"frightening, sinister, repulsive","The world or things in it feel menacing, horrifying, nightmarish or disgusting.",24,25,5,15,4,0.208,24,4,8,True,6,1,3,False,16,4,4,True,G41,0.250
+OTHER,OTHER,,94,100,35,52,7,0.372,94,6,33,True,35,4,21,True,52,5,10,True,,
+NOT_WORLD,NOT_WORLD,,83,83,17,65,1,0.205,83,6,17,True,17,4,8,True,65,6,9,True,,

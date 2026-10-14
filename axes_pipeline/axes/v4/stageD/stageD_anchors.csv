@@ -1,0 +1,244 @@
+anchor_id,axis_id,caption,sentence,n_texts,n_phrases,text_ids,phrase_ids,documents,text_classes,negation_in_positive,quotes
+A01-01,A01,unreal,a scene that looks unreal,6,24,T0237;T0678;T0302;T1109;T0994;T0721,MIYAZONO2021-P0030;SIMEON2023-P0118;CIAUNICA2022-P0064;DILKES2024-P0009;MIYAZONO2021-P0074;PIENKOS2022-P0130;SIERRA2001-P0004;SIERRA2001-P0008;SIMEON2023-P0001;SIMEON2023-P0037;SIMEON2023-P0040;SIMEON2023-P0164;SIMEON2023-P0396;SIMEON2023-P0435;DILKES2024-P0001;DILKES2024-P0003;MIYAZONO2021-P0001;MIYAZONO2021-P0010;MIYAZONO2021-P0024;SIMEON2023-P0220;SIMEON2023-P0224;TANAKA2018-P0019;SIERRA2001-P0009;PIENKOS2022-P0002,CIAUNICA2022;DILKES2024;MIYAZONO2021;PIENKOS2022;SIERRA2001;SIMEON2023;TANAKA2018,not_specific,,a feeling of unreality || unreal || unreality || feelings of 'unreality' || feelings of unreality || experiences of unreality
+A01-02,A01,as if the world feels unreal,a scene that looks as if the world feels unreal,2,2,T0993;T0626,CIAUNICA2022-P0023;RADOVIC2002-P0008,CIAUNICA2022;RADOVIC2002,not_specific,,the world feeling unreal || the world feels unreal
+A01-03,A01,artificial,a scene that looks artificial,1,3,T0298,DILKES2024-P0040;SIMEON2023-P0051;SIMEON2023-P0232,DILKES2024;SIMEON2023,not_specific,,artificial
+A01-04,A01,as if everything besides the limbs feels like they don't have much of a presence,a scene that looks as if everything besides the limbs feels like they don't have much of a presence,1,1,T0408,CIAUNICA2022-P0179,CIAUNICA2022,not_specific,don't,Everything besides my limbs feel like they don't have much of a presence
+A01-05,A01,as if everything is an illusion,a scene that looks as if everything is an illusion,1,1,T0086,DILKES2024-P0125,DILKES2024,not_specific,,everything is an illusion
+A01-06,A01,as if everything seemed intensely unreal,a scene that looks as if everything seemed intensely unreal,1,1,T0884,SIMEON2023-P0315,SIMEON2023,not_specific,,Everything seemed intensely unreal
+A01-07,A01,as if everything seems unreal,a scene that looks as if everything seems unreal,1,1,T1106,SIMEON2023-P0670,SIMEON2023,not_specific,,Everything seems unreal
+A01-08,A01,as if it is making everything feel less real and more distant,a scene that looks as if it is making everything feel less real and more distant,1,1,T0714,PIENKOS2022-P0147,PIENKOS2022,not_specific,,making everything feel less real and more distant
+A01-09,A01,as if it is somewhere on the border of the real and the unreal,a scene that looks as if it is somewhere on the border of the real and the unreal,1,1,T1111,SIMEON2023-P0628,SIMEON2023,not_specific,,somewhere on the border of the real and the unreal
+A01-10,A01,as if it is without substance,a scene that looks as if it is without substance,1,1,T0860,SIMEON2023-P0398,SIMEON2023,not_specific,without,without substance
+A01-11,A01,as if it was all unreal,a scene that looks as if it was all unreal,1,1,T0504,SIMEON2023-P0258,SIMEON2023,not_specific,,It was all unreal
+A01-12,A01,as if none of this is real,a scene that looks as if none of this is real,1,1,T0370,TANAKA2018-P0020,TANAKA2018,not_specific,none,None of this is real!
+A01-13,A01,as if nothing exists or is real,a scene that looks as if nothing exists or is real,1,1,T1090,SIMEON2023-P0574,SIMEON2023,not_specific,nothing,Nothing exists or is real
+A01-14,A01,as if nothing is real,a scene that looks as if nothing is real,1,1,T0665,SIMEON2023-P0012,SIMEON2023,not_specific,nothing,nothing is real
+A01-15,A01,as if nothing seems real,a scene that looks as if nothing seems real,1,1,T0376,RADOVIC2002-P0007,RADOVIC2002,not_specific,nothing,nothing seems real
+A01-16,A01,"as if other people, objects, and the world around them are not real","a scene that looks as if other people, objects, and the world around them are not real",1,1,T0648,SIMEON2023-P0152,SIMEON2023,not_specific,not,"other people, objects, and the world around them are not real"
+A01-17,A01,as if reality is not there,a scene that looks as if reality is not there,1,1,T0720,PIENKOS2022-P0097,PIENKOS2022,not_specific,not,reality is just not there
+A01-18,A01,as if seen in a place of unreality,a scene that looks as if seen in a place of unreality,1,1,T0001,TANAKA2018-P0095,TANAKA2018,not_specific,,in a place of 'unreality'
+A01-19,A01,as if the outside world is unreal,a scene that looks as if the outside world is unreal,1,2,T0485,SIMEON2023-P0038;TANAKA2018-P0007,SIMEON2023;TANAKA2018,not_specific,,the outside world is unreal
+A01-20,A01,as if the present seems unreal,a scene that looks as if the present seems unreal,1,1,T1110,PIENKOS2022-P0111,PIENKOS2022,not_specific,,the present seems so unreal
+A01-21,A01,as if the things around don't feel real,a scene that looks as if the things around don't feel real,1,1,T0401,DILKES2024-P0123,DILKES2024,not_specific,don't,things around me don't feel real
+A01-22,A01,as if the world around is unreal,a scene that looks as if the world around is unreal,1,1,T0178,FINO2024-P0007,FINO2024,not_specific,,the world around is unreal
+A01-23,A01,as if the world around seems fake,a scene that looks as if the world around seems fake,1,1,T0701,PIENKOS2022-P0114,PIENKOS2022,not_specific,,The world around me seems very fake
+A01-24,A01,as if the world feels fake or deadened,a scene that looks as if the world feels fake or deadened,1,1,T0138,PIENKOS2022-P0009,PIENKOS2022,not_specific,,The world feels fake or deadened
+A01-25,A01,as if the world is unreal,a scene that looks as if the world is unreal,1,1,T0871,RADOVIC2002-P0066,RADOVIC2002,not_specific,,the world is unreal
+A01-26,A01,as if the world were made of cellophane or glass,a scene that looks as if the world were made of cellophane or glass,1,1,T0799,SIMEON2023-P0191,SIMEON2023,mixed,,the world were made of cellophane or glass
+A01-27,A01,as if these were unreal,a scene that looks as if these were unreal,1,1,T0999,FINO2024-P0002,FINO2024,not_specific,,as if these were “unreal”
+A01-28,A01,as if they don't seem real,a scene that looks as if they don't seem real,1,1,T0334,MIYAZONO2021-P0050,MIYAZONO2021,mixed,don't,they don't seem real
+A01-29,A01,as if things around them seem unreal,a scene that looks as if things around them seem unreal,1,1,T0333,TANAKA2018-P0012,TANAKA2018,not_specific,,things around them seem unreal
+A01-30,A01,as if things become unreal,a scene that looks as if things become unreal,1,1,T0486,SIMEON2023-P0107,SIMEON2023,not_specific,,things become unreal
+A01-31,A01,as if things feel unreal,a scene that looks as if things feel unreal,1,1,T1133,SIMEON2023-P0009,SIMEON2023,not_specific,,things feel unreal to me
+A01-32,A01,as if things seem unreal,a scene that looks as if things seem unreal,1,1,T0559,CIAUNICA2022-P0013,CIAUNICA2022,not_specific,,things seem unreal
+A01-33,A01,constantly at risk of turning unreal,a scene that looks constantly at risk of turning unreal,1,1,T1054,FINO2024-P0006,FINO2024,not_specific,,constantly at risk of turning “unreal
+A01-34,A01,detached or unreal,a scene that looks detached or unreal,1,1,T0281,RADOVIC2002-P0018,RADOVIC2002,not_specific,,detached or unreal
+A01-35,A01,fake,a scene that looks fake,1,1,T0693,PIENKOS2022-P0075,PIENKOS2022,not_specific,,it seems a bit fake
+A01-36,A01,like a blurring of reality,a scene that looks like a blurring of reality,1,1,T1026,SIMEON2023-P0142,SIMEON2023,not_specific,,a blurring of reality
+A01-37,A01,like a copy of the real world but not quite real,a scene that looks like a copy of the real world but not quite real,1,1,T0206,CIAUNICA2022-P0026,CIAUNICA2022,mixed,not,a copy of the real world but not quite real
+A01-38,A01,like all was unreal,a scene that looks like all was unreal,1,1,T0690,SIMEON2023-P0263,SIMEON2023,not_specific,,all was unreal
+A01-39,A01,like nothing was real,a scene that looks like nothing was real,1,2,T0125,DILKES2024-P0089;TANAKA2018-P0022,DILKES2024;TANAKA2018,not_specific,nothing,nothing was real
+A01-40,A01,like some real thing behind appearances,a scene that looks like some real thing behind appearances,1,1,T0654,SIMEON2023-P0429,SIMEON2023,not_specific,,some real thing behind appearances
+A01-41,A01,like something real that is unreal at the same time,a scene that looks like something real that is unreal at the same time,1,1,T0074,FINO2024-P0015,FINO2024,not_specific,,something real that is unreal at the same time
+A01-42,A01,like the unreality of external objects,a scene that looks like the unreality of external objects,1,1,T0775,MIYAZONO2021-P0146,MIYAZONO2021,not_specific,,the unreality of external objects
+A01-43,A01,like the unreality of things,a scene that looks like the unreality of things,1,1,T0375,SIMEON2023-P0122,SIMEON2023,not_specific,,the unreality of things
+A01-44,A01,like the world disappearing under the feet,a scene that looks like the world disappearing under the feet,1,1,T0083,RADOVIC2002-P0067,RADOVIC2002,not_specific,,the world disappearing under my feet
+A01-45,A01,like there is a zipper to unzip,a scene that looks like there is a zipper to unzip,1,1,T1078,SIMEON2023-P0025,SIMEON2023,vision,,like there is a zipper to unzip
+A01-46,A01,made of cellophane,a scene that looks made of cellophane,1,1,T0069,MIYAZONO2021-P0067,MIYAZONO2021,mixed,,made of cellophane
+A01-47,A01,not as real as before,a scene that looks not as real as before,1,1,T0211,RADOVIC2002-P0011,RADOVIC2002,not_specific,not,not as real as before
+A01-48,A01,not quite real,a scene that looks not quite real,1,1,T1063,SIMEON2023-P0314,SIMEON2023,not_specific,not,not quite real
+A01-49,A01,rendered unreal,a scene that looks rendered unreal,1,1,T0869,SIMEON2023-P0128,SIMEON2023,not_specific,,renders it unreal
+A01-50,A01,so unreal,a scene that looks so unreal,1,2,T0313,RADOVIC2002-P0005;RADOVIC2002-P0034,RADOVIC2002,not_specific,,so unreal
+A01-51,A01,"static, half-true","a scene that looks static, half-true",1,1,T0071,SIMEON2023-P0415,SIMEON2023,not_specific,,"static, half-true"
+A01-52,A01,unreal and pointless,a scene that looks unreal and pointless,1,1,T0260,SIMEON2023-P0409,SIMEON2023,not_specific,,unreal and pointless
+A01-53,A01,unreal or detached from one's surroundings,a scene that looks unreal or detached from one's surroundings,1,1,T0267,SIMEON2023-P0222,SIMEON2023,not_specific,,unreality or detachment from one's surroundings
+A01-54,A01,unreal or detached with respect to surroundings,a scene that looks unreal or detached with respect to surroundings,1,1,T0545,DILKES2024-P0005,DILKES2024,not_specific,,experiences of unreality or detachment with respect to surroundings
+A02-01,A02,as if seen in a dream,a scene that looks as if seen in a dream,4,10,T0637;T0487;T0722;T0145,CIAUNICA2022-P0008;DILKES2024-P0107;SIMEON2023-P0649;DILKES2024-P0090;CIAUNICA2022-P0185;DILKES2024-P0021;DILKES2024-P0038;DILKES2024-P0110;DILKES2024-P0157;SIMEON2023-P0304,CIAUNICA2022;DILKES2024;SIMEON2023,not_specific,,like in a dream || i was in a dream || like if I were in a dream || in a dream
+A02-02,A02,dreamlike,a scene that looks dreamlike,3,3,T0471;T0115;T0168,DILKES2024-P0010;RADOVIC2002-P0052;TANAKA2018-P0021,DILKES2024;RADOVIC2002;TANAKA2018,not_specific,,dreamlike || feel dreamlike || I'm dreaming...
+A02-03,A02,like a dream,a scene that looks like a dream,2,9,T0853;T0682,DILKES2024-P0077;MIYAZONO2021-P0037;MIYAZONO2021-P0078;SIMEON2023-P0044;SIMEON2023-P0047;SIMEON2023-P0228;SIMEON2023-P0311;DILKES2024-P0071;PIENKOS2022-P0108,DILKES2024;MIYAZONO2021;PIENKOS2022;SIMEON2023,not_specific,,dream || a dream
+A02-04,A02,like living in a dream,a scene that looks like living in a dream,2,4,T1073;T0395,FINO2024-P0019;DILKES2024-P0007;DILKES2024-P0019;DILKES2024-P0087,DILKES2024;FINO2024,not_specific,,living “in a dream” || living in a dream
+A02-05,A02,akin to living in a dream,a scene that looks akin to living in a dream,1,1,T0235,PIENKOS2022-P0043,PIENKOS2022,not_specific,,akin to living in a dream
+A02-06,A02,as if everything seems like a dream,a scene that looks as if everything seems like a dream,1,1,T0535,SIMEON2023-P0679,SIMEON2023,not_specific,,everything seems like a dream.
+A02-07,A02,as if in a dream,a scene that looks as if in a dream,1,1,T0783,SIMEON2023-P0129,SIMEON2023,not_specific,,feeling as if in a dream
+A02-08,A02,as if it is all a dream,a scene that looks as if it is all a dream,1,1,T0305,DILKES2024-P0023,DILKES2024,not_specific,,its all dream
+A02-09,A02,as if it was all a dream,a scene that looks as if it was all a dream,1,1,T0768,SIMEON2023-P0257,SIMEON2023,not_specific,,it was all a dream
+A02-10,A02,as if living in a continuous dream,a scene that looks as if living in a continuous dream,1,1,T0794,SIMEON2023-P0086,SIMEON2023,not_specific,,as if living in a continuous dream
+A02-11,A02,as if living in dreams,a scene that looks as if living in dreams,1,1,T0205,TANAKA2018-P0097,TANAKA2018,not_specific,,as if they are living in dreams
+A02-12,A02,as if the whole situation was dreamlike,a scene that looks as if the whole situation was dreamlike,1,1,T0452,RADOVIC2002-P0056,RADOVIC2002,not_specific,,the whole situation was dreamlike
+A02-13,A02,as if the world looks like a dream,a scene that looks as if the world looks like a dream,1,1,T0232,TANAKA2018-P0017,TANAKA2018,vision,,the world looks like a dream
+A02-14,A02,as if this could only be a dream,a scene that looks as if this could only be a dream,1,1,T0898,SIMEON2023-P0261,SIMEON2023,not_specific,,this could only be a dream
+A02-15,A02,as if this must be a dream,a scene that looks as if this must be a dream,1,1,T0903,SIMEON2023-P0320,SIMEON2023,not_specific,,this must be a dream
+A02-16,A02,as though in a dream,a scene that looks as though in a dream,1,1,T0998,DILKES2024-P0006,DILKES2024,not_specific,,as though in a dream
+A02-17,A02,dream-like,a scene that looks dream-like,1,4,T0091,FINO2024-P0003;SIMEON2023-P0101;SIMEON2023-P0147;TANAKA2018-P0016,FINO2024;SIMEON2023;TANAKA2018,not_specific,,dream-like
+A02-18,A02,dreamy,a scene that looks dreamy,1,1,T0133,DILKES2024-P0044,DILKES2024,vision,,looks sort of dreamy
+A02-19,A02,like a dream kind of autopilot world,a scene that looks like a dream kind of autopilot world,1,1,T0249,PIENKOS2022-P0115,PIENKOS2022,not_specific,,my dream kind of autopilot world
+A02-20,A02,like a dream state,a scene that looks like a dream state,1,1,T0263,SIMEON2023-P0146,SIMEON2023,not_specific,,dream state
+A02-21,A02,like a dream state come true,a scene that looks like a dream state come true,1,1,T0117,SIMEON2023-P0010,SIMEON2023,not_specific,,dream state come true
+A02-22,A02,like a dreamlike scene,a scene that looks like a dreamlike scene,1,1,T1068,RADOVIC2002-P0059,RADOVIC2002,not_specific,,a dreamlike scene
+A02-23,A02,like a special dream quality or particular dream atmosphere,a scene that looks like a special dream quality or particular dream atmosphere,1,1,T0197,RADOVIC2002-P0061,RADOVIC2002,not_specific,,special dream quality or particular dream atmosphere
+A02-24,A02,like being in a dream,a scene that looks like being in a dream,1,1,T0277,SIMEON2023-P0121,SIMEON2023,not_specific,,a strange feeling of being in a dream
+A02-25,A02,like Inception but in real life,a scene that looks like Inception but in real life,1,1,T0072,SIMEON2023-P0678,SIMEON2023,not_specific,,Like Inception but in real life
+A02-26,A02,like living in a dream or a movie,a scene that looks like living in a dream or a movie,1,2,T0756,RADOVIC2002-P0014;SIERRA2001-P0001,RADOVIC2002;SIERRA2001,not_specific,,living in a dream or a movie
+A02-27,A02,like the dream of a sleeping god,a scene that looks like the dream of a sleeping god,1,1,T0996,CIAUNICA2022-P0182,CIAUNICA2022,not_specific,,just the dream of a sleeping god
+A02-28,A02,more like dreams than is usually the case,a scene that looks more like dreams than is usually the case,1,1,T0610,RADOVIC2002-P0058,RADOVIC2002,not_specific,,more like our dreams than is usually the case
+A03-01,A03,as if looking at a picture,a scene that looks as if looking at a picture,2,3,T0605;T0122,MIYAZONO2021-P0072;SIMEON2023-P0159;MIYAZONO2021-P0082,MIYAZONO2021;SIMEON2023,vision,,as if I were looking at a picture || looking at a “picture”
+A03-02,A03,like a movie,a scene that looks like a movie,2,3,T0988;T1010,DILKES2024-P0008;DILKES2024-P0088;MIYAZONO2021-P0083,DILKES2024;MIYAZONO2021,not_specific;vision,,a movie || a “movie”
+A03-03,A03,as if it were life played like a film in a cinema,a scene that looks as if it were life played like a film in a cinema,1,1,T0084,SIMEON2023-P0063,SIMEON2023,vision,,life as if it were played like a film in a cinema
+A03-04,A03,as if picked up out of the real world and put down into a film set,a scene that looks as if picked up out of the real world and put down into a film set,1,1,T0013,CIAUNICA2022-P0025,CIAUNICA2022,mixed,,picked up out of my real world and put down into a film set
+A03-05,A03,as if real life seemed like a movie,a scene that looks as if real life seemed like a movie,1,1,T0347,SIMEON2023-P0139,SIMEON2023,not_specific,,real life “seemed like a movie”
+A03-06,A03,as if the whole world is a work of art,a scene that looks as if the whole world is a work of art,1,1,T1135,SIMEON2023-P0430,SIMEON2023,not_specific,,the whole world is a work of art
+A03-07,A03,like a camera,a scene that looks like a camera,1,1,T0992,PIENKOS2022-P0082,PIENKOS2022,vision,,kind of like a camera
+A03-08,A03,like a fictional narrative,a scene that looks like a fictional narrative,1,1,T1046,PIENKOS2022-P0109,PIENKOS2022,not_specific,,a fictional narrative
+A03-09,A03,like a painted picture,a scene that looks like a painted picture,1,1,T1030,SIERRA2001-P0011,SIERRA2001,vision,,seems just a painted picture
+A03-10,A03,like a picture,a scene that looks like a picture,1,2,T0908,MIYAZONO2021-P0090;MIYAZONO2021-P0129,MIYAZONO2021,vision,,picture
+A03-11,A03,like camera vision,a scene that looks like camera vision,1,1,T0170,PIENKOS2022-P0083,PIENKOS2022,vision,,like camera vision
+A03-12,A03,like living in a movie,a scene that looks like living in a movie,1,1,T0340,DILKES2024-P0070,DILKES2024,not_specific,,living in a movie
+A03-13,A03,like some sort of Truman Show plot,a scene that looks like some sort of Truman Show plot,1,1,T0942,SIMEON2023-P0672,SIMEON2023,not_specific,,some sort of Truman Show plot
+A04-01,A04,"as if in some fake, virtual reality","a scene that looks as if in some fake, virtual reality",1,1,T0457,SIMEON2023-P0675,SIMEON2023,not_specific,,"as if I'm in some fake, virtual reality"
+A04-02,A04,as if reality feels more like a vr headset,a scene that looks as if reality feels more like a vr headset,1,1,T0960,DILKES2024-P0067,DILKES2024,not_specific,,'reality' feel more like a vr headset
+A04-03,A04,as if seen in a digital world,a scene that looks as if seen in a digital world,1,1,T0315,DILKES2024-P0171,DILKES2024,not_specific,,in a digital world
+A04-04,A04,as if seen in a simulation,a scene that looks as if seen in a simulation,1,1,T0909,DILKES2024-P0111,DILKES2024,not_specific,,in a simulation
+A04-05,A04,like a hologram,a scene that looks like a hologram,1,1,T1125,DILKES2024-P0136,DILKES2024,vision,,a hologram
+A04-06,A04,like a new virtual reality,a scene that looks like a new virtual reality,1,1,T0330,SIMEON2023-P0657,SIMEON2023,not_specific,,new virtual reality
+A04-07,A04,like a really bad sims game,a scene that looks like a really bad sims game,1,2,T0323,DILKES2024-P0101;DILKES2024-P0146,DILKES2024,not_specific,,a really bad sims game
+A04-08,A04,like a sims game,a scene that looks like a sims game,1,1,T1126,DILKES2024-P0174,DILKES2024,not_specific,,a sims game
+A04-09,A04,like a simulation,a scene that looks like a simulation,1,2,T0937,DILKES2024-P0145;DILKES2024-P0173,DILKES2024,not_specific,,a simulation
+A04-10,A04,like a video game,a scene that looks like a video game,1,1,T0103,DILKES2024-P0172,DILKES2024,not_specific,,a video game
+A04-11,A04,like another layer of simulation,a scene that looks like another layer of simulation,1,1,T0212,DILKES2024-P0097,DILKES2024,not_specific,,another layer of simulation
+A04-12,A04,like being in a simulation,a scene that looks like being in a simulation,1,2,T0695,DILKES2024-P0096;DILKES2024-P0109,DILKES2024,not_specific,,being in a simulation
+A04-13,A04,like being in a video game,a scene that looks like being in a video game,1,2,T1108,DILKES2024-P0143;DILKES2024-P0144,DILKES2024,not_specific,,being in a video game
+A04-14,A04,like being inside a video game,a scene that looks like being inside a video game,1,1,T1070,DILKES2024-P0095,DILKES2024,not_specific,,being inside a video game
+A04-15,A04,like being unplugged from the matrix,a scene that looks like being unplugged from the matrix,1,1,T1115,DILKES2024-P0103,DILKES2024,not_specific,,being unplugged from the matrix
+A04-16,A04,like glitches in the system,a scene that looks like glitches in the system,1,1,T0978,SIMEON2023-P0676,SIMEON2023,not_specific,,glitches in the system
+A04-17,A04,like nonexistent virtuality,a scene that looks like nonexistent virtuality,1,1,T1023,SIMEON2023-P0664,SIMEON2023,not_specific,,nonexistent virtuality
+A04-18,A04,like other digital worlds,a scene that looks like other digital worlds,1,1,T0834,DILKES2024-P0099,DILKES2024,not_specific,,other digital worlds
+A04-19,A04,like playing a video game inside a video game,a scene that looks like playing a video game inside a video game,1,1,T0719,DILKES2024-P0098,DILKES2024,not_specific,,playing a video game inside a video game
+A04-20,A04,like playing the life game,a scene that looks like playing the life game,1,2,T0392,DILKES2024-P0148;DILKES2024-P0176,DILKES2024,not_specific,,playing the life game
+A04-21,A04,like some sort of simulation,a scene that looks like some sort of simulation,1,1,T0372,SIMEON2023-P0674,SIMEON2023,not_specific,,some sort of simulation
+A04-22,A04,like the life game,a scene that looks like the life game,1,1,T0750,DILKES2024-P0100,DILKES2024,not_specific,,the life game
+A04-23,A04,like the matrix,a scene that looks like the matrix,1,3,T1124,DILKES2024-P0102;DILKES2024-P0147;DILKES2024-P0175,DILKES2024,not_specific,,the matrix
+A04-24,A04,like the unreal world of these simulations,a scene that looks like the unreal world of these simulations,1,1,T0269,SIMEON2023-P0652,SIMEON2023,not_specific,,unreal world of these simulations
+A05-01,A05,as if seen through a veil,a scene that looks as if seen through a veil,6,14,T0527;T0661;T1082;T1069;T0974;T1088,MIYAZONO2021-P0111;MIYAZONO2021-P0080;MIYAZONO2021-P0041;DILKES2024-P0166;MIYAZONO2021-P0089;MIYAZONO2021-P0098;MIYAZONO2021-P0108;SIMEON2023-P0230;DILKES2024-P0016;DILKES2024-P0066;DILKES2024-P0079;SIMEON2023-P0049;SIMEON2023-P0084;SIMEON2023-P0103,DILKES2024;MIYAZONO2021;SIMEON2023,mixed;not_specific;vision,,I see a veil || a “veil” || as through a veil || veil || a veil || as if seen through a veil
+A05-02,A05,as if in a bubble,a scene that looks as if in a bubble,3,8,T0320;T0296;T0152,DILKES2024-P0045;DILKES2024-P0165;DILKES2024-P0015;DILKES2024-P0078;MIYAZONO2021-P0038;MIYAZONO2021-P0079;SIMEON2023-P0048;SIMEON2023-P0229,DILKES2024;MIYAZONO2021;SIMEON2023,not_specific,,almost like i'm in a bubble || a bubble || bubble
+A05-03,A05,as if seen through a glass wall,a scene that looks as if seen through a glass wall,2,2,T0916;T0451,MIYAZONO2021-P0081;DILKES2024-P0167,DILKES2024;MIYAZONO2021,not_specific,,a “glass wall” || glass wall
+A05-04,A05,as if seen through a screen,a scene that looks as if seen through a screen,2,3,T0758;T1095,DILKES2024-P0149;DILKES2024-P0169;DILKES2024-P0116,DILKES2024,mixed;not_specific,,screen || through a screen
+A05-05,A05,as if seen through an invisible wall,a scene that looks as if seen through an invisible wall,2,4,T1071;T0851,DILKES2024-P0093;DILKES2024-P0150;DILKES2024-P0168;DILKES2024-P0112,DILKES2024,not_specific,,invisible wall || an invisible wall
+A05-06,A05,as if a deep veil is cast over everything,a scene that looks as if a deep veil is cast over everything,1,2,T0986,MIYAZONO2021-P0063;SIMEON2023-P0187,MIYAZONO2021;SIMEON2023,vision,,cast a deep veil over everything
+A05-07,A05,as if a glass screen has interposed itself,a scene that looks as if a glass screen has interposed itself,1,1,T0755,SIMEON2023-P0405,SIMEON2023,mixed,,"What glass screen has, as it were, interposed itself between me"
+A05-08,A05,as if access to the landscape is more opaque,a scene that looks as if access to the landscape is more opaque,1,1,T0604,CIAUNICA2022-P0203,CIAUNICA2022,vision,,our access to the landscape more “opaque”
+A05-09,A05,as if behind a foot thick steel barrier,a scene that looks as if behind a foot thick steel barrier,1,1,T0186,DILKES2024-P0105,DILKES2024,not_specific,,a foot thick steel barrier
+A05-10,A05,as if enclosed in a kind of bubble,a scene that looks as if enclosed in a kind of bubble,1,1,T0645,SIMEON2023-P0505,SIMEON2023,not_specific,,enclosed in a kind of bubble
+A05-11,A05,as if life is through a veil,a scene that looks as if life is through a veil,1,1,T1132,DILKES2024-P0091,DILKES2024,vision,,life is through a veil
+A05-12,A05,as if sealed in plastic wrap,a scene that looks as if sealed in plastic wrap,1,2,T0578,MIYAZONO2021-P0064;SIMEON2023-P0188,MIYAZONO2021;SIMEON2023,not_specific,,sealed in plastic wrap
+A05-13,A05,as if seen behind a cloudy glass wall permanently,a scene that looks as if seen behind a cloudy glass wall permanently,1,1,T0647,DILKES2024-P0065,DILKES2024,not_specific,,behind a cloudy glass wall permanently
+A05-14,A05,as if seen through a barrier that separates me from reality,a scene that looks as if seen through a barrier that separates me from reality,1,1,T0700,DILKES2024-P0113,DILKES2024,not_specific,,a barrier that separates me from reality
+A05-15,A05,as if seen through a filter over the eyes,a scene that looks as if seen through a filter over the eyes,1,1,T0192,DILKES2024-P0127,DILKES2024,vision,,a filter over my eyes
+A05-16,A05,as if seen through a glass wall between the individual and the world around,a scene that looks as if seen through a glass wall between the individual and the world around,1,1,T0741,DILKES2024-P0017,DILKES2024,not_specific,,a glass wall between the individual and the world around
+A05-17,A05,as if seen through a glass wall between the individual and world around,a scene that looks as if seen through a glass wall between the individual and world around,1,2,T1049,DILKES2024-P0080;MIYAZONO2021-P0040,DILKES2024;MIYAZONO2021,not_specific,,a glass wall between the individual and world around
+A05-18,A05,as if seen through a glass wall that separates you from the world,a scene that looks as if seen through a glass wall that separates you from the world,1,1,T0607,DILKES2024-P0068,DILKES2024,not_specific,,a glass wall that separates you from the world
+A05-19,A05,as if seen through a screen or a film between the participant and the rest of the world,a scene that looks as if seen through a screen or a film between the participant and the rest of the world,1,1,T0321,PIENKOS2022-P0048,PIENKOS2022,not_specific,,a screen or a film between the participant and the rest of the world
+A05-20,A05,as if seen through a thin veil,a scene that looks as if seen through a thin veil,1,1,T0024,SIMEON2023-P0493,SIMEON2023,not_specific,,thin veil
+A05-21,A05,as if seen through a veil between himself and the real world,a scene that looks as if seen through a veil between himself and the real world,1,1,T0470,SIMEON2023-P0124,SIMEON2023,mixed,,a “veil” between himself and the real world
+A05-22,A05,as if seen through a veil between me and the outside world,a scene that looks as if seen through a veil between me and the outside world,1,1,T1098,RADOVIC2002-P0019,RADOVIC2002,not_specific,,a veil between me and the outside world
+A05-23,A05,"as if seen through a veil interposed between one's self, body and the world","a scene that looks as if seen through a veil interposed between one's self, body and the world",1,1,T0550,CIAUNICA2022-P0213,CIAUNICA2022,not_specific,,"“veil” interposed between one's self, body and the world"
+A05-24,A05,as if seen through a veil placed over your senses,a scene that looks as if seen through a veil placed over your senses,1,1,T0308,DILKES2024-P0051,DILKES2024,not_specific,,a veil placed over your senses
+A05-25,A05,as if seen through an invisible barrier between the self and the world,a scene that looks as if seen through an invisible barrier between the self and the world,1,2,T0931,DILKES2024-P0064;DILKES2024-P0074,DILKES2024,not_specific,,an invisible barrier between the self and the world
+A05-26,A05,as if seen through an invisible barrier between themself and the world,a scene that looks as if seen through an invisible barrier between themself and the world,1,1,T0791,DILKES2024-P0164,DILKES2024,not_specific,,an invisible barrier between themself and the world
+A05-27,A05,as if seen through an invisible film,a scene that looks as if seen through an invisible film,1,1,T0056,SIMEON2023-P0492,SIMEON2023,not_specific,,an invisible film
+A05-28,A05,as if seen through an invisible wall between me and the things i love,a scene that looks as if seen through an invisible wall between me and the things i love,1,1,T0087,DILKES2024-P0094,DILKES2024,not_specific,,an invisible wall between me and the things i love
+A05-29,A05,as if seen through an obscuring barrier,a scene that looks as if seen through an obscuring barrier,1,2,T0101,DILKES2024-P0050;DILKES2024-P0056,DILKES2024,not_specific,,an obscuring barrier
+A05-30,A05,as if seen through glass,a scene that looks as if seen through glass,1,3,T0464,MIYAZONO2021-P0068;SIMEON2023-P0050;SIMEON2023-P0231,MIYAZONO2021;SIMEON2023,mixed,,glass
+A05-31,A05,as if seen through something like a veil,a scene that looks as if seen through something like a veil,1,1,T0976,MIYAZONO2021-P0112,MIYAZONO2021,vision,,I see something like a veil
+A05-32,A05,as if seen through the window,a scene that looks as if seen through the window,1,1,T0577,MIYAZONO2021-P0122,MIYAZONO2021,vision,,through the window
+A05-33,A05,as if seen through this veil between your eyes and the real world,a scene that looks as if seen through this veil between your eyes and the real world,1,1,T0848,DILKES2024-P0055,DILKES2024,vision,,this veil between your eyes and the real world
+A05-34,A05,as if separated by a glass wall,a scene that looks as if separated by a glass wall,1,1,T0958,DILKES2024-P0073,DILKES2024,not_specific,,separated by a glass wall
+A05-35,A05,as if separated from reality by a protective covering,a scene that looks as if separated from reality by a protective covering,1,1,T0405,SIMEON2023-P0419,SIMEON2023,not_specific,,separated from reality by a protective covering
+A05-36,A05,as if separated from the world by an invisible barrier,a scene that looks as if separated from the world by an invisible barrier,1,1,T0082,TANAKA2018-P0014,TANAKA2018,not_specific,,separated from the world by an invisible barrier
+A05-37,A05,as if something stands in the way,a scene that looks as if something stands in the way,1,1,T0606,CIAUNICA2022-P0207,CIAUNICA2022,mixed,,something stands in the way
+A05-38,A05,as if surrounded by a glass wall,a scene that looks as if surrounded by a glass wall,1,1,T0763,DILKES2024-P0075,DILKES2024,not_specific,,surrounded by a glass wall
+A05-39,A05,as if surrounded by an invisible wall,a scene that looks as if surrounded by an invisible wall,1,1,T0702,CIAUNICA2022-P0215,CIAUNICA2022,not_specific,,feeling surrounded by an invisible wall
+A05-40,A05,as if the invisible envelope surrounding him was starting to melt,a scene that looks as if the invisible envelope surrounding him was starting to melt,1,1,T0764,SIMEON2023-P0611,SIMEON2023,not_specific,,as if the invisible envelope surrounding him was starting to melt
+A05-41,A05,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,a scene that looks as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,1,1,T1047,SIMEON2023-P0095,SIMEON2023,not_specific,,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world
+A05-42,A05,as if there was a veil between me and the outside world,a scene that looks as if there was a veil between me and the outside world,1,1,T0615,SIMEON2023-P0165,SIMEON2023,mixed,,as if there was a veil between me and the outside world
+A05-43,A05,as if there was a wall between me and the external world,a scene that looks as if there was a wall between me and the external world,1,1,T0943,SIMEON2023-P0092,SIMEON2023,not_specific,,as if there was a wall between me and the external world
+A05-44,A05,as if there were a veil,a scene that looks as if there were a veil,1,1,T0266,MIYAZONO2021-P0039,MIYAZONO2021,mixed,,as if there were a veil
+A05-45,A05,as if there were a veil between me and the outside world,a scene that looks as if there were a veil between me and the outside world,1,1,T0923,MIYAZONO2021-P0075,MIYAZONO2021,mixed,,as if there were a veil between me and the outside world
+A05-46,A05,as if there were a veil in front of me,a scene that looks as if there were a veil in front of me,1,2,T0227,MIYAZONO2021-P0113;MIYAZONO2021-P0115,MIYAZONO2021,not_specific,,I feel as if there were a veil in front of me
+A05-47,A05,as if watched from inside a shell,a scene that looks as if watched from inside a shell,1,1,T0526,CIAUNICA2022-P0178,CIAUNICA2022,mixed,,watching from inside a shell
+A05-48,A05,less transparent,a scene that looks less transparent,1,1,T0727,CIAUNICA2022-P0248,CIAUNICA2022,not_specific,,less transparent
+A05-49,A05,like a crack in the pane of glass,a scene that looks like a crack in the pane of glass,1,1,T0918,CIAUNICA2022-P0199,CIAUNICA2022,vision,,a crack in the pane of glass
+A05-50,A05,like a veil that was coming over the vision slowly,a scene that looks like a veil that was coming over the vision slowly,1,1,T0963,DILKES2024-P0059,DILKES2024,vision,,a veil that was coming over my vision slowly
+A05-51,A05,like a wall before me,a scene that looks like a wall before me,1,2,T1084,RADOVIC2002-P0004;RADOVIC2002-P0033,RADOVIC2002,not_specific,,like a wall before me
+A05-52,A05,like an invisible wall,a scene that looks like an invisible wall,1,1,T0865,DILKES2024-P0114,DILKES2024,not_specific,,like an invisible wall
+A05-53,A05,like being behind a screen,a scene that looks like being behind a screen,1,1,T0733,DILKES2024-P0115,DILKES2024,not_specific,,being behind a screen
+A05-54,A05,like being in a bubble,a scene that looks like being in a bubble,1,1,T0561,TANAKA2018-P0013,TANAKA2018,not_specific,,being in a bubble
+A05-55,A05,like being trapped in a bubble,a scene that looks like being trapped in a bubble,1,1,T0318,PIENKOS2022-P0044,PIENKOS2022,not_specific,,being trapped in a bubble
+A05-56,A05,like glass over the eyes,a scene that looks like glass over the eyes,1,1,T0030,SIMEON2023-P0026,SIMEON2023,vision,,like glass over my eyes
+A05-57,A05,like having a pane of glass,a scene that looks like having a pane of glass,1,1,T0953,CIAUNICA2022-P0212,CIAUNICA2022,not_specific,,having a pane of glass
+A05-58,A05,like I'm wearing glasses that I can't see through,a scene that looks like I'm wearing glasses that I can't see through,1,1,T0433,SIMEON2023-P0024,SIMEON2023,vision,can't,like I'm wearing glasses that I can't see through
+A05-59,A05,like life watched from behind glass,a scene that looks like life watched from behind glass,1,1,T0987,DILKES2024-P0018,DILKES2024,vision,,watching life from behind glass
+A05-60,A05,like living in a bubble,a scene that looks like living in a bubble,1,1,T1079,CIAUNICA2022-P0214,CIAUNICA2022,not_specific,,living in a bubble
+A05-61,A05,like living in a clear bubble,a scene that looks like living in a clear bubble,1,1,T0447,DILKES2024-P0047,DILKES2024,not_specific,,living in a clear bubble
+A05-62,A05,like the cracked window itself as a visible observable entity,a scene that looks like the cracked window itself as a visible observable entity,1,1,T0306,CIAUNICA2022-P0200,CIAUNICA2022,vision,,the cracked window itself as a visible observable entity
+A05-63,A05,like the outer landscape perceived through the cracked window,a scene that looks like the outer landscape perceived through the cracked window,1,1,T0863,CIAUNICA2022-P0205,CIAUNICA2022,vision,,perceive the outer landscape through the cracked window
+A07-01,A07,as if seen in a fog,a scene that looks as if seen in a fog,3,6,T0258;T0256;T1103,MIYAZONO2021-P0077;DILKES2024-P0027;SIMEON2023-P0046;DILKES2024-P0014;DILKES2024-P0076;MIYAZONO2021-P0036,DILKES2024;MIYAZONO2021;SIMEON2023,mixed;not_specific,,in a “fog” || a fog || in a fog
+A07-02,A07,blurry,a scene that looks blurry,2,4,T0668;T0165,SIMEON2023-P0583;PIENKOS2022-P0163;SIMEON2023-P0055;SIMEON2023-P0236,PIENKOS2022;SIMEON2023,vision,,its blurriness || blurriness
+A07-03,A07,as if blinded by a mist,a scene that looks as if blinded by a mist,1,1,T0440,DILKES2024-P0026,DILKES2024,vision,,blinded by a mist
+A07-04,A07,as if its clarity is hindered,a scene that looks as if its clarity is hindered,1,1,T0047,CIAUNICA2022-P0206,CIAUNICA2022,vision,,its clarity is hindered
+A07-05,A07,as if navigating through fog in slow motion,a scene that looks as if navigating through fog in slow motion,1,1,T0970,SIMEON2023-P0305,SIMEON2023,mixed,,navigating through fog in slow motion
+A07-06,A07,as if objects were surrounded by a cloud,a scene that looks as if objects were surrounded by a cloud,1,1,T0558,SIMEON2023-P0087,SIMEON2023,vision,,objects looked as if surrounded by a cloud
+A07-07,A07,as if one's vision is blurred,a scene that looks as if one's vision is blurred,1,1,T0252,CIAUNICA2022-P0097,CIAUNICA2022,vision,,One's vision could be blurred
+A07-08,A07,as if seen in a visual fog,a scene that looks as if seen in a visual fog,1,1,T0031,SIMEON2023-P0027,SIMEON2023,vision,,a visual fog
+A07-09,A07,as if seen in fog,a scene that looks as if seen in fog,1,6,T0085,DILKES2024-P0158;MIYAZONO2021-P0088;MIYAZONO2021-P0099;MIYAZONO2021-P0109;MIYAZONO2021-P0128;SIMEON2023-P0227,DILKES2024;MIYAZONO2021;SIMEON2023,mixed,,fog
+A07-10,A07,as if seen in the fog,a scene that looks as if seen in the fog,1,1,T0068,SIMEON2023-P0563,SIMEON2023,not_specific,,the dpdr fog
+A07-11,A07,as if seen through a fog,a scene that looks as if seen through a fog,1,2,T0222,MIYAZONO2021-P0061;SIMEON2023-P0185,MIYAZONO2021;SIMEON2023,vision,,through a fog
+A07-12,A07,as if seen through a thick cloud,a scene that looks as if seen through a thick cloud,1,1,T0643,SIMEON2023-P0083,SIMEON2023,vision,,a thick cloud
+A07-13,A07,as if seen with blurry vision,a scene that looks as if seen with blurry vision,1,1,T0154,DILKES2024-P0061,DILKES2024,vision,,blurry vision
+A07-14,A07,as if the focus is never right,a scene that looks as if the focus is never right,1,1,T0969,DILKES2024-P0046,DILKES2024,vision,never,the focus is never quite right
+A07-15,A07,as if their vision is foggy,a scene that looks as if their vision is foggy,1,1,T0537,SIMEON2023-P0566,SIMEON2023,vision,,their vision is foggy
+A07-16,A07,as if they are looking at the world through a fog,a scene that looks as if they are looking at the world through a fog,1,1,T0767,SIMEON2023-P0153,SIMEON2023,vision,,as if they are looking at the world through a fog
+A07-17,A07,as if things look more or less foggy,a scene that looks as if things look more or less foggy,1,1,T0560,SIMEON2023-P0569,SIMEON2023,vision,,things look more or less foggy
+A07-18,A07,blurry and foggy,a scene that looks blurry and foggy,1,1,T0343,SIMEON2023-P0579,SIMEON2023,vision,,blurriness and fog
+A07-19,A07,cloudy,a scene that looks cloudy,1,1,T0921,SIMEON2023-P0298,SIMEON2023,not_specific,,cloudy
+A07-20,A07,foggy,a scene that looks foggy,1,2,T0922,DILKES2024-P0011;FINO2024-P0009,DILKES2024;FINO2024,not_specific,,foggy
+A07-21,A07,foggy and veiled,a scene that looks foggy and veiled,1,1,T0889,TANAKA2018-P0015,TANAKA2018,vision,,foggy and veiled
+A07-22,A07,hazy,a scene that looks hazy,1,1,T0090,SIMEON2023-P0098,SIMEON2023,vision,,hazy
+A07-23,A07,indefinite,a scene that looks indefinite,1,1,T0933,MIYAZONO2021-P0126,MIYAZONO2021,vision,,indefinite
+A07-24,A07,like peering at the world through a fog,a scene that looks like peering at the world through a fog,1,1,T1094,DILKES2024-P0135,DILKES2024,vision,,peering at the world through a fog
+A07-25,A07,like someone has put dirty fingerprints on the sunglasses – but it is the eyes,a scene that looks like someone has put dirty fingerprints on the sunglasses – but it is the eyes,1,1,T0506,CIAUNICA2022-P0098,CIAUNICA2022,vision,,like someone has put dirty fingerprints on my sunglasses – but its my eyes
+A07-26,A07,like vague shapes,a scene that looks like vague shapes,1,1,T0067,CIAUNICA2022-P0154,CIAUNICA2022,vision,,vague shapes
+A07-27,A07,more blurred,a scene that looks more blurred,1,1,T0193,CIAUNICA2022-P0246,CIAUNICA2022,not_specific,,more blurred
+A07-28,A07,shadowy,a scene that looks shadowy,1,1,T0692,SIMEON2023-P0102,SIMEON2023,vision,,shadowy
+A07-29,A07,unclear,a scene that looks unclear,1,1,T0680,SIMEON2023-P0155,SIMEON2023,vision,,unclear
+A07-30,A07,vague,a scene that looks vague,1,1,T0901,PIENKOS2022-P0057,PIENKOS2022,not_specific,,vague
+A11-01,A11,flat,a scene that looks flat,3,7,T1107;T0683;T0633,SIERRA2001-P0036;MIYAZONO2021-P0070;RADOVIC2002-P0031;SIERRA2001-P0014;SIMEON2023-P0157;PIENKOS2022-P0164;SIMEON2023-P0241,MIYAZONO2021;PIENKOS2022;RADOVIC2002;SIERRA2001;SIMEON2023,vision,,looking flat || 'flat' || flatness
+A11-02,A11,two-dimensional,a scene that looks two-dimensional,2,2,T0564;T0972,SIMEON2023-P0240;MIYAZONO2021-P0045,MIYAZONO2021;SIMEON2023,vision,,two-dimensionality || two-dimensional
+A11-03,A11,as if external objects were flat,a scene that looks as if external objects were flat,1,1,T0055,MIYAZONO2021-P0084,MIYAZONO2021,vision,,external objects were “flat”
+A11-04,A11,flat and two-dimensional,a scene that looks flat and two-dimensional,1,1,T0208,SIMEON2023-P0028,SIMEON2023,vision,,totally flat and two-dimensional
+A11-05,A11,like objects or space being flattened,a scene that looks like objects or space being flattened,1,1,T0540,CIAUNICA2022-P0133,CIAUNICA2022,mixed,,objects or space being flattened
+A11-06,A11,like the world becoming two dimensional,a scene that looks like the world becoming two dimensional,1,1,T0920,FINO2024-P0016,FINO2024,mixed,,my world becoming two dimensional
+A13-01,A13,as if seen with attenuated perception,a scene that looks as if seen with attenuated perception,1,1,T0804,DILKES2024-P0063,DILKES2024,not_specific,,attenuated perception
+A13-02,A13,colorless,a scene that looks colorless,1,3,T0501,PIENKOS2022-P0019;SIMEON2023-P0052;SIMEON2023-P0233,PIENKOS2022;SIMEON2023,vision,,colorless
+A13-03,A13,dull,a scene that looks dull,1,3,T0839,PIENKOS2022-P0168;RADOVIC2002-P0030;SIERRA2001-P0013,PIENKOS2022;RADOVIC2002;SIERRA2001,mixed,,dull
+A13-04,A13,duller,a scene that looks duller,1,1,T0226,PIENKOS2022-P0084,PIENKOS2022,not_specific,,duller
+A13-05,A13,lacking in normal color and vividness,a scene that looks lacking in normal color and vividness,1,1,T0200,SIMEON2023-P0042,SIMEON2023,vision,,lacking in normal color and vividness
+A13-06,A13,lacking in perceptual or emotional vividness,a scene that looks lacking in perceptual or emotional vividness,1,1,T0983,TANAKA2018-P0008,TANAKA2018,not_specific,,lacking in perceptual or emotional vividness
+A13-07,A13,lacking in vibrancy or depth,a scene that looks lacking in vibrancy or depth,1,1,T0817,CIAUNICA2022-P0024,CIAUNICA2022,mixed,,lacking in vibrancy or depth
+A13-08,A13,less vivid,a scene that looks less vivid,1,1,T1007,PIENKOS2022-P0085,PIENKOS2022,not_specific,,less vivid
+A13-09,A13,less vivid or intense,a scene that looks less vivid or intense,1,1,T0172,PIENKOS2022-P0047,PIENKOS2022,not_specific,,much less vivid or intense
+A13-10,A13,like things lacking vividness,a scene that looks like things lacking vividness,1,1,T0600,SIERRA2001-P0035,SIERRA2001,vision,,things lacking vividness
+A13-11,A13,reduced in intensity,a scene that looks reduced in intensity,1,1,T0137,PIENKOS2022-P0086,PIENKOS2022,not_specific,,reduced in intensity
+A14-01,A14,as if emptiness was everywhere,a scene that looks as if emptiness was everywhere,1,1,T0111,SIMEON2023-P0509,SIMEON2023,not_specific,,Emptiness was everywhere
+A14-02,A14,as if everything looks lifeless,a scene that looks as if everything looks lifeless,1,1,T1116,PIENKOS2022-P0016,PIENKOS2022,vision,,Everything looks quite kind of lifeless
+A14-03,A14,as if no living being was on earth,a scene that looks as if no living being was on earth,1,1,T0236,RADOVIC2002-P0003,RADOVIC2002,not_specific,no,No living being was on earth
+A14-04,A14,as if objects look dead,a scene that looks as if objects look dead,1,1,T1042,PIENKOS2022-P0015,PIENKOS2022,vision,,objects look kind of like dead
+A14-05,A14,as if there was nothing on earth,a scene that looks as if there was nothing on earth,1,1,T0270,RADOVIC2002-P0002,RADOVIC2002,not_specific,nothing,There was nothing on earth
+A14-06,A14,as if with an emptiness to landscapes,a scene that looks as if with an emptiness to landscapes,1,1,T1112,MIYAZONO2021-P0135,MIYAZONO2021,mixed,,an emptiness to landscapes
+A14-07,A14,dead,a scene that looks dead,1,2,T0246,PIENKOS2022-P0167;RADOVIC2002-P0043,PIENKOS2022;RADOVIC2002,not_specific,,dead
+A14-08,A14,deathlike,a scene that looks deathlike,1,1,T0444,SIMEON2023-P0416,SIMEON2023,not_specific,,deathlike
+A14-09,A14,empty,a scene that looks empty,1,1,T0770,SIMEON2023-P0032,SIMEON2023,not_specific,,empty
+A14-10,A14,lifeless,a scene that looks lifeless,1,9,T0868,DILKES2024-P0012;FINO2024-P0008;MIYAZONO2021-P0071;RADOVIC2002-P0032;RADOVIC2002-P0040;SIERRA2001-P0015;SIMEON2023-P0053;SIMEON2023-P0158;SIMEON2023-P0234,DILKES2024;FINO2024;MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,mixed,,lifeless
+A14-11,A14,like a detached void,a scene that looks like a detached void,1,1,T1119,DILKES2024-P0121,DILKES2024,not_specific,,“detached void”
+A14-12,A14,like everything gives the same experiences of blackness,a scene that looks like everything gives the same experiences of blackness,1,1,T0124,PIENKOS2022-P0018,PIENKOS2022,vision,,everything I look at just gives me the same experiences of blackness
+A14-13,A14,like the dark and the void,a scene that looks like the dark and the void,1,1,T0446,SIMEON2023-P0635,SIMEON2023,mixed,,the dark and the void
+A14-14,A14,like the insidious nothingness choking the life out of everything,a scene that looks like the insidious nothingness choking the life out of everything,1,1,T0185,SIMEON2023-P0502,SIMEON2023,not_specific,,the insidious nothingness choking the life out of everything

@@ -1,0 +1,2911 @@
+version: v4
+protocol: '1.12'
+created: '2026-10-06 14:37:12'
+revised_from: axes/v4/stageD/axes_v4.yaml
+template: a scene that looks {}
+templates_robustness:
+- a photo that looks {}
+- a place that looks {}
+- the world looks {}
+dropped_pairs:
+- anchor_id: A01-04
+  axis_id: A01
+  positive: as if everything besides the limbs feels like they don't have much of a presence
+  reason: negation
+- anchor_id: A01-10
+  axis_id: A01
+  positive: as if it is without substance
+  reason: negation
+- anchor_id: A01-13
+  axis_id: A01
+  positive: as if nothing exists or is real
+  reason: negation
+- anchor_id: A01-16
+  axis_id: A01
+  positive: as if other people, objects, and the world around them are not real
+  reason: negation
+- anchor_id: A01-20
+  axis_id: A01
+  positive: as if the present seems unreal
+  reason: 'not_scene: time'
+- anchor_id: A01-26
+  axis_id: A01
+  positive: as if the world were made of cellophane or glass
+  reason: negative brings in a material
+- anchor_id: A01-39
+  axis_id: A01
+  positive: like nothing was real
+  reason: negation
+- anchor_id: A01-44
+  axis_id: A01
+  positive: like the world disappearing under the feet
+  reason: 'not_scene: body'
+- anchor_id: A01-45
+  axis_id: A01
+  positive: like there is a zipper to unzip
+  reason: 'not_scene: touch or action'
+- anchor_id: A01-47
+  axis_id: A01
+  positive: not as real as before
+  reason: negation
+- anchor_id: A01-51
+  axis_id: A01
+  positive: static, half-true
+  reason: 'not_scene: judgement'
+- anchor_id: A01-52
+  axis_id: A01
+  positive: unreal and pointless
+  reason: 'not_scene: judgement'
+- anchor_id: A02-14
+  axis_id: A02
+  positive: as if this could only be a dream
+  reason: 'not_scene: judgement'
+- anchor_id: A02-15
+  axis_id: A02
+  positive: as if this must be a dream
+  reason: 'not_scene: judgement'
+- anchor_id: A02-25
+  axis_id: A02
+  positive: like Inception but in real life
+  reason: 'not_scene: story or reference'
+- anchor_id: A03-08
+  axis_id: A03
+  positive: like a fictional narrative
+  reason: 'not_scene: story or reference'
+- anchor_id: A03-13
+  axis_id: A03
+  positive: like some sort of Truman Show plot
+  reason: 'not_scene: story or reference'
+- anchor_id: A04-15
+  axis_id: A04
+  positive: like being unplugged from the matrix
+  reason: check
+- anchor_id: A04-20
+  axis_id: A04
+  positive: like playing the life game
+  reason: 'not_scene: life'
+- anchor_id: A04-22
+  axis_id: A04
+  positive: like the life game
+  reason: 'not_scene: life'
+- anchor_id: A05-06
+  axis_id: A05
+  positive: as if a deep veil is cast over everything
+  reason: negative brings in light
+- anchor_id: A05-07
+  axis_id: A05
+  positive: as if a glass screen has interposed itself
+  reason: 'decision 17 (R1b): negative adds doorway, opened'
+- anchor_id: A05-09
+  axis_id: A05
+  positive: as if behind a foot thick steel barrier
+  reason: 'decision 17 (R1b): negative adds doorway'
+- anchor_id: A05-13
+  axis_id: A05
+  positive: as if seen behind a cloudy glass wall permanently
+  reason: 'decision 17 (R1b): negative adds window'
+- anchor_id: A05-14
+  axis_id: A05
+  positive: as if seen through a barrier that separates me from reality
+  reason: 'not_scene: self-world'
+- anchor_id: A05-16
+  axis_id: A05
+  positive: as if seen through a glass wall between the individual and the world around
+  reason: 'decision 17 (R1b): negative adds doorway, open'
+- anchor_id: A05-17
+  axis_id: A05
+  positive: as if seen through a glass wall between the individual and world around
+  reason: 'decision 17 (R1b): negative adds doorway, open'
+- anchor_id: A05-18
+  axis_id: A05
+  positive: as if seen through a glass wall that separates you from the world
+  reason: 'decision 17 (R1b): negative adds doorway'
+- anchor_id: A05-23
+  axis_id: A05
+  positive: as if seen through a veil interposed between one's self, body and the world
+  reason: 'decision 17 (R1b): negative adds opening'
+- anchor_id: A05-31
+  axis_id: A05
+  positive: as if seen through something like a veil
+  reason: 'decision 17 (R1b): negative adds air, open'
+- anchor_id: A05-32
+  axis_id: A05
+  positive: as if seen through the window
+  reason: 'decision 17 (R1b): negative adds air, open'
+- anchor_id: A05-34
+  axis_id: A05
+  positive: as if separated by a glass wall
+  reason: 'decision 17 (R1b): negative adds open, space'
+- anchor_id: A05-38
+  axis_id: A05
+  positive: as if surrounded by a glass wall
+  reason: 'decision 17 (R1b): negative adds open, space'
+- anchor_id: A05-39
+  axis_id: A05
+  positive: as if surrounded by an invisible wall
+  reason: 'decision 17 (R1b): negative adds open, space'
+- anchor_id: A05-40
+  axis_id: A05
+  positive: as if the invisible envelope surrounding him was starting to melt
+  reason: 'decision 17 (R1b): negative adds air'
+- anchor_id: A05-41
+  axis_id: A05
+  positive: as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world
+  reason: 'not_scene: self-world'
+- anchor_id: A05-61
+  axis_id: A05
+  positive: like living in a clear bubble
+  reason: 'decision 17 (R1b): negative adds open, space'
+- anchor_id: A07-14
+  axis_id: A07
+  positive: as if the focus is never right
+  reason: negation
+- anchor_id: A13-06
+  axis_id: A13
+  positive: lacking in perceptual or emotional vividness
+  reason: 'not_scene: emotion'
+- anchor_id: A14-03
+  axis_id: A14
+  positive: as if no living being was on earth
+  reason: negation
+- anchor_id: A14-05
+  axis_id: A14
+  positive: as if there was nothing on earth
+  reason: negation
+axes:
+- id: A01
+  name: unreal, fake, artificial
+  definition: The world or things in it look unreal, fake or artificial.
+  pairs:
+  - anchor_id: A01-01
+    positive: unreal
+    negative: real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0237
+    - T0678
+    - T0302
+    - T1109
+    - T0994
+    - T0721
+    phrase_ids:
+    - MIYAZONO2021-P0030
+    - SIMEON2023-P0118
+    - CIAUNICA2022-P0064
+    - DILKES2024-P0009
+    - MIYAZONO2021-P0074
+    - PIENKOS2022-P0130
+    - SIERRA2001-P0004
+    - SIERRA2001-P0008
+    - SIMEON2023-P0001
+    - SIMEON2023-P0037
+    - SIMEON2023-P0040
+    - SIMEON2023-P0164
+    - SIMEON2023-P0396
+    - SIMEON2023-P0435
+    - DILKES2024-P0001
+    - DILKES2024-P0003
+    - MIYAZONO2021-P0001
+    - MIYAZONO2021-P0010
+    - MIYAZONO2021-P0024
+    - SIMEON2023-P0220
+    - SIMEON2023-P0224
+    - TANAKA2018-P0019
+    - SIERRA2001-P0009
+    - PIENKOS2022-P0002
+    documents:
+    - CIAUNICA2022
+    - DILKES2024
+    - MIYAZONO2021
+    - PIENKOS2022
+    - SIERRA2001
+    - SIMEON2023
+    - TANAKA2018
+  - anchor_id: A01-02
+    positive: as if the world feels unreal
+    negative: as if the world feels real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0993
+    - T0626
+    phrase_ids:
+    - CIAUNICA2022-P0023
+    - RADOVIC2002-P0008
+    documents:
+    - CIAUNICA2022
+    - RADOVIC2002
+  - anchor_id: A01-03
+    positive: artificial
+    negative: genuine
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0298
+    phrase_ids:
+    - DILKES2024-P0040
+    - SIMEON2023-P0051
+    - SIMEON2023-P0232
+    documents:
+    - DILKES2024
+    - SIMEON2023
+  - anchor_id: A01-05
+    positive: as if everything is an illusion
+    negative: as if everything is real
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0086
+    phrase_ids:
+    - DILKES2024-P0125
+    documents:
+    - DILKES2024
+  - anchor_id: A01-06
+    positive: as if everything seemed intensely unreal
+    negative: as if everything seemed plainly real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0884
+    phrase_ids:
+    - SIMEON2023-P0315
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-07
+    positive: as if everything seems unreal
+    negative: as if everything seems real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1106
+    phrase_ids:
+    - SIMEON2023-P0670
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-08
+    positive: as if it is making everything feel less real and more distant
+    negative: as if it is making everything feel fully real and less distant
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0714
+    phrase_ids:
+    - PIENKOS2022-P0147
+    documents:
+    - PIENKOS2022
+  - anchor_id: A01-09
+    positive: as if it is somewhere on the border of the real and the unreal
+    negative: as if it is somewhere in the realm of the real and the tangible
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1111
+    phrase_ids:
+    - SIMEON2023-P0628
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-11
+    positive: as if it was all unreal
+    negative: as if it was all real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0504
+    phrase_ids:
+    - SIMEON2023-P0258
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-18
+    positive: as if seen in a place of unreality
+    negative: as if seen in a place of reality
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0001
+    phrase_ids:
+    - TANAKA2018-P0095
+    documents:
+    - TANAKA2018
+  - anchor_id: A01-19
+    positive: as if the outside world is unreal
+    negative: as if the outside world is real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0485
+    phrase_ids:
+    - SIMEON2023-P0038
+    - TANAKA2018-P0007
+    documents:
+    - SIMEON2023
+    - TANAKA2018
+  - anchor_id: A01-22
+    positive: as if the world around is unreal
+    negative: as if the world around is real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0178
+    phrase_ids:
+    - FINO2024-P0007
+    documents:
+    - FINO2024
+  - anchor_id: A01-23
+    positive: as if the world around seems fake
+    negative: as if the world around seems genuine
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0701
+    phrase_ids:
+    - PIENKOS2022-P0114
+    documents:
+    - PIENKOS2022
+  - anchor_id: A01-24
+    positive: as if the world feels fake or deadened
+    negative: as if the world feels genuine or alive
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0138
+    phrase_ids:
+    - PIENKOS2022-P0009
+    documents:
+    - PIENKOS2022
+  - anchor_id: A01-25
+    positive: as if the world is unreal
+    negative: as if the world is real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0871
+    phrase_ids:
+    - RADOVIC2002-P0066
+    documents:
+    - RADOVIC2002
+  - anchor_id: A01-27
+    positive: as if these were unreal
+    negative: as if these were real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0999
+    phrase_ids:
+    - FINO2024-P0002
+    documents:
+    - FINO2024
+  - anchor_id: A01-29
+    positive: as if things around them seem unreal
+    negative: as if things around them seem real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0333
+    phrase_ids:
+    - TANAKA2018-P0012
+    documents:
+    - TANAKA2018
+  - anchor_id: A01-30
+    positive: as if things become unreal
+    negative: as if things remain real
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0486
+    phrase_ids:
+    - SIMEON2023-P0107
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-31
+    positive: as if things feel unreal
+    negative: as if things feel real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1133
+    phrase_ids:
+    - SIMEON2023-P0009
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-32
+    positive: as if things seem unreal
+    negative: as if things seem real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0559
+    phrase_ids:
+    - CIAUNICA2022-P0013
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A01-34
+    positive: detached or unreal
+    negative: connected or real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0281
+    phrase_ids:
+    - RADOVIC2002-P0018
+    documents:
+    - RADOVIC2002
+  - anchor_id: A01-35
+    positive: fake
+    negative: genuine
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0693
+    phrase_ids:
+    - PIENKOS2022-P0075
+    documents:
+    - PIENKOS2022
+  - anchor_id: A01-36
+    positive: like a blurring of reality
+    negative: like a clear view of reality
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1026
+    phrase_ids:
+    - SIMEON2023-P0142
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-38
+    positive: like all was unreal
+    negative: like all was real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0690
+    phrase_ids:
+    - SIMEON2023-P0263
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-40
+    positive: like some real thing behind appearances
+    negative: like some real thing in plain view
+    negative_source: yours
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0654
+    phrase_ids:
+    - SIMEON2023-P0429
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-41
+    positive: like something real that is unreal at the same time
+    negative: like something real that is tangible at the same time
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0074
+    phrase_ids:
+    - FINO2024-P0015
+    documents:
+    - FINO2024
+  - anchor_id: A01-42
+    positive: like the unreality of external objects
+    negative: like the reality of external objects
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0775
+    phrase_ids:
+    - MIYAZONO2021-P0146
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A01-43
+    positive: like the unreality of things
+    negative: like the reality of things
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0375
+    phrase_ids:
+    - SIMEON2023-P0122
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-46
+    positive: made of cellophane
+    negative: made of solid matter
+    negative_source: K2 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0069
+    phrase_ids:
+    - MIYAZONO2021-P0067
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A01-49
+    positive: rendered unreal
+    negative: rendered real
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0869
+    phrase_ids:
+    - SIMEON2023-P0128
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-50
+    positive: so unreal
+    negative: plainly real
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0313
+    phrase_ids:
+    - RADOVIC2002-P0005
+    - RADOVIC2002-P0034
+    documents:
+    - RADOVIC2002
+  - anchor_id: A01-53
+    positive: unreal or detached from one's surroundings
+    negative: real or connected with one's surroundings
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0267
+    phrase_ids:
+    - SIMEON2023-P0222
+    documents:
+    - SIMEON2023
+  - anchor_id: A01-54
+    positive: unreal or detached with respect to surroundings
+    negative: real or connected with respect to surroundings
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0545
+    phrase_ids:
+    - DILKES2024-P0005
+    documents:
+    - DILKES2024
+- id: A02
+  name: dreamlike, in a dream
+  definition: The world or one's life seems like a dream or like being in a dream.
+  pairs:
+  - anchor_id: A02-01
+    positive: as if seen in a dream
+    negative: as if seen in waking life
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0637
+    - T0487
+    - T0722
+    - T0145
+    phrase_ids:
+    - CIAUNICA2022-P0008
+    - DILKES2024-P0107
+    - SIMEON2023-P0649
+    - DILKES2024-P0090
+    - CIAUNICA2022-P0185
+    - DILKES2024-P0021
+    - DILKES2024-P0038
+    - DILKES2024-P0110
+    - DILKES2024-P0157
+    - SIMEON2023-P0304
+    documents:
+    - CIAUNICA2022
+    - DILKES2024
+    - SIMEON2023
+  - anchor_id: A02-02
+    positive: dreamlike
+    negative: wakeful
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0471
+    - T0115
+    - T0168
+    phrase_ids:
+    - DILKES2024-P0010
+    - RADOVIC2002-P0052
+    - TANAKA2018-P0021
+    documents:
+    - DILKES2024
+    - RADOVIC2002
+    - TANAKA2018
+  - anchor_id: A02-03
+    positive: like a dream
+    negative: like waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0853
+    - T0682
+    phrase_ids:
+    - DILKES2024-P0077
+    - MIYAZONO2021-P0037
+    - MIYAZONO2021-P0078
+    - SIMEON2023-P0044
+    - SIMEON2023-P0047
+    - SIMEON2023-P0228
+    - SIMEON2023-P0311
+    - DILKES2024-P0071
+    - PIENKOS2022-P0108
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+    - PIENKOS2022
+    - SIMEON2023
+  - anchor_id: A02-04
+    positive: like living in a dream
+    negative: like living in waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1073
+    - T0395
+    phrase_ids:
+    - FINO2024-P0019
+    - DILKES2024-P0007
+    - DILKES2024-P0019
+    - DILKES2024-P0087
+    documents:
+    - DILKES2024
+    - FINO2024
+  - anchor_id: A02-05
+    positive: akin to living in a dream
+    negative: akin to living in waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0235
+    phrase_ids:
+    - PIENKOS2022-P0043
+    documents:
+    - PIENKOS2022
+  - anchor_id: A02-06
+    positive: as if everything seems like a dream
+    negative: as if everything seems like waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0535
+    phrase_ids:
+    - SIMEON2023-P0679
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-07
+    positive: as if in a dream
+    negative: as if in waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0783
+    phrase_ids:
+    - SIMEON2023-P0129
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-08
+    positive: as if it is all a dream
+    negative: as if it is all waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0305
+    phrase_ids:
+    - DILKES2024-P0023
+    documents:
+    - DILKES2024
+  - anchor_id: A02-09
+    positive: as if it was all a dream
+    negative: as if it was all waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0768
+    phrase_ids:
+    - SIMEON2023-P0257
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-10
+    positive: as if living in a continuous dream
+    negative: as if living in a continuous waking life
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0794
+    phrase_ids:
+    - SIMEON2023-P0086
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-11
+    positive: as if living in dreams
+    negative: as if living in waking life
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0205
+    phrase_ids:
+    - TANAKA2018-P0097
+    documents:
+    - TANAKA2018
+  - anchor_id: A02-12
+    positive: as if the whole situation was dreamlike
+    negative: as if the whole situation was wakeful
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0452
+    phrase_ids:
+    - RADOVIC2002-P0056
+    documents:
+    - RADOVIC2002
+  - anchor_id: A02-13
+    positive: as if the world looks like a dream
+    negative: as if the world looks like waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0232
+    phrase_ids:
+    - TANAKA2018-P0017
+    documents:
+    - TANAKA2018
+  - anchor_id: A02-16
+    positive: as though in a dream
+    negative: as though in waking life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0998
+    phrase_ids:
+    - DILKES2024-P0006
+    documents:
+    - DILKES2024
+  - anchor_id: A02-17
+    positive: dream-like
+    negative: wakeful
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0091
+    phrase_ids:
+    - FINO2024-P0003
+    - SIMEON2023-P0101
+    - SIMEON2023-P0147
+    - TANAKA2018-P0016
+    documents:
+    - FINO2024
+    - SIMEON2023
+    - TANAKA2018
+  - anchor_id: A02-18
+    positive: dreamy
+    negative: wakeful
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0133
+    phrase_ids:
+    - DILKES2024-P0044
+    documents:
+    - DILKES2024
+  - anchor_id: A02-19
+    positive: like a dream kind of autopilot world
+    negative: like a waking kind of conscious world
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0249
+    phrase_ids:
+    - PIENKOS2022-P0115
+    documents:
+    - PIENKOS2022
+  - anchor_id: A02-20
+    positive: like a dream state
+    negative: like a waking state
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0263
+    phrase_ids:
+    - SIMEON2023-P0146
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-21
+    positive: like a dream state come true
+    negative: like a waking state come true
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0117
+    phrase_ids:
+    - SIMEON2023-P0010
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-22
+    positive: like a dreamlike scene
+    negative: like a wakeful scene
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1068
+    phrase_ids:
+    - RADOVIC2002-P0059
+    documents:
+    - RADOVIC2002
+  - anchor_id: A02-23
+    positive: like a special dream quality or particular dream atmosphere
+    negative: like a special waking quality or particular waking atmosphere
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0197
+    phrase_ids:
+    - RADOVIC2002-P0061
+    documents:
+    - RADOVIC2002
+  - anchor_id: A02-24
+    positive: like being in a dream
+    negative: like being in a waking state
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0277
+    phrase_ids:
+    - SIMEON2023-P0121
+    documents:
+    - SIMEON2023
+  - anchor_id: A02-26
+    positive: like living in a dream or a movie
+    negative: like living in wakefulness or reality
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0756
+    phrase_ids:
+    - RADOVIC2002-P0014
+    - SIERRA2001-P0001
+    documents:
+    - RADOVIC2002
+    - SIERRA2001
+  - anchor_id: A02-27
+    positive: like the dream of a sleeping god
+    negative: like the day of a waking god
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0996
+    phrase_ids:
+    - CIAUNICA2022-P0182
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A02-28
+    positive: more like dreams than is usually the case
+    negative: more like waking life than is usually the case
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0610
+    phrase_ids:
+    - RADOVIC2002-P0058
+    documents:
+    - RADOVIC2002
+- id: A03
+  name: movie, picture, film set
+  definition: The world appears as a film, picture or staged scene that is being viewed rather than lived.
+  pairs:
+  - anchor_id: A03-01
+    positive: as if looking at a picture
+    negative: as if looking at a place
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0605
+    - T0122
+    phrase_ids:
+    - MIYAZONO2021-P0072
+    - SIMEON2023-P0159
+    - MIYAZONO2021-P0082
+    documents:
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A03-02
+    positive: like a movie
+    negative: like a live event
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    - vision
+    text_ids:
+    - T0988
+    - T1010
+    phrase_ids:
+    - DILKES2024-P0008
+    - DILKES2024-P0088
+    - MIYAZONO2021-P0083
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+  - anchor_id: A03-03
+    positive: as if it were life played like a film in a cinema
+    negative: as if it were life played like a live event
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - vision
+    text_ids:
+    - T0084
+    phrase_ids:
+    - SIMEON2023-P0063
+    documents:
+    - SIMEON2023
+  - anchor_id: A03-04
+    positive: as if picked up out of the real world and put down into a film set
+    negative: as if picked up out of the real world and put down into a familiar setting
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0013
+    phrase_ids:
+    - CIAUNICA2022-P0025
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A03-05
+    positive: as if real life seemed like a movie
+    negative: as if real life seemed like a live event
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0347
+    phrase_ids:
+    - SIMEON2023-P0139
+    documents:
+    - SIMEON2023
+  - anchor_id: A03-06
+    positive: as if the whole world is a work of art
+    negative: as if the whole world is a work of nature
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1135
+    phrase_ids:
+    - SIMEON2023-P0430
+    documents:
+    - SIMEON2023
+  - anchor_id: A03-07
+    positive: like a camera
+    negative: like an eye
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0992
+    phrase_ids:
+    - PIENKOS2022-P0082
+    documents:
+    - PIENKOS2022
+  - anchor_id: A03-09
+    positive: like a painted picture
+    negative: like an actual landscape
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1030
+    phrase_ids:
+    - SIERRA2001-P0011
+    documents:
+    - SIERRA2001
+  - anchor_id: A03-10
+    positive: like a picture
+    negative: like a live scene
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0908
+    phrase_ids:
+    - MIYAZONO2021-P0090
+    - MIYAZONO2021-P0129
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A03-11
+    positive: like camera vision
+    negative: like human vision
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0170
+    phrase_ids:
+    - PIENKOS2022-P0083
+    documents:
+    - PIENKOS2022
+  - anchor_id: A03-12
+    positive: like living in a movie
+    negative: like living in the world
+    negative_source: K5 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0340
+    phrase_ids:
+    - DILKES2024-P0070
+    documents:
+    - DILKES2024
+- id: A04
+  name: simulation, video game
+  definition: The world seems to be a simulation, video game or other digital or virtual reality.
+  pairs:
+  - anchor_id: A04-01
+    positive: as if in some fake, virtual reality
+    negative: as if in some genuine, physical reality
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0457
+    phrase_ids:
+    - SIMEON2023-P0675
+    documents:
+    - SIMEON2023
+  - anchor_id: A04-02
+    positive: as if reality feels more like a vr headset
+    negative: as if reality feels more like direct sight
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0960
+    phrase_ids:
+    - DILKES2024-P0067
+    documents:
+    - DILKES2024
+  - anchor_id: A04-03
+    positive: as if seen in a digital world
+    negative: as if seen in a physical world
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0315
+    phrase_ids:
+    - DILKES2024-P0171
+    documents:
+    - DILKES2024
+  - anchor_id: A04-04
+    positive: as if seen in a simulation
+    negative: as if seen in a material world
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0909
+    phrase_ids:
+    - DILKES2024-P0111
+    documents:
+    - DILKES2024
+  - anchor_id: A04-05
+    positive: like a hologram
+    negative: like a physical object
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1125
+    phrase_ids:
+    - DILKES2024-P0136
+    documents:
+    - DILKES2024
+  - anchor_id: A04-06
+    positive: like a new virtual reality
+    negative: like a familiar physical reality
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0330
+    phrase_ids:
+    - SIMEON2023-P0657
+    documents:
+    - SIMEON2023
+  - anchor_id: A04-07
+    positive: like a really bad sims game
+    negative: like a really bad situation
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0323
+    phrase_ids:
+    - DILKES2024-P0101
+    - DILKES2024-P0146
+    documents:
+    - DILKES2024
+  - anchor_id: A04-08
+    positive: like a sims game
+    negative: like daily life
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1126
+    phrase_ids:
+    - DILKES2024-P0174
+    documents:
+    - DILKES2024
+  - anchor_id: A04-09
+    positive: like a simulation
+    negative: like a material world
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0937
+    phrase_ids:
+    - DILKES2024-P0145
+    - DILKES2024-P0173
+    documents:
+    - DILKES2024
+  - anchor_id: A04-10
+    positive: like a video game
+    negative: like the physical world
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0103
+    phrase_ids:
+    - DILKES2024-P0172
+    documents:
+    - DILKES2024
+  - anchor_id: A04-11
+    positive: like another layer of simulation
+    negative: like another layer of the world
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0212
+    phrase_ids:
+    - DILKES2024-P0097
+    documents:
+    - DILKES2024
+  - anchor_id: A04-12
+    positive: like being in a simulation
+    negative: like being in the physical world
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0695
+    phrase_ids:
+    - DILKES2024-P0096
+    - DILKES2024-P0109
+    documents:
+    - DILKES2024
+  - anchor_id: A04-13
+    positive: like being in a video game
+    negative: like being in a physical world
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1108
+    phrase_ids:
+    - DILKES2024-P0143
+    - DILKES2024-P0144
+    documents:
+    - DILKES2024
+  - anchor_id: A04-14
+    positive: like being inside a video game
+    negative: like being inside a physical world
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1070
+    phrase_ids:
+    - DILKES2024-P0095
+    documents:
+    - DILKES2024
+  - anchor_id: A04-16
+    positive: like glitches in the system
+    negative: like events in the world
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0978
+    phrase_ids:
+    - SIMEON2023-P0676
+    documents:
+    - SIMEON2023
+  - anchor_id: A04-17
+    positive: like nonexistent virtuality
+    negative: like physical reality
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1023
+    phrase_ids:
+    - SIMEON2023-P0664
+    documents:
+    - SIMEON2023
+  - anchor_id: A04-18
+    positive: like other digital worlds
+    negative: like other physical places
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0834
+    phrase_ids:
+    - DILKES2024-P0099
+    documents:
+    - DILKES2024
+  - anchor_id: A04-19
+    positive: like playing a video game inside a video game
+    negative: like playing a physical game inside a physical game
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0719
+    phrase_ids:
+    - DILKES2024-P0098
+    documents:
+    - DILKES2024
+  - anchor_id: A04-21
+    positive: like some sort of simulation
+    negative: like some sort of physical place
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0372
+    phrase_ids:
+    - SIMEON2023-P0674
+    documents:
+    - SIMEON2023
+  - anchor_id: A04-23
+    positive: like the matrix
+    negative: like the physical world
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1124
+    phrase_ids:
+    - DILKES2024-P0102
+    - DILKES2024-P0147
+    - DILKES2024-P0175
+    documents:
+    - DILKES2024
+  - anchor_id: A04-24
+    positive: like the unreal world of these simulations
+    negative: like the physical world of these environments
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0269
+    phrase_ids:
+    - SIMEON2023-P0652
+    documents:
+    - SIMEON2023
+- id: A05
+  name: veil, glass wall, barrier, bubble
+  definition: Something like a veil, film, pane of glass, invisible wall or enclosing bubble seems to stand between the person and the world.
+  pairs:
+  - anchor_id: A05-01
+    positive: as if seen through a veil
+    negative: as if seen with direct sight
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - mixed
+    - not_specific
+    - vision
+    text_ids:
+    - T0527
+    - T0661
+    - T1082
+    - T1069
+    - T0974
+    - T1088
+    phrase_ids:
+    - MIYAZONO2021-P0111
+    - MIYAZONO2021-P0080
+    - MIYAZONO2021-P0041
+    - DILKES2024-P0166
+    - MIYAZONO2021-P0089
+    - MIYAZONO2021-P0098
+    - MIYAZONO2021-P0108
+    - SIMEON2023-P0230
+    - DILKES2024-P0016
+    - DILKES2024-P0066
+    - DILKES2024-P0079
+    - SIMEON2023-P0049
+    - SIMEON2023-P0084
+    - SIMEON2023-P0103
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A05-02
+    positive: as if in a bubble
+    negative: as if in the world
+    negative_source: K6 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0320
+    - T0296
+    - T0152
+    phrase_ids:
+    - DILKES2024-P0045
+    - DILKES2024-P0165
+    - DILKES2024-P0015
+    - DILKES2024-P0078
+    - MIYAZONO2021-P0038
+    - MIYAZONO2021-P0079
+    - SIMEON2023-P0048
+    - SIMEON2023-P0229
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A05-03
+    positive: as if seen through a glass wall
+    negative: as if seen with direct sight
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0916
+    - T0451
+    phrase_ids:
+    - MIYAZONO2021-P0081
+    - DILKES2024-P0167
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+  - anchor_id: A05-04
+    positive: as if seen through a screen
+    negative: as if seen with direct sight
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    - not_specific
+    text_ids:
+    - T0758
+    - T1095
+    phrase_ids:
+    - DILKES2024-P0149
+    - DILKES2024-P0169
+    - DILKES2024-P0116
+    documents:
+    - DILKES2024
+  - anchor_id: A05-05
+    positive: as if seen through an invisible wall
+    negative: as if seen with direct sight
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1071
+    - T0851
+    phrase_ids:
+    - DILKES2024-P0093
+    - DILKES2024-P0150
+    - DILKES2024-P0168
+    - DILKES2024-P0112
+    documents:
+    - DILKES2024
+  - anchor_id: A05-08
+    positive: as if access to the landscape is more opaque
+    negative: as if access to the landscape is direct
+    negative_source: K2 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0604
+    phrase_ids:
+    - CIAUNICA2022-P0203
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-10
+    positive: as if enclosed in a kind of bubble
+    negative: as if located in a kind of setting
+    negative_source: K2 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0645
+    phrase_ids:
+    - SIMEON2023-P0505
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-11
+    positive: as if life is through a veil
+    negative: as if life is in direct view
+    negative_source: K6 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T1132
+    phrase_ids:
+    - DILKES2024-P0091
+    documents:
+    - DILKES2024
+  - anchor_id: A05-15
+    positive: as if seen through a filter over the eyes
+    negative: as if seen through a direct view from the eyes
+    negative_source: K2 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0192
+    phrase_ids:
+    - DILKES2024-P0127
+    documents:
+    - DILKES2024
+  - anchor_id: A05-19
+    positive: as if seen through a screen or a film between the participant and the rest of the world
+    negative: as if seen through a view or a passage between the participant and the rest of the world
+    negative_source: K5 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0321
+    phrase_ids:
+    - PIENKOS2022-P0048
+    documents:
+    - PIENKOS2022
+  - anchor_id: A05-20
+    positive: as if seen through a thin veil
+    negative: as if seen through a direct view
+    negative_source: K4 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0024
+    phrase_ids:
+    - SIMEON2023-P0493
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-21
+    positive: as if seen through a veil between himself and the real world
+    negative: as if seen through a direct link between himself and the real world
+    negative_source: K3 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0470
+    phrase_ids:
+    - SIMEON2023-P0124
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-22
+    positive: as if seen through a veil between me and the outside world
+    negative: as if seen through a direct link between me and the outside world
+    negative_source: K2 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1098
+    phrase_ids:
+    - RADOVIC2002-P0019
+    documents:
+    - RADOVIC2002
+  - anchor_id: A05-24
+    positive: as if seen through a veil placed over your senses
+    negative: as if seen through a transparent lens placed over your senses
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0308
+    phrase_ids:
+    - DILKES2024-P0051
+    documents:
+    - DILKES2024
+  - anchor_id: A05-25
+    positive: as if seen through an invisible barrier between the self and the world
+    negative: as if seen through a direct link between the self and the world
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0931
+    phrase_ids:
+    - DILKES2024-P0064
+    - DILKES2024-P0074
+    documents:
+    - DILKES2024
+  - anchor_id: A05-26
+    positive: as if seen through an invisible barrier between themself and the world
+    negative: as if seen through a direct link between themself and the world
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0791
+    phrase_ids:
+    - DILKES2024-P0164
+    documents:
+    - DILKES2024
+  - anchor_id: A05-27
+    positive: as if seen through an invisible film
+    negative: as if seen through direct sight
+    negative_source: K4 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0056
+    phrase_ids:
+    - SIMEON2023-P0492
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-28
+    positive: as if seen through an invisible wall between me and the things i love
+    negative: as if seen through a direct link between me and the things i love
+    negative_source: K5 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0087
+    phrase_ids:
+    - DILKES2024-P0094
+    documents:
+    - DILKES2024
+  - anchor_id: A05-29
+    positive: as if seen through an obscuring barrier
+    negative: as if seen through a direct view
+    negative_source: K4 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0101
+    phrase_ids:
+    - DILKES2024-P0050
+    - DILKES2024-P0056
+    documents:
+    - DILKES2024
+  - anchor_id: A05-30
+    positive: as if seen through glass
+    negative: as if seen with direct sight
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0464
+    phrase_ids:
+    - MIYAZONO2021-P0068
+    - SIMEON2023-P0050
+    - SIMEON2023-P0231
+    documents:
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A05-33
+    positive: as if seen through this veil between your eyes and the real world
+    negative: as if seen through this direct link between your eyes and the real world
+    negative_source: K3 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0848
+    phrase_ids:
+    - DILKES2024-P0055
+    documents:
+    - DILKES2024
+  - anchor_id: A05-35
+    positive: as if separated from reality by a protective covering
+    negative: as if connected to reality by a protective bond
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0405
+    phrase_ids:
+    - SIMEON2023-P0419
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-36
+    positive: as if separated from the world by an invisible barrier
+    negative: as if joined to the world by an invisible bond
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0082
+    phrase_ids:
+    - TANAKA2018-P0014
+    documents:
+    - TANAKA2018
+  - anchor_id: A05-37
+    positive: as if something stands in the way
+    negative: as if something clears the way
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0606
+    phrase_ids:
+    - CIAUNICA2022-P0207
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-42
+    positive: as if there was a veil between me and the outside world
+    negative: as if there was a direct link between me and the outside world
+    negative_source: K5 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0615
+    phrase_ids:
+    - SIMEON2023-P0165
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-43
+    positive: as if there was a wall between me and the external world
+    negative: as if there was a direct link between me and the external world
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0943
+    phrase_ids:
+    - SIMEON2023-P0092
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-44
+    positive: as if there were a veil
+    negative: as if there were a direct view
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0266
+    phrase_ids:
+    - MIYAZONO2021-P0039
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A05-45
+    positive: as if there were a veil between me and the outside world
+    negative: as if there were a direct link between me and the outside world
+    negative_source: K5 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0923
+    phrase_ids:
+    - MIYAZONO2021-P0075
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A05-46
+    positive: as if there were a veil in front of me
+    negative: as if there were a direct view in front of me
+    negative_source: yours
+    revision: your negative
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0227
+    phrase_ids:
+    - MIYAZONO2021-P0113
+    - MIYAZONO2021-P0115
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A05-47
+    positive: as if watched from inside a shell
+    negative: as if watched from inside the scene
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0526
+    phrase_ids:
+    - CIAUNICA2022-P0178
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-48
+    positive: less transparent
+    negative: transparent
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0727
+    phrase_ids:
+    - CIAUNICA2022-P0248
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-49
+    positive: like a crack in the pane of glass
+    negative: like a view through the pane of glass
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0918
+    phrase_ids:
+    - CIAUNICA2022-P0199
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-50
+    positive: like a veil that was coming over the vision slowly
+    negative: like detail that was coming into the vision slowly
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0963
+    phrase_ids:
+    - DILKES2024-P0059
+    documents:
+    - DILKES2024
+  - anchor_id: A05-51
+    positive: like a wall before me
+    negative: like a path before me
+    negative_source: K5 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1084
+    phrase_ids:
+    - RADOVIC2002-P0004
+    - RADOVIC2002-P0033
+    documents:
+    - RADOVIC2002
+  - anchor_id: A05-52
+    positive: like an invisible wall
+    negative: like a direct view
+    negative_source: K6 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0865
+    phrase_ids:
+    - DILKES2024-P0114
+    documents:
+    - DILKES2024
+  - anchor_id: A05-53
+    positive: like being behind a screen
+    negative: like being inside the scene
+    negative_source: K2 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0733
+    phrase_ids:
+    - DILKES2024-P0115
+    documents:
+    - DILKES2024
+  - anchor_id: A05-54
+    positive: like being in a bubble
+    negative: like being in the world
+    negative_source: K6 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0561
+    phrase_ids:
+    - TANAKA2018-P0013
+    documents:
+    - TANAKA2018
+  - anchor_id: A05-55
+    positive: like being trapped in a bubble
+    negative: like being engaged in the world
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0318
+    phrase_ids:
+    - PIENKOS2022-P0044
+    documents:
+    - PIENKOS2022
+  - anchor_id: A05-56
+    positive: like glass over the eyes
+    negative: like direct vision from the eyes
+    negative_source: K3 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0030
+    phrase_ids:
+    - SIMEON2023-P0026
+    documents:
+    - SIMEON2023
+  - anchor_id: A05-57
+    positive: like having a pane of glass
+    negative: like having a range of sight
+    negative_source: K4 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0953
+    phrase_ids:
+    - CIAUNICA2022-P0212
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-59
+    positive: like life watched from behind glass
+    negative: like life watched within the scene
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0987
+    phrase_ids:
+    - DILKES2024-P0018
+    documents:
+    - DILKES2024
+  - anchor_id: A05-60
+    positive: like living in a bubble
+    negative: like living in the world
+    negative_source: K5 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1079
+    phrase_ids:
+    - CIAUNICA2022-P0214
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-62
+    positive: like the cracked window itself as a visible observable entity
+    negative: like the clear window itself as a visible observable entity
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0306
+    phrase_ids:
+    - CIAUNICA2022-P0200
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A05-63
+    positive: like the outer landscape perceived through the cracked window
+    negative: like the outer landscape perceived through the clean window
+    negative_source: K4 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - vision
+    text_ids:
+    - T0863
+    phrase_ids:
+    - CIAUNICA2022-P0205
+    documents:
+    - CIAUNICA2022
+- id: A07
+  name: fog, blurry, hazy
+  definition: The world appears foggy, blurred, cloudy or indistinct.
+  pairs:
+  - anchor_id: A07-01
+    positive: as if seen in a fog
+    negative: as if seen in daylight
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    - not_specific
+    text_ids:
+    - T0258
+    - T0256
+    - T1103
+    phrase_ids:
+    - MIYAZONO2021-P0077
+    - DILKES2024-P0027
+    - SIMEON2023-P0046
+    - DILKES2024-P0014
+    - DILKES2024-P0076
+    - MIYAZONO2021-P0036
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A07-02
+    positive: blurry
+    negative: sharp
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0668
+    - T0165
+    phrase_ids:
+    - SIMEON2023-P0583
+    - PIENKOS2022-P0163
+    - SIMEON2023-P0055
+    - SIMEON2023-P0236
+    documents:
+    - PIENKOS2022
+    - SIMEON2023
+  - anchor_id: A07-03
+    positive: as if blinded by a mist
+    negative: as if lit by daylight
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0440
+    phrase_ids:
+    - DILKES2024-P0026
+    documents:
+    - DILKES2024
+  - anchor_id: A07-04
+    positive: as if its clarity is hindered
+    negative: as if its clarity is maintained
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0047
+    phrase_ids:
+    - CIAUNICA2022-P0206
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A07-05
+    positive: as if navigating through fog in slow motion
+    negative: as if navigating through daylight in slow motion
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0970
+    phrase_ids:
+    - SIMEON2023-P0305
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-06
+    positive: as if objects were surrounded by a cloud
+    negative: as if objects were surrounded by daylight
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0558
+    phrase_ids:
+    - SIMEON2023-P0087
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-07
+    positive: as if one's vision is blurred
+    negative: as if one's vision is focused
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0252
+    phrase_ids:
+    - CIAUNICA2022-P0097
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A07-08
+    positive: as if seen in a visual fog
+    negative: as if seen in visual clarity
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0031
+    phrase_ids:
+    - SIMEON2023-P0027
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-09
+    positive: as if seen in fog
+    negative: as if seen in daylight
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0085
+    phrase_ids:
+    - DILKES2024-P0158
+    - MIYAZONO2021-P0088
+    - MIYAZONO2021-P0099
+    - MIYAZONO2021-P0109
+    - MIYAZONO2021-P0128
+    - SIMEON2023-P0227
+    documents:
+    - DILKES2024
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A07-10
+    positive: as if seen in the fog
+    negative: as if seen in the daylight
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0068
+    phrase_ids:
+    - SIMEON2023-P0563
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-11
+    positive: as if seen through a fog
+    negative: as if seen through a clear lens
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0222
+    phrase_ids:
+    - MIYAZONO2021-P0061
+    - SIMEON2023-P0185
+    documents:
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A07-12
+    positive: as if seen through a thick cloud
+    negative: as if seen through a clear atmosphere
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0643
+    phrase_ids:
+    - SIMEON2023-P0083
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-13
+    positive: as if seen with blurry vision
+    negative: as if seen with sharp vision
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0154
+    phrase_ids:
+    - DILKES2024-P0061
+    documents:
+    - DILKES2024
+  - anchor_id: A07-15
+    positive: as if their vision is foggy
+    negative: as if their vision is clear
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0537
+    phrase_ids:
+    - SIMEON2023-P0566
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-16
+    positive: as if they are looking at the world through a fog
+    negative: as if they are looking at the world through clear air
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0767
+    phrase_ids:
+    - SIMEON2023-P0153
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-17
+    positive: as if things look more or less foggy
+    negative: as if things look more or less distinct
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0560
+    phrase_ids:
+    - SIMEON2023-P0569
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-18
+    positive: blurry and foggy
+    negative: distinct and focused
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0343
+    phrase_ids:
+    - SIMEON2023-P0579
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-19
+    positive: cloudy
+    negative: clear
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0921
+    phrase_ids:
+    - SIMEON2023-P0298
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-20
+    positive: foggy
+    negative: clear
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0922
+    phrase_ids:
+    - DILKES2024-P0011
+    - FINO2024-P0009
+    documents:
+    - DILKES2024
+    - FINO2024
+  - anchor_id: A07-21
+    positive: foggy and veiled
+    negative: focused and distinct
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0889
+    phrase_ids:
+    - TANAKA2018-P0015
+    documents:
+    - TANAKA2018
+  - anchor_id: A07-22
+    positive: hazy
+    negative: clear
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0090
+    phrase_ids:
+    - SIMEON2023-P0098
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-23
+    positive: indefinite
+    negative: definite
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0933
+    phrase_ids:
+    - MIYAZONO2021-P0126
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A07-24
+    positive: like peering at the world through a fog
+    negative: like peering at the world through clear air
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1094
+    phrase_ids:
+    - DILKES2024-P0135
+    documents:
+    - DILKES2024
+  - anchor_id: A07-25
+    positive: like someone has put dirty fingerprints on the sunglasses – but it is the eyes
+    negative: like someone has put clean lenses on the sunglasses – but it is the eyes
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0506
+    phrase_ids:
+    - CIAUNICA2022-P0098
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A07-26
+    positive: like vague shapes
+    negative: like distinct shapes
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0067
+    phrase_ids:
+    - CIAUNICA2022-P0154
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A07-27
+    positive: more blurred
+    negative: more focused
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0193
+    phrase_ids:
+    - CIAUNICA2022-P0246
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A07-28
+    positive: shadowy
+    negative: well-lit
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0692
+    phrase_ids:
+    - SIMEON2023-P0102
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-29
+    positive: unclear
+    negative: clear
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0680
+    phrase_ids:
+    - SIMEON2023-P0155
+    documents:
+    - SIMEON2023
+  - anchor_id: A07-30
+    positive: vague
+    negative: distinct
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0901
+    phrase_ids:
+    - PIENKOS2022-P0057
+    documents:
+    - PIENKOS2022
+- id: A11
+  name: flat, two-dimensional
+  definition: Objects, people or the world look flat and lacking depth.
+  pairs:
+  - anchor_id: A11-01
+    positive: flat
+    negative: three-dimensional
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1107
+    - T0683
+    - T0633
+    phrase_ids:
+    - SIERRA2001-P0036
+    - MIYAZONO2021-P0070
+    - RADOVIC2002-P0031
+    - SIERRA2001-P0014
+    - SIMEON2023-P0157
+    - PIENKOS2022-P0164
+    - SIMEON2023-P0241
+    documents:
+    - MIYAZONO2021
+    - PIENKOS2022
+    - RADOVIC2002
+    - SIERRA2001
+    - SIMEON2023
+  - anchor_id: A11-02
+    positive: two-dimensional
+    negative: three-dimensional
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0564
+    - T0972
+    phrase_ids:
+    - SIMEON2023-P0240
+    - MIYAZONO2021-P0045
+    documents:
+    - MIYAZONO2021
+    - SIMEON2023
+  - anchor_id: A11-03
+    positive: as if external objects were flat
+    negative: as if external objects were three-dimensional
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0055
+    phrase_ids:
+    - MIYAZONO2021-P0084
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A11-04
+    positive: flat and two-dimensional
+    negative: solid and three-dimensional
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0208
+    phrase_ids:
+    - SIMEON2023-P0028
+    documents:
+    - SIMEON2023
+  - anchor_id: A11-05
+    positive: like objects or space being flattened
+    negative: like objects or space being volumetric
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0540
+    phrase_ids:
+    - CIAUNICA2022-P0133
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A11-06
+    positive: like the world becoming two dimensional
+    negative: like the world being three dimensional
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0920
+    phrase_ids:
+    - FINO2024-P0016
+    documents:
+    - FINO2024
+- id: A13
+  name: dull, less vivid, colorless
+  definition: The world appears dimmed, faded or reduced in color, vividness and intensity.
+  pairs:
+  - anchor_id: A13-01
+    positive: as if seen with attenuated perception
+    negative: as if seen with vivid perception
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0804
+    phrase_ids:
+    - DILKES2024-P0063
+    documents:
+    - DILKES2024
+  - anchor_id: A13-02
+    positive: colorless
+    negative: colored
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0501
+    phrase_ids:
+    - PIENKOS2022-P0019
+    - SIMEON2023-P0052
+    - SIMEON2023-P0233
+    documents:
+    - PIENKOS2022
+    - SIMEON2023
+  - anchor_id: A13-03
+    positive: dull
+    negative: vivid
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0839
+    phrase_ids:
+    - PIENKOS2022-P0168
+    - RADOVIC2002-P0030
+    - SIERRA2001-P0013
+    documents:
+    - PIENKOS2022
+    - RADOVIC2002
+    - SIERRA2001
+  - anchor_id: A13-04
+    positive: duller
+    negative: vivid
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0226
+    phrase_ids:
+    - PIENKOS2022-P0084
+    documents:
+    - PIENKOS2022
+  - anchor_id: A13-05
+    positive: lacking in normal color and vividness
+    negative: rich in full color and vividness
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0200
+    phrase_ids:
+    - SIMEON2023-P0042
+    documents:
+    - SIMEON2023
+  - anchor_id: A13-07
+    positive: lacking in vibrancy or depth
+    negative: rich in vibrancy or depth
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0817
+    phrase_ids:
+    - CIAUNICA2022-P0024
+    documents:
+    - CIAUNICA2022
+  - anchor_id: A13-08
+    positive: less vivid
+    negative: vivid
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1007
+    phrase_ids:
+    - PIENKOS2022-P0085
+    documents:
+    - PIENKOS2022
+  - anchor_id: A13-09
+    positive: less vivid or intense
+    negative: fully vivid or intense
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0172
+    phrase_ids:
+    - PIENKOS2022-P0047
+    documents:
+    - PIENKOS2022
+  - anchor_id: A13-10
+    positive: like things lacking vividness
+    negative: like things having vividness
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0600
+    phrase_ids:
+    - SIERRA2001-P0035
+    documents:
+    - SIERRA2001
+  - anchor_id: A13-11
+    positive: reduced in intensity
+    negative: full in intensity
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0137
+    phrase_ids:
+    - PIENKOS2022-P0086
+    documents:
+    - PIENKOS2022
+- id: A14
+  name: lifeless, dead, empty
+  definition: The world or the things in it appear dead, lifeless, empty or void.
+  pairs:
+  - anchor_id: A14-01
+    positive: as if emptiness was everywhere
+    negative: as if life was present
+    negative_source: K2 (chatgpt)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0111
+    phrase_ids:
+    - SIMEON2023-P0509
+    documents:
+    - SIMEON2023
+  - anchor_id: A14-02
+    positive: as if everything looks lifeless
+    negative: as if everything looks alive
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1116
+    phrase_ids:
+    - PIENKOS2022-P0016
+    documents:
+    - PIENKOS2022
+  - anchor_id: A14-04
+    positive: as if objects look dead
+    negative: as if objects look alive
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T1042
+    phrase_ids:
+    - PIENKOS2022-P0015
+    documents:
+    - PIENKOS2022
+  - anchor_id: A14-06
+    positive: as if with an emptiness to landscapes
+    negative: as if with a presence to landscapes
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T1112
+    phrase_ids:
+    - MIYAZONO2021-P0135
+    documents:
+    - MIYAZONO2021
+  - anchor_id: A14-07
+    positive: dead
+    negative: alive
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0246
+    phrase_ids:
+    - PIENKOS2022-P0167
+    - RADOVIC2002-P0043
+    documents:
+    - PIENKOS2022
+    - RADOVIC2002
+  - anchor_id: A14-08
+    positive: deathlike
+    negative: lifelike
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0444
+    phrase_ids:
+    - SIMEON2023-P0416
+    documents:
+    - SIMEON2023
+  - anchor_id: A14-09
+    positive: empty
+    negative: full
+    negative_source: K4 (claude)
+    revision: replaced (proposed)
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0770
+    phrase_ids:
+    - SIMEON2023-P0032
+    documents:
+    - SIMEON2023
+  - anchor_id: A14-10
+    positive: lifeless
+    negative: alive
+    negative_source: claude+chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0868
+    phrase_ids:
+    - DILKES2024-P0012
+    - FINO2024-P0008
+    - MIYAZONO2021-P0071
+    - RADOVIC2002-P0032
+    - RADOVIC2002-P0040
+    - SIERRA2001-P0015
+    - SIMEON2023-P0053
+    - SIMEON2023-P0158
+    - SIMEON2023-P0234
+    documents:
+    - DILKES2024
+    - FINO2024
+    - MIYAZONO2021
+    - RADOVIC2002
+    - SIERRA2001
+    - SIMEON2023
+  - anchor_id: A14-11
+    positive: like a detached void
+    negative: like an inhabited space
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T1119
+    phrase_ids:
+    - DILKES2024-P0121
+    documents:
+    - DILKES2024
+  - anchor_id: A14-12
+    positive: like everything gives the same experiences of blackness
+    negative: like everything gives the varied experiences of color
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - vision
+    text_ids:
+    - T0124
+    phrase_ids:
+    - PIENKOS2022-P0018
+    documents:
+    - PIENKOS2022
+  - anchor_id: A14-13
+    positive: like the dark and the void
+    negative: like the light and the space
+    negative_source: chatgpt
+    revision: kept
+    sense_classes:
+    - mixed
+    text_ids:
+    - T0446
+    phrase_ids:
+    - SIMEON2023-P0635
+    documents:
+    - SIMEON2023
+  - anchor_id: A14-14
+    positive: like the insidious nothingness choking the life out of everything
+    negative: like the insidious presence coaxing the life out of everything
+    negative_source: claude
+    revision: kept
+    sense_classes:
+    - not_specific
+    text_ids:
+    - T0185
+    phrase_ids:
+    - SIMEON2023-P0502
+    documents:
+    - SIMEON2023

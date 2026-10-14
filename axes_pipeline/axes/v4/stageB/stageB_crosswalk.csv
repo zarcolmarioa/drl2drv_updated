@@ -1,0 +1,184 @@
+group_claude,name_claude,group_chatgpt,name_chatgpt,n_texts,share_of_claude_group,share_of_chatgpt_group
+G01,"unreal, not real",G01,"unreal, not real",69,0.690,0.958
+NOT_WORLD,NOT_WORLD,NOT_WORLD,NOT_WORLD,66,0.795,0.337
+G05,"veil, glass wall, barrier",G09,wall or barrier,60,0.909,0.800
+G08,"detached, cut off from world",G08,cut off from world,41,0.554,1.000
+OTHER,OTHER,OTHER,OTHER,40,0.426,0.270
+G02,"dreamlike, in a dream",G02,dream-like world,38,0.905,1.000
+G30,viewpoint outside the body,NOT_WORLD,NOT_WORLD,35,0.972,0.179
+G07,"fog, blurry, hazy",G15,"foggy, blurry",30,0.882,0.968
+G18,"different, changed, altered",OTHER,OTHER,29,0.829,0.196
+G04,"simulation, video game",G03,simulation or video game,23,0.885,0.920
+G22,"others as robots, automatons",G36,people as robots,21,0.512,1.000
+G16,"strange, foreign, uncanny",G05,"strange, odd",19,0.487,0.905
+G17,familiar looks unfamiliar,G06,look unfamiliar,19,0.543,0.792
+G19,no emotional resonance,G33,world lacks emotional coloring,18,0.409,0.900
+OTHER,OTHER,NOT_WORLD,NOT_WORLD,17,0.181,0.087
+G08,"detached, cut off from world",NOT_WORLD,NOT_WORLD,15,0.203,0.077
+G06,in a bubble,G09,wall or barrier,14,1.000,0.187
+G10,"far away, distant",G13,"far away, distant",13,0.867,1.000
+G13,"dull, less vivid, colorless",G16,"less vivid, dull",12,0.923,1.000
+NOT_WORLD,NOT_WORLD,OTHER,OTHER,12,0.145,0.081
+G27,time faster or slower,G25,time sped up,12,0.522,0.923
+G19,no emotional resonance,NOT_WORLD,NOT_WORLD,12,0.273,0.061
+G20,"meaningless, things without names",G56,"meaningless, irrelevant",12,0.343,0.857
+G31,doubt in common-sense reality,G50,doubt in reality,11,0.407,0.917
+G23,disconnected from other people,G35,emotionally distant from others,10,0.556,0.909
+G20,"meaningless, things without names",G66,shapes and formal details,10,0.286,0.625
+G08,"detached, cut off from world",G32,not present or engaged,10,0.135,1.000
+G11,"flat, two-dimensional",G14,"flat, two-dimensional",10,0.909,1.000
+OTHER,OTHER,G20,visually distorted,10,0.106,0.769
+G14,"lifeless, dead, empty",G61,"empty, void",9,0.529,1.000
+G01,"unreal, not real",NOT_WORLD,NOT_WORLD,9,0.090,0.046
+G21,"special meaning, significance",G55,"special meaning, significance",9,0.818,0.900
+G15,"heightened, vivid, more real",OTHER,OTHER,9,0.250,0.061
+G19,no emotional resonance,G34,beauty and charm lost,8,0.182,0.889
+G31,doubt in common-sense reality,G54,alternate realities,8,0.296,0.533
+G25,"oneness, connectedness with world",G44,oneness with all,8,0.444,0.800
+G28,"time stopped, eternal",G26,"time stopped, suspended",8,0.533,1.000
+G09,watching as detached observer,G10,detached observer,8,0.500,1.000
+G27,time faster or slower,G24,time slowed,7,0.304,1.000
+G08,"detached, cut off from world",G57,not directly presented,7,0.095,0.583
+G01,"unreal, not real",OTHER,OTHER,7,0.070,0.047
+G03,"movie, picture, film set",OTHER,OTHER,7,0.438,0.047
+G17,familiar looks unfamiliar,G07,known but not familiar,7,0.200,0.875
+G32,not noticing surroundings,G58,miss the surroundings,7,0.778,1.000
+G26,blurred self/world boundaries,G46,blurred self-world boundaries,7,0.500,1.000
+G20,"meaningless, things without names",NOT_WORLD,NOT_WORLD,7,0.200,0.036
+G22,"others as robots, automatons",OTHER,OTHER,7,0.171,0.047
+G17,familiar looks unfamiliar,G65,seen for first time,6,0.171,0.857
+G22,"others as robots, automatons",G37,people lifeless,6,0.146,1.000
+G24,"others watching, threatening",G42,controlled by others,6,0.300,1.000
+G03,"movie, picture, film set",G04,movie or film,6,0.375,1.000
+G01,"unreal, not real",G72,nothing exists,6,0.060,0.750
+G34,"frightening, sinister, repulsive",G41,"threatening, unsafe",6,0.250,0.600
+OTHER,OTHER,G30,"time unreliable, disordered",6,0.064,0.600
+G29,"present, past seem displaced",G29,past feels present,6,0.375,1.000
+G34,"frightening, sinister, repulsive",G71,"grotesque, repulsive",6,0.250,1.000
+OTHER,OTHER,G67,distinctness and differences lost,5,0.053,1.000
+G12,altered size of objects,G18,"larger, bigger",5,0.385,0.714
+G29,"present, past seem displaced",G28,recent feels long ago,5,0.312,1.000
+G14,"lifeless, dead, empty",G62,"dead, lifeless world",5,0.294,1.000
+G16,"strange, foreign, uncanny",G63,"eerie, uncanny, nightmarish",5,0.128,0.556
+G22,"others as robots, automatons",G38,"people acting, masked",5,0.122,1.000
+G24,"others watching, threatening",G40,watched and judged,5,0.250,1.000
+G15,"heightened, vivid, more real",NOT_WORLD,NOT_WORLD,5,0.139,0.026
+G05,"veil, glass wall, barrier",G57,not directly presented,4,0.061,0.333
+G09,watching as detached observer,NOT_WORLD,NOT_WORLD,4,0.250,0.020
+G33,seeing things not present,G60,absent things perceived,4,0.400,1.000
+G34,"frightening, sinister, repulsive",G63,"eerie, uncanny, nightmarish",4,0.167,0.444
+G34,"frightening, sinister, repulsive",NOT_WORLD,NOT_WORLD,4,0.167,0.020
+OTHER,OTHER,G43,access to others' minds,4,0.043,1.000
+G28,"time stopped, eternal",G27,"stretched, eternal time",4,0.267,0.667
+G15,"heightened, vivid, more real",G49,more real,4,0.111,0.667
+G15,"heightened, vivid, more real",G17,"clear, sharp, detailed",4,0.111,1.000
+G16,"strange, foreign, uncanny",G06,look unfamiliar,4,0.103,0.167
+G25,"oneness, connectedness with world",G45,greater concern for others,4,0.222,1.000
+G33,seeing things not present,G22,spots and dots,4,0.400,1.000
+G25,"oneness, connectedness with world",NOT_WORLD,NOT_WORLD,4,0.222,0.020
+G26,blurred self/world boundaries,G47,objects merge with body,4,0.286,1.000
+G20,"meaningless, things without names",OTHER,OTHER,4,0.114,0.027
+G23,disconnected from other people,G39,people hard to understand,4,0.222,0.667
+G19,no emotional resonance,G59,nothing stands out,4,0.091,0.800
+G24,"others watching, threatening",OTHER,OTHER,4,0.200,0.027
+G16,"strange, foreign, uncanny",G54,alternate realities,4,0.103,0.267
+G14,"lifeless, dead, empty",OTHER,OTHER,3,0.176,0.020
+G07,"fog, blurry, hazy",OTHER,OTHER,3,0.088,0.020
+G12,altered size of objects,OTHER,OTHER,3,0.231,0.020
+G12,altered size of objects,G19,look smaller,3,0.231,1.000
+G24,"others watching, threatening",G41,"threatening, unsafe",3,0.150,0.300
+G31,doubt in common-sense reality,NOT_WORLD,NOT_WORLD,3,0.111,0.015
+OTHER,OTHER,G64,surroundings closing in,3,0.032,0.750
+G29,"present, past seem displaced",G30,"time unreliable, disordered",3,0.188,0.300
+G15,"heightened, vivid, more real",G73,"more accurate, unfiltered",3,0.083,0.750
+G15,"heightened, vivid, more real",G23,overly bright light,3,0.083,1.000
+G16,"strange, foreign, uncanny",G01,"unreal, not real",3,0.077,0.042
+G28,"time stopped, eternal",G31,"time unnoticed, lost",2,0.133,0.667
+G34,"frightening, sinister, repulsive",OTHER,OTHER,2,0.083,0.014
+G34,"frightening, sinister, repulsive",G66,shapes and formal details,2,0.083,0.125
+G24,"others watching, threatening",NOT_WORLD,NOT_WORLD,2,0.100,0.010
+G23,disconnected from other people,NOT_WORLD,NOT_WORLD,2,0.111,0.010
+G31,doubt in common-sense reality,G51,"known real, feels unreal",2,0.074,0.667
+G27,time faster or slower,OTHER,OTHER,2,0.087,0.014
+G25,"oneness, connectedness with world",OTHER,OTHER,2,0.111,0.014
+G26,blurred self/world boundaries,OTHER,OTHER,2,0.143,0.014
+G18,"different, changed, altered",G21,altered colors,2,0.057,0.667
+G15,"heightened, vivid, more real",G18,"larger, bigger",2,0.056,0.286
+G18,"different, changed, altered",NOT_WORLD,NOT_WORLD,2,0.057,0.010
+G16,"strange, foreign, uncanny",OTHER,OTHER,2,0.051,0.014
+G15,"heightened, vivid, more real",G70,marveling at existence,2,0.056,0.500
+G27,time faster or slower,G27,"stretched, eternal time",2,0.087,0.333
+G31,doubt in common-sense reality,G53,real and unreal together,2,0.074,0.500
+G29,"present, past seem displaced",NOT_WORLD,NOT_WORLD,2,0.125,0.010
+G09,watching as detached observer,G54,alternate realities,2,0.125,0.133
+G01,"unreal, not real",G53,real and unreal together,2,0.020,0.500
+G02,"dreamlike, in a dream",G52,imagined or perceived,2,0.048,0.667
+G01,"unreal, not real",G69,behind everyday appearances,2,0.020,0.500
+G03,"movie, picture, film set",NOT_WORLD,NOT_WORLD,1,0.062,0.005
+G01,"unreal, not real",G56,"meaningless, irrelevant",1,0.010,0.071
+G01,"unreal, not real",G51,"known real, feels unreal",1,0.010,0.333
+G01,"unreal, not real",G34,beauty and charm lost,1,0.010,0.111
+G13,"dull, less vivid, colorless",NOT_WORLD,NOT_WORLD,1,0.077,0.005
+G12,altered size of objects,G20,visually distorted,1,0.077,0.077
+G12,altered size of objects,G05,"strange, odd",1,0.077,0.048
+G11,"flat, two-dimensional",OTHER,OTHER,1,0.091,0.007
+G09,watching as detached observer,G39,people hard to understand,1,0.062,0.167
+G10,"far away, distant",G20,visually distorted,1,0.067,0.077
+G10,"far away, distant",OTHER,OTHER,1,0.067,0.007
+G09,watching as detached observer,G09,wall or barrier,1,0.062,0.013
+G07,"fog, blurry, hazy",NOT_WORLD,NOT_WORLD,1,0.029,0.005
+G05,"veil, glass wall, barrier",OTHER,OTHER,1,0.015,0.007
+G04,"simulation, video game",G72,nothing exists,1,0.038,0.125
+G05,"veil, glass wall, barrier",G15,"foggy, blurry",1,0.015,0.032
+G08,"detached, cut off from world",OTHER,OTHER,1,0.014,0.007
+G03,"movie, picture, film set",G70,marveling at existence,1,0.062,0.250
+G04,"simulation, video game",G54,alternate realities,1,0.038,0.067
+G04,"simulation, video game",G64,surroundings closing in,1,0.038,0.250
+G01,"unreal, not real",G57,not directly presented,1,0.010,0.083
+G02,"dreamlike, in a dream",G49,more real,1,0.024,0.167
+G02,"dreamlike, in a dream",OTHER,OTHER,1,0.024,0.007
+G03,"movie, picture, film set",G03,simulation or video game,1,0.062,0.040
+G01,"unreal, not real",G05,"strange, odd",1,0.010,0.048
+G15,"heightened, vivid, more real",G66,shapes and formal details,1,0.028,0.062
+G15,"heightened, vivid, more real",G21,altered colors,1,0.028,0.333
+G15,"heightened, vivid, more real",G65,seen for first time,1,0.028,0.143
+G15,"heightened, vivid, more real",G69,behind everyday appearances,1,0.028,0.250
+G16,"strange, foreign, uncanny",G66,shapes and formal details,1,0.026,0.062
+G16,"strange, foreign, uncanny",NOT_WORLD,NOT_WORLD,1,0.026,0.005
+G17,familiar looks unfamiliar,G39,people hard to understand,1,0.029,0.167
+G17,familiar looks unfamiliar,OTHER,OTHER,1,0.029,0.007
+G17,familiar looks unfamiliar,NOT_WORLD,NOT_WORLD,1,0.029,0.005
+G18,"different, changed, altered",G20,visually distorted,1,0.029,0.077
+G18,"different, changed, altered",G06,look unfamiliar,1,0.029,0.042
+G23,disconnected from other people,G50,doubt in reality,1,0.056,0.083
+G23,disconnected from other people,OTHER,OTHER,1,0.056,0.007
+G22,"others as robots, automatons",G03,simulation or video game,1,0.024,0.040
+G22,"others as robots, automatons",NOT_WORLD,NOT_WORLD,1,0.024,0.005
+G20,"meaningless, things without names",G33,world lacks emotional coloring,1,0.029,0.050
+G20,"meaningless, things without names",G73,"more accurate, unfiltered",1,0.029,0.250
+G21,"special meaning, significance",G70,marveling at existence,1,0.091,0.250
+G21,"special meaning, significance",OTHER,OTHER,1,0.091,0.007
+G19,no emotional resonance,G07,known but not familiar,1,0.023,0.125
+G19,no emotional resonance,G35,emotionally distant from others,1,0.023,0.091
+G32,not noticing surroundings,NOT_WORLD,NOT_WORLD,1,0.111,0.005
+G32,not noticing surroundings,G31,"time unnoticed, lost",1,0.111,0.333
+G26,blurred self/world boundaries,G44,oneness with all,1,0.071,0.100
+G28,"time stopped, eternal",OTHER,OTHER,1,0.067,0.007
+G30,viewpoint outside the body,G12,"floating, unlocated",1,0.028,1.000
+G31,doubt in common-sense reality,G49,more real,1,0.037,0.167
+NOT_WORLD,NOT_WORLD,G55,"special meaning, significance",1,0.012,0.100
+NOT_WORLD,NOT_WORLD,G68,lack of agency,1,0.012,0.500
+NOT_WORLD,NOT_WORLD,G33,world lacks emotional coloring,1,0.012,0.050
+NOT_WORLD,NOT_WORLD,G52,imagined or perceived,1,0.012,0.333
+NOT_WORLD,NOT_WORLD,G30,"time unreliable, disordered",1,0.012,0.100
+G33,seeing things not present,G66,shapes and formal details,1,0.100,0.062
+G33,seeing things not present,OTHER,OTHER,1,0.100,0.007
+OTHER,OTHER,G25,time sped up,1,0.011,0.077
+OTHER,OTHER,G59,nothing stands out,1,0.011,0.200
+OTHER,OTHER,G56,"meaningless, irrelevant",1,0.011,0.071
+OTHER,OTHER,G44,oneness with all,1,0.011,0.100
+OTHER,OTHER,G41,"threatening, unsafe",1,0.011,0.100
+OTHER,OTHER,G68,lack of agency,1,0.011,0.500
+OTHER,OTHER,G66,shapes and formal details,1,0.011,0.062
+OTHER,OTHER,G72,nothing exists,1,0.011,0.125
+OTHER,OTHER,G69,behind everyday appearances,1,0.011,0.250

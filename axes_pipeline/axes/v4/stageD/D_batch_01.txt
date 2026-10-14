@@ -1,0 +1,133 @@
+Below is a list of short CAPTIONS. Each completes the sentence
+
+    a scene that looks ___
+
+and describes one QUALITY: a way in which the world, places or objects can
+appear when perception is altered. The qualities are defined below.
+
+TASK
+For each caption, write 3 different COUNTERPARTS: captions that describe the
+same thing as it appears in ordinary perception, without the altered
+quality. Each counterpart must also complete "a scene that looks ___".
+
+RULES
+1. Change only the word or words that carry the quality. Keep every other
+   word, in the same order. Change at most two words; small words (a, the,
+   of, as, if, like, is, ...) do not count.
+2. Keep the same form: if the caption begins with "like" or "as if", so does
+   the counterpart; a single adjective is replaced by a single adjective.
+3. Describe ordinary perception, not the opposite extreme. If the quality is
+   a loss, the counterpart is the usual amount, not an excess; if it is an
+   excess, the counterpart is the usual amount, not a lack.
+4. No negation. Do not use not, no, never, nothing, none, without, or any
+   word ending in n't, and do not add un-, non- or in- to a word of the
+   caption. (If the caption itself contains a negation, replace that word
+   by its positive counterpart.)
+5. Be specific. The counterpart names the ordinary counterpart of THIS
+   caption's quality. Do not use words that could replace any quality, such
+   as normal, ordinary, usual, regular, everyday, fine or natural.
+6. The three counterparts must differ from each other. Put the one you find
+   best first.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; NOT from the list)
+- "thin and metallic"  ->  "full and fresh", "smooth and clean",
+  "rich and fresh"
+- "like water from a tin cup"  ->  "like water from a glass",
+  "like water from a jug", "like water from a clean cup"
+- Not acceptable: "not metallic" (negation), "delicious" (a general word,
+  not the counterpart of this quality), "like the best drink in the world"
+  (the opposite extreme).
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per caption,
+in the order of the list:
+[{"id": "A01-01", "counterparts": ["...", "...", "..."]}, ...]
+After the code block write the number of captions in the array and then the
+line: END OF BATCH 1
+
+QUALITIES
+A01 "unreal, fake, artificial": The world or things in it look unreal, fake or artificial.
+A02 "dreamlike, in a dream": The world or one's life seems like a dream or like being in a dream.
+
+THE CAPTIONS (batch 1 of 4)
+A01-01 | A01 | caption: "unreal"
+A01-02 | A01 | caption: "as if the world feels unreal"
+A01-03 | A01 | caption: "artificial"
+A01-04 | A01 | caption: "as if everything besides the limbs feels like they don't have much of a presence"
+A01-05 | A01 | caption: "as if everything is an illusion"
+A01-06 | A01 | caption: "as if everything seemed intensely unreal"
+A01-07 | A01 | caption: "as if everything seems unreal"
+A01-08 | A01 | caption: "as if it is making everything feel less real and more distant"
+A01-09 | A01 | caption: "as if it is somewhere on the border of the real and the unreal"
+A01-10 | A01 | caption: "as if it is without substance"
+A01-11 | A01 | caption: "as if it was all unreal"
+A01-12 | A01 | caption: "as if none of this is real"
+A01-13 | A01 | caption: "as if nothing exists or is real"
+A01-14 | A01 | caption: "as if nothing is real"
+A01-15 | A01 | caption: "as if nothing seems real"
+A01-16 | A01 | caption: "as if other people, objects, and the world around them are not real"
+A01-17 | A01 | caption: "as if reality is not there"
+A01-18 | A01 | caption: "as if seen in a place of unreality"
+A01-19 | A01 | caption: "as if the outside world is unreal"
+A01-20 | A01 | caption: "as if the present seems unreal"
+A01-21 | A01 | caption: "as if the things around don't feel real"
+A01-22 | A01 | caption: "as if the world around is unreal"
+A01-23 | A01 | caption: "as if the world around seems fake"
+A01-24 | A01 | caption: "as if the world feels fake or deadened"
+A01-25 | A01 | caption: "as if the world is unreal"
+A01-26 | A01 | caption: "as if the world were made of cellophane or glass"
+A01-27 | A01 | caption: "as if these were unreal"
+A01-28 | A01 | caption: "as if they don't seem real"
+A01-29 | A01 | caption: "as if things around them seem unreal"
+A01-30 | A01 | caption: "as if things become unreal"
+A01-31 | A01 | caption: "as if things feel unreal"
+A01-32 | A01 | caption: "as if things seem unreal"
+A01-33 | A01 | caption: "constantly at risk of turning unreal"
+A01-34 | A01 | caption: "detached or unreal"
+A01-35 | A01 | caption: "fake"
+A01-36 | A01 | caption: "like a blurring of reality"
+A01-37 | A01 | caption: "like a copy of the real world but not quite real"
+A01-38 | A01 | caption: "like all was unreal"
+A01-39 | A01 | caption: "like nothing was real"
+A01-40 | A01 | caption: "like some real thing behind appearances"
+A01-41 | A01 | caption: "like something real that is unreal at the same time"
+A01-42 | A01 | caption: "like the unreality of external objects"
+A01-43 | A01 | caption: "like the unreality of things"
+A01-44 | A01 | caption: "like the world disappearing under the feet"
+A01-45 | A01 | caption: "like there is a zipper to unzip"
+A01-46 | A01 | caption: "made of cellophane"
+A01-47 | A01 | caption: "not as real as before"
+A01-48 | A01 | caption: "not quite real"
+A01-49 | A01 | caption: "rendered unreal"
+A01-50 | A01 | caption: "so unreal"
+A01-51 | A01 | caption: "static, half-true"
+A01-52 | A01 | caption: "unreal and pointless"
+A01-53 | A01 | caption: "unreal or detached from one's surroundings"
+A01-54 | A01 | caption: "unreal or detached with respect to surroundings"
+A02-01 | A02 | caption: "as if seen in a dream"
+A02-02 | A02 | caption: "dreamlike"
+A02-03 | A02 | caption: "like a dream"
+A02-04 | A02 | caption: "like living in a dream"
+A02-05 | A02 | caption: "akin to living in a dream"
+A02-06 | A02 | caption: "as if everything seems like a dream"
+A02-07 | A02 | caption: "as if in a dream"
+A02-08 | A02 | caption: "as if it is all a dream"
+A02-09 | A02 | caption: "as if it was all a dream"
+A02-10 | A02 | caption: "as if living in a continuous dream"
+A02-11 | A02 | caption: "as if living in dreams"
+A02-12 | A02 | caption: "as if the whole situation was dreamlike"
+A02-13 | A02 | caption: "as if the world looks like a dream"
+A02-14 | A02 | caption: "as if this could only be a dream"
+A02-15 | A02 | caption: "as if this must be a dream"
+A02-16 | A02 | caption: "as though in a dream"
+A02-17 | A02 | caption: "dream-like"
+A02-18 | A02 | caption: "dreamy"
+A02-19 | A02 | caption: "like a dream kind of autopilot world"
+A02-20 | A02 | caption: "like a dream state"
+A02-21 | A02 | caption: "like a dream state come true"
+A02-22 | A02 | caption: "like a dreamlike scene"
+A02-23 | A02 | caption: "like a special dream quality or particular dream atmosphere"
+A02-24 | A02 | caption: "like being in a dream"
+A02-25 | A02 | caption: "like Inception but in real life"
+A02-26 | A02 | caption: "like living in a dream or a movie"

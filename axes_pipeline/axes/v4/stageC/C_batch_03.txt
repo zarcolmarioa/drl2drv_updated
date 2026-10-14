@@ -1,0 +1,177 @@
+I have a list of short phrases. Each was taken word for word from a
+published text, and each has already been assigned to a QUALITY: a way in
+which the world, places or objects can appear. The qualities are defined
+below. Next to each phrase is its context, the sentence it was taken from,
+with the phrase itself in [square brackets].
+
+TASK
+Turn each phrase into a CAPTION: the words that complete the sentence
+
+    a scene that looks ___
+
+so that the whole sentence is grammatical and reads naturally, like a short
+description of a picture. Change the phrase as little as possible.
+
+WHAT YOU MAY DO
+1. Add only these words: a, an, the, like, as, if, though, with, of, in, on,
+   at, to, from, by, through, behind, into, is, are, was, were, be, been,
+   being, seem, seems, seemed, it.
+2. Add "seen" only as "as if seen" or "like seen", directly before words
+   that begin with one of the prepositions in rule 1 (for example before
+   "through ..." or "behind ...").
+3. Restore a word that stands directly before or after the brackets in the
+   context, for example a comparison word just before the phrase.
+4. Delete words that place the experience in a person ("I see", "I feel",
+   "it seems to me", "my"), hedges and intensifiers ("just", "almost",
+   "somehow", "really", "very", "quite"), and articles, prepositions or
+   forms of "be" when they would make the sentence ungrammatical.
+5. Change the grammatical form of a word while keeping its root (a verb
+   into its past participle, a noun into its adjective).
+
+WHAT YOU MAY NOT DO
+- Add any other word, replace a word with a synonym, or add a negation.
+- Delete a word that carries the quality.
+- Change the order of the phrase's words, unless the sentence needs it.
+
+WHEN NOT TO WRITE A CAPTION
+Write no caption, and give the reason in "drop", only when:
+- "cannot": the phrase cannot become a grammatical caption under these
+  rules;
+- "outside": the phrase expresses only what its quality's definition
+  EXCLUDES (only qualities with an "Excludes" line).
+Do not leave out a phrase for any other reason.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; in this illustration the word allowed by rule 2 is "tasted";
+in your task it is "seen")
+- "watery"  ->  "watery"  (no change)
+- "it tasted to me like water from a tin cup"  ->  "like water from a tin
+  cup"  (deleted "it tasted to me")
+- context "it was almost like [the metal of an old coin], I thought"  ->
+  "like the metal of an old coin"  (restored "like" from the context)
+- "I found it thin and metallic"  ->  "thin and metallic"
+- "through a straw"  ->  "as if tasted through a straw"  (rule 2)
+- "my grandmother's recipe"  ->  no caption, drop "cannot"
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per phrase,
+in the order of the list:
+[{"id": "T0001", "caption": "...", "drop": null},
+ {"id": "T0002", "caption": null, "drop": "cannot"}, ...]
+After the code block write the number of phrases in the array and then the
+line: END OF BATCH 3
+
+QUALITIES
+A05 "veil, glass wall, barrier, bubble": Something like a veil, film, pane of glass, invisible wall or enclosing bubble seems to stand between the person and the world.
+A07 "fog, blurry, hazy": The world appears foggy, blurred, cloudy or indistinct.
+A11 "flat, two-dimensional": Objects, people or the world look flat and lacking depth.
+A13 "dull, less vivid, colorless": The world appears dimmed, faded or reduced in color, vividness and intensity.
+A14 "lifeless, dead, empty": The world or the things in it appear dead, lifeless, empty or void.
+A15 "vivid, heightened": The world looks more vivid, intense or sharply detailed than usual.
+    Excludes: seeming more real, without looking more vivid, intense or detailed.
+
+THE PHRASES (batch 3 of 3)
+T0865 | A05 | phrase: "like an invisible wall" | context: "i feel like there's a barrier that separates me from reality, [like an invisible wall]."
+T0974 | A05 | phrase: "a veil" | context: "... were in a fog, dream, or bubble, or as if there were [a veil] or a glass wall between the individual and the world around” (American ..." | context: "it's like i'm behind a cloudy glass wall permanently or [a veil]."
+T0526 | A05 | phrase: "watching from inside a shell" | context: "... like an out of body experience” (P216) or: “I feel like I'm [watching from inside a shell]."
+T1088 | A05 | phrase: "as if seen through a veil" | context: "... of everyday reality, instead they become dream-like or shadowy . . . [as if seen through a veil]” (p. 410)."
+T0923 | A05 | phrase: "as if there were a veil between me and the outside world" | context: "My surroundings feel detached or unreal, [as if there were a veil between me and the outside world]."
+T0755 | A05 | phrase: "What glass screen has, as it were, interposed itself between me" | context: "[What glass screen has, as it were, interposed itself between me] and the enjoyment, the possession, the contact of things, leaving me only ..."
+T0604 | A05 | phrase: "our access to the landscape more “opaque”" | context: "... cracks in the window's glass make the latter visible, they also make [our access to the landscape more “opaque]” or “mediated”."
+T0577 | A05 | phrase: "through the window" | context: "Looking at the landscape [through the window], I see the hills, the trees, the colours, but all those ..."
+T0451 | A05 | phrase: "glass wall" | context: "... themself and the world, which may be expressed as a bubble, veil, [glass wall], invisible wall, or screen; where it is expressed as a veil, ..."
+T1132 | A05 | phrase: "life is through a veil" | context: "i can still see but [life is through a veil]."
+T0087 | A05 | phrase: "an invisible wall between me and the things i love" | context: "i feel like there's [an invisible wall between me and the things i love]."
+T0258 | A07 | phrase: "in a “fog”" | context: "Patients often say that they feel as if they were [in a “fog]”, “dream”, or “bubble”, or as if there were a “veil” or ..."
+T0558 | A07 | phrase: "objects looked as if surrounded by a cloud" | context: "... or alive, as if living in a continuous dream . . . [objects looked as if surrounded by a cloud]; people seemed to move like shadows, and words seemed to come ..."
+T0668 | A07 | phrase: "its blurriness" | context: "... tone, or the texture and coloring of an outside object regardless of [its blurriness]."
+T0922 | A07 | phrase: "foggy" | context: "... derealization it is noted that“individuals or objects are experienced as unreal, dreamlike, [foggy], lifeless, or visually distorted”, and “the individual may feel as if ..." | context: "People and things around you may seem 'lifeless' or '[foggy]'."
+T0680 | A07 | phrase: "unclear" | context: "... through a fog, so that people and objects appear far away or [unclear]."
+T0560 | A07 | phrase: "things look more or less foggy" | context: "They may check their vision to decide if [things look more or less foggy]."
+T0256 | A07 | phrase: "a fog" | context: "... sounds far away and muffled, as if blinded by a mist or [a fog]." | context: "... (people, objects, or all surroundings). • Feeling as if one is in [a fog], dream, or bubble. • The sensation of a veil or glass ..."
+T0933 | A07 | phrase: "indefinite" | context: "... cannot convey their beauty to me . . . Everything looks ordinary, [indefinite]."
+T0692 | A07 | phrase: "shadowy" | context: "... convey the familiar picture of everyday reality, instead they become dream-like or [shadowy] . . . as if seen through a veil” (p. 410)."
+T0921 | A07 | phrase: "cloudy" | context: "... the smoke as she had seen him do, she began to feel [cloudy], giggly, and quite hungry."
+T0970 | A07 | phrase: "navigating through fog in slow motion" | context: "As the day unfolded, she felt she was in a dream, [navigating through fog in slow motion], dazed and semi-aware of what was going on around her, time ..."
+T1094 | A07 | phrase: "peering at the world through a fog" | context: "as if the self is [peering at the world through a fog], or a hologram."
+T0067 | A07 | phrase: "vague shapes" | context: "... present, or perceiving any number of precepts that were not present (including [vague shapes], specific objects, geometric patterns, spots or dots, orbs of light, noises, ..."
+T0969 | A07 | phrase: "the focus is never quite right" | context: "everything looks sort of dreamy and almost like i'm in a bubble, [the focus is never quite right] either like my consciousness is trapped in a bubble inside of this ..."
+T0343 | A07 | phrase: "blurriness and fog" | context: "The slightest worsening of [blurriness and fog], or spaciness, or empty-mindedness does not escape notice, whereas conversely any ..."
+T0889 | A07 | phrase: "foggy and veiled" | context: "... in a bubble', 'separated from the world by an invisible barrier', '[foggy and veiled]', and 'dream-like'."
+T0222 | A07 | phrase: "through a fog" | context: "I see everything [through a fog]."
+T1103 | A07 | phrase: "in a fog" | context: "... distorted”, and “the individual may feel as if he or she were [in a fog], dream, or bubble, or as if there were a veil or ..." | context: "the individual may feel as if he or she were [in a fog], dream, or bubble, or as if there were a veil or ..."
+T0193 | A07 | phrase: "more blurred" | context: "... attention and cognitive organization, and boundaries between self and non-self all become [more blurred], more disorganized, less transparent, and less functional."
+T0537 | A07 | phrase: "their vision is foggy" | context: "... empty, or their head is too full, or their scalp tingles, or [their vision is foggy], it all must somehow indicate brain damage or, even worse, irreversible ..."
+T0154 | A07 | phrase: "blurry vision" | context: "side effects are cotton mouth and [blurry vision]."
+T0901 | A07 | phrase: "vague" | context: "Everything is equally distant, [vague], unremarkable, or useless."
+T0085 | A07 | phrase: "fog" | context: "May feel as if they are in a dream, or [fog]." | context: "... the metaphors that characterize the subjective reports of derealization, such as “[fog]”, “veil”, or “picture”."
+T0643 | A07 | phrase: "a thick cloud" | context: "... not come to me, they do not identify themselves with my being; [a thick cloud], a veil changes the hue and aspects of objects” (p. 414)."
+T0090 | A07 | phrase: "hazy" | context: "... it seems to us that all of a sudden the surroundings become [hazy], as something quite remote and of no concern at all . ..."
+T0047 | A07 | phrase: "its clarity is hindered" | context: "We may still perceive the outer landscape through the cracked window, but [its clarity is hindered]."
+T0506 | A07 | phrase: "like someone has put dirty fingerprints on my sunglasses – but its my eyes" | context: "One's vision could be blurred (“[like someone has put dirty fingerprints on my sunglasses – but its my eyes],” P206) or one could feel temporarily or partially blinded, sounds could ..."
+T0165 | A07 | phrase: "blurriness" | context: "Furthermore, we found that beyond simple alterations in visual perception (e.g., [blurriness], flatness, altered distance or size of objects; APA, 2013), the overall ..." | context: "Visual distortions ([blurriness], changes in visual field, dimensionality, or size of objects)."
+T0252 | A07 | phrase: "One's vision could be blurred" | context: "[One's vision could be blurred] (“like someone has put dirty fingerprints on my sunglasses – but its ..."
+T0440 | A07 | phrase: "blinded by a mist" | context: "everything sounds far away and muffled, as if [blinded by a mist] or a fog."
+T0068 | A07 | phrase: "the dpdr fog" | context: "... patients find that stimulant medications help them focus in the midst of [the dpdr fog], and they may feel more clear-headed and present."
+T0767 | A07 | phrase: "as if they are looking at the world through a fog" | context: "Some people feel [as if they are looking at the world through a fog], so that people and objects appear far away or unclear."
+T0031 | A07 | phrase: "a visual fog" | context: "Vision: “It's like glass over my eyes, [a visual fog] totally flat and two-dimensional.”"
+T0208 | A11 | phrase: "totally flat and two-dimensional" | context: "Vision: “It's like glass over my eyes, a visual fog [totally flat and two-dimensional].”"
+T0055 | A11 | phrase: "external objects were “flat”" | context: "... they were looking at a “picture” or a “movie”, or as if [external objects were “flat]”."
+T0540 | A11 | phrase: "objects or space being flattened" | context: "a feeling of [objects or space being flattened]"
+T0564 | A11 | phrase: "two-dimensionality" | context: "... such as visual distortions (blurriness, heightened acuity, widened or narrowed visual field, [two-dimensionality] or flatness, exaggerated three-dimensionality, altered distance or size of objects)."
+T0972 | A11 | phrase: "two-dimensional" | context: "... do not look as before, they are somehow altered, they seem strange, [two-dimensional]."
+T1107 | A11 | phrase: "looking flat" | context: "According to this hypothesis, derealization in the visual world (things lacking vividness, [looking flat], etc.) tends to cause more distress and is often the subject ..."
+T0562 | A11 | phrase: "2d people" | context: "... represented in singular humanoid references to other people as robots, zombies, or [2d people]." | context: "Other humanoid metaphor source terms for other people, include: [2d people], npc, zombie, dolls"
+T0920 | A11 | phrase: "my world becoming two dimensional" | context: "And it was basically [my world becoming two dimensional]."
+T0683 | A11 | phrase: "flat" | context: "What I see looks '[flat]' or 'lifeless', as if I were looking at a picture." | context: "Things look dull, [flat] and lifeless."
+T0633 | A11 | phrase: "flatness" | context: "Furthermore, we found that beyond simple alterations in visual perception (e.g., blurriness, [flatness], altered distance or size of objects; APA, 2013), the overall atmosphere ..." | context: "... visual distortions (blurriness, heightened acuity, widened or narrowed visual field, two-dimensionality or [flatness], exaggerated three-dimensionality, altered distance or size of objects)."
+T1007 | A13 | phrase: "less vivid" | context: "... be accompanied by a loss of sensitivity to sensations, which feel duller, [less vivid], or reduced in intensity, as described above (in Loss of resonance)."
+T0839 | A13 | phrase: "dull" | context: "... for the world seemed to change, such that the world felt dead, [dull], distant or unfamiliar – in ways that could be described, somewhat ..." | context: "Things look [dull], flat and lifeless."
+T0137 | A13 | phrase: "reduced in intensity" | context: "... a loss of sensitivity to sensations, which feel duller, less vivid, or [reduced in intensity], as described above (in Loss of resonance)."
+T0983 | A13 | phrase: "lacking in perceptual or emotional vividness" | context: "... derealization is described as feeling that the outside world is unreal and [lacking in perceptual or emotional vividness]."
+T0600 | A13 | phrase: "things lacking vividness" | context: "According to this hypothesis, derealization in the visual world ([things lacking vividness], looking flat, etc.) tends to cause more distress and is often ..."
+T0172 | A13 | phrase: "much less vivid or intense" | context: "In addition, objects and the general atmosphere can be experienced as [much less vivid or intense] during DPDR."
+T0501 | A13 | phrase: "colorless" | context: "The world can feel [colorless], evanescent, cold, or overly bright and sterile: such are the features ..." | context: "Surroundings that seem artificial, [colorless], or lifeless."
+T0817 | A13 | phrase: "lacking in vibrancy or depth" | context: "... simply marveling at their existence, and of the world feeling unreal or [lacking in vibrancy or depth]"
+T0226 | A13 | phrase: "duller" | context: "... can be accompanied by a loss of sensitivity to sensations, which feel [duller], less vivid, or reduced in intensity, as described above (in Loss ..."
+T0200 | A13 | phrase: "lacking in normal color and vividness" | context: "People and objects appear unreal, far away, and [lacking in normal color and vividness]."
+T1003 | A13 | phrase: "awareness of its attenuation" | context: "... lingering commitment to, everyday reality plays an important role, given that an [awareness of its attenuation] was linked to much of the distress and dysfunction reported by DPDR ..."
+T0804 | A13 | phrase: "attenuated perception" | context: "... appear to reference derealization or depersonalization specifically, but conveys a sense of [attenuated perception] or thought."
+T1116 | A14 | phrase: "Everything looks quite kind of lifeless" | context: "[Everything looks quite kind of lifeless]."
+T0185 | A14 | phrase: "the insidious nothingness choking the life out of everything" | context: "... frozen, immovable self that was all part of the scene, part of [the insidious nothingness choking the life out of everything]."
+T0900 | A14 | phrase: "emptiness—which is pure consciousness—of all phenomena" | context: "... (who took the name Gangaji) reassured her: “This realization of the inherent [emptiness—which is pure consciousness—of all phenomena] is true fulfillment."
+T0236 | A14 | phrase: "No living being was on earth" | context: "[No living being was on earth]."
+T0446 | A14 | phrase: "the dark and the void" | context: "When Marianne lay sleepless in bed at night fearing [the dark and the void], her father would come to her room, but could only offer, ..."
+T0124 | A14 | phrase: "everything I look at just gives me the same experiences of blackness" | context: "It's kind of like [everything I look at just gives me the same experiences of blackness].”"
+T0868 | A14 | phrase: "lifeless" | context: "... it is noted that“individuals or objects are experienced as unreal, dreamlike, foggy, [lifeless], or visually distorted”, and “the individual may feel as if he ..." | context: "People and things around you may seem '[lifeless]' or 'foggy'."
+T0246 | A14 | phrase: "dead" | context: "... feeling for the world seemed to change, such that the world felt [dead], dull, distant or unfamiliar – in ways that could be described, ..." | context: "... sense does not present the world as distinctively lifeless, cold, mechanical, or [dead]."
+T0444 | A14 | phrase: "deathlike" | context: "Reality's static, half-true nature is [deathlike]."
+T1119 | A14 | phrase: "“detached void”" | context: "... terms relating to non-existence as being in a “black hole”, or “[detached void]”; to being “a soul-less nothing” or “beginning to dissolve into nothingness”; ..."
+T0270 | A14 | phrase: "There was nothing on earth" | context: "[There was nothing on earth]."
+T0111 | A14 | phrase: "Emptiness was everywhere" | context: "[Emptiness was everywhere], seeping through the pores of every face I gazed upon, flowing ..."
+T1112 | A14 | phrase: "an emptiness to landscapes" | context: "There is also [an emptiness to landscapes]."
+T1042 | A14 | phrase: "objects look kind of like dead" | context: "One participant described this as, “[objects look kind of like dead]."
+T0770 | A14 | phrase: "empty" | context: "But now it all seems so short and [empty], as if all the experiences I did enjoy to this point ..."
+T0448 | A15 | phrase: "as if the glass had become an electron microscope" | context: "... of mescaline seemed not only clear and bright but also intensely detailed, [as if the glass had become an electron microscope]."
+T0411 | A15 | phrase: "vibrant colors" | context: "... more novel then, but are widely familiar today—visual disturbances, loss of time, [vibrant colors], intensity of music, sense of oneness with the universe, and sensations ..."
+T1122 | A15 | phrase: "intensely detailed" | context: "... the help of mescaline seemed not only clear and bright but also [intensely detailed], as if the glass had become an electron microscope."
+T0362 | A15 | phrase: "perceive things more accurately" | context: "... state, as the person in this state, he said, sometimes seems to [perceive things more accurately] or to be more “real” than his everyday self."
+T0786 | A15 | phrase: "heightened acuity" | context: "Derealization is commonly accompanied by perceptual alterations, such as visual distortions (blurriness, [heightened acuity], widened or narrowed visual field, two-dimensionality or flatness, exaggerated three-dimensionality, altered ..."
+T0107 | A15 | phrase: "overly bright and sterile" | context: "The world can feel colorless, evanescent, cold, or [overly bright and sterile]: such are the features of a world that does not resonate; ..."
+T0724 | A15 | phrase: "how strongly things exist today" | context: "... ball, my fingers clutching at the paper; smell of ink; my God [how strongly things exist today]."
+T0247 | A15 | phrase: "a repeated flow from beauty to heightened beauty" | context: "... without returns to a starting point, with no recurrent ebbs but only [a repeated flow from beauty to heightened beauty], from deeper to ever deeper meaning.”"
+T0576 | A15 | phrase: "things can seem more realistic than before" | context: "One participant stated that because of the loss of subjective coloring, [things can seem more realistic than before], given that his perceptions and interpretations were not being distorted by ..."
+T0400 | A15 | phrase: "not seen through the ordinary filters of the experiencing self" | context: "... a different, and in their eyes just as true, reality—momentary and timeless, [not seen through the ordinary filters of the experiencing self]."
+T0203 | A15 | phrase: "too real" | context: "... daily life in the provincial town of Bouville (Mudville) as unreal, or [too real], and consequently nauseating."
+T0480 | A15 | phrase: "a more accurate way to experience things" | context: "Another participant said that this “self-less” state feels like [a more accurate way to experience things], as he believed that the feeling of the self is only ..."
+T0696 | A15 | phrase: "a Van Gogh-like intensity" | context: "Visually, what Huxley experienced took on [a Van Gogh-like intensity]."
+T0081 | A15 | phrase: "sharply and distinctly" | context: "... should always remember that in reality they can see, hear, and feel [sharply and distinctly]” (1997: 62)."
+T1083 | A15 | phrase: "more 'real'" | context: "... solidly grounded for his own needs and perceptions, and in a sense [more 'real]' than his old compromises were, however comfortable and familiar they might ..."
+T0331 | A15 | phrase: "exaggerated three-dimensionality" | context: "... distortions (blurriness, heightened acuity, widened or narrowed visual field, two-dimensionality or flatness, [exaggerated three-dimensionality], altered distance or size of objects)."
+T0336 | A15 | phrase: "wincing from light colored things especially" | context: "One participant stated, “I find myself [wincing from light colored things especially]” (P221), while another noted, “The voice of those around me sometimes ..."
+T0810 | A15 | phrase: "clear and bright" | context: "... use the biblical phrase, with the help of mescaline seemed not only [clear and bright] but also intensely detailed, as if the glass had become an electron ..."
+T0566 | A15 | phrase: "their living light" | context: "I continued to look at the flowers, and in [their living light] I seemed to detect the qualitative equivalent of breathing—but of a breathing ..."
+T0021 | A15 | phrase: "blinded by the light" | context: "... assumptions, the Christian tradition goes beyond phenomena like St. Paul's being “[blinded by the light].”"
+T0476 | A15 | phrase: "as if a veil has been lifted" | context: "A sense of clarity: People feel [as if a veil has been lifted] and that they are now seeing and understanding the world in ways ..."
+T1087 | A15 | phrase: "especially and unusually lively" | context: "or feeling like some people are [especially and unusually lively]"
+T0326 | A15 | phrase: "the grey-green creases of the bark" | context: "I stood there looking at [the grey-green creases of the bark]—it was a moonlit night—in a trance of horror."

@@ -1,0 +1,10 @@
+axis_id,name,anchors,pairs,open,dropped_by_you,dropped_d9,from_sources,both_models,median_clip_pair,all_texts,all_docs,all_first_person,all_kept,vision_texts,vision_docs,vision_first_person,vision_kept,not_specific_texts,not_specific_docs,not_specific_first_person,not_specific_kept
+A01,"unreal, fake, artificial",54,45,0,1,8,0,29,0.961,51,9,20,True,1,1,1,False,48,9,17,True
+A02,"dreamlike, in a dream",28,28,0,0,0,0,10,0.889,35,9,22,True,2,2,2,False,33,9,20,True
+A03,"movie, picture, film set",13,13,0,0,0,0,3,0.925,15,6,7,True,8,4,4,True,6,3,2,True
+A04,"simulation, video game",24,24,0,0,0,0,5,0.930,24,2,9,True,1,1,1,False,23,2,8,True
+A05,"veil, glass wall, barrier, bubble",63,61,0,1,1,0,10,0.900,71,7,40,True,19,4,11,True,46,7,24,True
+A07,"fog, blurry, hazy",30,30,0,0,0,0,18,0.888,33,7,17,True,24,6,15,True,8,6,1,True
+A11,"flat, two-dimensional",6,6,0,0,0,0,3,0.940,9,7,5,True,7,5,4,True,0,0,0,False
+A13,"dull, less vivid, colorless",11,11,0,0,0,0,4,0.959,11,7,2,True,4,4,2,False,7,3,0,False
+A14,"lifeless, dead, empty",14,14,0,0,0,0,7,0.932,14,7,11,True,4,5,5,False,9,5,5,True

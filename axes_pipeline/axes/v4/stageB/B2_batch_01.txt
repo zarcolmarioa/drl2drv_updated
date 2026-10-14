@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 1 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 1
+
+BATCH 1 OF 8
+T0001 | in a place of ‘unreality’
+T0002 | the cold, unfeeling night that lasts forever
+T0003 | the memories of the unreal things seem unreal as well
+T0004 | I couldn’t remember it was a root anymore
+T0005 | zombie
+T0006 | belief in both everyday reality and a delusional or solipsistic reality are maintained simultaneously
+T0007 | I live in an alternate reality
+T0008 | a tendency not to notice certain things
+T0009 | the future might not occur
+T0010 | vulnerable feeling
+T0011 | unfounded
+T0012 | one out of the body
+T0013 | picked up out of my real world and put down into a film set
+T0014 | highly disruptive alterations to their perception of themselves and their surroundings
+T0015 | colors and shapes on a piece of cloth
+T0016 | what seemed like an eternity
+T0017 | a few seconds can seem like days
+T0018 | in very slowed motion
+T0019 | the perspective through which the surrounding world appears
+T0020 | like Alice in Wonderland
+T0021 | blinded by the light
+T0022 | a common-sense understanding of reality
+T0023 | getting lost in familiar places
+T0024 | thin veil
+T0025 | fascinated by their physical properties
+T0026 | An abyss, they say, separates them from the external world
+T0027 | the present seems to be like the distant past
+T0028 | speeding up
+T0029 | were “seen through.”
+T0030 | like glass over my eyes
+T0031 | a visual fog
+T0032 | confused about whether they were imagining or thinking something vs. perceiving or remembering it
+T0033 | Nothing is physically changed
+T0034 | I was a part of everything
+T0035 | as if the present was re-living a past memory
+T0036 | no longer drawn to (or repelled by) others in the same way
+T0037 | this aperture is making that
+T0038 | this morning feels as if it were done weeks ago
+T0039 | not just looking at a flower arrangement
+T0040 | participants recognize what things are
+T0041 | as the water closes over me
+T0042 | a dimming or blurring both of the person’s sense of identity and of his sense of reality
+T0043 | sense of ownership from the real body to the virtual body
+T0044 | can't feel present in the moment
+T0045 | heightened connectedness to the humanity or the world
+T0046 | language has a certain degree of power or autonomy
+T0047 | its clarity is hindered
+T0048 | hard to imagine if there’s anyone on the other side of the line
+T0049 | that was the real flower
+T0050 | watching like a detached observer
+T0051 | just skeletons walking around the place
+T0052 | concerns about the meaning of one’s presence in the world
+T0053 | being watched by observers, judging my behaviour
+T0054 | see but do not comprehend
+T0055 | external objects were “flat”
+T0056 | an invisible film
+T0057 | I know this is real
+T0058 | miss what is going on around me
+T0059 | I’m trying to convince myself that it’s real
+T0060 | detachment from the senses or surrounding events
+T0061 | somehow different in the morning light
+T0062 | detached from reality
+T0063 | had taken place a long time ago
+T0064 | cannot enjoy that sense of beauty that nature brings
+T0065 | I miss the surroundings
+T0066 | thinking in frames
+T0067 | vague shapes
+T0068 | the dpdr fog
+T0069 | made of cellophane
+T0070 | head in a fog
+T0071 | static, half-true
+T0072 | Like Inception but in real life
+T0073 | this vast mass that we call the world
+T0074 | something real that is unreal at the same time
+T0075 | inability to set functional boundaries between inner and outer stimuli
+T0076 | “contaminated” by other people
+T0077 | lack of immersion in the world
+T0078 | I doubt of everything
+T0079 | I don’t get any emotions from anybody
+T0080 | the end of the world could happen any time
+T0081 | sharply and distinctly
+T0082 | separated from the world by an invisible barrier
+T0083 | the world disappearing under my feet
+T0084 | life as if it were played like a film in a cinema
+T0085 | fog
+T0086 | everything is an illusion
+T0087 | an invisible wall between me and the things i love
+T0088 | appear meaningless and fake
+T0089 | feeling detached from others
+T0090 | hazy
+T0091 | dream-like
+T0092 | strange and foreign
+T0093 | peculiar
+T0094 | being disconnected or distant from other people
+T0095 | less aroused by and responsive to negative emotional stimuli
+T0096 | a fundamental trust in the everyday that persists in the background
+T0097 | a trance
+T0098 | a profound sense of connectedness with the rest of humanity, God, or the Universe
+T0099 | sense of presence in the world
+T0100 | closed off
+T0101 | an obscuring barrier
+T0102 | with them the significance of things
+T0103 | a video game
+T0104 | objects were communicating with them
+T0105 | even though it’s doesn’t feel like it
+T0106 | geometric patterns
+T0107 | overly bright and sterile
+T0108 | in their anterior extra-personal space
+T0109 | objects are an extension of one’s body
+T0110 | my experience of it has changed
+T0111 | Emptiness was everywhere
+T0112 | watching herself as if she were in a movie with the sound turned down
+T0113 | I see the hills, the trees, the colours
+T0114 | spaces and places having moods emanating from them
+T0115 | feel dreamlike
+T0116 | robots
+T0117 | dream state come true
+T0118 | continuing to hear or see something that was previously, but no longer, present
+T0119 | an ineffable atmosphere
+T0120 | it feels very different
+T0121 | sounds or images that were not actually present
+T0122 | looking at a “picture”
+T0123 | stuck on the other side, watching
+T0124 | everything I look at just gives me the same experiences of blackness
+T0125 | nothing was real
+T0126 | smaller than reality
+T0127 | fake expressions of emotions
+T0128 | but one among two or more optional universes
+T0129 | being cut off from the surrounding social and physical work
+T0130 | doesn't seem to be leading up to the future
+T0131 | a frightening sense of strangeness and unreality
+T0132 | greater concern for the purpose and path of the humanity as a whole
+T0133 | looks sort of dreamy
+T0134 | the rod that approaches his/her chest in the visual field
+T0135 | beyond the veil of the day-to-day world
+T0136 | they do not identify themselves with my being
+T0137 | reduced in intensity
+T0138 | The world feels fake or deadened
+T0139 | the self or the world is judged as unreal
+T0140 | far away
+T0141 | objects no longer have their normal aesthetic qualities
+T0142 | the room seems so big
+T0143 | Detachment from the world
+T0144 | seems to be floating without a particular location
+T0145 | in a dream
+T0146 | an observer of oneself or the world
+T0147 | day-to-day life as unreal
+T0148 | watching a rubber hand that is being stroked
+T0149 | precepts that were not present
+T0150 | The first-person perspective through which they observe reality would be floating

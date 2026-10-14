@@ -1,0 +1,233 @@
+anchor_id,positive,negative,negative_source,axis_id,action,how,reason,in_axes,documents
+A01-01,unreal,real,claude+chatgpt,A01,keep,kept,,True,CIAUNICA2022;DILKES2024;MIYAZONO2021;PIENKOS2022;SIERRA2001;SIMEON2023;TANAKA2018
+A01-02,as if the world feels unreal,as if the world feels real,claude+chatgpt,A01,keep,kept,,True,CIAUNICA2022;RADOVIC2002
+A01-03,artificial,genuine,claude+chatgpt,A01,keep,kept,,True,DILKES2024;SIMEON2023
+A01-04,as if everything besides the limbs feels like they don't have much of a presence,,,A01,drop,dropped (proposed),negation,False,CIAUNICA2022
+A01-05,as if everything is an illusion,as if everything is real,chatgpt,A01,keep,kept,,True,DILKES2024
+A01-06,as if everything seemed intensely unreal,as if everything seemed plainly real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-07,as if everything seems unreal,as if everything seems real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-08,as if it is making everything feel less real and more distant,as if it is making everything feel fully real and less distant,chatgpt,A01,keep,kept,,True,PIENKOS2022
+A01-09,as if it is somewhere on the border of the real and the unreal,as if it is somewhere in the realm of the real and the tangible,chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-10,as if it is without substance,,,A01,drop,dropped (proposed),negation,False,SIMEON2023
+A01-11,as if it was all unreal,as if it was all real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-13,as if nothing exists or is real,,,A01,drop,dropped (proposed),negation,False,SIMEON2023
+A01-16,"as if other people, objects, and the world around them are not real",,,A01,drop,dropped (proposed),negation,False,SIMEON2023
+A01-18,as if seen in a place of unreality,as if seen in a place of reality,claude+chatgpt,A01,keep,kept,,True,TANAKA2018
+A01-19,as if the outside world is unreal,as if the outside world is real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023;TANAKA2018
+A01-20,as if the present seems unreal,,,A01,drop,dropped (proposed),not_scene: time,False,PIENKOS2022
+A01-22,as if the world around is unreal,as if the world around is real,claude+chatgpt,A01,keep,kept,,True,FINO2024
+A01-23,as if the world around seems fake,as if the world around seems genuine,claude+chatgpt,A01,keep,kept,,True,PIENKOS2022
+A01-24,as if the world feels fake or deadened,as if the world feels genuine or alive,claude,A01,keep,kept,,True,PIENKOS2022
+A01-25,as if the world is unreal,as if the world is real,claude+chatgpt,A01,keep,kept,,True,RADOVIC2002
+A01-26,as if the world were made of cellophane or glass,,,A01,drop,dropped by you,negative brings in a material,False,SIMEON2023
+A01-27,as if these were unreal,as if these were real,claude+chatgpt,A01,keep,kept,,True,FINO2024
+A01-29,as if things around them seem unreal,as if things around them seem real,claude+chatgpt,A01,keep,kept,,True,TANAKA2018
+A01-30,as if things become unreal,as if things remain real,claude,A01,keep,kept,,True,SIMEON2023
+A01-31,as if things feel unreal,as if things feel real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-32,as if things seem unreal,as if things seem real,claude+chatgpt,A01,keep,kept,,True,CIAUNICA2022
+A01-34,detached or unreal,connected or real,claude+chatgpt,A01,keep,kept,check,True,RADOVIC2002
+A01-35,fake,genuine,claude+chatgpt,A01,keep,kept,,True,PIENKOS2022
+A01-36,like a blurring of reality,like a clear view of reality,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-38,like all was unreal,like all was real,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-39,like nothing was real,,,A01,drop,dropped (proposed),negation,False,DILKES2024;TANAKA2018
+A01-40,like some real thing behind appearances,like some real thing in plain view,yours,A01,keep,kept,check,True,SIMEON2023
+A01-41,like something real that is unreal at the same time,like something real that is tangible at the same time,claude,A01,keep,kept,check,True,FINO2024
+A01-42,like the unreality of external objects,like the reality of external objects,claude+chatgpt,A01,keep,kept,,True,MIYAZONO2021
+A01-43,like the unreality of things,like the reality of things,claude+chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-44,like the world disappearing under the feet,,,A01,drop,dropped (proposed),not_scene: body,False,RADOVIC2002
+A01-45,like there is a zipper to unzip,,,A01,drop,dropped (proposed),not_scene: touch or action,False,SIMEON2023
+A01-46,made of cellophane,made of solid matter,K2 (chatgpt),A01,replace,replaced (proposed),negative brings in a material,True,MIYAZONO2021
+A01-47,not as real as before,,,A01,drop,dropped (proposed),negation,False,RADOVIC2002
+A01-49,rendered unreal,rendered real,chatgpt,A01,keep,kept,,True,SIMEON2023
+A01-50,so unreal,plainly real,claude+chatgpt,A01,keep,kept,,True,RADOVIC2002
+A01-51,"static, half-true",,,A01,drop,dropped (proposed),not_scene: judgement,False,SIMEON2023
+A01-52,unreal and pointless,,,A01,drop,dropped (proposed),not_scene: judgement,False,SIMEON2023
+A01-53,unreal or detached from one's surroundings,real or connected with one's surroundings,chatgpt,A01,keep,kept,check,True,SIMEON2023
+A01-54,unreal or detached with respect to surroundings,real or connected with respect to surroundings,claude+chatgpt,A01,keep,kept,check,True,DILKES2024
+A02-01,as if seen in a dream,as if seen in waking life,claude+chatgpt,A02,keep,kept,,True,CIAUNICA2022;DILKES2024;SIMEON2023
+A02-02,dreamlike,wakeful,claude+chatgpt,A02,keep,kept,,True,DILKES2024;RADOVIC2002;TANAKA2018
+A02-03,like a dream,like waking life,chatgpt,A02,keep,kept,,True,DILKES2024;MIYAZONO2021;PIENKOS2022;SIMEON2023
+A02-04,like living in a dream,like living in waking life,chatgpt,A02,keep,kept,,True,DILKES2024;FINO2024
+A02-05,akin to living in a dream,akin to living in waking life,chatgpt,A02,keep,kept,,True,PIENKOS2022
+A02-06,as if everything seems like a dream,as if everything seems like waking life,chatgpt,A02,keep,kept,,True,SIMEON2023
+A02-07,as if in a dream,as if in waking life,chatgpt,A02,keep,kept,,True,SIMEON2023
+A02-08,as if it is all a dream,as if it is all waking life,chatgpt,A02,keep,kept,,True,DILKES2024
+A02-09,as if it was all a dream,as if it was all waking life,chatgpt,A02,keep,kept,,True,SIMEON2023
+A02-10,as if living in a continuous dream,as if living in a continuous waking life,claude,A02,keep,kept,,True,SIMEON2023
+A02-11,as if living in dreams,as if living in waking life,claude+chatgpt,A02,keep,kept,,True,TANAKA2018
+A02-12,as if the whole situation was dreamlike,as if the whole situation was wakeful,claude,A02,keep,kept,,True,RADOVIC2002
+A02-13,as if the world looks like a dream,as if the world looks like waking life,chatgpt,A02,keep,kept,,True,TANAKA2018
+A02-14,as if this could only be a dream,,,A02,drop,dropped (proposed),not_scene: judgement,False,SIMEON2023
+A02-15,as if this must be a dream,,,A02,drop,dropped (proposed),not_scene: judgement,False,SIMEON2023
+A02-16,as though in a dream,as though in waking life,chatgpt,A02,keep,kept,,True,DILKES2024
+A02-17,dream-like,wakeful,claude+chatgpt,A02,keep,kept,,True,FINO2024;SIMEON2023;TANAKA2018
+A02-18,dreamy,wakeful,claude+chatgpt,A02,keep,kept,,True,DILKES2024
+A02-19,like a dream kind of autopilot world,like a waking kind of conscious world,chatgpt,A02,keep,kept,check,True,PIENKOS2022
+A02-20,like a dream state,like a waking state,claude+chatgpt,A02,keep,kept,,True,SIMEON2023
+A02-21,like a dream state come true,like a waking state come true,claude+chatgpt,A02,keep,kept,check,True,SIMEON2023
+A02-22,like a dreamlike scene,like a wakeful scene,claude+chatgpt,A02,keep,kept,,True,RADOVIC2002
+A02-23,like a special dream quality or particular dream atmosphere,like a special waking quality or particular waking atmosphere,claude+chatgpt,A02,keep,kept,,True,RADOVIC2002
+A02-24,like being in a dream,like being in a waking state,claude,A02,keep,kept,,True,SIMEON2023
+A02-25,like Inception but in real life,,,A02,drop,dropped (proposed),not_scene: story or reference,False,SIMEON2023
+A02-26,like living in a dream or a movie,like living in wakefulness or reality,claude+chatgpt,A02,keep,kept,,True,RADOVIC2002;SIERRA2001
+A02-27,like the dream of a sleeping god,like the day of a waking god,claude,A02,keep,kept,check,True,CIAUNICA2022
+A02-28,more like dreams than is usually the case,more like waking life than is usually the case,chatgpt,A02,keep,kept,,True,RADOVIC2002
+A03-01,as if looking at a picture,as if looking at a place,claude+chatgpt,A03,keep,kept,,True,MIYAZONO2021;SIMEON2023
+A03-02,like a movie,like a live event,claude,A03,keep,kept,,True,DILKES2024;MIYAZONO2021
+A03-03,as if it were life played like a film in a cinema,as if it were life played like a live event,yours,A03,replace,your negative,negative brings in a town,True,SIMEON2023
+A03-04,as if picked up out of the real world and put down into a film set,as if picked up out of the real world and put down into a familiar setting,K3 (chatgpt),A03,replace,replaced (proposed),negative brings in a town,True,CIAUNICA2022
+A03-05,as if real life seemed like a movie,as if real life seemed like a live event,claude,A03,keep,kept,,True,SIMEON2023
+A03-06,as if the whole world is a work of art,as if the whole world is a work of nature,claude,A03,keep,kept,,True,SIMEON2023
+A03-07,like a camera,like an eye,claude+chatgpt,A03,keep,kept,,True,PIENKOS2022
+A03-08,like a fictional narrative,,,A03,drop,dropped (proposed),not_scene: story or reference,False,PIENKOS2022
+A03-09,like a painted picture,like an actual landscape,chatgpt,A03,keep,kept,,True,SIERRA2001
+A03-10,like a picture,like a live scene,claude,A03,keep,kept,,True,MIYAZONO2021
+A03-11,like camera vision,like human vision,claude+chatgpt,A03,keep,kept,,True,PIENKOS2022
+A03-12,like living in a movie,like living in the world,K5 (chatgpt),A03,replace,replaced (proposed),negative brings in a town,True,DILKES2024
+A03-13,like some sort of Truman Show plot,,,A03,drop,dropped (proposed),not_scene: story or reference,False,SIMEON2023
+A04-01,"as if in some fake, virtual reality","as if in some genuine, physical reality",claude+chatgpt,A04,keep,kept,,True,SIMEON2023
+A04-02,as if reality feels more like a vr headset,as if reality feels more like direct sight,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-03,as if seen in a digital world,as if seen in a physical world,claude+chatgpt,A04,keep,kept,,True,DILKES2024
+A04-04,as if seen in a simulation,as if seen in a material world,claude,A04,keep,kept,,True,DILKES2024
+A04-05,like a hologram,like a physical object,claude,A04,keep,kept,,True,DILKES2024
+A04-06,like a new virtual reality,like a familiar physical reality,claude+chatgpt,A04,keep,kept,,True,SIMEON2023
+A04-07,like a really bad sims game,like a really bad situation,K3 (chatgpt),A04,replace,replaced (proposed),negative brings in a mood,True,DILKES2024
+A04-08,like a sims game,like daily life,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-09,like a simulation,like a material world,claude,A04,keep,kept,,True,DILKES2024
+A04-10,like a video game,like the physical world,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-11,like another layer of simulation,like another layer of the world,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-12,like being in a simulation,like being in the physical world,claude,A04,keep,kept,,True,DILKES2024
+A04-13,like being in a video game,like being in a physical world,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-14,like being inside a video game,like being inside a physical world,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-15,like being unplugged from the matrix,,,A04,drop,dropped by you,check,False,DILKES2024
+A04-16,like glitches in the system,like events in the world,claude+chatgpt,A04,keep,kept,,True,SIMEON2023
+A04-17,like nonexistent virtuality,like physical reality,chatgpt,A04,keep,kept,,True,SIMEON2023
+A04-18,like other digital worlds,like other physical places,chatgpt,A04,keep,kept,,True,DILKES2024
+A04-19,like playing a video game inside a video game,like playing a physical game inside a physical game,chatgpt,A04,keep,kept,check,True,DILKES2024
+A04-20,like playing the life game,,,A04,drop,dropped (proposed),not_scene: life,False,DILKES2024
+A04-21,like some sort of simulation,like some sort of physical place,claude,A04,keep,kept,,True,SIMEON2023
+A04-22,like the life game,,,A04,drop,dropped (proposed),not_scene: life,False,DILKES2024
+A04-23,like the matrix,like the physical world,claude,A04,keep,kept,,True,DILKES2024
+A04-24,like the unreal world of these simulations,like the physical world of these environments,chatgpt,A04,keep,kept,,True,SIMEON2023
+A05-01,as if seen through a veil,as if seen with direct sight,yours,A05,replace,your negative,"decision 17 (R1b): negative adds air, open",True,DILKES2024;MIYAZONO2021;SIMEON2023
+A05-02,as if in a bubble,as if in the world,K6 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,DILKES2024;MIYAZONO2021;SIMEON2023
+A05-03,as if seen through a glass wall,as if seen with direct sight,yours,A05,replace,your negative,"decision 17 (R1b): negative adds open, space",True,DILKES2024;MIYAZONO2021
+A05-04,as if seen through a screen,as if seen with direct sight,K3 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, window",True,DILKES2024
+A05-05,as if seen through an invisible wall,as if seen with direct sight,yours,A05,replace,your negative,"decision 17 (R1b): negative adds open, space",True,DILKES2024
+A05-06,as if a deep veil is cast over everything,,,A05,drop,dropped by you,negative brings in light,False,MIYAZONO2021;SIMEON2023
+A05-07,as if a glass screen has interposed itself,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds doorway, opened",False,SIMEON2023
+A05-08,as if access to the landscape is more opaque,as if access to the landscape is direct,K2 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds open,True,CIAUNICA2022
+A05-09,as if behind a foot thick steel barrier,,,A05,drop,dropped by you,decision 17 (R1b): negative adds doorway,False,DILKES2024
+A05-10,as if enclosed in a kind of bubble,as if located in a kind of setting,K2 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds space,True,SIMEON2023
+A05-11,as if life is through a veil,as if life is in direct view,K6 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds air,True,DILKES2024
+A05-13,as if seen behind a cloudy glass wall permanently,,,A05,drop,dropped by you,decision 17 (R1b): negative adds window,False,DILKES2024
+A05-14,as if seen through a barrier that separates me from reality,,,A05,drop,dropped (proposed),not_scene: self-world,False,DILKES2024
+A05-15,as if seen through a filter over the eyes,as if seen through a direct view from the eyes,K2 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,DILKES2024
+A05-16,as if seen through a glass wall between the individual and the world around,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds doorway, open",False,DILKES2024
+A05-17,as if seen through a glass wall between the individual and world around,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds doorway, open",False,DILKES2024;MIYAZONO2021
+A05-18,as if seen through a glass wall that separates you from the world,,,A05,drop,dropped by you,decision 17 (R1b): negative adds doorway,False,DILKES2024
+A05-19,as if seen through a screen or a film between the participant and the rest of the world,as if seen through a view or a passage between the participant and the rest of the world,K5 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds doorway, window",True,PIENKOS2022
+A05-20,as if seen through a thin veil,as if seen through a direct view,K4 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds air,True,SIMEON2023
+A05-21,as if seen through a veil between himself and the real world,as if seen through a direct link between himself and the real world,K3 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,SIMEON2023
+A05-22,as if seen through a veil between me and the outside world,as if seen through a direct link between me and the outside world,K2 (claude),A05,replace,replaced (proposed),decision 17 (R1b): negative adds opening,True,RADOVIC2002
+A05-23,"as if seen through a veil interposed between one's self, body and the world",,,A05,drop,dropped by you,decision 17 (R1b): negative adds opening,False,CIAUNICA2022
+A05-24,as if seen through a veil placed over your senses,as if seen through a transparent lens placed over your senses,chatgpt,A05,keep,kept,,True,DILKES2024
+A05-25,as if seen through an invisible barrier between the self and the world,as if seen through a direct link between the self and the world,claude+chatgpt,A05,keep,kept,check,True,DILKES2024
+A05-26,as if seen through an invisible barrier between themself and the world,as if seen through a direct link between themself and the world,claude+chatgpt,A05,keep,kept,check,True,DILKES2024
+A05-27,as if seen through an invisible film,as if seen through direct sight,K4 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,SIMEON2023
+A05-28,as if seen through an invisible wall between me and the things i love,as if seen through a direct link between me and the things i love,K5 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,DILKES2024
+A05-29,as if seen through an obscuring barrier,as if seen through a direct view,K4 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, window",True,DILKES2024
+A05-30,as if seen through glass,as if seen with direct sight,yours,A05,replace,your negative,decision 17 (R1b): negative adds air,True,MIYAZONO2021;SIMEON2023
+A05-31,as if seen through something like a veil,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds air, open",False,MIYAZONO2021
+A05-32,as if seen through the window,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds air, open",False,MIYAZONO2021
+A05-33,as if seen through this veil between your eyes and the real world,as if seen through this direct link between your eyes and the real world,K3 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,DILKES2024
+A05-34,as if separated by a glass wall,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds open, space",False,DILKES2024
+A05-35,as if separated from reality by a protective covering,as if connected to reality by a protective bond,claude,A05,keep,kept,check,True,SIMEON2023
+A05-36,as if separated from the world by an invisible barrier,as if joined to the world by an invisible bond,chatgpt,A05,keep,kept,check,True,TANAKA2018
+A05-37,as if something stands in the way,as if something clears the way,claude,A05,keep,kept,,True,CIAUNICA2022
+A05-38,as if surrounded by a glass wall,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds open, space",False,DILKES2024
+A05-39,as if surrounded by an invisible wall,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds open, space",False,CIAUNICA2022
+A05-40,as if the invisible envelope surrounding him was starting to melt,,,A05,drop,dropped by you,decision 17 (R1b): negative adds air,False,SIMEON2023
+A05-41,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,,,A05,drop,dropped (proposed),not_scene: self-world,False,SIMEON2023
+A05-42,as if there was a veil between me and the outside world,as if there was a direct link between me and the outside world,K5 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,SIMEON2023
+A05-43,as if there was a wall between me and the external world,as if there was a direct link between me and the external world,yours,A05,replace,your negative,"decision 17 (R1b): negative adds open, space",True,SIMEON2023
+A05-44,as if there were a veil,as if there were a direct view,yours,A05,replace,your negative,"decision 17 (R1b): negative adds air, open",True,MIYAZONO2021
+A05-45,as if there were a veil between me and the outside world,as if there were a direct link between me and the outside world,K5 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,MIYAZONO2021
+A05-46,as if there were a veil in front of me,as if there were a direct view in front of me,yours,A05,replace,your negative,"decision 17 (R1b): negative adds air, open",True,MIYAZONO2021
+A05-47,as if watched from inside a shell,as if watched from inside the scene,claude+chatgpt,A05,keep,kept,,True,CIAUNICA2022
+A05-48,less transparent,transparent,chatgpt,A05,keep,kept,,True,CIAUNICA2022
+A05-49,like a crack in the pane of glass,like a view through the pane of glass,chatgpt,A05,keep,kept,,True,CIAUNICA2022
+A05-50,like a veil that was coming over the vision slowly,like detail that was coming into the vision slowly,K3 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds open,True,DILKES2024
+A05-51,like a wall before me,like a path before me,K5 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,RADOVIC2002
+A05-52,like an invisible wall,like a direct view,K6 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,DILKES2024
+A05-53,like being behind a screen,like being inside the scene,K2 (claude),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,DILKES2024
+A05-54,like being in a bubble,like being in the world,K6 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,TANAKA2018
+A05-55,like being trapped in a bubble,like being engaged in the world,K3 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds open,True,PIENKOS2022
+A05-56,like glass over the eyes,like direct vision from the eyes,K3 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds air, open",True,SIMEON2023
+A05-57,like having a pane of glass,like having a range of sight,K4 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds field,True,CIAUNICA2022
+A05-59,like life watched from behind glass,like life watched within the scene,chatgpt,A05,keep,kept,,True,DILKES2024
+A05-60,like living in a bubble,like living in the world,K5 (chatgpt),A05,replace,replaced (proposed),"decision 17 (R1b): negative adds open, space",True,CIAUNICA2022
+A05-61,like living in a clear bubble,,,A05,drop,dropped by you,"decision 17 (R1b): negative adds open, space",False,DILKES2024
+A05-62,like the cracked window itself as a visible observable entity,like the clear window itself as a visible observable entity,chatgpt,A05,keep,kept,,True,CIAUNICA2022
+A05-63,like the outer landscape perceived through the cracked window,like the outer landscape perceived through the clean window,K4 (chatgpt),A05,replace,replaced (proposed),decision 17 (R1b): negative adds open,True,CIAUNICA2022
+A07-01,as if seen in a fog,as if seen in daylight,chatgpt,A07,keep,kept,,True,DILKES2024;MIYAZONO2021;SIMEON2023
+A07-02,blurry,sharp,claude+chatgpt,A07,keep,kept,,True,PIENKOS2022;SIMEON2023
+A07-03,as if blinded by a mist,as if lit by daylight,claude,A07,keep,kept,,True,DILKES2024
+A07-04,as if its clarity is hindered,as if its clarity is maintained,claude+chatgpt,A07,keep,kept,,True,CIAUNICA2022
+A07-05,as if navigating through fog in slow motion,as if navigating through daylight in slow motion,chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-06,as if objects were surrounded by a cloud,as if objects were surrounded by daylight,chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-07,as if one's vision is blurred,as if one's vision is focused,claude+chatgpt,A07,keep,kept,,True,CIAUNICA2022
+A07-08,as if seen in a visual fog,as if seen in visual clarity,chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-09,as if seen in fog,as if seen in daylight,claude+chatgpt,A07,keep,kept,,True,DILKES2024;MIYAZONO2021;SIMEON2023
+A07-10,as if seen in the fog,as if seen in the daylight,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-11,as if seen through a fog,as if seen through a clear lens,claude,A07,keep,kept,,True,MIYAZONO2021;SIMEON2023
+A07-12,as if seen through a thick cloud,as if seen through a clear atmosphere,claude,A07,keep,kept,,True,SIMEON2023
+A07-13,as if seen with blurry vision,as if seen with sharp vision,claude+chatgpt,A07,keep,kept,,True,DILKES2024
+A07-14,as if the focus is never right,,,A07,drop,dropped (proposed),negation,False,DILKES2024
+A07-15,as if their vision is foggy,as if their vision is clear,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-16,as if they are looking at the world through a fog,as if they are looking at the world through clear air,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-17,as if things look more or less foggy,as if things look more or less distinct,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-18,blurry and foggy,distinct and focused,chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-19,cloudy,clear,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-20,foggy,clear,claude+chatgpt,A07,keep,kept,,True,DILKES2024;FINO2024
+A07-21,foggy and veiled,focused and distinct,chatgpt,A07,keep,kept,,True,TANAKA2018
+A07-22,hazy,clear,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-23,indefinite,definite,claude+chatgpt,A07,keep,kept,,True,MIYAZONO2021
+A07-24,like peering at the world through a fog,like peering at the world through clear air,claude+chatgpt,A07,keep,kept,,True,DILKES2024
+A07-25,like someone has put dirty fingerprints on the sunglasses – but it is the eyes,like someone has put clean lenses on the sunglasses – but it is the eyes,claude+chatgpt,A07,keep,kept,,True,CIAUNICA2022
+A07-26,like vague shapes,like distinct shapes,claude+chatgpt,A07,keep,kept,,True,CIAUNICA2022
+A07-27,more blurred,more focused,chatgpt,A07,keep,kept,,True,CIAUNICA2022
+A07-28,shadowy,well-lit,claude,A07,keep,kept,,True,SIMEON2023
+A07-29,unclear,clear,claude+chatgpt,A07,keep,kept,,True,SIMEON2023
+A07-30,vague,distinct,claude+chatgpt,A07,keep,kept,,True,PIENKOS2022
+A11-01,flat,three-dimensional,claude+chatgpt,A11,keep,kept,,True,MIYAZONO2021;PIENKOS2022;RADOVIC2002;SIERRA2001;SIMEON2023
+A11-02,two-dimensional,three-dimensional,claude+chatgpt,A11,keep,kept,,True,MIYAZONO2021;SIMEON2023
+A11-03,as if external objects were flat,as if external objects were three-dimensional,claude+chatgpt,A11,keep,kept,,True,MIYAZONO2021
+A11-04,flat and two-dimensional,solid and three-dimensional,chatgpt,A11,keep,kept,,True,SIMEON2023
+A11-05,like objects or space being flattened,like objects or space being volumetric,chatgpt,A11,keep,kept,,True,CIAUNICA2022
+A11-06,like the world becoming two dimensional,like the world being three dimensional,claude,A11,keep,kept,,True,FINO2024
+A13-01,as if seen with attenuated perception,as if seen with vivid perception,chatgpt,A13,keep,kept,,True,DILKES2024
+A13-02,colorless,colored,claude+chatgpt,A13,keep,kept,,True,PIENKOS2022;SIMEON2023
+A13-03,dull,vivid,claude+chatgpt,A13,keep,kept,,True,PIENKOS2022;RADOVIC2002;SIERRA2001
+A13-04,duller,vivid,claude+chatgpt,A13,keep,kept,,True,PIENKOS2022
+A13-05,lacking in normal color and vividness,rich in full color and vividness,chatgpt,A13,keep,kept,,True,SIMEON2023
+A13-06,lacking in perceptual or emotional vividness,,,A13,drop,dropped (proposed),not_scene: emotion,False,TANAKA2018
+A13-07,lacking in vibrancy or depth,rich in vibrancy or depth,chatgpt,A13,keep,kept,,True,CIAUNICA2022
+A13-08,less vivid,vivid,chatgpt,A13,keep,kept,,True,PIENKOS2022
+A13-09,less vivid or intense,fully vivid or intense,claude,A13,keep,kept,,True,PIENKOS2022
+A13-10,like things lacking vividness,like things having vividness,claude+chatgpt,A13,keep,kept,,True,SIERRA2001
+A13-11,reduced in intensity,full in intensity,claude,A13,keep,kept,,True,PIENKOS2022
+A14-01,as if emptiness was everywhere,as if life was present,K2 (chatgpt),A14,replace,replaced (proposed),negative brings in people,True,SIMEON2023
+A14-02,as if everything looks lifeless,as if everything looks alive,claude+chatgpt,A14,keep,kept,,True,PIENKOS2022
+A14-03,as if no living being was on earth,,,A14,drop,dropped (proposed),negation,False,RADOVIC2002
+A14-04,as if objects look dead,as if objects look alive,claude+chatgpt,A14,keep,kept,,True,PIENKOS2022
+A14-05,as if there was nothing on earth,,,A14,drop,dropped (proposed),negation,False,RADOVIC2002
+A14-06,as if with an emptiness to landscapes,as if with a presence to landscapes,claude+chatgpt,A14,keep,kept,,True,MIYAZONO2021
+A14-07,dead,alive,claude+chatgpt,A14,keep,kept,,True,PIENKOS2022;RADOVIC2002
+A14-08,deathlike,lifelike,claude+chatgpt,A14,keep,kept,,True,SIMEON2023
+A14-09,empty,full,K4 (claude),A14,replace,replaced (proposed),negative brings in people,True,SIMEON2023
+A14-10,lifeless,alive,claude+chatgpt,A14,keep,kept,,True,DILKES2024;FINO2024;MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023
+A14-11,like a detached void,like an inhabited space,chatgpt,A14,keep,kept,check,True,DILKES2024
+A14-12,like everything gives the same experiences of blackness,like everything gives the varied experiences of color,claude,A14,keep,kept,check,True,PIENKOS2022
+A14-13,like the dark and the void,like the light and the space,chatgpt,A14,keep,kept,,True,SIMEON2023
+A14-14,like the insidious nothingness choking the life out of everything,like the insidious presence coaxing the life out of everything,claude,A14,keep,kept,check,True,SIMEON2023

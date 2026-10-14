@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 7 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 7
+
+BATCH 7 OF 8
+T0901 | vague
+T0902 | the world seems strange
+T0903 | this must be a dream
+T0904 | so alien like and robotic
+T0905 | as though it was out of reach
+T0906 | captured or owned by the other
+T0907 | nothing terrible is really happening
+T0908 | picture
+T0909 | in a simulation
+T0910 | “blurriness” or confusion between oneself and the world
+T0911 | scrapes at the earth under my feet with a black nail
+T0912 | the familiar is experienced as unfamiliar
+T0913 | trusted this vision of the everyday
+T0914 | reality, was shaken as never before
+T0915 | close contact with others could infect
+T0916 | a “glass wall”
+T0917 | intensify the horrible sensation
+T0918 | a crack in the pane of glass
+T0919 | the personal feel of everything is gone
+T0920 | my world becoming two dimensional
+T0921 | cloudy
+T0922 | foggy
+T0923 | as if there were a veil between me and the outside world
+T0924 | mechanical
+T0925 | they are not a part of the world
+T0926 | like being outside the pilot’s chair, looking at, but not controlling, the gauges
+T0927 | the beauty or other qualities of one’s environment
+T0928 | to abolish distances
+T0929 | illusory self-localization to a position outside one’s body
+T0930 | others as judging one negatively
+T0931 | an invisible barrier between the self and the world
+T0932 | a larger perspective than just their immediate view or that of the human race
+T0933 | indefinite
+T0934 | you wake up from a dream, into another dream
+T0935 | it’s familiar in some sense
+T0936 | people and objects appear far away
+T0937 | a simulation
+T0938 | detach themselves from disturbing happenings around them
+T0939 | as if I am looking at them for the first time
+T0940 | located at the place of visuospatial perspective
+T0941 | disconnection from the world, or others
+T0942 | some sort of Truman Show plot
+T0943 | as if there was a wall between me and the external world
+T0944 | located at the place of visual representation of the body
+T0945 | an illusory sense of ownership for a rubber hand
+T0946 | the universe has a special meaning
+T0947 | feels unreal that he isn’t around any more
+T0948 | my college graduation feels like yesterday
+T0949 | shapes may look different
+T0950 | time seeming eternal
+T0951 | it's not natural anymore
+T0952 | nothing stands out or captures the attention
+T0953 | having a pane of glass
+T0954 | egodystonic inner/outer states
+T0955 | the sense of disconnection from her baby
+T0956 | a kind of merging with objects in the world
+T0957 | lack of immediate emotional response
+T0958 | separated by a glass wall
+T0959 | uncanny
+T0960 | ‘reality’ feel more like a vr headset
+T0961 | a marked magnification of perceptions
+T0962 | lack of emotion
+T0963 | a veil that was coming over my vision slowly
+T0964 | at the location of the virtual body shown in the display
+T0965 | as a second wave of perception, I saw the distinctions
+T0966 | loss of vital contact with reality
+T0967 | feels like I am not looking out of my eyes
+T0968 | time has stopped
+T0969 | the focus is never quite right
+T0970 | navigating through fog in slow motion
+T0971 | past, present, and future can seem indistinguishable
+T0972 | two-dimensional
+T0973 | appear strange
+T0974 | a veil
+T0975 | irrelevant
+T0976 | I see something like a veil
+T0977 | headstrong
+T0978 | glitches in the system
+T0979 | like running scripts
+T0980 | not being fully engaged with or thrown into the world
+T0981 | inside out
+T0982 | Things are divorced from their names
+T0983 | lacking in perceptual or emotional vividness
+T0984 | no longer notices the commonsense meaning or relevance of objects
+T0985 | I don’t realize what’s happening around me
+T0986 | cast a deep veil over everything
+T0987 | watching life from behind glass
+T0988 | a movie
+T0989 | there’s a sense of reality there
+T0990 | as if I’ve forgotten ever seeing the flag before
+T0991 | space expanding
+T0992 | kind of like a camera
+T0993 | the world feeling unreal
+T0994 | feelings of unreality
+T0995 | kind of floating
+T0996 | just the dream of a sleeping god
+T0997 | suppress in myself the results of the long education of sight
+T0998 | as though in a dream
+T0999 | as if these were “unreal”
+T1000 | a world that does not resonate
+T1001 | the town transitions from fog world to nightmare world
+T1002 | time is moving incredibly fast
+T1003 | awareness of its attenuation
+T1004 | kind of suspended in time
+T1005 | odd
+T1006 | I didn’t recognize that person.
+T1007 | less vivid
+T1008 | altered distance or size of objects
+T1009 | do not arouse specific impressions such as ‘praecox feeling’
+T1010 | a “movie”
+T1011 | whatever appears in its experience, it is nothing more than unreality
+T1012 | inanimate objects
+T1013 | everything seemed more fluid
+T1014 | onlooker of one’s mental and bodily processes or even of reality itself
+T1015 | The qualities of sensory objects could also change
+T1016 | a loss of this immediately felt everyday familiarity
+T1017 | the world feels less crisp and more distant
+T1018 | a feeling of distance
+T1019 | altered perception more generally
+T1020 | temporarily or partially blinded
+T1021 | unsafe
+T1022 | almost like I’m looking at something I know
+T1023 | nonexistent virtuality
+T1024 | look at things with the eyes of a blind man recently operated upon
+T1025 | oddly detached from her body and from everything happening around her
+T1026 | a blurring of reality
+T1027 | still known to be real, largely because in the past they have always been felt as such
+T1028 | doubt about my own and other’s existence
+T1029 | eerie
+T1030 | seems just a painted picture
+T1031 | with respect to surroundings
+T1032 | change is present in the ego as well as in the outside world
+T1033 | complaints of unreality are directed toward some aspect of (or the whole) external world
+T1034 | smaller
+T1035 | Nothing evokes any emotions in me
+T1036 | disconnected from the future
+T1037 | nothing bad really happened
+T1038 | as if everyone was watching and judging her
+T1039 | an illusory ownership of the rubber hand
+T1040 | who are these people?
+T1041 | anomalies in these sensory experiences
+T1042 | objects look kind of like dead
+T1043 | changes the hue and aspects of objects
+T1044 | objects seeming further away
+T1045 | leaving me only the role of the looker-on
+T1046 | a fictional narrative
+T1047 | as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world
+T1048 | problems with the accurate perception of distances
+T1049 | a glass wall between the individual and world around
+T1050 | you’re all robots

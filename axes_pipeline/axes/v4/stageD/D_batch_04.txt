@@ -1,0 +1,55 @@
+Below is a list of short CAPTIONS. Each completes the sentence
+
+    a scene that looks ___
+
+and describes one QUALITY: a way in which the world, places or objects can
+appear when perception is altered. The qualities are defined below.
+
+TASK
+For each caption, write 3 different COUNTERPARTS: captions that describe the
+same thing as it appears in ordinary perception, without the altered
+quality. Each counterpart must also complete "a scene that looks ___".
+
+RULES
+1. Change only the word or words that carry the quality. Keep every other
+   word, in the same order. Change at most two words; small words (a, the,
+   of, as, if, like, is, ...) do not count.
+2. Keep the same form: if the caption begins with "like" or "as if", so does
+   the counterpart; a single adjective is replaced by a single adjective.
+3. Describe ordinary perception, not the opposite extreme. If the quality is
+   a loss, the counterpart is the usual amount, not an excess; if it is an
+   excess, the counterpart is the usual amount, not a lack.
+4. No negation. Do not use not, no, never, nothing, none, without, or any
+   word ending in n't, and do not add un-, non- or in- to a word of the
+   caption. (If the caption itself contains a negation, replace that word
+   by its positive counterpart.)
+5. Be specific. The counterpart names the ordinary counterpart of THIS
+   caption's quality. Do not use words that could replace any quality, such
+   as normal, ordinary, usual, regular, everyday, fine or natural.
+6. The three counterparts must differ from each other. Put the one you find
+   best first.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; NOT from the list)
+- "thin and metallic"  ->  "full and fresh", "smooth and clean",
+  "rich and fresh"
+- "like water from a tin cup"  ->  "like water from a glass",
+  "like water from a jug", "like water from a clean cup"
+- Not acceptable: "not metallic" (negation), "delicious" (a general word,
+  not the counterpart of this quality), "like the best drink in the world"
+  (the opposite extreme).
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per caption,
+in the order of the list:
+[{"id": "A01-01", "counterparts": ["...", "...", "..."]}, ...]
+After the code block write the number of captions in the array and then the
+line: END OF BATCH 4
+
+QUALITIES
+A14 "lifeless, dead, empty": The world or the things in it appear dead, lifeless, empty or void.
+
+THE CAPTIONS (batch 4 of 4)
+A14-12 | A14 | caption: "like everything gives the same experiences of blackness"
+A14-13 | A14 | caption: "like the dark and the void"
+A14-14 | A14 | caption: "like the insidious nothingness choking the life out of everything"

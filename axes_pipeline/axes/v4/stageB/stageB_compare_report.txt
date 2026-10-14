@@ -1,0 +1,239 @@
+STAGE B: COMPARISON AND RECONCILIATION (v4_protocol.md 1.3, section 6)
+==============================================================================
+Date: 2026-10-05 17:08
+Texts: 1,140 (1,305 phrases); groups: claude 34, chatgpt 73
+
+1. OUTPUT CHECKS (stageB_problems.csv)
+------------------------------------------------------------------------------
+  no problems: every text assigned exactly once, to a defined group
+
+2. HOW THE TEXTS WERE PLACED
+------------------------------------------------------------------------------
+  claude    in a group   963   OTHER   94   NOT_WORLD   83   with a second group  334
+  chatgpt   in a group   796   OTHER  148   NOT_WORLD  196   with a second group  108
+  group / OTHER / NOT_WORLD, claude (rows) x chatgpt (columns):
+    group_chatgpt  NOT_WORLD  OTHER  group
+    group_claude                          
+    NOT_WORLD             66     12      5
+    OTHER                 17     40     37
+    group                113     96    754
+
+3. AGREEMENT
+------------------------------------------------------------------------------
+  adjusted Rand index, all texts (OTHER, NOT_WORLD as categories): 0.35 (n = 1140)
+  adjusted Rand index, texts both models put in a group:           0.70 (n = 754)
+  pairs together in claude also together in chatgpt: 62%; pairs together in chatgpt also together in claude: 83%
+  (The Rand index is low when one model's groups are finer than the other's even if
+   they agree; nesting below shows that case.)
+  nesting, claude groups in one chatgpt group: median share 53%; groups with >= 60% of their texts in one group: 13 of 34
+  nesting, chatgpt groups in one claude group: median share 92%; groups with >= 60% of their texts in one group: 64 of 71
+
+4. CROSS-WALK (claude -> chatgpt; best match and share; stageB_crosswalk.csv)
+------------------------------------------------------------------------------
+  G01 unreal, not real                100 -> G01       unreal, not real              69%
+  G02 dreamlike, in a dream            42 -> G02       dream-like world              90%
+  G03 movie, picture, film set         16 -> OTHER     OTHER                         44%
+  G04 simulation, video game           26 -> G03       simulation or video game      88%
+  G05 veil, glass wall, barrier        66 -> G09       wall or barrier               91%
+  G06 in a bubble                      14 -> G09       wall or barrier              100%
+  G07 fog, blurry, hazy                34 -> G15       foggy, blurry                 88%
+  G08 detached, cut off from world     74 -> G08       cut off from world            55%
+  G09 watching as detached observer    16 -> G10       detached observer             50%
+  G10 far away, distant                15 -> G13       far away, distant             87%
+  G11 flat, two-dimensional            11 -> G14       flat, two-dimensional         91%
+  G12 altered size of objects          13 -> G18       larger, bigger                38%
+  G13 dull, less vivid, colorless      13 -> G16       less vivid, dull              92%
+  G14 lifeless, dead, empty            17 -> G61       empty, void                   53%
+  G15 heightened, vivid, more real     36 -> OTHER     OTHER                         25%
+  G16 strange, foreign, uncanny        39 -> G05       strange, odd                  49%
+  G17 familiar looks unfamiliar        35 -> G06       look unfamiliar               54%
+  G18 different, changed, altered      35 -> OTHER     OTHER                         83%
+  G19 no emotional resonance           44 -> G33       world lacks emotional colori  41%
+  G20 meaningless, things without na   35 -> G56       meaningless, irrelevant       34%
+  G21 special meaning, significance    11 -> G55       special meaning, significanc  82%
+  G22 others as robots, automatons     41 -> G36       people as robots              51%
+  G23 disconnected from other people   18 -> G35       emotionally distant from oth  56%
+  G24 others watching, threatening     20 -> G42       controlled by others          30%
+  G25 oneness, connectedness with wo   18 -> G44       oneness with all              44%
+  G26 blurred self/world boundaries    14 -> G46       blurred self-world boundarie  50%
+  G27 time faster or slower            23 -> G25       time sped up                  52%
+  G28 time stopped, eternal            15 -> G26       time stopped, suspended       53%
+  G29 present, past seem displaced     16 -> G29       past feels present            38%
+  G30 viewpoint outside the body       36 -> NOT_WORLD NOT_WORLD                     97%
+  G31 doubt in common-sense reality    27 -> G50       doubt in reality              41%
+  G32 not noticing surroundings         9 -> G58       miss the surroundings         78%
+  G33 seeing things not present        10 -> G22       spots and dots                40%
+  G34 frightening, sinister, repulsi   24 -> G41       threatening, unsafe           25%
+
+5. SUPPORT OF THE GROUPS (keeping rules: >= 5 texts, >= 2 documents, >= 1 first-person phrase;
+   pass with all phrases / vision only / not-specific only; vision = share of vision texts)
+------------------------------------------------------------------------------
+  claude: 33 of 34 groups pass with all phrases, 13 with vision only, 30 with not-specific only
+    group name                            texts docs  1st vision   all/vis/n-s
+    G01   unreal, not real                  100    9   41     2%   Y/-/Y
+    G02   dreamlike, in a dream              42    9   25     5%   Y/-/Y
+    G03   movie, picture, film set           16    6    7    50%   Y/Y/Y
+    G04   simulation, video game             26    2    9     4%   Y/-/Y
+    G05   veil, glass wall, barrier          66    7   36    29%   Y/Y/Y
+    G06   in a bubble                        14    6   11     0%   Y/-/Y
+    G07   fog, blurry, hazy                  34    7   18    71%   Y/Y/Y
+    G08   detached, cut off from world       74    9   19     1%   Y/-/Y
+    G09   watching as detached observer      16    4   11     6%   Y/-/Y
+    G10   far away, distant                  15    3    5    33%   Y/Y/Y
+    G11   flat, two-dimensional              11    8    5    73%   Y/Y/-
+    G12   altered size of objects            13    4    3    77%   Y/Y/-
+    G13   dull, less vivid, colorless        13    7    3    31%   Y/Y/-
+    G14   lifeless, dead, empty              17    7   11    18%   Y/-/Y
+    G15   heightened, vivid, more real       36    4   10    53%   Y/Y/Y
+    G16   strange, foreign, uncanny          39    9   20     5%   Y/-/Y
+    G17   familiar looks unfamiliar          35    7   19    40%   Y/Y/Y
+    G18   different, changed, altered        35    9   13    26%   Y/Y/Y
+    G19   no emotional resonance             44    6   14     2%   Y/-/Y
+    G20   meaningless, things without na     35    6   16    37%   Y/Y/Y
+    G21   special meaning, significance      11    3    5     0%   Y/-/Y
+    G22   others as robots, automatons       41    7   29    15%   Y/Y/Y
+    G23   disconnected from other people     18    5    7     0%   Y/-/Y
+    G24   others watching, threatening       20    4    6    10%   Y/-/Y
+    G25   oneness, connectedness with wo     18    3    5     0%   Y/-/Y
+    G26   blurred self/world boundaries      14    4    1     7%   Y/-/Y
+    G27   time faster or slower              23    3    7     0%   Y/-/Y
+    G28   time stopped, eternal              15    3    8     0%   Y/-/Y
+    G29   present, past seem displaced       16    2    4     0%   Y/-/Y
+    G30   viewpoint outside the body         36    5    8    31%   Y/Y/Y
+    G31   doubt in common-sense reality      27    4    3     0%   Y/-/Y
+    G32   not noticing surroundings           9    3    4     0%   Y/-/Y
+    G33   seeing things not present          10    2    0    60%   -/-/-
+    G34   frightening, sinister, repulsi     24    4    8    21%   Y/-/Y
+  chatgpt: 48 of 73 groups pass with all phrases, 8 with vision only, 35 with not-specific only
+    group name                            texts docs  1st vision   all/vis/n-s
+    G01   unreal, not real                   72    9   26     3%   Y/-/Y
+    G02   dream-like world                   38    9   22     5%   Y/-/Y
+    G03   simulation or video game           25    2   11     4%   Y/-/Y
+    G04   movie or film                       6    4    2    33%   Y/-/-
+    G05   strange, odd                       21    7   14     0%   Y/-/Y
+    G06   look unfamiliar                    24    9    9    29%   Y/Y/Y
+    G07   known but not familiar              8    2    4    12%   Y/-/Y
+    G08   cut off from world                 41    8    9     0%   Y/-/Y
+    G09   wall or barrier                    75    7   47    20%   Y/Y/Y
+    G10   detached observer                   8    4    5     0%   Y/-/Y
+    G11   outside the body                    0    0    0   nan%   -/-/-
+    G12   floating, unlocated                 1    1    0     0%   -/-/-
+    G13   far away, distant                  13    3    5    31%   Y/-/Y
+    G14   flat, two-dimensional              10    8    5    70%   Y/Y/-
+    G15   foggy, blurry                      31    7   16    68%   Y/Y/Y
+    G16   less vivid, dull                   12    7    2    25%   Y/-/-
+    G17   clear, sharp, detailed              4    2    0    75%   -/-/-
+    G18   larger, bigger                      7    3    2    71%   Y/Y/-
+    G19   look smaller                        3    3    0   100%   -/-/-
+    G20   visually distorted                 13    4    5    69%   Y/Y/-
+    G21   altered colors                      3    2    1   100%   -/-/-
+    G22   spots and dots                      4    2    0   100%   -/-/-
+    G23   overly bright light                 3    3    1    67%   -/-/-
+    G24   time slowed                         7    3    2     0%   Y/-/Y
+    G25   time sped up                       13    3    3     0%   Y/-/Y
+    G26   time stopped, suspended             8    3    3     0%   Y/-/Y
+    G27   stretched, eternal time             6    2    5     0%   Y/-/Y
+    G28   recent feels long ago               5    1    1     0%   -/-/-
+    G29   past feels present                  6    2    2     0%   Y/-/Y
+    G30   time unreliable, disordered        10    3    2     0%   Y/-/Y
+    G31   time unnoticed, lost                3    3    1     0%   -/-/-
+    G32   not present or engaged             10    3    0     0%   -/-/-
+    G33   world lacks emotional coloring     20    4    1     5%   Y/-/Y
+    G34   beauty and charm lost               9    3    5     0%   Y/-/Y
+    G35   emotionally distant from other     11    4    4     0%   Y/-/Y
+    G36   people as robots                   21    4   14    14%   Y/-/Y
+    G37   people lifeless                     6    2    5     0%   Y/-/-
+    G38   people acting, masked               5    3    4    40%   Y/-/-
+    G39   people hard to understand           6    2    3     0%   Y/-/-
+    G40   watched and judged                  5    2    3     0%   Y/-/-
+    G41   threatening, unsafe                10    2    1    10%   Y/-/Y
+    G42   controlled by others                6    3    1     0%   Y/-/Y
+    G43   access to others' minds             4    2    0     0%   -/-/-
+    G44   oneness with all                   10    2    5    10%   Y/-/Y
+    G45   greater concern for others          4    1    0     0%   -/-/-
+    G46   blurred self-world boundaries       7    4    1     0%   Y/-/Y
+    G47   objects merge with body             4    3    0    25%   -/-/-
+    G48   virtual body feels mine             0    0    0   nan%   -/-/-
+    G49   more real                           6    2    1     0%   Y/-/Y
+    G50   doubt in reality                   12    3    4     0%   Y/-/Y
+    G51   known real, feels unreal            3    1    0     0%   -/-/-
+    G52   imagined or perceived               3    3    1     0%   -/-/-
+    G53   real and unreal together            4    2    2     0%   -/-/-
+    G54   alternate realities                15    3    4     0%   Y/-/Y
+    G55   special meaning, significance      10    3    5     0%   Y/-/Y
+    G56   meaningless, irrelevant            14    5    5    21%   Y/-/Y
+    G57   not directly presented             12    4    3    25%   Y/-/Y
+    G58   miss the surroundings               7    2    4     0%   Y/-/Y
+    G59   nothing stands out                  5    2    0     0%   -/-/-
+    G60   absent things perceived             4    1    0     0%   -/-/-
+    G61   empty, void                         9    4    6     0%   Y/-/Y
+    G62   dead, lifeless world                5    7    4    40%   Y/-/-
+    G63   eerie, uncanny, nightmarish         9    5    4    11%   Y/-/Y
+    G64   surroundings closing in             4    2    0     0%   -/-/-
+    G65   seen for first time                 7    1    6   100%   -/-/-
+    G66   shapes and formal details          16    3    8    81%   Y/Y/-
+    G67   distinctness and differences l      5    2    4   100%   Y/Y/-
+    G68   lack of agency                      2    2    0     0%   -/-/-
+    G69   behind everyday appearances         4    1    1    25%   -/-/-
+    G70   marveling at existence              4    2    3    25%   -/-/-
+    G71   grotesque, repulsive                6    2    1     0%   Y/-/-
+    G72   nothing exists                      8    5    4     0%   Y/-/Y
+    G73   more accurate, unfiltered           4    2    1    25%   -/-/-
+
+6. FINAL AXES (stageB_axes.csv)
+------------------------------------------------------------------------------
+  32 axes; texts agreed 937; texts to review 128 (stageB_review.csv), open 0
+  not needed: 75 texts the models placed differently but whose only options are visual = no
+  axes or none; not asked (SKIP_NONVISUAL), so the counts of the visual = no axes are incomplete.
+  Most frequent disagreements (claude axis vs chatgpt axis; a frequent pair
+  may mean two axes should be one, or a group belongs in another axis:
+  then edit stageB_axes.csv rather than deciding text by text):
+      17  A15  heightened, vivid, more real  vs none (no axis)
+      16  A01  unreal, not real              vs none (no axis)
+      11  A20  meaningless, things without   vs none (no axis)
+      10  none (no axis)                     vs A12  altered size, distance or sh
+       9  A03  movie, picture, film set      vs none (no axis)
+       8  A22  others as robots, automatons  vs none (no axis)
+       6  A34  frightening, sinister, repul  vs none (no axis)
+       5  none (no axis)                     vs A45  distinctness and differences
+       4  A34  frightening, sinister, repul  vs A16  strange, foreign, uncanny
+       4  A07  fog, blurry, hazy             vs none (no axis)
+       3  A14  lifeless, dead, empty         vs none (no axis)
+       3  A24  others watching, threatening  vs A34  frightening, sinister, repul
+    axis name                            vis texts docs  1st vision   kept all/vis/n-s
+    A01  unreal, not real                yes    89    9   36     2%   Y/-/Y
+    A02  dreamlike, in a dream           yes    42    9   25     5%   Y/-/Y
+    A03  movie, picture, film set        yes    15    6    7    53%   Y/Y/Y
+    A04  simulation, video game          yes    27    2   10     4%   Y/-/Y
+    A05  veil, glass wall, barrier, bub  yes    78    7   47    23%   Y/Y/Y
+    A07  fog, blurry, hazy               yes    33    7   17    70%   Y/Y/Y
+    A08  detached, cut off from world     no    60    8   11     3%   -/-/-
+    A09  watching as detached observer    no     9    4    6     0%   -/-/-
+    A10  far away, distant               yes    14    3    5    29%   Y/-/Y
+    A11  flat, two-dimensional           yes    10    8    5    70%   Y/Y/-
+    A12  altered size, distance or shap  yes    22    5    4    77%   Y/Y/-
+    A13  dull, less vivid, colorless     yes    12    7    2    25%   Y/-/-
+    A14  lifeless, dead, empty           yes    15    7   11    20%   Y/-/Y
+    A15  heightened, vivid, more real    yes    23    4    4    57%   Y/Y/-
+    A16  strange, foreign, uncanny       yes    38    9   21     5%   Y/-/Y
+    A17  familiar looks unfamiliar       yes    36    7   19    42%   Y/Y/Y
+    A19  no emotional resonance           no    33    5    6     3%   -/-/-
+    A20  meaningless, things without na  yes    31    6   14    45%   Y/Y/Y
+    A21  special meaning, significance    no     9    3    4     0%   -/-/-
+    A22  others as robots, automatons    yes    39    7   27    15%   Y/Y/Y
+    A23  disconnected from other people   no    17    4    7     0%   -/-/-
+    A24  others watching, threatening     no    14    4    4     0%   -/-/-
+    A25  oneness, connectedness with wo   no    13    2    5     8%   -/-/-
+    A26  blurred self/world boundaries    no    11    4    1     9%   -/-/-
+    A27  time faster or slower            no    20    3    5     0%   -/-/-
+    A28  time stopped, eternal            no    15    3    8     0%   -/-/-
+    A29  present, past seem displaced     no    14    2    4     0%   -/-/-
+    A31  doubt in common-sense reality    no    25    4    4     0%   -/-/-
+    A32  not noticing surroundings        no     7    2    4     0%   -/-/-
+    A33  seeing things not present       yes    10    2    0    60%   -/-/-
+    A34  frightening, sinister, repulsi  yes    19    4    6    16%   Y/-/Y
+    A45  distinctness and differences l  yes     5    2    4   100%   Y/Y/-
+  kept: all phrases 18, vision only 10, not-specific only 13
+  STAGE B COMPLETE: every text decided. Kept axes go to Stage C.
+
+Runtime 0.3 s

@@ -1,0 +1,189 @@
+I have a list of short phrases. Each was taken word for word from a
+published text, and each has already been assigned to a QUALITY: a way in
+which the world, places or objects can appear. The qualities are defined
+below. Next to each phrase is its context, the sentence it was taken from,
+with the phrase itself in [square brackets].
+
+TASK
+Turn each phrase into a CAPTION: the words that complete the sentence
+
+    a scene that looks ___
+
+so that the whole sentence is grammatical and reads naturally, like a short
+description of a picture. Change the phrase as little as possible.
+
+WHAT YOU MAY DO
+1. Add only these words: a, an, the, like, as, if, though, with, of, in, on,
+   at, to, from, by, through, behind, into, is, are, was, were, be, been,
+   being, seem, seems, seemed, it.
+2. Add "seen" only as "as if seen" or "like seen", directly before words
+   that begin with one of the prepositions in rule 1 (for example before
+   "through ..." or "behind ...").
+3. Restore a word that stands directly before or after the brackets in the
+   context, for example a comparison word just before the phrase.
+4. Delete words that place the experience in a person ("I see", "I feel",
+   "it seems to me", "my"), hedges and intensifiers ("just", "almost",
+   "somehow", "really", "very", "quite"), and articles, prepositions or
+   forms of "be" when they would make the sentence ungrammatical.
+5. Change the grammatical form of a word while keeping its root (a verb
+   into its past participle, a noun into its adjective).
+
+WHAT YOU MAY NOT DO
+- Add any other word, replace a word with a synonym, or add a negation.
+- Delete a word that carries the quality.
+- Change the order of the phrase's words, unless the sentence needs it.
+
+WHEN NOT TO WRITE A CAPTION
+Write no caption, and give the reason in "drop", only when:
+- "cannot": the phrase cannot become a grammatical caption under these
+  rules;
+- "outside": the phrase expresses only what its quality's definition
+  EXCLUDES (only qualities with an "Excludes" line).
+Do not leave out a phrase for any other reason.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; in this illustration the word allowed by rule 2 is "tasted";
+in your task it is "seen")
+- "watery"  ->  "watery"  (no change)
+- "it tasted to me like water from a tin cup"  ->  "like water from a tin
+  cup"  (deleted "it tasted to me")
+- context "it was almost like [the metal of an old coin], I thought"  ->
+  "like the metal of an old coin"  (restored "like" from the context)
+- "I found it thin and metallic"  ->  "thin and metallic"
+- "through a straw"  ->  "as if tasted through a straw"  (rule 2)
+- "my grandmother's recipe"  ->  no caption, drop "cannot"
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per phrase,
+in the order of the list:
+[{"id": "T0001", "caption": "...", "drop": null},
+ {"id": "T0002", "caption": null, "drop": "cannot"}, ...]
+After the code block write the number of phrases in the array and then the
+line: END OF BATCH 1
+
+QUALITIES
+A01 "unreal, fake, artificial": The world or things in it look unreal, fake or artificial.
+    Excludes: the world or things in it seeming not to exist.
+A02 "dreamlike, in a dream": The world or one's life seems like a dream or like being in a dream.
+
+THE PHRASES (batch 1 of 3)
+T0701 | A01 | phrase: "The world around me seems very fake" | context: "[The world around me seems very fake] but in my dream kind of autopilot world I am able to ..."
+T0838 | A01 | phrase: "happening but not really happening" | context: "It was all unreal, she thought, [happening but not really happening]."
+T0504 | A01 | phrase: "It was all unreal" | context: "[It was all unreal], she thought, happening but not really happening."
+T0284 | A01 | phrase: "everything else past or present or connected to a name is an illusion" | context: "... liberates him: the realization that existence is only in the moment, that [everything else past or present or connected to a name is an illusion]."
+T0237 | A01 | phrase: "a feeling of unreality" | context: "According to DSM-5, derealization “is characterized by [a feeling of unreality] or detachment from, or unfamiliarity with, the world, be it individuals, inanimate ..." | context: "... the sense of reality has its negative counterpart in the shape of [a feeling of unreality] by which persons may be haunted, and of which one sometimes hears ..."
+T0999 | A01 | phrase: "as if these were “unreal”" | context: "(i) a feeling of perceptual alteration of surroundings and the external world, [as if these were “unreal]” or dream-like (derealization, DR), experienced continually despite intact reality testing (World ..."
+T0408 | A01 | phrase: "Everything besides my limbs feel like they don't have much of a presence" | context: "[Everything besides my limbs feel like they don't have much of a presence]” (P 217)."
+T0295 | A01 | phrase: "I don't feel like the world exists" | context: "Another noted, “I don't feel like I exist, and [I don't feel like the world exists], so therefore time can't exist.”"
+T0648 | A01 | phrase: "other people, objects, and the world around them are not real" | context: "Some people have the experience of feeling that [other people, objects, and the world around them are not real]. 13."
+T0711 | A01 | phrase: "Life seems unreal" | context: "[Life seems unreal] to someone who is depersonalized, yet it also may seem unreal to ..."
+T0178 | A01 | phrase: "the world around is unreal" | context: "Derealization is where you feel [the world around is unreal]."
+T0206 | A01 | phrase: "a copy of the real world but not quite real" | context: "... put down into a film set, or something – as though it's [a copy of the real world but not quite real]"
+T0430 | A01 | phrase: "You seem unreal" | context: "[You seem unreal]."
+T0678 | A01 | phrase: "unreal" | context: "feeling like others are lifeless or [unreal]" | context: "For derealization it is noted that“individuals or objects are experienced as [unreal], dreamlike, foggy, lifeless, or visually distorted”, and “the individual may feel ..."
+T0302 | A01 | phrase: "unreality" | context: "... use of metaphor in the dissociative disorder depersonalization/derealization – the feeling of [unreality] or detachment from the senses or surrounding events." | context: "Depersonalization/derealization, the under-recognized experience of [unreality] or detachment from the senses or surrounding events, has a lifetime prevalence ..."
+T0281 | A01 | phrase: "detached or unreal" | context: "(13) My surroundings feel [detached or unreal], as if there were a veil between me and the outside ..."
+T0388 | A01 | phrase: "it feels like it is not" | context: "... no passage of time anymore ... I know it is passing but [it feels like it is not]."
+T0690 | A01 | phrase: "all was unreal" | context: "... and painfully captured Jada's entire existence, and again she suddenly felt like [all was unreal]."
+T1111 | A01 | phrase: "somewhere on the border of the real and the unreal" | context: "... clinical practice with DDD patients: some version of “nothing bad really happened,” [somewhere on the border of the real and the unreal]."
+T0139 | A01 | phrase: "the self or the world is judged as unreal" | context: "In short, the existence of [the self or the world is judged as unreal] because they have a current strange or otherwise altered appearance."
+T0074 | A01 | phrase: "something real that is unreal at the same time" | context: "... and I'm, like, “I'm not crazy, you know. I'm feeling... I'm experiencing [something real that is unreal at the same time].”"
+T0333 | A01 | phrase: "things around them seem unreal" | context: "(4) Derealization: the person feels cut off from the world, and [things around them seem unreal]."
+T1063 | A01 | phrase: "not quite real" | context: "... them appear strange or changed in some way: that their surroundings are [not quite real]."
+T0485 | A01 | phrase: "the outside world is unreal" | context: "... of two kinds: a feeling of changed personality and a feeling that [the outside world is unreal]." | context: "... own body, emotions, and thoughts, whereas derealization is described as feeling that [the outside world is unreal] and lacking in perceptual or emotional vividness."
+T0260 | A01 | phrase: "unreal and pointless" | context: "... been impossible for him to playact in a day-to-day world that feels [unreal and pointless]."
+T1109 | A01 | phrase: "feelings of 'unreality'" | context: "... feelings and touch of dreams, people also seem to have difficulty explaining [feelings of 'unreality]' of the symptoms."
+T0375 | A01 | phrase: "the unreality of things" | context: "This sense of [the unreality of things], James comments, “may become a carking [perplexing] pain, and even lead ..."
+T0162 | A01 | phrase: "unreal or detached from yourself or your surroundings" | context: "For example, the single question “Have you ever felt [unreal or detached from yourself or your surroundings], have unusual or unaccountable gaps in your memory, or have somehow ..."
+T0421 | A01 | phrase: "the loss of the feeling of reality" | context: "... of these patients complained of baffling and unpleasant mental experiences consisting of [the loss of the feeling of reality]."
+T0486 | A01 | phrase: "things become unreal" | context: "... . . in its absence colours and tones become distant and strange, [things become unreal], as if from another world.”18"
+T0086 | A01 | phrase: "everything is an illusion" | context: "... things around me don't feel real, almost as if nothing exists and [everything is an illusion]."
+T1078 | A01 | phrase: "like there is a zipper to unzip" | context: "... visual experience. It's like I'm wearing glasses that I can't see through, [like there is a zipper to unzip].”"
+T0993 | A01 | phrase: "the world feeling unreal" | context: "... or places being unfamiliar, or simply marveling at their existence, and of [the world feeling unreal] or lacking in vibrancy or depth"
+T0869 | A01 | phrase: "renders it unreal" | context: "... familiar and the hidden, uncanniness challenges the validity of the familiar and [renders it unreal]."
+T0313 | A01 | phrase: "so unreal" | context: "It was [so unreal]."
+T1060 | A01 | phrase: "strong feelings of unreality of oneself and the surrounding world" | context: "... of DPDR is the maintenance of reality testing in the face of [strong feelings of unreality of oneself and the surrounding world]; by definition, it excludes any form of psychosis."
+T0271 | A01 | phrase: "unreal and detached from the self or from surroundings" | context: "A priori, anyone whose feels [unreal and detached from the self or from surroundings] is experiencing dissociation."
+T0410 | A01 | phrase: "the world does not exist" | context: "If a person states that they are dead or that [the world does not exist], this could be either a subjective “as if ” experience that ..."
+T0793 | A01 | phrase: "an effectual experience of unreality that does not have a factual ground" | context: "“Depersonalization is a virtual condition: [an effectual experience of unreality that does not have a factual ground],” she states (p. 94).6"
+T0871 | A01 | phrase: "the world is unreal" | context: "... complaints in terms of “it is as if . . . ([the world is unreal], etc.).”"
+T0147 | A01 | phrase: "day-to-day life as unreal" | context: "While experiencing [day-to-day life as unreal], Astrid's online presence has become her primary reality."
+T0370 | A01 | phrase: "None of this is real!" | context: "[None of this is real]!"
+T0298 | A01 | phrase: "artificial" | context: "people seem to be [artificial] or robotic, thinking in frames, fake expressions of emotions." | context: "Surroundings that seem [artificial], colorless, or lifeless."
+T1054 | A01 | phrase: "constantly at risk of turning “unreal" | context: "... meaning and purpose in life, in a world that is perceived as [constantly at risk of turning “unreal] (Perkins, 2021).”"
+T0125 | A01 | phrase: "nothing was real" | context: "it felt like [nothing was real], i was in a dream." | context: "I believed that I had no free will and that [nothing was real]."
+T0138 | A01 | phrase: "The world feels fake or deadened" | context: "[The world feels fake or deadened], objects do not have immediate value or relevance, and people, places, ..."
+T1090 | A01 | phrase: "Nothing exists or is real" | context: "[Nothing exists or is real]."
+T0414 | A01 | phrase: "a loss or lack of reality" | context: "... participants feel they are not a part of the world, there is [a loss or lack of reality], which participants could describe as akin to living in a dream, ..."
+T0720 | A01 | phrase: "reality is just not there" | context: "But then, it's like kind of [reality is just not there], and you're just kind of floating ..."
+T0636 | A01 | phrase: "'as-if ' unreality" | context: "Virtual reality is 'as-if ' reality; depersonalization is '[as-if ' unreality]” (p. 94).6"
+T0994 | A01 | phrase: "feelings of unreality" | context: "Sometimes, the [feelings of unreality] seem to affect one perceptual modality (e.g., vision or audition), and in ..."
+T0860 | A01 | phrase: "without substance" | context: "... and everything in it, including his personal identity, felt unreal, unfounded, and [without substance]."
+T0775 | A01 | phrase: "the unreality of external objects" | context: "... depersonalization, which involves the unreality of self, rather than derealization, which involves [the unreality of external objects]."
+T0267 | A01 | phrase: "unreality or detachment from one's surroundings" | context: "... (experiences of unreality or detachment from one's self) and/or derealization (experiences of [unreality or detachment from one's surroundings])."
+T0479 | A01 | phrase: "“unreality” concerning visual modality" | context: "Any complaint of “[unreality” concerning visual modality]."
+T0376 | A01 | phrase: "nothing seems real" | context: "I'm not part of anything and so [nothing seems real]."
+T0404 | A01 | phrase: "glimpse behind the façade of life" | context: "But unlike Amiel, Roquentin refuses to let this [glimpse behind the façade of life] lock him in limbo, stuck between two worlds."
+T0799 | A01 | phrase: "the world were made of cellophane or glass" | context: "It is as if [the world were made of cellophane or glass]."
+T0401 | A01 | phrase: "things around me don't feel real" | context: "i've always had these states of mind where the [things around me don't feel real], almost as if nothing exists and everything is an illusion."
+T1062 | A01 | phrase: "the boundaries of the real and the unreal are momentarily suspended" | context: "... or the saner calculated play with all that we take for granted, [the boundaries of the real and the unreal are momentarily suspended] in those who are touched by the iconic works of master painters."
+T1033 | A01 | phrase: "complaints of unreality are directed toward some aspect of (or the whole) external world" | context: "... descriptions of what is commonly known as derealization, that is, here the [complaints of unreality are directed toward some aspect of (or the whole) external world]."
+T0069 | A01 | phrase: "made of cellophane" | context: "It is as if the world were [made of cellophane] or glass."
+T0545 | A01 | phrase: "experiences of unreality or detachment with respect to surroundings" | context: "... or actions” (American Psychiatric Association, 2013, p. 302); derealization refers to “[experiences of unreality or detachment with respect to surroundings]” (American Psychiatric Association, 2013, p. 302)."
+T0211 | A01 | phrase: "not as real as before" | context: "The outside world is foreign and new to him and [not as real as before]."
+T0714 | A01 | phrase: "making everything feel less real and more distant" | context: "... by their responses to the world, it may have the effect of [making everything feel less real and more distant]."
+T0721 | A01 | phrase: "experiences of unreality" | context: "... classified among the dissociative disorders in the DSM-5, and reflects pathological “[experiences of unreality], detachment, or being an outside observer with respect to one's thoughts, ..."
+T0307 | A01 | phrase: "the illusion which lives with us day by day" | context: "... more typical of his prose: “Nothing is more hidden from us than [the illusion which lives with us day by day], and our greatest illusion is to believe that we are what ..."
+T1110 | A01 | phrase: "the present seems so unreal" | context: "... feel very disconnected from memories, especially recent memories, but that's probably because [the present seems so unreal] that the memories of the unreal things seem unreal as well.”"
+T0654 | A01 | phrase: "some real thing behind appearances" | context: "... will become a revelation of some order; it is a token of [some real thing behind appearances]; and I make it real by putting it into words."
+T0042 | A01 | phrase: "a dimming or blurring both of the person's sense of identity and of his sense of reality" | context: "Feelings of unreality, which are always unpleasant and strange, bring about [a dimming or blurring both of the person's sense of identity and of his sense of reality]."
+T0555 | A01 | phrase: "Sometimes I think people do not exist" | context: "[Sometimes I think people do not exist] and even doubt about my existence at all, like if I were ..."
+T0001 | A01 | phrase: "in a place of 'unreality'" | context: "... their observing perspective (for-me-ness) is floating around, but they also find it [in a place of 'unreality]' as it is difficult for them to feel affectively in touch ..."
+T0693 | A01 | phrase: "it seems a bit fake" | context: "Or like when I see people speak, it's just [it seems a bit fake], a bit strange, because I don't feel anything when I see ..."
+T1133 | A01 | phrase: "things feel unreal to me" | context: "Phrases like “[things feel unreal to me],” “I feel detached from myself,” and “my voice sounds different to ..."
+T1026 | A01 | phrase: "a blurring of reality" | context: "Today's cyberculture may also contribute to [a blurring of reality], particularly in young people who, spending countless hours in cyberspace, have ..."
+T1106 | A01 | phrase: "Everything seems unreal" | context: "[Everything seems unreal]."
+T0573 | A01 | phrase: "nothing exists" | context: "... mind where the things around me don't feel real, almost as if [nothing exists] and everything is an illusion."
+T0071 | A01 | phrase: "static, half-true" | context: "Reality's [static, half-true] nature is deathlike."
+T0083 | A01 | phrase: "the world disappearing under my feet" | context: "Compare “I felt [the world disappearing under my feet]” as a reaction to a major life event."
+T0675 | A01 | phrase: "it could not really be happening" | context: "... vividly recalls feeling at the time that this must be a dream; [it could not really be happening]."
+T0884 | A01 | phrase: "Everything seemed intensely unreal" | context: (not available)
+T0626 | A01 | phrase: "the world feels unreal" | context: "... to share one trait, the suggestion that the self, the body, or [the world feels unreal]."
+T0614 | A01 | phrase: "which aspect of the self or the world it is that feels unreal" | context: "... of unreality merge and the patient may not be able to say [which aspect of the self or the world it is that feels unreal]."
+T0088 | A01 | phrase: "appear meaningless and fake" | context: "... also seem as though they are merely acting: their actions and words [appear meaningless and fake], rather than expressive of an inherent intentionality."
+T0364 | A01 | phrase: "life feels unreal" | context: "When depersonalized people say “[life feels unreal],” their meaning can involve any or all three of these usages."
+T1011 | A01 | phrase: "whatever appears in its experience, it is nothing more than unreality" | context: "For the observing self, [whatever appears in its experience, it is nothing more than unreality] that lacks a sense of ownership."
+T0559 | A01 | phrase: "things seem unreal" | context: "and (4) derealization (detachment, feeling cutoff from the world, [things seem unreal]; Sierra & David, 2011)."
+T0665 | A01 | phrase: "nothing is real" | context: "It's as if [nothing is real], myself or the meeting I am in."
+T0334 | A01 | phrase: "they don't seem real" | context: "I look at them, but [they don't seem real], they don't look the same and they don't look familiar anymore, ..."
+T0771 | A02 | phrase: "her life was literally a dream" | context: "... no way believed that she was turning into a machine or that [her life was literally a dream]; this is just how it all started to feel."
+T0996 | A02 | phrase: "just the dream of a sleeping god" | context: "... prove that we do, but how would we know if we were [just the dream of a sleeping god] or something?” (P241)"
+T0535 | A02 | phrase: "everything seems like a dream." | context: "I have panic attacks and then [everything seems like a dream]. It doesn't clear up until I'm back in my room.”"
+T1068 | A02 | phrase: "a dreamlike scene" | context: "Nevertheless, one does not necessarily have to doubt the existence of [a dreamlike scene] even though one may be overwhelmed by its peculiar quality."
+T0934 | A02 | phrase: "you wake up from a dream, into another dream" | context: "Another idea is that [you wake up from a dream, into another dream]."
+T0133 | A02 | phrase: "looks sort of dreamy" | context: "everything [looks sort of dreamy] and almost like i'm in a bubble, the focus is never quite ..."
+T0091 | A02 | phrase: "dream-like" | context: "... of surroundings and the external world, as if these were “unreal” or [dream-like] (derealization, DR), experienced continually despite intact reality testing (World Health Organization [WHO] ..." | context: "... do not convey the familiar picture of everyday reality, instead they become [dream-like] or shadowy . . . as if seen through a veil” (p. ..."
+T0853 | A02 | phrase: "dream" | context: "... individual may feel as if he or she were in a fog, [dream], or bubble, or as if there were a veil or a ..." | context: "... patient “may feel as if he or she were in a fog, [dream], or bubble, or as if there were a veil or a ..."
+T0898 | A02 | phrase: "this could only be a dream" | context: "Jada again suddenly felt unreal; [this could only be a dream]."
+T0768 | A02 | phrase: "it was all a dream" | context: "Jada obediently did so and remembers crouching in a corner feeling that [it was all a dream]."
+T0263 | A02 | phrase: "dream state" | context: "The authors liken this change to that of a [dream state]—it cannot be described satisfactorily within the existent real and unreal parameters."
+T0637 | A02 | phrase: "like in a dream" | context: "... I feel unreal, non-present, walking through daily life like an automaton, or [like in a dream]?" | context: "everything around me felt so different [like in a dream] but i knew it was all real."
+T1073 | A02 | phrase: "living “in a dream”" | context: "Metaphors such as feeling like [living “in a dream]” or “like a robot” were common and associated with poor general ..."
+T0756 | A02 | phrase: "living in a dream or a movie" | context: "... may feel like an automaton or as if he or she is [living in a dream or a movie]."
+T0249 | A02 | phrase: "my dream kind of autopilot world" | context: "The world around me seems very fake but in [my dream kind of autopilot world] I am able to function within it."
+T0072 | A02 | phrase: "Like Inception but in real life" | context: "[Like Inception but in real life]."
+T0452 | A02 | phrase: "the whole situation was dreamlike" | context: "We would perhaps like to say that [the whole situation was dreamlike] and we are not able to pick out one specific item in ..."
+T0471 | A02 | phrase: "dreamlike" | context: "For derealization it is noted that“individuals or objects are experienced as unreal, [dreamlike], foggy, lifeless, or visually distorted”, and “the individual may feel as ..."
+T0305 | A02 | phrase: "its all dream" | context: "... depersonalization but when i see like tv and eating, my mind thinks [its all dream] ..."
+T0580 | A02 | phrase: "all the places he had been now seemed like dreams" | context: "All the things he had accomplished, [all the places he had been now seemed like dreams], acted out by someone else."
+T0487 | A02 | phrase: "i was in a dream" | context: "it felt like nothing was real, [i was in a dream]."
+T0232 | A02 | phrase: "the world looks like a dream" | context: "... as 'I feel as if I have become a robot' or '[the world looks like a dream]'."
+T0530 | A02 | phrase: "not able to pick out one specific item in the scenario that carries the dreamlikeness" | context: "... like to say that the whole situation was dreamlike and we are [not able to pick out one specific item in the scenario that carries the dreamlikeness]."
+T0235 | A02 | phrase: "akin to living in a dream" | context: "... is a loss or lack of reality, which participants could describe as [akin to living in a dream], being trapped in a bubble, or lost in space."
+T0205 | A02 | phrase: "as if they are living in dreams" | context: "They feel [as if they are living in dreams], which feel different from ordinary and familiar reality (Simeon and Abugel, ..."
+T0722 | A02 | phrase: "like if I were in a dream" | context: "... people do not exist and even doubt about my existence at all, [like if I were in a dream]."
+T0682 | A02 | phrase: "a dream" | context: "... your surroundings for example, like you are living in a movie or [a dream]; feeling emotionally disconnected from people you care about, as if you ..." | context: "... that occurred since developing DPDR, recent events have the quality of imagination, [a dream], or a fictional narrative, not something immediately lived."
+T0867 | A02 | phrase: "dreams feel more real than waking life" | context: "My most treasured memories are now so dulled—[dreams feel more real than waking life]."
+T0783 | A02 | phrase: "feeling as if in a dream" | context: "Indeed, [feeling as if in a dream] is one of the more common complaints among depersonalized patients."
+T0883 | A02 | phrase: "life being real or a dream" | context: "... and obsess about what it is like to have no self, about [life being real or a dream], the nature of existence, and all the possible implications of their ..."
+T0145 | A02 | phrase: "in a dream" | context: "... on, derealization feels great and i just feel like i'm tripping or [in a dream]." | context: "i feel robotic and feels like I am [in a dream]."

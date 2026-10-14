@@ -1,0 +1,129 @@
+text_id,text,axis_claude,group_claude,name_claude,axis_chatgpt,group_chatgpt,name_chatgpt,n_phrases,text_class,options,decision,comment,pair_count
+T0025,fascinated by their physical properties,A15,G15,"heightened, vivid, more real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A15 / none / none / another axis_id,none,"attention to things (fascination), no quality of their appearance",17
+T0039,not just looking at a flower arrangement,A15,G15,"heightened, vivid, more real",none,NOT_WORLD,NOT_WORLD,1,vision,A15 / none / none / another axis_id,none,no quality stated,17
+T0049,that was the real flower,A15,G15,"heightened, vivid, more real",none,NOT_WORLD,NOT_WORLD,1,vision,A15 / none / none / another axis_id,none,'real' without context; no quality of appearance,17
+T0179,“for real”,A15,G15,"heightened, vivid, more real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A15 / none / none / another axis_id,none,no quality stated,17
+T0247,a repeated flow from beauty to heightened beauty,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,vision,A15 / none / none / another axis_id,A15,heightened beauty,17
+T0331,exaggerated three-dimensionality,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,vision,A15 / none / none / another axis_id,A15,exaggerated depth: more intense than usual (opposite of A11),17
+T0398,an increased awareness of space itself,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,not_specific,A15 / none / none / another axis_id,none,"awareness (attention), not appearance",17
+T0411,vibrant colors,A15,G15,"heightened, vivid, more real",none,G21,altered colors,1,vision,A15 / none / none / another axis_id,A15,vibrant colours,17
+T0463,"deeply absorbed, almost hypnotized, by a concert poster on her bedroom wall",A15,G15,"heightened, vivid, more real",none,NOT_WORLD,NOT_WORLD,1,vision,A15 / none / none / another axis_id,none,"absorption (attention), not appearance",17
+T0499,"the miracle, moment by moment of naked existence",A15,G15,"heightened, vivid, more real",none,G70,marveling at existence,1,vision,A15 / none / none / another axis_id,none,"wonder at existence (chatgpt G70, left out of the axes)",17
+T0566,their living light,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,vision,A15 / none / none / another axis_id,A15,luminous,17
+T0642,as direct as the experience of a red apple on the table,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,vision,A15 / none / none / another axis_id,none,"a comparison about directness, no quality",17
+T0655,"sounds, tastes, textures, smells, colors, and general brightness could all feel more intense or less intense than usual",A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,mixed,A15 / none / none / another axis_id,none,"more OR less intense, several senses: no single direction",17
+T0696,a Van Gogh-like intensity,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,vision,A15 / none / none / another axis_id,A15,intensity,17
+T0805,simply marveling at their existence,A15,G15,"heightened, vivid, more real",none,G70,marveling at existence,1,not_specific,A15 / none / none / another axis_id,none,"wonder at existence (chatgpt G70, left out of the axes)",17
+T0989,there’s a sense of reality there,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,not_specific,A15 / none / none / another axis_id,none,vague,17
+T1087,especially and unusually lively,A15,G15,"heightened, vivid, more real",none,OTHER,OTHER,1,not_specific,A15 / none / none / another axis_id,A15,unusually lively,17
+T0003,the memories of the unreal things seem unreal as well,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,"memories, not the present world",16
+T0069,made of cellophane,A01,G01,"unreal, not real",none,OTHER,OTHER,1,mixed,A01 / none / none / another axis_id,A01,artificial material,16
+T0105,even though it’s doesn’t feel like it,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,no quality stated,16
+T0278,the “unreal” aspect of his mourning process,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,"a process of mourning, not the world",16
+T0281,detached or unreal,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,A01,"generic 'unreal', like the agreed 'unreal' texts",16
+T0319,disappeared,A01,G01,"unreal, not real",none,OTHER,OTHER,1,not_specific,A01 / none / none / another axis_id,none,ambiguous,16
+T0528,machinations of my own mind,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,"about the mind, not the world",16
+T0554,her experiences feel unreal,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,"experiences, not the world",16
+T0568,the quality of imagination,A01,G01,"unreal, not real",none,OTHER,OTHER,1,not_specific,A01 / none / none / another axis_id,none,ambiguous without context,16
+T0585,all excitedly pursuing pure chimeras,A01,G01,"unreal, not real",none,OTHER,OTHER,1,not_specific,A01 / none / none / another axis_id,none,"others' illusions, not the world's appearance",16
+T0799,the world were made of cellophane or glass,A01,G01,"unreal, not real",none,OTHER,OTHER,1,mixed,A01 / none / none / another axis_id,A01,world made of artificial material,16
+T0860,without substance,A01,G01,"unreal, not real",none,OTHER,OTHER,1,not_specific,A01 / none / none / another axis_id,A01,insubstantial,16
+T0907,nothing terrible is really happening,A01,G01,"unreal, not real",none,OTHER,OTHER,1,not_specific,A01 / none / none / another axis_id,none,appraisal of events,16
+T0947,feels unreal that he isn’t around any more,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,grief about a person's absence,16
+T1037,nothing bad really happened,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,not_specific,A01 / none / none / another axis_id,none,appraisal of events,16
+T1078,like there is a zipper to unzip,A01,G01,"unreal, not real",none,NOT_WORLD,NOT_WORLD,1,vision,A01 / none / none / another axis_id,A01,"world as a removable cover, fake",16
+T0004,I couldn’t remember it was a root anymore,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,not_specific,A20 / none / none / another axis_id,A20,the thing lost its name,11
+T0037,this aperture is making that,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,mixed,A20 / none / none / another axis_id,A20,a mouth seen as an aperture: stripped of meaning,11
+T0054,see but do not comprehend,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,vision,A20 / none / none / another axis_id,A20,seen but not understood,11
+T0102,with them the significance of things,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,not_specific,A20 / none / none / another axis_id,none,fragment; direction unclear,11
+T0231,without words,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,not_specific,A20 / none / none / another axis_id,none,ambiguous,11
+T0490,difficulty identifying the shape or sound that one is perceiving,A20,G20,"meaningless, things without names",none,OTHER,OTHER,1,mixed,A20 / none / none / another axis_id,A20,cannot identify what is perceived,11
+T0575,the way her mouth was moving,A20,G20,"meaningless, things without names",none,OTHER,OTHER,1,vision,A20 / none / none / another axis_id,none,no quality stated,11
+T0669,They are there,A20,G20,"meaningless, things without names",none,OTHER,OTHER,2,not_specific,A20 / none / none / another axis_id,none,ambiguous without context,11
+T0730,I could no longer see the words on the page,A20,G20,"meaningless, things without names",none,OTHER,OTHER,1,vision,A20 / none / none / another axis_id,none,reading failure,11
+T1091,difficulties understanding speech or written language,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,not_specific,A20 / none / none / another axis_id,none,"language comprehension, not the world",11
+T1131,words cant properly describe them,A20,G20,"meaningless, things without names",none,NOT_WORLD,NOT_WORLD,1,not_specific,A20 / none / none / another axis_id,none,ineffability,11
+T0213,distorted vision,none,OTHER,OTHER,A12,G20,visually distorted,3,vision,none / A12 / none / another axis_id,A12,visual distortion,10
+T0434,closer than they really were,none,OTHER,OTHER,A12,G20,visually distorted,1,mixed,none / A12 / none / another axis_id,A12,wrong distance,10
+T0635,visually distorted,none,OTHER,OTHER,A12,G20,visually distorted,1,vision,none / A12 / none / another axis_id,A12,visual distortion,10
+T0744,upside down,none,OTHER,OTHER,A12,G20,visually distorted,1,mixed,none / A12 / none / another axis_id,none,"orientation, possibly figurative; not size, distance or shape",10
+T0928,to abolish distances,none,OTHER,OTHER,A12,G20,visually distorted,1,vision,none / A12 / none / another axis_id,A12,distances altered,10
+T0949,shapes may look different,none,G18,"different, changed, altered",A12,G20,visually distorted,1,vision,none / A12 / none / another axis_id,A12,shapes look different,10
+T0981,inside out,none,OTHER,OTHER,A12,G20,visually distorted,1,mixed,none / A12 / none / another axis_id,none,"orientation, possibly figurative",10
+T1048,problems with the accurate perception of distances,none,OTHER,OTHER,A12,G20,visually distorted,1,not_specific,none / A12 / none / another axis_id,A12,distances misperceived,10
+T1139,Visual distortions,none,OTHER,OTHER,A12,G20,visually distorted,2,vision,none / A12 / none / another axis_id,A12,visual distortion,10
+T1140,Everything seemed to be dissolving right in front of my eyes,none,OTHER,OTHER,A12,G20,visually distorted,1,vision,none / A12 / none / another axis_id,none,"dissolving: no axis fits (not size, distance or shape; not fog)",10
+T0112,watching herself as if she were in a movie with the sound turned down,A03,G03,"movie, picture, film set",none,NOT_WORLD,NOT_WORLD,1,not_specific,A03 / none / none / another axis_id,none,watching herself: about the self (chatgpt NOT_WORLD),9
+T0122,looking at a “picture”,A03,G03,"movie, picture, film set",none,OTHER,OTHER,1,vision,A03 / none / none / another axis_id,A03,picture,9
+T0170,like camera vision,A03,G03,"movie, picture, film set",none,OTHER,OTHER,1,vision,A03 / none / none / another axis_id,A03,seeing as through a camera,9
+T0605,as if I were looking at a picture,A03,G03,"movie, picture, film set",none,OTHER,OTHER,2,vision,A03 / none / none / another axis_id,A03,picture,9
+T0908,picture,A03,G03,"movie, picture, film set",none,OTHER,OTHER,2,vision,A03 / none / none / another axis_id,A03,picture,9
+T0992,kind of like a camera,A03,G03,"movie, picture, film set",none,OTHER,OTHER,1,vision,A03 / none / none / another axis_id,A03,seeing as through a camera,9
+T1030,seems just a painted picture,A03,G03,"movie, picture, film set",none,OTHER,OTHER,1,vision,A03 / none / none / another axis_id,A03,painted picture,9
+T1046,a fictional narrative,A03,G03,"movie, picture, film set",none,OTHER,OTHER,1,not_specific,A03 / none / none / another axis_id,A03,world as a scripted story,9
+T1135,the whole world is a work of art,A03,G03,"movie, picture, film set",none,G70,marveling at existence,1,not_specific,A03 / none / none / another axis_id,A03,world as a work of art,9
+T0177,people seemed to move like shadows,A22,G22,"others as robots, automatons",none,OTHER,OTHER,1,vision,A22 / none / none / another axis_id,A22,people move like shadows,8
+T0348,don’t look at people as people anymore,A22,G22,"others as robots, automatons",none,OTHER,OTHER,1,not_specific,A22 / none / none / another axis_id,A22,people not seen as people,8
+T0507,clones,A22,G22,"others as robots, automatons",none,OTHER,OTHER,2,mixed,A22 / none / none / another axis_id,A22,clones,8
+T0531,talking to her dolls,A22,G22,"others as robots, automatons",none,NOT_WORLD,NOT_WORLD,1,not_specific,A22 / none / none / another axis_id,none,ambiguous without context,8
+T0688,appear to lose their immediate sense of humanity,A22,G22,"others as robots, automatons",none,OTHER,OTHER,1,not_specific,A22 / none / none / another axis_id,A22,people lose their humanity,8
+T0854,others do not experience emotion,A22,G22,"others as robots, automatons",none,OTHER,OTHER,1,not_specific,A22 / none / none / another axis_id,A22,others seem not to feel (definition: not feeling beings),8
+T0924,mechanical,A22,G22,"others as robots, automatons",none,OTHER,OTHER,2,not_specific,A22 / none / none / another axis_id,A22,CHECK context: assumed to be about people,8
+T1012,inanimate objects,A22,G22,"others as robots, automatons",none,OTHER,OTHER,1,not_specific,A22 / none / none / another axis_id,A22,CHECK context: assumed to be people as inanimate objects,8
+T0189,seeping through the pores of every face I gazed upon,A34,G34,"frightening, sinister, repulsive",none,OTHER,OTHER,1,vision,A34 / none / none / another axis_id,A34,CHECK context: something sinister seen in faces,6
+T0289,which frightened me,A34,G34,"frightening, sinister, repulsive",none,NOT_WORLD,NOT_WORLD,1,not_specific,A34 / none / none / another axis_id,none,"the person's fear, not a quality of the world",6
+T0438,something disturbing and depersonalizing,A34,G34,"frightening, sinister, repulsive",none,NOT_WORLD,NOT_WORLD,1,not_specific,A34 / none / none / another axis_id,none,vague,6
+T0623,the universe can be transfigured—but for the worse,A34,G34,"frightening, sinister, repulsive",none,OTHER,OTHER,1,not_specific,A34 / none / none / another axis_id,A34,the world transfigured for the worse,6
+T0639,frightening experiences,A34,G34,"frightening, sinister, repulsive",none,NOT_WORLD,NOT_WORLD,1,not_specific,A34 / none / none / another axis_id,none,the person's experiences,6
+T0917,intensify the horrible sensation,A34,G34,"frightening, sinister, repulsive",none,NOT_WORLD,NOT_WORLD,2,mixed,A34 / none / none / another axis_id,none,"a sensation, not the world",6
+T0357,impossible for the mind to perceive or retain any individuality,none,OTHER,OTHER,A45,G67,distinctness and differences lost,1,vision,none / A45 / none / another axis_id,A45,individuality lost,5
+T0728,the object’s distinctness was lost to my mind,none,OTHER,OTHER,A45,G67,distinctness and differences lost,1,vision,none / A45 / none / another axis_id,A45,distinctness lost,5
+T0792,difficulty seeing distinctions between separate objects,none,OTHER,OTHER,A45,G67,distinctness and differences lost,1,vision,none / A45 / none / another axis_id,A45,distinctions between objects lost,5
+T1051,were all losing their differences,none,OTHER,OTHER,A45,G67,distinctness and differences lost,1,vision,none / A45 / none / another axis_id,A45,differences lost,5
+T1104,what I saw first was how they were one,none,OTHER,OTHER,A45,G67,distinctness and differences lost,1,vision,none / A45 / none / another axis_id,A45,things seen as one,5
+T0070,head in a fog,A07,G07,"fog, blurry, hazy",none,NOT_WORLD,NOT_WORLD,1,vision,A07 / none / none / another axis_id,none,"mental fog, about the self",4
+T0680,unclear,A07,G07,"fog, blurry, hazy",none,OTHER,OTHER,1,vision,A07 / none / none / another axis_id,A07,unclear (vision),4
+T0692,shadowy,A07,G07,"fog, blurry, hazy",none,OTHER,OTHER,1,vision,A07 / none / none / another axis_id,A07,"shadowy, indistinct",4
+T0933,indefinite,A07,G07,"fog, blurry, hazy",none,OTHER,OTHER,1,vision,A07 / none / none / another axis_id,A07,indefinite (vision),4
+T0250,unreal and somehow nightmarish,A34,G34,"frightening, sinister, repulsive",A16,G63,"eerie, uncanny, nightmarish",1,mixed,A34 / A16 / none / another axis_id,A34,nightmarish,4
+T1001,the town transitions from fog world to nightmare world,A34,G34,"frightening, sinister, repulsive",A16,G63,"eerie, uncanny, nightmarish",1,not_specific,A34 / A16 / none / another axis_id,A34,nightmare world,4
+T1067,unspeakably sinister,A34,G34,"frightening, sinister, repulsive",A16,G63,"eerie, uncanny, nightmarish",1,not_specific,A34 / A16 / none / another axis_id,A34,sinister,4
+T1085,cast a ghoulish haze on all the merchandise,A34,G34,"frightening, sinister, repulsive",A16,G63,"eerie, uncanny, nightmarish",1,vision,A34 / A16 / none / another axis_id,A34,ghoulish,4
+T0223,widened,A12,G12,altered size of objects,none,OTHER,OTHER,1,vision,A12 / none / none / another axis_id,A12,space widened,3
+T0816,size of objects,A12,G12,altered size of objects,none,OTHER,OTHER,2,vision,A12 / none / none / another axis_id,A12,size of objects,3
+T0991,space expanding,A12,G12,altered size of objects,none,OTHER,OTHER,1,not_specific,A12 / none / none / another axis_id,A12,space expanding,3
+T0124,everything I look at just gives me the same experiences of blackness,A14,G14,"lifeless, dead, empty",none,OTHER,OTHER,1,vision,A14 / none / none / another axis_id,A14,CHECK context: blackness as void (A13 if it means darkness),3
+T0365,“black hole”,A14,G14,"lifeless, dead, empty",none,OTHER,OTHER,1,not_specific,A14 / none / none / another axis_id,none,"metaphor, likely about the self",3
+T0840,cold,A14,G14,"lifeless, dead, empty",none,OTHER,OTHER,2,not_specific,A14 / none / none / another axis_id,none,ambiguous,3
+T0473,a strange stillness,A16,G16,"strange, foreign, uncanny",none,OTHER,OTHER,1,not_specific,A16 / none / none / another axis_id,A16,strange stillness,3
+T0620,dystonic self and world-perceptions,A16,G16,"strange, foreign, uncanny",none,OTHER,OTHER,1,not_specific,A16 / none / none / another axis_id,none,"clinical term, self and world",3
+T0954,egodystonic inner/outer states,A16,G16,"strange, foreign, uncanny",none,NOT_WORLD,NOT_WORLD,1,not_specific,A16 / none / none / another axis_id,none,"clinical term, inner and outer states",3
+T0450,intending one harm in some way,A24,G24,"others watching, threatening",A34,G41,"threatening, unsafe",1,not_specific,A24 / A34 / none / another axis_id,A24,"others' intentions (social), not the scene's look",3
+T0492,others as threatening,A24,G24,"others watching, threatening",A34,G41,"threatening, unsafe",1,not_specific,A24 / A34 / none / another axis_id,A24,others as threatening (social),3
+T0915,close contact with others could infect,A24,G24,"others watching, threatening",A34,G41,"threatening, unsafe",1,not_specific,A24 / A34 / none / another axis_id,A24,fear of contagion from others (social),3
+T0604,our access to the landscape more “opaque”,A05,G05,"veil, glass wall, barrier",A08,G57,not directly presented,1,vision,A05 / A08 / none / another axis_id,A05,opaque access to the landscape: a layer in between,2
+T0727,less transparent,A05,G05,"veil, glass wall, barrier",A08,G57,not directly presented,1,not_specific,A05 / A08 / none / another axis_id,A05,less transparent: a layer in between,2
+T0327,estranged perceptions,A16,G16,"strange, foreign, uncanny",A17,G06,look unfamiliar,1,not_specific,A16 / A17 / none / another axis_id,A16,estranged,2
+T0339,foreign,A16,G16,"strange, foreign, uncanny",A17,G06,look unfamiliar,1,mixed,A16 / A17 / none / another axis_id,A16,foreign,2
+T0459,out of this world,A16,G16,"strange, foreign, uncanny",A31,G54,alternate realities,1,not_specific,A16 / A31 / none / another axis_id,A16,"alien, otherworldly look",2
+T0460,as if from another world,A16,G16,"strange, foreign, uncanny",A31,G54,alternate realities,1,not_specific,A16 / A31 / none / another axis_id,A16,"alien, otherworldly look",2
+T0023,getting lost in familiar places,A17,G17,familiar looks unfamiliar,none,NOT_WORLD,NOT_WORLD,1,not_specific,A17 / none / none / another axis_id,A17,familiar places not recognised,2
+T0393,extraordinary new,A17,G17,familiar looks unfamiliar,none,OTHER,OTHER,1,mixed,A17 / none / none / another axis_id,A17,as if new,2
+T0408,Everything besides my limbs feel like they don’t have much of a presence,A01,G01,"unreal, not real",A08,G57,not directly presented,1,not_specific,A01 / A08 / none / another axis_id,A01,things lack presence,1
+T0072,Like Inception but in real life,A02,G02,"dreamlike, in a dream",none,OTHER,OTHER,1,not_specific,A02 / none / none / another axis_id,A02,dream within reality,1
+T0942,some sort of Truman Show plot,A03,G03,"movie, picture, film set",A04,G03,simulation or video game,1,not_specific,A03 / A04 / none / another axis_id,A03,"a staged set (Truman Show), not a simulation",1
+T0306,the cracked window itself as a visible observable entity,A05,G05,"veil, glass wall, barrier",none,OTHER,OTHER,1,vision,A05 / none / none / another axis_id,A05,the pane itself becomes visible,1
+T0251,ungraspable world,A10,G10,"far away, distant",none,OTHER,OTHER,1,not_specific,A10 / none / none / another axis_id,A10,out of reach,1
+T0657,dimensionality,A11,G11,"flat, two-dimensional",none,OTHER,OTHER,1,vision,A11 / none / none / another axis_id,none,direction unknown (more or less depth),1
+T0225,all visual objects either faded from the mind,A13,G13,"dull, less vivid, colorless",none,NOT_WORLD,NOT_WORLD,1,vision,A13 / none / none / another axis_id,none,"mental imagery or memory, not the world",1
+T0476,as if a veil has been lifted,A15,G15,"heightened, vivid, more real",A01,G69,behind everyday appearances,1,vision,A15 / A01 / none / another axis_id,A15,"veil lifted: clearer, more real",1
+T0326,the grey-green creases of the bark,A15,G15,"heightened, vivid, more real",A20,G66,shapes and formal details,1,vision,A15 / A20 / none / another axis_id,A15,CHECK context: detailed texture (A20 if it describes things reduced to forms),1
+T0997,suppress in myself the results of the long education of sight,A20,G20,"meaningless, things without names",A15,G73,"more accurate, unfiltered",1,vision,A20 / A15 / none / another axis_id,A20,seeing without the learned meaning of things,1
+T0505,it refuses to go and put itself on the thing,A20,G20,"meaningless, things without names",A19,G33,world lacks emotional coloring,1,not_specific,A20 / A19 / none / another axis_id,A20,the word no longer attaches to the thing,1
+T0796,nearly indistinguishable from the real reality of the objective world,A31,G31,doubt in common-sense reality,A15,G49,more real,1,not_specific,A31 / A15 / none / another axis_id,A31,something indistinguishable from reality: reality doubt,1
+T0106,geometric patterns,A33,G33,seeing things not present,A20,G66,shapes and formal details,1,vision,A33 / A20 / none / another axis_id,A33,patterns seen that are not there,1
+T0469,orbs of light,A33,G33,seeing things not present,none,OTHER,OTHER,1,vision,A33 / none / none / another axis_id,A33,lights seen that are not there,1
+T0745,great black tree trunks,A34,G34,"frightening, sinister, repulsive",A20,G66,shapes and formal details,1,vision,A34 / A20 / none / another axis_id,none,"description, no quality stated",1
+T0135,beyond the veil of the day-to-day world,none,OTHER,OTHER,A01,G69,behind everyday appearances,1,not_specific,none / A01 / none / another axis_id,none,"a reality beyond appearances, not a quality of them",1
+T1127,being unsure about whether something was objectively perceived or simply imagined or thought,none,NOT_WORLD,NOT_WORLD,A02,G52,imagined or perceived,1,not_specific,none / A02 / none / another axis_id,A31,unsure whether perceived or imagined: reality doubt,1
+T0355,a ring enclosed what was the flower,none,OTHER,OTHER,A20,G66,shapes and formal details,1,vision,none / A20 / none / another axis_id,A20,"the flower seen as a ring, a bare shape",1

@@ -1,0 +1,176 @@
+phrase_id,doc_id,quote,state,sense,first_person,speaker,target,reason
+CIAUNICA2022-P0048,CIAUNICA2022,it just sounded like gibberish,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0100,CIAUNICA2022,sounds could seem distorted (especially human voices),altered,hearing,no,author_description,mixed|other_people|surroundings,non-visual sense only
+CIAUNICA2022-P0101,CIAUNICA2022,especially sensitive to background noises,altered,hearing,no,author_description,surroundings,non-visual sense only
+CIAUNICA2022-P0107,CIAUNICA2022,some textures may feel different,altered,touch,no,author_description,objects,non-visual sense only
+CIAUNICA2022-P0108,CIAUNICA2022,feeling dirty,altered,touch,no,author_description,objects,non-visual sense only
+CIAUNICA2022-P0109,CIAUNICA2022,less solid than reality,altered,touch,no,author_description,objects,non-visual sense only
+CIAUNICA2022-P0111,CIAUNICA2022,music sounded louder,altered,hearing,no,author_description,objects,non-visual sense only
+CIAUNICA2022-P0112,CIAUNICA2022,Sounds do seem to be louder for me than others I am with,altered,hearing,yes,participant_or_patient,surroundings,non-visual sense only
+CIAUNICA2022-P0116,CIAUNICA2022,difficulty identifying the direction or location of the origin of a sound,altered,hearing,no,author_description,perceptual_situation|surroundings,non-visual sense only
+CIAUNICA2022-P0117,CIAUNICA2022,sound like its coming from further away at a distance,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0119,CIAUNICA2022,sounds were not coming from the object that produced them,altered,hearing,no,author_description,objects,non-visual sense only
+CIAUNICA2022-P0145,CIAUNICA2022,external sounds were coming from inside their head (or mind),altered,hearing,no,author_description,perceptual_situation|surroundings,non-visual sense only
+CIAUNICA2022-P0150,CIAUNICA2022,i’m just imagining a voice talking to me,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0160,CIAUNICA2022,noises,altered,hearing,no,author_description,surroundings|unclear,non-visual sense only
+CIAUNICA2022-P0161,CIAUNICA2022,voices,altered,hearing,no,author_description,other_people|unclear,non-visual sense only
+CIAUNICA2022-P0162,CIAUNICA2022,smells,altered,other_sense,no,author_description,surroundings|unclear,non-visual sense only
+CIAUNICA2022-P0164,CIAUNICA2022,I only hear half of what is said to me,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0221,CIAUNICA2022,I’m just imagining a voice talking to me,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0238,CIAUNICA2022,I only hear half of what is said to me,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+CIAUNICA2022-P0240,CIAUNICA2022,The voice of those around me sometimes seems so loud,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+DILKES2024-P0022,DILKES2024,so realistic and detail sensitive,unclear,not_sense_specific,yes,participant_or_patient,surroundings,state not altered
+DILKES2024-P0025,DILKES2024,sounds far away and muffled,altered,hearing,yes,participant_or_patient,surroundings,non-visual sense only
+DILKES2024-P0062,DILKES2024,horrible vivid dreams,unclear,not_sense_specific,yes,participant_or_patient,surroundings,state not altered
+MIYAZONO2021-P0066,MIYAZONO2021,the muted silence,altered,hearing,yes,participant_or_patient,surroundings,non-visual sense only
+MIYAZONO2021-P0102,MIYAZONO2021,there is a veil in front of her,unclear,vision,no,author_description,perceptual_situation,state not altered
+MIYAZONO2021-P0110,MIYAZONO2021,a hallucination of a veil in front of her,unclear,vision,no,author_description,objects,state not altered
+MIYAZONO2021-P0116,MIYAZONO2021,a hallucinatory veil,unclear,vision,no,author_description,objects,state not altered
+MIYAZONO2021-P0142,MIYAZONO2021,the self within the world,unclear,not_sense_specific,no,other,perceptual_situation,state not altered
+MIYAZONO2021-P0143,MIYAZONO2021,How responsive was the environment,unclear,not_sense_specific,no,scale_or_questionnaire_item,surroundings,state not altered
+MIYAZONO2021-P0144,MIYAZONO2021,the visual aspects of the environment involve you,unclear,vision,no,scale_or_questionnaire_item,surroundings,state not altered
+MIYAZONO2021-P0145,MIYAZONO2021,aware were you of events occurring in the real world around you,unclear,not_sense_specific,no,scale_or_questionnaire_item,surroundings,state not altered
+PIENKOS2022-P0031,PIENKOS2022,the way the sound was that came out,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+PIENKOS2022-P0063,PIENKOS2022,the peculiar intonations of someone speaking,altered,hearing,no,author_description,other_people,non-visual sense only
+PIENKOS2022-P0066,PIENKOS2022,How weird that vowel sound is,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+PIENKOS2022-P0067,PIENKOS2022,How strange that sounds to me,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+PIENKOS2022-P0068,PIENKOS2022,that sound is coming from that person,altered,hearing,yes,participant_or_patient,other_people,non-visual sense only
+PIENKOS2022-P0079,PIENKOS2022,kindness,unclear,not_sense_specific,no,author_description,other_people,state not altered
+PIENKOS2022-P0080,PIENKOS2022,warmth from others,unclear,not_sense_specific,no,author_description,other_people,state not altered
+PIENKOS2022-P0160,PIENKOS2022,try to find where your real house is,unclear,not_sense_specific,yes,participant_or_patient,surroundings,state not altered
+RADOVIC2002-P0017,RADOVIC2002,remote and unreal,altered,hearing,no,scale_or_questionnaire_item,mixed|other_people,non-visual sense only
+RADOVIC2002-P0020,RADOVIC2002,things feel unreal,unclear,not_sense_specific,no,author_description,objects,state not altered
+RADOVIC2002-P0024,RADOVIC2002,it feels so unreal,unclear,not_sense_specific,no,other,unclear,state not altered
+RADOVIC2002-P0029,RADOVIC2002,distant and different,altered,hearing,yes,historical_case|participant_or_patient,other_people,non-visual sense only
+RADOVIC2002-P0036,RADOVIC2002,It feels unreal,unclear,not_sense_specific,no,other,unclear,state not altered
+RADOVIC2002-P0038,RADOVIC2002,the unreality is ascribed to things or events that we are familiar with,unclear,not_sense_specific,no,author_description,unclear,state not altered
+RADOVIC2002-P0044,RADOVIC2002,experienced as either real or unreal,unclear,not_sense_specific,no,author_description,surroundings|unclear,state not altered
+RADOVIC2002-P0045,RADOVIC2002,surreal or strange contents,unclear,not_sense_specific,no,author_description,surroundings|unclear,state not altered
+RADOVIC2002-P0046,RADOVIC2002,sense of reality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+RADOVIC2002-P0047,RADOVIC2002,unreality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+RADOVIC2002-P0048,RADOVIC2002,strangeness,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+RADOVIC2002-P0049,RADOVIC2002,atypicality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+RADOVIC2002-P0050,RADOVIC2002,feeling of unreality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+RADOVIC2002-P0051,RADOVIC2002,feel unreal,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIERRA2001-P0012,SIERRA2001,deathly quiet,altered,hearing,yes,historical_case,surroundings,non-visual sense only
+SIERRA2001-P0016,SIERRA2001,unreality affecting the auditory modality,altered,hearing,no,author_description,surroundings|unclear,non-visual sense only
+SIERRA2001-P0017,SIERRA2001,I hear you clearly,altered,hearing,yes,historical_case,other_people,non-visual sense only
+SIERRA2001-P0018,SIERRA2001,far away,altered,hearing,yes,historical_case,other_people,non-visual sense only
+SIERRA2001-P0019,SIERRA2001,distant,altered,hearing,yes,historical_case,other_people,non-visual sense only
+SIERRA2001-P0020,SIERRA2001,unreal,altered,hearing,yes,historical_case,other_people,non-visual sense only
+SIERRA2001-P0021,SIERRA2001,very remotely,altered,hearing,yes,historical_case,mixed,non-visual sense only
+SIERRA2001-P0022,SIERRA2001,no lessening of sound,altered,hearing,yes,historical_case,mixed,non-visual sense only
+SIERRA2001-P0023,SIERRA2001,unreality affecting the haptic modality,altered,touch,no,author_description,surroundings|unclear,non-visual sense only
+SIERRA2001-P0024,SIERRA2001,lacked vividness and reality,altered,touch,yes,historical_case,objects,non-visual sense only
+SIERRA2001-P0025,SIERRA2001,the flavour of meals is no longer accompanied by feelings of pleasure,altered,other_sense,no,author_description,objects,non-visual sense only
+SIERRA2001-P0026,SIERRA2001,it does not mean anything to me,altered,other_sense,yes,historical_case,objects|unclear,non-visual sense only
+SIERRA2001-P0028,SIERRA2001,it might have been dry bread,altered,other_sense,yes,historical_case,objects,non-visual sense only
+SIERRA2001-P0029,SIERRA2001,smells are no longer accompanied by feelings of pleasure,altered,other_sense,no,author_description,objects|unclear,non-visual sense only
+SIERRA2001-P0030,SIERRA2001,doesn’t smell pleasant any longer,altered,other_sense,yes,historical_case,objects,non-visual sense only
+SIERRA2001-P0031,SIERRA2001,no preference for the smell of these roses over the smell of cabbage cooking,altered,other_sense,yes,historical_case,objects,non-visual sense only
+SIMEON2023-P0003,SIMEON2023,rather normal,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0004,SIMEON2023,well adjusted,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0008,SIMEON2023,meaningless,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0059,SIMEON2023,Auditory distortions,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0060,SIMEON2023,muted,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0061,SIMEON2023,heightened,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0089,SIMEON2023,words seemed to come from a faraway world,altered,hearing,yes,historical_case,other_people|surroundings,non-visual sense only
+SIMEON2023-P0144,SIMEON2023,it also may seem unreal,unclear,not_sense_specific,no,author_description,unclear,state not altered
+SIMEON2023-P0160,SIMEON2023,The flavour of meals no longer gives me a feeling of pleasure or distaste,altered,other_sense,no,scale_or_questionnaire_item,objects,non-visual sense only
+SIMEON2023-P0161,SIMEON2023,unreal,altered,hearing,no,scale_or_questionnaire_item,other_people,non-visual sense only
+SIMEON2023-P0162,SIMEON2023,remote and unreal,altered,hearing,no,scale_or_questionnaire_item,other_people,non-visual sense only
+SIMEON2023-P0171,SIMEON2023,I cannot feel properly the objects that I touch with my hands,altered,touch,no,scale_or_questionnaire_item,objects,non-visual sense only
+SIMEON2023-P0172,SIMEON2023,The smell of things no longer gives me a feeling of pleasure or dislike,altered,other_sense,no,scale_or_questionnaire_item,objects,non-visual sense only
+SIMEON2023-P0190,SIMEON2023,almost deaf in the muted silence,altered,hearing,yes,participant_or_patient,surroundings,non-visual sense only
+SIMEON2023-P0204,SIMEON2023,my wine has turned to vinegar,altered,other_sense,yes,participant_or_patient,objects,non-visual sense only
+SIMEON2023-P0205,SIMEON2023,food to dry tasteless powder,altered,other_sense,yes,participant_or_patient,objects,non-visual sense only
+SIMEON2023-P0207,SIMEON2023,Food tastes very bland,altered,other_sense,yes,participant_or_patient,objects,non-visual sense only
+SIMEON2023-P0208,SIMEON2023,My voice sounds strange,altered,hearing,yes,participant_or_patient,perceptual_situation,non-visual sense only
+SIMEON2023-P0216,SIMEON2023,cut off,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0217,SIMEON2023,flattened,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0218,SIMEON2023,disengaged,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0245,SIMEON2023,Auditory distortions,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0246,SIMEON2023,muted,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0247,SIMEON2023,heightened,altered,hearing,no,diagnostic_criteria,mixed,non-visual sense only
+SIMEON2023-P0248,SIMEON2023,alterations in taste and smell,altered,other_sense,no,diagnostic_criteria,objects,non-visual sense only
+SIMEON2023-P0254,SIMEON2023,potential danger that her mother seemed to be sensing,unclear,not_sense_specific,no,author_description,perceptual_situation,state not altered
+SIMEON2023-P0268,SIMEON2023,seemed to fluster and confuse her,altered,hearing,yes,participant_or_patient,surroundings,non-visual sense only
+SIMEON2023-P0292,SIMEON2023,suddenly detached and uninvolved,unclear,not_sense_specific,no,author_description|participant_or_patient,other_people,state not altered
+SIMEON2023-P0293,SIMEON2023,distant and mechanical,unclear,not_sense_specific,no,author_description|participant_or_patient,other_people,state not altered
+SIMEON2023-P0318,SIMEON2023,as if his ears were plugged,altered,hearing,yes,participant_or_patient,perceptual_situation,non-visual sense only
+SIMEON2023-P0351,SIMEON2023,looks dazed,unclear,vision,no,author_description,other_people,state not altered
+SIMEON2023-P0387,SIMEON2023,"as it is, infinite",unclear,not_sense_specific,no,other,surroundings,state not altered
+SIMEON2023-P0388,SIMEON2023,a private hell severed from the world,unclear,not_sense_specific,no,author_description,perceptual_situation,state not altered
+SIMEON2023-P0389,SIMEON2023,frenetically intense stars,unclear,vision,no,author_description,objects,state not altered
+SIMEON2023-P0390,SIMEON2023,warped clocks,unclear,vision,no,author_description,objects,state not altered
+SIMEON2023-P0391,SIMEON2023,hyperreal pipe,unclear,vision,no,author_description,objects,state not altered
+SIMEON2023-P0439,SIMEON2023,Smell of ink,altered|ordinary,other_sense,no,other,objects,non-visual sense only
+SIMEON2023-P0440,SIMEON2023,the paper crumples between my fingers,altered,touch,no,other,objects,non-visual sense only
+SIMEON2023-P0441,SIMEON2023,smell of ink,altered|ordinary,other_sense,no,other,objects,non-visual sense only
+SIMEON2023-P0443,SIMEON2023,the pavement under my feet exists,altered,touch,no,other,surroundings,non-visual sense only
+SIMEON2023-P0453,SIMEON2023,it exists,altered,touch,no,other,objects,non-visual sense only
+SIMEON2023-P0469,SIMEON2023,a massive chestnut tree,unclear,vision,no,author_description,objects,state not altered
+SIMEON2023-P0487,SIMEON2023,largely indifferent,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0489,SIMEON2023,a beam of sunshine coming into it,unclear,vision,no,author_description,surroundings,state not altered
+SIMEON2023-P0490,SIMEON2023,"who looks outside, dreams",unclear,vision,no,other,perceptual_situation,state not altered
+SIMEON2023-P0512,SIMEON2023,a wintry landscape,unclear,vision,yes,historical_case,surroundings,state not altered
+SIMEON2023-P0547,SIMEON2023,intensity of music,altered,hearing,no,author_description,perceptual_situation|surroundings,non-visual sense only
+SIMEON2023-P0555,SIMEON2023,used light of someone’s spent life,unclear,vision,no,other,surroundings,state not altered
+SIMEON2023-P0557,SIMEON2023,caravans of sorrow,unclear,vision,no,other,surroundings,state not altered
+SIMEON2023-P0558,SIMEON2023,chasing my shadow down alleys,unclear,vision,no,other,surroundings,state not altered
+SIMEON2023-P0559,SIMEON2023,"in the spaces, there is fear",unclear,not_sense_specific,no,other,surroundings,state not altered
+SIMEON2023-P0560,SIMEON2023,in light part nightmare and part vision fleeing,unclear,vision,no,other,perceptual_situation,state not altered
+SIMEON2023-P0561,SIMEON2023,The voice rises on a storm of grackles,unclear,hearing,no,other,perceptual_situation,state not altered
+SIMEON2023-P0562,SIMEON2023,"half elegy, half serenade",unclear,hearing,no,other,perceptual_situation,state not altered
+SIMEON2023-P0572,SIMEON2023,crowded overstimulating settings,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0577,SIMEON2023,overstimulating places,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0591,SIMEON2023,emotional vividness,unclear,not_sense_specific,no,author_description,unclear,state not altered
+SIMEON2023-P0592,SIMEON2023,texture,unclear,touch,no,author_description,unclear,state not altered
+SIMEON2023-P0593,SIMEON2023,color,unclear,vision,no,author_description,unclear,state not altered
+SIMEON2023-P0602,SIMEON2023,conversations in the background that she was not interested in yet could not block out,altered|ordinary,hearing,no,author_description|participant_or_patient,other_people,non-visual sense only
+SIMEON2023-P0603,SIMEON2023,"the “noise,”",altered,hearing,no,author_description|participant_or_patient,other_people,non-visual sense only
+SIMEON2023-P0604,SIMEON2023,unbearable,altered,hearing,no,author_description|participant_or_patient,other_people,non-visual sense only
+SIMEON2023-P0605,SIMEON2023,all the noise around her that she wanted to filter out,altered|ordinary,hearing,no,author_description|participant_or_patient,surroundings,non-visual sense only
+SIMEON2023-P0608,SIMEON2023,presence or depersonalized absence,unclear,vision,no,author_description,other_people,state not altered
+SIMEON2023-P0613,SIMEON2023,criticized,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0614,SIMEON2023,disliked,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0615,SIMEON2023,more positive,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0624,SIMEON2023,the clarity of genuine reality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0629,SIMEON2023,unbearable reality,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0633,SIMEON2023,experienced in terms of being similar to the parental imagoes,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0634,SIMEON2023,A sense of dullness and dread,unclear,not_sense_specific,no,author_description,other_people,state not altered
+SIMEON2023-P0642,SIMEON2023,a false cyber world,unclear,not_sense_specific,yes,participant_or_patient,surroundings,state not altered
+SIMEON2023-P0645,SIMEON2023,appear Brady Bunch-style,unclear,vision,no,other,other_people,state not altered
+SIMEON2023-P0646,SIMEON2023,"no one comes through meaningfully, not even the speaker",unclear,vision,no,other,other_people,state not altered
+SIMEON2023-P0651,SIMEON2023,imitate reality,unclear,not_sense_specific,no,other,surroundings,state not altered
+SIMEON2023-P0654,SIMEON2023,‘as-if’ reality,unclear,not_sense_specific,no,other,perceptual_situation,state not altered
+SIMEON2023-P0656,SIMEON2023,experiential vividness,unclear,not_sense_specific,no,author_description,surroundings,state not altered
+SIMEON2023-P0661,SIMEON2023,a paradise lost,unclear,not_sense_specific,no,other,surroundings,state not altered
+SIMEON2023-P0666,SIMEON2023,twisted,unclear,not_sense_specific,no,other,mixed,state not altered
+SIMEON2023-P0681,SIMEON2023,her primary reality,unclear,not_sense_specific,no,author_description,perceptual_situation,state not altered
+SIMEON2023-P0682,SIMEON2023,sterile,unclear,not_sense_specific,no,other,objects,state not altered
+SIMEON2023-P0683,SIMEON2023,cold-blooded,unclear,not_sense_specific,no,other,objects,state not altered
+SIMEON2023-P0685,SIMEON2023,"eyes, icons lit to my pleasing",unclear,vision,no,other,objects,state not altered
+SIMEON2023-P0686,SIMEON2023,"so many eyes, like the scallop",unclear,vision,no,other,objects,state not altered
+SIMEON2023-P0687,SIMEON2023,thick core,unclear,vision,no,other,objects,state not altered
+SIMEON2023-P0690,SIMEON2023,not soft melt-in-the-mouth,unclear,other_sense,no,other,objects,state not altered
+SIMEON2023-P0691,SIMEON2023,A deluded stand-in for the many eyes of regret,unclear,not_sense_specific,no,other,objects,state not altered
+SIMEON2023-P0692,SIMEON2023,Your blue eye the blues.,unclear,vision,no,other,objects,state not altered
+SIMEON2023-P0693,SIMEON2023,Your green eye that of snakes.,unclear,vision,no,other,objects,state not altered
+SIMEON2023-P0694,SIMEON2023,the mixture of the real and the virtual,unclear,not_sense_specific,no,author_description,perceptual_situation,state not altered
+SIMEON2023-P0695,SIMEON2023,the line defining what’s real and what is not continues to blur,unclear,not_sense_specific,no,author_description,perceptual_situation|surroundings,state not altered
+TANAKA2018-P0025,TANAKA2018,bouncing up and down on a rubber floor,altered,other_sense|touch,yes,participant_or_patient,objects|surroundings,non-visual sense only
+TANAKA2018-P0037,TANAKA2018,an ‘other’,altered,touch,no,author_description,other_people,non-visual sense only
+TANAKA2018-P0038,TANAKA2018,an external force,altered,touch,no,author_description,unclear,non-visual sense only
+TANAKA2018-P0042,TANAKA2018,the actual touch on the chest,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0046,TANAKA2018,the actual touch on the back,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0049,TANAKA2018,stroked synchronously,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0056,TANAKA2018,virtual tactile stimuli that are spatially congruent with the location of it,altered,touch,no,author_description,perceptual_situation,non-visual sense only
+TANAKA2018-P0057,TANAKA2018,the quality of ‘here’,altered,touch,no,author_description,perceptual_situation,non-visual sense only
+TANAKA2018-P0063,TANAKA2018,the tactile sensation on it,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0064,TANAKA2018,‘here’ is temporarily transferred to the rubber hand,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0066,TANAKA2018,being touched on the virtual body,altered,touch,no,author_description,objects,non-visual sense only
+TANAKA2018-P0070,TANAKA2018,receiving the real tactile stimuli ‘here’,altered,touch,no,author_description,perceptual_situation,non-visual sense only
+TANAKA2018-P0071,TANAKA2018,the real tactile sensation is occurring ‘there’,altered,touch,no,author_description,perceptual_situation,non-visual sense only
+TANAKA2018-P0090,TANAKA2018,an implicit first-person perspective for the world or certain objects,unclear,not_sense_specific,no,author_description,perceptual_situation,state not altered
+TANAKA2018-P0091,TANAKA2018,"outer things or inner states, something is present for me",unclear,not_sense_specific,no,author_description,mixed,state not altered

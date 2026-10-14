@@ -1,0 +1,135 @@
+Below is a list of short CAPTIONS. Each completes the sentence
+
+    a scene that looks ___
+
+and describes one QUALITY: a way in which the world, places or objects can
+appear when perception is altered. The qualities are defined below.
+
+TASK
+For each caption, write 3 different COUNTERPARTS: captions that describe the
+same thing as it appears in ordinary perception, without the altered
+quality. Each counterpart must also complete "a scene that looks ___".
+
+RULES
+1. Change only the word or words that carry the quality. Keep every other
+   word, in the same order. Change at most two words; small words (a, the,
+   of, as, if, like, is, ...) do not count.
+2. Keep the same form: if the caption begins with "like" or "as if", so does
+   the counterpart; a single adjective is replaced by a single adjective.
+3. Describe ordinary perception, not the opposite extreme. If the quality is
+   a loss, the counterpart is the usual amount, not an excess; if it is an
+   excess, the counterpart is the usual amount, not a lack.
+4. No negation. Do not use not, no, never, nothing, none, without, or any
+   word ending in n't, and do not add un-, non- or in- to a word of the
+   caption. (If the caption itself contains a negation, replace that word
+   by its positive counterpart.)
+5. Be specific. The counterpart names the ordinary counterpart of THIS
+   caption's quality. Do not use words that could replace any quality, such
+   as normal, ordinary, usual, regular, everyday, fine or natural.
+6. The three counterparts must differ from each other. Put the one you find
+   best first.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; NOT from the list)
+- "thin and metallic"  ->  "full and fresh", "smooth and clean",
+  "rich and fresh"
+- "like water from a tin cup"  ->  "like water from a glass",
+  "like water from a jug", "like water from a clean cup"
+- Not acceptable: "not metallic" (negation), "delicious" (a general word,
+  not the counterpart of this quality), "like the best drink in the world"
+  (the opposite extreme).
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per caption,
+in the order of the list:
+[{"id": "A01-01", "counterparts": ["...", "...", "..."]}, ...]
+After the code block write the number of captions in the array and then the
+line: END OF BATCH 2
+
+QUALITIES
+A02 "dreamlike, in a dream": The world or one's life seems like a dream or like being in a dream.
+A03 "movie, picture, film set": The world appears as a film, picture or staged scene that is being viewed rather than lived.
+A04 "simulation, video game": The world seems to be a simulation, video game or other digital or virtual reality.
+A05 "veil, glass wall, barrier, bubble": Something like a veil, film, pane of glass, invisible wall or enclosing bubble seems to stand between the person and the world.
+
+THE CAPTIONS (batch 2 of 4)
+A02-27 | A02 | caption: "like the dream of a sleeping god"
+A02-28 | A02 | caption: "more like dreams than is usually the case"
+A03-01 | A03 | caption: "as if looking at a picture"
+A03-02 | A03 | caption: "like a movie"
+A03-03 | A03 | caption: "as if it were life played like a film in a cinema"
+A03-04 | A03 | caption: "as if picked up out of the real world and put down into a film set"
+A03-05 | A03 | caption: "as if real life seemed like a movie"
+A03-06 | A03 | caption: "as if the whole world is a work of art"
+A03-07 | A03 | caption: "like a camera"
+A03-08 | A03 | caption: "like a fictional narrative"
+A03-09 | A03 | caption: "like a painted picture"
+A03-10 | A03 | caption: "like a picture"
+A03-11 | A03 | caption: "like camera vision"
+A03-12 | A03 | caption: "like living in a movie"
+A03-13 | A03 | caption: "like some sort of Truman Show plot"
+A04-01 | A04 | caption: "as if in some fake, virtual reality"
+A04-02 | A04 | caption: "as if reality feels more like a vr headset"
+A04-03 | A04 | caption: "as if seen in a digital world"
+A04-04 | A04 | caption: "as if seen in a simulation"
+A04-05 | A04 | caption: "like a hologram"
+A04-06 | A04 | caption: "like a new virtual reality"
+A04-07 | A04 | caption: "like a really bad sims game"
+A04-08 | A04 | caption: "like a sims game"
+A04-09 | A04 | caption: "like a simulation"
+A04-10 | A04 | caption: "like a video game"
+A04-11 | A04 | caption: "like another layer of simulation"
+A04-12 | A04 | caption: "like being in a simulation"
+A04-13 | A04 | caption: "like being in a video game"
+A04-14 | A04 | caption: "like being inside a video game"
+A04-15 | A04 | caption: "like being unplugged from the matrix"
+A04-16 | A04 | caption: "like glitches in the system"
+A04-17 | A04 | caption: "like nonexistent virtuality"
+A04-18 | A04 | caption: "like other digital worlds"
+A04-19 | A04 | caption: "like playing a video game inside a video game"
+A04-20 | A04 | caption: "like playing the life game"
+A04-21 | A04 | caption: "like some sort of simulation"
+A04-22 | A04 | caption: "like the life game"
+A04-23 | A04 | caption: "like the matrix"
+A04-24 | A04 | caption: "like the unreal world of these simulations"
+A05-01 | A05 | caption: "as if seen through a veil"
+A05-02 | A05 | caption: "as if in a bubble"
+A05-03 | A05 | caption: "as if seen through a glass wall"
+A05-04 | A05 | caption: "as if seen through a screen"
+A05-05 | A05 | caption: "as if seen through an invisible wall"
+A05-06 | A05 | caption: "as if a deep veil is cast over everything"
+A05-07 | A05 | caption: "as if a glass screen has interposed itself"
+A05-08 | A05 | caption: "as if access to the landscape is more opaque"
+A05-09 | A05 | caption: "as if behind a foot thick steel barrier"
+A05-10 | A05 | caption: "as if enclosed in a kind of bubble"
+A05-11 | A05 | caption: "as if life is through a veil"
+A05-12 | A05 | caption: "as if sealed in plastic wrap"
+A05-13 | A05 | caption: "as if seen behind a cloudy glass wall permanently"
+A05-14 | A05 | caption: "as if seen through a barrier that separates me from reality"
+A05-15 | A05 | caption: "as if seen through a filter over the eyes"
+A05-16 | A05 | caption: "as if seen through a glass wall between the individual and the world around"
+A05-17 | A05 | caption: "as if seen through a glass wall between the individual and world around"
+A05-18 | A05 | caption: "as if seen through a glass wall that separates you from the world"
+A05-19 | A05 | caption: "as if seen through a screen or a film between the participant and the rest of the world"
+A05-20 | A05 | caption: "as if seen through a thin veil"
+A05-21 | A05 | caption: "as if seen through a veil between himself and the real world"
+A05-22 | A05 | caption: "as if seen through a veil between me and the outside world"
+A05-23 | A05 | caption: "as if seen through a veil interposed between one's self, body and the world"
+A05-24 | A05 | caption: "as if seen through a veil placed over your senses"
+A05-25 | A05 | caption: "as if seen through an invisible barrier between the self and the world"
+A05-26 | A05 | caption: "as if seen through an invisible barrier between themself and the world"
+A05-27 | A05 | caption: "as if seen through an invisible film"
+A05-28 | A05 | caption: "as if seen through an invisible wall between me and the things i love"
+A05-29 | A05 | caption: "as if seen through an obscuring barrier"
+A05-30 | A05 | caption: "as if seen through glass"
+A05-31 | A05 | caption: "as if seen through something like a veil"
+A05-32 | A05 | caption: "as if seen through the window"
+A05-33 | A05 | caption: "as if seen through this veil between your eyes and the real world"
+A05-34 | A05 | caption: "as if separated by a glass wall"
+A05-35 | A05 | caption: "as if separated from reality by a protective covering"
+A05-36 | A05 | caption: "as if separated from the world by an invisible barrier"
+A05-37 | A05 | caption: "as if something stands in the way"
+A05-38 | A05 | caption: "as if surrounded by a glass wall"
+A05-39 | A05 | caption: "as if surrounded by an invisible wall"
+A05-40 | A05 | caption: "as if the invisible envelope surrounding him was starting to melt"
+A05-41 | A05 | caption: "as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world"

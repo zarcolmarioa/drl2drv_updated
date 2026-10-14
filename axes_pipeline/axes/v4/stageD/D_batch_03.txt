@@ -1,0 +1,136 @@
+Below is a list of short CAPTIONS. Each completes the sentence
+
+    a scene that looks ___
+
+and describes one QUALITY: a way in which the world, places or objects can
+appear when perception is altered. The qualities are defined below.
+
+TASK
+For each caption, write 3 different COUNTERPARTS: captions that describe the
+same thing as it appears in ordinary perception, without the altered
+quality. Each counterpart must also complete "a scene that looks ___".
+
+RULES
+1. Change only the word or words that carry the quality. Keep every other
+   word, in the same order. Change at most two words; small words (a, the,
+   of, as, if, like, is, ...) do not count.
+2. Keep the same form: if the caption begins with "like" or "as if", so does
+   the counterpart; a single adjective is replaced by a single adjective.
+3. Describe ordinary perception, not the opposite extreme. If the quality is
+   a loss, the counterpart is the usual amount, not an excess; if it is an
+   excess, the counterpart is the usual amount, not a lack.
+4. No negation. Do not use not, no, never, nothing, none, without, or any
+   word ending in n't, and do not add un-, non- or in- to a word of the
+   caption. (If the caption itself contains a negation, replace that word
+   by its positive counterpart.)
+5. Be specific. The counterpart names the ordinary counterpart of THIS
+   caption's quality. Do not use words that could replace any quality, such
+   as normal, ordinary, usual, regular, everyday, fine or natural.
+6. The three counterparts must differ from each other. Put the one you find
+   best first.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; NOT from the list)
+- "thin and metallic"  ->  "full and fresh", "smooth and clean",
+  "rich and fresh"
+- "like water from a tin cup"  ->  "like water from a glass",
+  "like water from a jug", "like water from a clean cup"
+- Not acceptable: "not metallic" (negation), "delicious" (a general word,
+  not the counterpart of this quality), "like the best drink in the world"
+  (the opposite extreme).
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per caption,
+in the order of the list:
+[{"id": "A01-01", "counterparts": ["...", "...", "..."]}, ...]
+After the code block write the number of captions in the array and then the
+line: END OF BATCH 3
+
+QUALITIES
+A05 "veil, glass wall, barrier, bubble": Something like a veil, film, pane of glass, invisible wall or enclosing bubble seems to stand between the person and the world.
+A07 "fog, blurry, hazy": The world appears foggy, blurred, cloudy or indistinct.
+A11 "flat, two-dimensional": Objects, people or the world look flat and lacking depth.
+A13 "dull, less vivid, colorless": The world appears dimmed, faded or reduced in color, vividness and intensity.
+A14 "lifeless, dead, empty": The world or the things in it appear dead, lifeless, empty or void.
+
+THE CAPTIONS (batch 3 of 4)
+A05-42 | A05 | caption: "as if there was a veil between me and the outside world"
+A05-43 | A05 | caption: "as if there was a wall between me and the external world"
+A05-44 | A05 | caption: "as if there were a veil"
+A05-45 | A05 | caption: "as if there were a veil between me and the outside world"
+A05-46 | A05 | caption: "as if there were a veil in front of me"
+A05-47 | A05 | caption: "as if watched from inside a shell"
+A05-48 | A05 | caption: "less transparent"
+A05-49 | A05 | caption: "like a crack in the pane of glass"
+A05-50 | A05 | caption: "like a veil that was coming over the vision slowly"
+A05-51 | A05 | caption: "like a wall before me"
+A05-52 | A05 | caption: "like an invisible wall"
+A05-53 | A05 | caption: "like being behind a screen"
+A05-54 | A05 | caption: "like being in a bubble"
+A05-55 | A05 | caption: "like being trapped in a bubble"
+A05-56 | A05 | caption: "like glass over the eyes"
+A05-57 | A05 | caption: "like having a pane of glass"
+A05-58 | A05 | caption: "like I'm wearing glasses that I can't see through"
+A05-59 | A05 | caption: "like life watched from behind glass"
+A05-60 | A05 | caption: "like living in a bubble"
+A05-61 | A05 | caption: "like living in a clear bubble"
+A05-62 | A05 | caption: "like the cracked window itself as a visible observable entity"
+A05-63 | A05 | caption: "like the outer landscape perceived through the cracked window"
+A07-01 | A07 | caption: "as if seen in a fog"
+A07-02 | A07 | caption: "blurry"
+A07-03 | A07 | caption: "as if blinded by a mist"
+A07-04 | A07 | caption: "as if its clarity is hindered"
+A07-05 | A07 | caption: "as if navigating through fog in slow motion"
+A07-06 | A07 | caption: "as if objects were surrounded by a cloud"
+A07-07 | A07 | caption: "as if one's vision is blurred"
+A07-08 | A07 | caption: "as if seen in a visual fog"
+A07-09 | A07 | caption: "as if seen in fog"
+A07-10 | A07 | caption: "as if seen in the fog"
+A07-11 | A07 | caption: "as if seen through a fog"
+A07-12 | A07 | caption: "as if seen through a thick cloud"
+A07-13 | A07 | caption: "as if seen with blurry vision"
+A07-14 | A07 | caption: "as if the focus is never right"
+A07-15 | A07 | caption: "as if their vision is foggy"
+A07-16 | A07 | caption: "as if they are looking at the world through a fog"
+A07-17 | A07 | caption: "as if things look more or less foggy"
+A07-18 | A07 | caption: "blurry and foggy"
+A07-19 | A07 | caption: "cloudy"
+A07-20 | A07 | caption: "foggy"
+A07-21 | A07 | caption: "foggy and veiled"
+A07-22 | A07 | caption: "hazy"
+A07-23 | A07 | caption: "indefinite"
+A07-24 | A07 | caption: "like peering at the world through a fog"
+A07-25 | A07 | caption: "like someone has put dirty fingerprints on the sunglasses – but it is the eyes"
+A07-26 | A07 | caption: "like vague shapes"
+A07-27 | A07 | caption: "more blurred"
+A07-28 | A07 | caption: "shadowy"
+A07-29 | A07 | caption: "unclear"
+A07-30 | A07 | caption: "vague"
+A11-01 | A11 | caption: "flat"
+A11-02 | A11 | caption: "two-dimensional"
+A11-03 | A11 | caption: "as if external objects were flat"
+A11-04 | A11 | caption: "flat and two-dimensional"
+A11-05 | A11 | caption: "like objects or space being flattened"
+A11-06 | A11 | caption: "like the world becoming two dimensional"
+A13-01 | A13 | caption: "as if seen with attenuated perception"
+A13-02 | A13 | caption: "colorless"
+A13-03 | A13 | caption: "dull"
+A13-04 | A13 | caption: "duller"
+A13-05 | A13 | caption: "lacking in normal color and vividness"
+A13-06 | A13 | caption: "lacking in perceptual or emotional vividness"
+A13-07 | A13 | caption: "lacking in vibrancy or depth"
+A13-08 | A13 | caption: "less vivid"
+A13-09 | A13 | caption: "less vivid or intense"
+A13-10 | A13 | caption: "like things lacking vividness"
+A13-11 | A13 | caption: "reduced in intensity"
+A14-01 | A14 | caption: "as if emptiness was everywhere"
+A14-02 | A14 | caption: "as if everything looks lifeless"
+A14-03 | A14 | caption: "as if no living being was on earth"
+A14-04 | A14 | caption: "as if objects look dead"
+A14-05 | A14 | caption: "as if there was nothing on earth"
+A14-06 | A14 | caption: "as if with an emptiness to landscapes"
+A14-07 | A14 | caption: "dead"
+A14-08 | A14 | caption: "deathlike"
+A14-09 | A14 | caption: "empty"
+A14-10 | A14 | caption: "lifeless"
+A14-11 | A14 | caption: "like a detached void"

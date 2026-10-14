@@ -1,0 +1,14 @@
+{
+  "script": "v4_stageB_prepare.py",
+  "protocol": "1.3",
+  "created": "2026-10-05 15:21:30",
+  "n_pool": 1718,
+  "n_included": 1305,
+  "n_ordinary": 238,
+  "n_excluded": 175,
+  "n_texts": 1140,
+  "n_batches": 8,
+  "batch_size": 150,
+  "seed": 42,
+  "runtime_s": 0.4
+}

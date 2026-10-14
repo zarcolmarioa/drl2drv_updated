@@ -1,0 +1,11 @@
+axis_id,name,texts_before,texts_captioned,distinct_captions,dropped,open,all_texts,all_docs,all_first_person,all_kept,vision_texts,vision_docs,vision_first_person,vision_kept,not_specific_texts,not_specific_docs,not_specific_first_person,not_specific_kept
+A01,"unreal, fake, artificial",89,60,54,29,0,60,9,27,True,1,1,1,False,55,9,22,True
+A02,"dreamlike, in a dream",42,35,28,7,0,35,9,22,True,2,2,2,False,33,9,20,True
+A03,"movie, picture, film set",15,15,13,0,0,15,6,7,True,8,4,4,True,6,3,2,True
+A04,"simulation, video game",27,24,24,3,0,24,2,9,True,1,1,1,False,23,2,8,True
+A05,"veil, glass wall, barrier, bubble",78,73,63,5,0,73,7,43,True,20,4,12,True,47,7,26,True
+A07,"fog, blurry, hazy",33,33,30,0,0,33,7,17,True,24,6,15,True,8,6,1,True
+A11,"flat, two-dimensional",10,9,6,1,0,9,7,5,True,7,5,4,True,0,0,0,False
+A13,"dull, less vivid, colorless",12,11,11,1,0,11,7,2,True,4,4,2,False,7,3,0,False
+A14,"lifeless, dead, empty",15,14,14,1,0,14,7,11,True,4,5,5,False,9,5,5,True
+A15,"vivid, heightened",23,16,16,7,0,16,4,3,True,12,1,3,False,2,2,0,False

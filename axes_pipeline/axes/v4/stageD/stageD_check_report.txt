@@ -1,0 +1,74 @@
+STAGE D: COUNTERFACTUALS, FILTERS AND REVIEW (v4_protocol.md 1.10, section 6)
+==============================================================================
+Date: 2026-10-06 13:57
+Anchors: 243 in 9 axes; candidates: 1458 (1273 distinct within anchors)
+
+1. OUTPUT CHECKS (stageD_problems.csv)
+------------------------------------------------------------------------------
+  no problems: every anchor answered once, with 3 counterparts
+
+2. FILTERS (a candidate can fail several)
+------------------------------------------------------------------------------
+  pass: 1229 of 1273
+       39  edit
+        5  no word of the positive replaced
+        3  form changed
+  similarity band 0.50-0.92 (all-mpnet-base-v2): information only; outside it: 246; median 0.69
+
+3. AGREEMENT AND FLAGS (candidates that pass)
+------------------------------------------------------------------------------
+  proposed by both models: 184 candidates; anchors with at least one: 118 of 243
+  grammar       101
+  generic        65
+  shared word   349
+  clip_close     64
+  crowded        62
+  most shared words: clear (A05) 53; real (A01) 31; life (A02) 28; reality (A04) 24; world (A04) 23; air (A05) 18; open (A05) 13; daylight (A07) 11
+  CLIP pair cosine: median 0.922; clip_close: top 5% within length strata (overall cut 0.978); crowded: top 5% of crowding
+  most shared counterparts: 'clear' (10); 'distinct' (8); 'as if seen through open air' (7); 'as if seen through clear air' (6); 'as if seen through an open doorway' (5); 'like real life' (5); 'like the world' (4); 'crisp' (3)
+  anchors without any passing candidate: 1 (write your own negative or drop)
+
+4. REVIEW (stageD_review.csv)
+------------------------------------------------------------------------------
+  open: 0; problems in decisions: 0
+  your choice 231; your choice; dropped (negation not read by CLIP) 9; dropped by you 2; your negative 1
+  Check the suggestions, write a decision where you disagree, then set
+  ACCEPT_SUGGESTIONS = True and run again.
+
+5. NEGATION IN THE POSITIVE (D9): 18 anchors
+------------------------------------------------------------------------------
+  A01-04 kept    clip 0.974  cut 0.976 as if everything besides the limbs -> as if everything besides t
+  A01-10 kept    clip 0.961  cut 0.982 as if it is without substance      -> as if it is made of substa
+  A01-12 dropped clip 0.988  cut 0.985 as if none of this is real         -> as if all of this is real
+  A01-13 kept    clip 0.984  cut 0.985 as if nothing exists or is real    -> as if everything exists or
+  A01-14 dropped clip 0.989  cut 0.982 as if nothing is real              -> as if everything is real
+  A01-15 dropped clip 0.990  cut 0.982 as if nothing seems real           -> as if everything seems rea
+  A01-16 kept    clip 0.971  cut 0.976 as if other people, objects, and t -> as if other people, object
+  A01-17 dropped clip 0.982  cut 0.982 as if reality is not there         -> as if reality is plainly t
+  A01-21 dropped clip 0.991  cut 0.985 as if the things around don't feel -> as if the things around do
+  A01-28 dropped clip 0.994  cut 0.982 as if they don't seem real         -> as if they do seem real
+  A01-37 dropped clip 0.977  cut 0.976 like a copy of the real world but  -> like a part of the real wo
+  A01-39 kept    clip 0.982  cut 0.982 like nothing was real              -> like everything was real
+  A01-47 kept    clip 0.974  cut 0.982 not as real as before              -> just as real as before
+  A01-48 dropped clip 0.976  cut 0.974 not quite real                     -> clearly real
+  A05-58 dropped clip 0.994  cut 0.985 like I'm wearing glasses that I ca -> like I'm wearing glasses t
+  A07-14 kept    clip 0.956  cut 0.985 as if the focus is never right     -> as if the focus is distinc
+  A14-03 kept    clip 0.975  cut 0.985 as if no living being was on earth -> as if living beings were o
+  A14-05 kept    clip 0.970  cut 0.985 as if there was nothing on earth   -> as if life was on earth
+  cut-off: the least separated 5% of final pairs of similar length (words of the positive: 1-1, 2-3, 4-6, 7-10, 11-999)
+
+6. AXES (pairs and support; keeping rules as in Stage B)
+------------------------------------------------------------------------------
+    axis name                           anch. pairs open  D9 src docs  1st   kept all/vis/n-s
+    A01  unreal, fake, artificial          54    45    0   8   0    9   20   Y/-/Y
+    A02  dreamlike, in a dream             28    28    0   0   0    9   22   Y/-/Y
+    A03  movie, picture, film set          13    13    0   0   0    6    7   Y/Y/Y
+    A04  simulation, video game            24    24    0   0   0    2    9   Y/-/Y
+    A05  veil, glass wall, barrier, bu     63    61    0   1   0    7   40   Y/Y/Y
+    A07  fog, blurry, hazy                 30    30    0   0   0    7   17   Y/Y/Y
+    A11  flat, two-dimensional              6     6    0   0   0    7    5   Y/Y/-
+    A13  dull, less vivid, colorless       11    11    0   0   0    7    2   Y/-/-
+    A14  lifeless, dead, empty             14    14    0   0   0    7   11   Y/-/Y
+
+STAGE D COMPLETE: axes_v4.yaml written.
+Runtime 1.4 s

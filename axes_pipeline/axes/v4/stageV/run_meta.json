@@ -1,0 +1,76 @@
+{
+  "script": "v4_stageV_verify.py",
+  "protocol": "1.2",
+  "created": "2026-10-05 14:54:53",
+  "pdfs": {
+    "CIAUNICA2022": "Ciaunica et al (2022) - Exploration of self- and world-experiences in depersonalization traits.pdf",
+    "DILKES2024": "Dilkes (2024) - Metaphor use in depersonalization derealization.pdf",
+    "FINO2024": "Fino et al (2024) - Dispositional Traits, Characteristic Adaptations, and Narrative Identity Reconstructions in Individuals With Depersonalization and Derealization.pdf",
+    "MIYAZONO2021": "Miyazono (2021) - Visual Experience without Presentational Phenomenology.pdf",
+    "PIENKOS2022": "Pienkos et al (2022) - Robbed of my life The Felt Loss of Familiar and Engaged Presence in Depersonalization Derealization Disorder .pdf",
+    "RADOVIC2002": "Radovic et al (2002) -  Feelings of Unreality A Conceptual and Phenomenological Analysis of the Language of Depersonalization .pdf",
+    "SIERRA2001": "Sierra et al (2001) - The Phenomenological Stability of Depersonalization: Comparing the Old with the New.pdf",
+    "SIMEON2023": "Simeon et al (2023) - Feeling Unreal.pdf",
+    "TANAKA2018": "Tanaka (2018) - What is it like to be disconnected from the body.pdf"
+  },
+  "files_used": [
+    "stageA_chatgpt_CIAUNICA2022_pass1.json",
+    "stageA_chatgpt_CIAUNICA2022_pass2.json",
+    "stageA_chatgpt_DILKES2024_pass1.json",
+    "stageA_chatgpt_DILKES2024_pass2.json",
+    "stageA_chatgpt_FINO2024_pass1.json",
+    "stageA_chatgpt_FINO2024_pass2.json",
+    "stageA_chatgpt_MIYAZONO2021_pass1.json",
+    "stageA_chatgpt_MIYAZONO2021_pass2.json",
+    "stageA_chatgpt_PIENKOS2022_pass1.json",
+    "stageA_chatgpt_PIENKOS2022_pass2.json",
+    "stageA_chatgpt_RADOVIC2002_pass1.json",
+    "stageA_chatgpt_RADOVIC2002_pass2.json",
+    "stageA_chatgpt_SIERRA2001_pass1.json",
+    "stageA_chatgpt_SIERRA2001_pass2.json",
+    "stageA_chatgpt_SIMEON2023_pass1.json",
+    "stageA_chatgpt_TANAKA2018_pass1.json",
+    "stageA_chatgpt_TANAKA2018_pass2.json",
+    "stageA_claude_CIAUNICA2022_pass1.json",
+    "stageA_claude_CIAUNICA2022_pass2.json",
+    "stageA_claude_DILKES2024_pass1.json",
+    "stageA_claude_DILKES2024_pass2.json",
+    "stageA_claude_FINO2024_pass1.json",
+    "stageA_claude_FINO2024_pass2.json",
+    "stageA_claude_MIYAZONO2021_pass1.json",
+    "stageA_claude_MIYAZONO2021_pass2.json",
+    "stageA_claude_PIENKOS2022_pass1.json",
+    "stageA_claude_PIENKOS2022_pass2.json",
+    "stageA_claude_RADOVIC2002_pass1.json",
+    "stageA_claude_RADOVIC2002_pass2.json",
+    "stageA_claude_SIERRA2001_pass1.json",
+    "stageA_claude_SIERRA2001_pass2.json",
+    "stageA_claude_SIMEON2023_pass1.json",
+    "stageA_claude_TANAKA2018_pass1.json",
+    "stageA_claude_TANAKA2018_pass2.json"
+  ],
+  "files_ignored": [
+    "pilot"
+  ],
+  "settings": {
+    "page_window": 1,
+    "near_page_window": 2,
+    "near_match_min": 0.95,
+    "near_min_key": 6,
+    "single_pass": [
+      "SIMEON2023"
+    ]
+  },
+  "n_items": 2946,
+  "n_phrases": 1718,
+  "review": {
+    "rows": 52,
+    "open": 0
+  },
+  "kappa": {
+    "speaker": 0.9197423948923724,
+    "target": 0.7743428311959024,
+    "sense": 0.8455632809222986,
+    "state": 0.7771470069185239
+  }
+}

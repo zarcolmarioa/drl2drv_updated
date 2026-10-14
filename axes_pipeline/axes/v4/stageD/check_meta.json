@@ -1,0 +1,21 @@
+{
+  "script": "v4_stageD_check.py",
+  "protocol": "1.10",
+  "created": "2026-10-06 13:57:37",
+  "open": 0,
+  "sim_band": [
+    0.5,
+    0.92
+  ],
+  "sim_band_filter": false,
+  "clip_tail": 0.05,
+  "clip_cut_candidates": 0.9782853603363036,
+  "clip_cut_final": 0.9804174900054932,
+  "cola": [
+    0.5,
+    0.2
+  ],
+  "max_content_edit": 2,
+  "max_len_diff": 2,
+  "notes": {}
+}

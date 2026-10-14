@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TANAKA2018-029",
+    "quote": "feelings of ‘unreality’",
+    "context": "As we have difficulty explaining the feelings and touch of dreams, people also seem to have difficulty explaining feelings of ‘unreality’ of the symptoms.",
+    "pdf_page": 5,
+    "printed_page": "243",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "not stated whether unreality concerns world or self"
+  },
+  {
+    "id": "TANAKA2018-030",
+    "quote": "through which ‘I’ observe the whole reality",
+    "context": "However, they are compatible if the ‘self’ is reduced to a mere first-person perspective, through which ‘I’ observe the whole reality.",
+    "pdf_page": 11,
+    "printed_page": "249",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "'first-person' hyphen split across line break in PDF"
+  }
+]

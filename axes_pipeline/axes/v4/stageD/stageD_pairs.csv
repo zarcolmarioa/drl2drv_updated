@@ -1,0 +1,244 @@
+anchor_id,axis_id,positive,negative,how,negative_source,negation_in_positive,text_ids,phrase_ids,documents,text_classes,sim,clip_pair,stratum,clip_cut,d9_dropped,in_axes
+A01-01,A01,unreal,real,your choice,claude+chatgpt,,T0237;T0678;T0302;T1109;T0994;T0721,MIYAZONO2021-P0030;SIMEON2023-P0118;CIAUNICA2022-P0064;DILKES2024-P0009;MIYAZONO2021-P0074;PIENKOS2022-P0130;SIERRA2001-P0004;SIERRA2001-P0008;SIMEON2023-P0001;SIMEON2023-P0037;SIMEON2023-P0040;SIMEON2023-P0164;SIMEON2023-P0396;SIMEON2023-P0435;DILKES2024-P0001;DILKES2024-P0003;MIYAZONO2021-P0001;MIYAZONO2021-P0010;MIYAZONO2021-P0024;SIMEON2023-P0220;SIMEON2023-P0224;TANAKA2018-P0019;SIERRA2001-P0009;PIENKOS2022-P0002,CIAUNICA2022;DILKES2024;MIYAZONO2021;PIENKOS2022;SIERRA2001;SIMEON2023;TANAKA2018,not_specific,0.456,0.930,1-1,0.959,False,True
+A01-02,A01,as if the world feels unreal,as if the world feels real,your choice,claude+chatgpt,,T0993;T0626,CIAUNICA2022-P0023;RADOVIC2002-P0008,CIAUNICA2022;RADOVIC2002,not_specific,0.898,0.976,4-6,0.982,False,True
+A01-03,A01,artificial,genuine,your choice,claude+chatgpt,,T0298,DILKES2024-P0040;SIMEON2023-P0051;SIMEON2023-P0232,DILKES2024;SIMEON2023,not_specific,0.494,0.946,1-1,0.959,False,True
+A01-04,A01,as if everything besides the limbs feels like they don't have much of a presence,as if everything besides the limbs feels like they do have a perceptible presence,your choice,chatgpt,don't,T0408,CIAUNICA2022-P0179,CIAUNICA2022,not_specific,0.903,0.974,11-999,0.976,False,True
+A01-05,A01,as if everything is an illusion,as if everything is real,your choice,chatgpt,,T0086,DILKES2024-P0125,DILKES2024,not_specific,0.803,0.959,4-6,0.982,False,True
+A01-06,A01,as if everything seemed intensely unreal,as if everything seemed plainly real,your choice,claude+chatgpt,,T0884,SIMEON2023-P0315,SIMEON2023,not_specific,0.800,0.953,4-6,0.982,False,True
+A01-07,A01,as if everything seems unreal,as if everything seems real,your choice,claude+chatgpt,,T1106,SIMEON2023-P0670,SIMEON2023,not_specific,0.897,0.972,4-6,0.982,False,True
+A01-08,A01,as if it is making everything feel less real and more distant,as if it is making everything feel fully real and less distant,your choice,chatgpt,,T0714,PIENKOS2022-P0147,PIENKOS2022,not_specific,0.875,0.990,11-999,0.976,False,True
+A01-09,A01,as if it is somewhere on the border of the real and the unreal,as if it is somewhere in the realm of the real and the tangible,your choice,chatgpt,,T1111,SIMEON2023-P0628,SIMEON2023,not_specific,0.798,0.955,11-999,0.976,False,True
+A01-10,A01,as if it is without substance,as if it is made of substance,your choice,claude,without,T0860,SIMEON2023-P0398,SIMEON2023,not_specific,0.732,0.961,4-6,0.982,False,True
+A01-11,A01,as if it was all unreal,as if it was all real,your choice,claude+chatgpt,,T0504,SIMEON2023-P0258,SIMEON2023,not_specific,0.868,0.969,4-6,0.982,False,True
+A01-12,A01,as if none of this is real,as if all of this is real,your choice; dropped (negation not read by CLIP),claude+chatgpt,none,T0370,TANAKA2018-P0020,TANAKA2018,not_specific,0.957,0.988,7-10,0.985,True,False
+A01-13,A01,as if nothing exists or is real,as if everything exists or is real,your choice,claude+chatgpt,nothing,T1090,SIMEON2023-P0574,SIMEON2023,not_specific,0.952,0.984,7-10,0.985,False,True
+A01-14,A01,as if nothing is real,as if everything is real,your choice; dropped (negation not read by CLIP),claude+chatgpt,nothing,T0665,SIMEON2023-P0012,SIMEON2023,not_specific,0.922,0.989,4-6,0.982,True,False
+A01-15,A01,as if nothing seems real,as if everything seems real,your choice; dropped (negation not read by CLIP),claude+chatgpt,nothing,T0376,RADOVIC2002-P0007,RADOVIC2002,not_specific,0.911,0.990,4-6,0.982,True,False
+A01-16,A01,"as if other people, objects, and the world around them are not real","as if other people, objects, and the world around them are plainly real",your choice,claude,not,T0648,SIMEON2023-P0152,SIMEON2023,not_specific,0.865,0.971,11-999,0.976,False,True
+A01-17,A01,as if reality is not there,as if reality is plainly there,your choice; dropped (negation not read by CLIP),claude+chatgpt,not,T0720,PIENKOS2022-P0097,PIENKOS2022,not_specific,0.870,0.982,4-6,0.982,True,False
+A01-18,A01,as if seen in a place of unreality,as if seen in a place of reality,your choice,claude+chatgpt,,T0001,TANAKA2018-P0095,TANAKA2018,not_specific,0.877,0.964,7-10,0.985,False,True
+A01-19,A01,as if the outside world is unreal,as if the outside world is real,your choice,claude+chatgpt,,T0485,SIMEON2023-P0038;TANAKA2018-P0007,SIMEON2023;TANAKA2018,not_specific,0.937,0.966,7-10,0.985,False,True
+A01-20,A01,as if the present seems unreal,as if the present seems real,your choice,claude+chatgpt,,T1110,PIENKOS2022-P0111,PIENKOS2022,not_specific,0.922,0.980,4-6,0.982,False,True
+A01-21,A01,as if the things around don't feel real,as if the things around do feel real,your choice; dropped (negation not read by CLIP),claude+chatgpt,don't,T0401,DILKES2024-P0123,DILKES2024,not_specific,0.958,0.991,7-10,0.985,True,False
+A01-22,A01,as if the world around is unreal,as if the world around is real,your choice,claude+chatgpt,,T0178,FINO2024-P0007,FINO2024,not_specific,0.909,0.972,7-10,0.985,False,True
+A01-23,A01,as if the world around seems fake,as if the world around seems genuine,your choice,claude+chatgpt,,T0701,PIENKOS2022-P0114,PIENKOS2022,not_specific,0.809,0.968,7-10,0.985,False,True
+A01-24,A01,as if the world feels fake or deadened,as if the world feels genuine or alive,your choice,claude,,T0138,PIENKOS2022-P0009,PIENKOS2022,not_specific,0.840,0.971,7-10,0.985,False,True
+A01-25,A01,as if the world is unreal,as if the world is real,your choice,claude+chatgpt,,T0871,RADOVIC2002-P0066,RADOVIC2002,not_specific,0.909,0.968,4-6,0.982,False,True
+A01-26,A01,as if the world were made of cellophane or glass,as if the world were made of earth or stone,your choice,claude,,T0799,SIMEON2023-P0191,SIMEON2023,mixed,0.691,0.832,7-10,0.985,False,True
+A01-27,A01,as if these were unreal,as if these were real,your choice,claude+chatgpt,,T0999,FINO2024-P0002,FINO2024,not_specific,0.872,0.958,4-6,0.982,False,True
+A01-28,A01,as if they don't seem real,as if they do seem real,your choice; dropped (negation not read by CLIP),claude+chatgpt,don't,T0334,MIYAZONO2021-P0050,MIYAZONO2021,mixed,0.939,0.994,4-6,0.982,True,False
+A01-29,A01,as if things around them seem unreal,as if things around them seem real,your choice,claude+chatgpt,,T0333,TANAKA2018-P0012,TANAKA2018,not_specific,0.952,0.986,7-10,0.985,False,True
+A01-30,A01,as if things become unreal,as if things remain real,your choice,claude,,T0486,SIMEON2023-P0107,SIMEON2023,not_specific,0.693,0.960,4-6,0.982,False,True
+A01-31,A01,as if things feel unreal,as if things feel real,your choice,claude+chatgpt,,T1133,SIMEON2023-P0009,SIMEON2023,not_specific,0.901,0.971,4-6,0.982,False,True
+A01-32,A01,as if things seem unreal,as if things seem real,your choice,claude+chatgpt,,T0559,CIAUNICA2022-P0013,CIAUNICA2022,not_specific,0.911,0.976,4-6,0.982,False,True
+A01-33,A01,constantly at risk of turning unreal,,dropped by you,,,T1054,FINO2024-P0006,FINO2024,not_specific,,,4-6,,False,False
+A01-34,A01,detached or unreal,connected or real,your choice,claude+chatgpt,,T0281,RADOVIC2002-P0018,RADOVIC2002,not_specific,0.358,0.913,2-3,0.974,False,True
+A01-35,A01,fake,genuine,your choice,claude+chatgpt,,T0693,PIENKOS2022-P0075,PIENKOS2022,not_specific,0.564,0.959,1-1,0.959,False,True
+A01-36,A01,like a blurring of reality,like a clear view of reality,your choice,claude+chatgpt,,T1026,SIMEON2023-P0142,SIMEON2023,not_specific,0.656,0.929,4-6,0.982,False,True
+A01-37,A01,like a copy of the real world but not quite real,like a part of the real world but quite real,your choice; dropped (negation not read by CLIP),chatgpt,not,T0206,CIAUNICA2022-P0026,CIAUNICA2022,mixed,0.770,0.977,11-999,0.976,True,False
+A01-38,A01,like all was unreal,like all was real,your choice,claude+chatgpt,,T0690,SIMEON2023-P0263,SIMEON2023,not_specific,0.831,0.947,4-6,0.982,False,True
+A01-39,A01,like nothing was real,like everything was real,your choice,claude+chatgpt,nothing,T0125,DILKES2024-P0089;TANAKA2018-P0022,DILKES2024;TANAKA2018,not_specific,0.939,0.982,4-6,0.982,False,True
+A01-40,A01,like some real thing behind appearances,like some real thing in plain view,your negative,yours,,T0654,SIMEON2023-P0429,SIMEON2023,not_specific,0.534,0.958,4-6,0.982,False,True
+A01-41,A01,like something real that is unreal at the same time,like something real that is tangible at the same time,your choice,claude,,T0074,FINO2024-P0015,FINO2024,not_specific,0.720,0.961,7-10,0.985,False,True
+A01-42,A01,like the unreality of external objects,like the reality of external objects,your choice,claude+chatgpt,,T0775,MIYAZONO2021-P0146,MIYAZONO2021,not_specific,0.852,0.974,4-6,0.982,False,True
+A01-43,A01,like the unreality of things,like the reality of things,your choice,claude+chatgpt,,T0375,SIMEON2023-P0122,SIMEON2023,not_specific,0.792,0.969,4-6,0.982,False,True
+A01-44,A01,like the world disappearing under the feet,like the world staying solid under the feet,your choice,claude,,T0083,RADOVIC2002-P0067,RADOVIC2002,not_specific,0.684,0.926,7-10,0.985,False,True
+A01-45,A01,like there is a zipper to unzip,like there is a surface to touch,your choice,claude+chatgpt,,T1078,SIMEON2023-P0025,SIMEON2023,vision,0.446,0.807,7-10,0.985,False,True
+A01-46,A01,made of cellophane,made of stone,your choice,claude,,T0069,MIYAZONO2021-P0067,MIYAZONO2021,mixed,0.513,0.822,2-3,0.974,False,True
+A01-47,A01,not as real as before,just as real as before,your choice,claude+chatgpt,not,T0211,RADOVIC2002-P0011,RADOVIC2002,not_specific,0.894,0.974,4-6,0.982,False,True
+A01-48,A01,not quite real,clearly real,your choice; dropped (negation not read by CLIP),chatgpt,not,T1063,SIMEON2023-P0314,SIMEON2023,not_specific,0.623,0.976,2-3,0.974,True,False
+A01-49,A01,rendered unreal,rendered real,your choice,chatgpt,,T0869,SIMEON2023-P0128,SIMEON2023,not_specific,0.858,0.950,2-3,0.974,False,True
+A01-50,A01,so unreal,plainly real,your choice,claude+chatgpt,,T0313,RADOVIC2002-P0005;RADOVIC2002-P0034,RADOVIC2002,not_specific,0.423,0.903,2-3,0.974,False,True
+A01-51,A01,"static, half-true","moving, true",your choice,claude+chatgpt,,T0071,SIMEON2023-P0415,SIMEON2023,not_specific,0.313,0.914,2-3,0.974,False,True
+A01-52,A01,unreal and pointless,real and pointless,your choice,chatgpt,,T0260,SIMEON2023-P0409,SIMEON2023,not_specific,0.758,0.976,2-3,0.974,False,True
+A01-53,A01,unreal or detached from one's surroundings,real or connected with one's surroundings,your choice,chatgpt,,T0267,SIMEON2023-P0222,SIMEON2023,not_specific,0.671,0.914,4-6,0.982,False,True
+A01-54,A01,unreal or detached with respect to surroundings,real or connected with respect to surroundings,your choice,claude+chatgpt,,T0545,DILKES2024-P0005,DILKES2024,not_specific,0.601,0.920,7-10,0.985,False,True
+A02-01,A02,as if seen in a dream,as if seen in waking life,your choice,claude+chatgpt,,T0637;T0487;T0722;T0145,CIAUNICA2022-P0008;DILKES2024-P0107;SIMEON2023-P0649;DILKES2024-P0090;CIAUNICA2022-P0185;DILKES2024-P0021;DILKES2024-P0038;DILKES2024-P0110;DILKES2024-P0157;SIMEON2023-P0304,CIAUNICA2022;DILKES2024;SIMEON2023,not_specific,0.863,0.781,4-6,0.982,False,True
+A02-02,A02,dreamlike,wakeful,your choice,claude+chatgpt,,T0471;T0115;T0168,DILKES2024-P0010;RADOVIC2002-P0052;TANAKA2018-P0021,DILKES2024;RADOVIC2002;TANAKA2018,not_specific,0.477,0.918,1-1,0.959,False,True
+A02-03,A02,like a dream,like waking life,your choice,chatgpt,,T0853;T0682,DILKES2024-P0077;MIYAZONO2021-P0037;MIYAZONO2021-P0078;SIMEON2023-P0044;SIMEON2023-P0047;SIMEON2023-P0228;SIMEON2023-P0311;DILKES2024-P0071;PIENKOS2022-P0108,DILKES2024;MIYAZONO2021;PIENKOS2022;SIMEON2023,not_specific,0.535,0.764,2-3,0.974,False,True
+A02-04,A02,like living in a dream,like living in waking life,your choice,chatgpt,,T1073;T0395,FINO2024-P0019;DILKES2024-P0007;DILKES2024-P0019;DILKES2024-P0087,DILKES2024;FINO2024,not_specific,0.804,0.847,4-6,0.982,False,True
+A02-05,A02,akin to living in a dream,akin to living in waking life,your choice,chatgpt,,T0235,PIENKOS2022-P0043,PIENKOS2022,not_specific,0.861,0.906,4-6,0.982,False,True
+A02-06,A02,as if everything seems like a dream,as if everything seems like waking life,your choice,chatgpt,,T0535,SIMEON2023-P0679,SIMEON2023,not_specific,0.862,0.877,7-10,0.985,False,True
+A02-07,A02,as if in a dream,as if in waking life,your choice,chatgpt,,T0783,SIMEON2023-P0129,SIMEON2023,not_specific,0.814,0.826,4-6,0.982,False,True
+A02-08,A02,as if it is all a dream,as if it is all waking life,your choice,chatgpt,,T0305,DILKES2024-P0023,DILKES2024,not_specific,0.657,0.889,7-10,0.985,False,True
+A02-09,A02,as if it was all a dream,as if it was all waking life,your choice,chatgpt,,T0768,SIMEON2023-P0257,SIMEON2023,not_specific,0.676,0.874,7-10,0.985,False,True
+A02-10,A02,as if living in a continuous dream,as if living in a continuous waking life,your choice,claude,,T0794,SIMEON2023-P0086,SIMEON2023,not_specific,0.862,0.911,7-10,0.985,False,True
+A02-11,A02,as if living in dreams,as if living in waking life,your choice,claude+chatgpt,,T0205,TANAKA2018-P0097,TANAKA2018,not_specific,0.877,0.882,4-6,0.982,False,True
+A02-12,A02,as if the whole situation was dreamlike,as if the whole situation was wakeful,your choice,claude,,T0452,RADOVIC2002-P0056,RADOVIC2002,not_specific,0.532,0.954,7-10,0.985,False,True
+A02-13,A02,as if the world looks like a dream,as if the world looks like waking life,your choice,chatgpt,,T0232,TANAKA2018-P0017,TANAKA2018,vision,0.867,0.850,7-10,0.985,False,True
+A02-14,A02,as if this could only be a dream,as if this could only be waking life,your choice,chatgpt,,T0898,SIMEON2023-P0261,SIMEON2023,not_specific,0.621,0.792,7-10,0.985,False,True
+A02-15,A02,as if this must be a dream,as if this must be waking life,your choice,chatgpt,,T0903,SIMEON2023-P0320,SIMEON2023,not_specific,0.681,0.898,7-10,0.985,False,True
+A02-16,A02,as though in a dream,as though in waking life,your choice,chatgpt,,T0998,DILKES2024-P0006,DILKES2024,not_specific,0.832,0.803,4-6,0.982,False,True
+A02-17,A02,dream-like,wakeful,your choice,claude+chatgpt,,T0091,FINO2024-P0003;SIMEON2023-P0101;SIMEON2023-P0147;TANAKA2018-P0016,FINO2024;SIMEON2023;TANAKA2018,not_specific,0.474,0.914,2-3,0.974,False,True
+A02-18,A02,dreamy,wakeful,your choice,claude+chatgpt,,T0133,DILKES2024-P0044,DILKES2024,vision,0.573,0.896,1-1,0.959,False,True
+A02-19,A02,like a dream kind of autopilot world,like a waking kind of conscious world,your choice,chatgpt,,T0249,PIENKOS2022-P0115,PIENKOS2022,not_specific,0.627,0.873,7-10,0.985,False,True
+A02-20,A02,like a dream state,like a waking state,your choice,claude+chatgpt,,T0263,SIMEON2023-P0146,SIMEON2023,not_specific,0.793,0.919,4-6,0.982,False,True
+A02-21,A02,like a dream state come true,like a waking state come true,your choice,claude+chatgpt,,T0117,SIMEON2023-P0010,SIMEON2023,not_specific,0.742,0.946,4-6,0.982,False,True
+A02-22,A02,like a dreamlike scene,like a wakeful scene,your choice,claude+chatgpt,,T1068,RADOVIC2002-P0059,RADOVIC2002,not_specific,0.723,0.926,4-6,0.982,False,True
+A02-23,A02,like a special dream quality or particular dream atmosphere,like a special waking quality or particular waking atmosphere,your choice,claude+chatgpt,,T0197,RADOVIC2002-P0061,RADOVIC2002,not_specific,0.688,0.932,7-10,0.985,False,True
+A02-24,A02,like being in a dream,like being in a waking state,your choice,claude,,T0277,SIMEON2023-P0121,SIMEON2023,not_specific,0.776,0.927,4-6,0.982,False,True
+A02-25,A02,like Inception but in real life,like waking life but in real life,your choice,chatgpt,,T0072,SIMEON2023-P0678,SIMEON2023,not_specific,0.714,0.741,4-6,0.982,False,True
+A02-26,A02,like living in a dream or a movie,like living in wakefulness or reality,your choice,claude+chatgpt,,T0756,RADOVIC2002-P0014;SIERRA2001-P0001,RADOVIC2002;SIERRA2001,not_specific,0.762,0.889,7-10,0.985,False,True
+A02-27,A02,like the dream of a sleeping god,like the day of a waking god,your choice,claude,,T0996,CIAUNICA2022-P0182,CIAUNICA2022,not_specific,0.605,0.930,7-10,0.985,False,True
+A02-28,A02,more like dreams than is usually the case,more like waking life than is usually the case,your choice,chatgpt,,T0610,RADOVIC2002-P0058,RADOVIC2002,not_specific,0.601,0.806,7-10,0.985,False,True
+A03-01,A03,as if looking at a picture,as if looking at a place,your choice,claude+chatgpt,,T0605;T0122,MIYAZONO2021-P0072;SIMEON2023-P0159;MIYAZONO2021-P0082,MIYAZONO2021;SIMEON2023,vision,0.768,0.970,4-6,0.982,False,True
+A03-02,A03,like a movie,like a live event,your choice,claude,,T0988;T1010,DILKES2024-P0008;DILKES2024-P0088;MIYAZONO2021-P0083,DILKES2024;MIYAZONO2021,not_specific;vision,0.561,0.890,2-3,0.974,False,True
+A03-03,A03,as if it were life played like a film in a cinema,as if it were life played like a day in a town,your choice,claude,,T0084,SIMEON2023-P0063,SIMEON2023,vision,0.798,0.925,11-999,0.976,False,True
+A03-04,A03,as if picked up out of the real world and put down into a film set,as if picked up out of the real world and put down into a town square,your choice,claude,,T0013,CIAUNICA2022-P0025,CIAUNICA2022,mixed,0.686,0.914,11-999,0.976,False,True
+A03-05,A03,as if real life seemed like a movie,as if real life seemed like a live event,your choice,claude,,T0347,SIMEON2023-P0139,SIMEON2023,not_specific,0.780,0.940,7-10,0.985,False,True
+A03-06,A03,as if the whole world is a work of art,as if the whole world is a work of nature,your choice,claude,,T1135,SIMEON2023-P0430,SIMEON2023,not_specific,0.737,0.967,7-10,0.985,False,True
+A03-07,A03,like a camera,like an eye,your choice,claude+chatgpt,,T0992,PIENKOS2022-P0082,PIENKOS2022,vision,0.571,0.856,2-3,0.974,False,True
+A03-08,A03,like a fictional narrative,like a true narrative,your choice,claude,,T1046,PIENKOS2022-P0109,PIENKOS2022,not_specific,0.889,0.955,4-6,0.982,False,True
+A03-09,A03,like a painted picture,like an actual landscape,your choice,chatgpt,,T1030,SIERRA2001-P0011,SIERRA2001,vision,0.441,0.911,4-6,0.982,False,True
+A03-10,A03,like a picture,like a live scene,your choice,claude,,T0908,MIYAZONO2021-P0090;MIYAZONO2021-P0129,MIYAZONO2021,vision,0.471,0.947,2-3,0.974,False,True
+A03-11,A03,like camera vision,like human vision,your choice,claude+chatgpt,,T0170,PIENKOS2022-P0083,PIENKOS2022,vision,0.801,0.952,2-3,0.974,False,True
+A03-12,A03,like living in a movie,like living in a neighbourhood,your choice,claude,,T0340,DILKES2024-P0070,DILKES2024,not_specific,0.514,0.877,4-6,0.982,False,True
+A03-13,A03,like some sort of Truman Show plot,like some sort of daily life plot,your choice,chatgpt,,T0942,SIMEON2023-P0672,SIMEON2023,not_specific,0.751,0.885,7-10,0.985,False,True
+A04-01,A04,"as if in some fake, virtual reality","as if in some genuine, physical reality",your choice,claude+chatgpt,,T0457,SIMEON2023-P0675,SIMEON2023,not_specific,0.798,0.945,7-10,0.985,False,True
+A04-02,A04,as if reality feels more like a vr headset,as if reality feels more like direct sight,your choice,chatgpt,,T0960,DILKES2024-P0067,DILKES2024,not_specific,0.705,0.945,7-10,0.985,False,True
+A04-03,A04,as if seen in a digital world,as if seen in a physical world,your choice,claude+chatgpt,,T0315,DILKES2024-P0171,DILKES2024,not_specific,0.612,0.963,7-10,0.985,False,True
+A04-04,A04,as if seen in a simulation,as if seen in a material world,your choice,claude,,T0909,DILKES2024-P0111,DILKES2024,not_specific,0.610,0.944,4-6,0.982,False,True
+A04-05,A04,like a hologram,like a physical object,your choice,claude,,T1125,DILKES2024-P0136,DILKES2024,vision,0.559,0.866,2-3,0.974,False,True
+A04-06,A04,like a new virtual reality,like a familiar physical reality,your choice,claude+chatgpt,,T0330,SIMEON2023-P0657,SIMEON2023,not_specific,0.708,0.930,4-6,0.982,False,True
+A04-07,A04,like a really bad sims game,like a really bad day,your choice,chatgpt,,T0323,DILKES2024-P0101;DILKES2024-P0146,DILKES2024,not_specific,0.383,0.815,4-6,0.982,False,True
+A04-08,A04,like a sims game,like daily life,your choice,chatgpt,,T1126,DILKES2024-P0174,DILKES2024,not_specific,0.471,0.822,4-6,0.982,False,True
+A04-09,A04,like a simulation,like a material world,your choice,claude,,T0937,DILKES2024-P0145;DILKES2024-P0173,DILKES2024,not_specific,0.447,0.930,2-3,0.974,False,True
+A04-10,A04,like a video game,like the physical world,your choice,chatgpt,,T0103,DILKES2024-P0172,DILKES2024,not_specific,0.512,0.917,4-6,0.982,False,True
+A04-11,A04,like another layer of simulation,like another layer of the world,your choice,chatgpt,,T0212,DILKES2024-P0097,DILKES2024,not_specific,0.668,0.940,4-6,0.982,False,True
+A04-12,A04,like being in a simulation,like being in the physical world,your choice,claude,,T0695,DILKES2024-P0096;DILKES2024-P0109,DILKES2024,not_specific,0.703,0.943,4-6,0.982,False,True
+A04-13,A04,like being in a video game,like being in a physical world,your choice,chatgpt,,T1108,DILKES2024-P0143;DILKES2024-P0144,DILKES2024,not_specific,0.651,0.927,4-6,0.982,False,True
+A04-14,A04,like being inside a video game,like being inside a physical world,your choice,chatgpt,,T1070,DILKES2024-P0095,DILKES2024,not_specific,0.734,0.937,4-6,0.982,False,True
+A04-15,A04,like being unplugged from the matrix,like being grounded on the earth,your choice,claude,,T1115,DILKES2024-P0103,DILKES2024,not_specific,0.542,0.843,4-6,0.982,False,True
+A04-16,A04,like glitches in the system,like events in the world,your choice,claude+chatgpt,,T0978,SIMEON2023-P0676,SIMEON2023,not_specific,0.352,0.829,4-6,0.982,False,True
+A04-17,A04,like nonexistent virtuality,like physical reality,your choice,chatgpt,,T1023,SIMEON2023-P0664,SIMEON2023,not_specific,0.543,0.947,2-3,0.974,False,True
+A04-18,A04,like other digital worlds,like other physical places,your choice,chatgpt,,T0834,DILKES2024-P0099,DILKES2024,not_specific,0.428,0.933,4-6,0.982,False,True
+A04-19,A04,like playing a video game inside a video game,like playing a physical game inside a physical game,your choice,chatgpt,,T0719,DILKES2024-P0098,DILKES2024,not_specific,0.744,0.917,7-10,0.985,False,True
+A04-20,A04,like playing the life game,like leading the life itself,your choice,claude,,T0392,DILKES2024-P0148;DILKES2024-P0176,DILKES2024,not_specific,0.655,0.929,4-6,0.982,False,True
+A04-21,A04,like some sort of simulation,like some sort of physical place,your choice,claude,,T0372,SIMEON2023-P0674,SIMEON2023,not_specific,0.397,0.929,4-6,0.982,False,True
+A04-22,A04,like the life game,like the life itself,your choice,claude+chatgpt,,T0750,DILKES2024-P0100,DILKES2024,not_specific,0.519,0.941,4-6,0.982,False,True
+A04-23,A04,like the matrix,like the physical world,your choice,claude,,T1124,DILKES2024-P0102;DILKES2024-P0147;DILKES2024-P0175,DILKES2024,not_specific,0.618,0.857,2-3,0.974,False,True
+A04-24,A04,like the unreal world of these simulations,like the physical world of these environments,your choice,chatgpt,,T0269,SIMEON2023-P0652,SIMEON2023,not_specific,0.739,0.943,7-10,0.985,False,True
+A05-01,A05,as if seen through a veil,as if seen through open air,your choice,claude,,T0527;T0661;T1082;T1069;T0974;T1088,MIYAZONO2021-P0111;MIYAZONO2021-P0080;MIYAZONO2021-P0041;DILKES2024-P0166;MIYAZONO2021-P0089;MIYAZONO2021-P0098;MIYAZONO2021-P0108;SIMEON2023-P0230;DILKES2024-P0016;DILKES2024-P0066;DILKES2024-P0079;SIMEON2023-P0049;SIMEON2023-P0084;SIMEON2023-P0103,DILKES2024;MIYAZONO2021;SIMEON2023,mixed;not_specific;vision,0.750,0.921,4-6,0.982,False,True
+A05-02,A05,as if in a bubble,as if in open space,your choice,chatgpt,,T0320;T0296;T0152,DILKES2024-P0045;DILKES2024-P0165;DILKES2024-P0015;DILKES2024-P0078;MIYAZONO2021-P0038;MIYAZONO2021-P0079;SIMEON2023-P0048;SIMEON2023-P0229,DILKES2024;MIYAZONO2021;SIMEON2023,not_specific,0.600,0.840,4-6,0.982,False,True
+A05-03,A05,as if seen through a glass wall,as if seen through open space,your choice,chatgpt,,T0916;T0451,MIYAZONO2021-P0081;DILKES2024-P0167,DILKES2024;MIYAZONO2021,not_specific,0.796,0.847,7-10,0.985,False,True
+A05-04,A05,as if seen through a screen,as if seen through an open window,your choice,claude,,T0758;T1095,DILKES2024-P0149;DILKES2024-P0169;DILKES2024-P0116,DILKES2024,mixed;not_specific,0.832,0.903,4-6,0.982,False,True
+A05-05,A05,as if seen through an invisible wall,as if seen through open space,your choice,chatgpt,,T1071;T0851,DILKES2024-P0093;DILKES2024-P0150;DILKES2024-P0168;DILKES2024-P0112,DILKES2024,not_specific,0.819,0.897,7-10,0.985,False,True
+A05-06,A05,as if a deep veil is cast over everything,as if an even light is cast over everything,your choice,claude+chatgpt,,T0986,MIYAZONO2021-P0063;SIMEON2023-P0187,MIYAZONO2021;SIMEON2023,vision,0.693,0.938,7-10,0.985,False,True
+A05-07,A05,as if a glass screen has interposed itself,as if a glass doorway has opened itself,your choice,chatgpt,,T0755,SIMEON2023-P0405,SIMEON2023,mixed,0.646,0.875,7-10,0.985,False,True
+A05-08,A05,as if access to the landscape is more opaque,as if access to the landscape is open,your choice,chatgpt,,T0604,CIAUNICA2022-P0203,CIAUNICA2022,vision,0.812,0.940,7-10,0.985,False,True
+A05-09,A05,as if behind a foot thick steel barrier,as if through a foot thick steel doorway,your choice,claude,,T0186,DILKES2024-P0105,DILKES2024,not_specific,0.822,0.806,7-10,0.985,False,True
+A05-10,A05,as if enclosed in a kind of bubble,as if situated in a kind of space,your choice,chatgpt,,T0645,SIMEON2023-P0505,SIMEON2023,not_specific,0.619,0.871,7-10,0.985,False,True
+A05-11,A05,as if life is through a veil,as if life is through clear air,your choice,claude,,T1132,DILKES2024-P0091,DILKES2024,vision,0.656,0.910,7-10,0.985,False,True
+A05-12,A05,as if sealed in plastic wrap,,dropped by you,,,T0578,MIYAZONO2021-P0064;SIMEON2023-P0188,MIYAZONO2021;SIMEON2023,not_specific,,,4-6,,False,False
+A05-13,A05,as if seen behind a cloudy glass wall permanently,as if seen behind a clear glass window permanently,your choice,chatgpt,,T0647,DILKES2024-P0065,DILKES2024,not_specific,0.899,0.925,7-10,0.985,False,True
+A05-14,A05,as if seen through a barrier that separates me from reality,as if seen through a doorway that connects me to reality,your choice,claude,,T0700,DILKES2024-P0113,DILKES2024,not_specific,0.792,0.864,11-999,0.976,False,True
+A05-15,A05,as if seen through a filter over the eyes,as if seen through open air over the eyes,your choice,claude,,T0192,DILKES2024-P0127,DILKES2024,vision,0.798,0.876,7-10,0.985,False,True
+A05-16,A05,as if seen through a glass wall between the individual and the world around,as if seen through an open doorway between the individual and the world around,your choice,claude+chatgpt,,T0741,DILKES2024-P0017,DILKES2024,not_specific,0.880,0.858,11-999,0.976,False,True
+A05-17,A05,as if seen through a glass wall between the individual and world around,as if seen through an open doorway between the individual and world around,your choice,claude+chatgpt,,T1049,DILKES2024-P0080;MIYAZONO2021-P0040,DILKES2024;MIYAZONO2021,not_specific,0.868,0.853,11-999,0.976,False,True
+A05-18,A05,as if seen through a glass wall that separates you from the world,as if seen through a glass doorway that links you to the world,your choice,chatgpt,,T0607,DILKES2024-P0068,DILKES2024,not_specific,0.847,0.921,11-999,0.976,False,True
+A05-19,A05,as if seen through a screen or a film between the participant and the rest of the world,as if seen through a window or a doorway between the participant and the rest of the world,your choice,claude,,T0321,PIENKOS2022-P0048,PIENKOS2022,not_specific,0.863,0.910,11-999,0.976,False,True
+A05-20,A05,as if seen through a thin veil,as if seen through thin air,your choice,claude,,T0024,SIMEON2023-P0493,SIMEON2023,not_specific,0.769,0.941,7-10,0.985,False,True
+A05-21,A05,as if seen through a veil between himself and the real world,as if seen through open air between himself and the real world,your choice,claude,,T0470,SIMEON2023-P0124,SIMEON2023,mixed,0.912,0.939,11-999,0.976,False,True
+A05-22,A05,as if seen through a veil between me and the outside world,as if seen through an opening between me and the outside world,your choice,chatgpt,,T1098,RADOVIC2002-P0019,RADOVIC2002,not_specific,0.892,0.964,11-999,0.976,False,True
+A05-23,A05,"as if seen through a veil interposed between one's self, body and the world","as if seen through an opening interposed between one's self, body and the world",your choice,chatgpt,,T0550,CIAUNICA2022-P0213,CIAUNICA2022,not_specific,0.918,0.960,11-999,0.976,False,True
+A05-24,A05,as if seen through a veil placed over your senses,as if seen through a transparent lens placed over your senses,your choice,chatgpt,,T0308,DILKES2024-P0051,DILKES2024,not_specific,0.867,0.961,7-10,0.985,False,True
+A05-25,A05,as if seen through an invisible barrier between the self and the world,as if seen through a direct link between the self and the world,your choice,claude+chatgpt,,T0931,DILKES2024-P0064;DILKES2024-P0074,DILKES2024,not_specific,0.818,0.967,11-999,0.976,False,True
+A05-26,A05,as if seen through an invisible barrier between themself and the world,as if seen through a direct link between themself and the world,your choice,claude+chatgpt,,T0791,DILKES2024-P0164,DILKES2024,not_specific,0.763,0.962,11-999,0.976,False,True
+A05-27,A05,as if seen through an invisible film,as if seen through open space,your choice,chatgpt,,T0056,SIMEON2023-P0492,SIMEON2023,not_specific,0.758,0.840,7-10,0.985,False,True
+A05-28,A05,as if seen through an invisible wall between me and the things i love,as if seen through open space between me and the things i love,your choice,chatgpt,,T0087,DILKES2024-P0094,DILKES2024,not_specific,0.891,0.957,11-999,0.976,False,True
+A05-29,A05,as if seen through an obscuring barrier,as if seen through an open window,your choice,claude,,T0101,DILKES2024-P0050;DILKES2024-P0056,DILKES2024,not_specific,0.767,0.862,7-10,0.985,False,True
+A05-30,A05,as if seen through glass,as if seen through air,your choice,claude,,T0464,MIYAZONO2021-P0068;SIMEON2023-P0050;SIMEON2023-P0231,MIYAZONO2021;SIMEON2023,mixed,0.843,0.845,4-6,0.982,False,True
+A05-31,A05,as if seen through something like a veil,as if seen through something like open air,your choice,claude,,T0976,MIYAZONO2021-P0112,MIYAZONO2021,vision,0.775,0.925,7-10,0.985,False,True
+A05-32,A05,as if seen through the window,as if seen through the open air,your choice,claude+chatgpt,,T0577,MIYAZONO2021-P0122,MIYAZONO2021,vision,0.857,0.933,4-6,0.982,False,True
+A05-33,A05,as if seen through this veil between your eyes and the real world,as if seen through this open air between your eyes and the real world,your choice,claude,,T0848,DILKES2024-P0055,DILKES2024,vision,0.841,0.945,11-999,0.976,False,True
+A05-34,A05,as if separated by a glass wall,as if separated by open space,your choice,chatgpt,,T0958,DILKES2024-P0073,DILKES2024,not_specific,0.770,0.836,7-10,0.985,False,True
+A05-35,A05,as if separated from reality by a protective covering,as if connected to reality by a protective bond,your choice,claude,,T0405,SIMEON2023-P0419,SIMEON2023,not_specific,0.777,0.868,7-10,0.985,False,True
+A05-36,A05,as if separated from the world by an invisible barrier,as if joined to the world by an invisible bond,your choice,chatgpt,,T0082,TANAKA2018-P0014,TANAKA2018,not_specific,0.685,0.955,7-10,0.985,False,True
+A05-37,A05,as if something stands in the way,as if something clears the way,your choice,claude,,T0606,CIAUNICA2022-P0207,CIAUNICA2022,mixed,0.802,0.944,7-10,0.985,False,True
+A05-38,A05,as if surrounded by a glass wall,as if surrounded by open space,your choice,claude+chatgpt,,T0763,DILKES2024-P0075,DILKES2024,not_specific,0.687,0.798,7-10,0.985,False,True
+A05-39,A05,as if surrounded by an invisible wall,as if surrounded by open space,your choice,claude+chatgpt,,T0702,CIAUNICA2022-P0215,CIAUNICA2022,not_specific,0.786,0.872,7-10,0.985,False,True
+A05-40,A05,as if the invisible envelope surrounding him was starting to melt,as if the invisible air surrounding him was starting to move,your choice,chatgpt,,T0764,SIMEON2023-P0611,SIMEON2023,not_specific,0.784,0.900,11-999,0.976,False,True
+A05-41,A05,as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world,as if their bodies were wrapped in a breathable substance that rested itself between themselves and the external world,your choice,chatgpt,,T1047,SIMEON2023-P0095,SIMEON2023,not_specific,0.880,0.949,11-999,0.976,False,True
+A05-42,A05,as if there was a veil between me and the outside world,as if there was open air between me and the outside world,your choice,claude,,T0615,SIMEON2023-P0165,SIMEON2023,mixed,0.718,0.947,11-999,0.976,False,True
+A05-43,A05,as if there was a wall between me and the external world,as if there was open space between me and the external world,your choice,chatgpt,,T0943,SIMEON2023-P0092,SIMEON2023,not_specific,0.848,0.955,11-999,0.976,False,True
+A05-44,A05,as if there were a veil,as if there were open air,your choice,claude,,T0266,MIYAZONO2021-P0039,MIYAZONO2021,mixed,0.525,0.912,4-6,0.982,False,True
+A05-45,A05,as if there were a veil between me and the outside world,as if there were open air between me and the outside world,your choice,claude,,T0923,MIYAZONO2021-P0075,MIYAZONO2021,mixed,0.736,0.950,11-999,0.976,False,True
+A05-46,A05,as if there were a veil in front of me,as if there were open air in front of me,your choice,claude,,T0227,MIYAZONO2021-P0113;MIYAZONO2021-P0115,MIYAZONO2021,not_specific,0.642,0.916,7-10,0.985,False,True
+A05-47,A05,as if watched from inside a shell,as if watched from inside the scene,your choice,claude+chatgpt,,T0526,CIAUNICA2022-P0178,CIAUNICA2022,mixed,0.642,0.873,7-10,0.985,False,True
+A05-48,A05,less transparent,transparent,your choice,chatgpt,,T0727,CIAUNICA2022-P0248,CIAUNICA2022,not_specific,0.724,0.964,2-3,0.974,False,True
+A05-49,A05,like a crack in the pane of glass,like a view through the pane of glass,your choice,chatgpt,,T0918,CIAUNICA2022-P0199,CIAUNICA2022,vision,0.659,0.909,7-10,0.985,False,True
+A05-50,A05,like a veil that was coming over the vision slowly,like an open view that was coming over the vision slowly,your choice,claude,,T0963,DILKES2024-P0059,DILKES2024,vision,0.831,0.883,7-10,0.985,False,True
+A05-51,A05,like a wall before me,like open space before me,your choice,chatgpt,,T1084,RADOVIC2002-P0004;RADOVIC2002-P0033,RADOVIC2002,not_specific,0.730,0.868,4-6,0.982,False,True
+A05-52,A05,like an invisible wall,like open space,your choice,chatgpt,,T0865,DILKES2024-P0114,DILKES2024,not_specific,0.524,0.879,4-6,0.982,False,True
+A05-53,A05,like being behind a screen,like being in the open air,your choice,claude,,T0733,DILKES2024-P0115,DILKES2024,not_specific,0.443,0.854,4-6,0.982,False,True
+A05-54,A05,like being in a bubble,like being in open space,your choice,chatgpt,,T0561,TANAKA2018-P0013,TANAKA2018,not_specific,0.571,0.833,4-6,0.982,False,True
+A05-55,A05,like being trapped in a bubble,like being out in the open,your choice,claude,,T0318,PIENKOS2022-P0044,PIENKOS2022,not_specific,0.371,0.817,4-6,0.982,False,True
+A05-56,A05,like glass over the eyes,like open air over the eyes,your choice,claude,,T0030,SIMEON2023-P0026,SIMEON2023,vision,0.641,0.893,4-6,0.982,False,True
+A05-57,A05,like having a pane of glass,like having a field of view,your choice,claude+chatgpt,,T0953,CIAUNICA2022-P0212,CIAUNICA2022,not_specific,0.617,0.855,4-6,0.982,False,True
+A05-58,A05,like I'm wearing glasses that I can't see through,like I'm wearing glasses that I can see through,your choice; dropped (negation not read by CLIP),claude+chatgpt,can't,T0433,SIMEON2023-P0024,SIMEON2023,vision,0.967,0.994,7-10,0.985,True,False
+A05-59,A05,like life watched from behind glass,like life watched within the scene,your choice,chatgpt,,T0987,DILKES2024-P0018,DILKES2024,vision,0.800,0.883,4-6,0.982,False,True
+A05-60,A05,like living in a bubble,like living in open space,your choice,chatgpt,,T1079,CIAUNICA2022-P0214,CIAUNICA2022,not_specific,0.567,0.830,4-6,0.982,False,True
+A05-61,A05,like living in a clear bubble,like living in a clear open space,your choice,claude,,T0447,DILKES2024-P0047,DILKES2024,not_specific,0.719,0.849,4-6,0.982,False,True
+A05-62,A05,like the cracked window itself as a visible observable entity,like the clear window itself as a visible observable entity,your choice,chatgpt,,T0306,CIAUNICA2022-P0200,CIAUNICA2022,vision,0.741,0.899,7-10,0.985,False,True
+A05-63,A05,like the outer landscape perceived through the cracked window,like the outer landscape perceived through the open window,your choice,claude,,T0863,CIAUNICA2022-P0205,CIAUNICA2022,vision,0.871,0.927,7-10,0.985,False,True
+A07-01,A07,as if seen in a fog,as if seen in daylight,your choice,chatgpt,,T0258;T0256;T1103,MIYAZONO2021-P0077;DILKES2024-P0027;SIMEON2023-P0046;DILKES2024-P0014;DILKES2024-P0076;MIYAZONO2021-P0036,DILKES2024;MIYAZONO2021;SIMEON2023,mixed;not_specific,0.731,0.848,4-6,0.982,False,True
+A07-02,A07,blurry,sharp,your choice,claude+chatgpt,,T0668;T0165,SIMEON2023-P0583;PIENKOS2022-P0163;SIMEON2023-P0055;SIMEON2023-P0236,PIENKOS2022;SIMEON2023,vision,0.332,0.821,1-1,0.959,False,True
+A07-03,A07,as if blinded by a mist,as if lit by daylight,your choice,claude,,T0440,DILKES2024-P0026,DILKES2024,vision,0.566,0.825,4-6,0.982,False,True
+A07-04,A07,as if its clarity is hindered,as if its clarity is maintained,your choice,claude+chatgpt,,T0047,CIAUNICA2022-P0206,CIAUNICA2022,vision,0.805,0.971,4-6,0.982,False,True
+A07-05,A07,as if navigating through fog in slow motion,as if navigating through daylight in slow motion,your choice,chatgpt,,T0970,SIMEON2023-P0305,SIMEON2023,mixed,0.789,0.857,7-10,0.985,False,True
+A07-06,A07,as if objects were surrounded by a cloud,as if objects were surrounded by daylight,your choice,chatgpt,,T0558,SIMEON2023-P0087,SIMEON2023,vision,0.665,0.848,7-10,0.985,False,True
+A07-07,A07,as if one's vision is blurred,as if one's vision is focused,your choice,claude+chatgpt,,T0252,CIAUNICA2022-P0097,CIAUNICA2022,vision,0.764,0.941,4-6,0.982,False,True
+A07-08,A07,as if seen in a visual fog,as if seen in visual clarity,your choice,chatgpt,,T0031,SIMEON2023-P0027,SIMEON2023,vision,0.687,0.866,7-10,0.985,False,True
+A07-09,A07,as if seen in fog,as if seen in daylight,your choice,claude+chatgpt,,T0085,DILKES2024-P0158;MIYAZONO2021-P0088;MIYAZONO2021-P0099;MIYAZONO2021-P0109;MIYAZONO2021-P0128;SIMEON2023-P0227,DILKES2024;MIYAZONO2021;SIMEON2023,mixed,0.755,0.893,4-6,0.982,False,True
+A07-10,A07,as if seen in the fog,as if seen in the daylight,your choice,claude+chatgpt,,T0068,SIMEON2023-P0563,SIMEON2023,not_specific,0.746,0.883,4-6,0.982,False,True
+A07-11,A07,as if seen through a fog,as if seen through a clear lens,your choice,claude,,T0222,MIYAZONO2021-P0061;SIMEON2023-P0185,MIYAZONO2021;SIMEON2023,vision,0.755,0.836,4-6,0.982,False,True
+A07-12,A07,as if seen through a thick cloud,as if seen through a clear atmosphere,your choice,claude,,T0643,SIMEON2023-P0083,SIMEON2023,vision,0.863,0.858,7-10,0.985,False,True
+A07-13,A07,as if seen with blurry vision,as if seen with sharp vision,your choice,claude+chatgpt,,T0154,DILKES2024-P0061,DILKES2024,vision,0.671,0.935,4-6,0.982,False,True
+A07-14,A07,as if the focus is never right,as if the focus is distinct and steady,your choice,chatgpt,never,T0969,DILKES2024-P0046,DILKES2024,vision,0.706,0.956,7-10,0.985,False,True
+A07-15,A07,as if their vision is foggy,as if their vision is clear,your choice,claude+chatgpt,,T0537,SIMEON2023-P0566,SIMEON2023,vision,0.801,0.924,4-6,0.982,False,True
+A07-16,A07,as if they are looking at the world through a fog,as if they are looking at the world through clear air,your choice,claude+chatgpt,,T0767,SIMEON2023-P0153,SIMEON2023,vision,0.871,0.883,11-999,0.976,False,True
+A07-17,A07,as if things look more or less foggy,as if things look more or less distinct,your choice,claude+chatgpt,,T0560,SIMEON2023-P0569,SIMEON2023,vision,0.518,0.862,7-10,0.985,False,True
+A07-18,A07,blurry and foggy,distinct and focused,your choice,chatgpt,,T0343,SIMEON2023-P0579,SIMEON2023,vision,0.253,0.827,2-3,0.974,False,True
+A07-19,A07,cloudy,clear,your choice,claude+chatgpt,,T0921,SIMEON2023-P0298,SIMEON2023,not_specific,0.448,0.907,1-1,0.959,False,True
+A07-20,A07,foggy,clear,your choice,claude+chatgpt,,T0922,DILKES2024-P0011;FINO2024-P0009,DILKES2024;FINO2024,not_specific,0.401,0.838,1-1,0.959,False,True
+A07-21,A07,foggy and veiled,focused and distinct,your choice,chatgpt,,T0889,TANAKA2018-P0015,TANAKA2018,vision,0.360,0.784,2-3,0.974,False,True
+A07-22,A07,hazy,clear,your choice,claude+chatgpt,,T0090,SIMEON2023-P0098,SIMEON2023,vision,0.480,0.881,1-1,0.959,False,True
+A07-23,A07,indefinite,definite,your choice,claude+chatgpt,,T0933,MIYAZONO2021-P0126,MIYAZONO2021,vision,0.396,0.963,1-1,0.959,False,True
+A07-24,A07,like peering at the world through a fog,like peering at the world through clear air,your choice,claude+chatgpt,,T1094,DILKES2024-P0135,DILKES2024,vision,0.818,0.893,7-10,0.985,False,True
+A07-25,A07,like someone has put dirty fingerprints on the sunglasses – but it is the eyes,like someone has put clean lenses on the sunglasses – but it is the eyes,your choice,claude+chatgpt,,T0506,CIAUNICA2022-P0098,CIAUNICA2022,vision,0.876,0.944,11-999,0.976,False,True
+A07-26,A07,like vague shapes,like distinct shapes,your choice,claude+chatgpt,,T0067,CIAUNICA2022-P0154,CIAUNICA2022,vision,0.736,0.944,2-3,0.974,False,True
+A07-27,A07,more blurred,more focused,your choice,chatgpt,,T0193,CIAUNICA2022-P0246,CIAUNICA2022,not_specific,0.460,0.911,2-3,0.974,False,True
+A07-28,A07,shadowy,well-lit,your choice,claude,,T0692,SIMEON2023-P0102,SIMEON2023,vision,0.287,0.894,1-1,0.959,False,True
+A07-29,A07,unclear,clear,your choice,claude+chatgpt,,T0680,SIMEON2023-P0155,SIMEON2023,vision,0.389,0.930,1-1,0.959,False,True
+A07-30,A07,vague,distinct,your choice,claude+chatgpt,,T0901,PIENKOS2022-P0057,PIENKOS2022,not_specific,0.299,0.933,1-1,0.959,False,True
+A11-01,A11,flat,three-dimensional,your choice,claude+chatgpt,,T1107;T0683;T0633,SIERRA2001-P0036;MIYAZONO2021-P0070;RADOVIC2002-P0031;SIERRA2001-P0014;SIMEON2023-P0157;PIENKOS2022-P0164;SIMEON2023-P0241,MIYAZONO2021;PIENKOS2022;RADOVIC2002;SIERRA2001;SIMEON2023,vision,0.312,0.891,1-1,0.959,False,True
+A11-02,A11,two-dimensional,three-dimensional,your choice,claude+chatgpt,,T0564;T0972,SIMEON2023-P0240;MIYAZONO2021-P0045,MIYAZONO2021;SIMEON2023,vision,0.747,0.965,2-3,0.974,False,True
+A11-03,A11,as if external objects were flat,as if external objects were three-dimensional,your choice,claude+chatgpt,,T0055,MIYAZONO2021-P0084,MIYAZONO2021,vision,0.730,0.937,4-6,0.982,False,True
+A11-04,A11,flat and two-dimensional,solid and three-dimensional,your choice,chatgpt,,T0208,SIMEON2023-P0028,SIMEON2023,vision,0.546,0.950,4-6,0.982,False,True
+A11-05,A11,like objects or space being flattened,like objects or space being volumetric,your choice,chatgpt,,T0540,CIAUNICA2022-P0133,CIAUNICA2022,mixed,0.635,0.871,4-6,0.982,False,True
+A11-06,A11,like the world becoming two dimensional,like the world being three dimensional,your choice,claude,,T0920,FINO2024-P0016,FINO2024,mixed,0.802,0.942,4-6,0.982,False,True
+A13-01,A13,as if seen with attenuated perception,as if seen with vivid perception,your choice,chatgpt,,T0804,DILKES2024-P0063,DILKES2024,not_specific,0.811,0.959,4-6,0.982,False,True
+A13-02,A13,colorless,colored,your choice,claude+chatgpt,,T0501,PIENKOS2022-P0019;SIMEON2023-P0052;SIMEON2023-P0233,PIENKOS2022;SIMEON2023,vision,0.634,0.876,1-1,0.959,False,True
+A13-03,A13,dull,vivid,your choice,claude+chatgpt,,T0839,PIENKOS2022-P0168;RADOVIC2002-P0030;SIERRA2001-P0013,PIENKOS2022;RADOVIC2002;SIERRA2001,mixed,0.463,0.895,1-1,0.959,False,True
+A13-04,A13,duller,vivid,your choice,claude+chatgpt,,T0226,PIENKOS2022-P0084,PIENKOS2022,not_specific,0.322,0.857,1-1,0.959,False,True
+A13-05,A13,lacking in normal color and vividness,rich in full color and vividness,your choice,chatgpt,,T0200,SIMEON2023-P0042,SIMEON2023,vision,0.547,0.962,4-6,0.982,False,True
+A13-06,A13,lacking in perceptual or emotional vividness,rich in perceptual or emotional vividness,your choice,chatgpt,,T0983,TANAKA2018-P0008,TANAKA2018,not_specific,0.698,0.985,4-6,0.982,False,True
+A13-07,A13,lacking in vibrancy or depth,rich in vibrancy or depth,your choice,chatgpt,,T0817,CIAUNICA2022-P0024,CIAUNICA2022,mixed,0.660,0.942,4-6,0.982,False,True
+A13-08,A13,less vivid,vivid,your choice,chatgpt,,T1007,PIENKOS2022-P0085,PIENKOS2022,not_specific,0.646,0.965,2-3,0.974,False,True
+A13-09,A13,less vivid or intense,fully vivid or intense,your choice,claude,,T0172,PIENKOS2022-P0047,PIENKOS2022,not_specific,0.784,0.977,4-6,0.982,False,True
+A13-10,A13,like things lacking vividness,like things having vividness,your choice,claude+chatgpt,,T0600,SIERRA2001-P0035,SIERRA2001,vision,0.831,0.979,4-6,0.982,False,True
+A13-11,A13,reduced in intensity,full in intensity,your choice,claude,,T0137,PIENKOS2022-P0086,PIENKOS2022,not_specific,0.486,0.914,2-3,0.974,False,True
+A14-01,A14,as if emptiness was everywhere,as if activity was everywhere,your choice,claude,,T0111,SIMEON2023-P0509,SIMEON2023,not_specific,0.616,0.893,4-6,0.982,False,True
+A14-02,A14,as if everything looks lifeless,as if everything looks alive,your choice,claude+chatgpt,,T1116,PIENKOS2022-P0016,PIENKOS2022,vision,0.796,0.921,4-6,0.982,False,True
+A14-03,A14,as if no living being was on earth,as if living beings were on earth,your choice,chatgpt,no,T0236,RADOVIC2002-P0003,RADOVIC2002,not_specific,0.849,0.975,7-10,0.985,False,True
+A14-04,A14,as if objects look dead,as if objects look alive,your choice,claude+chatgpt,,T1042,PIENKOS2022-P0015,PIENKOS2022,vision,0.809,0.949,4-6,0.982,False,True
+A14-05,A14,as if there was nothing on earth,as if life was on earth,your choice,chatgpt,nothing,T0270,RADOVIC2002-P0002,RADOVIC2002,not_specific,0.752,0.970,7-10,0.985,False,True
+A14-06,A14,as if with an emptiness to landscapes,as if with a presence to landscapes,your choice,claude+chatgpt,,T1112,MIYAZONO2021-P0135,MIYAZONO2021,mixed,0.851,0.964,7-10,0.985,False,True
+A14-07,A14,dead,alive,your choice,claude+chatgpt,,T0246,PIENKOS2022-P0167;RADOVIC2002-P0043,PIENKOS2022;RADOVIC2002,not_specific,0.704,0.943,1-1,0.959,False,True
+A14-08,A14,deathlike,lifelike,your choice,claude+chatgpt,,T0444,SIMEON2023-P0416,SIMEON2023,not_specific,0.688,0.897,1-1,0.959,False,True
+A14-09,A14,empty,populated,your choice,claude+chatgpt,,T0770,SIMEON2023-P0032,SIMEON2023,not_specific,0.372,0.882,1-1,0.959,False,True
+A14-10,A14,lifeless,alive,your choice,claude+chatgpt,,T0868,DILKES2024-P0012;FINO2024-P0008;MIYAZONO2021-P0071;RADOVIC2002-P0032;RADOVIC2002-P0040;SIERRA2001-P0015;SIMEON2023-P0053;SIMEON2023-P0158;SIMEON2023-P0234,DILKES2024;FINO2024;MIYAZONO2021;RADOVIC2002;SIERRA2001;SIMEON2023,mixed,0.490,0.911,1-1,0.959,False,True
+A14-11,A14,like a detached void,like an inhabited space,your choice,chatgpt,,T1119,DILKES2024-P0121,DILKES2024,not_specific,0.567,0.886,4-6,0.982,False,True
+A14-12,A14,like everything gives the same experiences of blackness,like everything gives the varied experiences of color,your choice,claude,,T0124,PIENKOS2022-P0018,PIENKOS2022,vision,0.745,0.944,7-10,0.985,False,True
+A14-13,A14,like the dark and the void,like the light and the space,your choice,chatgpt,,T0446,SIMEON2023-P0635,SIMEON2023,mixed,0.767,0.879,4-6,0.982,False,True
+A14-14,A14,like the insidious nothingness choking the life out of everything,like the insidious presence coaxing the life out of everything,your choice,claude,,T0185,SIMEON2023-P0502,SIMEON2023,not_specific,0.795,0.956,7-10,0.985,False,True

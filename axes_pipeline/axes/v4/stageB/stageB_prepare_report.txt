@@ -1,0 +1,22 @@
+STAGE B PREPARATION (v4_protocol.md 1.3, section 6)
+==============================================================================
+Date: 2026-10-05 15:21
+
+Pool: 1,718 phrases
+  included for grouping: 1,305
+  'ordinary', set aside for Stage D: 238
+  excluded: 175 (non-visual sense only 88, state not altered 87)
+
+Sense class of the included phrases:
+  not_specific     954  (73%)
+  vision           268  (21%)
+  disputed          83  (6%)
+  with a hearing / touch / other label as well: 8
+First person: 441 of 1,305
+
+Texts to group (identical phrases merged): 1,140
+  by class: not_specific 822, vision 229, mixed 89
+  texts occurring in more than one phrase: 92 (largest: 'unreal', 12 phrases)
+
+Messages: B1_message.txt (about 9,065 words of list; if the chat refuses it, paste the prompt part and attach B1_list_only.txt) and 8 B2 batches of up to 150 texts.
+Save the outputs in outputs/ as stageB_<model>_B1.json and stageB_<model>_B2_batchNN.json.

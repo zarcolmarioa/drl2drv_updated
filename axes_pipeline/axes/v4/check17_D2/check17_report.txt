@@ -1,0 +1,168 @@
+CHECK 17: SCENE PROPERTIES IN THE NEGATIVES (v4_protocol.md 1.11, decision 17)
+==============================================================================
+Date: 2026-10-06 14:39
+Axes file: axes/v4/stageD2/axes_v4.yaml (protocol 1.12)
+CLIP: openai/clip-vit-large-patch14-336; text only, no images; period added: False
+Axis = mean of raw paired differences (positive - negative), unit length (decision 20).
+Controls point to the pole the suspect negatives would push the axis to:
+  enclosure = enclosed / cramped / like a closed room / like an indoor room  minus  open / spacious / like a wide open landscape / like the outdoors; darkness = dark / dimly lit / like nighttime / shadowy  minus  bright / brightly lit / like daytime / sunlit
+A positive cosine: the axis leans towards enclosed (enclosure) or dark (darkness).
+
+1. CONTROLS (primary template): how well each sentence pair agrees with its control
+------------------------------------------------------------------------------
+  enclosure                enclosed / open                         cos with control  0.287  (pair cosine 0.936)
+  enclosure                 cramped / spacious                     cos with control  0.518  (pair cosine 0.860)
+  enclosure      like a closed room / like a wide open landscape   cos with control  0.787  (pair cosine 0.825)
+  enclosure     like an indoor room / like the outdoors            cos with control  0.757  (pair cosine 0.825)
+  darkness                     dark / bright                       cos with control  0.829  (pair cosine 0.900)
+  darkness                dimly lit / brightly lit                 cos with control  0.737  (pair cosine 0.907)
+  darkness           like nighttime / like daytime                 cos with control  0.492  (pair cosine 0.919)
+  darkness                  shadowy / sunlit                       cos with control  0.799  (pair cosine 0.900)
+
+2. EVERY AXIS AGAINST THE CONTROLS (cosine; the other axes are the reference)
+------------------------------------------------------------------------------
+  axis  name                                  enclos t1  enclos t2  enclos t3  enclos t4  darkne t1  darkne t2  darkne t3  darkne t4
+  A01   unreal, fake, artificial                  0.120      0.095      0.123      0.107      0.072      0.074      0.118      0.101
+  A02   dreamlike, in a dream                    -0.063     -0.070     -0.041     -0.027     -0.079     -0.084     -0.068     -0.031
+  A03   movie, picture, film set                  0.017      0.024      0.013     -0.037      0.027      0.006      0.010      0.042
+  A04   simulation, video game                    0.107      0.136      0.143      0.168      0.056      0.073      0.082      0.110
+  A05   veil, glass wall, barrier, bubble         0.266      0.192      0.254      0.286      0.185      0.234      0.207      0.179
+  A07   fog, blurry, hazy                         0.144      0.179      0.146      0.167      0.318      0.322      0.300      0.320
+  A11   flat, two-dimensional                    -0.192     -0.160     -0.176     -0.026     -0.012      0.028      0.024      0.040
+  A13   dull, less vivid, colorless               0.083      0.104      0.043      0.182      0.355      0.331      0.299      0.279
+  A14   lifeless, dead, empty                     0.116      0.070      0.076      0.148      0.433      0.415      0.407      0.406
+  templates: t1 = "a scene that looks {}"; t2 = "a photo that looks {}"; t3 = "a place that looks {}"; t4 = "the world looks {}"
+  enclosure, primary template: median over the 9 axes 0.107, range -0.192 to 0.266
+  darkness, primary template: median over the 9 axes 0.072, range -0.079 to 0.433
+
+2b. EACH AXIS AFTER THE REVISION AGAINST ITS VERSION BEFORE (axes/v4/stageD/axes_v4.yaml; primary template)
+------------------------------------------------------------------------------
+  axis  name                                 pairs before cos new/old enclos old enclos new darkne old darkne new
+  A01   unreal, fake, artificial                33     45       0.954      0.150      0.120      0.069      0.072
+  A02   dreamlike, in a dream                   25     28       0.995     -0.057     -0.063     -0.074     -0.079
+  A03   movie, picture, film set                11     13       0.902      0.059      0.017      0.030      0.027
+  A04   simulation, video game                  21     24       0.980      0.116      0.107      0.050      0.056
+  A05   veil, glass wall, barrier, bubble       44     61       0.756      0.307      0.266      0.193      0.185
+  A07   fog, blurry, hazy                       29     30       0.999      0.146      0.144      0.318      0.318
+  A11   flat, two-dimensional                    6      6       1.000     -0.192     -0.192     -0.012     -0.012
+  A13   dull, less vivid, colorless             10     11       0.997      0.082      0.083      0.345      0.355
+  A14   lifeless, dead, empty                   12     14       0.967      0.108      0.116      0.414      0.433
+
+3. THE SUSPECT AXES: FULL, WITHOUT THE SUSPECT PAIRS, AND THE SUSPECT PAIRS ALONE (suspect = replaced in the revision)
+------------------------------------------------------------------------------
+  A05 veil, glass wall, barrier, bubble  [PRIMARY: "a scene that looks {}"]
+    pairs 44, suspect 33 (replaced); their share of the axis 89%
+    enclosure  full  0.266   without suspect  0.206   suspect alone  0.254  <- target
+    darkness   full  0.185   without suspect  0.127   suspect alone  0.180
+    cosine full vs without suspect: 0.615; suspect alone vs the other pairs: 0.485 (do the two groups mean the same?)
+    drop 0.059; needed 0.089 (max of 0.05 and a third of full) -> keep
+    random removal of 33 pairs (2000 draws): median drop 0.029, 95th percentile 0.080; observed drop above 84% of them (information only)
+
+  A05 veil, glass wall, barrier, bubble  [robustness: "a photo that looks {}"]
+    pairs 44, suspect 33 (replaced); their share of the axis 90%
+    enclosure  full  0.192   without suspect  0.122   suspect alone  0.190  <- target
+    darkness   full  0.234   without suspect  0.146   suspect alone  0.232
+    cosine full vs without suspect: 0.619; suspect alone vs the other pairs: 0.503 (do the two groups mean the same?)
+    drop 0.071; needed 0.064 (max of 0.05 and a third of full) -> REVISE  (rule applies to the primary only)
+    random removal of 33 pairs (2000 draws): median drop 0.019, 95th percentile 0.057; observed drop above 98% of them (information only)
+
+  A05 veil, glass wall, barrier, bubble  [robustness: "a place that looks {}"]
+    pairs 44, suspect 33 (replaced); their share of the axis 91%
+    enclosure  full  0.254   without suspect  0.139   suspect alone  0.248  <- target
+    darkness   full  0.207   without suspect  0.164   suspect alone  0.193
+    cosine full vs without suspect: 0.502; suspect alone vs the other pairs: 0.351 (do the two groups mean the same?)
+    drop 0.115; needed 0.085 (max of 0.05 and a third of full) -> REVISE  (rule applies to the primary only)
+    random removal of 33 pairs (2000 draws): median drop 0.031, 95th percentile 0.090; observed drop above 99% of them (information only)
+
+  A05 veil, glass wall, barrier, bubble  [robustness: "the world looks {}"]
+    pairs 44, suspect 33 (replaced); their share of the axis 87%
+    enclosure  full  0.286   without suspect  0.243   suspect alone  0.273  <- target
+    darkness   full  0.179   without suspect  0.185   suspect alone  0.165
+    cosine full vs without suspect: 0.685; suspect alone vs the other pairs: 0.568 (do the two groups mean the same?)
+    drop 0.043; needed 0.095 (max of 0.05 and a third of full) -> keep  (rule applies to the primary only)
+    random removal of 33 pairs (2000 draws): median drop 0.025, 95th percentile 0.070; observed drop above 73% of them (information only)
+
+  A07 fog, blurry, hazy  [PRIMARY: "a scene that looks {}"]
+    pairs 29, suspect 0 (replaced); their share of the axis 0%
+
+  A07 fog, blurry, hazy  [robustness: "a photo that looks {}"]
+    pairs 29, suspect 0 (replaced); their share of the axis 0%
+
+  A07 fog, blurry, hazy  [robustness: "a place that looks {}"]
+    pairs 29, suspect 0 (replaced); their share of the axis 0%
+
+  A07 fog, blurry, hazy  [robustness: "the world looks {}"]
+    pairs 29, suspect 0 (replaced); their share of the axis 0%
+
+  A14 lifeless, dead, empty  [PRIMARY: "a scene that looks {}"]
+    pairs 12, suspect 2 (replaced); their share of the axis 19%
+    enclosure  full  0.116   without suspect  0.117   suspect alone  0.061
+    darkness   full  0.433   without suspect  0.454   suspect alone  0.182  <- target
+    cosine full vs without suspect: 0.967; suspect alone vs the other pairs: 0.448 (do the two groups mean the same?)
+    drop -0.021; needed 0.144 (max of 0.05 and a third of full) -> keep
+    random removal of 2 pairs (2000 draws): median drop -0.002, 95th percentile 0.091; observed drop above 3% of them (information only)
+
+  A14 lifeless, dead, empty  [robustness: "a photo that looks {}"]
+    pairs 12, suspect 2 (replaced); their share of the axis 17%
+    enclosure  full  0.070   without suspect  0.080   suspect alone  0.007
+    darkness   full  0.415   without suspect  0.429   suspect alone  0.176  <- target
+    cosine full vs without suspect: 0.967; suspect alone vs the other pairs: 0.411 (do the two groups mean the same?)
+    drop -0.014; needed 0.138 (max of 0.05 and a third of full) -> keep  (rule applies to the primary only)
+    random removal of 2 pairs (2000 draws): median drop -0.001, 95th percentile 0.081; observed drop above 12% of them (information only)
+
+  A14 lifeless, dead, empty  [robustness: "a place that looks {}"]
+    pairs 12, suspect 2 (replaced); their share of the axis 16%
+    enclosure  full  0.076   without suspect  0.078   suspect alone  0.034
+    darkness   full  0.407   without suspect  0.419   suspect alone  0.173  <- target
+    cosine full vs without suspect: 0.972; suspect alone vs the other pairs: 0.418 (do the two groups mean the same?)
+    drop -0.012; needed 0.136 (max of 0.05 and a third of full) -> keep  (rule applies to the primary only)
+    random removal of 2 pairs (2000 draws): median drop -0.006, 95th percentile 0.082; observed drop above 37% of them (information only)
+
+  A14 lifeless, dead, empty  [robustness: "the world looks {}"]
+    pairs 12, suspect 2 (replaced); their share of the axis 17%
+    enclosure  full  0.148   without suspect  0.151   suspect alone  0.071
+    darkness   full  0.406   without suspect  0.401   suspect alone  0.239  <- target
+    cosine full vs without suspect: 0.970; suspect alone vs the other pairs: 0.436 (do the two groups mean the same?)
+    drop 0.005; needed 0.135 (max of 0.05 and a third of full) -> keep  (rule applies to the primary only)
+    random removal of 2 pairs (2000 draws): median drop -0.004, 95th percentile 0.075; observed drop above 66% of them (information only)
+
+4. PAIRS LEANING MOST TOWARDS EACH TARGET CONTROL (primary template)
+------------------------------------------------------------------------------
+  A05 (enclosure): cosine of the pair's difference with the control; * suspect
+     0.231 * as if life is through a veil               -> as if life is in direct view
+     0.228 * like a wall before me                      -> like a path before me
+     0.206 * as if seen through a veil between himself  -> as if seen through a direct link between h
+     0.205 * like an invisible wall                     -> like a direct view
+     0.204 * like being trapped in a bubble             -> like being engaged in the world
+     0.201 * as if seen through a glass wall            -> as if seen with direct sight
+     0.198 * as if seen through an invisible wall       -> as if seen with direct sight
+     0.191 * as if seen through an obscuring barrier    -> as if seen through a direct view
+
+  A07 (darkness): cosine of the pair's difference with the control; * suspect
+     0.349   shadowy                                    -> well-lit
+     0.311   as if they are looking at the world throug -> as if they are looking at the world throug
+     0.294   as if navigating through fog in slow motio -> as if navigating through daylight in slow 
+     0.245   like peering at the world through a fog    -> like peering at the world through clear ai
+     0.240   foggy                                      -> clear
+     0.216   unclear                                    -> clear
+     0.215   as if seen through a fog                   -> as if seen through a clear lens
+     0.214   foggy and veiled                           -> focused and distinct
+
+  A14 (darkness): cosine of the pair's difference with the control; * suspect
+     0.529   like the dark and the void                 -> like the light and the space
+     0.297   as if everything looks lifeless            -> as if everything looks alive
+     0.271   dead                                       -> alive
+     0.239   lifeless                                   -> alive
+     0.216   like a detached void                       -> like an inhabited space
+     0.187   like everything gives the same experiences -> like everything gives the varied experienc
+     0.179   as if objects look dead                    -> as if objects look alive
+     0.178   as if with an emptiness to landscapes      -> as if with a presence to landscapes
+
+5. DECISION 17 (primary template)
+------------------------------------------------------------------------------
+  A05: keep  (enclosure: full 0.266, without suspect 0.206, drop 0.059, needed 0.089)
+  A14: keep  (darkness: full 0.433, without suspect 0.454, drop -0.021, needed 0.144)
+
+Revision (if any): for each suspect anchor, another of its passing Stage D
+candidates without the suspect words (suggestion order of decision 14), or
+your own negative; then this check is run once more and both versions reported.

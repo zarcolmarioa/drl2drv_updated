@@ -1,0 +1,10 @@
+axis_id,name,pairs_stageD,pairs,dropped,replaced,open,all_texts,all_docs,all_first_person,all_kept,vision_texts,vision_docs,vision_first_person,vision_kept,not_specific_texts,not_specific_docs,not_specific_first_person,not_specific_kept,largest_doc_share
+A01,"unreal, fake, artificial",45,33,12,1,0,39,9,14,True,0,0,0,False,38,9,13,True,SIMEON2023 39%
+A02,"dreamlike, in a dream",28,25,3,0,0,32,9,19,True,2,2,2,False,30,9,17,True,DILKES2024 29%
+A03,"movie, picture, film set",13,11,2,3,0,13,6,6,True,8,4,4,True,4,2,1,False,MIYAZONO2021 31%
+A04,"simulation, video game",24,21,3,1,0,21,2,8,True,1,1,1,False,20,2,7,True,DILKES2024 78%
+A05,"veil, glass wall, barrier, bubble",61,44,17,33,0,54,7,27,True,16,4,8,True,33,7,15,True,DILKES2024 39%
+A07,"fog, blurry, hazy",30,29,1,0,0,32,7,16,True,23,6,14,True,8,6,1,True,SIMEON2023 43%
+A11,"flat, two-dimensional",6,6,0,0,0,9,7,5,True,7,5,4,True,0,0,0,False,SIMEON2023 31%
+A13,"dull, less vivid, colorless",11,10,1,0,0,10,6,2,True,4,4,2,False,6,2,0,False,PIENKOS2022 43%
+A14,"lifeless, dead, empty",14,12,2,2,0,12,7,9,True,4,5,5,False,7,5,3,True,SIMEON2023 38%

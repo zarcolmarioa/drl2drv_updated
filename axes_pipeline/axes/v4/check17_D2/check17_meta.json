@@ -1,0 +1,75 @@
+{
+  "script": "v4_check17_scene_properties.py",
+  "protocol": "1.11",
+  "created": "2026-10-06 14:39:06",
+  "axes_yaml": "axes/v4/stageD2/axes_v4.yaml",
+  "clip_model": "openai/clip-vit-large-patch14-336",
+  "templates": [
+    "a scene that looks {}",
+    "a photo that looks {}",
+    "a place that looks {}",
+    "the world looks {}"
+  ],
+  "add_period": false,
+  "controls": {
+    "enclosure": [
+      [
+        "enclosed",
+        "open"
+      ],
+      [
+        "cramped",
+        "spacious"
+      ],
+      [
+        "like a closed room",
+        "like a wide open landscape"
+      ],
+      [
+        "like an indoor room",
+        "like the outdoors"
+      ]
+    ],
+    "darkness": [
+      [
+        "dark",
+        "bright"
+      ],
+      [
+        "dimly lit",
+        "brightly lit"
+      ],
+      [
+        "like nighttime",
+        "like daytime"
+      ],
+      [
+        "shadowy",
+        "sunlit"
+      ]
+    ]
+  },
+  "suspect": {
+    "A05": [
+      "air",
+      "open",
+      "space"
+    ],
+    "A07": [
+      "daylight",
+      "lit"
+    ],
+    "A14": [
+      "light"
+    ]
+  },
+  "target_control": {
+    "A05": "enclosure",
+    "A07": "darkness",
+    "A14": "darkness"
+  },
+  "rule_rel": 0.3333333333333333,
+  "rule_abs": 0.05,
+  "n_random": 2000,
+  "seed": 17
+}

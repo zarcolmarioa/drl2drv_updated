@@ -1,0 +1,10 @@
+# Large data, not committed
+axes_pipeline/data/
+
+# Python caches and environments
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.env

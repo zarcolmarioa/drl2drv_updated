@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 2 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 2
+
+BATCH 2 OF 8
+T0151 | it doesn’t feel like I know it any more
+T0152 | bubble
+T0153 | difficult for the person to experience affective empathy toward others
+T0154 | blurry vision
+T0155 | cut her off from the rest of the scene
+T0156 | disgusting
+T0157 | perceptual detachment
+T0158 | see colours when you listen to music
+T0159 | enhanced sense of observations of others’ behavior and character
+T0160 | virtual tactile sensation occurring ‘there’
+T0161 | they don’t look the same
+T0162 | unreal or detached from yourself or your surroundings
+T0163 | spots
+T0164 | I simply cannot understand people, anymore
+T0165 | blurriness
+T0166 | the overall atmosphere or feeling for the world seemed to change
+T0167 | lack of trust in common-sense reality
+T0168 | I’m dreaming…
+T0169 | short
+T0170 | like camera vision
+T0171 | grotesque in their materiality or organicity
+T0172 | much less vivid or intense
+T0173 | unfamiliarity with, the world
+T0174 | cannot tell reality from my dreams
+T0175 | All is strange to me
+T0176 | on the paper the shape of a swan
+T0177 | people seemed to move like shadows
+T0178 | the world around is unreal
+T0179 | “for real”
+T0180 | surroundings look weird and unreal
+T0181 | individuals
+T0182 | feelings of disorientation
+T0183 | life takes me whenever it wants
+T0184 | no conscious awareness of the stimuli in the blind field
+T0185 | the insidious nothingness choking the life out of everything
+T0186 | a foot thick steel barrier
+T0187 | the world is a reflection of how we feel inside
+T0188 | a stronger sense of empathy toward and understanding of others
+T0189 | seeping through the pores of every face I gazed upon
+T0190 | it seems to drag along
+T0191 | charged with a hateful significance
+T0192 | a filter over my eyes
+T0193 | more blurred
+T0194 | no longer experience it as colored with their affective responses to it
+T0195 | part earth; part flower
+T0196 | a separation from the world
+T0197 | special dream quality or particular dream atmosphere
+T0198 | one’s own thoughts or memories are projected into the world
+T0199 | never connects with the world around him
+T0200 | lacking in normal color and vividness
+T0201 | familiarity in a factual sense, but not in a feeling sense
+T0202 | I cannot receive the sensation
+T0203 | too real
+T0204 | not part of anything
+T0205 | as if they are living in dreams
+T0206 | a copy of the real world but not quite real
+T0207 | white wolves
+T0208 | totally flat and two-dimensional
+T0209 | shapes, objects, things
+T0210 | sunk in the ground just under my bench
+T0211 | not as real as before
+T0212 | another layer of simulation
+T0213 | distorted vision
+T0214 | stuck between two worlds
+T0215 | no longer have the familiar affective “flavor”
+T0216 | strangeness
+T0217 | blurriness of the self/other boundaries
+T0218 | a fundamental commitment to the independent existence of the world
+T0219 | upsets me a lot
+T0220 | a thousand years can seem like an hour
+T0221 | commitment to reality as typically conceived
+T0222 | through a fog
+T0223 | widened
+T0224 | from deeper to ever deeper meaning
+T0225 | all visual objects either faded from the mind
+T0226 | duller
+T0227 | I feel as if there were a veil in front of me
+T0228 | others put on a mask or facade
+T0229 | a strong belief in the conventions of socially agreed-up reality
+T0230 | contaminate them in some way
+T0231 | without words
+T0232 | the world looks like a dream
+T0233 | moving faster around him than before
+T0234 | feeling cutoff from the world
+T0235 | akin to living in a dream
+T0236 | No living being was on earth
+T0237 | a feeling of unreality
+T0238 | difficult for others around them to detect that their actions are different
+T0239 | seem different
+T0240 | through changed eyes
+T0241 | time appears to pass outside of or without the individual
+T0242 | apparent colors may change
+T0243 | the end of the world being imminent
+T0244 | others having access to or being able to control one’s own thoughts and feelings
+T0245 | forever stuck on an acid trip
+T0246 | dead
+T0247 | a repeated flow from beauty to heightened beauty
+T0248 | mannequins
+T0249 | my dream kind of autopilot world
+T0250 | unreal and somehow nightmarish
+T0251 | ungraspable world
+T0252 | One’s vision could be blurred
+T0253 | the houses close around me
+T0254 | “off ” and strange
+T0255 | erosion of self/world boundaries
+T0256 | a fog
+T0257 | all just there
+T0258 | in a “fog”
+T0259 | feeling uncomfortable around or exhausted by others
+T0260 | unreal and pointless
+T0261 | Things, yourself, feel strange
+T0262 | I feel indifferent about it
+T0263 | dream state
+T0264 | a lived alternate reality
+T0265 | depersonalizing
+T0266 | as if there were a veil
+T0267 | unreality or detachment from one’s surroundings
+T0268 | detached feeling derives from the external world
+T0269 | unreal world of these simulations
+T0270 | There was nothing on earth
+T0271 | unreal and detached from the self or from surroundings
+T0272 | being an outside observer
+T0273 | the “membrane” separating the self from others was highly permeable
+T0274 | the flower itself was a part of the earth
+T0275 | somehow altered
+T0276 | an inherent detachment from day-to-day reality
+T0277 | a strange feeling of being in a dream
+T0278 | the “unreal” aspect of his mourning process
+T0279 | objects or the world were communicating with them in some way
+T0280 | i’m not even there
+T0281 | detached or unreal
+T0282 | floating somewhere around the body
+T0283 | inability to judge the length of time
+T0284 | everything else past or present or connected to a name is an illusion
+T0285 | a part and yet not a part
+T0286 | a broader reality than perceived in ordinary day-to-day life
+T0287 | strange, and foreign
+T0288 | detaches itself from the surroundings
+T0289 | which frightened me
+T0290 | internal and/or external change
+T0291 | I don’t really perceive people the same
+T0292 | transient
+T0293 | stretched out and lasting longer than they actually did
+T0294 | just walking automatons
+T0295 | I don’t feel like the world exists
+T0296 | a bubble
+T0297 | loss of the ability to feel emotionally attached to others
+T0298 | artificial
+T0299 | visual disturbances
+T0300 | ordinary

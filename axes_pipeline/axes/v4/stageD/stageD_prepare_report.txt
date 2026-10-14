@@ -1,0 +1,22 @@
+STAGE D PREPARATION (v4_protocol.md 1.8, section 6, Stage D)
+==============================================================================
+Date: 2026-10-06 11:45
+
+Axes: 9 (A01, A02, A03, A04, A05, A07, A11, A13, A14); dropped: A15
+Captioned texts: 274; anchors (distinct captions): 243
+
+  axis  name                                 texts anchors negation
+  A01   unreal, fake, artificial                60      54       14
+  A02   dreamlike, in a dream                   35      28        0
+  A03   movie, picture, film set                15      13        0
+  A04   simulation, video game                  24      24        0
+  A05   veil, glass wall, barrier, bubble       73      63        1
+  A07   fog, blurry, hazy                       33      30        1
+  A11   flat, two-dimensional                    9       6        0
+  A13   dull, less vivid, colorless             11      11        0
+  A14   lifeless, dead, empty                   14      14        2
+
+Anchors whose caption contains a negation word (decision D9): 18; tested in CLIP after Stage D.
+Messages: 4 batches of up to 80 captions (D_batch_NN.txt).
+Paste them in order, in one new chat per model; save the answers as
+outputs/stageD_<model>_batchNN.json, then run v4_stageD_check.py.

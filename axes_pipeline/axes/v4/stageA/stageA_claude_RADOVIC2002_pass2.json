@@ -1,0 +1,67 @@
+[
+  {
+    "id": "RADOVIC2002-056",
+    "quote": "complaints of unreality are directed toward some aspect of (or the whole) external world",
+    "context": "Under C fall descriptions of what is commonly known as derealization, that is, here the complaints of unreality are directed toward some aspect of (or the whole) external world.",
+    "pdf_page": 5,
+    "printed_page": "274",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "surroundings",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "authors' definition of category C"
+  },
+  {
+    "id": "RADOVIC2002-057",
+    "quote": "the unreality is ascribed to things or events that we are familiar with",
+    "context": "The complaints in category D and E are easily understood, both because the unreality is ascribed to things or events that we are familiar with and because most of us know from our own experience that important life events can give rise to emotional distress.",
+    "pdf_page": 6,
+    "printed_page": "275",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "unclear",
+    "note": "refers to categories D and E, not depersonalization"
+  },
+  {
+    "id": "RADOVIC2002-058",
+    "quote": "experienced as either real or unreal",
+    "context": "For example, dreams can be experienced as either real or unreal despite their frequent surreal or strange contents.",
+    "pdf_page": 7,
+    "printed_page": "276",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "unclear",
+    "note": "borderline: dream world, not waking world"
+  },
+  {
+    "id": "RADOVIC2002-059",
+    "quote": "surreal or strange contents",
+    "context": "For example, dreams can be experienced as either real or unreal despite their frequent surreal or strange contents.",
+    "pdf_page": 7,
+    "printed_page": "276",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "unclear",
+    "sense": "not_sense_specific",
+    "state": "unclear",
+    "note": "borderline: dream contents, not waking world"
+  },
+  {
+    "id": "RADOVIC2002-060",
+    "quote": "a dimming or blurring both of the person’s sense of identity and of his sense of reality",
+    "context": "Feelings of unreality, which are always unpleasant and strange, bring about a dimming or blurring both of the person’s sense of identity and of his sense of reality.",
+    "pdf_page": 8,
+    "printed_page": "277",
+    "speaker": "other",
+    "quoted_from": "Bird 1958, p. 467",
+    "target": "mixed",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "borderline: 'sense of reality' rather than world itself"
+  }
+]

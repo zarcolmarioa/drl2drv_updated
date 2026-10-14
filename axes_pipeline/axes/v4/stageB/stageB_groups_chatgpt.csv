@@ -1,0 +1,76 @@
+group,name,definition,n_texts,n_phrases,texts_vision,texts_not_specific,texts_mixed,share_vision,all_texts,all_docs,all_first_person,all_passes,vision_texts,vision_docs,vision_first_person,vision_passes,not_specific_texts,not_specific_docs,not_specific_first_person,not_specific_passes,best_match_other_model,share_in_best_match
+G01,"unreal, not real","The world, things, or experience seem unreal or lack their normal feeling of reality.",72,95,2,68,2,0.028,72,9,26,True,2,2,1,False,68,9,23,True,G01,0.958
+G02,dream-like world,The world or life has the quality of being in a dream.,38,57,2,36,0,0.053,38,9,22,True,2,2,2,False,36,9,20,True,G02,1.000
+G03,simulation or video game,"Reality seems like a simulation, virtual reality, or a video game.",25,32,1,24,0,0.040,25,2,11,True,1,1,1,False,24,2,10,True,G04,0.920
+G04,movie or film,Life or the surrounding scene seems like a movie or film rather than directly lived reality.,6,7,2,3,1,0.333,6,4,2,True,2,2,1,False,3,2,0,False,G03,1.000
+G05,"strange, odd","The world or things seem strange, odd, or peculiar.",21,30,0,17,4,0.000,21,7,14,True,1,2,2,False,19,7,10,True,G16,0.905
+G06,look unfamiliar,"Previously ordinary people, places, or things seem unfamiliar.",24,28,7,14,3,0.292,24,9,9,True,8,3,6,True,15,9,1,True,G17,0.792
+G07,known but not familiar,Something can still be known or recognized while the felt sense of familiarity is missing.,8,8,1,7,0,0.125,8,2,4,True,1,1,1,False,7,2,3,True,G17,0.875
+G08,cut off from world,"The person feels detached, cut off, or separated from the surrounding world.",41,47,0,40,1,0.000,41,8,9,True,0,0,0,False,40,8,8,True,G08,1.000
+G09,wall or barrier,"An enclosing wall, barrier, screen, or bubble seems to separate the person from the world.",75,100,15,48,12,0.200,75,7,47,True,18,4,11,True,50,7,30,True,G05,0.800
+G10,detached observer,"Experience is watched from the position of an observer, spectator, or third party.",8,8,0,5,3,0.000,8,4,5,True,0,0,0,False,5,4,2,True,G09,1.000
+G11,outside the body,The experienced point of self-location seems to be outside the physical body.,0,0,0,0,0,,0,0,0,False,0,0,0,False,0,0,0,False,,
+G12,"floating, unlocated",The observing self or perspective seems to float or lack a definite location.,1,1,0,1,0,0.000,1,1,0,False,0,0,0,False,1,1,0,False,G30,1.000
+G13,"far away, distant","People, objects, or the world appear unusually far away or distant.",13,15,4,5,4,0.308,13,3,5,True,4,2,2,False,5,2,2,True,G10,1.000
+G14,"flat, two-dimensional","Objects, people, or the world appear flat or two-dimensional.",10,15,7,1,2,0.700,10,8,5,True,7,5,4,True,1,1,0,False,G11,1.000
+G15,"foggy, blurry","Vision or the visible world seems foggy, blurry, hazy, or out of focus.",31,43,21,7,3,0.677,31,7,16,True,22,6,14,True,8,6,1,True,G07,0.968
+G16,"less vivid, dull","Perception seems attenuated, dull, colorless, or lacking its usual vividness.",12,16,3,7,2,0.250,12,7,2,True,4,4,2,False,8,3,0,False,G13,1.000
+G17,"clear, sharp, detailed","Perception seems unusually clear, sharp, acute, bright, or detailed.",4,4,3,0,1,0.750,4,2,0,False,3,1,0,False,0,0,0,False,G15,1.000
+G18,"larger, bigger","Rooms, objects, or the world appear larger than usual.",7,7,5,1,1,0.714,7,3,2,True,5,3,2,True,1,1,0,False,G12,0.714
+G19,look smaller,Objects or appearances seem smaller than usual or smaller than reality.,3,3,3,0,0,1.000,3,3,0,False,3,3,0,False,0,0,0,False,G12,1.000
+G20,visually distorted,"The visible world, shapes, size, or distance appear distorted.",13,16,9,1,3,0.692,13,4,5,True,9,4,3,True,1,1,0,False,OTHER,0.769
+G21,altered colors,Colors or hues appear changed in quality or intensity.,3,3,3,0,0,1.000,3,2,1,False,3,2,1,False,0,0,0,False,G18,0.667
+G22,spots and dots,"The visual field contains spots, dots, or similar small visual marks.",4,4,4,0,0,1.000,4,2,0,False,4,2,0,False,0,0,0,False,G33,1.000
+G23,overly bright light,Light or light-colored things seem excessively bright or visually overwhelming.,3,3,2,0,1,0.667,3,3,1,False,2,2,1,False,0,0,0,False,G15,1.000
+G24,time slowed,"Time, motion, or events seem to move unusually slowly.",7,7,0,7,0,0.000,7,3,2,True,0,0,0,False,7,3,2,True,G27,1.000
+G25,time sped up,Time seems to pass unusually fast.,13,14,0,13,0,0.000,13,3,3,True,0,0,0,False,13,3,3,True,G27,0.923
+G26,"time stopped, suspended","Time seems stopped, absent, or suspended in the moment.",8,8,0,8,0,0.000,8,3,3,True,0,0,0,False,8,3,3,True,G28,1.000
+G27,"stretched, eternal time","Brief periods seem stretched out, endless, or eternal.",6,6,0,6,0,0.000,6,2,5,True,0,0,0,False,6,2,5,True,G28,0.667
+G28,recent feels long ago,"Recent events seem remote, as if they happened much longer ago.",5,5,0,5,0,0.000,5,1,1,False,0,0,0,False,5,1,1,False,G29,1.000
+G29,past feels present,"Past events feel present, recently lived, or as though they are being relived.",6,6,0,6,0,0.000,6,2,2,True,0,0,0,False,6,2,2,True,G29,1.000
+G30,"time unreliable, disordered","Time loses its usual reliability, consistency, or clear ordering.",10,10,0,10,0,0.000,10,3,2,True,0,0,0,False,10,3,2,True,OTHER,0.600
+G31,"time unnoticed, lost",The passage of time is not noticed or seems to be lost altogether.,3,3,0,3,0,0.000,3,3,1,False,0,0,0,False,3,3,1,False,G28,0.667
+G32,not present or engaged,"The person does not feel fully present, immersed, or engaged in the moment or world.",10,10,0,10,0,0.000,10,3,0,False,0,0,0,False,10,3,0,False,G08,1.000
+G33,world lacks emotional coloring,The world or objects no longer carry their usual personal emotional coloring or resonance.,20,20,1,18,1,0.050,20,4,1,True,1,1,0,False,18,4,1,True,G19,0.900
+G34,beauty and charm lost,"Nature, objects, or surroundings no longer convey their usual beauty, charm, or aesthetic appeal.",9,9,0,6,3,0.000,9,3,5,True,0,0,0,False,6,3,3,True,G19,0.889
+G35,emotionally distant from others,"Other people, including loved ones, feel emotionally distant or disconnected.",11,11,0,11,0,0.000,11,4,4,True,0,0,0,False,11,4,4,True,G23,0.909
+G36,people as robots,"Other people seem robotic, mechanical, programmed, or like automata.",21,26,3,17,1,0.143,21,4,14,True,3,3,3,False,17,3,10,True,G22,1.000
+G37,people lifeless,"Other people seem lifeless, dead, zombie-like, or mannequin-like.",6,11,0,3,3,0.000,6,2,5,True,0,0,0,False,4,2,0,False,G22,1.000
+G38,"people acting, masked","Other people seem to be merely acting, wearing a facade, or producing artificial human-like behavior.",5,6,2,1,2,0.400,5,3,4,True,2,1,3,False,1,1,0,False,G22,1.000
+G39,people hard to understand,Other people become difficult to understand without deliberate scrutiny or intellectual effort.,6,6,0,5,1,0.000,6,2,3,True,0,0,0,False,5,1,2,False,G23,0.667
+G40,watched and judged,"Other people seem to be watching, scrutinizing, mocking, or judging the person.",5,5,0,3,2,0.000,5,2,3,True,0,0,0,False,3,2,2,False,G24,1.000
+G41,"threatening, unsafe","Other people or the surroundings seem threatening, dangerous, or unsafe.",10,10,1,9,0,0.100,10,2,1,True,1,1,0,False,9,2,1,True,G34,0.600
+G42,controlled by others,"Other people seem to control, direct, or strongly influence one’s thoughts, feelings, or actions.",6,6,0,6,0,0.000,6,3,1,True,0,0,0,False,6,3,1,True,G24,1.000
+G43,access to others' minds,"Other people’s thoughts, feelings, or behavior seem unusually accessible or predictable.",4,4,0,4,0,0.000,4,2,0,False,0,0,0,False,4,2,0,False,OTHER,1.000
+G44,oneness with all,The boundary between oneself and everything else seems replaced by a felt oneness with the world or universe.,10,10,1,9,0,0.100,10,2,5,True,1,1,1,False,9,2,4,True,G25,0.800
+G45,greater concern for others,"Other people or humanity evoke unusually strong empathy, concern, or responsibility.",4,4,0,4,0,0.000,4,1,0,False,0,0,0,False,4,1,0,False,G25,1.000
+G46,blurred self-world boundaries,"The boundaries between self and other, self and world, or self and non-self feel blurred or eroded.",7,7,0,7,0,0.000,7,4,1,True,0,0,0,False,7,4,1,True,G26,1.000
+G47,objects merge with body,"Objects seem to merge with, fuse with, or become extensions of the body.",4,4,1,3,0,0.250,4,3,0,False,1,1,0,False,3,2,0,False,G26,1.000
+G48,virtual body feels mine,A virtual body is experienced as one’s own body or takes over bodily ownership.,0,0,0,0,0,,0,0,0,False,0,0,0,False,0,0,0,False,,
+G49,more real,"Things, dreams, or experience can seem unusually or excessively real.",6,6,0,6,0,0.000,6,2,1,True,0,0,0,False,6,2,1,True,G15,0.667
+G50,doubt in reality,"Reality, existence, or common-sense reality is doubted or called into question.",12,12,0,12,0,0.000,12,3,4,True,0,0,0,False,12,3,4,True,G31,0.917
+G51,"known real, feels unreal",Something is still known or believed to be real even though immediate experience does not feel real.,3,3,0,3,0,0.000,3,1,0,False,0,0,0,False,3,1,0,False,G31,0.667
+G52,imagined or perceived,"It becomes unclear whether something was really perceived or instead imagined, thought, or dreamed.",3,3,0,3,0,0.000,3,3,1,False,0,0,0,False,3,3,1,False,G02,0.667
+G53,real and unreal together,"Something can feel real and unreal at the same time, with the boundary between the two suspended.",4,4,0,4,0,0.000,4,2,2,False,0,0,0,False,4,2,2,False,G01,0.500
+G54,alternate realities,"Experience seems to take place in an alternate, parallel, or equally valid reality or world.",15,15,0,15,0,0.000,15,3,4,True,0,0,0,False,15,3,4,True,G31,0.533
+G55,"special meaning, significance","Events, objects, or the universe seem charged with unusual personal meaning or significance.",10,10,0,9,1,0.000,10,3,5,True,0,0,0,False,9,3,4,True,G21,0.900
+G56,"meaningless, irrelevant","Objects, actions, or the world seem meaningless, irrelevant, or without normal value.",14,15,3,11,0,0.214,14,5,5,True,3,2,2,False,11,4,3,True,G20,0.857
+G57,not directly presented,Objects or the world no longer feel immediately or directly presented to experience.,12,12,3,6,3,0.250,12,4,3,True,3,2,0,False,6,3,3,True,G08,0.583
+G58,miss the surroundings,Obvious things or ongoing surroundings are not noticed or consciously registered.,7,7,0,7,0,0.000,7,2,4,True,0,0,0,False,7,2,4,True,G32,1.000
+G59,nothing stands out,"Things fail to impose themselves, stand out, or capture and hold attention.",5,5,0,5,0,0.000,5,2,0,False,0,0,0,False,5,2,0,False,G19,0.800
+G60,absent things perceived,"Sounds, images, or things are experienced despite not being currently present.",4,4,0,2,2,0.000,4,1,0,False,0,0,0,False,2,1,0,False,G33,1.000
+G61,"empty, void","The world or landscape seems empty, void-like, or pervaded by nothingness.",9,9,0,7,2,0.000,9,4,6,True,0,0,0,False,7,3,5,True,G14,1.000
+G62,"dead, lifeless world","The world or objects seem dead, deathlike, or lifeless.",5,14,2,2,1,0.400,5,7,4,True,3,5,4,False,3,5,0,False,G14,1.000
+G63,"eerie, uncanny, nightmarish","The world or experience has a frightening, uncanny, eerie, or nightmarish quality.",9,10,1,6,2,0.111,9,5,4,True,2,2,1,False,7,5,2,True,G16,0.556
+G64,surroundings closing in,"The surrounding environment seems to close in, press in, or become suffocating.",4,4,0,3,1,0.000,4,2,0,False,0,0,0,False,3,2,0,False,OTHER,0.750
+G65,seen for first time,Familiar things appear as though they are being seen for the first time.,7,7,7,0,0,1.000,7,1,6,False,7,1,6,False,0,0,0,False,G17,0.857
+G66,shapes and formal details,"Things are experienced primarily as shapes, colors, material properties, or formal visual details rather than their ordinary identity.",16,16,13,2,1,0.812,16,3,8,True,13,3,7,True,2,1,0,False,G20,0.625
+G67,distinctness and differences lost,"Objects or things lose their individuality, distinctness, or differences from one another.",5,5,5,0,0,1.000,5,2,4,True,5,2,4,True,0,0,0,False,OTHER,1.000
+G68,lack of agency,Events or the world feel beyond one’s control or unaffected by one’s actions.,2,2,0,2,0,0.000,2,2,0,False,0,0,0,False,2,2,0,False,NOT_WORLD,0.500
+G69,behind everyday appearances,Ordinary appearances seem like a veil or facade behind which a deeper or more real layer can be glimpsed.,4,4,1,3,0,0.250,4,1,1,False,1,1,0,False,3,1,1,False,G01,0.500
+G70,marveling at existence,"The world or existence evokes unusual wonder, mystery, or aesthetic marveling.",4,4,1,2,1,0.250,4,2,3,False,1,1,1,False,2,2,1,False,G15,0.500
+G71,"grotesque, repulsive","Objects or material reality appear grotesque, disgusting, or repulsive.",6,6,0,4,2,0.000,6,2,1,True,0,0,0,False,4,2,1,False,G34,1.000
+G72,nothing exists,"The world, other people, or things seem not merely unreal but nonexistent.",8,8,0,8,0,0.000,8,5,4,True,0,0,0,False,8,5,4,True,G01,0.750
+G73,"more accurate, unfiltered","Perception seems unusually direct, accurate, or free of ordinary filters.",4,4,1,3,0,0.250,4,2,1,False,1,1,1,False,3,2,0,False,G15,0.750
+OTHER,OTHER,,148,159,54,83,11,0.365,148,9,54,True,54,7,30,True,83,8,17,True,,
+NOT_WORLD,NOT_WORLD,,196,207,35,155,6,0.179,196,9,64,True,37,7,22,True,157,9,39,True,,

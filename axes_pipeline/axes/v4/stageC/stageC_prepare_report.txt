@@ -1,0 +1,23 @@
+STAGE C PREPARATION (v4_protocol.md 1.5, section 6, Stage C)
+==============================================================================
+Date: 2026-10-05 17:45
+
+Axes selected for CLIP: 10
+Texts: 344
+
+  axis  name                                 texts  by class
+  A01   unreal, fake, artificial                89  mixed 4, not_specific 83, vision 2
+  A02   dreamlike, in a dream                   42  not_specific 40, vision 2
+  A03   movie, picture, film set                15  mixed 1, not_specific 6, vision 8
+  A04   simulation, video game                  27  not_specific 26, vision 1
+  A05   veil, glass wall, barrier, bubble       78  mixed 11, not_specific 49, vision 18
+  A07   fog, blurry, hazy                       33  mixed 3, not_specific 7, vision 23
+  A11   flat, two-dimensional                   10  mixed 2, not_specific 1, vision 7
+  A13   dull, less vivid, colorless             12  mixed 2, not_specific 7, vision 3
+  A14   lifeless, dead, empty                   15  mixed 3, not_specific 9, vision 3
+  A15   vivid, heightened                       23  mixed 2, not_specific 8, vision 13
+
+Texts whose phrase was not found in any context: 1 (shown without context; restoring a word is then impossible)
+Messages: 3 batches of up to 120 texts (C_batch_NN.txt).
+Paste them in order, in one new chat per model; save the answers as
+outputs/stageC_<model>_batchNN.json, then run v4_stageC_check.py.

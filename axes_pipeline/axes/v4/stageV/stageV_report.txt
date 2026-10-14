@@ -1,0 +1,86 @@
+STAGE V: VERIFICATION AND MERGING (v4_protocol.md 1.2, section 5)
+==============================================================================
+Date: 2026-10-05 14:54
+Stage A files: 34 (1 other files ignored: pilot)
+Items: 2,946; phrases in the verified pool: 1,718
+
+1. VERIFICATION OF THE QUOTES (all items)
+------------------------------------------------------------------------------
+status   DROPPED_BY_REVIEW  VERIFIED
+model                               
+chatgpt                  7      1651
+claude                   6      1282
+  repeats removed (same model, same place, e.g. pass 2 repeating pass 1): 5
+  near matches to confirm: 0 (stageV_near_matches.csv, column keep)
+  contexts not found: 62; quotes not inside their context: 6; punctuation / spacing differs: 52; match inside a word: 51
+
+2. PER DOCUMENT
+------------------------------------------------------------------------------
+  document      pages    items c/g   verified c/g   not found c/g   phrases   both  c only  g only   pass-2 only c/g
+  CIAUNICA2022     34    184/263       184/262           0/0            249    160      10      79             12/47
+  DILKES2024       24    145/185       145/185           0/0            177    143       1      33              2/23
+  FINO2024         15     23/22         23/22            0/0             24     21       2       1               4/1
+  MIYAZONO2021     26    132/133       132/133           0/0            146    111      21      14               7/6
+  PIENKOS2022      32    161/241       158/238           0/0            225    147      10      68             35/68
+  RADOVIC2002      10     60/71         60/71            0/0             67     53       7       7               5/9
+  SIERRA2001        8     39/39         39/39            0/0             36     34       1       1               1/1
+  SIMEON2023      297    514/606       511/603           0/0            695    370     135     190       single pass
+  TANAKA2018       24     30/98         30/98            0/0             99     27       2      70               2/7
+  total: 1,718 phrases; found by both 1,066 (62%), claude only 189, chatgpt only 463
+  (c = claude, g = chatgpt; pass-2 only = phrases a model found only in its second pass)
+  spans of the two models that overlap without one containing the other (not merged): 9
+
+3. PAGE COVERAGE (pages with at least one verified item; longest runs of >= 5 pages without items)
+------------------------------------------------------------------------------
+  CIAUNICA2022 claude     17 of 34   pages, 2-24   gaps: 25-34
+  CIAUNICA2022 chatgpt    19 of 34   pages, 2-24   gaps: 25-34
+  DILKES2024   claude     15 of 24   pages, 1-22   gaps: none
+  DILKES2024   chatgpt    17 of 24   pages, 1-22   gaps: none
+  FINO2024     claude     10 of 15   pages, 1-13   gaps: none
+  FINO2024     chatgpt    10 of 15   pages, 1-12   gaps: none
+  MIYAZONO2021 claude     19 of 26   pages, 1-20   gaps: 21-26
+  MIYAZONO2021 chatgpt    16 of 26   pages, 1-20   gaps: 21-26
+  PIENKOS2022  claude     18 of 32   pages, 2-26   gaps: 3-8; 27-32
+  PIENKOS2022  chatgpt    18 of 32   pages, 2-26   gaps: 3-8; 27-32
+  RADOVIC2002  claude      7 of 10   pages, 2-8   gaps: none
+  RADOVIC2002  chatgpt     6 of 10   pages, 2-8   gaps: none
+  SIERRA2001   claude      3 of 8    pages, 1-5   gaps: none
+  SIERRA2001   chatgpt     4 of 8    pages, 1-5   gaps: none
+  SIMEON2023   claude    128 of 297  pages, 10-264   gaps: 266-291; 182-193; 105-115; 137-142; 195-200
+  SIMEON2023   chatgpt   134 of 297  pages, 10-264   gaps: 266-291; 184-202; 108-115; 72-78; 240-246
+  TANAKA2018   claude     11 of 24   pages, 1-21   gaps: none
+  TANAKA2018   chatgpt    20 of 24   pages, 1-21   gaps: none
+  SIMEON2023: pages with items from claude only 17, from chatgpt only 23, from both 111
+  SIMEON2023: 12 pages without a text layer: [1, 2, 3, 7, 9, 265, 292, 293, 294, 295, 296, 297]
+
+4. LABEL AGREEMENT (phrases found by both models, one label each)
+------------------------------------------------------------------------------
+  speaker  kappa 0.92  (agreement 94%, n = 1065)
+  target   kappa 0.77  (agreement 83%, n = 1054)
+  sense    kappa 0.85  (agreement 92%, n = 1050)
+  state    kappa 0.78  (agreement 95%, n = 1057)
+  Labels per model are in stageA_verified.csv (<label>_<model>).
+  speaker disagreements that change whether the phrase is first-person: 28 (to review before Stage B)
+
+5. REVIEW (stageV_review.csv: write decision, run again)
+------------------------------------------------------------------------------
+  not_found         13 rows; decided   13 (drop 13)
+  first_person      29 rows; decided   29 (no 29)
+  invalid_label      1 rows; decided    1 (hearing 1)
+  overlap            9 rows; decided    9 (merge 9)
+  first_person in the pool: no 1187, yes 531
+  STAGE V COMPLETE: every review row decided.
+
+6. PROBLEMS (stageV_problems.csv)
+------------------------------------------------------------------------------
+  context_not_found                   62
+  match_inside_word_or_spacing        51
+  quote_not_found                     13
+  quote_not_in_context                 6
+  pdf_pages_without_text               1
+  file_ignored                         1
+  invalid_label                        1
+
+Next: decide the open rows of stageV_review.csv (and any near matches in
+stageV_near_matches.csv), run again until Stage V is complete; then Stage B.
+Runtime 3 s

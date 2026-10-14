@@ -1,0 +1,25 @@
+{
+  "script": "v4_stageC_prepare.py",
+  "protocol": "1.5",
+  "created": "2026-10-05 17:45:38",
+  "axes": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A07",
+    "A11",
+    "A13",
+    "A14",
+    "A15"
+  ],
+  "n_texts": 344,
+  "n_batches": 3,
+  "batch_size": 120,
+  "seed": 42,
+  "excluded": {
+    "A01": "the world or things in it seeming not to exist",
+    "A15": "seeming more real, without looking more vivid, intense or detailed"
+  }
+}

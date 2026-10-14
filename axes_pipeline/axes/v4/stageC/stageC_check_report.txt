@@ -1,0 +1,73 @@
+STAGE C: CAPTION FORMS, CHECKS AND REVIEW (v4_protocol.md 1.6, section 6)
+==============================================================================
+Date: 2026-10-05 18:36
+Texts: 344 in 10 axes; template: "a scene that looks ___."
+
+1. OUTPUT CHECKS (stageC_problems.csv)
+------------------------------------------------------------------------------
+  no problems: every text answered exactly once
+
+2. CAPTIONS AND DROPS PER MODEL
+------------------------------------------------------------------------------
+            caption  cannot outside  words ok  form ok  content del  fluency  meta
+  claude        332       5       7       332      331            3       16    55
+  chatgpt       333       4       7       333      333            0       15    63
+  fluency: SLOR, median 1.73, flagged below 0.32 (Q1 - 1.5 x IQR)
+
+3. AGREEMENT BETWEEN THE MODELS
+------------------------------------------------------------------------------
+  both wrote a caption: 330; the same caption: 177 (54%)
+  both dropped: 9; only claude dropped: 3; only chatgpt dropped: 2
+
+4. STATUS
+------------------------------------------------------------------------------
+  accepted automatically: 137 (same caption, every check passed)
+  dropped by both: 9
+  to review (stageC_review.csv): 202; still open: 0
+     153  captions differ
+      64  meta word
+      31  fluency
+       5  one model dropped it
+       4  accepted automatically
+       4  your decision applies
+       3  content word deleted
+       1  form
+  with a suggestion (conventions): 127; taken where the decision is empty (ACCEPT_SUGGESTIONS)
+      67  convention 1
+      42  convention 2
+       7  convention 3
+       2  convention 1,3
+       2  convention 1,4
+       2  convention 2,3
+       2  convention 4
+       2  equivalent
+       1  convention 1,3,4
+  dropped as not_scene by you: 45
+
+5. EDITS IN THE FINAL CAPTIONS (stageC_captions.csv)
+------------------------------------------------------------------------------
+  unchanged quote: 60 of 290
+  with a word restored from context: 2
+  with a change of form: 24
+  with a deleted content word (accepted by you): 5
+  added words: if 126, as 125, like 71, seen 50, through 29, a 16, the 9, in 8, is 7, with 6, it 5, behind 1, an 1, were 1
+
+6. SUPPORT AFTER STAGE C (keeping rules as in Stage B: >= 5 texts, >= 2 documents, >= 1 first-person)
+------------------------------------------------------------------------------
+    axis name                           before capt. distinct docs  1st   kept all/vis/n-s
+    A01  unreal, fake, artificial           89    60       54    9   27   Y/-/Y
+    A02  dreamlike, in a dream              42    35       28    9   22   Y/-/Y
+    A03  movie, picture, film set           15    15       13    6    7   Y/Y/Y
+    A04  simulation, video game             27    24       24    2    9   Y/-/Y
+    A05  veil, glass wall, barrier, bu      78    73       63    7   43   Y/Y/Y
+    A07  fog, blurry, hazy                  33    33       30    7   17   Y/Y/Y
+    A11  flat, two-dimensional              10     9        6    7    5   Y/Y/-
+    A13  dull, less vivid, colorless        12    11       11    7    2   Y/-/-
+    A14  lifeless, dead, empty              15    14       14    7   11   Y/-/Y
+    A15  vivid, heightened                  23    16       16    4    3   Y/-/-
+  kept: all phrases 10, vision only 4, not-specific only 7
+  (distinct = different captions; identical captions from different texts
+   become one anchor in Stage D.)
+  STAGE C COMPLETE: every text decided. Next: Stage D (counterfactuals).
+
+Runtime 0.3 s

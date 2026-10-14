@@ -1,0 +1,190 @@
+I have a list of short phrases. Each was taken word for word from a
+published text, and each has already been assigned to a QUALITY: a way in
+which the world, places or objects can appear. The qualities are defined
+below. Next to each phrase is its context, the sentence it was taken from,
+with the phrase itself in [square brackets].
+
+TASK
+Turn each phrase into a CAPTION: the words that complete the sentence
+
+    a scene that looks ___
+
+so that the whole sentence is grammatical and reads naturally, like a short
+description of a picture. Change the phrase as little as possible.
+
+WHAT YOU MAY DO
+1. Add only these words: a, an, the, like, as, if, though, with, of, in, on,
+   at, to, from, by, through, behind, into, is, are, was, were, be, been,
+   being, seem, seems, seemed, it.
+2. Add "seen" only as "as if seen" or "like seen", directly before words
+   that begin with one of the prepositions in rule 1 (for example before
+   "through ..." or "behind ...").
+3. Restore a word that stands directly before or after the brackets in the
+   context, for example a comparison word just before the phrase.
+4. Delete words that place the experience in a person ("I see", "I feel",
+   "it seems to me", "my"), hedges and intensifiers ("just", "almost",
+   "somehow", "really", "very", "quite"), and articles, prepositions or
+   forms of "be" when they would make the sentence ungrammatical.
+5. Change the grammatical form of a word while keeping its root (a verb
+   into its past participle, a noun into its adjective).
+
+WHAT YOU MAY NOT DO
+- Add any other word, replace a word with a synonym, or add a negation.
+- Delete a word that carries the quality.
+- Change the order of the phrase's words, unless the sentence needs it.
+
+WHEN NOT TO WRITE A CAPTION
+Write no caption, and give the reason in "drop", only when:
+- "cannot": the phrase cannot become a grammatical caption under these
+  rules;
+- "outside": the phrase expresses only what its quality's definition
+  EXCLUDES (only qualities with an "Excludes" line).
+Do not leave out a phrase for any other reason.
+
+ILLUSTRATION (an unrelated topic, taste, with the sentence "a drink that
+tastes ___"; in this illustration the word allowed by rule 2 is "tasted";
+in your task it is "seen")
+- "watery"  ->  "watery"  (no change)
+- "it tasted to me like water from a tin cup"  ->  "like water from a tin
+  cup"  (deleted "it tasted to me")
+- context "it was almost like [the metal of an old coin], I thought"  ->
+  "like the metal of an old coin"  (restored "like" from the context)
+- "I found it thin and metallic"  ->  "thin and metallic"
+- "through a straw"  ->  "as if tasted through a straw"  (rule 2)
+- "my grandmother's recipe"  ->  no caption, drop "cannot"
+
+OUTPUT
+One JSON array inside one code block labelled json, one object per phrase,
+in the order of the list:
+[{"id": "T0001", "caption": "...", "drop": null},
+ {"id": "T0002", "caption": null, "drop": "cannot"}, ...]
+After the code block write the number of phrases in the array and then the
+line: END OF BATCH 2
+
+QUALITIES
+A02 "dreamlike, in a dream": The world or one's life seems like a dream or like being in a dream.
+A03 "movie, picture, film set": The world appears as a film, picture or staged scene that is being viewed rather than lived.
+A04 "simulation, video game": The world seems to be a simulation, video game or other digital or virtual reality.
+A05 "veil, glass wall, barrier, bubble": Something like a veil, film, pane of glass, invisible wall or enclosing bubble seems to stand between the person and the world.
+
+THE PHRASES (batch 2 of 3)
+T0174 | A02 | phrase: "cannot tell reality from my dreams" | context: "i [cannot tell reality from my dreams]."
+T0197 | A02 | phrase: "special dream quality or particular dream atmosphere" | context: "We suggest that this [special dream quality or particular dream atmosphere] is essentially the same experience as that which we have called the ..."
+T0395 | A02 | phrase: "living in a dream" | context: "... 2000) “feel like an automaton or as if he or she is [living in a dream] or a movie” are included as diagnostic features." | context: "... just watching life from behind glass”, and “I feel as if I'm [living in a dream]”"
+T0115 | A02 | phrase: "feel dreamlike" | context: "But note that a situation in our awake life can [feel dreamlike], although we do not have the slightest suspicion that the situation ..."
+T0168 | A02 | phrase: "I'm dreaming..." | context: "[I'm dreaming]..."
+T0277 | A02 | phrase: "a strange feeling of being in a dream" | context: "... as I am myself, and all excitedly pursuing pure chimeras, I experience [a strange feeling of being in a dream]."
+T0903 | A02 | phrase: "this must be a dream" | context: "He vividly recalls feeling at the time that [this must be a dream]; it could not really be happening."
+T0998 | A02 | phrase: "as though in a dream" | context: "... (American Psychiatric Association, 1980), at which point the metaphors “feel 'mechanical' or [as though in a dream]” are included in the description."
+T0794 | A02 | phrase: "as if living in a continuous dream" | context: "“She claimed to feel as if she were not dead or alive, [as if living in a continuous dream] . . . objects looked as if surrounded by a cloud; people ..."
+T0117 | A02 | phrase: "dream state come true" | context: "... are actually living every day with the fear and unreality of a [dream state come true]."
+T0610 | A02 | phrase: "more like our dreams than is usually the case" | context: "If the world suddenly turns out to be [more like our dreams than is usually the case], it is only human to let the shadow of a doubt ..."
+T0942 | A03 | phrase: "some sort of Truman Show plot" | context: "I can't tell if you're all robots and this is [some sort of Truman Show plot], or if you're all just machinations of my own mind."
+T0992 | A03 | phrase: "kind of like a camera" | context: "... now “feels like I am not looking out of my eyes, it's [kind of like a camera], like camera vision.”"
+T0908 | A03 | phrase: "picture" | context: "... characterize the subjective reports of derealization, such as “fog”, “veil”, or “[picture]”." | context: "... of derealization is the use of metaphors, such as “fog” or “[picture]”, that convey the idea of indirectness or representation."
+T1046 | A03 | phrase: "a fictional narrative" | context: "... developing DPDR, recent events have the quality of imagination, a dream, or [a fictional narrative], not something immediately lived."
+T0605 | A03 | phrase: "as if I were looking at a picture" | context: "What I see looks 'flat' or 'lifeless', [as if I were looking at a picture]." | context: "What I see looks “flat” or “lifeless”, [as if I were looking at a picture]."
+T0347 | A03 | phrase: "real life “seemed like a movie”" | context: "... the Twin Towers collapsing on live television and, in an unprecedented way, [real life “seemed like a movie]” to the national consciousness."
+T0122 | A03 | phrase: "looking at a “picture”" | context: "Patients also say that they feel as if they were [looking at a “picture]” or a “movie”, or as if external objects were “flat”."
+T0170 | A03 | phrase: "like camera vision" | context: "... not looking out of my eyes, it's kind of like a camera, [like camera vision].”"
+T0988 | A03 | phrase: "a movie" | context: "... or as if he or she is living in a dream or [a movie]” are included as diagnostic features." | context: "... or as if he or she is living in a dream or [a movie]."
+T0013 | A03 | phrase: "picked up out of my real world and put down into a film set" | context: "Sometimes it feels like I've been [picked up out of my real world and put down into a film set], or something – as though it's a copy of the real ..."
+T1135 | A03 | phrase: "the whole world is a work of art" | context: "We—I mean all human beings—are connected with this; that [the whole world is a work of art]; that we are parts of the work of art."
+T0084 | A03 | phrase: "life as if it were played like a film in a cinema" | context: "I imagine myself seeing [life as if it were played like a film in a cinema]."
+T0340 | A03 | phrase: "living in a movie" | context: "... alienated from or unfamiliar with your surroundings for example, like you are [living in a movie] or a dream; feeling emotionally disconnected from people you care about, as ..."
+T1030 | A03 | phrase: "seems just a painted picture" | context: "“Everything [seems just a painted picture], deathly quiet” (Lewis, 1931)."
+T1010 | A03 | phrase: "a “movie”" | context: "... that they feel as if they were looking at a “picture” or [a “movie]”, or as if external objects were “flat”."
+T0978 | A04 | phrase: "glitches in the system" | context: "I constantly try to find [glitches in the system] to validate these thoughts."
+T0103 | A04 | phrase: "a video game" | context: "May feel as if they are in a digital world, including: [a video game], a simulation, a sims game, the matrix, and playing the life ..."
+T0909 | A04 | phrase: "in a simulation" | context: "makes me feel like i'm in a dream or am [in a simulation]."
+T1125 | A04 | phrase: "a hologram" | context: "... if the self is peering at the world through a fog, or [a hologram]."
+T0937 | A04 | phrase: "a simulation" | context: "... for derealization include the digital other-world references being in a video game, [a simulation], a really bad sims game, the matrix, and playing the life ..." | context: "... as if they are in a digital world, including: a video game, [a simulation], a sims game, the matrix, and playing the life game."
+T0323 | A04 | phrase: "a really bad sims game" | context: "... there is similar reference to other digital worlds, such as“the life game”,“[a really bad sims game]”, and to the movie “the matrix”:" | context: "... include the digital other-world references being in a video game, a simulation, [a really bad sims game], the matrix, and playing the life game; metaphors similar in use ..."
+T0719 | A04 | phrase: "playing a video game inside a video game" | context: "it's like another layer of simulation if that makes sense, like i'm [playing a video game inside a video game]."
+T0750 | A04 | phrase: "the life game" | context: "And there is similar reference to other digital worlds, such as“[the life game]”,“a really bad sims game”, and to the movie “the matrix”:"
+T0979 | A04 | phrase: "like running scripts" | context: "... feel like other people were just walking automatons, engaging in meaningless behaviors, [like running scripts]."
+T0372 | A04 | phrase: "some sort of simulation" | context: "Is this [some sort of simulation]?"
+T0666 | A04 | phrase: "suffocated by the surroundings of “false digital surrogacy" | context: "However, others feel [suffocated by the surroundings of “false digital surrogacy].”"
+T0315 | A04 | phrase: "in a digital world" | context: "May feel as if they are [in a digital world], including: a video game, a simulation, a sims game, the matrix, ..."
+T1070 | A04 | phrase: "being inside a video game" | context: "There are two references to [being inside a video game], with one of these also referencing being in a simulation:"
+T0212 | A04 | phrase: "another layer of simulation" | context: "it's like [another layer of simulation] if that makes sense, like i'm playing a video game inside a ..."
+T0960 | A04 | phrase: "'reality' feel more like a vr headset" | context: "it made '[reality' feel more like a vr headset] than a glass wall that separates you from the world."
+T1108 | A04 | phrase: "being in a video game" | context: "On r/dpdr there were two references to [being in a video game], but no other new source terms were present in multiple instances ..." | context: "New metaphoric references for derealization include the digital other-world references [being in a video game], a simulation, a really bad sims game, the matrix, and playing ..."
+T1124 | A04 | phrase: "the matrix" | context: "... as“the life game”,“a really bad sims game”, and to the movie “[the matrix]”:" | context: "... being in a video game, a simulation, a really bad sims game, [the matrix], and playing the life game; metaphors similar in use to veil ..."
+T0392 | A04 | phrase: "playing the life game" | context: "... video game, a simulation, a really bad sims game, the matrix, and [playing the life game]; metaphors similar in use to veil include screen, and invisible wall; ..." | context: "... including: a video game, a simulation, a sims game, the matrix, and [playing the life game]."
+T0457 | A04 | phrase: "as if I'm in some fake, virtual reality" | context: "Honestly, it's almost [as if I'm in some fake, virtual reality]."
+T0269 | A04 | phrase: "unreal world of these simulations" | context: "Bezzubova believes that there are parallels between the [unreal world of these simulations] and the mental experiences of those living with chronic depersonalization."
+T0834 | A04 | phrase: "other digital worlds" | context: "And there is similar reference to [other digital worlds], such as “the life game”, “a really bad sims game”, and ..."
+T1052 | A04 | phrase: "a cyberspace with allowed doses of human interaction" | context: "... experienced as a human world with optional digital interaction has now become [a cyberspace with allowed doses of human interaction]."
+T1115 | A04 | phrase: "being unplugged from the matrix" | context: "its exactly what i've been experiencing: [being unplugged from the matrix]."
+T0330 | A04 | phrase: "new virtual reality" | context: "... one intuitive explanation is that a subject just immersed in a “[new virtual reality]” and then thrown back into “old ordinary reality” might experience a ..."
+T1126 | A04 | phrase: "a sims game" | context: "... they are in a digital world, including: a video game, a simulation, [a sims game], the matrix, and playing the life game."
+T0695 | A04 | phrase: "being in a simulation" | context: "... to being inside a video game, with one of these also referencing [being in a simulation]:" | context: "One use of dream also references [being in a simulation]:"
+T1023 | A04 | phrase: "nonexistent virtuality" | context: "... or a meeting with a friend, we now have to go to [nonexistent virtuality]."
+T0186 | A05 | phrase: "a foot thick steel barrier" | context: "it seems as if i'm trying to claw through [a foot thick steel barrier] with nothing but my hands."
+T0561 | A05 | phrase: "being in a bubble" | context: "People express this feeling of unreality in many forms, such as '[being in a bubble]', 'separated from the world by an invisible barrier', 'foggy and veiled', ..."
+T0606 | A05 | phrase: "something stands in the way" | context: "Now we are aware that [something stands in the way], and disrupts our full immersion into the reality of the landscape."
+T0958 | A05 | phrase: "separated by a glass wall" | context: "... feeling emotionally disconnected from people you care about, as if you were [separated by a glass wall]."
+T0943 | A05 | phrase: "as if there was a wall between me and the external world" | context: "... not reach me; I cannot receive the sensation; it seems to me [as if there was a wall between me and the external world]” (p. 157)."
+T0082 | A05 | phrase: "separated from the world by an invisible barrier" | context: "... of unreality in many forms, such as 'being in a bubble', '[separated from the world by an invisible barrier]', 'foggy and veiled', and 'dream-like'."
+T0464 | A05 | phrase: "glass" | context: "It is as if the world were made of cellophane or [glass]." | context: "The sensation of a veil or [glass] between the self and the world around."
+T0321 | A05 | phrase: "a screen or a film between the participant and the rest of the world" | context: "This can be described as though there were [a screen or a film between the participant and the rest of the world] so that the world feels less crisp and more distant."
+T0030 | A05 | phrase: "like glass over my eyes" | context: "Vision: “It's [like glass over my eyes], a visual fog totally flat and two-dimensional.”"
+T0433 | A05 | phrase: "like I'm wearing glasses that I can't see through" | context: "“For me, it can be a very visual experience. It's [like I'm wearing glasses that I can't see through], like there is a zipper to unzip.”"
+T0741 | A05 | phrase: "a glass wall between the individual and the world around" | context: "... fog, dream, or bubble, or as if there were a veil or [a glass wall between the individual and the world around]” (American Psychiatric Association, 2013, p. 303)."
+T1128 | A05 | phrase: "there's a wall that separates me from everybody else" | context: "... a group of people, I feel like i'm not even there or [there's a wall that separates me from everybody else],” P218"
+T0527 | A05 | phrase: "I see a veil" | context: "... hallucination of a veil in front of her can simply say “[I see a veil]” or “I see something like a veil”, rather than “I feel ..."
+T0791 | A05 | phrase: "an invisible barrier between themself and the world" | context: "May feel as if there is [an invisible barrier between themself and the world], which may be expressed as a bubble, veil, glass wall, invisible ..."
+T0700 | A05 | phrase: "a barrier that separates me from reality" | context: "i feel like there's [a barrier that separates me from reality], like an invisible wall."
+T0918 | A05 | phrase: "a crack in the pane of glass" | context: "Indeed, suppose there is [a crack in the pane of glass]."
+T0306 | A05 | phrase: "the cracked window itself as a visible observable entity" | context: "Two important observations emerge here: a) first, we become aware of [the cracked window itself as a visible observable entity]: we realize that there was something there without us being aware ..."
+T0931 | A05 | phrase: "an invisible barrier between the self and the world" | context: "It is used similarly to veil, to represent [an invisible barrier between the self and the world], which could be related to derealization, for example:" | context: "... to be used metaphorically in 48/50 sampled instances, also predominantly to represent [an invisible barrier between the self and the world], for example:"
+T0439 | A05 | phrase: "the hallucinatory experience of a veil" | context: "For example, derealization is explained by some illusions or hallucinations, such as [the hallucinatory experience of a veil]."
+T0953 | A05 | phrase: "having a pane of glass" | context: "... of “opacity” are often and strikingly reported by DPD patients as “[having a pane of glass]” or “veil” interposed between one's self, body and the world, or ..."
+T0702 | A05 | phrase: "feeling surrounded by an invisible wall" | context: "... self, body and the world, or “living in a bubble”, or “[feeling surrounded by an invisible wall]” (Ciaunica & Charlton, 2018; Ratcliffe, 2017; Simeon & Abugel, 2006)."
+T1071 | A05 | phrase: "invisible wall" | context: "... no sampled instances of the recognized metaphoric phrase glass wall, the phrase [invisible wall] is used once to express derealization:" | context: "... the life game; metaphors similar in use to veil include screen, and [invisible wall]; new humanoid references for other people include zombies or dolls."
+T0986 | A05 | phrase: "cast a deep veil over everything" | context: "Fluorescent lights intensify the horrible sensation and [cast a deep veil over everything]."
+T0661 | A05 | phrase: "a “veil”" | context: "... were in a “fog”, “dream”, or “bubble”, or as if there were [a “veil]” or a “glass wall” between them and external objects."
+T0578 | A05 | phrase: "sealed in plastic wrap" | context: "I'm [sealed in plastic wrap], closed off, almost deaf in the muted silence."
+T1084 | A05 | phrase: "like a wall before me" | context: "It was [like a wall before me]."
+T0758 | A05 | phrase: "screen" | context: "... and playing the life game; metaphors similar in use to veil include [screen], and invisible wall; new humanoid references for other people include zombies ..." | context: "... may be expressed as a bubble, veil, glass wall, invisible wall, or [screen]; where it is expressed as a veil, it may often relate ..."
+T1079 | A05 | phrase: "living in a bubble" | context: "... or “veil” interposed between one's self, body and the world, or “[living in a bubble]”, or “feeling surrounded by an invisible wall” (Ciaunica & Charlton, 2018; ..."
+T0320 | A05 | phrase: "almost like i'm in a bubble" | context: "everything looks sort of dreamy and [almost like i'm in a bubble], the focus is never quite right either like my consciousness is ..."
+T0647 | A05 | phrase: "behind a cloudy glass wall permanently" | context: "it's like i'm [behind a cloudy glass wall permanently] or a veil."
+T1082 | A05 | phrase: "as through a veil" | context: "Everything appears [as through a veil] [. . .] Things do not look as before, they are somehow ..."
+T0607 | A05 | phrase: "a glass wall that separates you from the world" | context: "it made 'reality' feel more like a vr headset than [a glass wall that separates you from the world]."
+T0308 | A05 | phrase: "a veil placed over your senses" | context: "it's as if dp/dr is [a veil placed over your senses]."
+T0056 | A05 | phrase: "an invisible film" | context: "... the source of this stillness and, while reading in a garden, “felt [an invisible film], or thin veil, come down over my head and shroud my ..."
+T0101 | A05 | phrase: "an obscuring barrier" | context: "... the noun lemma veil is metaphoric in 49/50 sampled instances, predominantly representing [an obscuring barrier], for example:" | context: "... found to be used metaphorically in 48/50 instances sampled, again predominantly representing [an obscuring barrier], for example:"
+T1069 | A05 | phrase: "veil" | context: "... between themself and the world, which may be expressed as a bubble, [veil], glass wall, invisible wall, or screen; where it is expressed as ..." | context: "... metaphors that characterize the subjective reports of derealization, such as “fog”, “[veil]”, or “picture”."
+T0470 | A05 | phrase: "a “veil” between himself and the real world" | context: "... young Russian who sought Freud's help because he felt that there was [a “veil” between himself and the real world]."
+T0763 | A05 | phrase: "surrounded by a glass wall" | context: "... i could explain my dr to her was as if i was [surrounded by a glass wall]."
+T1049 | A05 | phrase: "a glass wall between the individual and world around" | context: "... fog, dream, or bubble, or as if there were a veil or [a glass wall between the individual and world around]." | context: "... fog, dream, or bubble, or as if there were a veil or [a glass wall between the individual and world around]” (American Psychiatric Association 2013: 303)"
+T1095 | A05 | phrase: "through a screen" | context: "... to people face to face, i feel like i am doing it [through a screen]."
+T1047 | A05 | phrase: "as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world" | context: "... reported patients describing feelings of “being separated from the universe, or feeling [as if their bodies were wrapped in an isolating substance that interposed itself between themselves and the external world];"
+T0987 | A05 | phrase: "watching life from behind glass" | context: "... following metaphors that those experiencing dp/dr might use: “It's like I'm just [watching life from behind glass]”, and “I feel as if I'm living in a dream”"
+T0435 | A05 | phrase: "punctured his cocoon" | context: "To be wanted or liked [punctured his cocoon] and forced him to consider his personhood."
+T0447 | A05 | phrase: "living in a clear bubble" | context: "since that time i've always felt that i'm [living in a clear bubble], seeing the world but not feeling part of it."
+T0916 | A05 | phrase: "a “glass wall”" | context: "... “fog”, “dream”, or “bubble”, or as if there were a “veil” or [a “glass wall]” between them and external objects."
+T0863 | A05 | phrase: "perceive the outer landscape through the cracked window" | context: "We may still [perceive the outer landscape through the cracked window], but its clarity is hindered."
+T0318 | A05 | phrase: "being trapped in a bubble" | context: "... reality, which participants could describe as akin to living in a dream, [being trapped in a bubble], or lost in space."
+T0227 | A05 | phrase: "I feel as if there were a veil in front of me" | context: "... a veil” or “I see something like a veil”, rather than “[I feel as if there were a veil in front of me]”." | context: "But it is not likely that the metaphorical description “[I feel as if there were a veil in front of me]” is the expression of an indistinct or elusive experience of a ..."
+T0405 | A05 | phrase: "separated from reality by a protective covering" | context: "... that dominate most of an individual's conscious life, in which they are [separated from reality by a protective covering]."
+T0645 | A05 | phrase: "enclosed in a kind of bubble" | context: "Suddenly she felt her ears pop, and was at once “[enclosed in a kind of bubble]” that cut her off from the rest of the scene, and ..."
+T0266 | A05 | phrase: "as if there were a veil" | context: "... if he or she were in a fog, dream, or bubble, or [as if there were a veil] or a glass wall between the individual and world around” (American Psychiatric ..."
+T0764 | A05 | phrase: "as if the invisible envelope surrounding him was starting to melt" | context: "... to relate to others he felt as if he were losing himself, [as if the invisible envelope surrounding him was starting to melt]."
+T0963 | A05 | phrase: "a veil that was coming over my vision slowly" | context: "i can remember that it didn't all happen at once, but like [a veil that was coming over my vision slowly]."
+T0024 | A05 | phrase: "thin veil" | context: "... stillness and, while reading in a garden, “felt an invisible film, or [thin veil], come down over my head and shroud my mind . . ..."
+T0733 | A05 | phrase: "being behind a screen" | context: "And there is also reference to [being behind a screen]:"
+T0296 | A05 | phrase: "a bubble" | context: "... invisible barrier between themself and the world, which may be expressed as [a bubble], veil, glass wall, invisible wall, or screen; where it is expressed ..."
+T0550 | A05 | phrase: "“veil” interposed between one's self, body and the world" | context: "... reported by DPD patients as “having a pane of glass” or “[veil” interposed between one's self, body and the world], or “living in a bubble”, or “feeling surrounded by an invisible ..."
+T0738 | A05 | phrase: "come between real life and me" | context: "What is it which has always [come between real life and me]?"
+T0615 | A05 | phrase: "as if there was a veil between me and the outside world" | context: "My surroundings feel detached or unreal, [as if there was a veil between me and the outside world]."
+T0192 | A05 | phrase: "a filter over my eyes" | context: "as if i had [a filter over my eyes] and i felt detached from reality."
+T0851 | A05 | phrase: "an invisible wall" | context: "... a glass wall, as with r/dpdr there is a similar reference to [an invisible wall]:"
+T0727 | A05 | phrase: "less transparent" | context: "... and boundaries between self and non-self all become more blurred, more disorganized, [less transparent], and less functional."
+T0848 | A05 | phrase: "this veil between your eyes and the real world" | context: "... you have visual problems, as in your surroundings look weird and unreal, [this veil between your eyes and the real world]?."
+T0152 | A05 | phrase: "bubble" | context: "... feel as if he or she were in a fog, dream, or [bubble], or as if there were a veil or a glass wall ..." | context: "... they feel as if they were in a “fog”, “dream”, or “[bubble]”, or as if there were a “veil” or a “glass wall” ..."
+T1098 | A05 | phrase: "a veil between me and the outside world" | context: "(13) My surroundings feel detached or unreal, as if there were [a veil between me and the outside world]."
+T0976 | A05 | phrase: "I see something like a veil" | context: "... front of her can simply say “I see a veil” or “[I see something like a veil]”, rather than “I feel as if there were a veil in ..."
+T0389 | A05 | phrase: "this veil separating me from everyone else" | context: "it felt like there was [this veil separating me from everyone else] and no matter how hard i tried i couldn't cut myself out ..."

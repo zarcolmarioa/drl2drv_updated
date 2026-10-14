@@ -1,0 +1,440 @@
+[
+  {
+    "group": "G01",
+    "name": "unreal, not real",
+    "definition": "The world, things, or experience seem unreal or lack their normal feeling of reality.",
+    "examples": ["T0125", "T0178", "T0333", "T0376", "T0871"]
+  },
+  {
+    "group": "G02",
+    "name": "dream-like world",
+    "definition": "The world or life has the quality of being in a dream.",
+    "examples": ["T0091", "T0232", "T0395", "T0535", "T0794"]
+  },
+  {
+    "group": "G03",
+    "name": "simulation or video game",
+    "definition": "Reality seems like a simulation, virtual reality, or a video game.",
+    "examples": ["T0372", "T0457", "T0695", "T0937", "T1070"]
+  },
+  {
+    "group": "G04",
+    "name": "movie or film",
+    "definition": "Life or the surrounding scene seems like a movie or film rather than directly lived reality.",
+    "examples": ["T0084", "T0340", "T0347", "T0756", "T1010"]
+  },
+  {
+    "group": "G05",
+    "name": "strange, odd",
+    "definition": "The world or things seem strange, odd, or peculiar.",
+    "examples": ["T0216", "T0384", "T0428", "T0752", "T0902"]
+  },
+  {
+    "group": "G06",
+    "name": "look unfamiliar",
+    "definition": "Previously ordinary people, places, or things seem unfamiliar.",
+    "examples": ["T0173", "T0514", "T0529", "T0725", "T0912"]
+  },
+  {
+    "group": "G07",
+    "name": "known but not familiar",
+    "definition": "Something can still be known or recognized while the felt sense of familiarity is missing.",
+    "examples": ["T0201", "T0672", "T0935", "T1016", "T1022"]
+  },
+  {
+    "group": "G08",
+    "name": "cut off from world",
+    "definition": "The person feels detached, cut off, or separated from the surrounding world.",
+    "examples": ["T0143", "T0234", "T0510", "T0757", "T0842"]
+  },
+  {
+    "group": "G09",
+    "name": "wall or barrier",
+    "definition": "An enclosing wall, barrier, screen, or bubble seems to separate the person from the world.",
+    "examples": ["T0082", "T0318", "T0607", "T0741", "T1079"]
+  },
+  {
+    "group": "G10",
+    "name": "detached observer",
+    "definition": "Experience is watched from the position of an observer, spectator, or third party.",
+    "examples": ["T0050", "T0272", "T0427", "T0849", "T0890"]
+  },
+  {
+    "group": "G11",
+    "name": "outside the body",
+    "definition": "The experienced point of self-location seems to be outside the physical body.",
+    "examples": ["T0012", "T0442", "T0496", "T0731", "T0929"]
+  },
+  {
+    "group": "G12",
+    "name": "floating, unlocated",
+    "definition": "The observing self or perspective seems to float or lack a definite location.",
+    "examples": ["T0144", "T0349", "T0453", "T0726", "T0732"]
+  },
+  {
+    "group": "G13",
+    "name": "far away, distant",
+    "definition": "People, objects, or the world appear unusually far away or distant.",
+    "examples": ["T0140", "T0383", "T0660", "T0864", "T0936"]
+  },
+  {
+    "group": "G14",
+    "name": "flat, two-dimensional",
+    "definition": "Objects, people, or the world appear flat or two-dimensional.",
+    "examples": ["T0055", "T0208", "T0540", "T0920", "T0972"]
+  },
+  {
+    "group": "G15",
+    "name": "foggy, blurry",
+    "definition": "Vision or the visible world seems foggy, blurry, hazy, or out of focus.",
+    "examples": ["T0031", "T0154", "T0343", "T0537", "T0922"]
+  },
+  {
+    "group": "G16",
+    "name": "less vivid, dull",
+    "definition": "Perception seems attenuated, dull, colorless, or lacking its usual vividness.",
+    "examples": ["T0172", "T0200", "T0501", "T0600", "T1007"]
+  },
+  {
+    "group": "G17",
+    "name": "clear, sharp, detailed",
+    "definition": "Perception seems unusually clear, sharp, acute, bright, or detailed.",
+    "examples": ["T0081", "T0786", "T0810", "T1122"]
+  },
+  {
+    "group": "G18",
+    "name": "larger, bigger",
+    "definition": "Rooms, objects, or the world appear larger than usual.",
+    "examples": ["T0142", "T0317", "T0602", "T0608", "T0806"]
+  },
+  {
+    "group": "G19",
+    "name": "look smaller",
+    "definition": "Objects or appearances seem smaller than usual or smaller than reality.",
+    "examples": ["T0126", "T0790", "T1034"]
+  },
+  {
+    "group": "G20",
+    "name": "visually distorted",
+    "definition": "The visible world, shapes, size, or distance appear distorted.",
+    "examples": ["T0213", "T0493", "T0635", "T1008", "T1139"]
+  },
+  {
+    "group": "G21",
+    "name": "altered colors",
+    "definition": "Colors or hues appear changed in quality or intensity.",
+    "examples": ["T0242", "T0655", "T1043"]
+  },
+  {
+    "group": "G22",
+    "name": "spots and dots",
+    "definition": "The visual field contains spots, dots, or similar small visual marks.",
+    "examples": ["T0163", "T0484", "T0644", "T0895"]
+  },
+  {
+    "group": "G23",
+    "name": "overly bright light",
+    "definition": "Light or light-colored things seem excessively bright or visually overwhelming.",
+    "examples": ["T0021", "T0107", "T0336"]
+  },
+  {
+    "group": "G24",
+    "name": "time slowed",
+    "definition": "Time, motion, or events seem to move unusually slowly.",
+    "examples": ["T0018", "T0190", "T0508", "T0591", "T0826"]
+  },
+  {
+    "group": "G25",
+    "name": "time sped up",
+    "definition": "Time seems to pass unusually fast.",
+    "examples": ["T0309", "T0472", "T0628", "T0723", "T1002"]
+  },
+  {
+    "group": "G26",
+    "name": "time stopped, suspended",
+    "definition": "Time seems stopped, absent, or suspended in the moment.",
+    "examples": ["T0415", "T0703", "T0827", "T0968", "T1004"]
+  },
+  {
+    "group": "G27",
+    "name": "stretched, eternal time",
+    "definition": "Brief periods seem stretched out, endless, or eternal.",
+    "examples": ["T0016", "T0017", "T0293", "T0467", "T0950"]
+  },
+  {
+    "group": "G28",
+    "name": "recent feels long ago",
+    "definition": "Recent events seem remote, as if they happened much longer ago.",
+    "examples": ["T0038", "T0063", "T0316", "T0891"]
+  },
+  {
+    "group": "G29",
+    "name": "past feels present",
+    "definition": "Past events feel present, recently lived, or as though they are being relived.",
+    "examples": ["T0035", "T0351", "T0760", "T0866", "T0948"]
+  },
+  {
+    "group": "G30",
+    "name": "time unreliable, disordered",
+    "definition": "Time loses its usual reliability, consistency, or clear ordering.",
+    "examples": ["T0548", "T0742", "T0971"]
+  },
+  {
+    "group": "G31",
+    "name": "time unnoticed, lost",
+    "definition": "The passage of time is not noticed or seems to be lost altogether.",
+    "examples": ["T0572", "T0766", "T0892", "T1105"]
+  },
+  {
+    "group": "G32",
+    "name": "not present or engaged",
+    "definition": "The person does not feel fully present, immersed, or engaged in the moment or world.",
+    "examples": ["T0044", "T0280", "T0366", "T0522", "T0624"]
+  },
+  {
+    "group": "G33",
+    "name": "world lacks emotional coloring",
+    "definition": "The world or objects no longer carry their usual personal emotional coloring or resonance.",
+    "examples": ["T0194", "T0403", "T0409", "T0797", "T1059"]
+  },
+  {
+    "group": "G34",
+    "name": "beauty and charm lost",
+    "definition": "Nature, objects, or surroundings no longer convey their usual beauty, charm, or aesthetic appeal.",
+    "examples": ["T0064", "T0141", "T0356", "T0412", "T0735"]
+  },
+  {
+    "group": "G35",
+    "name": "emotionally distant from others",
+    "definition": "Other people, including loved ones, feel emotionally distant or disconnected.",
+    "examples": ["T0089", "T0297", "T0385", "T0777", "T0808"]
+  },
+  {
+    "group": "G36",
+    "name": "people as robots",
+    "definition": "Other people seem robotic, mechanical, programmed, or like automata.",
+    "examples": ["T0294", "T0379", "T0394", "T0570", "T0859"]
+  },
+  {
+    "group": "G37",
+    "name": "people lifeless",
+    "definition": "Other people seem lifeless, dead, zombie-like, or mannequin-like.",
+    "examples": ["T0051", "T0248", "T0583", "T0739", "T0868"]
+  },
+  {
+    "group": "G38",
+    "name": "people acting, masked",
+    "definition": "Other people seem to be merely acting, wearing a facade, or producing artificial human-like behavior.",
+    "examples": ["T0127", "T0228", "T0432", "T0519", "T0761"]
+  },
+  {
+    "group": "G39",
+    "name": "people hard to understand",
+    "definition": "Other people become difficult to understand without deliberate scrutiny or intellectual effort.",
+    "examples": ["T0164", "T0303", "T0556", "T0828", "T1040"]
+  },
+  {
+    "group": "G40",
+    "name": "watched and judged",
+    "definition": "Other people seem to be watching, scrutinizing, mocking, or judging the person.",
+    "examples": ["T0053", "T0543", "T0663", "T0930", "T1038"]
+  },
+  {
+    "group": "G41",
+    "name": "threatening, unsafe",
+    "definition": "Other people or the surroundings seem threatening, dangerous, or unsafe.",
+    "examples": ["T0359", "T0450", "T0492", "T0872", "T1021"]
+  },
+  {
+    "group": "G42",
+    "name": "controlled by others",
+    "definition": "Other people seem to control, direct, or strongly influence one’s thoughts, feelings, or actions.",
+    "examples": ["T0244", "T0397", "T0449", "T0594", "T0597"]
+  },
+  {
+    "group": "G43",
+    "name": "access to others' minds",
+    "definition": "Other people’s thoughts, feelings, or behavior seem unusually accessible or predictable.",
+    "examples": ["T0416", "T0574", "T0736"]
+  },
+  {
+    "group": "G44",
+    "name": "oneness with all",
+    "definition": "The boundary between oneself and everything else seems replaced by a felt oneness with the world or universe.",
+    "examples": ["T0034", "T0489", "T0565", "T0734", "T1102"]
+  },
+  {
+    "group": "G45",
+    "name": "greater concern for others",
+    "definition": "Other people or humanity evoke unusually strong empathy, concern, or responsibility.",
+    "examples": ["T0188", "T0475", "T0873", "T1138"]
+  },
+  {
+    "group": "G46",
+    "name": "blurred self-world boundaries",
+    "definition": "The boundaries between self and other, self and world, or self and non-self feel blurred or eroded.",
+    "examples": ["T0217", "T0255", "T0707", "T0910", "T1081"]
+  },
+  {
+    "group": "G47",
+    "name": "objects merge with body",
+    "definition": "Objects seem to merge with, fuse with, or become extensions of the body.",
+    "examples": ["T0109", "T0581", "T0835", "T0956"]
+  },
+  {
+    "group": "G48",
+    "name": "virtual body feels mine",
+    "definition": "A virtual body is experienced as one’s own body or takes over bodily ownership.",
+    "examples": ["T0043", "T0511", "T0611", "T0713", "T1074"]
+  },
+  {
+    "group": "G49",
+    "name": "more real",
+    "definition": "Things, dreams, or experience can seem unusually or excessively real.",
+    "examples": ["T0203", "T0576", "T0687", "T0867", "T1083"]
+  },
+  {
+    "group": "G50",
+    "name": "doubt in reality",
+    "definition": "Reality, existence, or common-sense reality is doubted or called into question.",
+    "examples": ["T0078", "T0167", "T0399", "T0718", "T1100"]
+  },
+  {
+    "group": "G51",
+    "name": "known real, feels unreal",
+    "definition": "Something is still known or believed to be real even though immediate experience does not feel real.",
+    "examples": ["T0057", "T0105", "T0567", "T0897", "T1027"]
+  },
+  {
+    "group": "G52",
+    "name": "imagined or perceived",
+    "definition": "It becomes unclear whether something was really perceived or instead imagined, thought, or dreamed.",
+    "examples": ["T0032", "T0174", "T0883", "T1127"]
+  },
+  {
+    "group": "G53",
+    "name": "real and unreal together",
+    "definition": "Something can feel real and unreal at the same time, with the boundary between the two suspended.",
+    "examples": ["T0074", "T0838", "T1062", "T1111"]
+  },
+  {
+    "group": "G54",
+    "name": "alternate realities",
+    "definition": "Experience seems to take place in an alternate, parallel, or equally valid reality or world.",
+    "examples": ["T0007", "T0128", "T0264", "T0640", "T1089"]
+  },
+  {
+    "group": "G55",
+    "name": "special meaning, significance",
+    "definition": "Events, objects, or the universe seem charged with unusual personal meaning or significance.",
+    "examples": ["T0191", "T0322", "T0387", "T0458", "T0946"]
+  },
+  {
+    "group": "G56",
+    "name": "meaningless, irrelevant",
+    "definition": "Objects, actions, or the world seem meaningless, irrelevant, or without normal value.",
+    "examples": ["T0425", "T0513", "T0579", "T0975", "T0984"]
+  },
+  {
+    "group": "G57",
+    "name": "not directly presented",
+    "definition": "Objects or the world no longer feel immediately or directly presented to experience.",
+    "examples": ["T0380", "T0716", "T0776", "T1066", "T1080"]
+  },
+  {
+    "group": "G58",
+    "name": "miss the surroundings",
+    "definition": "Obvious things or ongoing surroundings are not noticed or consciously registered.",
+    "examples": ["T0008", "T0058", "T0525", "T0754", "T0985"]
+  },
+  {
+    "group": "G59",
+    "name": "nothing stands out",
+    "definition": "Things fail to impose themselves, stand out, or capture and hold attention.",
+    "examples": ["T0589", "T0704", "T0801", "T0952"]
+  },
+  {
+    "group": "G60",
+    "name": "absent things perceived",
+    "definition": "Sounds, images, or things are experienced despite not being currently present.",
+    "examples": ["T0118", "T0121", "T0149", "T0314"]
+  },
+  {
+    "group": "G61",
+    "name": "empty, void",
+    "definition": "The world or landscape seems empty, void-like, or pervaded by nothingness.",
+    "examples": ["T0111", "T0185", "T0446", "T0770", "T1112"]
+  },
+  {
+    "group": "G62",
+    "name": "dead, lifeless world",
+    "definition": "The world or objects seem dead, deathlike, or lifeless.",
+    "examples": ["T0138", "T0246", "T0444", "T1042", "T1116"]
+  },
+  {
+    "group": "G63",
+    "name": "eerie, uncanny, nightmarish",
+    "definition": "The world or experience has a frightening, uncanny, eerie, or nightmarish quality.",
+    "examples": ["T0131", "T0250", "T0588", "T1029", "T1067"]
+  },
+  {
+    "group": "G64",
+    "name": "surroundings closing in",
+    "definition": "The surrounding environment seems to close in, press in, or become suffocating.",
+    "examples": ["T0253", "T0328", "T0666"]
+  },
+  {
+    "group": "G65",
+    "name": "seen for first time",
+    "definition": "Familiar things appear as though they are being seen for the first time.",
+    "examples": ["T0596", "T0850", "T0939", "T1130"]
+  },
+  {
+    "group": "G66",
+    "name": "shapes and formal details",
+    "definition": "Things are experienced primarily as shapes, colors, material properties, or formal visual details rather than their ordinary identity.",
+    "examples": ["T0015", "T0025", "T0353", "T0882", "T0982"]
+  },
+  {
+    "group": "G67",
+    "name": "distinctness and differences lost",
+    "definition": "Objects or things lose their individuality, distinctness, or differences from one another.",
+    "examples": ["T0357", "T0728", "T0792", "T1051"]
+  },
+  {
+    "group": "G68",
+    "name": "lack of agency",
+    "definition": "Events or the world feel beyond one’s control or unaffected by one’s actions.",
+    "examples": ["T0341", "T0552", "T0926"]
+  },
+  {
+    "group": "G69",
+    "name": "behind everyday appearances",
+    "definition": "Ordinary appearances seem like a veil or facade behind which a deeper or more real layer can be glimpsed.",
+    "examples": ["T0135", "T0404", "T0476", "T0654"]
+  },
+  {
+    "group": "G70",
+    "name": "marveling at existence",
+    "definition": "The world or existence evokes unusual wonder, mystery, or aesthetic marveling.",
+    "examples": ["T0499", "T0805", "T0841", "T1135"]
+  },
+  {
+    "group": "G71",
+    "name": "grotesque, repulsive",
+    "definition": "Objects or material reality appear grotesque, disgusting, or repulsive.",
+    "examples": ["T0156", "T0171", "T0618", "T0656"]
+  },
+  {
+    "group": "G72",
+    "name": "nothing exists",
+    "definition": "The world, other people, or things seem not merely unreal but nonexistent.",
+    "examples": ["T0295", "T0410", "T0555", "T0573", "T1090"]
+  },
+  {
+    "group": "G73",
+    "name": "more accurate, unfiltered",
+    "definition": "Perception seems unusually direct, accurate, or free of ordinary filters.",
+    "examples": ["T0362", "T0400", "T0480", "T0997"]
+  }
+]

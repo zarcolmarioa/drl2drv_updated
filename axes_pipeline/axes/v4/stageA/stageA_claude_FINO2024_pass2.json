@@ -1,0 +1,54 @@
+[
+  {
+    "id": "FINO2024-020",
+    "quote": "egodystonic inner/outer states",
+    "context": "These findings suggest a role for psychoticism in DPDR, namely, a tendency to experience egodystonic inner/outer states that may prevent individuals with DPDR from adequately regulating their inner perceptions with environmental and contextual factors (Piedmont et al. 2009).",
+    "pdf_page": 7,
+    "printed_page": "802",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "mixed",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "trait-level description; parallels item 017"
+  },
+  {
+    "id": "FINO2024-021",
+    "quote": "detachment from internal/external stimuli",
+    "context": "challenging the idea that DP and DR cluster with generic tendencies to withdrawal or detachment from internal/external stimuli",
+    "pdf_page": 7,
+    "printed_page": "802",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "mixed",
+    "sense": "not_sense_specific",
+    "state": "unclear",
+    "note": "borderline; the authors present this as an idea their results challenge"
+  },
+  {
+    "id": "FINO2024-022",
+    "quote": "I don't feel like I'm here",
+    "context": "I've been saying since I was tiny, tiny to my parents, things like I don't feel like I'm here.",
+    "pdf_page": 8,
+    "printed_page": "803",
+    "speaker": "participant_or_patient",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "participant \"Laura\"; borderline, may refer to self rather than world"
+  },
+  {
+    "id": "FINO2024-023",
+    "quote": "inability to set functional boundaries between inner and outer stimuli",
+    "context": "High levels of psychoticism and openness to experience may therefore be implicated in individual differences in DPDR, possibly entailing a characteristic inability to set functional boundaries between inner and outer stimuli that end up challenging an individual's natural mastery of one's own thoughts and perceptions (Ciaunica et al. 2022).",
+    "pdf_page": 12,
+    "printed_page": "807",
+    "speaker": "author_description",
+    "quoted_from": null,
+    "target": "perceptual_situation",
+    "sense": "not_sense_specific",
+    "state": "altered",
+    "note": "hypothesized trait mechanism; borderline"
+  }
+]

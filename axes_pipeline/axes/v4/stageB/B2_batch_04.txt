@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 4 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 4
+
+BATCH 4 OF 8
+T0451 | glass wall
+T0452 | the whole situation was dreamlike
+T0453 | floating around
+T0454 | alien
+T0455 | less aversive
+T0456 | not reaching the surroundings with their inner selves
+T0457 | as if I’m in some fake, virtual reality
+T0458 | events that conveyed a special meaning to them
+T0459 | out of this world
+T0460 | as if from another world
+T0461 | regarding existence as though beyond the tomb, from another world
+T0462 | two time zones at once
+T0463 | deeply absorbed, almost hypnotized, by a concert poster on her bedroom wall
+T0464 | glass
+T0465 | a bit strange
+T0466 | defenseless
+T0467 | the endlessness of time
+T0468 | walking on eggshells at home
+T0469 | orbs of light
+T0470 | a “veil” between himself and the real world
+T0471 | dreamlike
+T0472 | faster time perception
+T0473 | a strange stillness
+T0474 | non-responsiveness to the external world
+T0475 | a feeling of greater concern or responsibility for others
+T0476 | as if a veil has been lifted
+T0477 | they had a self
+T0478 | their thoughts or feelings were somehow public and exposed to others
+T0479 | “unreality” concerning visual modality
+T0480 | a more accurate way to experience things
+T0481 | no longer arouses me
+T0482 | a black hole of time somehow
+T0483 | the purely observing experience was left at the location of the real body
+T0484 | as if there were grey spots at the intersections of the grid
+T0485 | the outside world is unreal
+T0486 | things become unreal
+T0487 | i was in a dream
+T0488 | feel different from ordinary and familiar reality
+T0489 | sense of oneness with the universe
+T0490 | difficulty identifying the shape or sound that one is perceiving
+T0491 | feel as if everything were different to them
+T0492 | others as threatening
+T0493 | like being trapped in a carnival fun house where mirrors distort everything
+T0494 | time is leaving one behind
+T0495 | time warps
+T0496 | located out of the body
+T0497 | from the perspective of another person
+T0498 | like an anthropologist on another planet, studying the human species
+T0499 | the miracle, moment by moment of naked existence
+T0500 | sees through those things being enjoyed by everyone else
+T0501 | colorless
+T0502 | not interested in me at all
+T0503 | a unique disruption of the underlying engagement with the world
+T0504 | It was all unreal
+T0505 | it refuses to go and put itself on the thing
+T0506 | like someone has put dirty fingerprints on my sunglasses – but its my eyes
+T0507 | clones
+T0508 | Time seemed to move very slowly
+T0509 | alienated from or unfamiliar with your surroundings
+T0510 | being detached from the world
+T0511 | a strong sense of ownership of the virtual body
+T0512 | acute feelings of alienation from the world
+T0513 | objects do not have immediate value or relevance
+T0514 | they don’t look familiar anymore
+T0515 | damaging
+T0516 | greater reality to their private, delusional world
+T0517 | the qualitative equivalent of breathing
+T0518 | that familiarity should be there
+T0519 | do something human-like
+T0520 | flowing through the crevices of seemingly solid objects
+T0521 | located at the visuospatial perspective through which I observe the world
+T0522 | not fully present to or engaged in behaviors or events
+T0523 | look unfamiliar
+T0524 | language and words are meaningless or absurd
+T0525 | less aware of their surroundings
+T0526 | watching from inside a shell
+T0527 | I see a veil
+T0528 | machinations of my own mind
+T0529 | people who were known to them were suddenly unfamiliar
+T0530 | not able to pick out one specific item in the scenario that carries the dreamlikeness
+T0531 | talking to her dolls
+T0532 | an npc
+T0533 | as though from beyond the tomb, from another world
+T0534 | the felt vividness and reality of the world
+T0535 | everything seems like a dream.
+T0536 | difficult for them to locate their own first-person perspective in an extracorporeal space
+T0537 | their vision is foggy
+T0538 | words being unable to convey experiences
+T0539 | looking through someone else’s eye
+T0540 | objects or space being flattened
+T0541 | manifests the presence of an In-swelling Horror, infinite, all-powerful, eternal
+T0542 | sense of connection with others
+T0543 | as if someone was watching my every move and making fun
+T0544 | in the world, yet not in it
+T0545 | experiences of unreality or detachment with respect to surroundings
+T0546 | a sense of reality
+T0547 | what an odd thing
+T0548 | time less reliable that before
+T0549 | being separated from the universe
+T0550 | “veil” interposed between one’s self, body and the world
+T0551 | narrowed visual field
+T0552 | was impossible to affect with one’s actions
+T0553 | just floating around the body
+T0554 | her experiences feel unreal
+T0555 | Sometimes I think people do not exist
+T0556 | not understanding others
+T0557 | do not look as before
+T0558 | objects looked as if surrounded by a cloud
+T0559 | things seem unreal
+T0560 | things look more or less foggy
+T0561 | being in a bubble
+T0562 | 2d people
+T0563 | their perceptions and embodied experiences were significantly altered
+T0564 | two-dimensionality
+T0565 | a kind of “oneness” with all that exists
+T0566 | their living light
+T0567 | their immediate experience is somewhat inconsistent with this faith
+T0568 | the quality of imagination
+T0569 | disengagement from the world
+T0570 | others as automata
+T0571 | immediately means something to everyone
+T0572 | more complete indifference to time
+T0573 | nothing exists
+T0574 | having access to others’ thoughts and feelings
+T0575 | the way her mouth was moving
+T0576 | things can seem more realistic than before
+T0577 | through the window
+T0578 | sealed in plastic wrap
+T0579 | meaningless
+T0580 | all the places he had been now seemed like dreams
+T0581 | objects had merged with their body somehow
+T0582 | everyone is automaton
+T0583 | zombies
+T0584 | I don’t understand what I saw in them that made me love them
+T0585 | all excitedly pursuing pure chimeras
+T0586 | passing without awareness
+T0587 | rather than a change in the features of the world itself
+T0588 | unhomelike-and-uncanny
+T0589 | things failed to draw and hold their attention
+T0590 | the universe was changed for me altogether
+T0591 | slowing down
+T0592 | the stability and reality of our perceptions
+T0593 | more detached from their selves, their bodies, and others
+T0594 | others are influencing one’s actions or thoughts
+T0595 | do nothing
+T0596 | as if she were seeing them for the first time
+T0597 | feeling strongly influenced by others
+T0598 | objects seeming different
+T0599 | that reality can no longer be accessed
+T0600 | things lacking vividness

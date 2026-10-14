@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 6 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 6
+
+BATCH 6 OF 8
+T0751 | with no personal connection to me
+T0752 | strange
+T0753 | seeming to emanate from the sensory objects themselves
+T0754 | not noticing things that were obvious to others
+T0755 | What glass screen has, as it were, interposed itself between me
+T0756 | living in a dream or a movie
+T0757 | as if I were cut off from the world
+T0758 | screen
+T0759 | compromised vision
+T0760 | as though reliving a moment rather than living fully in the moment
+T0761 | studied versions of human movements
+T0762 | don’t feel anything when I see them
+T0763 | surrounded by a glass wall
+T0764 | as if the invisible envelope surrounding him was starting to melt
+T0765 | just looking on in fascination
+T0766 | loss of time
+T0767 | as if they are looking at the world through a fog
+T0768 | it was all a dream
+T0769 | unfamiliarity
+T0770 | empty
+T0771 | her life was literally a dream
+T0772 | the sensory and emotional distancing from overwhelming experience
+T0773 | Alone
+T0774 | several hours seem to pass as quickly as several minutes
+T0775 | the unreality of external objects
+T0776 | objects are no longer directly presented to them
+T0777 | emotionally disconnected from people you care about
+T0778 | seeing the world but not feeling part of it
+T0779 | isolated from the world
+T0780 | a spectator, so to speak, of the molecular whirlwind which men call individual life
+T0781 | a new reality rather than an unreality
+T0782 | like I’m in the Twilight Zone
+T0783 | feeling as if in a dream
+T0784 | the vastness of the universe
+T0785 | no greater claim to shared reality than the alternative worlds
+T0786 | heightened acuity
+T0787 | never feel fully engaged or connected to things
+T0788 | a set of isolated elements
+T0789 | as if they are presented before the mind
+T0790 | look smaller
+T0791 | an invisible barrier between themself and the world
+T0792 | difficulty seeing distinctions between separate objects
+T0793 | an effectual experience of unreality that does not have a factual ground
+T0794 | as if living in a continuous dream
+T0795 | feel alone with it as they always did
+T0796 | nearly indistinguishable from the real reality of the objective world
+T0797 | a lack of emotional response or connection to events or objects in the world
+T0798 | all I could see were stars
+T0799 | the world were made of cellophane or glass
+T0800 | doubt about the real feelings of my friends and my boyfriend towards me
+T0801 | they don’t impose themselves
+T0802 | teacher looked like a robot
+T0803 | I’m seeing things differently from how I used to
+T0804 | attenuated perception
+T0805 | simply marveling at their existence
+T0806 | everything seems to big
+T0807 | detachment from one’s surroundings
+T0808 | detachment and distance from their loved ones
+T0809 | as if I had not seen it for a long time
+T0810 | clear and bright
+T0811 | a transient predictive uncertainty as to which of the two competing reality models is the more veridical one
+T0812 | No longer grounded by familiar sensations or surroundings
+T0813 | various changes in the passage of time
+T0814 | behind my body looking out at the world without using the body’s eyes
+T0815 | seem like objects or machines
+T0816 | size of objects
+T0817 | lacking in vibrancy or depth
+T0818 | if someone appeared next to me
+T0819 | objects or places being unfamiliar
+T0820 | feels cut off from the world
+T0821 | perception being altered
+T0822 | the sense of location is not clearly added to the observing experience
+T0823 | what a strange shape it is
+T0824 | npc
+T0825 | the speed of one’s own movements or the world
+T0826 | slower than it seems like it should
+T0827 | time has stopped or disappeared
+T0828 | feeling the need to scrutinize and observe others’ behavior to understand them
+T0829 | through the visuospatial perspective of the real body
+T0830 | persistent awareness of, and a certain lingering commitment to, everyday reality
+T0831 | the other within the body
+T0832 | subjective detachment from the external world
+T0833 | do not convey the familiar picture of everyday reality
+T0834 | other digital worlds
+T0835 | fuse with the object being perceived and represented
+T0836 | existence penetrates me everywhere, through the eyes, the nose, the mouth
+T0837 | strange and unreal
+T0838 | happening but not really happening
+T0839 | dull
+T0840 | cold
+T0841 | a window opened upon the mystery of the world
+T0842 | cut off from the world
+T0843 | this strange opening
+T0844 | a current strange or otherwise altered appearance
+T0845 | a moonlit night
+T0846 | It could just as well be a dead donkey
+T0847 | I cannot empathise with the tragic things that happen in the world
+T0848 | this veil between your eyes and the real world
+T0849 | watching the whole scene like a spectator, totally removed
+T0850 | as if I had never seen them before
+T0851 | an invisible wall
+T0852 | lost in space
+T0853 | dream
+T0854 | others do not experience emotion
+T0855 | visual problems
+T0856 | looked less familiar
+T0857 | nameless things
+T0858 | his gay friend was coming on to him
+T0859 | mindless robots programmed by evolution and evolution only
+T0860 | without substance
+T0861 | he never really felt himself to be part of it
+T0862 | its peculiar quality
+T0863 | perceive the outer landscape through the cracked window
+T0864 | very far away
+T0865 | like an invisible wall
+T0866 | feelings of déjà vu
+T0867 | dreams feel more real than waking life
+T0868 | lifeless
+T0869 | renders it unreal
+T0870 | much more recent than reality
+T0871 | the world is unreal
+T0872 | dangerous
+T0873 | a heightened sense of concern or responsibility for caring for other people or for the world/humanity as a whole
+T0874 | the world as no longer appealing or mattering to oneself
+T0875 | exhausted by others
+T0876 | instantly recognizable
+T0877 | located in a certain extracorporeal space
+T0878 | specific objects
+T0879 | everything’s a bit suspended in the moment
+T0880 | the apple tree was connected with the horror of Mr Valpy’s suicide
+T0881 | intrusive feeling
+T0882 | formal visual details
+T0883 | life being real or a dream
+T0884 | Everything seemed intensely unreal
+T0885 | profound alterations in the feel of the everyday
+T0886 | there is no self for whom worldly objectives are relevant or important
+T0887 | as ephemeral and incomprehensible as I am myself
+T0888 | flustered by noise and crowds
+T0889 | foggy and veiled
+T0890 | observing the scene as a third party
+T0891 | it feels like it happened ages ago
+T0892 | not noticing the passage of time at all
+T0893 | gave way to something else
+T0894 | no ties at all with anyone or anything
+T0895 | dots
+T0896 | do not question the factual reality of the world around them
+T0897 | the gulf between one’s immediate experience and what one has always believed to be true
+T0898 | this could only be a dream
+T0899 | as if they are constitutive aspects of the very experience of them
+T0900 | emptiness—which is pure consciousness—of all phenomena

@@ -1,0 +1,12 @@
+{
+  "script": "v4_stageC_check.py",
+  "protocol": "1.6",
+  "created": "2026-10-05 18:36:45",
+  "open": 0,
+  "n_review": 202,
+  "slor_median": 1.731219693544871,
+  "slor_cut": 0.3158543170188002,
+  "slor_iqr": 1.5,
+  "accept_suggestions": true,
+  "adjacent_words": 3
+}

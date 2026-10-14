@@ -1,0 +1,173 @@
+Now assign phrases to the groups you proposed. Below is batch 3 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 3
+
+BATCH 3 OF 8
+T0301 | changed in some way
+T0302 | unreality
+T0303 | having to apply intellectualized strategies to understand and interact with others
+T0304 | daze
+T0305 | its all dream
+T0306 | the cracked window itself as a visible observable entity
+T0307 | the illusion which lives with us day by day
+T0308 | a veil placed over your senses
+T0309 | the time seems to fly faster than before experiencing DP
+T0310 | foreign and new to him
+T0311 | I didn’t think about them as being lips
+T0312 | peak connectedness with the world she’s embedded in
+T0313 | so unreal
+T0314 | things that are not actually/currently present
+T0315 | in a digital world
+T0316 | seeming remoteness of the recent past
+T0317 | may appear larger
+T0318 | being trapped in a bubble
+T0319 | disappeared
+T0320 | almost like i’m in a bubble
+T0321 | a screen or a film between the participant and the rest of the world
+T0322 | greater significance
+T0323 | a really bad sims game
+T0324 | being able to predict or anticipate future events
+T0325 | at the location of the video camera
+T0326 | the grey-green creases of the bark
+T0327 | estranged perceptions
+T0328 | closing in
+T0329 | automaton
+T0330 | new virtual reality
+T0331 | exaggerated three-dimensionality
+T0332 | a heightened state of blissful intimacy
+T0333 | things around them seem unreal
+T0334 | they don’t seem real
+T0335 | evanescent
+T0336 | wincing from light colored things especially
+T0337 | feeling uncomfortable and pressured in one’s interactions with others
+T0338 | the rod that strokes his/her back
+T0339 | foreign
+T0340 | living in a movie
+T0341 | lack of agency
+T0342 | a lack of affective attunement with the environment
+T0343 | blurriness and fog
+T0344 | lack of commitment to intersubjective reality
+T0345 | affective contact with the environment through the body is lost
+T0346 | the black, knotty hands reaching towards the sky
+T0347 | real life “seemed like a movie”
+T0348 | don’t look at people as people anymore
+T0349 | a floating mind in space
+T0350 | alienation from the perceptual world
+T0351 | it feels as if I have been through it before
+T0352 | no more familiar than a baby with two heads
+T0353 | a strange opening that has these two shapes that we call lips
+T0354 | aloneness in one’s own private world
+T0355 | a ring enclosed what was the flower
+T0356 | cannot convey their beauty to me
+T0357 | impossible for the mind to perceive or retain any individuality
+T0358 | being detached from or not a part of the world
+T0359 | Intrusive threats to her wellbeing were everywhere
+T0360 | repetitions or patterns of events or objects
+T0361 | detachment
+T0362 | perceive things more accurately
+T0363 | more disorganized
+T0364 | life feels unreal
+T0365 | “black hole”
+T0366 | I don't feel like I'm here
+T0367 | the world feels less interesting or appealing
+T0368 | distinguish the present from the past or future
+T0369 | dolls
+T0370 | None of this is real!
+T0371 | Rather than feeling as though there is something changed about the world
+T0372 | some sort of simulation
+T0373 | detachment from internal/external stimuli
+T0374 | familiar with people who the participant was in fact unfamiliar with
+T0375 | the unreality of things
+T0376 | nothing seems real
+T0377 | a robot that looked like my mother
+T0378 | too slow
+T0379 | everyone was robots
+T0380 | objects and their properties are felt to be distinct from the very experience of them
+T0381 | moved very quickly
+T0382 | like I had fallen into another dimension
+T0383 | further away
+T0384 | everything is strange
+T0385 | feeling disconnected from others
+T0386 | Spatial relationships meant nothing
+T0387 | things that are happening to me are related in some way with my purpose in life
+T0388 | it feels like it is not
+T0389 | this veil separating me from everyone else
+T0390 | this black, knotty mass
+T0391 | strong ties to conventional reality
+T0392 | playing the life game
+T0393 | extraordinary new
+T0394 | other people are robots
+T0395 | living in a dream
+T0396 | all surroundings
+T0397 | someone is telling me what to do and say
+T0398 | an increased awareness of space itself
+T0399 | a tendency to be skeptical of accepted aspects of reality
+T0400 | not seen through the ordinary filters of the experiencing self
+T0401 | things around me don’t feel real
+T0402 | sense of realness
+T0403 | a dampening of personalized affective resonance with the world
+T0404 | glimpse behind the façade of life
+T0405 | separated from reality by a protective covering
+T0406 | there’s no emotions
+T0407 | at the location of the virtual body presented in the display
+T0408 | Everything besides my limbs feel like they don’t have much of a presence
+T0409 | no longer imbued with the subjective coloring or affective amplification
+T0410 | the world does not exist
+T0411 | vibrant colors
+T0412 | cannot grasp the beauty of nature
+T0413 | engaging in meaningless behaviors
+T0414 | a loss or lack of reality
+T0415 | time seems to them to be at a standstill
+T0416 | feeling able to predict others’ thoughts and behaviors
+T0417 | feeling distracted by certain words
+T0418 | I cannot appreciate them
+T0419 | unpleasantly strange
+T0420 | an inability “to resonate with the world”
+T0421 | the loss of the feeling of reality
+T0422 | nauseating
+T0423 | robots without feelings
+T0424 | their felt lack of resonance with the world
+T0425 | it doesn’t mean anything to me at all
+T0426 | perched in a tree
+T0427 | observing reality in a detached manner
+T0428 | all strange somehow
+T0429 | a feeling of perceptual alteration of surroundings and the external world
+T0430 | You seem unreal
+T0431 | less functional
+T0432 | seem as though they are merely acting
+T0433 | like I’m wearing glasses that I can’t see through
+T0434 | closer than they really were
+T0435 | punctured his cocoon
+T0436 | crisis of common sense
+T0437 | Disconnection from the world, or other people
+T0438 | something disturbing and depersonalizing
+T0439 | the hallucinatory experience of a veil
+T0440 | blinded by a mist
+T0441 | mediated
+T0442 | located out of ‘my body’
+T0443 | occupying a distinct location in extrapersonal space
+T0444 | deathlike
+T0445 | disrupts our full immersion into the reality of the landscape
+T0446 | the dark and the void
+T0447 | living in a clear bubble
+T0448 | as if the glass had become an electron microscope
+T0449 | other people had control over their private thoughts or feelings
+T0450 | intending one harm in some way

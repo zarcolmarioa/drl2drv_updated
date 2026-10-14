@@ -1,0 +1,113 @@
+Now assign phrases to the groups you proposed. Below is batch 8 of 8
+from the same list.
+
+For each phrase choose exactly one:
+- the group (G01, G02, ...) whose quality the phrase describes. If it fits
+  more than one group, choose the best fit and give the second in "also";
+- "OTHER": the phrase describes how the world, places, objects or other
+  people appear or feel, but fits none of your groups;
+- "NOT_WORLD": the phrase does not describe how the world, places, objects
+  or other people appear or feel; for example, it describes only the
+  person's own body, self, thoughts, emotions or actions, or it is a
+  statement about causes, treatment or theory.
+
+Do not change, add or remove groups. Assign every phrase in this batch
+exactly once.
+
+OUTPUT
+One JSON array inside one code block labelled json:
+[{"id": "T0001", "group": "G03", "also": null}, ...]
+After the code block write the number of phrases assigned and then the
+line: END OF BATCH 8
+
+BATCH 8 OF 8
+T1051 | were all losing their differences
+T1052 | a cyberspace with allowed doses of human interaction
+T1053 | life is meaningless
+T1054 | constantly at risk of turning “unreal
+T1055 | the particularity would recede into a nebulous Oneness
+T1056 | unique steadiness of time
+T1057 | It’s an eerie feeling
+T1058 | as something quite remote and of no concern at all
+T1059 | altered ability to attribute to perceived objects or concrete situations with emotional feeling
+T1060 | strong feelings of unreality of oneself and the surrounding world
+T1061 | the miseries of his home
+T1062 | the boundaries of the real and the unreal are momentarily suspended
+T1063 | not quite real
+T1064 | a sense of separation from the world
+T1065 | others do not notice these subjective changes
+T1066 | Objects do not come to me
+T1067 | unspeakably sinister
+T1068 | a dreamlike scene
+T1069 | veil
+T1070 | being inside a video game
+T1071 | invisible wall
+T1072 | the attentional disengagement from both self and world
+T1073 | living “in a dream”
+T1074 | the virtual body is ‘my body’
+T1075 | eye contacts very unsettling
+T1076 | nor clearly located in an extracorporeal space
+T1077 | unfamiliar
+T1078 | like there is a zipper to unzip
+T1079 | living in a bubble
+T1080 | not something immediately lived
+T1081 | a blurring of the borders between self and non-self
+T1082 | as through a veil
+T1083 | more ‘real’
+T1084 | like a wall before me
+T1085 | cast a ghoulish haze on all the merchandise
+T1086 | I was somewhere above looking down on the scene
+T1087 | especially and unusually lively
+T1088 | as if seen through a veil
+T1089 | a different, and in their eyes just as true, reality
+T1090 | Nothing exists or is real
+T1091 | difficulties understanding speech or written language
+T1092 | make the latter visible
+T1093 | altered distance
+T1094 | peering at the world through a fog
+T1095 | through a screen
+T1096 | unremarkable
+T1097 | a felt loss of immediate, familiar, engaged experience in the world
+T1098 | a veil between me and the outside world
+T1099 | everything around me felt so different
+T1100 | fundamental doubt in reality
+T1101 | unfamiliarity and estrangement from the surrounding world
+T1102 | oceanic, expansive “oneness” with all around
+T1103 | in a fog
+T1104 | what I saw first was how they were one
+T1105 | no passage of time anymore
+T1106 | Everything seems unreal
+T1107 | looking flat
+T1108 | being in a video game
+T1109 | feelings of ‘unreality’
+T1110 | the present seems so unreal
+T1111 | somewhere on the border of the real and the unreal
+T1112 | an emptiness to landscapes
+T1113 | the minuteness of individual human presence
+T1114 | the basic features of reality such as the passage of time
+T1115 | being unplugged from the matrix
+T1116 | Everything looks quite kind of lifeless
+T1117 | seeing and understanding the world in ways they never have before
+T1118 | sometimes slower
+T1119 | “detached void”
+T1120 | inability to evoke the past readily or clearly
+T1121 | diminished stability of basic self and the experienced world
+T1122 | intensely detailed
+T1123 | seeing similarities or connections that others might not recognize
+T1124 | the matrix
+T1125 | a hologram
+T1126 | a sims game
+T1127 | being unsure about whether something was objectively perceived or simply imagined or thought
+T1128 | there’s a wall that separates me from everybody else
+T1129 | unable to perceive objects or landscapes as integrated wholes
+T1130 | seeing these things for the first time
+T1131 | words cant properly describe them
+T1132 | life is through a veil
+T1133 | things feel unreal to me
+T1134 | staring at him
+T1135 | the whole world is a work of art
+T1136 | detachment from one’s immediate experiences of oneself and the surrounding world
+T1137 | useless
+T1138 | a sense of stronger concern toward others and the world
+T1139 | Visual distortions
+T1140 | Everything seemed to be dissolving right in front of my eyes
