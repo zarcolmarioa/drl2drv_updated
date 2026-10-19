@@ -1,0 +1,19 @@
+quantity,haze_eq,haze
+analysed trials,180.0,180.0
+r(predictors),0.123,0.108
+VIF,1.02,1.01
+classification accuracy,0.978,0.988
+individual weight SD,0.313,0.326
+min detectable weight,0.664,0.637
+"floor, colour",0.735,0.692
+"floor, fog",0.594,0.583
+"weight for 80% detection, colour",1.065,1.006
+"weight for 80% detection, fog",0.853,0.857
+crossover difference SD,0.519,0.503
+gap for 80% crossover detection,1.423,1.424
+gamma for 80% detection,,
+"dose rise, sat_only",0.051,0.063
+"dose rise, fog_only",0.067,0.065
+"dose rise, together",0.061,0.101
+"dose rise, conflict",0.019,0.039
+"dose rise, mean",0.05,0.067

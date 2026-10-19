@@ -1,0 +1,21 @@
+quantity,frozen
+analysed trials,180.0
+r(predictors),0.115
+VIF,1.01
+classification accuracy,1.0
+individual weight SD,0.193
+min detectable weight,0.387
+"threshold upper, colour",0.286
+"threshold upper, fog",0.488
+"threshold lower, colour",-0.29
+"threshold lower, fog",-0.486
+"weight for 80% detection, colour",0.448
+"weight for 80% detection, fog",0.713
+crossover difference SD,0.331
+gap for 80% crossover detection,0.946
+gamma for 80% detection,4.032
+"dose rise, sat_only",0.116
+"dose rise, fog_only",0.06
+"dose rise, together",0.09
+"dose rise, conflict",-0.005
+"dose rise, mean",0.065
