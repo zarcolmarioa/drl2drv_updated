@@ -122,8 +122,13 @@ C1 is reported as inconclusive. Only a difference is informative, because a
 similar result cannot separate memory of the experience from a shared idea of
 what derealization "should" look like.
 
-**Secondary.** A group-level one-sided t-test and Bayes factor on the
-per-person weights: does the group lean on average?
+**Secondary.** A group-level one-sided t-test and Bayes factor (JZS, scale
+0.707) on the per-person weights, per feature: does the group lean on average?
+It is reported with and without a cap on extreme weights (the weight of a
+person who answers every informative trial as predicted, just short of
+separation), because one such person can dominate a mean. Proportions of
+choices are used only in the exploratory analysis of the single-feature trials
+that follows Suzuki et al.
 
 **Exploratory, reported with intervals.**
 - People differ in their contrast-to-colour balance, compared between people
