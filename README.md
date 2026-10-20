@@ -70,7 +70,7 @@ The work runs in three stages. Each stage uses the outputs of the one before.
 |---|---|
 | `v4_axes_pipeline_explained.md` | current: how the axes were built and validated |
 | `v4_stimulus_power_explained.md` | current: what changed in the last round, the trial list, grids, axis scoring of the final stimuli, power and the registered rule for each N |
-| `experimental_design.md` | **being rewritten** to the current design; until then its model statement and predictor names are out of date (the analysis uses `pred_sat` and `pred_fog`) |
+| `experimental_design.md` | current: the design as registered, including the parts not yet in the experiment code (marked *code change pending*) |
 | `v4_stimulus_pipeline_explained.md` | partly superseded: still the reference for the corpus, scene selection, manipulations and pair types; out of date on what changed in the last round (see the note at its top) |
 | `v4_power_analysis_explained.md` | superseded by `v4_stimulus_power_explained.md` |
 | `prompt_stimulus_power.md` | the working plan given to the session that built stage 2 |

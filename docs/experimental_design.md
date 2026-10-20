@@ -1,34 +1,48 @@
-# Derealization image-choice experiment — how the experiment works
+# Derealization image-choice experiment: how the experiment works
 
 **Purpose of this file.** A self-contained description of the experimental
-design: what the participant is asked at each step, how a trial is built, and
-why each element is there. It assumes no prior context.
+design: who takes part, what the participant is asked at each step, how a trial
+is built, what is analysed, and why each element is there. It assumes no prior
+context.
+
+**Status (20 Oct 2026).** This file describes the design **as registered**. Some
+of it is not yet in the experiment code: the new session order, the anchoring
+screen, the new word list, the two grid blocks and the optional state block.
+Those changes are listed for the experiment repository and are marked
+*(code change pending)* below.
 
 **Code:** <https://github.com/zarcolmarioa/dpdr_experiment> (browser experiment,
-jsPsych, runs online). File paths below refer to that repository.
+jsPsych, runs online). File paths in sections 4–7 refer to that repository.
 
-**What this file does not cover:** how the phenomenological axes were derived,
-how the scenes were chosen and the images generated, participants and
-recruitment, and the statistical analysis plan. Those are documented
-separately. Exact trial counts, stimulus-set names and image counts are
-deliberately omitted here because they change; the authoritative values are in
-the repository's trial list (`data/sets/<set>/trial_list.json`) and
-configuration (`config.js`).
+**Companion documents (this repository):**
+- `docs/v4_axes_pipeline_explained.md`: why these two image features. They come
+  from text-defined "derealization axes" built from patients' own descriptions.
+- `docs/v4_stimulus_power_explained.md`: how the stimuli, the trial list and
+  the grid blocks were built, and the design analysis behind the decision rules.
+  Its section 13 is the registered design in numbers.
+- `docs/v4_stimulus_pipeline_explained.md`: the corpus, scene selection and the
+  two manipulations in detail.
+
+The analysis plan is stated in the preregistration; section 2 summarises it.
 
 ---
 
 ## 1. The experiment in one paragraph
 
-Participants are people who report episodes of depersonalization or
-derealization (DPDR) and who have already been interviewed about those
-experiences. In the session they first rate how well a list of adjectives
-describes how their surroundings *looked* during an episode. They then do a
-long run of two-alternative forced-choice (2AFC) trials: on each trial they see
-two edited versions of the same photograph side by side and press the left or
-right arrow key to choose the one that looks more like how their surroundings
-looked during an episode. Finally they see a small number of screens showing a
-whole range of edited versions at once and choose the column closest to their
-experience, or "none of these". The session ends by uploading the data.
+Participants are people who report at least one recognisable episode of
+derealization. They were selected from an online survey and interviewed about
+their experiences beforehand. In the session they bring to mind **one specific
+episode** and then do a long run of two-alternative forced-choice trials. On
+each trial they see two edited versions of the same photograph side by side,
+and press the left or right arrow key to choose the one that looks more like how
+their surroundings looked during that episode. The two versions differ in
+**local contrast**, in **colour saturation**, or in both.
+
+They then see grid screens showing a whole range of versions at once, first
+about the episode and later about how their surroundings normally look. They
+also rate a short list of words. A **control group** with no such episodes does
+the same task, imagining how the world might look to someone experiencing
+derealization.
 
 ---
 
@@ -37,351 +51,368 @@ experience, or "none of these". The session ends by uploading the data.
 ### 2.1 Background
 
 People with derealization describe the world as faded, flat, lifeless, foggy,
-veiled, as if seen through glass. The obvious experimental move — manipulate
-how "vivid" a photograph is and ask whether people with derealization prefer
-the less vivid one — has been tried and produced a null result: physical image
-vividness did not explain the sense of unreality.
+veiled, as if seen through glass. Manipulating how "vivid" a photograph is, and
+asking whether people with derealization find less vivid images less real, has
+produced a null result (Kusztor et al.). This design differs from that work in
+three ways:
 
-This design assumes the reason may be that "vividness" is not one thing. Two
-different complaints are bundled inside it:
+- **The question.** Kusztor et al. asked how real images looked compared with
+  everyday life. This study asks which image resembles the altered episode
+  itself.
+- **Timing.** If someone is in the altered state while looking, the test images
+  are seen through the same altered perception, and differences can cancel out
+  (the "El Greco" problem). Here participants look while not in an episode and
+  compare with a remembered one.
+- **Two features, not one.** "Vividness" bundles two complaints, and the design
+  separates them:
+  - **clarity** (*foggy*, veiled): physically, a loss of **local contrast**;
+  - **colour** (*faded*, drained): physically, a loss of **saturation**.
 
-- a **colour** complaint (*lifeless*, drained, flat) — physically, reduced
-  chroma;
-- a **clarity** complaint (*foggy*, veiled, as if behind glass) — physically,
-  light scattering, i.e. haze.
+  The two are manipulated independently, measured on every image, and put into
+  competition within single trials. Kusztor et al. themselves recommend
+  combining a task with an interview about the same experience, which this
+  design does.
 
-These two can be manipulated independently and measured separately, so they can
-be put into competition within a single trial. That is what this experiment
-does.
+Claims are about the **remembered appearance** of a specific episode. Memory is
+the only access anyone has to past episodes. Remembered scenes tend to be
+recalled as clearer and more colourful than they were, which works *against*
+the hypotheses, so a positive result is conservative.
 
-### 2.2 The three questions
+### 2.2 Hypotheses
 
-**Q1 — the "lifeless" question.** When two versions of the same scene differ
-only in colour, do participants choose the less colourful one?
+**H1, primary: contrast.** When two versions of a scene differ in local
+contrast with saturation matched, participants choose the lower-contrast
+version as more like the episode.
 
-**Q2 — the "foggy" question.** When two versions differ only in haze, with
-colour held matched, do participants choose the foggier one?
+**H2, primary: colour.** When two versions differ in saturation with contrast
+matched, participants choose the less colourful version.
 
-Q1 and Q2 are each answered per participant, as a proportion of choices, and
-then at the group level.
+H1 and H2 are each tested **per person, in both directions**:
+- **The model.** For each person, a Firth bias-reduced logistic regression
+  with no intercept:
 
-**Q3 — the crossover, between participants.** Does the adjective a person
-endorses predict which feature their choices track? A person who rates *foggy*
-highly should show the stronger haze effect; a person who rates *lifeless*
-highly should show the stronger colour effect.
+  ```
+  P(choose image A) = logistic(b_fog · pred_fog + b_sat · pred_sat)
+  ```
 
-Q3 is the question that motivates the whole structure. A single "vividness"
-manipulation cannot answer it, because it cannot tell the two complaints apart.
-Q1 and Q2 establish whether there is anything to attribute; Q3 attributes it.
+  `pred_fog` and `pred_sat` are the feature differences between image A and
+  image B, in corpus-SD units, signed so that **positive means image A is the
+  predicted choice**:
+  - `pred_fog = +d_fog / 9.348`: positive when A has lower local contrast;
+  - `pred_sat = −d_sat / 39.182`: positive when A is less colourful.
+- **Thresholds.** Each weight is compared with thresholds set on 20,000
+  simulated random choosers, at which only 2.5% of them pass each end:
+  - contrast +0.488 / −0.486;
+  - colour +0.286 / −0.290.
 
-A further question is asked by the final block (§4.6): does the manipulated
-range cover the experience at all, or does the participant find none of the
-images like it?
+  Each person is classed as detected in the predicted direction, in the
+  opposite direction, or not detected.
+- **The claim.** It succeeds if at least *k* people are detected in the
+  predicted direction and at most *m* in the opposite direction. *k* and *m*
+  are fixed in advance for every final sample size from 10 to 20, and each rule
+  keeps the false-claim rate at or below 5%, including when people without the
+  effect have personal tastes in either direction. H1 and H2 are two separate
+  claims.
+
+**C1, primary: participants against controls.** Participants' weights are
+higher than controls', for each feature. The test is a one-sided Mann–Whitney
+test per feature, Holm-corrected across the two. An attention check comes
+first: if the groups differ in catch-trial failures or in very fast responses,
+C1 is reported as inconclusive. Only a difference is informative, because a
+similar result cannot separate memory of the experience from a shared idea of
+what derealization "should" look like.
+
+**Secondary.** A group-level one-sided t-test and Bayes factor on the
+per-person weights: does the group lean on average?
+
+**Exploratory, reported with intervals.**
+- People differ in their contrast-to-colour balance, compared between people
+  only.
+- A person's descriptions predict their weights. The descriptions come from the
+  CDS items, the interview coded blind to the task, and the word ratings.
+- The grid blocks and the shift from "normal" to "episode".
+- Dose-response, additivity of the two features, and prevalence.
+- A per-person binomial analysis of the single-feature trials, following
+  Suzuki et al.
+
+With fewer than 10 analysable participants, no H1 or H2 claim is made.
+
+The rule for each sample size, the power figures and their assumptions are in
+`docs/v4_stimulus_power_explained.md`, sections 12 and 13.
 
 ### 2.3 What a null result would mean
 
-A null is a realistic outcome and the design is built so that it is
-interpretable rather than merely disappointing. If choices do not track either
-feature, that is evidence that the way people *describe* the experience does
-not correspond to these low-level image properties — which is a result about
-the vocabulary-to-perception mapping, not a failed experiment. For this to hold,
-it must be impossible to attribute a null to a broken task, which is why the
-session carries attention checks, consistency checks and display calibration.
+A null rules out "about half or more of the participants follow the feature at
+a moderate strength". It does not rule out weak or rare effects, and each
+person's weights with their intervals show how large an effect each person
+could still have.
+
+Two further cases:
+- **The grid shows choices at the extremes or "none of these".** The
+  manipulated range does not reach the experience.
+- **The repeated trials show low consistency.** The task or memory is too
+  noisy to conclude.
 
 ---
 
 ## 3. The stimulus space and how a trial is built
 
-### 3.1 The grid
+### 3.1 The cell grid
 
-Every scene (one photograph) exists in a **5 × 5 grid of versions**: five
-levels of **chroma** (colour) crossed with five levels of **haze**. Haze is
-applied with a physical scattering model, so it lifts the dark regions, reduces
-local contrast and washes colour toward the airlight, as real haze does.
+Each of **47 scenes** exists in a grid of edited versions.
 
-Two properties of the grid matter for the task:
+- **Colour** has seven levels: two above the original (more vivid), the
+  original, and four below (less colourful). The colour edit scales chroma in
+  CIELAB. Above the original it saturates softly toward the in-gamut ceiling,
+  so colours never clip.
+- **Contrast** has six levels: the original and five steps of contrast
+  reduction. The contrast edit blends the image toward a haze and restores the
+  mean brightness (`haze_eq`). **It also lowers saturation**: at the original
+  colour it lowers saturation by about two thirds as many corpus SD as it
+  lowers local contrast. Pairs are built so that this does not confound the
+  analysis (section 3.3).
 
-- **No grid point is the untouched photograph.** The lowest haze level is a
-  mild manipulation rather than zero. If one version were the original,
-  participants could sort "edited" from "unedited" instead of responding to the
-  features themselves.
-- **Chroma does not reach zero.** A fully achromatic image reads as a
-  black-and-white photograph — a different thing from a drained world.
+Levels are calibrated on **corpus percentiles** of the two measured features,
+and every image carries its *measured* `contrast_local` and `sat_mean`, not just
+the parameters used to make it. Images are 512 px square.
 
-Each image carries *measured* feature values, not just the parameters used to
-make it, because each image is solved individually to hit its target.
+The untouched photograph (original colour, original contrast) **never appears
+in a pair trial**, so participants cannot sort "edited" from "unedited". It
+does appear in the grid blocks, where the original is one of the columns.
 
 ### 3.2 Both images of a pair come from the same scene
 
-On every trial the two images are two points in the grid of **the same
-photograph**. Nothing about content differs between them: same room, same
-objects, same composition.
+On every trial the two images are two versions of **the same photograph**, so
+nothing about content differs between them. This removes content preferences
+entirely, which is the largest single gain in precision available with a small
+sample. The cost, that participants notice the pictures are versions of one
+another, is handled by the instruction wording (section 5) and the
+quality-control trials.
 
-This is a deliberate choice with a known cost. Pairing two *different*
-photographs would make the editing less obvious, but then any preference could
-be a preference for the content of one photograph rather than for the
-manipulation. Same-scene pairing removes content variance entirely, which is
-the largest single gain in precision available with a small sample. The cost —
-that a participant may notice that the pictures are versions of one another —
-is handled by the instruction wording (§5), by having no unedited version to
-compare against, and by the quality-control trials.
+### 3.3 The four analysed trial types (180 trials)
 
-### 3.3 The four analysed trial types
+| Trial type | n | How the two versions differ | What it is for |
+|---|---|---|---|
+| **Colour-only** (`sat_only`) | 60 | Same contrast level, different colour | H2: any choice is attributable to colour. Only larger colour differences are used (\|Δ saturation\| ≥ 31.1 units). |
+| **Contrast-only** (`fog_only`) | 60 | Different contrast levels, with colour levels chosen so that *measured* saturation matches within 3 units | H1: the contrast edit drains colour, so only saturation-matched pairs isolate contrast. |
+| **Together** (`together`) | 30 | One image has both lower contrast *and* less colour | The features point the same way; informs the sum of the two weights. |
+| **Conflict** (`conflict`) | 30 | One image has lower contrast but *more* colour | The features point in opposite directions; this is the type that separates the two weights. |
 
-Each type is a different geometric relation between the two grid points, and
-each answers a different part of the question.
+The magnitudes are spread over fixed bins, and side is balanced exactly within
+each type.
 
-| Trial type | How the two versions differ | What it is for |
-|---|---|---|
-| **Colour-only** (`sat_only`) | Same haze level, different chroma | Q1. Any choice is attributable to colour alone. |
-| **Haze-only** (`fog_only`) | Different haze levels, with chroma chosen so that *measured* saturation matches | Q2. Haze drains colour as a side effect, so an unmatched foggy-versus-clear pair would confound haze with colour loss. Only colour-matched pairs isolate haze. |
-| **Together** (`together`) | One image is both foggier *and* less colourful | The two features point the same way, as they do in natural haze. Informs the *sum* of the two sensitivities. |
-| **Conflict** (`conflict`) | One image is foggier but *more* colourful | The two features point in opposite directions. Informs the *difference* between the two sensitivities — this is the type that separates them, and the direct test of Q3 within a participant. |
+### 3.4 Trial order is fixed in a file
 
-The haze-only type is the reason the stimulus space is a grid rather than a
-single haze ladder: producing a colour-matched haze contrast requires moving in
-two dimensions at once.
+The sequence, the pairing, the side of each image and the feature differences
+are computed in advance, frozen, and checksummed (`frozen_trial_list_v4`). The
+experiment presents them in file order and randomises nothing.
 
-A column of the grid is never used on its own: moving straight down changes
-both features together in a way that cannot be attributed.
+The trial list carries `pred_sat` and `pred_fog`, which are the predictors used
+in the analysis. It also carries `z_sat` and `z_fog`, which are **unsigned
+sizes** kept for reference only; the model must not use them.
 
-### 3.4 Trial order is fixed in a file, not randomised at run time
-
-The sequence of trials, the pairing, which image appears on the left, and the
-feature differences for each trial are all computed in advance and stored in
-`data/sets/<set>/trial_list.json`. The experiment presents them in file order
-and randomises nothing. The reason is that the pairs are chosen deliberately —
-to spread the feature differences evenly, to include pairs where one feature
-differs a lot and the other barely at all, and to balance left/right exactly —
-and run-time randomisation would undo that. Regenerating the trial list changes
-the experiment with no change to the code.
-
-Each trial row carries the standardised feature differences between its two
-images (`z_sat`, `z_fog`, signed so that positive means image A is the less
-colourful or the foggier one), which are the predictors used in analysis.
+**Presented trials: 211.** That is 180 analysed, 15 consistency, 10 catch and 6
+practice.
 
 ---
 
 ## 4. The session, step by step
 
-Each step below is a block that can be switched on or off in `config.js`.
+The order is the same for participants and controls. Each step is a block that
+can be switched on or off in `config.js`.
 
-### 4.1 Participant identification
+| # | Step | Participants | Controls |
+|---|---|---|---|
+| 1 | Identification and consent | ✓ | ✓ |
+| 2 | Display calibration, with the viewing-conditions note | ✓ | ✓ |
+| 3 | Anchoring screen *(code change pending)* | one specific episode | short definition text |
+| 4 | Practice | ✓ | ✓ |
+| 5 | Pair trials, with consistency and catch trials | ✓ | ✓ |
+| 6 | Episode grid *(code change pending)* | ✓ | ✓ |
+| 7 | Word ratings, about that episode *(moved; new list)* | ✓ | ✓ |
+| 8 | Normal-appearance grid *(code change pending)* | ✓ | ✓ |
+| 9 | State items, optional *(code change pending)* | ✓ | ✓ |
+| 10 | End and upload | ✓ | ✓ |
 
-One screen asks for the participant ID issued at recruitment; name and email
-are optional. The ID is what links the session to that participant's
-questionnaire score and interview; it can also be prefilled from the invitation
-link. Name and email, if given, are uploaded as a *separate* file to a separate
-destination, so the response data never contains identifying information.
+### 4.1 Identification
+
+One screen asks for the participant ID issued at recruitment. Name and email are
+optional and, if given, are uploaded as a separate file to a separate
+destination, so the response data never contain identifying information. The
+**interview date** is recorded *(code change pending)* so the delay between
+interview and task can be used as a covariate.
 
 ### 4.2 Display calibration
 
-The manipulations *are* colour and shadow lifting, so the display is part of
-the measurement. Four things happen, in this order:
+The manipulations *are* contrast and colour, so the display is part of the
+measurement.
+1. **Full screen.**
+2. **Viewport check:** pair images are shown at a fixed pixel size and never
+   scaled to fit.
+3. **Brightness set to maximum,** confirmed.
+4. **A short gamma-matching task,** which gives a per-participant covariate.
 
-1. **Full screen**, so the viewport is fixed for the whole session.
-2. **Viewport check.** The two images are shown at a fixed pixel size for every
-   participant — they are never scaled to fit — so that the physical size of the
-   manipulation does not vary between people. A viewport too small to fit them
-   produces a warning, and a very small one stops the session.
-3. **Brightness.** The participant is asked to set screen brightness to maximum
-   and confirm it. A dimmed screen hides exactly the dark-region differences
-   that haze produces.
-4. **Gamma.** A short luminance-matching task, repeated a few times, in which
-   the participant adjusts a grey patch until it matches a checkerboard. This
-   does not correct anything; it yields a per-participant estimate of the
-   display's gamma that can be used as a covariate.
+The instructions also ask participants to switch off night mode, blue-light or
+colour filters if they can, and say not to worry if they do not know whether
+these are on or how to switch them off. Nothing is verified.
 
-### 4.3 Word ratings
+### 4.3 Anchoring screen *(code change pending)*
 
-A list of adjectives is presented, and for each one the participant rates, on a
-**0–6 scale**, how well it describes how their surroundings **looked** during an
-episode of depersonalization or derealization.
+Participants bring to mind **one specific episode**, ideally a recent one they
+remember clearly, and answer every question about that episode. There is an
+optional box for a few words identifying it. The screen does not mention the
+interview. Every later prompt says "during that episode".
 
-Three design points:
-
-- **The targets are *foggy* and *lifeless*.** These are the two predictors for
-  Q3.
-- **The rest of the list is fillers**, chosen to sit away from the two
-  manipulated dimensions (they concern things like crowding, sound, weight or
-  pace rather than colour or clarity). They make indiscriminate endorsement
-  detectable: someone who rates every word highly is not describing an
-  experience, and their target ratings carry no information. A filler that was
-  itself about colour or clarity would correlate with the targets and defeat
-  the purpose.
-- **Ratings, not a forced choice between words.** This gives two continuous
-  predictors rather than one categorical one, which is what the crossover
-  analysis needs.
-
-This block runs **before** the images, because it is the predictor: rated
-afterwards, it would be contaminated by the fifteen minutes the participant had
-just spent looking at manipulated photographs.
-
-The instructions are shown on their own screen, and the rating grid on the
-next, so the whole grid fits on screen without scrolling.
+Controls instead read the same short definition, which contains no perceptual
+words (for example: "Derealization is an experience in which one's
+surroundings feel unreal or detached, as if one were cut off from the world"),
+and answer about how the world might look to someone experiencing it. The text
+is preregistered word for word.
 
 ### 4.4 Practice
 
-A few practice trials, identical in structure to the main trials. On the first
-of them the chosen image is briefly outlined. The feedback teaches the key
-mapping and nothing else: it says there is no right answer and says nothing
-about *why* the participant chose what they chose. Confirming a reason would
-endorse the choice as meaningful and invite consistency-seeking on later
-trials.
+There are 6 practice trials, drawn from colour-only, contrast-only and together
+pairs at small to medium differences. The feedback teaches the key mapping only:
+it says there is no right answer and nothing about *why* a choice was made.
 
-### 4.5 The main block (2AFC)
+### 4.5 The main block
 
 **One trial:** a fixation cross, then the two images side by side with the
-question above them, then a short blank.
+question above them, then a short blank. The question is: "Which looks more
+like how your surroundings looked during that episode?" The response is the
+left or right arrow key, self-paced, and the response time is recorded. Short
+break screens appear periodically.
 
-**The question, in English:**
+Two kinds of quality-control trial are interleaved and excluded from the
+analysis:
+- **15 consistency trials:** a pair shown earlier is repeated much later with
+  the sides swapped. Agreement is reported per person as a **quality measure
+  only**; it is not an exclusion rule.
+- **10 catch trials:** these show **no images**, only an instruction to press
+  the up or down arrow, balanced 5 and 5. A reflexive left or right press
+  fails, and only the first press counts. Participants with **3 or more
+  failures** are excluded.
 
-> Which looks more like how your surroundings looked to you during an episode?
+### 4.6 The grid blocks *(code change pending)*
 
-**The response:** the left or right arrow key, self-paced, no time limit. Only
-the *side* chosen is recorded; which image that was is reconstructed in analysis
-from the trial list, which records which side image A was on. Keys rather than
-mouse clicks keep the response time interpretable and the hand position fixed.
+There are two blocks of four screens each. On each screen the **columns are the
+levels of one feature**, with 6 columns per screen, and the **three rows are
+different scenes**, so no single photograph drives the choice. Clicking a
+column selects it. Each feature is shown twice, once with the columns running
+one way and once reversed, so choosing a *level* can be told apart from
+choosing a *position*.
 
-**Side balancing:** within each trial type, image A appears on the left in
-exactly half the trials, so a bias toward one key cannot masquerade as a
-preference for one manipulation.
+| Block | When | Question | "None of these" |
+|---|---|---|---|
+| Episode | after the pair trials | how the surroundings looked during that episode | yes, with an optional free-text box |
+| Normal appearance | after the word ratings | how the surroundings **normally** look | no |
 
-**Breaks:** a short break screen appears periodically, stating progress.
+- **Scene sets.** The two blocks use two matched sets of 12 scenes, swapped
+  between participants. The draw is recorded in every data file.
+- **What is analysed.** The shift from normal to episode is analysed per
+  feature, in feature units, descriptively.
+- **Three properties to keep in mind:**
+  - the contrast axis has no level above the original, so contrast answers in
+    the normal block are censored at the original and are counted;
+  - the contrast screen's columns also lose some colour;
+  - the block order is fixed, and the grid photographs also appear in the pair
+    trials.
 
-Interleaved in the block, and excluded from all analysis, are two kinds of
-quality-control trial:
+### 4.7 Word ratings *(moved after the episode grid; new list)*
 
-- **Consistency trials.** A pair shown earlier is presented again much later
-  with the sides swapped. Agreement across the two presentations measures
-  whether the participant's responses are stable. The side swap means agreement
-  cannot be produced by pressing the same key.
-- **Attention checks (catch trials).** These show **no images at all**. The
-  screen displays a short instruction to press the **up** or **down** arrow key.
-  Removing the images is what makes the check work: with two pictures on screen,
-  the trained "pick a side" response fires before anything is read, so an
-  inattentive-but-habituated participant would pass. With nothing to choose
-  between, the only available action is to read. The target is never left or
-  right, so a reflexive side press fails immediately. Keys are inert for a
-  moment when the screen appears, so a press carried over from the previous
-  trial cannot land, and only the first press counts — a trial that waited for
-  the correct key could only ever end in success and would discriminate nothing.
+For each word, participants rate on a **0–6 scale** how well it describes how
+their surroundings looked during that episode. Controls rate how the
+surroundings might look to someone experiencing derealization.
 
-### 4.6 The grid block
+| Role | Words (EN) | Japanese (draft, being checked by a native speaker) |
+|---|---|---|
+| Targets | foggy, faded | 霞がかった, 色あせた |
+| Close to the targets | veiled, lifeless | ベールがかかったような, 生気のない |
+| Derealization baseline | unreal, dreamlike, distant, like a picture | 現実味のない, 夢のような, 遠く感じる, 絵のような |
+| Fillers | oppressive, threatening | 重苦しい, 不穏な |
 
-After all pairwise trials, the participant sees a few screens, each laid out as
-a matrix: **columns are levels of one feature** (haze on some screens, chroma on
-others) and **rows are different scenes**. Clicking anywhere in a column selects
-that whole column. A separate **"None of these"** button sits below, and the
-choice can be changed before continuing.
+**How the words are used**
+- Each target is read **relative to the person's baseline**, the mean of the
+  four baseline words, so a general tendency to endorse derealization words is
+  not mistaken for a specific one.
+- "Veiled" and "lifeless" show whether people choose a nearby word instead of
+  the target.
+- The two fillers, one about low mood and one about anxiety, show whether high
+  ratings reflect general distress.
 
-**The question:** which column looks most like how their surroundings looked
-during an episode.
+The block comes after the episode grid so that the words do not prime the main
+task. The cost is that ratings given after the task may echo the choices just
+made, so they are a descriptive predictor.
 
-**Why it exists.** The pairwise trials only ever ask "which of these two is
-closer?". A participant can answer that consistently while finding neither
-image anything like their experience. The grid shows the whole manipulated
-range at once and asks an *absolute* question: where on this range was the
-experience? Three outcomes are informative — everyone choosing the most extreme
-column means the range does not go far enough; clustering in the middle means
-the range is about right; "none of these" means the manipulations do not
-capture the experience at all. That last answer is available nowhere else in
-the session, and given the earlier null result it is a real possibility.
+### 4.8 State items *(optional; code change pending)*
 
-**Why it is last.** Seeing the whole range laid out reveals what is being
-manipulated, so it cannot precede the pairwise trials.
+A short block at the end: the four derealization items of the Cambridge
+Depersonalisation Scale (items 2, 13, 19 and 29), in the CDS state format
+("right now"). It is built as a switchable block so that it can be used or not.
 
-**How it is used.** Descriptively, as a range check reported in counts. It is
-not a test of Q1–Q3.
+### 4.9 End of session
 
-**Two further details.** Each feature is shown on more than one screen, once
-with the levels running from least to most manipulated and once in the reverse
-order, so that choosing a *level* can be told apart from choosing a *position*
-on the screen. And the rows of each screen are different scenes, so no single
-photograph drives the choice.
-
-Unlike the pairwise panels, the grid cells cannot be shown at a fixed size — a
-row of full-size images fits no laptop — so the cell size is computed from the
-window and recorded on every row as a covariate.
-
-### 4.7 End of session
-
-The data are uploaded. If the upload fails, the participant is offered a button
-that downloads their data file so it can be sent by email, rather than the
-session being lost silently.
+The data are uploaded. If the upload fails, the participant can download the
+data file and send it by email.
 
 ---
 
 ## 5. Instruction wording rules
 
-The wording of every participant-facing screen follows four rules. They are not
-stylistic; breaking them would damage the measurement. All participant-facing
-text lives in `text/en/` and `text/ja/` (the study runs in English and
-Japanese), and nothing displayed to a participant is written anywhere else in
-the code.
+All participant-facing text lives in `text/en/` and `text/ja/`. The wording
+follows four rules, because breaking them would damage the measurement.
 
-1. **The condition is named, never described.** The instructions say "an episode
-   of depersonalization or derealization". They never say "unreal",
-   "dreamlike", "as if behind glass", "faded" or similar. Those words name
-   perceptual qualities — and those qualities are exactly what the word ratings
-   and the image manipulations measure. Using them in the instructions would
-   prime both the predictor and the outcome.
-2. **The judgment is anchored on the surroundings, not the self.**
-   Depersonalization concerns the self feeling unreal; derealization concerns
-   the world. Every stimulus is a scene, so the instruction must point at the
-   world, or participants recall self-focused experiences that the images cannot
-   represent.
-3. **The manipulation is acknowledged but unspecified.** Both images are the
-   same scene, so participants will notice that something was done. The
-   instructions say the pictures "have been adjusted in different ways", which
-   closes the question without hinting at colour or haze.
-4. **Nothing suggests a detection task.** "Which looks more edited / distorted /
-   altered" would convert a judgment about resemblance into a discrimination
-   task — something people are good at, and which measures something else
-   entirely.
+1. **The condition is named, never described.** Instructions name the episode
+   but never describe it as foggy, faded, unreal, dreamlike, or as if behind
+   glass. Those are the qualities the task and the word ratings measure. The
+   word ratings necessarily show such words, which is one reason they come
+   after the main task. The control text follows the same rule.
+2. **The judgment is about the surroundings, not the self.** Every stimulus is
+   a scene, so every prompt points at how the surroundings looked.
+3. **The manipulation is acknowledged but unspecified.** The pictures "have
+   been adjusted in different ways", with no hint at contrast or colour.
+4. **Nothing suggests a detection task.** "Which looks more edited" would turn
+   resemblance into discrimination.
 
 ---
 
 ## 6. What is recorded
 
-The output is one CSV per session, one row per screen, with session-level
-information (participant ID, language, stimulus set, display measurements,
-calibration results, the target word ratings) copied onto every row.
-
-The rows that matter:
+One CSV per session, one row per screen. Session-level information is copied
+onto every row: participant ID, language, display measurements, calibration
+results, word ratings and the grid set code.
 
 | Block | What it holds |
 |---|---|
-| `word_ratings` | one rating per adjective |
-| `pairs` | one row per pairwise trial: which images, the trial type, the standardised feature differences, which side was pressed, response time |
-| `grid` | one row per grid screen: the chosen column, the level that column corresponds to, or "none" |
+| `pairs` | one row per pair trial: trial number, trial type, which side was pressed, response time |
+| `grid` | one row per grid screen: block, set, the chosen display column, the chosen **level index**, or "none" |
+| word ratings | one rating per word |
+| state items | one rating per item, if the block is on |
 
-Two conventions are worth knowing before reading the data:
+- **Which image was chosen** is derived in analysis from the side pressed and
+  the frozen trial list. The predictors `pred_sat` and `pred_fog` are joined
+  from the trial list by trial number; they are not copied into the data file.
+- **There is no `correct_response` column.** The expected catch response lives
+  in the experiment's configuration.
+- **`trial_type` means two things.** jsPsych's column names the plugin; the
+  design's trial type is a separate column.
 
-- **Only the side pressed is recorded.** Which image was chosen is derived in
-  analysis by combining the side with the trial list's record of which side
-  image A was on.
-- **`trial_type` means two different things.** jsPsych writes its own
-  `trial_type` column naming the plugin that produced the row; the design's
-  trial type (colour-only, haze-only, together, conflict, …) is in a separate
-  column.
-
-The full column list is documented in `DATA_DICTIONARY.md` in the repository.
+The full column list is in `DATA_DICTIONARY.md` in the experiment repository.
 
 ---
 
-## 7. Where things are in the code
+## 7. Where things are in the experiment code
 
 | Path | What it is |
 |---|---|
-| `config.js` | every setting: which blocks run, keys, display size, stimulus set, language, hosting |
-| `data/sets/<set>/trial_list.json` | the trials: order, pairs, sides, feature differences |
-| `data/sets/<set>/grid/grid_trials.json` | the grid screens: columns, levels, scenes |
-| `src/phases/pairs.js` | the pairwise block, including practice and the attention checks |
+| `config.js` | every setting: which blocks run, keys, display size, stimulus set, catch sequence, language |
+| `data/sets/<set>/trial_list.json` | the trials: order, pairs, sides, predictors |
+| `data/sets/<set>/grid/` | the grid package: blocks, sets, screens, images |
+| `src/phases/pairs.js` | the pair block, including practice, consistency and catch trials |
 | `src/phases/words.js` | the word-rating block |
-| `src/phases/grid.js` | the grid block |
+| `src/phases/grid.js` | the grid blocks |
 | `src/calibration/` | full screen, viewport check, brightness, gamma |
 | `text/en/`, `text/ja/` | every participant-facing string |
-| `src/validate.js` | pre-flight checks run before anything is displayed |
+| `src/validate.js` | checks run before anything is displayed |
 | `DATA_DICTIONARY.md` | the output columns |
-| `dev.html` | developer entry point: jump straight to any single block |
+| `dev.html` | developer entry point: jump to any single block |
