@@ -1,0 +1,432 @@
+CHOOSE THE COLOUR CONDITION  (v4 axes, step 6)
+======================================================================
+Trial lists: data/trials_v4_ext
+Baseline   : current
+Draws      : current 20, extra_levels 20, larger_diffs 20, both 20, sens_cut_25_5 20, sens_cut_35_3 20, reproduction 1, shipped 1
+Sensitivity: [0.3, 0.4, 0.5, 0.6, 0.7, 0.85, 1.0] (per SD), applied directly to pred_sat / pred_fog
+Estimator  : firth  (Firth bias-reduced; floors computed with the same estimator)
+SDs        : sat_mean 39.182, contrast_local 9.348 (step 1, stimulus_path, n = 20,000)
+People     : 4,000 per cell per draw, 20,000 for each floor,
+             20,000 independent for the check
+Floor      : 2.5% false alarms per person per feature, one-sided
+Seed       : 42, offsets 101/202/303, indexed by DRAW not by version
+Elapsed    : 327.9s
+
+  draws current                    20
+  draws extra_levels               20
+  draws larger_diffs               20
+  draws both                       20
+  draws sens_cut_25_5              20
+  draws sens_cut_35_3              20
+  draws reproduction               1
+  draws shipped                    1
+  draws in all                     122
+  check 1a batch vs single         PASS (1.1e-12)
+  check 1b Firth objective         PASS (1.4e-09)
+  check 1c Firth vs MLE            shrink 0.9813, worst shift 0.0238
+  check 1d separable               PASS (Firth 40.80/43.12 finite)
+  check 1e equivariance            PASS (8.2e-12)
+  check 2 predictors               PASS (1.3e-15)
+  check 4 streams                  PASS
+  check 3 false alarms             PASS (worst 0.0032)
+  4b fog control (same ladder)     PASS (worst 0.0010, SE 0.0009)
+  plain haze                       not built
+
+THIS SCRIPT CHOOSES NOTHING
+----------------------------------------------------------------------
+  It measures and stops. The version is chosen by a person
+  from the tables below.
+
+WHY EVERY VERSION IS MEASURED OVER MANY DRAWS
+----------------------------------------------------------------------
+  A trial list is 180 trials sampled from a pool of
+  thousands. Two versions can differ because one is a
+  better design or because one drew better, and a single
+  draw cannot tell those apart. Step 5 therefore builds
+  each version at several seeds, and every table here is a
+  mean over draws with the between-draw spread beside it.
+
+  THE FIRST RUN OF THIS SCRIPT USED ONE DRAW PER VERSION,
+  and it misled. The fog control read 0.531 for `current`
+  against 0.508 for `larger_diffs` at 0.50 SD, with a
+  Monte Carlo error of 0.011 -- an apparently real cost of
+  the colour cut. It was two different draws of fog trials,
+  because step 5 drew every trial type off one random
+  stream and the cut moved the stream. CHECK 4 below now
+  verifies that cannot happen, and the difference columns
+  use the spread between draws rather than the simulation
+  error.
+
+  The simulated people are seeded by DRAW INDEX, not by
+  version. So within an index every version faces the same
+  people, and differences are PAIRED by index -- the
+  participant noise is common to both rates and cancels.
+  The shipping draw is step 5's seed, fixed in advance; it
+  is reported as one draw among the rest and no seed is
+  chosen on any result here.
+
+THE ESTIMATOR CHANGED, AND WHY
+----------------------------------------------------------------------
+  The per-person fit is now Firth's bias-reduced logistic
+  regression. It used to be plain maximum likelihood with a
+  ridge of 1e-06, nominally there to keep the
+  fit finite under separation -- a participant whose
+  answers the model predicts perfectly, where no finite
+  maximum-likelihood estimate exists.
+
+  That ridge did nothing. The predictors were in raw
+  feature units, so the diagonal it was added to ran to
+  tens of thousands and the ridge was 3.6e-11 of it;
+  refitting at 1e-3 moved the weights by less than 1e-5.
+  The fits were maximum-likelihood in practice and
+  unprotected in principle.
+
+  Excluding separable fits was considered and rejected: a
+  participant who answers every colour trial as predicted
+  is the strongest evidence this design can produce, and
+  dropping them would bias against the hypothesis. Firth is
+  always finite, differs from the MLE by about 2% away from
+  separation, and removes most of the small-sample bias --
+  which matters because the registered control comparison
+  reads magnitudes between groups, not just signs.
+
+  THE FLOORS USE THE SAME ESTIMATOR. Firth shrinks the
+  guessers' weights as well as the responders', so the two
+  effects largely cancel in a detection rate -- 'largely'
+  being why the whole comparison was re-run rather than
+  argued. information_by_seed.csv carries both floors per
+  draw, under floor_*_SD and floor_*_SD_other.
+
+  THE UNITS CHANGED WITH IT. The fit now uses `pred_sat`
+  and `pred_fog` as step 5 writes them, in corpus-SD units,
+  so this script, the registered model and step 8 are the
+  same model. Firth is equivariant under a linear change of
+  predictor scale (CHECK 1e), so no estimate moved because
+  of the unit change.
+
+CHECK 4: STREAM SEPARATION
+----------------------------------------------------------------------
+  The colour cut filters colour-only pairs and nothing
+  else, so two versions built from the same ladder must
+  have IDENTICAL fog_only, together and conflict trials,
+  at every draw.
+
+  This was once false. `current` and `larger_diffs`, which
+  differ only in the cut, shared 1 of 60 fog_only trials,
+  1 of 30 together and 0 of 30 conflict. Two consequences:
+  the fog condition was not a control, and colour
+  information leaked in from types the cut never touches --
+  `both` gained 16.4 units of summed squared colour
+  predictor from its `together` trials alone, about a sixth
+  of its total gain over `current`.
+
+  Checked here as well as in step 5 because this is where
+  the numbers are read, and a measurement is only as good
+  as the invariant it assumes.
+
+    version_a     version_b     type  draws_compared  draws_identical verdict
+      current  larger_diffs fog_only              20               20    same
+      current  larger_diffs together              20               20    same
+      current  larger_diffs conflict              20               20    same
+ extra_levels          both fog_only              20               20    same
+ extra_levels          both together              20               20    same
+ extra_levels          both conflict              20               20    same
+ extra_levels sens_cut_25_5 fog_only              20               20    same
+ extra_levels sens_cut_25_5 together              20               20    same
+ extra_levels sens_cut_25_5 conflict              20               20    same
+ extra_levels sens_cut_35_3 fog_only              20               20    same
+ extra_levels sens_cut_35_3 together              20               20    same
+ extra_levels sens_cut_35_3 conflict              20               20    same
+         both sens_cut_25_5 fog_only              20               20    same
+         both sens_cut_25_5 together              20               20    same
+         both sens_cut_25_5 conflict              20               20    same
+         both sens_cut_35_3 fog_only              20               20    same
+         both sens_cut_35_3 together              20               20    same
+         both sens_cut_35_3 conflict              20               20    same
+sens_cut_25_5 sens_cut_35_3 fog_only              20               20    same
+sens_cut_25_5 sens_cut_35_3 together              20               20    same
+sens_cut_25_5 sens_cut_35_3 conflict              20               20    same
+
+  Versions on DIFFERENT ladders are reported in
+  stream_check.csv and not judged: the vivid levels add
+  images, hence new pairs of every type, so their fog
+  trials are a different draw by design. That is why
+  `current` against `both` is read against the
+  between-draw spread and not at face value.
+
+1. INFORMATION AND FLOORS
+----------------------------------------------------------------------
+  Information is the sum of squared predictors in
+  corpus-SD units -- what the logistic fit has to work
+  with. The floor is the weight that 2.5% of pure
+  guessers exceed by luck ON THAT DRAW, so every draw is
+  judged against its own threshold.
+
+         list  draws  SS_colour  SS_colour_sd  SS_fog  SS_fog_sd  info_ratio  info_ratio_sd  floor_colour_SD  floor_colour_SD_sd  floor_fog_SD  floor_fog_SD_sd  floor_gap_SD  floor_gap_err floor_gap_err_from lower_floor  SS_colour_in_sat_only  SS_colour_outside  SS_fog_outside  sat_only_median_abs_d
+      current     20       71.9         3.165    65.8      3.086       1.096          0.064            0.467               0.011         0.486            0.012        -0.019          0.004              draws      colour                   47.8               24.2          65.753                   30.7
+ extra_levels     20      140.4         8.475    67.2      1.917       2.090          0.121            0.336               0.010         0.482            0.009        -0.147          0.003              draws      colour                   93.2               47.2          67.176                   36.7
+ larger_diffs     20       96.7         3.629    65.8      3.086       1.473          0.082            0.401               0.009         0.486            0.012        -0.085          0.003              draws      colour                   72.5               24.2          65.753                   42.9
+         both     20      186.6         7.519    67.2      1.917       2.778          0.110            0.290               0.006         0.482            0.009        -0.192          0.002              draws      colour                  139.4               47.2          67.176                   51.8
+sens_cut_25_5     20      158.3         7.504    67.2      1.917       2.356          0.088            0.315               0.007         0.483            0.009        -0.168          0.002              draws      colour                  111.1               47.2          67.176                   43.1
+sens_cut_35_3     20      187.9         6.959    67.2      1.917       2.798          0.099            0.289               0.006         0.482            0.008        -0.193          0.002              draws      colour                  140.8               47.2          67.176                   51.9
+ reproduction      1       58.9           NaN    66.5        NaN       0.886            NaN            0.523                 NaN         0.490              NaN         0.033          0.009       guesser sets         fog                   33.5               25.4          66.482                   25.3
+      shipped      1       58.9           NaN    66.5        NaN       0.886            NaN            0.508                 NaN         0.486              NaN         0.022          0.005       guesser sets         fog                   33.5               25.4          66.482                   25.3
+
+  TRACING THE FLOORS. The shipped list and the
+  'current' list use the same ladder, the same pool
+  and the same 60 colour trials. They differ in their
+  MAGNITUDE BINS: the shipped list used rank-based
+  quantile bins, which hold equal numbers of pairs and
+  so concentrate trials where the pairs are -- in the
+  middle. Fixed value edges push trials into the tails,
+  and information is a SUM OF SQUARES, so trials at
+  large differences count disproportionately.
+
+    shipped   colour information    58.9   floor 0.508 SD
+    current   colour information    71.9   floor 0.467 SD
+    change    +22%  with no change to the stimuli or the pool
+
+  The `reproduction` row is the same ladder AND the
+  same bins as the shipped list, so it should sit
+  beside `shipped` rather than beside the baseline.
+  That is the check that the binning is the cause.
+
+  This is a side effect of the binning decision, not of
+  anything the four versions were designed to vary. The
+  baseline moved, and the preregistration should say so.
+
+2. DETECTION
+----------------------------------------------------------------------
+  Share of people caught, by their true sensitivity, as a
+  mean over draws. Three spreads are in detection.csv:
+    sd_between  draw to draw, carrying both the design
+                sample and the simulated people
+    sd_mc       the simulated-people part alone,
+                sqrt(p(1-p)/N) -- known, not estimated
+    sd_design   what is left, in quadrature: the design's
+                own draw-to-draw variation, which does NOT
+                shrink by simulating more people
+
+  equal  (colour detection, mean over draws)
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.520    0.240         0.414         0.307         0.190          0.457          0.522    0.218
+0.40            0.756    0.382         0.630         0.488         0.307          0.686          0.760    0.337
+0.50            0.908    0.547         0.812         0.676         0.464          0.856          0.911    0.470
+0.60            0.974    0.696         0.920         0.820         0.606          0.948          0.975    0.636
+0.70            0.994    0.819         0.973         0.914         0.742          0.986          0.995    0.760
+0.85            1.000    0.933         0.996         0.980         0.874          0.998          1.000    0.875
+1.00            1.000    0.980         1.000         0.996         0.949          1.000          1.000    0.965
+  between-draw SD
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.018    0.011         0.020         0.014           NaN          0.022          0.018      NaN
+0.40            0.013    0.017         0.024         0.017           NaN          0.020          0.014      NaN
+0.50            0.010    0.021         0.023         0.018           NaN          0.014          0.010      NaN
+0.60            0.005    0.019         0.016         0.019           NaN          0.008          0.004      NaN
+0.70            0.001    0.015         0.007         0.010           NaN          0.004          0.001      NaN
+0.85            0.000    0.011         0.002         0.004           NaN          0.001          0.000      NaN
+1.00            0.000    0.005         0.000         0.001           NaN          0.000          0.000      NaN
+
+  colour_only  (colour detection, mean over draws)
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.520    0.238         0.412         0.309         0.194          0.457          0.522    0.193
+0.40            0.759    0.385         0.632         0.492         0.314          0.688          0.761    0.345
+0.50            0.909    0.544         0.814         0.675         0.467          0.860          0.911    0.484
+0.60            0.975    0.699         0.924         0.821         0.591          0.951          0.976    0.634
+0.70            0.996    0.822         0.977         0.918         0.742          0.987          0.996    0.754
+0.85            1.000    0.937         0.997         0.981         0.879          0.999          1.000    0.896
+1.00            1.000    0.983         1.000         0.997         0.958          1.000          1.000    0.964
+  between-draw SD
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.019    0.011         0.022         0.015           NaN          0.022          0.018      NaN
+0.40            0.019    0.018         0.025         0.019           NaN          0.017          0.017      NaN
+0.50            0.011    0.022         0.024         0.021           NaN          0.016          0.011      NaN
+0.60            0.004    0.022         0.016         0.017           NaN          0.008          0.005      NaN
+0.70            0.001    0.017         0.006         0.012           NaN          0.004          0.001      NaN
+0.85            0.000    0.011         0.002         0.005           NaN          0.001          0.000      NaN
+1.00            0.000    0.003         0.000         0.001           NaN          0.000          0.000      NaN
+
+  fog_only  (fog detection, mean over draws)
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.229    0.225         0.230         0.224         0.224          0.229          0.229    0.230
+0.40            0.363    0.362         0.364         0.362         0.359          0.362          0.365    0.371
+0.50            0.520    0.515         0.520         0.516         0.509          0.519          0.521    0.519
+0.60            0.672    0.666         0.674         0.666         0.670          0.672          0.673    0.677
+0.70            0.798    0.793         0.798         0.794         0.788          0.798          0.800    0.808
+0.85            0.922    0.915         0.922         0.915         0.914          0.922          0.922    0.920
+1.00            0.977    0.975         0.977         0.975         0.976          0.977          0.977    0.981
+  between-draw SD
+list             both  current  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                                 
+0.30            0.011    0.012         0.010         0.011           NaN          0.010          0.011      NaN
+0.40            0.012    0.019         0.012         0.020           NaN          0.012          0.012      NaN
+0.50            0.014    0.019         0.015         0.020           NaN          0.014          0.014      NaN
+0.60            0.016    0.023         0.016         0.023           NaN          0.016          0.016      NaN
+0.70            0.014    0.019         0.013         0.020           NaN          0.013          0.013      NaN
+0.85            0.007    0.012         0.007         0.012           NaN          0.007          0.007      NaN
+1.00            0.004    0.005         0.004         0.005           NaN          0.004          0.004      NaN
+
+3. FALSE ALARMS  (independent guessers)
+----------------------------------------------------------------------
+  A SECOND set of guessers, seeded apart from the ones that
+  located the floor. Checking the floor against the people
+  who set it would be circular -- they exceed it 2.5% of
+  the time by construction, whatever the floor is.
+
+         list  draws  false_colour  false_fog  either  worst_draw_colour  worst_draw_fog
+      current     20        0.0246     0.0250  0.0492             0.0273          0.0271
+ extra_levels     20        0.0250     0.0256  0.0502             0.0298          0.0297
+ larger_diffs     20        0.0250     0.0251  0.0497             0.0272          0.0276
+         both     20        0.0246     0.0252  0.0494             0.0270          0.0294
+sens_cut_25_5     20        0.0250     0.0253  0.0499             0.0281          0.0296
+sens_cut_35_3     20        0.0249     0.0254  0.0500             0.0268          0.0296
+ reproduction      1        0.0225     0.0243  0.0464             0.0225          0.0243
+      shipped      1        0.0282     0.0261  0.0536             0.0282          0.0261
+
+4. DIFFERENCE FROM 'current'  (paired by draw)
+----------------------------------------------------------------------
+  The difference is taken within each draw index and then
+  averaged; its standard error is the spread of those
+  paired differences. `resolvable` is |difference| > 2 SE,
+  which now asks whether a gap is bigger than the
+  variation between draws of the same design -- not merely
+  bigger than the simulation noise.
+
+  differences.csv also carries `shipping_draw_difference`
+  and `mc_error_one_draw`, which are what the first run of
+  this script reported, so the two can be compared.
+
+  colour detection, colour-only participant:
+list             both  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                        
+0.30            0.283         0.174         0.072        -0.045          0.219          0.284   -0.046
+0.40            0.374         0.246         0.107        -0.072          0.303          0.375   -0.042
+0.50            0.365         0.270         0.131        -0.074          0.316          0.367   -0.058
+0.60            0.276         0.225         0.122        -0.102          0.252          0.277   -0.060
+0.70            0.173         0.154         0.096        -0.071          0.165          0.174   -0.059
+0.85            0.063         0.060         0.044        -0.056          0.062          0.063   -0.039
+1.00            0.017         0.017         0.014        -0.023          0.017          0.017   -0.018
+
+  standard error of the paired difference:
+list             both  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                        
+0.30            0.005         0.006         0.003         0.009          0.005          0.005    0.009
+0.40            0.006         0.007         0.004         0.011          0.006          0.005    0.011
+0.50            0.006         0.008         0.006         0.011          0.006          0.005    0.011
+0.60            0.005         0.006         0.004         0.011          0.005          0.005    0.010
+0.70            0.004         0.004         0.003         0.009          0.004          0.004    0.009
+0.85            0.002         0.002         0.002         0.006          0.002          0.002    0.006
+1.00            0.001         0.001         0.001         0.004          0.001          0.001    0.004
+
+  typical SE 0.0053, so differences under 0.011 sit
+  inside the variation between draws of one design.
+
+4b. THE FOG CONTROL
+----------------------------------------------------------------------
+  Within a ladder the fog, together and conflict trials are
+  identical, so a fog-only participant must be detected
+  equally well whatever the colour cut. The fit uses all
+  180 trials, so the colour trials do enter it and a small
+  residual is expected; a large one would mean the cut is
+  costing fog detection, which is the one thing it must
+  not do.
+
+  Versions on a DIFFERENT ladder are not a control here --
+  their fog trials are a different draw by design.
+
+list             both  extra_levels  larger_diffs  reproduction  sens_cut_25_5  sens_cut_35_3  shipped
+sensitivity_SD                                                                                        
+0.30            0.004         0.005        -0.001         0.018          0.003          0.004    0.024
+0.40            0.001         0.002        -0.000         0.006          0.000          0.003    0.019
+0.50            0.005         0.005         0.000        -0.001          0.004          0.006    0.008
+0.60            0.006         0.008         0.000         0.016          0.006          0.007    0.023
+0.70            0.005         0.005         0.000         0.010          0.004          0.006    0.030
+0.85            0.007         0.007         0.000         0.003          0.006          0.007    0.010
+1.00            0.002         0.002         0.000         0.002          0.002          0.002    0.008
+
+  same ladder as 'current': worst |difference| 0.0010, typical SE 0.0009
+
+5. RANGES AND TRADE-OFFS
+----------------------------------------------------------------------
+         list  draws  colour_min  colour_median  colour_max  colour_span_SD  fog_min  fog_median  fog_max  fog_span_SD  mean_chroma_edit  max_chroma_edit  sat_bins_used
+      current     20        17.3           30.7        61.8           1.136      0.0         4.6     14.1        1.513             0.468            0.832            4.0
+ extra_levels     20        17.5           36.7        97.4           2.040      0.0         4.7     14.5        1.554             0.510            0.832            5.0
+ larger_diffs     20        31.2           42.9        62.6           0.802      0.0         4.6     14.1        1.513             0.466            0.832            2.0
+         both     20        32.0           51.8       100.4           1.746      0.0         4.7     14.5        1.554             0.538            0.832            3.0
+sens_cut_25_5     20        25.8           43.1        97.2           1.822      0.0         4.7     14.5        1.554             0.519            0.832            4.0
+sens_cut_35_3     20        35.6           51.9       100.2           1.647      0.0         4.7     14.5        1.554             0.540            0.832            3.0
+ reproduction      1        17.0           25.3        55.4           0.979      0.0         4.7     13.9        1.484             0.476            0.832            3.0
+      shipped      1        17.0           25.3        55.4           0.979      0.0         4.7     13.9        1.484             0.476            0.832            3.0
+
+  A list can raise colour detection by spreading its trials
+  over a wider range, or by using larger edits. The second
+  is not free: larger colour edits also look more edited.
+  mean_chroma_edit is the average distance of a shown image
+  from the unmanipulated original. Averaged over draws.
+
+6. CONFLICT BALANCE
+----------------------------------------------------------------------
+         list  draws  n_conflict   min   p10   p25  median   p75   p90   max  share_below_1  median_over_draws  median_sd  share_below_1_over_draws
+      current     20          30 0.613 0.644 0.715   0.874 0.983 1.407 1.667          0.767              0.918      0.080                     0.608
+ extra_levels     20          30 0.614 0.710 0.842   1.100 1.326 1.447 1.500          0.467              1.049      0.071                     0.465
+ larger_diffs     20          30 0.613 0.644 0.715   0.874 0.983 1.407 1.667          0.767              0.918      0.080                     0.608
+         both     20          30 0.614 0.710 0.842   1.100 1.326 1.447 1.500          0.467              1.049      0.071                     0.465
+sens_cut_25_5     20          30 0.614 0.710 0.842   1.100 1.326 1.447 1.500          0.467              1.049      0.071                     0.465
+sens_cut_35_3     20          30 0.614 0.710 0.842   1.100 1.326 1.447 1.500          0.467              1.049      0.071                     0.465
+ reproduction      1          30 0.625 0.649 0.717   0.806 1.090 1.141 1.521          0.700              0.806        NaN                     0.700
+      shipped      1          30 0.625 0.649 0.717   0.806 1.090 1.141 1.521          0.700              0.806        NaN                     0.700
+
+  Quantiles are the SHIPPING draw; the last three
+  columns average over every draw. A balance of 1 means
+  a participant with equal weights in the registered
+  model is at 50/50 on that trial.
+
+  ON THE FIRST RUN three versions reported identical
+  distributions here and it looked like a property of
+  the design. It was the shared random stream: their
+  conflict draws had consumed the same number of random
+  numbers and landed on the same 30 trials by accident.
+  Within a ladder they are now identical BY
+  CONSTRUCTION, which is the point; across ladders they
+  differ because the pools differ.
+
+7. PLAIN HAZE
+----------------------------------------------------------------------
+  Not built. These lists need the plain-haze stimulus
+  set, which step 3 builds with FOG_FAMILY = 'haze';
+  step 4 and step 5 then run on it unchanged. Point
+  OPTIONAL_ROOTS at that step-5 root and re-run to
+  include them.
+
+8. WHAT TO DECIDE, AND WHAT THIS CANNOT TELL YOU
+----------------------------------------------------------------------
+  The choice is between detection and the dose-response
+  range given up to get it. This script measures the first
+  and describes the second; it cannot weigh them for you.
+
+  Four things it does NOT measure:
+    - whether the larger edits look artificial, which is a
+      question for the contact sheets, not a simulation;
+    - how a real participant differs from a logistic model
+      with a fixed weight and no lapse rate;
+    - anything about the grid blocks, which use different
+      cells and are step 7's business;
+    - whether a cross-ladder difference is the vivid levels
+      or the different mixed trials they bring with them.
+      Within a ladder that is settled by CHECK 4; across
+      ladders it is not, and the between-draw spread is
+      what keeps it honest.
+
+  Once you choose, step 7 freezes that list: rebuild it,
+  checksum trial_list.json and the package, and record the
+  checksum, settings and seed in the documentation.
+
+  STILL OPEN, for step 8: simulate_power_v4.py has a stale
+  comment near its predictor construction saying the
+  differences are divided by each scene's own range. They
+  are divided by the corpus SD. The code is right and the
+  comment is not.

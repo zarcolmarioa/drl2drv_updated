@@ -1,0 +1,22 @@
+sensitivity_SD,lapse,order,as_expected,gap_sens_cut_25_5_minus_extra_levels,verdict_sens_cut_25_5_vs_extra_levels,gap_both_minus_sens_cut_25_5,verdict_both_vs_sens_cut_25_5
+0.3,0.0,extra_levels < sens_cut_25_5 < both,True,0.0451,ok,0.0637,ok
+0.3,0.1,extra_levels < sens_cut_25_5 < both,True,0.0389,ok,0.0544,ok
+0.3,0.2,extra_levels < sens_cut_25_5 < both,True,0.0327,ok,0.0446,ok
+0.4,0.0,extra_levels < sens_cut_25_5 < both,True,0.0564,ok,0.0708,ok
+0.4,0.1,extra_levels < sens_cut_25_5 < both,True,0.0555,ok,0.0702,ok
+0.4,0.2,extra_levels < sens_cut_25_5 < both,True,0.0489,ok,0.0638,ok
+0.5,0.0,extra_levels < sens_cut_25_5 < both,True,0.046,ok,0.0495,ok
+0.5,0.1,extra_levels < sens_cut_25_5 < both,True,0.053,ok,0.0638,ok
+0.5,0.2,extra_levels < sens_cut_25_5 < both,True,0.0551,ok,0.0672,ok
+0.6,0.0,extra_levels < sens_cut_25_5 < both,True,0.027,ok,0.024,ok
+0.6,0.1,extra_levels < sens_cut_25_5 < both,True,0.0377,ok,0.0412,ok
+0.6,0.2,extra_levels < sens_cut_25_5 < both,True,0.0492,ok,0.0571,ok
+0.7,0.0,extra_levels < sens_cut_25_5 < both,True,0.0104,tied,0.0084,tied
+0.7,0.1,extra_levels < sens_cut_25_5 < both,True,0.0219,ok,0.0209,ok
+0.7,0.2,extra_levels < sens_cut_25_5 < both,True,0.0374,ok,0.0381,ok
+0.85,0.0,extra_levels < sens_cut_25_5 < both,True,0.0017,tied,0.001,tied
+0.85,0.1,extra_levels < sens_cut_25_5 < both,True,0.0075,tied,0.0043,tied
+0.85,0.2,extra_levels < sens_cut_25_5 < both,True,0.0188,ok,0.0149,ok
+1.0,0.0,extra_levels < sens_cut_25_5 < both,True,0.0002,tied,0.0,tied
+1.0,0.1,extra_levels < sens_cut_25_5 < both,True,0.0015,tied,0.0006,tied
+1.0,0.2,extra_levels < sens_cut_25_5 < both,True,0.0076,tied,0.0043,tied

@@ -1,0 +1,50 @@
+list,sensitivity_SD,participant,feature,baseline,this_list,difference,paired_sd,se,se_from,draws,shipping_draw_difference,mc_error_one_draw,resolvable,same_ladder_as_baseline
+extra_levels,0.3,fog_only,fog,0.2254,0.2302,0.0049,0.0119,0.0027,paired draws,20,0.0113,0.0094,False,False
+extra_levels,0.4,fog_only,fog,0.3621,0.3642,0.0021,0.0213,0.0048,paired draws,20,-0.0035,0.0108,False,False
+extra_levels,0.5,fog_only,fog,0.5152,0.5203,0.0051,0.0213,0.0048,paired draws,20,0.0,0.0112,False,False
+extra_levels,0.6,fog_only,fog,0.666,0.6735,0.0075,0.0258,0.0058,paired draws,20,0.0198,0.0105,False,False
+extra_levels,0.7,fog_only,fog,0.7934,0.7983,0.0049,0.0208,0.0046,paired draws,20,0.0228,0.009,False,False
+extra_levels,0.85,fog_only,fog,0.9151,0.9217,0.0066,0.0152,0.0034,paired draws,20,0.003,0.0061,False,False
+extra_levels,1.0,fog_only,fog,0.975,0.9767,0.0017,0.0058,0.0013,paired draws,20,0.0015,0.0034,False,False
+larger_diffs,0.3,fog_only,fog,0.2254,0.2243,-0.001,0.0039,0.0009,paired draws,20,0.0093,0.0093,False,True
+larger_diffs,0.4,fog_only,fog,0.3621,0.362,-0.0002,0.0047,0.0011,paired draws,20,0.0025,0.0107,False,True
+larger_diffs,0.5,fog_only,fog,0.5152,0.5155,0.0003,0.004,0.0009,paired draws,20,0.0052,0.0112,False,True
+larger_diffs,0.6,fog_only,fog,0.666,0.6662,0.0002,0.0038,0.0008,paired draws,20,0.0018,0.0105,False,True
+larger_diffs,0.7,fog_only,fog,0.7934,0.7936,0.0001,0.0039,0.0009,paired draws,20,0.0025,0.0091,False,True
+larger_diffs,0.85,fog_only,fog,0.9151,0.9152,0.0001,0.0018,0.0004,paired draws,20,0.0048,0.0062,False,True
+larger_diffs,1.0,fog_only,fog,0.975,0.9752,0.0002,0.0014,0.0003,paired draws,20,0.0028,0.0035,False,True
+both,0.3,fog_only,fog,0.2254,0.2291,0.0037,0.0128,0.0029,paired draws,20,0.0093,0.0094,False,False
+both,0.4,fog_only,fog,0.3621,0.3633,0.0012,0.0217,0.0048,paired draws,20,-0.0057,0.0108,False,False
+both,0.5,fog_only,fog,0.5152,0.5205,0.0053,0.0214,0.0048,paired draws,20,0.003,0.0112,False,False
+both,0.6,fog_only,fog,0.666,0.6721,0.0061,0.0263,0.0059,paired draws,20,0.0192,0.0105,False,False
+both,0.7,fog_only,fog,0.7934,0.7981,0.0046,0.0217,0.0049,paired draws,20,0.0258,0.009,False,False
+both,0.85,fog_only,fog,0.9151,0.9221,0.007,0.0154,0.0034,paired draws,20,0.0055,0.0061,True,False
+both,1.0,fog_only,fog,0.975,0.9771,0.002,0.0061,0.0014,paired draws,20,0.0012,0.0034,False,False
+sens_cut_25_5,0.3,fog_only,fog,0.2254,0.2286,0.0032,0.0124,0.0028,paired draws,20,0.0085,0.0094,False,False
+sens_cut_25_5,0.4,fog_only,fog,0.3621,0.3621,0.0,0.0213,0.0048,paired draws,20,-0.0065,0.0107,False,False
+sens_cut_25_5,0.5,fog_only,fog,0.5152,0.5193,0.0041,0.0213,0.0048,paired draws,20,-0.001,0.0112,False,False
+sens_cut_25_5,0.6,fog_only,fog,0.666,0.6719,0.0059,0.0259,0.0058,paired draws,20,0.0138,0.0105,False,False
+sens_cut_25_5,0.7,fog_only,fog,0.7934,0.7976,0.0042,0.0216,0.0048,paired draws,20,0.0202,0.009,False,False
+sens_cut_25_5,0.85,fog_only,fog,0.9151,0.9216,0.0065,0.0147,0.0033,paired draws,20,0.004,0.0061,False,False
+sens_cut_25_5,1.0,fog_only,fog,0.975,0.977,0.002,0.0057,0.0013,paired draws,20,0.0018,0.0034,False,False
+sens_cut_35_3,0.3,fog_only,fog,0.2254,0.2294,0.004,0.0126,0.0028,paired draws,20,0.0133,0.0094,False,False
+sens_cut_35_3,0.4,fog_only,fog,0.3621,0.3651,0.003,0.0213,0.0048,paired draws,20,0.0008,0.0108,False,False
+sens_cut_35_3,0.5,fog_only,fog,0.5152,0.5213,0.0061,0.0203,0.0045,paired draws,20,0.0028,0.0112,False,False
+sens_cut_35_3,0.6,fog_only,fog,0.666,0.673,0.007,0.0259,0.0058,paired draws,20,0.0182,0.0105,False,False
+sens_cut_35_3,0.7,fog_only,fog,0.7934,0.7996,0.0062,0.0215,0.0048,paired draws,20,0.027,0.009,False,False
+sens_cut_35_3,0.85,fog_only,fog,0.9151,0.9225,0.0074,0.0153,0.0034,paired draws,20,0.0063,0.0061,True,False
+sens_cut_35_3,1.0,fog_only,fog,0.975,0.9772,0.0022,0.0059,0.0013,paired draws,20,0.0025,0.0034,False,False
+reproduction,0.3,fog_only,fog,0.2067,0.2243,0.0175,,0.0092,monte carlo (1 draw),1,0.0175,0.0092,False,False
+reproduction,0.4,fog_only,fog,0.3525,0.359,0.0065,,0.0107,monte carlo (1 draw),1,0.0065,0.0107,False,False
+reproduction,0.5,fog_only,fog,0.5102,0.509,-0.0012,,0.0112,monte carlo (1 draw),1,-0.0012,0.0112,False,False
+reproduction,0.6,fog_only,fog,0.6542,0.6705,0.0162,,0.0106,monte carlo (1 draw),1,0.0162,0.0106,False,False
+reproduction,0.7,fog_only,fog,0.7782,0.7885,0.0102,,0.0092,monte carlo (1 draw),1,0.0102,0.0092,False,False
+reproduction,0.85,fog_only,fog,0.9107,0.914,0.0033,,0.0063,monte carlo (1 draw),1,0.0033,0.0063,False,False
+reproduction,1.0,fog_only,fog,0.9738,0.976,0.0022,,0.0035,monte carlo (1 draw),1,0.0022,0.0035,False,False
+shipped,0.3,fog_only,fog,0.2067,0.2303,0.0235,,0.0092,monte carlo (1 draw),1,0.0235,0.0092,True,False
+shipped,0.4,fog_only,fog,0.3525,0.3713,0.0188,,0.0107,monte carlo (1 draw),1,0.0188,0.0107,False,False
+shipped,0.5,fog_only,fog,0.5102,0.5188,0.0085,,0.0112,monte carlo (1 draw),1,0.0085,0.0112,False,False
+shipped,0.6,fog_only,fog,0.6542,0.677,0.0228,,0.0105,monte carlo (1 draw),1,0.0228,0.0105,True,False
+shipped,0.7,fog_only,fog,0.7782,0.8083,0.03,,0.009,monte carlo (1 draw),1,0.03,0.009,True,False
+shipped,0.85,fog_only,fog,0.9107,0.9205,0.0098,,0.0062,monte carlo (1 draw),1,0.0098,0.0062,False,False
+shipped,1.0,fog_only,fog,0.9738,0.9812,0.0075,,0.0033,monte carlo (1 draw),1,0.0075,0.0033,True,False

@@ -1,0 +1,226 @@
+TRIAL LISTS, ALL VERSIONS  (v4 axes, step 5)
+======================================================================
+Counts   : 60 sat_only, 60 fog_only, 60 mixed (50% conflict)
+Extras   : 15 consistency, 10 catch, 6 practice
+Catch    : mode 'no_images'; exclusion at 3 or more failures of 10
+Seed     : 42 for the shipping list, 20 draws in all
+Streams  : one generator per draw, seeded from (seed, draw name)
+Elapsed  : 170.8s
+
+WHAT EACH VERSION VARIES
+----------------------------------------------------------------------
+  Everything except the variant, the colour cut, the bin
+  mode and the stream setting is held identical, so a
+  difference between two versions is the thing being varied
+  and nothing else. Only the control varies the streams.
+
+    current        original levels, no cut   (the baseline)
+    extra_levels   vivid levels,    no cut
+    larger_diffs   original levels, cut
+    both           vivid levels,    cut
+    sens_cut_*     the cut varied, vivid levels
+    reproduction   a control, not a candidate
+
+0a. STREAM SEPARATION  (the check on the comparison itself)
+----------------------------------------------------------------------
+  The colour cut filters `sat_only` and nothing else, so two
+  versions built from the same ladder should have the SAME
+  fog_only, together and conflict trials.
+
+  Off a single random stream they did not. The cut changes
+  how many usable magnitude bins the colour draw has, which
+  changes how many numbers it consumes, which moves the
+  stream for every draw after it. `current` against
+  `larger_diffs` -- same ladder, the cut the only declared
+  difference -- shared 1 of 60 fog_only trials, 1 of 30
+  together and 0 of 30 conflict.
+
+  Two things were wrong with that. The fog condition could
+  not be read as a control, because its detection moved
+  between versions for no design reason. And colour
+  information leaked in from types the cut never touches:
+  `both` gained 16.4 units of summed squared colour
+  predictor from its `together` trials alone, about a sixth
+  of its total gain over `current`.
+
+  Each draw now has its own generator, seeded from (seed,
+  draw name). What that buys is checked here and nowhere
+  else, so this verdict matters:
+
+    version_a     version_b     type  trials_a  shared verdict
+      current  larger_diffs fog_only        60      60    same
+      current  larger_diffs together        30      30    same
+      current  larger_diffs conflict        30      30    same
+ extra_levels          both fog_only        60      60    same
+ extra_levels          both together        30      30    same
+ extra_levels          both conflict        30      30    same
+ extra_levels sens_cut_25_5 fog_only        60      60    same
+ extra_levels sens_cut_25_5 together        30      30    same
+ extra_levels sens_cut_25_5 conflict        30      30    same
+ extra_levels sens_cut_35_3 fog_only        60      60    same
+ extra_levels sens_cut_35_3 together        30      30    same
+ extra_levels sens_cut_35_3 conflict        30      30    same
+         both sens_cut_25_5 fog_only        60      60    same
+         both sens_cut_25_5 together        30      30    same
+         both sens_cut_25_5 conflict        30      30    same
+         both sens_cut_35_3 fog_only        60      60    same
+         both sens_cut_35_3 together        30      30    same
+         both sens_cut_35_3 conflict        30      30    same
+sens_cut_25_5 sens_cut_35_3 fog_only        60      60    same
+sens_cut_25_5 sens_cut_35_3 together        30      30    same
+sens_cut_25_5 sens_cut_35_3 conflict        30      30    same
+
+  RESULT: PASS
+
+  NOT judged, and why:
+    sat_only            the cut is meant to change it.
+    different ladders   the vivid levels add images,
+                        hence new pairs of EVERY type.
+                        A fog pair at the p75 colour
+                        level did not exist on the
+                        original ladder, so `current`
+                        and `extra_levels` draw from
+                        genuinely different fog pools.
+                        That is the design, not a leak.
+    practice,           drawn after the analysed types
+    catch,              and coupled to them through the
+    consistency         pairs already used, or through
+                        which trials exist to repeat.
+                        None of the three is analysed.
+    reproduction        on the legacy single stream by
+                        definition.
+
+  Two rows in the comparison table read on this:
+    colour info outside sat_only   equal within a
+                                   ladder once the
+                                   streams are separate
+                                   -- it was not before
+    fog info outside sat_only      the clean fog
+                                   control, exactly
+                                   equal within a ladder
+
+  `fog info (SD^2)`, the total, is NOT exactly equal,
+  and that is not a leak. A colour-only pair sits in one
+  fog row, but changing chroma moves contrast_local a
+  little, so every colour trial carries a residual fog
+  difference -- 0.005 of 67 on the extended ladder. The
+  cut changes which colour trials are drawn, so the
+  total moves in the fourth significant figure while the
+  fog, together and conflict trials are identical.
+
+  Full table, every version pair and type:
+  stream_check.csv
+
+0b. TWENTY DRAWS PER VERSION
+----------------------------------------------------------------------
+  A version can look better because it is a better design
+  or because it drew well: 180 trials out of a pool of
+  thousands is one sample. Each version is therefore built
+  at 20 seeds. The first, 42, is the
+  shipping list -- it gets the figure, report and package.
+  The rest are replicates under seeds/, read by step 6,
+  which reports each version's mean detection with the
+  spread of its own draws beside it.
+
+  THE SHIPPING SEED IS FIXED IN ADVANCE and is not chosen
+  on any result. Picking the seed that simulates best would
+  be choosing the draw that flatters the design.
+
+  Information per draw, mean and between-seed SD. The SD is
+  the yardstick: a difference between two versions smaller
+  than this is draw luck.
+
+               info_sat_mean  info_fog_mean  info_ratio_sat_fog_mean  info_sat_outside_sat_only_mean  info_fog_outside_sat_only_mean  r_sat_fog_mean  info_sat_sd  info_fog_sd  info_ratio_sat_fog_sd  info_sat_outside_sat_only_sd  info_fog_outside_sat_only_sd  r_sat_fog_sd  seeds
+version                                                                                                                                                                                                                                                                               
+current               71.910         65.755                    1.096                          24.152                          65.753          -0.086        3.165        3.086                  0.064                         3.051                         3.086         0.023     20
+extra_levels         140.398         67.179                    2.090                          47.152                          67.176          -0.114        8.475        1.917                  0.121                         6.433                         1.917         0.023     20
+larger_diffs          96.661         65.755                    1.473                          24.152                          65.753          -0.073        3.629        3.086                  0.082                         3.051                         3.086         0.018     20
+both                 186.588         67.181                    2.778                          47.152                          67.176          -0.101        7.519        1.917                  0.110                         6.433                         1.917         0.020     20
+sens_cut_25_5        158.259         67.180                    2.356                          47.152                          67.176          -0.110        7.504        1.917                  0.088                         6.433                         1.917         0.024     20
+sens_cut_35_3        187.931         67.182                    2.798                          47.152                          67.176          -0.100        6.959        1.917                  0.099                         6.433                         1.917         0.022     20
+reproduction          58.875         66.483                    0.886                          25.405                          66.482          -0.111          NaN          NaN                    NaN                           NaN                           NaN           NaN      1
+
+0. REPRODUCTION OF THE SHIPPED TRIAL LIST
+----------------------------------------------------------------------
+  The four design versions deliberately do NOT reproduce
+  it: the balance normalisation changed in step 4, so a
+  different set of conflict pairs is eligible. The control
+  version isolates that -- it reads the legacy pair table
+  and uses the legacy rank bins, so if it matches, the
+  conflict trials that differ elsewhere differ for that
+  reason and the sampler has not drifted.
+
+  The verdict is on the FOUR ANALYSED TYPES. practice,
+  catch and consistency are expected to differ: practice
+  is now drawn from a mix of types rather than `together`
+  alone, and that shifts the random stream for the draws
+  that follow it. None of the three is analysed.
+
+  The control also has the earlier run's POOL ORDER
+  restored. The pair set was already identical, but the
+  shipped list was drawn from a table in a different row
+  order, and that order was never reproducible -- step 3
+  measured scenes with imap_unordered, so its manifest
+  followed worker completion order. Steps 3, 4 and 5 each
+  impose a canonical order now, and two runs of step 5
+  give byte-identical trial lists; but the shipped list
+  itself can only be matched by feeding the old order
+  back, which is what REPRODUCE_POOL_ORDER does.
+
+            reference this run shared  verdict       counts?
+catch               6       10      0  differs  not analysed
+conflict           30       30     30     same           yes
+consistency        15       15      1  differs  not analysed
+fog_only           60       60     60     same           yes
+practice            6        6      0  differs  not analysed
+sat_only           60       60     60     same           yes
+together           30       30     30     same           yes
+
+  RESULT: PASS
+
+1. THE VERSIONS SIDE BY SIDE
+----------------------------------------------------------------------
+                               current extra_levels larger_diffs      both sens_cut_25_5 sens_cut_35_3 reproduction
+quantity                                                                                                           
+variant                       original     extended     original  extended      extended      extended       legacy
+colour cut                        none         none         31.1      31.1          25.5          35.3         none
+bins                             fixed        fixed        fixed     fixed         fixed         fixed     quantile
+streams                       per_type     per_type     per_type  per_type      per_type      per_type       single
+trials presented                   211          211          211       211           211           211          211
+trials analysed                    180          180          180       180           180           180          180
+sat_only trials                     60           60           60        60            60            60           60
+fog_only trials                     60           60           60        60            60            60           60
+together trials                     30           30           30        30            30            30           30
+conflict trials                     30           30           30        30            30            30           30
+scenes used                         47           47           47        47            47            47           46
+r(d_sat, d_fog)                 -0.116       -0.131       -0.098    -0.115        -0.138        -0.117       -0.111
+VIF                               1.01         1.02         1.01      1.01          1.02          1.01         1.01
+sat_only median |d_sat|           30.5         35.3         43.3      48.6          43.2          48.6         25.3
+sat_only min |d_sat|              17.1         17.8         31.3      31.9          25.6          35.5         17.0
+sat_only max |d_sat|              65.4         85.2         65.1     100.7         108.7         100.7         55.4
+sat_only bins used                   4            5            2         3             4             3            3
+colour info (SD^2)                72.9        141.3        101.2     189.5         160.4         190.6         58.9
+fog info (SD^2)                   64.3         67.2         64.3      67.2          67.2          67.2         66.5
+colour/fog info                  1.135        2.104        1.574     2.822         2.388         2.838        0.886
+colour info in sat_only           46.1         91.8         74.3     140.0         110.8         141.1         33.5
+colour info outside sat_only      26.9         49.5         26.9      49.5          49.5          49.5         25.4
+fog info outside sat_only       64.284       67.156       64.284    67.156        67.156        67.156       66.482
+
+  `sat_only bins used` is the row to watch. A cut empties
+  the low magnitude bins, and if it empties all but one
+  the colour dose-response curve has nothing left to rest
+  on -- which is the cost the cut is traded against.
+
+2. WHAT STEP 6 DECIDES
+----------------------------------------------------------------------
+  The cut is not chosen here. Step 6 simulates each
+  version and measures how much better a colour-following
+  participant is detected, against how much of the
+  dose-response range was given up to get it. The
+  sensitivity versions exist so that trade can be read off
+  a curve rather than guessed from one value.
+
+  Per-version detail is in each version's own
+  trials_report.txt; trial counts per bin and type for
+  every version are in bins_by_version.csv; the per-seed
+  draws are in seeds_by_version.csv and under seeds/.

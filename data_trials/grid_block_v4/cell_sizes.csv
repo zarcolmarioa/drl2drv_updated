@@ -1,0 +1,3 @@
+window,inner_w,inner_h,cols,rows,by_width,by_height,binds,cell_px,realised,at_floor
+1366x768,1366,650,6,3,187.3,149.3,height,149,True,False
+1920x1080,1920,920,6,3,279.7,239.3,height,239,True,False

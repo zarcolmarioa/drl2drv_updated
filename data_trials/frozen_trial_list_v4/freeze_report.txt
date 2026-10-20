@@ -1,0 +1,273 @@
+FROZEN TRIAL LIST  (v4 axes, step 7a)
+======================================================================
+Frozen at  : 2026-10-18 17:39:39
+Version    : both
+Source     : data/trials_v4_ext/both
+Frozen to  : data/frozen_trial_list_v4
+Files      : 369 (349 images)
+Checks     : 54 passed, 0 failed, 0 noted
+Elapsed    : 3.9s
+
+WHAT WAS FROZEN, AND WHY THIS ONE
+----------------------------------------------------------------------
+  `both`: the extended colour ladder -- two vivid levels
+  above the unmanipulated image -- with colour-only trials
+  cut at |d_sat| >= 31.1 sat_mean units (0.794 corpus SD).
+
+  Derived from the captured provenance, not written into
+  this script. Where a figure could not be read, the file
+  holding it is named instead.
+
+  Step 6, over 20 draws, paired: colour detection of
+  a colour-following participant rises from 0.544 to
+  0.909 at a true sensitivity of 0.50 SD, +0.365 with a
+  standard error of 0.0058.
+  THE FOG CONTROL. Only versions on the baseline's
+  ladder are a control -- larger_diffs
+  -- because they share their fog, together and
+  conflict trials with the baseline, so the difference
+  isolates the colour cut. Over those 7 cells the largest
+  difference in fog detection is 0.0010 against a typical
+  standard error of 0.0009, every cell inside twice its
+  own error.
+  The colour cut costs nothing on the axis the
+  registered control comparison uses.
+
+  Versions on the OTHER ladder are not a control:
+  the vivid levels add new pairs of every type, so
+  their fog trials are a different draw by design.
+  Their largest difference is 0.0075 against a typical
+  error of 0.0047, beyond twice it in at least one cell.
+  This is the ladder, not the cut.
+
+  Step 6b: the ranking survives lapse rates of 0.1, 0.2 in
+  all 21 cells with 0 resolvable inversion(s).
+  12 adjacent comparison(s) are tied, which is a finding
+  about those cells rather than a failure; see
+  provenance/ranking.csv for which.
+  The gains hold: +0.361 at 0.50 SD at lapse 0.2.
+  No fit approached separation -- the closest was 0.867 of
+  colour-informative trials, where separation needs
+  1.000.
+  The fitted colour weight has the SMALLEST spread of
+  the candidates, sd/true 0.323 against the baseline's
+  0.490, so the between-group comparison is easier on
+  this list.
+
+  THE COST, recorded because it is what a reader will want
+  to weigh later. The cut removes colour differences below
+  31.1 units, so the colour dose-response curve rests on
+  3 magnitude bins spanning 32 to 101 units rather than
+  4 spanning 17 to 65 on current.
+  The average shipped image is edited 13% further from the
+  unmanipulated original: mean |k - 1| 0.531 over 349 images,
+  against 0.471 over 334 on current.
+  The dose-response curve is exploratory; the registered
+  claims are about per-person weights and the control
+  comparison, which is why detection was weighted above
+  range.
+
+  `sens_cut_35_3` was tested and dominated: +0.0015 over
+  this list, against a standard error of 0.0054,
+  inside the noise, for a narrower range of colour
+  differences. 31.1 was chosen over 35.3
+  because it keeps a wider range of colour differences
+  with slightly less conspicuous edits. It is a
+  stimulus choice rather than an analysis option, so
+  it could not be kept as a later sensitivity
+  analysis.
+
+THE BUILD'S OWN SETTINGS
+----------------------------------------------------------------------
+  Pairs from     data/pair_analysis_v4_ext/extended/all_pairs.csv
+  Stimuli from   data/stimulus_set_v4_ext_haze_eq/stimuli
+  Variant        extended
+  Colour cut     |d_sat| >= 31.1 sat_mean units (0.794 SD)
+  Bins           fixed  sat_only 5; fog_only 3; together 3; conflict 3
+  Counts         60 sat_only, 60 fog_only, 60 mixed (50% conflict)
+  Extras         15 consistency, 10 catch, 6 practice
+  Catch          mode 'no_images'; exclude a participant failing 3 or more
+  Conflict       balanced subset only
+  Scene cap      2 per type
+  Streams        per_type: 13 generators, each seeded from (seed 42, draw name)
+  Seed           42  (+ 19 replicate draw(s) under seeds/, for step 6)
+
+THE LIST
+----------------------------------------------------------------------
+  trials by type   {'fog_only': 60, 'sat_only': 60, 'conflict': 30, 'together': 30, 'consistency': 15, 'catch': 10, 'practice': 6}
+  scenes           47, at most 7 analysed trials from one
+  r(d_sat, d_fog)  -0.115  -- what decides
+                   whether the two weights can be told
+                   apart; above about 0.6 they cannot
+
+  THE CATCH TRIAL, mode 'no_images'. 10 trials. The
+  registered rule: EXCLUDE A PARTICIPANT FAILING 3 OR MORE.
+
+  What a catch trial is in this mode: no pictures. A line
+  of text names one arrow key -- UP or DOWN -- and the
+  trial takes one press. The key sequence and the wording
+  live in the experiment, not in this list; the list
+  carries only catch_mode, so the experiment can refuse to
+  run a list built for the other mode.
+
+  THE KEY-PRESS ASSUMPTION behind the threshold. The
+  response set has four live keys: left and right for the
+  image choice, up and down for the catch trials. A
+  participant who is not reading presses one of the four
+  at random, so three presses in four are wrong and the
+  per-trial failure probability is 0.75 * lambda, where
+  lambda is the lapse rate. That assumption is what makes
+  the numbers below, and it is stated because it is an
+  assumption: a participant who always presses the same
+  key, or who reads the instruction but mis-aims, is not
+  this model.
+
+  At 3 or more failures out of 10, binomial:
+    lambda 0.00   excluded 0.0%    an attentive
+                                   participant is never
+                                   excluded by chance
+    lambda 0.05   excluded 0.5%
+    lambda 0.10   excluded 3.4%
+    lambda 0.20   excluded 18.0%
+    lambda 0.30   excluded 39.8%
+    lambda 0.50   excluded 78.9%
+    random presser    99.96%   (p_fail 0.75)
+    left/right only  100.00%   (p_fail 1.00: an up or
+                               down trial is never
+                               answered)
+
+  So the rule catches gross inattention almost always and
+  costs almost nothing at the attentive end. It is NOT a
+  filter on mild inattention: a participant lapsing on one
+  trial in ten survives it 97% of the time, which is why
+  the lapse rate is also fitted, as the pre-registered
+  sensitivity analysis for C1, rather than screened for
+  here.
+
+  IN 'images' MODE the catch trial shows a pair with an
+  obvious difference and takes a left/right press, so a
+  random press is wrong only half the time: p_fail is
+  0.5 * lambda, and the same threshold excludes 1.2% at
+  lambda 0.1 and 7.0% at lambda 0.2. The rule is kept at 3
+  because it is the registered one; the mode is recorded
+  so the arithmetic that applies is never in doubt.
+
+  SESSION LENGTH. 211 trials presented (180 analysed,
+  15 consistency, 10 catch, 6 practice). At 3.5 to 4.5
+  seconds per trial plus about two minutes of instructions
+  and breaks, that is 14 to 18 minutes. THE 15-MINUTE
+  TARGET IS AT THE FAST END OF THAT RANGE. The per-trial
+  time is the assumption to check against the first
+  participants' timestamps; the counts are fixed here.
+
+CHECKS
+----------------------------------------------------------------------
+                                                 check result                                                           detail
+                                required files present   PASS                                                            all 6
+                                    stimuli/ populated   PASS                                                       349 images
+                              trial_design.png present   PASS                                                                 
+                                      row counts match   PASS                                   top 211, package 211, json 211
+                      trial numbering is 1..n in order   PASS                                                                 
+                           packaged CSV and JSON agree   PASS                                 worst numeric difference 5.0e-11
+                   left_path identical in CSV and JSON   PASS                                                                 
+                  right_path identical in CSV and JSON   PASS                                                                 
+               top-level copy has the same trial order   PASS                                                                 
+          top-level and packaged predictors consistent   PASS           worst |pred_sat| difference 4.44e-16 (0.000 raw units)
+                         every referenced image exists   PASS                                                   349 referenced
+                         no unreferenced image shipped   PASS                                                      349 on disk
+                          every path is under stimuli/   PASS                                                                 
+             manifest lists exactly the shipped images   PASS                                                         349 rows
+                manifest carries the measured features   PASS                              sat_mean and contrast_local present
+             preload is a subset of the shipped images   PASS                                                        334 paths
+           preload omits exactly the catch-only images   PASS                                        15 omitted, 15 catch-only
+               re-measured features match the manifest   PASS                               worst sat 0.0000, worst fog 0.0000
+                         d_sat rebuilt from the images   PASS                      worst 0.0000 sat_mean units (tolerance 0.6)
+                         d_fog rebuilt from the images   PASS                worst 0.0000 contrast_local units (tolerance 0.6)
+                        pred_sat orientation and units   PASS                                                 worst 0.00000 SD
+                        pred_fog orientation and units   PASS                                                 worst 0.00000 SD
+         predictors correlate with the shipped columns   PASS                               r(sat) +1.000000, r(fog) +1.000000
+                                          total trials   PASS                                               211 (expected 211)
+                                       analysed trials   PASS                                               180 (expected 180)
+                                        sat_only count   PASS                                                 60 (expected 60)
+                                        fog_only count   PASS                                                 60 (expected 60)
+                                        together count   PASS                                                 30 (expected 30)
+                                        conflict count   PASS                                                 30 (expected 30)
+                                     consistency count   PASS                                                 15 (expected 15)
+                                           catch count   PASS                                                 10 (expected 10)
+                                        practice count   PASS                                                   6 (expected 6)
+       analysed flag marks exactly the four real types   PASS                                                                 
+                         side balance within each type   PASS                                            worst deviation 0.000
+           no image pair appears twice except a repeat   PASS                         15 repeated pairs, 15 consistency trials
+          every repeat follows its original, same pair   PASS                                                       min gap 34
+                    every repeat has its sides swapped   PASS                                                            15/15
+                            no correct_response column   PASS                                                           absent
+                 every catch row declares a catch mode   PASS                                                            10/10
+                              one list, one catch mode   PASS                                                    ['no_images']
+                  the catch mode is the registered one   PASS                           ['no_images'] (expected ['no_images'])
+                    no other row declares a catch mode   PASS                         0 rows outside the catch block carry one
+                  catch rows carry no instruction text   PASS                                                      0 with text
+               every other row carries its instruction   PASS                                                       1 distinct
+                            practice trials come first   PASS                                                       trials 1-6
+practice and catch share no pair with the analysed set   PASS                                                    0 overlapping
+                              r(d_sat, d_fog) is small   PASS                                                           -0.115
+                            seed is the registered one   PASS          '42  (+ 19 replicate draw(s) under seeds/, for step 6)'
+                          colour cut is the chosen one   PASS                      '|d_sat| >= 31.1 sat_mean units (0.794 SD)'
+                        variant is the extended ladder   PASS                                                       'extended'
+                    built with per-type random streams   PASS 'per_type: 13 generators, each seeded from (seed 42, draw name)'
+          the build declares the registered catch mode   PASS      "mode 'no_images'; exclude a participant failing 3 or more"
+                   the build states the exclusion rule   PASS      "mode 'no_images'; exclude a participant failing 3 or more"
+                      the build states the catch count   PASS                           '15 consistency, 10 catch, 6 practice'
+
+  All checks passed. Check 4 is the one that makes this
+  copy self-certifying: sat_mean and contrast_local were
+  re-measured from the images IN THIS DIRECTORY and the
+  predictors rebuilt from them, so the numbers an
+  analysis will fit are known to describe the pictures a
+  participant sees.
+
+PROVENANCE
+----------------------------------------------------------------------
+  Only scripts and documentation are kept long-term in this
+  project, so the reports that chose this list travel with
+  it, in provenance/, and are checksummed with everything
+  else.
+
+  captured  step 5 build         data/trials_v4_ext/both/trials_report.txt
+  captured  step 5 overview      data/trials_v4_ext/trials_overview.txt
+  captured  step 5 streams       data/trials_v4_ext/stream_check.csv
+  captured  step 5 seeds         data/trials_v4_ext/seeds_summary.csv
+  captured  step 6 choice        data/choose_colour_v4/choose_report.txt
+  captured  step 6 information   data/choose_colour_v4/information.csv
+  captured  step 6 differences   data/choose_colour_v4/differences.csv
+  captured  step 6 fog control   data/choose_colour_v4/fog_control.csv
+  captured  step 6b robustness   data/robustness_v4/robustness_report.txt
+  captured  step 6b ranking      data/robustness_v4/ranking.csv
+  captured  step 6b weights      data/robustness_v4/weights.csv
+  captured  step 6b lapse gains  data/robustness_v4/differences_by_lapse.csv
+
+HOW TO CHECK THIS LATER
+----------------------------------------------------------------------
+  Re-run this script with MODE = 'verify'. It re-checks
+  every file against checksums.sha256 and runs every check
+  above again on the frozen copy.
+
+  Outside this pipeline, from inside the frozen directory:
+      shasum -a 256 -c checksums.sha256
+
+  Do that before launching, and again if the package is
+  ever moved, re-uploaded or rebuilt.
+
+WHAT IS NOT FROZEN HERE
+----------------------------------------------------------------------
+  The grid blocks. They use different stimulus cells -- the
+  single-feature ladders and the contrast-up column -- and
+  they carry open design questions: how many columns each
+  ladder shows, whether the unmanipulated image appears in
+  them, and whether the contrast-up column is included at
+  all. Step 7b, once those are answered.
+
+  The power analysis. Step 8 runs on THIS list, at seed
+  42, because thresholds and power belong to the list
+  participants see -- and reports where this draw sits in
+  the 20-draw distribution without choosing a seed on any
+  result.

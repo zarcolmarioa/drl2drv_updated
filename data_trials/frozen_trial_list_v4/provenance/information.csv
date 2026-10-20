@@ -1,0 +1,9 @@
+list,draws,SS_colour,SS_colour_sd,SS_fog,SS_fog_sd,info_ratio,info_ratio_sd,floor_colour_SD,floor_colour_SD_sd,floor_fog_SD,floor_fog_SD_sd,floor_gap_SD,floor_gap_err,floor_gap_err_from,lower_floor,SS_colour_in_sat_only,SS_colour_outside,SS_fog_outside,sat_only_median_abs_d
+current,20,71.9,3.165,65.8,3.086,1.096,0.064,0.467,0.011,0.486,0.012,-0.019,0.004,draws,colour,47.8,24.2,65.753,30.7
+extra_levels,20,140.4,8.475,67.2,1.917,2.09,0.121,0.336,0.01,0.482,0.009,-0.147,0.003,draws,colour,93.2,47.2,67.176,36.7
+larger_diffs,20,96.7,3.629,65.8,3.086,1.473,0.082,0.401,0.009,0.486,0.012,-0.085,0.003,draws,colour,72.5,24.2,65.753,42.9
+both,20,186.6,7.519,67.2,1.917,2.778,0.11,0.29,0.006,0.482,0.009,-0.192,0.002,draws,colour,139.4,47.2,67.176,51.8
+sens_cut_25_5,20,158.3,7.504,67.2,1.917,2.356,0.088,0.315,0.007,0.483,0.009,-0.168,0.002,draws,colour,111.1,47.2,67.176,43.1
+sens_cut_35_3,20,187.9,6.959,67.2,1.917,2.798,0.099,0.289,0.006,0.482,0.008,-0.193,0.002,draws,colour,140.8,47.2,67.176,51.9
+reproduction,1,58.9,,66.5,,0.886,,0.523,,0.49,,0.033,0.009,guesser sets,fog,33.5,25.4,66.482,25.3
+shipped,1,58.9,,66.5,,0.886,,0.508,,0.486,,0.022,0.005,guesser sets,fog,33.5,25.4,66.482,25.3

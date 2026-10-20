@@ -1,0 +1,186 @@
+GRID BLOCK REPORT  (v4, step 7b)
+======================================================================
+Mode          : package
+Stimulus set  : data/stimulus_set_v4_ext_haze_eq
+Step 3 script : build_stimulus_set_v4_corrected.py (imported, not copied)
+Output        : data/grid_block_v4_2
+Seed          : 42
+Elapsed       : 4.6s
+
+  stimulus set                     data/stimulus_set_v4_ext_haze_eq
+  scenes available                 47
+  grid-usable images               705
+  check 1 inputs                   PASS
+  fog columns                      6: h=0, p35, p25, p15, p10, p05
+  colour columns                   6: p75, k=1, p25, p10, p05, p01
+  position of the original         fog 1/6, colour 2/6 (asymmetric, reported)
+  check 7 layout                   PASS (149-239 px)
+  realised cell size               1366x768 149 px, 1920x1080 239 px at 6 columns
+  check 2 columns exist            PASS (47 scenes)
+  colour span vs step 3's ladder   PASS (exact over 47 scenes)
+  colour span (SD)                 1.80-3.09
+  fog span (SD)                    1.20-2.35
+  check 3 monotone                 PASS
+  matching                         matching only (no headroom criterion)
+  matching total                   0.6201 SD over 12 pairs (mean 0.0517)
+  matched on                       base_sat, base_fog (corpus SD units)
+  check 4 sets disjoint            PASS
+  check 5 matching                 PASS (worst pair 0.0698 SD, worst set-mean diff 0.0031 SD)
+  within-pair distance             median 0.0550 SD, worst 0.0698 SD
+  cells on screens                 144
+  images to ship                   144
+  fog range on the screens         -2.16 to +0.00 SD
+  colour range on the screens      -1.78 to +1.05 SD
+  rendered but not used            188 images, all explained
+  fog axis                         censored at the original (no column above); fog answers there are lower bounds, count per block to be reported
+  colour axis                      open above (p75)
+  pair reuse                       1-8 trials per grid scene (median 5)
+  mock-up screens                  4
+  images shipped                   144 at 512 px, 43.7 MB
+  check 6 features                 PASS (worst relative 2.0e-16)
+  check 6 bytes                    PASS (144 byte-identical)
+  package                          data/grid_block_v4_2/package
+
+1. WHAT THIS BLOCK IS FOR
+----------------------------------------------------------------------
+  Two blocks of four screens. Each screen shows one
+  feature at every level at once and asks which column
+  looks most like the world looked -- during the episode
+  in one block, normally in the other.
+
+  DESCRIPTIVE ONLY. It locates an experience on the
+  manipulated range; it does not test the hypothesis. The
+  registered analyses in step 8 use the pair trials alone.
+  The quantity of interest is the normal-to-episode shift,
+  in FEATURE UNITS rather than grid steps: the contrast-up
+  step is about +0.22 SD and the fog steps are -0.13 SD and
+  larger, so one step is not a constant amount of anything.
+
+2. WHY TWO MATCHED SCENE SETS
+----------------------------------------------------------------------
+  The shift is a within-person comparison of two blocks, so
+  a photograph may not appear in both: recognising it would
+  anchor the second answer. 24 scenes are chosen as 12
+  MATCHED PAIRS, one member to each set, in the SAME SLOT.
+
+  Pairs rather than set means: matched means can hide a set
+  that is bimodal, and a pair bound to a slot makes the two
+  blocks comparable row by row. The per-pair distances are
+  in pairs.csv.
+
+3. NOTHING WAS RENDERED
+----------------------------------------------------------------------
+  Step 3 already renders every cell a grid screen needs and
+  marks it use = 'grid' or 'both'. This step reads those
+  rows and ships copies. In particular the two columns
+  above the original on the colour screen (p65, p75 at
+  h = 0) exist for every scene already, so no add-on
+  rendering pass was needed and step 3 was not re-run.
+
+  The feature code and the filename helpers are IMPORTED
+  from step 3's script. There is one definition of each in
+  the pipeline, so the two cannot drift.
+
+  The frozen pair package was not read, written or
+  re-checksummed. Its images are a disjoint set of cells.
+
+4. THE CONTRAST-UP COLUMN
+----------------------------------------------------------------------
+  DROPPED. No gain was distinguishable from the
+  original on step 3's sheets_contrast/ diagnostic,
+  which is drawn at the FULL 512 px. The grid shows
+  cells at 149-239 px, so a difference invisible at
+  512 px cannot appear there, and the mock-up could
+  only confirm it.
+
+  The damage figures were never the binding
+  constraint: gain 1.0875 does no measured damage at
+  all on 40 of 47 scenes and is still invisible. The
+  gain holds the mean fixed and moves only the
+  histogram tails -- about +7 on lum_p95 and -6 on
+  lum_p05 -- so the change lives in a small fraction
+  of the frame and downscaling averages it away.
+  Haze moves the same statistics further AND lays a
+  coherent veil over every pixel, which is what
+  survives a thumbnail.
+
+5. RENDERED BUT NOT USED
+----------------------------------------------------------------------
+  Step 3 renders more grid cells than the grid shows.
+  Nothing was deleted or re-rendered; the images are
+  still in the stimulus set with their measured
+  features. unused_cells.md carries this into the
+  pipeline documentation.
+
+  contrast_up -- 141 images
+    Rendered as three candidate gains (1.0875, 1.110, 1.150) for a
+    column ABOVE the original on the fog screen, and dropped. No gain
+    was distinguishable from the original on step 3's
+    sheets_contrast/ diagnostic, which is drawn at the full 512 px;
+    the grid shows cells at 149-239 px, so a difference invisible at
+    512 px cannot appear there. The damage figures were never the
+    binding constraint: 1.0875 does no measured damage at all on 40
+    of 47 scenes and is still invisible. The gain holds the mean
+    fixed and moves only the histogram tails, which downscaling
+    averages away, whereas haze lays a coherent veil over every
+    pixel.
+
+  p65@h=0 -- 47 images
+    Rendered as the first colour rung above the original and dropped
+    from the GRID only -- p65 remains in the pair trials at every fog
+    rung. Two reasons: it leaves six columns on both grid screens, so
+    the whole block computes one cell size; and it makes the first
+    step on each side of the original the same size, since p75 is 25
+    percentile points above the original and p25 is 25 below.
+
+  The pair trials are unaffected: every cell above is
+  use = 'grid' in the manifest and was never in the
+  pair inventory.
+
+6. CENSORING
+----------------------------------------------------------------------
+  THE FOG AXIS IS CENSORED AT THE ORIGINAL. The fog
+  screen has no column clearer than the photograph as
+  taken, so a participant whose vision is clearer than
+  that answers on the original column.
+
+  In the NORMAL-APPEARANCE block this is the common
+  case, not the edge case: most people's normal vision
+  is not foggy. Every fog answer on the original
+  column is a LOWER BOUND on that person's normal, and
+  the normal-to-episode shift computed from it is a
+  lower bound on the shift.
+
+  The bias is conservative -- it can only shrink the
+  shift -- but it is declared rather than absorbed.
+  REPORT THE COUNT of fog answers on the original
+  column in EACH BLOCK, alongside the shift.
+
+  The colour screen keeps p75 above the original, so the
+  colour axis is open on that side.
+
+7. WHAT THE EXPERIMENT MUST DO
+----------------------------------------------------------------------
+  package/interface_spec.md is the contract: what to
+  render, how the cell size is computed, how the set
+  swap is assigned, and what to record per screen.
+
+  Two fields are easy to leave out and both are needed:
+  the set assignment code, without which the
+  counterbalance cannot be checked, and the realised
+  cell size, which varies by window and bears on
+  whether the end columns were distinguishable at all.
+
+8. WHAT TO LOOK AT
+----------------------------------------------------------------------
+  mockup/            the screens at the real cell size.
+                     The decision is made here.
+  selection.png      the pool, the pairs and the two sets.
+  headroom.png       what the headroom preference costs.
+  ladders.png        the columns in feature units.
+  pairs.csv          per-pair distance and slot.
+  headroom_cost.csv  matching cost at every gain x
+                     tolerance.
+  cell_sizes.csv     the layout arithmetic.
+
+OVERALL: PASS

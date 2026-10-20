@@ -1,0 +1,692 @@
+ROBUSTNESS OF THE CANDIDATE TRIAL LISTS  (v4, step 6b)
+======================================================================
+Trial lists : data/trials_v4_ext
+Lists       : current, extra_levels, sens_cut_25_5, both  (baseline current)
+Candidates  : extra_levels < sens_cut_25_5 < both  (step 6 order)
+Draws       : 20 per list
+Lapse rates : [0.0, 0.1, 0.2]
+Sensitivity : [0.3, 0.4, 0.5, 0.6, 0.7, 0.85, 1.0] (per SD), applied to the per-SD predictors directly
+People      : 4,000 per cell, 20,000 per floor
+Fit         : firth, no intercept, pred_sat and pred_fog in corpus-SD units; every cell also refitted with the other estimator on the
+              same responses
+Extreme     : |fitted colour weight| > 5.0 per SD
+Seed        : 42, offsets 101/303; uniforms shared across lists and lapse rates
+Elapsed     : 725.4s
+
+  draws per list                     20
+  check 1a batch vs single           PASS (1.1e-12)
+  check 1b Firth objective           PASS (1.4e-09)
+  check 1c MLE solvers               PASS (3.3e-16)
+  check 1d separable                 PASS (40.80/43.12 finite)
+  check 1e equivariance              PASS (8.2e-12)
+  old ridge relative to X'WX         7.1e-10 (inert; see penalty_history.csv)
+  check 2a lapse cannot touch a guesser PASS (bit-identical)
+  check 2b floor vs lapse, unpaired  PASS (worst 1.47 SD of a sampling difference)
+  A3 ranking preserved               PASS (0 resolvable inversion(s))
+  B worst share separated            0.00000
+  B worst share extreme              0.00000 (worst draw 0.00000)
+  B worst share unconverged          0.00000
+  B closest to separation            0.867 of colour trials (needs 1.000)
+  B noise-to-signal at 0.50 SD       current 0.490, best both 0.323
+  B weight shift, estimator          <= 0.0240 SD (2.3%), sd <= 0.0061 SD
+  C floor move, colour               <= 2.2% across lists
+  C detection shift, worst cell      0.0019 (0/504 cells > 0.01, 327/504 beyond 2 SE)
+
+WHAT THIS ADDS TO STEP 6
+----------------------------------------------------------------------
+  Step 6 asked which list catches a participant with a
+  given sensitivity most often. It assumed a participant
+  who never slips, and it only asked whether a fitted
+  weight cleared a floor -- never whether the weight was
+  any good. Both matter here for different reasons.
+
+  LAPSES, because a design that wins only for a perfect
+  responder is not worth registering.
+
+  WEIGHT STABILITY, because the registered control
+  comparison compares weights BETWEEN GROUPS. Detection
+  needs only the sign; a group difference needs the
+  magnitude to mean something. On a list of mostly large
+  colour differences a sensitive participant can answer
+  nearly every colour trial as predicted, and in the limit
+  the data are separable, the maximum-likelihood weight is
+  infinite, and what the fit returns is set by the penalty
+  -- which is 1e-06, almost nothing. A handful of those
+  fits inflates a group's mean and variance.
+
+  THE SIMULATION IS PAIRED THREE WAYS. One set of uniform
+  random numbers per (draw, sensitivity, participant type)
+  serves every list and every lapse rate, so the same
+  person with the same luck meets all four lists at all
+  three lapse rates.
+
+CHECK 2: THE FLOORS DO NOT DEPEND ON THE LAPSE RATE
+----------------------------------------------------------------------
+  A pure guesser answers at 0.5, and mixing that with a
+  coin flip is still 0.5 EXACTLY, so the null distribution
+  of fitted weights cannot move with lambda. The floors
+  are therefore computed once per draw and shared across
+  the lapse rates -- which is an argument, so it is tested
+  twice.
+
+  2a is the exact test: the SAME uniform draws at every
+  lambda, so the responses and the floors must agree to the
+  last bit. This is what would catch a bug in how lambda is
+  applied, and it is worth having because the same code
+  generates the lapsing participants in section A.
+
+  2b is the sampling test: a FRESH guesser set per lambda,
+  as the detection loop's floors are built, judged against
+  a MEASURED spread -- 12 independent sets at
+  lambda 0 give the set-to-set SD, and a difference between
+  two independent sets has sqrt(2) times that. An earlier
+  version of this check used ONE extra set as its
+  reference, which is a single draw from the distribution
+  of differences rather than its spread, and understated it
+  about threefold.
+
+       test  lapse  floor_colour_SD  floor_fog_SD  diff_colour  diff_fog responses_identical  z_colour  z_fog                                                              note
+  2a paired    0.0         0.461087      0.496673       0.0000    0.0000                True       NaN    NaN                                                                  
+  2a paired    0.1         0.461087      0.496673       0.0000    0.0000                True       NaN    NaN                                                                  
+  2a paired    0.2         0.461087      0.496673       0.0000    0.0000                True       NaN    NaN                                                                  
+2b unpaired    0.0         0.466000      0.488800       0.0023    0.0011                 NaN      0.37   0.16 reference: 12 sets, SD of a difference 0.0061 colour / 0.0072 fog
+2b unpaired    0.1         0.463300      0.498300      -0.0004    0.0106                 NaN      0.07   1.47 reference: 12 sets, SD of a difference 0.0061 colour / 0.0072 fog
+2b unpaired    0.2         0.462700      0.495700      -0.0010    0.0080                 NaN      0.17   1.11 reference: 12 sets, SD of a difference 0.0061 colour / 0.0072 fog
+
+A. DETECTION AGAINST THE LAPSE RATE
+----------------------------------------------------------------------
+  Colour detection, colour-only participant, mean over
+  draws. Lapses pull every response toward 0.5, so these
+  fall at every lapse rate by construction.
+
+  lapse 0.0
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.520    0.238         0.412          0.457
+0.40            0.759    0.385         0.632          0.688
+0.50            0.909    0.544         0.814          0.860
+0.60            0.975    0.699         0.924          0.951
+0.70            0.996    0.822         0.977          0.987
+0.85            1.000    0.937         0.997          0.999
+1.00            1.000    0.983         1.000          1.000
+
+  lapse 0.1
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.438    0.201         0.345          0.384
+0.40            0.665    0.322         0.539          0.595
+0.50            0.839    0.459         0.722          0.775
+0.60            0.937    0.603         0.858          0.896
+0.70            0.981    0.733         0.938          0.960
+0.85            0.997    0.875         0.986          0.993
+1.00            1.000    0.952         0.998          0.999
+
+  lapse 0.2
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.359    0.168         0.282          0.315
+0.40            0.559    0.263         0.446          0.495
+0.50            0.738    0.377         0.615          0.670
+0.60            0.868    0.505         0.761          0.811
+0.70            0.942    0.627         0.867          0.904
+0.85            0.986    0.786         0.952          0.971
+1.00            0.997    0.891         0.985          0.993
+
+  THE FOG CONTROL, fog-only participant, fog detection:
+
+  lapse 0.0
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.229    0.225         0.230          0.229
+0.40            0.363    0.362         0.364          0.362
+0.50            0.520    0.515         0.520          0.519
+0.60            0.672    0.666         0.674          0.672
+0.70            0.798    0.793         0.798          0.798
+0.85            0.922    0.915         0.922          0.922
+1.00            0.977    0.975         0.977          0.977
+
+  lapse 0.1
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.193    0.190         0.195          0.193
+0.40            0.304    0.304         0.304          0.303
+0.50            0.440    0.434         0.440          0.438
+0.60            0.578    0.574         0.579          0.578
+0.70            0.710    0.701         0.710          0.708
+0.85            0.857    0.849         0.856          0.856
+1.00            0.941    0.938         0.941          0.941
+
+  lapse 0.2
+list             both  current  extra_levels  sens_cut_25_5
+sensitivity_SD                                             
+0.30            0.162    0.159         0.163          0.162
+0.40            0.250    0.248         0.250          0.249
+0.50            0.361    0.357         0.362          0.361
+0.60            0.481    0.477         0.481          0.480
+0.70            0.605    0.598         0.605          0.604
+0.85            0.763    0.753         0.762          0.762
+1.00            0.875    0.870         0.874          0.874
+
+A2. GAIN OVER 'current', PAIRED BY DRAW
+----------------------------------------------------------------------
+
+  lapse 0.0: difference
+list             both  extra_levels  sens_cut_25_5
+sensitivity_SD                                    
+0.30            0.283         0.174          0.219
+0.40            0.374         0.246          0.303
+0.50            0.365         0.270          0.316
+0.60            0.276         0.225          0.252
+0.70            0.173         0.154          0.165
+0.85            0.063         0.060          0.062
+1.00            0.017         0.017          0.017
+  lapse 0.0: standard error of that difference
+list              both  extra_levels  sens_cut_25_5
+sensitivity_SD                                     
+0.30            0.0054        0.0057         0.0054
+0.40            0.0061        0.0074         0.0057
+0.50            0.0058        0.0079         0.0063
+0.60            0.0051        0.0063         0.0052
+0.70            0.0038        0.0044         0.0040
+0.85            0.0024        0.0025         0.0024
+1.00            0.0008        0.0008         0.0008
+
+  lapse 0.1: difference
+list             both  extra_levels  sens_cut_25_5
+sensitivity_SD                                    
+0.30            0.238         0.144          0.183
+0.40            0.343         0.218          0.273
+0.50            0.380         0.263          0.316
+0.60            0.334         0.255          0.293
+0.70            0.248         0.206          0.228
+0.85            0.122         0.110          0.118
+1.00            0.048         0.046          0.048
+  lapse 0.1: standard error of that difference
+list              both  extra_levels  sens_cut_25_5
+sensitivity_SD                                     
+0.30            0.0049        0.0051         0.0047
+0.40            0.0059        0.0067         0.0053
+0.50            0.0059        0.0080         0.0068
+0.60            0.0055        0.0071         0.0053
+0.70            0.0044        0.0057         0.0048
+0.85            0.0035        0.0036         0.0033
+1.00            0.0015        0.0015         0.0014
+
+  lapse 0.2: difference
+list             both  extra_levels  sens_cut_25_5
+sensitivity_SD                                    
+0.30            0.191         0.114          0.146
+0.40            0.295         0.183          0.232
+0.50            0.361         0.239          0.294
+0.60            0.363         0.257          0.306
+0.70            0.315         0.240          0.277
+0.85            0.200         0.166          0.185
+1.00            0.106         0.094          0.102
+  lapse 0.2: standard error of that difference
+list              both  extra_levels  sens_cut_25_5
+sensitivity_SD                                     
+0.30            0.0046        0.0042         0.0042
+0.40            0.0055        0.0058         0.0050
+0.50            0.0055        0.0076         0.0067
+0.60            0.0057        0.0076         0.0059
+0.70            0.0047        0.0069         0.0056
+0.85            0.0045        0.0051         0.0046
+1.00            0.0027        0.0030         0.0028
+
+A3. IS THE RANKING PRESERVED?
+----------------------------------------------------------------------
+  Expected order from step 6: extra_levels < sens_cut_25_5 < both.
+  Adjacent gaps are tested against the paired standard
+  errors. `tied` means two candidates cannot be separated
+  in that cell, which is a finding about them rather than a
+  failure; only a gap that reverses by more than 2 SE
+  counts as an inversion.
+
+ sensitivity_SD  lapse                               order  as_expected  gap_sens_cut_25_5_minus_extra_levels verdict_sens_cut_25_5_vs_extra_levels  gap_both_minus_sens_cut_25_5 verdict_both_vs_sens_cut_25_5
+           0.30    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0451                                    ok                        0.0637                            ok
+           0.30    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0389                                    ok                        0.0544                            ok
+           0.30    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0327                                    ok                        0.0446                            ok
+           0.40    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0564                                    ok                        0.0708                            ok
+           0.40    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0555                                    ok                        0.0702                            ok
+           0.40    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0489                                    ok                        0.0638                            ok
+           0.50    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0460                                    ok                        0.0495                            ok
+           0.50    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0530                                    ok                        0.0638                            ok
+           0.50    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0551                                    ok                        0.0672                            ok
+           0.60    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0270                                    ok                        0.0240                            ok
+           0.60    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0377                                    ok                        0.0412                            ok
+           0.60    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0492                                    ok                        0.0571                            ok
+           0.70    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0104                                  tied                        0.0084                          tied
+           0.70    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0219                                    ok                        0.0209                            ok
+           0.70    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0374                                    ok                        0.0381                            ok
+           0.85    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0017                                  tied                        0.0010                          tied
+           0.85    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0075                                  tied                        0.0043                          tied
+           0.85    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0188                                    ok                        0.0149                            ok
+           1.00    0.0 extra_levels < sens_cut_25_5 < both         True                                0.0002                                  tied                        0.0000                          tied
+           1.00    0.1 extra_levels < sens_cut_25_5 < both         True                                0.0015                                  tied                        0.0006                          tied
+           1.00    0.2 extra_levels < sens_cut_25_5 < both         True                                0.0076                                  tied                        0.0043                          tied
+
+  RESULT: PASS
+
+B. WEIGHT STABILITY
+----------------------------------------------------------------------
+  Fitted colour weight against its true value, in per-SD
+  units, for a colour-only participant. `sd_over_true` is
+  the noise-to-signal ratio and is what a between-group
+  comparison has to overcome.
+
+  lapse 0.0
+         list  sensitivity_SD  true_sd   mean    bias     sd  sd_over_true    p90    p99
+      current            0.30     0.30 0.2999 -0.0001 0.2398        0.7994 0.6073 0.8743
+ extra_levels            0.30     0.30 0.3006  0.0006 0.1748        0.5826 0.5247 0.7294
+sens_cut_25_5            0.30     0.30 0.3005  0.0005 0.1655        0.5518 0.5134 0.7045
+         both            0.30     0.30 0.3007  0.0007 0.1520        0.5066 0.4972 0.6734
+      current            0.40     0.40 0.4010  0.0010 0.2416        0.6041 0.7122 0.9855
+ extra_levels            0.40     0.40 0.4004  0.0004 0.1795        0.4488 0.6314 0.8437
+sens_cut_25_5            0.40     0.40 0.4002  0.0002 0.1689        0.4222 0.6176 0.8152
+         both            0.40     0.40 0.4003  0.0003 0.1563        0.3907 0.6012 0.7876
+      current            0.50     0.50 0.4995 -0.0005 0.2450        0.4901 0.8156 1.0923
+ extra_levels            0.50     0.50 0.4993 -0.0007 0.1844        0.3688 0.7374 0.9621
+sens_cut_25_5            0.50     0.50 0.4994 -0.0006 0.1736        0.3472 0.7232 0.9385
+         both            0.50     0.50 0.4993 -0.0007 0.1614        0.3228 0.7074 0.9057
+      current            0.60     0.60 0.6000 -0.0000 0.2476        0.4127 0.9196 1.2072
+ extra_levels            0.60     0.60 0.6006  0.0006 0.1914        0.3190 0.8491 1.0829
+sens_cut_25_5            0.60     0.60 0.6001  0.0001 0.1798        0.2997 0.8322 1.0562
+         both            0.60     0.60 0.5999 -0.0001 0.1671        0.2785 0.8157 1.0217
+      current            0.70     0.70 0.6994 -0.0006 0.2525        0.3608 1.0255 1.3217
+ extra_levels            0.70     0.70 0.7009  0.0009 0.1981        0.2831 0.9588 1.2067
+sens_cut_25_5            0.70     0.70 0.7000  0.0000 0.1864        0.2662 0.9423 1.1743
+         both            0.70     0.70 0.7001  0.0001 0.1732        0.2474 0.9258 1.1435
+      current            0.85     0.85 0.8511  0.0011 0.2602        0.3061 1.1883 1.5010
+ extra_levels            0.85     0.85 0.8510  0.0010 0.2096        0.2466 1.1239 1.3989
+sens_cut_25_5            0.85     0.85 0.8507  0.0007 0.1992        0.2344 1.1088 1.3677
+         both            0.85     0.85 0.8495 -0.0005 0.1855        0.2182 1.0893 1.3274
+      current            1.00     1.00 0.9999 -0.0001 0.2674        0.2674 1.3470 1.6708
+ extra_levels            1.00     1.00 1.0008  0.0008 0.2236        0.2236 1.2910 1.5849
+sens_cut_25_5            1.00     1.00 0.9997 -0.0003 0.2118        0.2118 1.2747 1.5580
+         both            1.00     1.00 0.9997 -0.0003 0.1993        0.1993 1.2591 1.5293
+
+  lapse 0.1
+         list  sensitivity_SD  true_sd   mean    bias     sd  sd_over_true    p90    p99
+      current            0.30     0.30 0.2697 -0.0303 0.2397        0.7990 0.5780 0.8407
+ extra_levels            0.30     0.30 0.2696 -0.0304 0.1737        0.5790 0.4924 0.6960
+sens_cut_25_5            0.30     0.30 0.2695 -0.0305 0.1647        0.5489 0.4809 0.6693
+         both            0.30     0.30 0.2695 -0.0305 0.1512        0.5041 0.4648 0.6373
+      current            0.40     0.40 0.3597 -0.0403 0.2408        0.6020 0.6706 0.9414
+ extra_levels            0.40     0.40 0.3579 -0.0421 0.1779        0.4446 0.5871 0.7948
+sens_cut_25_5            0.40     0.40 0.3578 -0.0422 0.1672        0.4180 0.5720 0.7686
+         both            0.40     0.40 0.3576 -0.0424 0.1545        0.3862 0.5564 0.7394
+      current            0.50     0.50 0.4476 -0.0524 0.2432        0.4864 0.7594 1.0371
+ extra_levels            0.50     0.50 0.4447 -0.0553 0.1814        0.3629 0.6793 0.8975
+sens_cut_25_5            0.50     0.50 0.4447 -0.0553 0.1709        0.3418 0.6655 0.8722
+         both            0.50     0.50 0.4439 -0.0561 0.1585        0.3170 0.6484 0.8349
+      current            0.60     0.60 0.5369 -0.0631 0.2455        0.4092 0.8543 1.1375
+ extra_levels            0.60     0.60 0.5325 -0.0675 0.1874        0.3124 0.7760 1.0011
+sens_cut_25_5            0.60     0.60 0.5319 -0.0681 0.1757        0.2929 0.7591 0.9746
+         both            0.60     0.60 0.5309 -0.0691 0.1629        0.2715 0.7413 0.9412
+      current            0.70     0.70 0.6239 -0.0761 0.2497        0.3567 0.9460 1.2373
+ extra_levels            0.70     0.70 0.6184 -0.0816 0.1926        0.2752 0.8679 1.1064
+sens_cut_25_5            0.70     0.70 0.6171 -0.0829 0.1809        0.2584 0.8520 1.0765
+         both            0.70     0.70 0.6163 -0.0837 0.1675        0.2393 0.8332 1.0399
+      current            0.85     0.85 0.7573 -0.0927 0.2558        0.3009 1.0863 1.3931
+ extra_levels            0.85     0.85 0.7442 -0.1058 0.2016        0.2371 1.0050 1.2634
+sens_cut_25_5            0.85     0.85 0.7435 -0.1065 0.1908        0.2245 0.9930 1.2284
+         both            0.85     0.85 0.7406 -0.1094 0.1774        0.2087 0.9707 1.1981
+      current            1.00     1.00 0.8856 -0.1144 0.2615        0.2615 1.2233 1.5361
+ extra_levels            1.00     1.00 0.8668 -0.1332 0.2127        0.2127 1.1433 1.4196
+sens_cut_25_5            1.00     1.00 0.8647 -0.1353 0.2005        0.2005 1.1249 1.3852
+         both            1.00     1.00 0.8609 -0.1391 0.1874        0.1874 1.1033 1.3534
+
+  lapse 0.2
+         list  sensitivity_SD  true_sd   mean    bias     sd  sd_over_true    p90    p99
+      current            0.30     0.30 0.2394 -0.0606 0.2390        0.7966 0.5453 0.8087
+ extra_levels            0.30     0.30 0.2389 -0.0611 0.1730        0.5768 0.4599 0.6617
+sens_cut_25_5            0.30     0.30 0.2385 -0.0615 0.1637        0.5458 0.4491 0.6336
+         both            0.30     0.30 0.2387 -0.0613 0.1504        0.5014 0.4331 0.6029
+      current            0.40     0.40 0.3189 -0.0811 0.2401        0.6002 0.6282 0.8980
+ extra_levels            0.40     0.40 0.3163 -0.0837 0.1760        0.4401 0.5437 0.7446
+sens_cut_25_5            0.40     0.40 0.3159 -0.0841 0.1658        0.4145 0.5286 0.7185
+         both            0.40     0.40 0.3157 -0.0843 0.1528        0.3820 0.5125 0.6908
+      current            0.50     0.50 0.3964 -0.1036 0.2418        0.4836 0.7068 0.9805
+ extra_levels            0.50     0.50 0.3916 -0.1084 0.1792        0.3583 0.6228 0.8344
+sens_cut_25_5            0.50     0.50 0.3914 -0.1086 0.1682        0.3364 0.6069 0.8112
+         both            0.50     0.50 0.3904 -0.1096 0.1561        0.3121 0.5917 0.7761
+      current            0.60     0.60 0.4748 -0.1252 0.2434        0.4057 0.7889 1.0642
+ extra_levels            0.60     0.60 0.4673 -0.1327 0.1839        0.3065 0.7057 0.9241
+sens_cut_25_5            0.60     0.60 0.4667 -0.1333 0.1724        0.2874 0.6882 0.8997
+         both            0.60     0.60 0.4653 -0.1347 0.1595        0.2658 0.6717 0.8628
+      current            0.70     0.70 0.5506 -0.1494 0.2467        0.3525 0.8691 1.1540
+ extra_levels            0.70     0.70 0.5402 -0.1598 0.1879        0.2684 0.7836 1.0158
+sens_cut_25_5            0.70     0.70 0.5388 -0.1612 0.1761        0.2516 0.7658 0.9802
+         both            0.70     0.70 0.5378 -0.1622 0.1631        0.2329 0.7485 0.9463
+      current            0.85     0.85 0.6659 -0.1841 0.2517        0.2961 0.9895 1.2883
+ extra_levels            0.85     0.85 0.6460 -0.2040 0.1947        0.2291 0.8983 1.1451
+sens_cut_25_5            0.85     0.85 0.6442 -0.2058 0.1841        0.2165 0.8838 1.1108
+         both            0.85     0.85 0.6408 -0.2092 0.1701        0.2001 0.8604 1.0743
+      current            1.00     1.00 0.7764 -0.2236 0.2564        0.2564 1.1068 1.4122
+ extra_levels            1.00     1.00 0.7456 -0.2544 0.2030        0.2030 1.0089 1.2691
+sens_cut_25_5            1.00     1.00 0.7435 -0.2565 0.1912        0.1912 0.9913 1.2322
+         both            1.00     1.00 0.7376 -0.2624 0.1779        0.1779 0.9682 1.1980
+
+  INSTABILITY. share_separated: the fit's own weights
+  classify every response correctly, so no finite MLE
+  exists. share_colour_perfect: every colour-informative
+  trial answered as predicted -- the model-free form of the
+  same thing. share_extreme: |weight| above
+  5.0 per SD. share_unconverged: the last
+  Newton step still above 1e-06 at the cap.
+
+         list  sensitivity_SD  lapse  share_separated  share_colour_perfect  share_extreme  share_extreme_worst_draw  share_unconverged
+      current            0.30    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.30    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.30    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.30    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.30    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.30    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.30    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.30    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.30    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.30    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.30    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.30    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            0.40    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.40    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.40    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.40    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.40    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.40    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.40    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.40    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.40    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.40    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.40    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.40    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            0.50    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.50    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.50    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.50    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.50    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.50    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.50    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.50    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.50    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.50    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.50    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.50    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            0.60    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.60    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.60    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.60    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.60    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.60    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.60    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.60    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.60    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.60    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.60    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.60    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            0.70    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.70    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.70    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.70    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.70    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.70    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.70    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.70    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.70    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.70    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.70    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.70    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            0.85    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.85    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.85    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            0.85    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            0.85    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.85    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.85    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            0.85    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            0.85    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            0.85    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            0.85    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            0.85    0.2              0.0                   0.0            0.0                       0.0                0.0
+      current            1.00    0.0              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            1.00    0.0              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            1.00    0.0              0.0                   0.0            0.0                       0.0                0.0
+         both            1.00    0.0              0.0                   0.0            0.0                       0.0                0.0
+      current            1.00    0.1              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            1.00    0.1              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            1.00    0.1              0.0                   0.0            0.0                       0.0                0.0
+         both            1.00    0.1              0.0                   0.0            0.0                       0.0                0.0
+      current            1.00    0.2              0.0                   0.0            0.0                       0.0                0.0
+ extra_levels            1.00    0.2              0.0                   0.0            0.0                       0.0                0.0
+sens_cut_25_5            1.00    0.2              0.0                   0.0            0.0                       0.0                0.0
+         both            1.00    0.2              0.0                   0.0            0.0                       0.0                0.0
+
+  HOW CLOSE ANYONE CAME. share_separated and
+  share_colour_perfect are zero in every cell, which
+  says there was no separation without saying how near
+  it was. Separation needs colour_correct_max = 1.000:
+  EVERY colour-informative trial answered as predicted.
+
+         list  sensitivity_SD  n_colour_informative  colour_correct_mean  colour_correct_p99  colour_correct_max
+      current            0.30                 120.0               0.5527              0.6575              0.7096
+ extra_levels            0.30                 120.0               0.5692              0.6729              0.7312
+sens_cut_25_5            0.30                 120.0               0.5747              0.6775              0.7354
+         both            0.30                 120.0               0.5816              0.6838              0.7400
+      current            0.40                 120.0               0.5700              0.6746              0.7300
+ extra_levels            0.40                 120.0               0.5912              0.6942              0.7496
+sens_cut_25_5            0.40                 120.0               0.5984              0.7000              0.7546
+         both            0.40                 120.0               0.6072              0.7071              0.7675
+      current            0.50                 120.0               0.5868              0.6908              0.7471
+ extra_levels            0.50                 120.0               0.6122              0.7129              0.7704
+sens_cut_25_5            0.50                 120.0               0.6209              0.7213              0.7762
+         both            0.50                 120.0               0.6315              0.7308              0.7804
+      current            0.60                 120.0               0.6036              0.7042              0.7612
+ extra_levels            0.60                 120.0               0.6329              0.7325              0.7867
+sens_cut_25_5            0.60                 120.0               0.6429              0.7421              0.7983
+         both            0.60                 120.0               0.6551              0.7529              0.8063
+      current            0.70                 120.0               0.6196              0.7196              0.7696
+ extra_levels            0.70                 120.0               0.6523              0.7496              0.8038
+sens_cut_25_5            0.70                 120.0               0.6638              0.7600              0.8054
+         both            0.70                 120.0               0.6774              0.7733              0.8229
+      current            0.85                 120.0               0.6435              0.7421              0.7962
+ extra_levels            0.85                 120.0               0.6798              0.7754              0.8258
+sens_cut_25_5            0.85                 120.0               0.6930              0.7867              0.8387
+         both            0.85                 120.0               0.7080              0.7979              0.8508
+      current            1.00                 120.0               0.6658              0.7613              0.8142
+ extra_levels            1.00                 120.0               0.7049              0.7967              0.8454
+sens_cut_25_5            1.00                 120.0               0.7194              0.8104              0.8592
+         both            1.00                 120.0               0.7358              0.8250              0.8671
+
+  THE WORRY RUNS THE OTHER WAY. The concern was that
+  mostly-large colour differences would destabilise the
+  fitted weights. They tighten them: more colour
+  information is a more precise estimate, and
+  `sd_over_true` -- the noise-to-signal ratio a
+  between-group comparison has to overcome -- is
+  LOWEST on the cut versions.
+
+    at 0.50 SD, lapse 0:
+      current        sd/true 0.490
+      extra_levels   sd/true 0.369
+      sens_cut_25_5  sd/true 0.347
+      both           sd/true 0.323
+
+  WHAT THE CHANGE OF ESTIMATOR DID. Every cell was
+  fitted twice on the SAME responses, with firth
+  and with the plain maximum-likelihood estimator the
+  earlier version of this script used. Paired within a
+  draw, so a shift is a within-draw difference.
+    largest shift in the mean weight 0.0240 SD (2.3%)
+    largest shift in its SD          0.0061 SD
+  Firth shrinks towards zero, so a small negative shift
+  is the bias correction working rather than a
+  discrepancy. Section C has it per cell, with the
+  floors and the detection rates beside it.
+
+  WHY THE ESTIMATOR CHANGED. The old fits used a ridge
+  of 1e-06 on predictors in RAW feature units, so the
+  diagonal of X'WX ran to tens of thousands and the
+  penalty sat eleven orders of magnitude below it --
+  see penalty_history.csv. Those fits were therefore
+  maximum-likelihood in practice, and gave no finite
+  estimate for a participant the model predicted
+  perfectly. The only options were to exclude that
+  participant or to report a number the data did not
+  support, and excluding is the worse of the two: a
+  separable fit in the predicted direction is the
+  strongest evidence for the effect, so dropping it
+  biases against the hypothesis. Firth's penalty is
+  always finite and keeps the participant, which is why
+  it is the registered fit. The separation diagnostics
+  above are still reported per cell and per draw --
+  they describe the data, not the solver.
+
+
+C. FIRTH AGAINST THE OTHER ESTIMATOR
+----------------------------------------------------------------------
+  Every cell was fitted twice on the SAME responses and
+  every floor built from the SAME guessers, so each
+  shift below is a within-draw difference. Each
+  estimator's weights are judged against ITS OWN floor;
+  one estimator's weights against the other's floor
+  would measure an offset rather than a difference.
+
+  THE FLOORS, per list, per SD:
+         list  floor_colour  floor_colour_other  floor_colour_shift  floor_colour_shift_pct  floor_fog  floor_fog_other  floor_fog_shift  floor_fog_shift_pct
+      current        0.4674              0.4756             -0.0082                   -1.72     0.4861           0.4940          -0.0078                -1.58
+ extra_levels        0.3355              0.3430             -0.0074                   -2.16     0.4821           0.4899          -0.0078                -1.59
+sens_cut_25_5        0.3150              0.3212             -0.0062                   -1.94     0.4828           0.4905          -0.0077                -1.56
+         both        0.2900              0.2953             -0.0053                   -1.79     0.4824           0.4898          -0.0074                -1.52
+
+  THE WEIGHTS AND THE DETECTION RATES, colour-only
+  participant. Full table: estimator_comparison.csv.
+
+  lapse 0.0
+         list  sensitivity_SD   mean  mean_other  weight_shift_pct  detect  detect_other  detect_shift
+      current            0.30 0.2999      0.3052             -1.74  0.2377        0.2379       -0.0002
+ extra_levels            0.30 0.3006      0.3073             -2.19  0.4117        0.4118       -0.0001
+sens_cut_25_5            0.30 0.3005      0.3066             -1.99  0.4568        0.4569       -0.0000
+         both            0.30 0.3007      0.3063             -1.83  0.5205        0.5206       -0.0001
+      current            0.40 0.4010      0.4081             -1.74  0.3853        0.3854       -0.0001
+ extra_levels            0.40 0.4004      0.4094             -2.21  0.6318        0.6320       -0.0002
+sens_cut_25_5            0.40 0.4002      0.4083             -2.00  0.6882        0.6884       -0.0002
+         both            0.40 0.4003      0.4078             -1.85  0.7590        0.7591       -0.0002
+      current            0.50 0.4995      0.5084             -1.75  0.5440        0.5442       -0.0002
+ extra_levels            0.50 0.4993      0.5106             -2.22  0.8137        0.8139       -0.0003
+sens_cut_25_5            0.50 0.4994      0.5097             -2.02  0.8596        0.8599       -0.0003
+         both            0.50 0.4993      0.5089             -1.88  0.9091        0.9092       -0.0001
+      current            0.60 0.6000      0.6107             -1.76  0.6989        0.6990       -0.0001
+ extra_levels            0.60 0.6006      0.6144             -2.24  0.9241        0.9243       -0.0002
+sens_cut_25_5            0.60 0.6001      0.6127             -2.05  0.9511        0.9513       -0.0002
+         both            0.60 0.5999      0.6117             -1.92  0.9751        0.9751       -0.0000
+      current            0.70 0.6994      0.7120             -1.77  0.8223        0.8224       -0.0001
+ extra_levels            0.70 0.7009      0.7171             -2.26  0.9768        0.9768       -0.0000
+sens_cut_25_5            0.70 0.7000      0.7148             -2.08  0.9871        0.9871        0.0000
+         both            0.70 0.7001      0.7142             -1.96  0.9956        0.9956       -0.0000
+      current            0.85 0.8511      0.8666             -1.79  0.9367        0.9368       -0.0001
+ extra_levels            0.85 0.8510      0.8711             -2.30  0.9970        0.9970        0.0000
+sens_cut_25_5            0.85 0.8507      0.8691             -2.13  0.9987        0.9987        0.0000
+         both            0.85 0.8495      0.8671             -2.04  0.9997        0.9997        0.0000
+      current            1.00 0.9999      1.0184             -1.82  0.9830        0.9830       -0.0001
+ extra_levels            1.00 1.0008      1.0248             -2.34  0.9998        0.9998       -0.0000
+sens_cut_25_5            1.00 0.9997      1.0220             -2.18  1.0000        1.0000        0.0000
+         both            1.00 0.9997      1.0214             -2.12  1.0000        1.0000        0.0000
+
+  lapse 0.1
+         list  sensitivity_SD   mean  mean_other  weight_shift_pct  detect  detect_other  detect_shift
+      current            0.30 0.2697      0.2745             -1.74  0.2007        0.2009       -0.0002
+ extra_levels            0.30 0.2696      0.2756             -2.19  0.3450        0.3450       -0.0000
+sens_cut_25_5            0.30 0.2695      0.2749             -1.98  0.3839        0.3841       -0.0002
+         both            0.30 0.2695      0.2745             -1.82  0.4382        0.4383       -0.0000
+      current            0.40 0.3597      0.3661             -1.74  0.3217        0.3218       -0.0001
+ extra_levels            0.40 0.3579      0.3660             -2.20  0.5392        0.5394       -0.0001
+sens_cut_25_5            0.40 0.3578      0.3651             -2.00  0.5947        0.5950       -0.0003
+         both            0.40 0.3576      0.3643             -1.84  0.6649        0.6651       -0.0002
+      current            0.50 0.4476      0.4555             -1.75  0.4590        0.4591       -0.0001
+ extra_levels            0.50 0.4447      0.4548             -2.21  0.7222        0.7224       -0.0002
+sens_cut_25_5            0.50 0.4447      0.4539             -2.01  0.7751        0.7753       -0.0001
+         both            0.50 0.4439      0.4523             -1.86  0.8390        0.8391       -0.0001
+      current            0.60 0.5369      0.5465             -1.75  0.6032        0.6033       -0.0001
+ extra_levels            0.60 0.5325      0.5447             -2.23  0.8583        0.8585       -0.0001
+sens_cut_25_5            0.60 0.5319      0.5429             -2.03  0.8960        0.8962       -0.0002
+         both            0.60 0.5309      0.5411             -1.89  0.9372        0.9373       -0.0001
+      current            0.70 0.6239      0.6351             -1.76  0.7327        0.7328       -0.0001
+ extra_levels            0.70 0.6184      0.6326             -2.25  0.9383        0.9385       -0.0001
+sens_cut_25_5            0.70 0.6171      0.6300             -2.05  0.9603        0.9603       -0.0001
+         both            0.70 0.6163      0.6284             -1.93  0.9811        0.9812       -0.0001
+      current            0.85 0.7573      0.7711             -1.78  0.8754        0.8756       -0.0002
+ extra_levels            0.85 0.7442      0.7615             -2.27  0.9855        0.9855        0.0000
+sens_cut_25_5            0.85 0.7435      0.7593             -2.09  0.9930        0.9930       -0.0000
+         both            0.85 0.7406      0.7556             -1.98  0.9973        0.9973       -0.0000
+      current            1.00 0.8856      0.9018             -1.80  0.9517        0.9518       -0.0001
+ extra_levels            1.00 0.8668      0.8872             -2.31  0.9977        0.9977        0.0000
+sens_cut_25_5            1.00 0.8647      0.8836             -2.13  0.9992        0.9992        0.0000
+         both            1.00 0.8609      0.8788             -2.04  0.9998        0.9998       -0.0000
+
+  lapse 0.2
+         list  sensitivity_SD   mean  mean_other  weight_shift_pct  detect  detect_other  detect_shift
+      current            0.30 0.2394      0.2437             -1.74  0.1682        0.1683       -0.0001
+ extra_levels            0.30 0.2389      0.2442             -2.19  0.2820        0.2822       -0.0001
+sens_cut_25_5            0.30 0.2385      0.2433             -1.98  0.3148        0.3148       -0.0000
+         both            0.30 0.2387      0.2431             -1.82  0.3593        0.3594       -0.0001
+      current            0.40 0.3189      0.3245             -1.74  0.2634        0.2636       -0.0001
+ extra_levels            0.40 0.3163      0.3234             -2.20  0.4461        0.4462       -0.0001
+sens_cut_25_5            0.40 0.3159      0.3223             -1.99  0.4950        0.4952       -0.0001
+         both            0.40 0.3157      0.3216             -1.83  0.5589        0.5591       -0.0003
+      current            0.50 0.3964      0.4034             -1.74  0.3766        0.3766       -0.0000
+ extra_levels            0.50 0.3916      0.4004             -2.21  0.6152        0.6151        0.0001
+sens_cut_25_5            0.50 0.3914      0.3994             -2.00  0.6703        0.6705       -0.0002
+         both            0.50 0.3904      0.3977             -1.85  0.7375        0.7376       -0.0001
+      current            0.60 0.4748      0.4833             -1.75  0.5048        0.5049       -0.0001
+ extra_levels            0.60 0.4673      0.4779             -2.22  0.7613        0.7615       -0.0001
+sens_cut_25_5            0.60 0.4667      0.4763             -2.02  0.8106        0.8107       -0.0002
+         both            0.60 0.4653      0.4741             -1.87  0.8677        0.8679       -0.0002
+      current            0.70 0.5506      0.5605             -1.76  0.6271        0.6272       -0.0000
+ extra_levels            0.70 0.5402      0.5526             -2.23  0.8670        0.8673       -0.0003
+sens_cut_25_5            0.70 0.5388      0.5500             -2.03  0.9044        0.9045       -0.0001
+         both            0.70 0.5378      0.5481             -1.90  0.9425        0.9425        0.0000
+      current            0.85 0.6659      0.6779             -1.77  0.7859        0.7861       -0.0002
+ extra_levels            0.85 0.6460      0.6609             -2.25  0.9522        0.9522       -0.0001
+sens_cut_25_5            0.85 0.6442      0.6577             -2.06  0.9710        0.9711       -0.0001
+         both            0.85 0.6408      0.6535             -1.94  0.9859        0.9860       -0.0001
+      current            1.00 0.7764      0.7905             -1.78  0.8913        0.8914       -0.0001
+ extra_levels            1.00 0.7456      0.7629             -2.27  0.9853        0.9853        0.0000
+sens_cut_25_5            1.00 0.7435      0.7594             -2.09  0.9929        0.9929       -0.0000
+         both            1.00 0.7376      0.7525             -1.98  0.9973        0.9973       -0.0000
+
+  THE TWO MOVES LARGELY CANCEL. Firth shrinks the
+  weights towards zero AND lowers the floor they are
+  judged against, by about the same couple of per cent,
+  so a detection rate barely moves:
+    largest weight shift   2.3%
+    largest floor shift    2.2% (colour), 1.6% (fog)
+    largest detection shift in any cell 0.0019
+    cells moving by more than 0.01: 0 of 504
+
+  So the choice of estimator does not move the design
+  comparison. It was not made on these numbers: Firth
+  was registered because it gives a finite estimate
+  for a participant the model predicts perfectly, and
+  this section is the check that it changed nothing
+  else.
+
+WHAT THIS DOES AND DOES NOT SETTLE
+----------------------------------------------------------------------
+  Settles: whether the candidate order and the size of the
+  gains survive lapses of 0.1 and 0.2, and how often a fit
+  runs away on each candidate.
+
+  Does not settle:
+    - whether a real participant is a logistic responder
+      with a fixed weight plus a lapse rate at all. The
+      lapse model is the standard allowance for
+      inattention, not a model of a person.
+    - whether the larger colour edits look edited, which
+      is a question for the contact sheets at step 7.
+    - the power of the control comparison, which needs the
+      group structure and sample size and is step 8's.
+
+  The decision rule was fixed before this ran: `both`
+  ships if the ranking and the gains hold and the weights
+  are stable; otherwise sens_cut_25_5. Nothing here chose a
+  seed or a version.

@@ -1,0 +1,61 @@
+version_a,version_b,same_ladder,type,trials_a,trials_b,shared,judged,verdict
+current,extra_levels,False,sat_only,60,60,0,False,differs (expected)
+current,extra_levels,False,fog_only,60,60,0,False,differs (expected)
+current,extra_levels,False,together,30,30,0,False,differs (expected)
+current,extra_levels,False,conflict,30,30,0,False,differs (expected)
+current,larger_diffs,True,sat_only,60,60,6,False,differs (expected)
+current,larger_diffs,True,fog_only,60,60,60,True,same
+current,larger_diffs,True,together,30,30,30,True,same
+current,larger_diffs,True,conflict,30,30,30,True,same
+current,both,False,sat_only,60,60,0,False,differs (expected)
+current,both,False,fog_only,60,60,0,False,differs (expected)
+current,both,False,together,30,30,0,False,differs (expected)
+current,both,False,conflict,30,30,0,False,differs (expected)
+current,sens_cut_25_5,False,sat_only,60,60,0,False,differs (expected)
+current,sens_cut_25_5,False,fog_only,60,60,0,False,differs (expected)
+current,sens_cut_25_5,False,together,30,30,0,False,differs (expected)
+current,sens_cut_25_5,False,conflict,30,30,0,False,differs (expected)
+current,sens_cut_35_3,False,sat_only,60,60,0,False,differs (expected)
+current,sens_cut_35_3,False,fog_only,60,60,0,False,differs (expected)
+current,sens_cut_35_3,False,together,30,30,0,False,differs (expected)
+current,sens_cut_35_3,False,conflict,30,30,0,False,differs (expected)
+extra_levels,larger_diffs,False,sat_only,60,60,0,False,differs (expected)
+extra_levels,larger_diffs,False,fog_only,60,60,0,False,differs (expected)
+extra_levels,larger_diffs,False,together,30,30,0,False,differs (expected)
+extra_levels,larger_diffs,False,conflict,30,30,0,False,differs (expected)
+extra_levels,both,True,sat_only,60,60,3,False,differs (expected)
+extra_levels,both,True,fog_only,60,60,60,True,same
+extra_levels,both,True,together,30,30,30,True,same
+extra_levels,both,True,conflict,30,30,30,True,same
+extra_levels,sens_cut_25_5,True,sat_only,60,60,2,False,differs (expected)
+extra_levels,sens_cut_25_5,True,fog_only,60,60,60,True,same
+extra_levels,sens_cut_25_5,True,together,30,30,30,True,same
+extra_levels,sens_cut_25_5,True,conflict,30,30,30,True,same
+extra_levels,sens_cut_35_3,True,sat_only,60,60,3,False,differs (expected)
+extra_levels,sens_cut_35_3,True,fog_only,60,60,60,True,same
+extra_levels,sens_cut_35_3,True,together,30,30,30,True,same
+extra_levels,sens_cut_35_3,True,conflict,30,30,30,True,same
+larger_diffs,both,False,sat_only,60,60,0,False,differs (expected)
+larger_diffs,both,False,fog_only,60,60,0,False,differs (expected)
+larger_diffs,both,False,together,30,30,0,False,differs (expected)
+larger_diffs,both,False,conflict,30,30,0,False,differs (expected)
+larger_diffs,sens_cut_25_5,False,sat_only,60,60,0,False,differs (expected)
+larger_diffs,sens_cut_25_5,False,fog_only,60,60,0,False,differs (expected)
+larger_diffs,sens_cut_25_5,False,together,30,30,0,False,differs (expected)
+larger_diffs,sens_cut_25_5,False,conflict,30,30,0,False,differs (expected)
+larger_diffs,sens_cut_35_3,False,sat_only,60,60,1,False,differs (expected)
+larger_diffs,sens_cut_35_3,False,fog_only,60,60,0,False,differs (expected)
+larger_diffs,sens_cut_35_3,False,together,30,30,0,False,differs (expected)
+larger_diffs,sens_cut_35_3,False,conflict,30,30,0,False,differs (expected)
+both,sens_cut_25_5,True,sat_only,60,60,2,False,differs (expected)
+both,sens_cut_25_5,True,fog_only,60,60,60,True,same
+both,sens_cut_25_5,True,together,30,30,30,True,same
+both,sens_cut_25_5,True,conflict,30,30,30,True,same
+both,sens_cut_35_3,True,sat_only,60,60,43,False,differs (expected)
+both,sens_cut_35_3,True,fog_only,60,60,60,True,same
+both,sens_cut_35_3,True,together,30,30,30,True,same
+both,sens_cut_35_3,True,conflict,30,30,30,True,same
+sens_cut_25_5,sens_cut_35_3,True,sat_only,60,60,1,False,differs (expected)
+sens_cut_25_5,sens_cut_35_3,True,fog_only,60,60,60,True,same
+sens_cut_25_5,sens_cut_35_3,True,together,30,30,30,True,same
+sens_cut_25_5,sens_cut_35_3,True,conflict,30,30,30,True,same

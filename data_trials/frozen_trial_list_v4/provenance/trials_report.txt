@@ -1,0 +1,76 @@
+TRIAL LIST REPORT  (v4 axes, step 5) -- both
+======================================================================
+Pairs from  : data/pair_analysis_v4_ext/extended/all_pairs.csv
+Stimuli from: data/stimulus_set_v4_ext_haze_eq/stimuli
+Variant     : extended
+Colour cut  : |d_sat| >= 31.1 sat_mean units (0.794 SD)
+Bins        : fixed  sat_only 5; fog_only 3; together 3; conflict 3
+Counts      : 60 sat_only, 60 fog_only, 60 mixed (50% conflict)
+Extras      : 15 consistency, 10 catch, 6 practice
+Catch       : mode 'no_images'; exclude a participant failing 3 or more
+Conflict    : balanced subset only
+Scene cap   : 2 per type
+Streams     : per_type: 13 generators, each seeded from (seed 42, draw name)
+Seed        : 42  (+ 19 replicate draw(s) under seeds/, for step 6)
+
+  colour cut                           |d_sat| >= 31.1 (0.794 SD)
+  colour pairs after cut               3,768 of 6,282 (60%)
+  colour range dropped                 17.0-31.1 sat_mean units
+  bin mode                             fixed
+  sat_only bins dropped                bins [1, 2] empty, [] thin (<20); 3 usable, trials spread evenly over those
+  sat_only trials                      60
+  fog_only trials                      60
+  together trials                      30
+  conflict trials                      30
+  practice trials                      6 (2 fog_only, 2 sat_only, 2 together)
+  catch trials                         10
+  total trials                         211
+  analysed trials                      180
+  consistency (checked, not analysed)  15
+  r(d_sat, d_fog)                      -0.115
+  VIF                                  1.01
+  side balance (worst dev)             0.000
+  scenes used                          47
+  max trials from one scene            7
+  consistency min gap                  34
+  catch mode                           no_images
+  remeasure d_sat shift                0.000
+  preload images                       334 of 349
+  package images                       349
+  package size                         105.8 MB
+
+TRIALS BY TYPE
+trial_type
+fog_only       60
+sat_only       60
+conflict       30
+together       30
+consistency    15
+catch          10
+practice        6
+
+MAGNITUDE BINS (analysed trials)
+mag_bin      1   2   3   4   5
+trial_type                    
+conflict    10  10  10   0   0
+fog_only    20  20  20   0   0
+sat_only     0   0  20  20  20
+together    10  10  10   0   0
+
+  Bins are FIXED value ranges in corpus-SD units,
+  shared by every version, so bin 2 means the same
+  difference everywhere:
+    sat_only  edges (0.58, 0.79, 1.1, 1.8)
+    fog_only  edges (0.5894, 0.8259)
+    together  edges (0.5517, 0.8362)
+    conflict  edges (0.4506, 0.5714)
+  A bin holding fewer than 20 pairs is treated as
+  empty and its trials are spread evenly over the bins that
+  remain (EMPTY_BIN_RULE = 'spread'). Any bin dropped this way is
+  listed above.
+
+
+WHAT TO CHECK BY EYE
+  r(d_sat, d_fog) should be small: it is what decides
+  whether the two weights can be told apart. Above
+  about 0.6 they cannot.

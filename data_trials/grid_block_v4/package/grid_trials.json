@@ -1,0 +1,1455 @@
+{
+ "version": "v4-grid-1",
+ "built": "2026-10-19 12:38:17",
+ "stimulus_set": "data/stimulus_set_v4_ext_haze_eq",
+ "descriptive_only": true,
+ "blocks": [
+  {
+   "name": "episode",
+   "none_button": true,
+   "free_text_on_none": true,
+   "when": "after the pair trials"
+  },
+  {
+   "name": "normal",
+   "none_button": false,
+   "free_text_on_none": false,
+   "when": "at the end of the session"
+  }
+ ],
+ "set_assignment": {
+  "rule": "random_recorded",
+  "options": [
+   {
+    "code": 0,
+    "episode": "A",
+    "normal": "B"
+   },
+   {
+    "code": 1,
+    "episode": "B",
+    "normal": "A"
+   }
+  ]
+ },
+ "layout": {
+  "max_cell_px": 240,
+  "min_cell_px": 100,
+  "row_gap_px": 6,
+  "col_gap_px": 22,
+  "chrome_px": 190,
+  "page_side_px": 48,
+  "cell_chrome_px": 14,
+  "rows_per_screen": 3
+ },
+ "feature_sd": {
+  "sat_mean": 39.182,
+  "contrast_local": 9.348
+ },
+ "sets": {
+  "A": [
+   {
+    "screen": 1,
+    "feature": "fog",
+    "feature_measure": "contrast_local",
+    "column_order": "forward",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "h=0",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p35",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.0770954,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p25",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.140348,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p15",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.224495,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p10",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.286996,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p05",
+      "level_index": 5,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.387484,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "park_00001014",
+      "category": "park",
+      "images": [
+       "stimuli/park_00001014__ck1__fh0.png",
+       "stimuli/park_00001014__ck1__fp35.png",
+       "stimuli/park_00001014__ck1__fp25.png",
+       "stimuli/park_00001014__ck1__fp15.png",
+       "stimuli/park_00001014__ck1__fp10.png",
+       "stimuli/park_00001014__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       63.6719,
+       51.1309,
+       43.6065,
+       35.5682,
+       30.6599,
+       23.9606
+      ],
+      "contrast_local": [
+       30.2318,
+       25.7697,
+       22.6129,
+       18.9267,
+       16.5442,
+       13.1508
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.47734,
+       -0.81504,
+       -1.20936,
+       -1.46423,
+       -1.82724
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "apartment_building_outdoor_00004677",
+      "category": "apartment_building/outdoor",
+      "images": [
+       "stimuli/apartment_building_outdoor_00004677__ck1__fh0.png",
+       "stimuli/apartment_building_outdoor_00004677__ck1__fp35.png",
+       "stimuli/apartment_building_outdoor_00004677__ck1__fp25.png",
+       "stimuli/apartment_building_outdoor_00004677__ck1__fp15.png",
+       "stimuli/apartment_building_outdoor_00004677__ck1__fp10.png",
+       "stimuli/apartment_building_outdoor_00004677__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       69.6613,
+       56.9911,
+       49.1575,
+       40.6235,
+       35.0767,
+       27.7142
+      ],
+      "contrast_local": [
+       23.678,
+       20.1382,
+       17.6187,
+       14.7238,
+       12.8312,
+       10.201
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.37867,
+       -0.64819,
+       -0.95787,
+       -1.16034,
+       -1.4417
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "waiting_room_00002953",
+      "category": "waiting_room",
+      "images": [
+       "stimuli/waiting_room_00002953__ck1__fh0.png",
+       "stimuli/waiting_room_00002953__ck1__fp35.png",
+       "stimuli/waiting_room_00002953__ck1__fp25.png",
+       "stimuli/waiting_room_00002953__ck1__fp15.png",
+       "stimuli/waiting_room_00002953__ck1__fp10.png",
+       "stimuli/waiting_room_00002953__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       66.3531,
+       55.8103,
+       49.1383,
+       41.9242,
+       37.3712,
+       31.0715
+      ],
+      "contrast_local": [
+       21.9146,
+       19.0862,
+       16.989,
+       14.4839,
+       12.8047,
+       10.3568
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.30258,
+       -0.52692,
+       -0.7949,
+       -0.97453,
+       -1.2364
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 2,
+    "feature": "colour",
+    "feature_measure": "sat_mean",
+    "column_order": "forward",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p75",
+      "level_index": -1,
+      "is_original": false,
+      "chroma": 1.72953,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "k=1",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p25",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 0.651585,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p10",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 0.424693,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p05",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 0.320382,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p01",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 0.167949,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "elevator_lobby_00003261",
+      "category": "elevator_lobby",
+      "images": [
+       "stimuli/elevator_lobby_00003261__cp75__fh0.png",
+       "stimuli/elevator_lobby_00003261__ck1__fh0.png",
+       "stimuli/elevator_lobby_00003261__cp25__fh0.png",
+       "stimuli/elevator_lobby_00003261__cp10__fh0.png",
+       "stimuli/elevator_lobby_00003261__cp05__fh0.png",
+       "stimuli/elevator_lobby_00003261__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       127.1126,
+       86.066,
+       59.1567,
+       40.1675,
+       30.9972,
+       16.85
+      ],
+      "contrast_local": [
+       22.0946,
+       21.9924,
+       21.9544,
+       21.9278,
+       21.9193,
+       21.9183
+      ],
+      "sd_from_original": [
+       1.04759,
+       0.0,
+       -0.68678,
+       -1.17142,
+       -1.40546,
+       -1.76653
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "campus_00003823",
+      "category": "campus",
+      "images": [
+       "stimuli/campus_00003823__cp75__fh0.png",
+       "stimuli/campus_00003823__ck1__fh0.png",
+       "stimuli/campus_00003823__cp25__fh0.png",
+       "stimuli/campus_00003823__cp10__fh0.png",
+       "stimuli/campus_00003823__cp05__fh0.png",
+       "stimuli/campus_00003823__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       109.6455,
+       76.4619,
+       50.4127,
+       33.5458,
+       25.6537,
+       13.7371
+      ],
+      "contrast_local": [
+       26.7689,
+       27.0682,
+       26.9462,
+       26.9316,
+       26.9217,
+       26.9275
+      ],
+      "sd_from_original": [
+       0.84691,
+       0.0,
+       -0.66483,
+       -1.0953,
+       -1.29672,
+       -1.60086
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "shower_00000779",
+      "category": "shower",
+      "images": [
+       "stimuli/shower_00000779__cp75__fh0.png",
+       "stimuli/shower_00000779__ck1__fh0.png",
+       "stimuli/shower_00000779__cp25__fh0.png",
+       "stimuli/shower_00000779__cp10__fh0.png",
+       "stimuli/shower_00000779__cp05__fh0.png",
+       "stimuli/shower_00000779__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       107.3958,
+       74.1123,
+       51.6759,
+       35.5658,
+       27.6403,
+       15.2404
+      ],
+      "contrast_local": [
+       24.4963,
+       24.4675,
+       24.4427,
+       24.4315,
+       24.4334,
+       24.4363
+      ],
+      "sd_from_original": [
+       0.84946,
+       0.0,
+       -0.57262,
+       -0.98378,
+       -1.18605,
+       -1.50252
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 3,
+    "feature": "fog",
+    "feature_measure": "contrast_local",
+    "column_order": "reversed",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p05",
+      "level_index": 5,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.387484,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p10",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.286996,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p15",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.224495,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p25",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.140348,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p35",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.0770954,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "h=0",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "alley_00001206",
+      "category": "alley",
+      "images": [
+       "stimuli/alley_00001206__ck1__fp05.png",
+       "stimuli/alley_00001206__ck1__fp10.png",
+       "stimuli/alley_00001206__ck1__fp15.png",
+       "stimuli/alley_00001206__ck1__fp25.png",
+       "stimuli/alley_00001206__ck1__fp35.png",
+       "stimuli/alley_00001206__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       25.5264,
+       30.9026,
+       35.1216,
+       42.2712,
+       49.6792,
+       64.6283
+      ],
+      "contrast_local": [
+       9.0827,
+       11.7217,
+       13.697,
+       16.8733,
+       19.8193,
+       24.2483
+      ],
+      "sd_from_original": [
+       -1.62235,
+       -1.34004,
+       -1.12873,
+       -0.78894,
+       -0.47379,
+       0.0
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "lobby_00001554",
+      "category": "lobby",
+      "images": [
+       "stimuli/lobby_00001554__ck1__fp05.png",
+       "stimuli/lobby_00001554__ck1__fp10.png",
+       "stimuli/lobby_00001554__ck1__fp15.png",
+       "stimuli/lobby_00001554__ck1__fp25.png",
+       "stimuli/lobby_00001554__ck1__fp35.png",
+       "stimuli/lobby_00001554__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       35.6338,
+       41.7696,
+       46.2115,
+       53.2366,
+       59.8885,
+       71.1566
+      ],
+      "contrast_local": [
+       12.6752,
+       15.595,
+       17.5983,
+       20.5569,
+       22.9979,
+       26.2547
+      ],
+      "sd_from_original": [
+       -1.45267,
+       -1.14033,
+       -0.92602,
+       -0.60953,
+       -0.3484,
+       0.0
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "conference_room_00002730",
+      "category": "conference_room",
+      "images": [
+       "stimuli/conference_room_00002730__ck1__fp05.png",
+       "stimuli/conference_room_00002730__ck1__fp10.png",
+       "stimuli/conference_room_00002730__ck1__fp15.png",
+       "stimuli/conference_room_00002730__ck1__fp25.png",
+       "stimuli/conference_room_00002730__ck1__fp35.png",
+       "stimuli/conference_room_00002730__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       30.5715,
+       37.036,
+       41.4749,
+       48.2931,
+       54.2163,
+       64.3414
+      ],
+      "contrast_local": [
+       13.9488,
+       16.9491,
+       18.9698,
+       21.8543,
+       24.1943,
+       27.2556
+      ],
+      "sd_from_original": [
+       -1.42349,
+       -1.10253,
+       -0.88637,
+       -0.5778,
+       -0.32748,
+       0.0
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 4,
+    "feature": "colour",
+    "feature_measure": "sat_mean",
+    "column_order": "reversed",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p01",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 0.167949,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p05",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 0.320382,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p10",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 0.424693,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p25",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 0.651585,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "k=1",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p75",
+      "level_index": -1,
+      "is_original": false,
+      "chroma": 1.72953,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "auditorium_00001394",
+      "category": "auditorium",
+      "images": [
+       "stimuli/auditorium_00001394__cp01__fh0.png",
+       "stimuli/auditorium_00001394__cp05__fh0.png",
+       "stimuli/auditorium_00001394__cp10__fh0.png",
+       "stimuli/auditorium_00001394__cp25__fh0.png",
+       "stimuli/auditorium_00001394__ck1__fh0.png",
+       "stimuli/auditorium_00001394__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       21.362,
+       37.3594,
+       46.6206,
+       63.8929,
+       86.4249,
+       116.2602
+      ],
+      "contrast_local": [
+       24.6624,
+       24.6832,
+       24.6907,
+       24.7496,
+       24.9015,
+       25.0331
+      ],
+      "sd_from_original": [
+       -1.66053,
+       -1.25225,
+       -1.01588,
+       -0.57506,
+       0.0,
+       0.76145
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "courtyard_00004070",
+      "category": "courtyard",
+      "images": [
+       "stimuli/courtyard_00004070__cp01__fh0.png",
+       "stimuli/courtyard_00004070__cp05__fh0.png",
+       "stimuli/courtyard_00004070__cp10__fh0.png",
+       "stimuli/courtyard_00004070__cp25__fh0.png",
+       "stimuli/courtyard_00004070__ck1__fh0.png",
+       "stimuli/courtyard_00004070__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       17.5178,
+       31.8926,
+       40.876,
+       59.2515,
+       85.1256,
+       120.2953
+      ],
+      "contrast_local": [
+       23.9779,
+       23.9924,
+       23.9974,
+       24.0343,
+       24.1423,
+       24.2387
+      ],
+      "sd_from_original": [
+       -1.72548,
+       -1.35861,
+       -1.12934,
+       -0.66036,
+       0.0,
+       0.8976
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "japanese_garden_00001073",
+      "category": "japanese_garden",
+      "images": [
+       "stimuli/japanese_garden_00001073__cp01__fh0.png",
+       "stimuli/japanese_garden_00001073__cp05__fh0.png",
+       "stimuli/japanese_garden_00001073__cp10__fh0.png",
+       "stimuli/japanese_garden_00001073__cp25__fh0.png",
+       "stimuli/japanese_garden_00001073__ck1__fh0.png",
+       "stimuli/japanese_garden_00001073__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       12.5599,
+       23.7026,
+       31.2666,
+       47.4765,
+       72.5791,
+       110.4163
+      ],
+      "contrast_local": [
+       25.6978,
+       25.6881,
+       25.6834,
+       25.6827,
+       25.7408,
+       25.6542
+      ],
+      "sd_from_original": [
+       -1.53181,
+       -1.24742,
+       -1.05437,
+       -0.64067,
+       0.0,
+       0.96568
+      ]
+     }
+    ]
+   }
+  ],
+  "B": [
+   {
+    "screen": 1,
+    "feature": "fog",
+    "feature_measure": "contrast_local",
+    "column_order": "forward",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "h=0",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p35",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.0770954,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p25",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.140348,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p15",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.224495,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p10",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.286996,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p05",
+      "level_index": 5,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.387484,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "dining_hall_00001273",
+      "category": "dining_hall",
+      "images": [
+       "stimuli/dining_hall_00001273__ck1__fh0.png",
+       "stimuli/dining_hall_00001273__ck1__fp35.png",
+       "stimuli/dining_hall_00001273__ck1__fp25.png",
+       "stimuli/dining_hall_00001273__ck1__fp15.png",
+       "stimuli/dining_hall_00001273__ck1__fp10.png",
+       "stimuli/dining_hall_00001273__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       65.9553,
+       42.0192,
+       32.7305,
+       24.7339,
+       20.529,
+       15.5707
+      ],
+      "contrast_local": [
+       30.4505,
+       24.1376,
+       20.1303,
+       15.9707,
+       13.5005,
+       10.2795
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.67532,
+       -1.104,
+       -1.54897,
+       -1.81323,
+       -2.15779
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "laundromat_00004208",
+      "category": "laundromat",
+      "images": [
+       "stimuli/laundromat_00004208__ck1__fh0.png",
+       "stimuli/laundromat_00004208__ck1__fp35.png",
+       "stimuli/laundromat_00004208__ck1__fp25.png",
+       "stimuli/laundromat_00004208__ck1__fp15.png",
+       "stimuli/laundromat_00004208__ck1__fp10.png",
+       "stimuli/laundromat_00004208__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       68.7937,
+       57.8895,
+       50.4922,
+       42.1776,
+       36.769,
+       29.3147
+      ],
+      "contrast_local": [
+       23.6273,
+       20.3758,
+       18.0012,
+       15.2201,
+       13.3694,
+       10.7301
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.34783,
+       -0.60185,
+       -0.89936,
+       -1.09733,
+       -1.37967
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "elevator_lobby_00003556",
+      "category": "elevator_lobby",
+      "images": [
+       "stimuli/elevator_lobby_00003556__ck1__fh0.png",
+       "stimuli/elevator_lobby_00003556__ck1__fp35.png",
+       "stimuli/elevator_lobby_00003556__ck1__fp25.png",
+       "stimuli/elevator_lobby_00003556__ck1__fp15.png",
+       "stimuli/elevator_lobby_00003556__ck1__fp10.png",
+       "stimuli/elevator_lobby_00003556__ck1__fp05.png"
+      ],
+      "sat_mean": [
+       64.3985,
+       55.1241,
+       48.6516,
+       41.1548,
+       36.2335,
+       29.1771
+      ],
+      "contrast_local": [
+       21.6934,
+       18.9517,
+       16.9097,
+       14.4491,
+       12.7895,
+       10.38
+      ],
+      "sd_from_original": [
+       0.0,
+       -0.29329,
+       -0.51173,
+       -0.77495,
+       -0.95248,
+       -1.21024
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 2,
+    "feature": "colour",
+    "feature_measure": "sat_mean",
+    "column_order": "forward",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p75",
+      "level_index": -1,
+      "is_original": false,
+      "chroma": 1.72953,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "k=1",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p25",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 0.651585,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p10",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 0.424693,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p05",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 0.320382,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p01",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 0.167949,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "bedroom_00001289",
+      "category": "bedroom",
+      "images": [
+       "stimuli/bedroom_00001289__cp75__fh0.png",
+       "stimuli/bedroom_00001289__ck1__fh0.png",
+       "stimuli/bedroom_00001289__cp25__fh0.png",
+       "stimuli/bedroom_00001289__cp10__fh0.png",
+       "stimuli/bedroom_00001289__cp05__fh0.png",
+       "stimuli/bedroom_00001289__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       118.0484,
+       84.8429,
+       60.2236,
+       42.158,
+       33.1798,
+       18.5959
+      ],
+      "contrast_local": [
+       22.5145,
+       22.4619,
+       22.4247,
+       22.4006,
+       22.3931,
+       22.3907
+      ],
+      "sd_from_original": [
+       0.84747,
+       0.0,
+       -0.62833,
+       -1.0894,
+       -1.31854,
+       -1.69075
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "cafeteria_00002762",
+      "category": "cafeteria",
+      "images": [
+       "stimuli/cafeteria_00002762__cp75__fh0.png",
+       "stimuli/cafeteria_00002762__ck1__fh0.png",
+       "stimuli/cafeteria_00002762__cp25__fh0.png",
+       "stimuli/cafeteria_00002762__cp10__fh0.png",
+       "stimuli/cafeteria_00002762__cp05__fh0.png",
+       "stimuli/cafeteria_00002762__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       114.4047,
+       75.1915,
+       50.9013,
+       34.1448,
+       26.2264,
+       14.0425
+      ],
+      "contrast_local": [
+       27.3822,
+       27.3985,
+       27.3506,
+       27.3331,
+       27.3275,
+       27.348
+      ],
+      "sd_from_original": [
+       1.0008,
+       0.0,
+       -0.61993,
+       -1.04759,
+       -1.24968,
+       -1.56064
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "balcony_interior_00004440",
+      "category": "balcony/interior",
+      "images": [
+       "stimuli/balcony_interior_00004440__cp75__fh0.png",
+       "stimuli/balcony_interior_00004440__ck1__fh0.png",
+       "stimuli/balcony_interior_00004440__cp25__fh0.png",
+       "stimuli/balcony_interior_00004440__cp10__fh0.png",
+       "stimuli/balcony_interior_00004440__cp05__fh0.png",
+       "stimuli/balcony_interior_00004440__cp01__fh0.png"
+      ],
+      "sat_mean": [
+       106.9524,
+       75.6004,
+       50.89,
+       34.2272,
+       26.2459,
+       14.0719
+      ],
+      "contrast_local": [
+       23.918,
+       23.9206,
+       23.8714,
+       23.8898,
+       23.8911,
+       23.8828
+      ],
+      "sd_from_original": [
+       0.80016,
+       0.0,
+       -0.63066,
+       -1.05593,
+       -1.25962,
+       -1.57033
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 3,
+    "feature": "fog",
+    "feature_measure": "contrast_local",
+    "column_order": "reversed",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p05",
+      "level_index": 5,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.387484,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p10",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.286996,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p15",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.224495,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p25",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.140348,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "p35",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 1.0,
+      "haze": 0.0770954,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "h=0",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "downtown_00001598",
+      "category": "downtown",
+      "images": [
+       "stimuli/downtown_00001598__ck1__fp05.png",
+       "stimuli/downtown_00001598__ck1__fp10.png",
+       "stimuli/downtown_00001598__ck1__fp15.png",
+       "stimuli/downtown_00001598__ck1__fp25.png",
+       "stimuli/downtown_00001598__ck1__fp35.png",
+       "stimuli/downtown_00001598__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       22.6187,
+       28.0228,
+       32.1513,
+       39.3908,
+       47.18,
+       64.0992
+      ],
+      "contrast_local": [
+       9.2329,
+       11.8421,
+       13.784,
+       16.8647,
+       19.6741,
+       23.8206
+      ],
+      "sd_from_original": [
+       -1.56051,
+       -1.2814,
+       -1.07366,
+       -0.74411,
+       -0.44357,
+       0.0
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "train_interior_00004637",
+      "category": "train_interior",
+      "images": [
+       "stimuli/train_interior_00004637__ck1__fp05.png",
+       "stimuli/train_interior_00004637__ck1__fp10.png",
+       "stimuli/train_interior_00004637__ck1__fp15.png",
+       "stimuli/train_interior_00004637__ck1__fp25.png",
+       "stimuli/train_interior_00004637__ck1__fp35.png",
+       "stimuli/train_interior_00004637__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       25.3895,
+       32.794,
+       38.2385,
+       47.293,
+       55.7399,
+       69.7375
+      ],
+      "contrast_local": [
+       10.5073,
+       13.4518,
+       15.6027,
+       19.0439,
+       22.11,
+       26.6242
+      ],
+      "sd_from_original": [
+       -1.7241,
+       -1.40912,
+       -1.17903,
+       -0.81091,
+       -0.48291,
+       0.0
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "restaurant_00000867",
+      "category": "restaurant",
+      "images": [
+       "stimuli/restaurant_00000867__ck1__fp05.png",
+       "stimuli/restaurant_00000867__ck1__fp10.png",
+       "stimuli/restaurant_00000867__ck1__fp15.png",
+       "stimuli/restaurant_00000867__ck1__fp25.png",
+       "stimuli/restaurant_00000867__ck1__fp35.png",
+       "stimuli/restaurant_00000867__ck1__fh0.png"
+      ],
+      "sat_mean": [
+       25.9832,
+       32.5243,
+       37.2566,
+       45.0833,
+       52.4635,
+       66.4343
+      ],
+      "contrast_local": [
+       11.718,
+       14.7513,
+       16.9065,
+       20.2427,
+       23.0955,
+       27.1402
+      ],
+      "sd_from_original": [
+       -1.64979,
+       -1.3253,
+       -1.09475,
+       -0.73786,
+       -0.43268,
+       0.0
+      ]
+     }
+    ]
+   },
+   {
+    "screen": 4,
+    "feature": "colour",
+    "feature_measure": "sat_mean",
+    "column_order": "reversed",
+    "columns": [
+     {
+      "display_column": 1,
+      "column_label": "p01",
+      "level_index": 4,
+      "is_original": false,
+      "chroma": 0.167949,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 2,
+      "column_label": "p05",
+      "level_index": 3,
+      "is_original": false,
+      "chroma": 0.320382,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 3,
+      "column_label": "p10",
+      "level_index": 2,
+      "is_original": false,
+      "chroma": 0.424693,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 4,
+      "column_label": "p25",
+      "level_index": 1,
+      "is_original": false,
+      "chroma": 0.651585,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 5,
+      "column_label": "k=1",
+      "level_index": 0,
+      "is_original": true,
+      "chroma": 1.0,
+      "haze": 0.0,
+      "gain": 1.0
+     },
+     {
+      "display_column": 6,
+      "column_label": "p75",
+      "level_index": -1,
+      "is_original": false,
+      "chroma": 1.72953,
+      "haze": 0.0,
+      "gain": 1.0
+     }
+    ],
+    "rows": [
+     {
+      "row": 1,
+      "scene_id": "dining_room_00003076",
+      "category": "dining_room",
+      "images": [
+       "stimuli/dining_room_00003076__cp01__fh0.png",
+       "stimuli/dining_room_00003076__cp05__fh0.png",
+       "stimuli/dining_room_00003076__cp10__fh0.png",
+       "stimuli/dining_room_00003076__cp25__fh0.png",
+       "stimuli/dining_room_00003076__ck1__fh0.png",
+       "stimuli/dining_room_00003076__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       18.9509,
+       33.9082,
+       43.2933,
+       62.0322,
+       88.7367,
+       123.0979
+      ],
+      "contrast_local": [
+       24.7243,
+       24.7333,
+       24.7445,
+       24.7788,
+       24.8746,
+       24.9736
+      ],
+      "sd_from_original": [
+       -1.78107,
+       -1.39933,
+       -1.1598,
+       -0.68155,
+       0.0,
+       0.87696
+      ]
+     },
+     {
+      "row": 2,
+      "scene_id": "bathroom_00001909",
+      "category": "bathroom",
+      "images": [
+       "stimuli/bathroom_00001909__cp01__fh0.png",
+       "stimuli/bathroom_00001909__cp05__fh0.png",
+       "stimuli/bathroom_00001909__cp10__fh0.png",
+       "stimuli/bathroom_00001909__cp25__fh0.png",
+       "stimuli/bathroom_00001909__ck1__fh0.png",
+       "stimuli/bathroom_00001909__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       18.8213,
+       33.5072,
+       42.5902,
+       60.5176,
+       83.8047,
+       114.5017
+      ],
+      "contrast_local": [
+       23.5412,
+       23.5578,
+       23.5482,
+       23.5597,
+       23.6144,
+       23.6166
+      ],
+      "sd_from_original": [
+       -1.6585,
+       -1.28369,
+       -1.05188,
+       -0.59433,
+       0.0,
+       0.78344
+      ]
+     },
+     {
+      "row": 3,
+      "scene_id": "computer_room_00001489",
+      "category": "computer_room",
+      "images": [
+       "stimuli/computer_room_00001489__cp01__fh0.png",
+       "stimuli/computer_room_00001489__cp05__fh0.png",
+       "stimuli/computer_room_00001489__cp10__fh0.png",
+       "stimuli/computer_room_00001489__cp25__fh0.png",
+       "stimuli/computer_room_00001489__ck1__fh0.png",
+       "stimuli/computer_room_00001489__cp75__fh0.png"
+      ],
+      "sat_mean": [
+       14.0284,
+       25.9675,
+       33.7419,
+       49.6818,
+       72.1963,
+       109.0907
+      ],
+      "contrast_local": [
+       25.8456,
+       25.8564,
+       25.8474,
+       25.8832,
+       25.9198,
+       25.947
+      ],
+      "sd_from_original": [
+       -1.48456,
+       -1.17985,
+       -0.98143,
+       -0.57462,
+       0.0,
+       0.94161
+      ]
+     }
+    ]
+   }
+  ]
+ }
+}
