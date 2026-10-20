@@ -1,5 +1,14 @@
 # How the v4 experiment stimuli were selected, edited and measured
 
+> **Status (20 Oct 2026): partly superseded.** This document is still the reference for the
+> parts that did not change: the corpus and scene selection, the two manipulations and their
+> order, the image sizes and the pair types. It is **out of date** on: the manipulation levels
+> (levels above the original were added), the band-sweep table (wrong for four of five rows),
+> the fog manipulation (it is a contrast reduction with an accompanying loss of colour, not
+> haze), the grid blocks, and the trial list (now frozen, 211 trials). For all of these, and
+> for the statement on display rescaling (the within-pair ratio survives only *linear*
+> rescaling, and display gamma is not linear), see `v4_stimulus_power_explained.md`.
+
 This document explains, for a reader with no other context, how the stimuli for
 the v4 image experiment were built: which photographs were chosen, how they were
 edited along two visual dimensions, how the edits were calibrated, and what was

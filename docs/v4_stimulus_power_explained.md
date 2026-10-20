@@ -5,8 +5,10 @@ work on the v4 image experiment: the changes made to the stimulus pipeline befor
 preregistration, the two new steps that chose and froze the trial list, the grid
 blocks, and the design analysis that produced the registered decision rules.
 
-- **Project folder:** all paths are relative to the project folder
-  (`drl2drv_updated/`). Scripts are in its pipeline folder.
+- **Project folder:** all paths are relative to the project folder, which holds
+  every script at its top level and all data under `data/`. In the repository
+  the scripts are in `stimulus_power_pipeline/`, and selected outputs are under
+  `data_power_v4/` (see the repository README).
 - **Script conventions:** every script is standalone, with a SETTINGS block at
   the top and no command-line arguments. Each writes to its own output folder, a
   report (`*_report.txt`), and never overwrites an existing result — a second run
@@ -28,7 +30,7 @@ blocks, and the design analysis that produced the registered decision rules.
 |---|---|---|
 | 1 | What this round changed, and why | – |
 | 2 | Units: the idea the whole round turns on | – |
-| 3 | Step 1: levels above the original | `calibrate_levels_v4.py` |
+| 3 | Step 1: levels above the original | `calibrate_levels_v4_corrected.py` |
 | 4 | Step 2: the band-sweep correction | `select_scenes_v4_corrected.py`, `make_screening_page_corrected.py` |
 | 5 | Step 3: the cell plan, and what each image is for | `build_stimulus_set_v4_corrected.py` |
 | 6 | Step 4: oriented predictors | `analyse_pairs_v4_corrected.py` |
@@ -37,7 +39,8 @@ blocks, and the design analysis that produced the registered decision rules.
 | 9 | Step 6b: does the choice survive lapses? | `check_robustness_v4.py` |
 | 10 | Step 7a: freezing the list | `freeze_trial_list_v4.py` |
 | 11 | Step 7b: the grid blocks | `build_grid_block_v4.py` |
-| 12 | Step 8: the design analysis | `simulate_power_v4.py` |
+| 11b | The final stimuli scored on the CLIP axes | `score_stimuli_on_axes_v4.py` |
+| 12 | Step 8: the design analysis | `simulate_power_v4_corrected.py`, `simulate_power_v4_n10_20.py`, `registration_table_v4.py` |
 | 13 | The registered design in numbers | (from the reports) |
 | 14 | Known properties and limitations | – |
 | 15 | Directory map | – |
@@ -132,7 +135,7 @@ rescaling the predictors, so the corpus-SD scaling does not change the inference
 
 ## 3. Step 1: levels above the original
 
-**Script:** `calibrate_levels_v4.py`. **Output:** `data/levels_v4_ext/`.
+**Script:** `calibrate_levels_v4_corrected.py`. **Output:** `data/levels_v4_ext/`.
 
 The mechanism is unchanged (stimulus document, section 3): a rung is the
 parameter at which the median image's measured feature reaches a named corpus
@@ -209,6 +212,16 @@ computed correctly.
 
 The screening tool changed only in `BASE_DIR`, which follows the selection output
 folder because the page references its crops by relative path.
+
+**Where the screened scene list comes from.** The committed step-2 script is set
+to `SWEEP_ONLY = True`: it re-runs the band sweep and stops, writing no shortlist
+and no worksheet. The hand-screened list that step 3 reads,
+`data/select_scenes_v4_ext/screening_list_done.csv`, is therefore **the list from
+the earlier full run of step 2**, screened by hand then and copied into the
+`_ext` folder unchanged. That run's settings are recorded in its own report; the
+committed `N_CANDIDATES`, `N_FINAL` and `MAX_PER_CATEGORY` carry the earlier
+values in trailing comments. Setting `SWEEP_ONLY = False` reproduces the full
+pipeline if scenes ever need to be re-selected.
 
 ---
 
@@ -833,12 +846,99 @@ constant amount of anything: on the shipped screens the first colour step up is
 
 ---
 
+## 11b. The final stimuli scored on the CLIP axes
+
+**Script:** `score_stimuli_on_axes_v4.py`. **Output:** `data/stimulus_axes_v4/`
+(committed under `data_power_v4/stimulus_axes_v4/`).
+
+The design assumes the contrast edit reads as "fog" and the colour edit as
+"dull, less vivid", and that neither simply reads as the other. An earlier
+manipulation sweep tested this on 150 other photographs; this step tests the
+**2,115 images participants will see** (47 scenes × 45 cells), encoded exactly as
+the corpus was (un2CLIP, its own projection, the same preprocessing) and scored on
+the nine v4 axes, their `v4@nocontrol` versions and the control directions.
+
+- **Change** is each cell minus the same scene's unedited image, in corpus-SD
+  units of each axis. **Intervals** come from 2,000 resamples of scenes; they
+  describe scenes like these 47 hand-screened ones and are not corrected for
+  multiple comparisons, because these are descriptive checks.
+- **Validity:** all 19 checks pass. Corpus images re-encode to their stored rows
+  (minimum cosine 0.9999999) and reproduce their stored axis scores within
+  4.9e-06; each scene's unedited stimulus agrees with the stored embedding of its
+  photograph at cosine 0.9975–1.0000; `pred_sat` and `pred_fog` recomputed from
+  the stimuli equal the trial list's.
+- **CLIP is not a human observer.** These results say how the edits move the
+  text-defined concepts, not what participants will see.
+
+**The pre-stated questions.** Each level is classed as *shown*, *not shown* or
+*reversed*; a question passes if every level is shown and fails if any is
+reversed.
+
+| question | verdict |
+|---|---|
+| (a) every fog level, at the original colour, raises fog (A07) more than dull (A13) | **fails**: reversed at p35–p10, not shown at p05 |
+| (b) every colour level below the original raises dull (A13) more than fog (A07) | passes |
+| (c) the colour levels above the original lower dull (A13) | passes |
+| (d) every fog level moves fog (A07) more than flat (A11) and lifeless (A14) | passes |
+
+The verdicts do not change when each axis is scaled by its SD over colour images
+only; under `v4@nocontrol`, (a) still fails and (d) becomes partial.
+
+**Why (a) fails: the fog edit also drains colour.** At the original colour, the
+contrast edit lowers saturation by about two thirds as many corpus SD as it
+lowers local contrast (at p05: −1.06 SD of `sat_mean` against −1.59 SD of
+`contrast_local`). CLIP therefore reads the fog column as dull about as much as
+foggy, and the lighter fog levels read first as "like a picture or film set" and
+"like a simulation"; the heaviest also reads as "a worse photo". **The fog
+manipulation is best described as a contrast reduction with an accompanying loss
+of colour**, not as pure fog.
+
+**The colour edit is specific.** It moves "dull, less vivid" in both directions
+(down for more vivid levels, up for less vivid ones), and 57–70% of all the
+change falls on that one axis.
+
+**The measured features are specific, and they are what the analysis uses.**
+Within each scene, regressing each axis's change on the measured feature changes
+gives, per corpus SD of the feature: local-contrast loss moves fog (A07) by +0.42
+and dull (A13) by −0.01; saturation loss moves dull by +1.10. On the **180
+analysed trials**, with the other predictor held fixed, `pred_fog` tracks fog
+over dull by +0.57 [0.46, 0.68] and `pred_sat` tracks dull over fog by +0.60
+[0.50, 0.70]. The pair trials escape the problem in (a) because a fog-only pair
+combines its two fog levels with colour levels chosen so that the two images'
+`sat_mean` matches within 3 units: the colour the contrast edit drains is
+balanced inside the pair.
+
+**Two consequences.** The grid's fog screen shows the fog levels at the original
+colour, so its columns lose colour as well as contrast (section 14). And the
+"worse photo" and "picture" readings make a "pick the more edited image" strategy
+plausible, which is why C1 is planned with a quarter of both groups using it.
+
+---
+
 ## 12. Step 8: the design analysis
 
-**Script:** `simulate_power_v4.py`. **Output:** `data/power_v4/`.
+**Scripts:** `simulate_power_v4_corrected.py` (the original run) and
+`simulate_power_v4_n10_20.py` (the same script with five settings changed, rerun
+over N = 10..20), then `registration_table_v4.py`, which runs no simulation and
+selects the registered rule from the rerun's sweep.
+**Outputs:** `data/power_v4/`, `data/power_v4_n10_20/` and
+`data/registration_v4/`.
 
-Rewritten rather than edited. It runs on the frozen list after verifying its
-checksums, and it produces the figures that go into the preregistration.
+`simulate_power_v4_corrected.py` was rewritten rather than edited. It runs on the frozen
+list after verifying its checksums, and it produces the figures that go into the
+preregistration. The rerun is a copy of it with **five values changed** —
+`OUTPUT_ROOT`, `SAMPLE_SIZES`, `RULE_SUMMARY_N`, `C1_PARTICIPANT_N` and
+`C1_CONTROL_ABSOLUTE` — and not one line of code or comment, so the two runs are
+comparable by construction.
+
+The registered figures in this document and in section 13 come from the rerun and
+the registration table, **not** from the original run, whose sample-size grid
+skipped N = 11, 13, 17, 18 and 19 — and a rule fixed per N cannot have a hole in
+it. The two input files the registration table read are recorded by their
+SHA-256 in its `run_meta.json`:
+
+- `rule_sweep.csv` — `0d5d03282c954924…`
+- `c1_power.csv` — `f7033f3160e9fe4d…`
 
 ### Per-person classification, in both directions
 
@@ -870,12 +970,118 @@ Candidate rules take the form **"at least *k* detections in the predicted
 direction and at most *m* in the opposite direction"**. Three families were
 swept:
 
-- **count-absolute** — degenerates as N grows, since a fixed count becomes
-  trivially easy;
-- **count-proportional** — the family the registered rule comes from;
+- **count-absolute** — a fixed count degenerates as N grows, since it becomes
+  trivially easy. That is a reason not to register it at a large N, and the
+  registered range stops at 20, where the two count families overlap heavily:
+  at N = 15, `floor(0.20 × 15) = 3`, so "m ≤ 3" is one rule under two names with
+  identical power and identical false-claim rates. It is therefore **searched**
+  rather than excluded, because excluding it would silently resolve ties that
+  the stated tie-break should resolve;
+- **count-proportional** — the family the registered rule comes from, and the
+  one a rule expressible both ways is reported as;
 - **the sign test** — bounded by alpha by construction, and unable to fire at all
-  below 5 detections. **Not registered**, and the report says why rather than
-  leaving its absence unexplained.
+  below 5 detections. **Not registered**, but computed at every N and reported
+  as a **robustness comparison**.
+
+### The registered rule
+
+**The count rule alone, calibrated at each N from 10 to 20, with no switch to
+anything else.** Section 13 is the table, and it is the authoritative statement
+of the rule and of its power.
+
+A combination — the count rule below a switch point and the sign test from it —
+was considered first and rejected. The case for it was that the count rule can
+*lose* power as N grows: when m = 0 a single opposite-direction detection vetoes
+the claim, so every non-responder added is another chance of that veto. **That is
+true of the m = 0 rule and of no other.** It was read off a summary cell — a weak
+effect with a quarter of participants responding — in which the rule selected
+happened to be the m = 0 one and in which neither rule reaches useful power
+anyway.
+
+Selected instead in the **planning cell** — half the participants responding, a
+moderate effect, lapse 0.1 — the chosen rule has m > 0 from N = 11 on, and the
+sign test does not overtake it at any N in 10..20, for either feature, in
+either the planning or the robustness cell. The margin is at least **+0.037** on
+colour and **+0.010** on fog. The scan behind that statement is still computed
+and reported, because it is the evidence for registering the count rule rather
+than an assertion that it is better.
+
+### Ties, and how they are broken
+
+Two rules whose planning-cell power differs by less than **0.01** are treated as
+*tied*. With 2,000 simulated studies per cell, a power near 0.93 carries a Monte
+Carlo standard error of about 0.006, so the more powerful rule by a thousandth is
+not reliably the more powerful rule, and taking the nominal winner would register
+a choice made by noise.
+
+Among the tied, the rule with the **lowest upper-bound worst false-claim rate**
+is taken, then the smaller m, then the smaller k, then the family. The measured
+rate comes first because it *is* the quantity a stricter rule is wanted for; a
+smaller m is a proxy for it that can disagree — at fog N = 20 the proxy would
+choose `k ≥ 5, m ≤ 1` over `k ≥ 7, m ≤ 3`, which tolerates fewer
+opposite-direction detections but also requires fewer same-direction ones, so it
+is not unambiguously the stricter rule.
+
+On the registered run the tie-break decided **five** selections — colour at
+N = 11, 15 and 19, fog at N = 11 and 20 — at a cost of at most **0.007215** of
+power, which is inside the simulation's own error. A further **39** firings were
+one rule appearing under both family names, with identical k, m, power and
+false-claim rate; those are bookkeeping and are recorded as such rather than
+reported as decisions.
+
+Both orders were run, and they **selected the same rule in every cell at every
+N**: in each of the five, the rule with the smaller m also carried the lower
+false-claim rate, so the proxy and the measurement agreed. The ordering is
+therefore a statement of principle on this run rather than a change of rule. It
+is stated because a future run could have the two disagree, and then the
+registered rule must not depend on which of them was written down first.
+
+### Integer calibration: the power does not rise monotonically
+
+The rule is re-selected at every N under the false-claim ceiling, and the
+threshold m can only take integer values. Where the ceiling forces a stricter m,
+the power **falls even though N grew** — most visibly at N = 13, where m drops
+from 2 to 1 and power falls by 0.066 on colour and 0.034 on fog, and at N = 20 on
+fog, where the twentieth participant lowers power from 0.825 to 0.797.
+
+This is a property of calibrating an integer threshold against a fixed error
+rate, not a defect in the rule and not a reason to prefer a smaller N. **Power is
+quoted per N from the table in section 13, which is authoritative**, so nothing
+in the registered analysis depends on the sequence being monotone. What is *not*
+available is the claim that another participant always helps.
+
+### Headroom under the false-claim target
+
+The target is **0.05 on the upper bound** of the 95% Monte Carlo interval, and it
+is not tightened. The upper bound is itself the safeguard against a selection
+made by simulation noise, so a rule that clears it is certified however thin the
+margin. The margin is nevertheless reported for every N, in the `false_headroom` column
+of `registration_table.csv` and in section 13.
+
+Three registered rules sit above 0.045 and are marked:
+
+| | rule | upper bound | point estimate | margin |
+|---|---|---|---|---|
+| colour N = 18 | `k ≥ 6, m ≤ 2` | 0.04933 | 0.04739 | **0.00067** |
+| fog N = 12 | `k ≥ 5, m ≤ 2` | 0.04755 | 0.04496 | **0.00245** |
+| fog N = 17 | `k ≥ 5, m ≤ 1` | 0.04516 | 0.04491 | **0.00484** |
+
+Each is admissible as registered. None is a reason to change the rule; each is a
+reason not to describe the false-claim rate as comfortably under the target at
+those sizes.
+
+### What the tuning costs
+
+The rule is calibrated at one cell, so the planning-cell power is its best case.
+`registration_table.csv` therefore carries both rules' power in two further
+cells at every N — the weaker equal-behaviour pair at half share
+(`cost_lower_half`), and the planning weights at a quarter share
+(`cost_planning_qtr`), both at lapse 0.1. In both, **the sign test would
+outperform the registered rule for colour from N = 15**; for fog the count rule
+stays ahead throughout. That belongs beside the registered power, not behind
+it: the planning cell is registered because it is the scenario in which a study
+of 10 to 20 participants can succeed at all, not because it is the only
+one considered.
 
 Each rule was scored for **false-claim rate** under random choosers and under
 each taste spread, and for **power** under each effect scenario, per feature and
@@ -890,12 +1096,18 @@ set, including a taste spread as wide as the floor itself.
 **Admissibility carries a Monte Carlo margin.** A rule is admissible only if the
 **upper bound of a 95% interval** for its false-claim rate clears the target, not
 the point estimate. The standard error comes from the delta method, with
-`SE(p) = sqrt(p(1−2p)/(2N))` for the symmetrised trinomial rate. On the final
-run this moved **9 selections**: for example strict / colour / N = 12, where the
-point estimate 0.0498 has an upper bound of 0.05023, so the rule `k ≥ 3, m ≤ 0`
-is replaced by `k ≥ 4, m ≤ 0` at a power cost of 0.112. Strict on its own set
-scores **0.04826** and all 72 tabulated rules clear the target on the upper
-bound.
+`SE(p) = sqrt(p(1−2p)/(2N))` for the symmetrised trinomial rate.
+
+*What the margin moved, in the original step-8 run.* That run selected its rules
+in the earlier summary cell (a weak effect, a quarter responding), and there the
+margin moved **9 selections**: for example strict / colour / N = 12, where the
+point estimate 0.0498 has an upper bound of 0.05023, so `k ≥ 3, m ≤ 0` was
+replaced by `k ≥ 4, m ≤ 0`. Strict on its own set scored **0.04826**, and all
+72 rules of that run's decision table cleared the target on the upper bound.
+Those are **not** the registered rules: the registered rules are selected in the
+planning cell from the N = 10..20 rerun ("The registered rule" above and
+section 13), where the same margin is applied, and at N = 12 the registered
+colour rule is `k ≥ 5, m ≤ 2`.
 
 **A two-stage control-based alternative was costed and rejected.** It would have
 estimated the taste spread from the control group and then chosen the standard
@@ -948,6 +1160,47 @@ joint (γ, α) posterior does **not** identify the pair — a true γ of 0 gives
 posterior mode of 0.86 — which is why the reparameterisation is necessary rather
 than cosmetic.
 
+**What that check does and does not establish.** The worst deviation of 0.000000
+is a statement that the estimator is unbiased **by construction under its own
+model**, verified by exact enumeration over the joint (predicted, opposite)
+counts. It is arithmetic, not evidence: it says the algebra is right, not that
+the model holds of real participants. It should not be reported as an empirical
+validation.
+
+**The enumeration assumes one sensitivity.** It divides by the detection rate of
+a **weak responder, 0.30/SD**, interpolated from this run's own detection curve
+at lapse 0. A prevalence estimate is only as good as the sensitivity it divides
+by, and reporting it at a single value states the result as if that value were
+known. The three strengths bracket it:
+
+| responder | weight | colour sensitivity | fog sensitivity |
+|---|---|---|---|
+| weak | 0.30/SD | 0.50 | 0.22 |
+| moderate | 0.50/SD | 0.86 | 0.51 |
+| strong | 0.70/SD | 0.99 | 0.79 |
+
+**The registered form.** Prevalence is reported as (a) the **counts** in each
+direction, per feature, which assume nothing, and (b) the **estimate under each
+of the three sensitivities above**, each with its interval, labelled with the
+sensitivity assumed. No "excludes zero" inference is drawn from any of them. The
+fog column of that table is systematically lower than the colour column for the
+reason in section 14: the same person is detected less often on fog, so the same
+count divides by a smaller number.
+
+**How wide the interval is.** From `prevalence_estimated.csv` of the N = 10..20
+rerun, at the weak-responder sensitivity and a taste spread of 0.5× the threshold,
+the expected width of the 95% interval (`E_hpdi_hi − E_hpdi_lo`), on a 0–1 scale:
+
+| true prevalence | colour, N = 10 | colour, N = 20 | fog, N = 10 | fog, N = 20 |
+|---|---|---|---|---|
+| 0 | 0.54 | 0.37 | 0.85 | 0.74 |
+| 0.25 | 0.67 | 0.58 | 0.87 | 0.80 |
+| 0.50 | 0.79 | 0.71 | 0.88 | 0.83 |
+
+At these sample sizes the interval covers most of the possible range, and for fog
+almost all of it. That is the practical reason prevalence is descriptive only:
+it locates the result roughly, it does not measure it.
+
 ### The control group (C1)
 
 Controls do the same task, imagining how the world looks to someone experiencing
@@ -967,6 +1220,77 @@ size, and the null-evidence figures were regenerated with that same one-sided
 factor. An earlier version declared a one-sided setting and never used it, so the
 quoted factors were two-sided; the rewritten form agrees with an independent
 g-integral formulation to 3e-11.
+
+#### C1 at the sizes that could be recruited
+
+`c1_compact.csv`, at **one fully stated scenario**. Every scenario dimension is
+fixed — effect size, responder share, strategy rate and both lapse rates — and
+the figures must not be averaged across them: `c1_power.csv` crosses 13
+effect/feature/share combinations with 3 strategy rates and 7 lapse pairs, which
+answer different questions. The full filtered set is in `c1_cells.csv` and is
+not a table to read.
+
+**The strategy rate is 0.25**: a quarter of both groups answer by picking the
+more edited image. That is the planning assumption for C1, because the axis
+scoring (section 11b) shows that hazier and less colourful images also read as
+"a worse photo" and "more like a picture", so the strategy is plausible. An
+earlier version of this table assumed nobody used it, which is the best case.
+
+**effect on colour** — 0.5/SD (p = 0.6191), share 0.5, strategy 0.25, lapse 0.1/0.1
+
+| participants | 20 controls | 30 controls | 40 controls |
+|---|---|---|---|
+| 10 | 0.354 | 0.412 | 0.422 |
+| 15 | 0.434 | 0.519 | 0.553 |
+| 20 | 0.509 | 0.606 | 0.632 |
+
+The figure is `power_colour_gated`: the Holm-corrected colour test, counted
+after the attention gate.
+
+**effect on fog** — 0.7/SD (p = 0.6104), share 0.5, strategy 0.25, lapse 0.1/0.1
+
+| participants | 20 controls | 30 controls | 40 controls |
+|---|---|---|---|
+| 10 | 0.348 | 0.402 | 0.438 |
+| 15 | 0.440 | 0.522 | 0.532 |
+| 20 | 0.497 | 0.574 | 0.655 |
+
+The figure is `power_fog_gated`, on the same basis.
+
+**no effect anywhere** — share 0.5, strategy 0.25 in both groups, lapse 0.1/0.1.
+This is the **false-positive rate**, and it is reported beside the power because
+a group comparison without it is half a statement.
+
+| participants × controls | colour | fog | either |
+|---|---|---|---|
+| 10 × 20 | 0.0225 | 0.0235 | 0.0420 |
+| 10 × 30 | 0.0205 | 0.0275 | 0.0420 |
+| 10 × 40 | 0.0225 | 0.0235 | 0.0415 |
+| 15 × 20 | 0.0235 | 0.0165 | 0.0350 |
+| 15 × 30 | 0.0195 | 0.0240 | 0.0395 |
+| 15 × 40 | 0.0230 | 0.0235 | 0.0415 |
+| 20 × 20 | 0.0255 | 0.0260 | 0.0460 |
+| 20 × 30 | 0.0255 | 0.0210 | 0.0405 |
+| 20 × 40 | 0.0225 | 0.0195 | 0.0375 |
+
+**What ten more controls buy.** From 20 participants and 30 controls to 40
+controls:
+
+- colour: 0.606 → 0.632 (**+0.026**)
+- fog: 0.574 → 0.655 (**+0.081**)
+
+The gain is larger on fog than on colour, which is the argument for recruiting
+40 controls if they are available. At 20 participants, ten more controls buy
+about as much on fog as five more participants would.
+
+Two properties of the no-effect grid are worth naming. The per-feature rate sits
+between **0.017 and 0.028** and the two-feature disjunction between **0.035 and
+0.046**, so Holm is holding the familywise rate where it should rather than
+leaving the pair of tests to inflate it. And **there is no cross-feature
+leakage**: when the effect is on colour, the fog test fires at 0.027–0.046, and
+when it is on fog, the colour test fires at 0.035–0.046 — both at the null rate
+in the table above. A C1 result therefore names a feature, which is what the
+specificity claim needs.
 
 ### The attention gate
 
@@ -1035,10 +1359,59 @@ threshold ratio                 1.70   (1.68 predicted from trial information)
 admissibility standard        strict   {0.25, 0.5, 0.75, 1.0} x floor
                                        certified on the upper bound of a 95% MC interval
 strict rate on its own set   0.04826
+registered rule          the count rule alone, calibrated per N, no switch
+participants              10 to 20   maximum 20 or the end date, whichever first
+controls                        30   40 if they are easy to recruit
+C1 power, 30 controls          colour 0.41 / 0.52 / 0.61, fog 0.40 / 0.52 / 0.57
+                                       at 10 / 15 / 20 participants; half responding,
+                                       a quarter of both groups using the strategy
+analysis                    single   no sequential stopping
 grid block                 2 blocks x 4 screens x 3 rows, 6 columns per screen
 grid scene sets            2 x 12, matched pairs, swapped between participants
 grid package                    144   images, 43.7 MB
 ```
+
+### The registered rule at each N
+
+**These are the authoritative power figures.** Each row is fixed before the data
+arrive and depends only on the final number of analysable participants, which is
+set by a maximum N and an end date, never by a result. Power is at the planning
+cell: half the participants responding, colour 0.50/SD (p = 0.6191 on a typical
+informative trial), fog 0.70/SD (p = 0.6104), lapse 0.1. "Margin" is how far
+the rule's upper-bound worst false-claim rate sits below the 0.05 target; ⚠ marks
+a margin under 0.005.
+
+| N | colour rule | colour power | margin | fog rule | fog power | margin |
+|---|---|---|---|---|---|---|
+| 10 | k >= 4, m <= 0 | 0.591 | 0.0276 | k >= 4, m <= 0 | 0.443 | 0.0271 |
+| 11 | k >= 5, m <= 2 | 0.834 | 0.0172 | k >= 5, m <= 2 | 0.565 | 0.0149 |
+| 12 | k >= 5, m <= 2 | 0.841 | 0.0053 | k >= 5, m <= 2 | 0.584 | 0.0024 ⚠ |
+| 13 | k >= 5, m <= 1 | 0.775 | 0.0157 | k >= 5, m <= 1 | 0.550 | 0.0144 |
+| 14 | k >= 5, m <= 1 | 0.861 | 0.0112 | k >= 5, m <= 1 | 0.703 | 0.0101 |
+| 15 | k >= 6, m <= 3 | 0.932 | 0.0111 | k >= 5, m <= 1 | 0.798 | 0.0070 |
+| 16 | k >= 6, m <= 2 | 0.919 | 0.0130 | k >= 5, m <= 1 | 0.780 | 0.0053 |
+| 17 | k >= 6, m <= 2 | 0.915 | 0.0065 | k >= 5, m <= 1 | 0.760 | 0.0048 ⚠ |
+| 18 | k >= 6, m <= 2 | 0.954 | 0.0007 ⚠ | k >= 5, m <= 1 | 0.803 | 0.0053 |
+| 19 | k >= 7, m <= 3 | 0.969 | 0.0151 | k >= 5, m <= 1 | 0.825 | 0.0062 |
+| 20 | k >= 7, m <= 3 | 0.969 | 0.0079 | k >= 5, m <= 1 | 0.797 | 0.0079 |
+
+The power does not rise monotonically with N; see "integer calibration" in
+section 12. The figures above are per N and are the ones to quote.
+
+**Fewer than 10 analysable participants.** If the end date arrives with fewer
+than 10, **neither existence claim is made.** The counts in each direction
+are reported descriptively, per feature, and nothing is concluded from them. C1
+is still run: it compares two groups and does not depend on the per-person rule.
+This is registered in advance so that a small sample is not met with a decision
+taken after seeing it.
+
+**Not the registered analysis.** Two outputs of the step-8 run select a different
+rule for each scenario, and neither is quotable as registered power:
+`existence_power.csv`, which takes the best admissible rule separately for each
+responder share, and the behavioural section, which selects under the
+`practical` standard rather than the `strict` one. A real study cannot choose its
+rule after learning its responder share. Registered power comes only from the
+table above.
 
 ---
 
@@ -1048,31 +1421,81 @@ grid package                    144   images, 43.7 MB
    dropped as invisible, so the normal-appearance block's fog answers are
    censored at the original (section 11). The count of such answers is reported
    per block and the shift treated as a lower bound.
-2. **The colour axis is not symmetric in feature units.** The first step up is
+2. **The two features' claims are not equally detectable.** The informative
+   colour trials are about 1.0 corpus SD apart and the fog trials about 0.64, so
+   the same sensitivity produces a weaker choice bias on fog. The scenario pairs
+   are matched on the **choice probability** — within 0.0087 at the planning
+   pair — and that still does not match the **per-person detection rate**: at
+   the planning pair a person is detected **0.8017** of the time on colour
+   against **0.6675** on fog, a gap of **0.1342**. At the weaker pair the two
+   agree to 0.0100. A person affected equally on both features will therefore
+   show a weaker signal on fog, so the fog claim's lower power and lower
+   prevalence estimate are properties of **the stimuli** — not of the analysis,
+   and not of the phenomenon. This belongs in the preregistration as a
+   limitation.
+3. **The contrast edit also lowers saturation.** At the original colour it
+   lowers `sat_mean` by about two thirds as many corpus SD as it lowers
+   `contrast_local`, and CLIP reads it as dull about as much as foggy
+   (section 11b). The pair trials are protected because fog-only pairs are
+   matched on saturation and the model uses the measured features; the
+   manipulation should be described as a contrast reduction with an
+   accompanying loss of colour.
+4. **The grid's fog screen mixes contrast loss with colour loss.** Its columns
+   are the fog levels at the original colour, so a choice on that screen
+   reflects both features. The grid is descriptive; the measured change in both
+   features is reported for every chosen fog column (from `grid_trials.csv`).
+5. **Grid block order is fixed, and the grid photographs are familiar.** The
+   episode block always comes before the normal-appearance block, so the
+   normal-to-episode shift also contains order effects; the set swap balances
+   which photographs go to which block, not order. Every grid scene also
+   appears in the pair trials (1–8 times, median 5), so the grid photographs
+   are already familiar by the episode block.
+6. **The colour axis is not symmetric in feature units.** The first step up is
    1.41× the first step down, because the ladder is calibrated on corpus
    percentiles and that distribution is not symmetric in value.
-3. **The original sits in a different column on the two grid screens.** Comparing
+7. **The original sits in a different column on the two grid screens.** Comparing
    which column people pick across the two features is partly a position effect;
    the within-feature shift is not affected.
-4. **Specificity rests on the control group, not on the dose-response.** A rising
+8. **Specificity rests on the control group, not on the dose-response.** A rising
    dose-response is consistent with a "pick the more edited image" strategy, and
    any claim of specificity that cites the curve alone is unsupported.
-5. **The two features' weights are not comparable within a person.** They are in
+9. **The two features' weights are not comparable within a person.** They are in
    corpus-SD units of two different features. A person with a larger fog weight
    than colour weight is not thereby "more sensitive to fog"; only comparisons of
    the same weight between people or groups are meaningful.
-6. **Prevalence is descriptive.** It is reported with an interval and no
-   inferential claim, and its estimator assumes the sensitivity used to correct
-   it is approximately right.
-7. **The C1 power depends on quantities not yet known.** Responder share and the
-   strategy content of the shared-concept distribution both move it
-   substantially; the reported figures are scenario-conditional.
-8. **No pilot.** Every effect size and lapse rate is a scenario, not an estimate.
-9. **The set swap is binomial, not exact.** The client draws it with probability
-   0.5 and records it, because the study has no server-side counter. At 60
-   participants the split is 30 ± 4 about two thirds of the time, so the recorded
-   code must be in every data file or the imbalance cannot be checked.
-10. **188 rendered images are unused.** They remain in the stimulus set;
+10. **Prevalence is descriptive, and conditional on an assumed sensitivity.** It
+   is reported with an interval and no inferential claim. The correction divides
+   by the detection rate of a responder of assumed strength, so the estimate is
+   reported under three stated sensitivities rather than one (section 12), and
+   the unbiasedness check establishes the algebra under the model rather than the
+   model itself.
+11. **The registered power is calibrated at one cell.** In weaker cells the sign
+   test would outperform the registered count rule for colour from N = 15. Both
+   cost cells are in `registration_table.csv`, and the crossover is stated in
+   section 12 beside the registered power rather than after it.
+12. **Three registered rules clear the false-claim target by less than 0.005.**
+   Colour N = 18 (margin 0.00067), fog N = 12 (0.00245) and fog N = 17 (0.00484).
+   Each is admissible on the upper bound of the Monte Carlo interval, which is
+   the safeguard, but the margin is thin and is marked in section 13. The
+   false-claim rate should not be described as comfortably under the target at
+   those three sizes.
+13. **Power is not monotone in N.** The threshold *m* is an integer calibrated
+    against a fixed error rate, so at some N a stricter rule is forced and the
+    power falls although N grew. The per-N figures in section 13 are
+    authoritative; "more participants always help" is not a claim this design
+    supports.
+14. **The C1 power depends on quantities not yet known.** Responder share and the
+    strategy content of the shared-concept distribution both move it
+    substantially; the reported figures are scenario-conditional.
+15. **No pilot.** Every effect size and lapse rate is a scenario, not an estimate.
+16. **The set swap is binomial, not exact.** The client draws it with probability
+    0.5 and records it, because the study has no server-side counter. At 20
+    participants the split is 10 ± 2 about three quarters of the time, within one
+    of even (9–11) about half the time, and exactly 10/10 only about 18% of the
+    time; at 10 participants it is 5 ± 1 about two thirds of the time. **The imbalance matters more at these sizes than it did at the
+    sample sizes this design was first drawn for**, so the recorded swap code
+    must be in every data file or the imbalance cannot be checked at all.
+17. **188 rendered images are unused.** They remain in the stimulus set;
     `unused_cells.md` is the record of why.
 
 ---
@@ -1081,23 +1504,28 @@ grid package                    144   images, 43.7 MB
 
 | Script | Reads | Writes |
 |---|---|---|
-| `calibrate_levels_v4.py` | corpus features and index | `data/levels_v4_ext/` |
+| `calibrate_levels_v4_corrected.py` | corpus features and index | `data/levels_v4_ext/` |
 | `select_scenes_v4_corrected.py` | `data/levels_v4_ext/` | `data/select_scenes_v4_ext/` |
 | `make_screening_page_corrected.py` | `data/select_scenes_v4_ext/` | `screening.html` beside the crops |
 | `build_stimulus_set_v4_corrected.py` | `screening_list_done.csv`, `data/levels_v4_ext/` | `data/stimulus_set_v4_ext_haze_eq/` |
 | `analyse_pairs_v4_corrected.py` | `stimulus_manifest.csv` | `data/pair_analysis_v4_ext/` |
 | `build_trials_v4_corrected.py` | `all_pairs.csv` + `stimuli/` | `data/trials_v4_ext/<version>/` |
-| `choose_colour_condition_v4.py` | the four candidate lists | `data/colour_choice_v4/` |
+| `choose_colour_condition_v4.py` | the four candidate lists | `data/choose_colour_v4/` |
 | `check_robustness_v4.py` | the four candidate lists | `data/robustness_v4/` |
 | `freeze_trial_list_v4.py` | `data/trials_v4_ext/<chosen>/` | `data/frozen_trial_list_v4/` |
 | `build_grid_block_v4.py` | `data/stimulus_set_v4_ext_haze_eq/`, step 3's script | `data/grid_block_v4/` |
-| `simulate_power_v4.py` | `data/frozen_trial_list_v4/` | `data/power_v4/` |
+| `score_stimuli_on_axes_v4.py` | the stimulus set, the frozen list, the axes data (`data/axes_v4/`, `data/scores_v4/`, `data/embeddings/`) | `data/stimulus_axes_v4/` |
+| `simulate_power_v4_corrected.py` | `data/frozen_trial_list_v4/` | `data/power_v4/` |
+| `simulate_power_v4_n10_20.py` | `data/frozen_trial_list_v4/` | `data/power_v4_n10_20/` |
+| `registration_table_v4.py` | `data/power_v4_n10_20/frozen/` | `data/registration_v4/` |
 
 **Reading the folder names.** The suffix `_ext` marks this round's run — the one
 whose ladders carry levels above the original. Folders carrying `_ec` are from
 the previous round and are superseded; they remain readable because step 3's
-reproduction check compares against them. Suffixes appear on **folders only**; no
-script filename carries one.
+reproduction check compares against them. In script names, `_corrected` marks
+the corrected version of a script whose earlier version is in the superseded
+`stimulus_pipeline/` and `power_analysis/` folders; those earlier scripts must
+not be run. Selected outputs are committed under `data_power_v4/`.
 
 ---
 
@@ -1125,15 +1553,14 @@ than properties of what was built.
 
 ### Departures from the plan, to be declared as such
 
-1. **The grid JSON is not the format the plan specified.** The plan asks for grid
-   files "in the same format as the existing `grid_trials.json`". That file was
-   never supplied, and a new schema was written. The structural change is
-   unavoidable — the old format is a flat list of four screens, with nowhere to
-   put two blocks and two swapped sets — but four field renames are not
-   (`column` → `display_column`, `level_label` → `column_label`,
-   `"haze"` → `"fog"`, and `n_columns` dropped). Keeping the old field names
-   inside the new structure would let the existing grid rendering code be reused.
-   This needs the real `grid_trials.json` to check against.
+1. **The grid JSON is not the format the plan specified.** The old format is a
+   flat list of four screens with the fields `column`, `level_label`,
+   `level_index`, `chroma`, `haze` and `n_columns`, and a plain-list
+   `preload.json`; the new package has two blocks, two swapped sets and renamed
+   fields. **Decided:** the stimulus package stays as built and the experiment is
+   adapted to it (loader, validator, grid phase, two blocks, set swap, free text
+   after "none" in the episode block). This is a declared departure from the
+   plan.
 2. **The fog grid screen has no level above the original.** The plan requires
    "levels above the original, the original, and the edited levels" in both
    blocks, per feature. Colour has it; fog does not, for the reason in section
@@ -1144,12 +1571,12 @@ than properties of what was built.
 
 ### Not done
 
-4. **`experimental_design.md` was never supplied and so was never corrected.**
-   The plan asks for two fixes in it: the model statement and the predictor
-   signs. Those are exactly the errors in problem 3 of section 1, and nothing
-   else in this round corrects them, because the corrections live in the scripts.
-   If the preregistration's model is written from that document, the wrong model
-   goes into it.
+4. **`experimental_design.md` still states the old model.** It is in `docs/` and
+   is being rewritten to the current design: predictors `pred_sat` and
+   `pred_fog` with their signs, the Firth model with no intercept, the contrast
+   edit described with its colour loss, the two grid blocks, the control group
+   and the session order. Until then, the model in this document and in the
+   preregistration is the authoritative one.
 5. **The consolidated list of experiment-code changes.** The plan asks for a
    statement of what the front end needs in order to run two grid blocks and to
    read the new trial-list columns. The pieces exist — the catch sequence and
@@ -1158,14 +1585,15 @@ than properties of what was built.
    `interface_spec.md` — but they have never been collected into one note.
    Regarding the new columns specifically: the front end needs to do nothing with
    `pred_sat` and `pred_fog` beyond not copying them into the data file.
-6. **The remaining documentation edits.** `v4_stimulus_pipeline_explained.md`
+6. **The older explainers.** `v4_stimulus_pipeline_explained.md`
    needs the new levels and how they were calibrated, the corrected band-sweep
    table, the fog manipulation described as contrast reduction, the grid blocks,
    and the frozen list's checksum and settings. It also needs one specific
    rewording: the statement about display rescaling should say that the
    within-pair ratio is preserved only under **linear** rescaling, and that
    display gamma is not linear. `v4_power_analysis_explained.md` needs the
-   corresponding rewrite.
+   corresponding rewrite. Until they are rewritten, both carry a note at the top
+   saying they are superseded by this document.
 
 ### Sources for the figures in this document
 
@@ -1182,6 +1610,10 @@ Every number comes from the run report of a final build. The reports used:
 | 9 | 6b | `robustness_report.txt` | 10-18 16:28 |
 | 11 | 7b | `grid_report.txt` | 10-19 12:37 |
 | 12 | 8 | `power_report.txt` | 10-19 09:49 |
+| 12, 13 | 8 | `power_report.txt`, N = 10..20 rerun | see `registration_v4/run_meta.json` |
+| 11b | – | `stimulus_axes_v4/report.txt` | 2026-10-19 17:23 |
+| 12, 13 | 8b | `registration_report.txt` | 2026-10-19 23:19:20 |
+| 12 (C1 tables) | 8b | `c1_compact.csv`, rerun at strategy 0.25 | 2026-10-20 |
 
 **Two step-4 runs exist and only one is the build.** The run at 10-17 17:37 uses
 `BALANCE_NORM = "corpus_sd"`, passes section 0b with 0 flips, reports OVERALL

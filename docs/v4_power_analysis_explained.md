@@ -1,5 +1,11 @@
 # The v4 power analysis: what the experiment can and cannot answer
 
+> **Status (20 Oct 2026): superseded.** This document describes an earlier power analysis
+> (one-direction counting rule, grid-dependent units, no lapses, no control group, sequential
+> stopping). None of it is the registered analysis. The current design analysis, the registered
+> decision rule for each N and its power are in `v4_stimulus_power_explained.md`, sections 12
+> and 13. The scripts it describes (`power_analysis/`) must not be run.
+
 This document explains, for a reader with no other context, the power analysis
 for the v4 image experiment: what was simulated, what came out, which claims the
 design supports, which it does not, and how the number of trials and the number
