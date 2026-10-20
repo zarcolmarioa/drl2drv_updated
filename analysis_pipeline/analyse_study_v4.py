@@ -26,7 +26,9 @@ What it does, in the registered order
      failures; Tier D set aside and reported separately; beyond the
      maximum (the first 20 participants and 30 controls by completion
      time are analysed, the rest listed); partial exclusions per analysis
-  B  per person: Firth logistic regression, no intercept,
+  B  per person: chose A derived from the key side and the frozen list's
+     a_is_left (any chose_A in the tidy table must agree exactly);
+     Firth logistic regression, no intercept,
      chose A ~ pred_sat + pred_fog over the 180 analysed trials; 95%
      profile penalised-likelihood intervals; classification against the
      registered thresholds
@@ -78,6 +80,7 @@ import json
 import os
 import platform
 import re
+import shutil
 import sys
 import time
 import warnings
@@ -2195,7 +2198,9 @@ def compute_caps(X, checks):
 
 TRIAL_COLUMNS = ["session_id", "participant_id", "group", "trial",
                  "trial_type", "analysed", "key_pressed", "side_pressed",
-                 "chose_A", "rt_ms", "catch_key", "catch_pass", "repeat_of"]
+                 "rt_ms", "catch_key", "catch_pass", "repeat_of"]
+# chose_A is OPTIONAL in the tidy trials table: the analysis derives it
+# (derive_chose_A) and, when the table carries one, requires agreement.
 SESSION_COLUMNS = (
     ["session_id", "participant_id", "group", "session_start_time",
      "session_end_time", "complete", "is_test", "is_dev", "consent_given", "images_fit",
@@ -2256,6 +2261,71 @@ def load_tidy(dataset_dir, checks):
     checks.require("word ratings and state items are whole numbers 0-6",
                    not bad, "; ".join(bad))
     return {"trials": T, "sessions": S, "grid": G}
+
+
+def derive_chose_A(T, L, checks, out):
+    """Which image was chosen, derived in the analysis layer.
+
+        chose A  =  (side pressed is left)  ==  (A is left)
+
+    with a_is_left taken from the FROZEN LIST, joined by trial number --
+    never from the session data -- and image trials identified by the
+    frozen list's trial type, not the table's. Catch trials have no
+    image, so chose A is empty there.
+
+    If the tidy table also carries chose_A, every row must agree exactly
+    (empty where the derivation is empty). A mismatch stops the run; the
+    full list goes to PRIVATE/chose_A_mismatches_PRIVATE.csv, since
+    session ids carry participant ids. The table's column is then
+    replaced by the derived one, which is what every later step reads.
+    """
+    tl = L.by_trial
+    unknown = sorted(set(T.trial) - set(tl.index))
+    checks.require("every trial number is in the frozen list", not unknown,
+                   f"unknown: {unknown[:8]}")
+    tt = tl.trial_type.reindex(T.trial).to_numpy()
+    wrong = int((T.trial_type.to_numpy() != tt).sum())
+    checks.require("trial types agree with the frozen list", wrong == 0,
+                   f"{wrong} rows differ")
+    img = tt != "catch"
+    a_left = tl.a_is_left.astype(bool).reindex(T.trial).to_numpy()
+    side = T.side_pressed
+    given_side = side.notna().to_numpy()
+    odd = img & given_side & ~side.isin(["left", "right"]).to_numpy()
+    checks.require("side_pressed is 'left' or 'right' on image trials",
+                   not odd.any(), f"{int(odd.sum())} other values")
+    der = np.where(img & given_side,
+                   ((side == "left").to_numpy() == a_left).astype(float),
+                   np.nan)
+    if "chose_A" in T.columns:
+        given = pd.to_numeric(T.chose_A, errors="coerce").to_numpy(float)
+        same = (np.isnan(given) & np.isnan(der)) | (given == der)
+        mism = ~same
+        path = os.path.join(out, "PRIVATE", "chose_A_mismatches_PRIVATE.csv")
+        if mism.any():
+            m = T.loc[mism, ["session_id", "trial", "trial_type",
+                             "side_pressed"]].copy()
+            m["a_is_left"] = a_left[mism]
+            m["chose_A_in_table"] = given[mism]
+            m["chose_A_derived"] = der[mism]
+            m.to_csv(path, index=False)
+            per = m.groupby("session_id").size()
+            checks.require(
+                "chose_A in the tidy table equals chose A derived from "
+                "side_pressed and the frozen list's a_is_left", False,
+                f"{int(mism.sum())} mismatches in {len(per)} session(s) "
+                f"(trials {', '.join(map(str, m.trial.head(6)))}"
+                f"{', ...' if len(m) > 6 else ''}); full list in "
+                "PRIVATE/chose_A_mismatches_PRIVATE.csv")
+        checks.require("chose_A in the tidy table equals chose A derived "
+                       "from side_pressed and the frozen list's a_is_left",
+                       True, f"{int(img.sum())} image-trial rows agree")
+    else:
+        checks.info("chose A derived only", "no chose_A column in the "
+                    "tidy table")
+    T = T.copy()
+    T["chose_A"] = der
+    return T
 
 
 def load_raw(dataset_dir, checks):
@@ -3367,6 +3437,7 @@ def analyse_dataset(dataset_dir, out, sh, checks):
     tidy = (load_tidy(dataset_dir, checks) if INPUT_FORMAT == "tidy"
             else load_raw(dataset_dir, checks))
     sv, pt, sp, pp = load_private(dataset_dir, checks)
+    tidy["trials"] = derive_chose_A(tidy["trials"], L, checks, out)
     T, G = tidy["trials"], tidy["grid"]
 
     # --- A ---
@@ -3929,6 +4000,7 @@ def run_validation(root, sh, checks, meta):
                     + ("; missed: " + ", ".join(miss.dataset + " "
                                                 + miss["item"])
                        if len(miss) else ""))
+    negative_test_flipped_chose_A(root, sh, checks)
     fc = false_claim_check(SIM_ROOT, sh["L"], sh["th"], sh["rules"], checks,
                            root)
     write_validation_report(root, tab, fc, checks, failed)
@@ -3936,6 +4008,55 @@ def run_validation(root, sh, checks, meta):
     meta["datasets_failed"] = failed
     return "complete" if not failed else \
         f"STOPPED: {len(failed)} dataset(s) failed: {failed[0]}"
+
+
+def negative_test_flipped_chose_A(root, sh, checks):
+    """A dataset that MUST stop: chose_A flipped for one session.
+
+    Copies the messy simulated dataset (without its truth files), flips
+    chose_A on every image trial of its first analysable participant
+    session, and runs the full analysis on it. Passes only if the run
+    stops at the chose_A check and the mismatch list names exactly that
+    session's flipped trials and nothing else.
+    """
+    print("\n" + "=" * 60)
+    print("NEGATIVE TEST: chose_A flipped for one session")
+    print("=" * 60)
+    src = os.path.join(SIM_ROOT, "datasets", "messy")
+    dst = os.path.join(root, "negative_tests", "flipped_chose_A")
+    for sub in ("tidy", "private"):
+        shutil.copytree(os.path.join(src, sub), os.path.join(dst, sub))
+    tp = pd.read_csv(os.path.join(src, "truth_people.csv"),
+                     dtype={"session_id": str})
+    sid = sorted(tp.session_id[(tp.expected_status == "analysable")
+                               & (tp.group == "participant")])[0]
+    tpath = os.path.join(dst, "tidy", TIDY_TRIALS)
+    T = pd.read_csv(tpath, dtype={"session_id": str})
+    sel = (T.session_id == sid) & T.chose_A.notna()
+    T.loc[sel, "chose_A"] = 1 - T.loc[sel, "chose_A"]
+    T.to_csv(tpath, index=False)
+    ck = Checks(prefix="[negative test] ")
+    out = os.path.join(dst, "out")
+    stopped, msg = False, ""
+    try:
+        analyse_dataset(dst, out, sh, ck)
+    except CheckFailed as e:
+        stopped, msg = True, str(e)
+    mp = os.path.join(out, "PRIVATE", "chose_A_mismatches_PRIVATE.csv")
+    mm = (pd.read_csv(mp, dtype={"session_id": str}) if os.path.isfile(mp)
+          else pd.DataFrame(columns=["session_id", "trial"]))
+    want = set(T.trial[sel])
+    ok = (stopped and "chose_A" in msg and set(mm.session_id) == {sid}
+          and set(mm.trial) == want and len(mm) == int(sel.sum()))
+    write_json(os.path.join(dst, "run_meta.json"),
+               {"test": "flipped chose_A", "stopped": stopped,
+                "message": msg, "flipped_trials": int(sel.sum()),
+                "listed": len(mm), "checks": ck.rows})
+    checks.require("negative test: chose_A flipped for one session stops "
+                   "the run and lists exactly that session's trials", ok,
+                   f"{int(sel.sum())} rows flipped; run "
+                   f"{'stopped' if stopped else 'DID NOT STOP'}; "
+                   f"{len(mm)} listed in {mm.session_id.nunique()} session(s)")
 
 
 def write_validation_report(root, tab, fc, checks, failed):
