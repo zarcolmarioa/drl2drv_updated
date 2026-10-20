@@ -1,0 +1,338 @@
+{
+  "script": "score_stimuli_on_axes_v4.py",
+  "status": "finished",
+  "created": "2026-10-19 17:23:33",
+  "elapsed_min": 1.23,
+  "dry_run": false,
+  "settings": {
+    "ALLOW_TF32": false,
+    "AXES_DIR": "data/axes_v4",
+    "AXIS_NORM_TOL": 0.0001,
+    "BATCH_SIZE": 32,
+    "CELL_PLAN_CSV": "data/stimulus_set_v4_ext_haze_eq/cell_plan.csv",
+    "CHECKSUMS_FILE": "data/frozen_trial_list_v4/checksums.sha256",
+    "CI_LEVEL": 0.95,
+    "CLIP_MODEL_NAME": "openai/clip-vit-large-patch14-336",
+    "COLOUR_DOWN": [
+      "p25",
+      "p10",
+      "p05",
+      "p01"
+    ],
+    "COLOUR_IDENTITY": "k=1",
+    "COLOUR_UP": [
+      "p65",
+      "p75"
+    ],
+    "CONTRAST_UP_KIND": "contrast_up",
+    "CONTROLS": {
+      "enclosure": [
+        [
+          "enclosed",
+          "open"
+        ],
+        [
+          "cramped",
+          "spacious"
+        ],
+        [
+          "like a closed room",
+          "like a wide open landscape"
+        ],
+        [
+          "like an indoor room",
+          "like the outdoors"
+        ]
+      ],
+      "darkness": [
+        [
+          "dark",
+          "bright"
+        ],
+        [
+          "dimly lit",
+          "brightly lit"
+        ],
+        [
+          "like nighttime",
+          "like daytime"
+        ],
+        [
+          "shadowy",
+          "sunlit"
+        ]
+      ]
+    },
+    "CONTROLS_SET": "controls",
+    "CORPUS_EMB_MIN_COS": 0.99999,
+    "CORPUS_POOLED_MIN_COS": 0.9999,
+    "CORPUS_RANDOM_N": 32,
+    "CTRL_TEMPLATE": "a scene that looks {}",
+    "DIVERGING": [
+      "#2a78d6",
+      "#f0efec",
+      "#d03b3b"
+    ],
+    "DRY_RUN": false,
+    "DRY_RUN_N_SCENES": 3,
+    "DRY_RUN_SCENES": null,
+    "DRY_RUN_SUFFIX": "_dryrun",
+    "EMB_DIR": "data/embeddings",
+    "EXPECTED_ANALYSED": 180,
+    "FEAT_FOG": "contrast_local",
+    "FEAT_SAT": "sat_mean",
+    "FIG_DPI": 150,
+    "FOG_IDENTITY": "h=0",
+    "FOG_LEVELS": [
+      "p35",
+      "p25",
+      "p15",
+      "p10",
+      "p05"
+    ],
+    "GRID_KIND": "grid",
+    "HASH_CHECKPOINT": true,
+    "IMAGE_PX": 512,
+    "INDEX_CSV": "data/selection/image_index.csv",
+    "INK": "#0b0b0b",
+    "INK_MUTED": "#52514e",
+    "KEY_AXES": [
+      "A07",
+      "A13",
+      "A11",
+      "A14"
+    ],
+    "MANIFEST_CSV": "data/stimulus_set_v4_ext_haze_eq/stimulus_manifest.csv",
+    "NOCONTROL_MIN_COS": 0.9999,
+    "NOCONTROL_SET": "v4@nocontrol",
+    "N_BOOT": 2000,
+    "N_CELLS_EXPECTED": 45,
+    "N_CHECK_IMAGES": 16,
+    "N_SCENES_EXPECTED": 47,
+    "OPENAI_MODEL_NAME": "ViT-L/14@336px",
+    "OUTPUT_DIR": "data/stimulus_axes_v4",
+    "OWN_PREPROC_MIN_COS": 0.99999,
+    "PRED_MIN_SD": 0.1,
+    "PRED_TOL": 0.001,
+    "QUALITY_KEY": "controls::quality",
+    "RANDOM_SEED": 42,
+    "REAL_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together",
+      "conflict"
+    ],
+    "REF_MIN_COS_WARN": 0.99,
+    "REMEASURE_N": 12,
+    "REMEASURE_RTOL": 0.0001,
+    "REPORT_CONTROLS": [
+      "controls::quality",
+      "controls::weather",
+      "controls::greyscale"
+    ],
+    "SAME_PIXELS_MIN_COS": 0.9999,
+    "SCORES_DIR": "data/scores_v4",
+    "SD_FOG": 9.348,
+    "SD_SAMPLE": 200000,
+    "SD_SAT": 39.182,
+    "STIMULI_DIR": "data/stimulus_set_v4_ext_haze_eq/stimuli",
+    "STIM_RECHECK_MIN_COS": 0.99999,
+    "STIM_RECHECK_N": 8,
+    "SURFACE": "#fcfcfb",
+    "TRIAL_LIST_CSV": "data/frozen_trial_list_v4/trial_list.csv",
+    "UN2CLIP_CKPT_PATH": "./pretrained_models/openai_vit_l_14_336.ckpt",
+    "V4_IDS": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A07",
+      "A11",
+      "A13",
+      "A14"
+    ],
+    "V4_SET": "v4",
+    "Z_REENCODED_TOL": 0.001,
+    "Z_STORED_TOL": 0.0001
+  },
+  "checks": {
+    "M1": {
+      "status": "PASS",
+      "detail": "2115 manifest rows (47 scenes; expected 47 x 45 = 2115); 2115 files in data/stimulus_set_v4_ext_haze_eq/stimuli; rows without a file 0, files without a row 0, duplicate filenames 0; not 512x512: 0; modes {'RGB': 2115}"
+    },
+    "M2": {
+      "status": "PASS",
+      "detail": "every scene has the 45 planned cells, one reference (k=1, h=0, kind 'grid', no contrast_level) and one source_path"
+    },
+    "M3": {
+      "status": "PASS",
+      "detail": "47 scenes, each matching exactly one corpus row ({'path': 47})"
+    },
+    "T1": {
+      "status": "PASS",
+      "detail": "data/frozen_trial_list_v4/trial_list.csv sha256 2a01fe7d6afec29f... matches data/frozen_trial_list_v4/checksums.sha256"
+    },
+    "T2": {
+      "status": "PASS",
+      "detail": "180 analysed trials (expected 180; {'fog_only': 60, 'sat_only': 60, 'conflict': 30, 'together': 30}); filenames not in the manifest 0; a_is_left inconsistent 0; trials across two scenes 0"
+    },
+    "T3": {
+      "status": "PASS",
+      "detail": "pred_sat and pred_fog recomputed from the manifest features (image A minus image B): max |diff| 6.66e-16 and 2.22e-16 (positive = A less colourful / foggier)"
+    },
+    "A1": {
+      "status": "PASS",
+      "detail": "264 vectors, unit length (max error 9.9e-08); 9 v4 axes, 9 nocontrol, 6 controls; corpus mean and SD for each"
+    },
+    "A2": {
+      "status": "PASS",
+      "detail": "enclosure and darkness directions rebuilt from the caption embeddings; nocontrol vectors reproduced, min cos 1.000000"
+    },
+    "F1": {
+      "status": "PASS",
+      "detail": "12 stimulus PNGs re-measured (11 features, incl. sat_mean and contrast_local): max relative difference from the manifest 1.6e-16 (driveway_00001180__ck1__fh0.png contrast_local)"
+    },
+    "E1": {
+      "status": "PASS",
+      "detail": "weights: 391 tensors loaded; missing 0, unexpected 0, unused checkpoint keys 0"
+    },
+    "E2": {
+      "status": "PASS",
+      "detail": "un2CLIP projection applied (differs from the standard one by up to 2.65e-04)"
+    },
+    "E3": {
+      "status": "PASS",
+      "detail": "official loader, same pixels: min cos 1.000000 (16 stimuli)"
+    },
+    "E3b": {
+      "status": "PASS",
+      "detail": "official vs 'openai' preprocessing: min cos 1.000000"
+    },
+    "C1": {
+      "status": "PASS",
+      "detail": "image_index.csv is the index step 03 encoded (fingerprint 8cf642efe046...; 1,111,881 rows aligned with the embeddings)"
+    },
+    "C2": {
+      "status": "PASS",
+      "detail": "79 corpus images re-encoded (47 scene sources + 32 random), opened as 03 opens them: min cos with stored embeddings 0.9999999, with stored pooled vectors 1.000000"
+    },
+    "C3": {
+      "status": "PASS",
+      "detail": "z-scores on 24 axes vs scores_z.npy: max |diff| 4.9e-06 from the stored embeddings (tol 0.0001), 4.9e-06 from the re-encoded ones (tol 0.001)"
+    },
+    "S1": {
+      "status": "PASS",
+      "detail": "2115 stimulus embeddings finite, norm 1.000000 - 1.000000"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "8 stimuli re-encoded one at a time: min cos with their stored rows 0.9999999"
+    },
+    "R1": {
+      "status": "PASS",
+      "detail": "reference stimulus vs stored corpus embedding of the same photograph: min cos 0.99747, median 0.99924; below 0.99: 0"
+    }
+  },
+  "warnings": [],
+  "manifest_sha256": "ab3d8383a9ae00ea0606e69dc358f6601c98efd5015f075fb20010ec01f253d7",
+  "cell_plan_sha256": "7d365516f6ef6c8380f60667ab8ccb4647f153993c0542271b0f29f3d55014cd",
+  "trial_list_sha256": "2a01fe7d6afec29fb2c1c647dff7458c26136d7c49b09df4e2e44184bb831c93",
+  "axis_vectors_sha256": "3508c86599218f52fccbfd161ffb53fad98b5d794636b2bb32d8c34a015d1794",
+  "scenes_encoded": [
+    "alley_00001206",
+    "apartment_building_outdoor_00004677",
+    "auditorium_00001394",
+    "balcony_interior_00004440",
+    "bathroom_00001909",
+    "bedroom_00001289",
+    "boardwalk_00001503",
+    "cafeteria_00002762",
+    "campus_00003823",
+    "campus_00004529",
+    "computer_room_00001489",
+    "conference_room_00002730",
+    "courtyard_00004070",
+    "crosswalk_00001791",
+    "dining_hall_00001273",
+    "dining_hall_00001301",
+    "dining_room_00003076",
+    "downtown_00001598",
+    "downtown_00001745",
+    "downtown_00004891",
+    "driveway_00001180",
+    "driveway_00003009",
+    "elevator_lobby_00003261",
+    "elevator_lobby_00003556",
+    "gymnasium_indoor_00003333",
+    "home_office_00004226",
+    "japanese_garden_00000532",
+    "japanese_garden_00001073",
+    "japanese_garden_00001226",
+    "laundromat_00004208",
+    "living_room_00002633",
+    "lobby_00001554",
+    "park_00001014",
+    "parking_garage_outdoor_00003825",
+    "picnic_area_00000702",
+    "picnic_area_00004871",
+    "promenade_00002520",
+    "residential_neighborhood_00001583",
+    "restaurant_00000867",
+    "shopping_mall_indoor_00003139",
+    "shower_00000779",
+    "subway_station_platform_00003408",
+    "subway_station_platform_00004871",
+    "train_interior_00004637",
+    "train_station_platform_00003977",
+    "waiting_room_00002953",
+    "yard_00000709"
+  ],
+  "encoder": {
+    "weights_loaded": 391,
+    "proj_applied": true,
+    "proj_max_diff_vs_standard": 0.0002648383378982544,
+    "device": "cuda",
+    "torch": "2.12.0+cu130",
+    "transformers": "5.8.1",
+    "preprocessing": {
+      "mode": "openai",
+      "size": 336,
+      "mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ]
+    },
+    "dims": {
+      "pooled": 1024,
+      "embedding": 768
+    },
+    "official_check": "run",
+    "same_pixels_min_cos": 0.9999999403953552,
+    "own_preproc_min_cos": 0.9999999403953552,
+    "un2clip_ckpt_sha256": "ed43c5057e3779107cad6bc0d3d3c623028515ba964f7c8716185e5eeadc41d4"
+  },
+  "corpus_check": {
+    "n": 79,
+    "min_cos_emb": 0.999999905899513,
+    "min_cos_pooled": 0.9999998925300283,
+    "max_dz_stored": 4.857559060766903e-06,
+    "max_dz_reencoded": 4.859314608474108e-06
+  },
+  "direction_sd_sample": {
+    "n": 200000,
+    "A07_sampled_sd_ratio": 0.998733355369095
+  },
+  "verdicts_v4_sd_raw": {
+    "a": "FAIL",
+    "b": "PASS",
+    "c": "PASS",
+    "d": "PASS"
+  }
+}

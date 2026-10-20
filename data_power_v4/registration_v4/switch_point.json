@@ -1,0 +1,31 @@
+{
+ "switch_point": null,
+ "switch_point_robustness": null,
+ "scan": {
+  "10": false,
+  "11": false,
+  "12": false,
+  "13": false,
+  "14": false,
+  "15": false,
+  "16": false,
+  "17": false,
+  "18": false,
+  "19": false,
+  "20": false
+ },
+ "planning_weight": {
+  "colour": 0.5,
+  "fog": 0.7
+ },
+ "robustness_weight": {
+  "colour": 0.3,
+  "fog": 0.5
+ },
+ "share": 0.5,
+ "lapse": 0.1,
+ "standard": "strict",
+ "mc_margin": true,
+ "n_min": 10,
+ "n_max": 20
+}

@@ -1,0 +1,9 @@
+standard,feature,n,rule_on_point_estimate,rule_on_upper_bound,worst_point,worst_upper_of_that_rule,power_point,power_upper,power_cost
+practical,colour,11,"count-absolute k>=3, m<=4","count-absolute k>=3, m<=1",0.04846,0.0524,0.3107,0.2778,0.0329
+practical,colour,18,"count-absolute k>=4, m<=4","count-absolute k>=4, m<=3",0.04631,0.05093,0.3215,0.3173,0.0042
+practical,colour,19,"count-absolute k>=4, m<=2","count-absolute k>=4, m<=1",0.04862,0.05289,0.4116,0.3226,0.0891
+practical,fog,18,"count-absolute k>=4, m<=3","count-absolute k>=4, m<=2",0.04903,0.05369,0.1038,0.098,0.0058
+practical,fog,60,"count-proportional k>=9, m<=12","count-proportional k>=9, m<=6",0.04784,0.05587,0.18,0.1709,0.0091
+strict,colour,12,"count-absolute k>=3, m<=0","count-absolute k>=4, m<=0",0.0498,0.05023,0.172,0.0605,0.1115
+strict,fog,11,"count-absolute k>=3, m<=0","count-absolute k>=4, m<=0",0.04961,0.05014,0.0609,0.0139,0.047
+practical_at_boundary,colour,12,"count-absolute k>=3, m<=0","count-absolute k>=4, m<=1",0.0498,0.05023,0.172,0.0996,0.0724

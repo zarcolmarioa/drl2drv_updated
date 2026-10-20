@@ -1,0 +1,305 @@
+REGISTRATION TABLE REPORT  (v4, step 8b)
+======================================================================
+Source        : data/power_v4_n10_20/frozen
+Output        : data/registration_v4
+Standard      : strict with the 95% MC margin
+Sample sizes  : 10..20
+Planning cell : share 0.5, lapse 0.1, colour 0.5/SD, fog 0.7/SD
+  sha256 rule_sweep.csv           0d5d03282c95492419f0db561c87035db4bd2d6d5185f78e53a8b9d5e3bcffd7
+  sha256 c1_power.csv             f7033f3160e9fe4de6f23049ff8f3d4fcae20caa030299112cce11767950e807
+Elapsed       : 0.6s
+
+  source                           data/power_v4_n10_20/frozen
+  candidate rules read             2,668
+  admissibility column             admissible_strict
+  check 1 inputs                   PASS
+  provenance                       power_report.txt header + 2 file hash(es)
+  planning pair                    colour 0.5/SD -> p = 0.6191, fog 0.7/SD -> p = 0.6104 (gap 0.0087)
+  robustness pair                  colour 0.3/SD -> p = 0.5723, fog 0.5/SD -> p = 0.5795 (gap 0.0072)
+  check 6 coverage                 PASS
+  check 2 admissibility            PASS (44 rules)
+  switch point (planning)          none in 10..20
+  tie-break                        39 duplicate-label, 5 substantive (worst cost 0.007215)
+  tie-order change                 no rule changed
+  check 3 combined rule            PASS (worst upper 0.04933)
+  p_median cross-check             worst 2.8e-04
+  check 5 equal behaviour          reported
+  lower_half, colour               sign overtakes from N = 15
+  lower_half, fog                  the count rule wins throughout
+  planning_qtr, colour             sign overtakes from N = 15
+  planning_qtr, fog                the count rule wins throughout
+  thin cells                       3 above 0.045 colour N18 (0.00067), fog N12 (0.00245), fog N17 (0.00484)
+  registration table rows          44
+  C1 compact table                 27 rows at one stated scenario (was 2,457 rows averaged over scenarios)
+
+1. WHAT IS BEING REGISTERED
+----------------------------------------------------------------------
+  The COUNT RULE at every N from 10 to 20. The sign test never
+  overtakes it in the planning cell within that range.
+  Each N's rule and its power are in combined_rule.csv;
+  registration_table.csv carries both rules, the
+  false-claim margin and the two cost cells.
+
+  WITH THE TUNING COST IN THE SAME BREATH. The rule is
+  calibrated in one cell. In weaker cells the sign test
+  would outperform it for colour from N = 15 (section 6);
+  for fog the count rule stays ahead throughout. The
+  registered power figures are the planning-cell ones,
+  and they are the rule's best case.
+
+  FEWER THAN 10 ANALYSABLE PARTICIPANTS. If the end date
+  arrives with fewer than 10, NEITHER EXISTENCE CLAIM IS
+  MADE. The counts in each direction are reported
+  descriptively, per feature, and nothing is concluded
+  from them. C1 is still run: it compares two groups
+  and does not depend on the per-person rule. This is
+  registered in advance so that a small sample is not
+  met with a decision taken after seeing it.
+
+2. WHY THE COUNT RULE THROUGHOUT
+----------------------------------------------------------------------
+  A combination of the two rules was considered, and
+  rejected. The case for it was that the count rule
+  loses power as N grows: with m = 0 one
+  opposite-direction detection vetoes the claim, every
+  non-responder added is another chance of that veto,
+  and so more participants can mean less power.
+
+  THAT IS TRUE OF THE m = 0 RULE AND ONLY OF IT. The
+  rule selected in the planning cell has m > 0 from
+  N = 11 on, so no single opposite-direction detection
+  can veto anything. The scan in section 3 is the
+  evidence: the sign test does not overtake the count
+  rule for either feature at any N in the registered
+  range.
+
+  THE POWER DOES NOT RISE MONOTONICALLY, and the
+  registration should not claim it does. The rule is
+  re-selected at every N under the false-rate
+  ceiling, and where the ceiling forces a stricter m
+  the power falls even though N grew:
+
+    colour
+      N         10    11    12    13    14    15    16    17    18    19    20
+      power  0.591 0.834 0.841 0.775 0.861 0.932 0.919 0.915 0.954 0.969 0.969
+      m <=       0     2     2     1     1     3     2     2     2     3     3
+      drops  N 13 (-0.066), N 16 (-0.013), N 17 (-0.004), N 20 (-0.000)
+    fog
+      N         10    11    12    13    14    15    16    17    18    19    20
+      power  0.443 0.565 0.584 0.550 0.703 0.798 0.780 0.760 0.803 0.825 0.797
+      m <=       0     2     2     1     1     1     1     1     1     1     1
+      drops  N 13 (-0.034), N 16 (-0.018), N 17 (-0.020), N 20 (-0.028)
+
+  Power is quoted PER N from the table, so nothing
+  in the registered analysis depends on the sequence
+  being monotone. What is not available is the
+  statement that another participant always helps:
+  at the N where m tightens, one more can lower the
+  power of the rule that N selects.
+
+  The sign test stays in the table at every N as a
+  ROBUSTNESS COMPARISON, not as part of the
+  registered analysis. Reporting it costs nothing and
+  shows that the registered choice was not the only
+  one available.
+
+3. THE SWITCH POINT, AND HOW ROBUST IT IS
+----------------------------------------------------------------------
+  sign >= count for BOTH features, by N:
+    10:n  11:n  12:n  13:n  14:n  15:n  16:n  17:n  18:n  19:n  20:n
+
+  planning cell    switch at none in range
+  robustness cell  switch at none in range
+
+  THE TWO CELLS AGREE. The count rule wins throughout
+  10..20 at the robustness pair as well as
+  at the planning pair, so the registered rule is not
+  an artefact of which pair was taken as planning.
+  The sign test overtakes it only in the two cost
+  cells of section 6, which weaken the effect rather
+  than the pair, and those are reported next to the
+  planning-cell power.
+
+4. EQUAL BEHAVIOUR: HOW EQUAL
+----------------------------------------------------------------------
+  A weight per SD is not comparable between the features:
+  the informative colour trials are about 1.0 corpus SD
+  apart and the fog trials about 0.64, so the same weight
+  gives a smaller choice bias on fog. The pairs are
+  therefore matched on the choice probability.
+
+  planning pair
+    colour  0.5/SD   p = 0.6191   per-person detection 0.8017
+    fog     0.7/SD   p = 0.6104   per-person detection 0.6675
+    gap in p 0.0087   gap in detection 0.1342
+  robustness pair
+    colour  0.3/SD   p = 0.5723   per-person detection 0.4425
+    fog     0.5/SD   p = 0.5795   per-person detection 0.4325
+    gap in p 0.0072   gap in detection 0.0100
+
+  MATCHING ON THE PROBABILITY DOES NOT MATCH THE
+  PER-PERSON DETECTION RATE. The count rule is saturated
+  on k at these sizes, so it barely moves with that rate;
+  the sign test compares the two counts and is sensitive
+  to it. That is why the higher pair can match on the
+  count rule and not on the sign test. It does not
+  affect what is registered: the count rule wins for
+  both features at every N in both cells, so the
+  imperfect match of the higher pair changes no
+  selection. It is reported because the two features'
+  claims are stated as equally strong, and on the
+  per-person detection rate they are not: 0.80 against
+  0.67 at the planning pair. That belongs in the
+  preregistration as a limitation of the stimuli.
+
+5. HEADROOM UNDER THE FALSE-CLAIM TARGET
+----------------------------------------------------------------------
+  The target is 0.05 ON THE UPPER BOUND of the
+  95% Monte Carlo interval, and it is not tightened. The
+  upper bound is itself the safeguard against a selection
+  made by simulation noise, so a rule that clears it is
+  certified however thin the margin. The margin is
+  reported per N all the same, in the false_headroom
+  column of registration_table.csv, because how close a
+  rule sits to the line is a property of the rule.
+
+    colour
+      N           10     11     12     13     14     15     16     17     18     19     20
+      upper   0.0224 0.0328 0.0447 0.0343 0.0387 0.0389 0.0370 0.0435 0.0493 0.0349 0.0421
+      margin  0.0276 0.0172 0.0053 0.0157 0.0112 0.0111 0.0130 0.0065 0.0007 0.0151 0.0079
+    fog
+      N           10     11     12     13     14     15     16     17     18     19     20
+      upper   0.0229 0.0351 0.0476 0.0356 0.0399 0.0430 0.0447 0.0452 0.0447 0.0438 0.0421
+      margin  0.0271 0.0149 0.0024 0.0144 0.0101 0.0070 0.0053 0.0048 0.0053 0.0062 0.0079
+
+  3 CELL(S) ABOVE 0.045, marked false_thin in the
+  table and listed here as required:
+    colour N = 18, k >= 6, m <= 2: upper 0.04933, point
+      0.04739, margin 0.00067
+    fog N = 12, k >= 5, m <= 2: upper 0.04755, point
+      0.04496, margin 0.00245
+    fog N = 17, k >= 5, m <= 1: upper 0.04516, point
+      0.04491, margin 0.00484
+
+  Each is admissible as registered. None is a
+  reason to change the rule; each is a reason not to
+  describe the false-claim rate as comfortably under
+  the target at those sizes.
+
+6. WHERE THE TIE-BREAK DECIDED
+----------------------------------------------------------------------
+  Two rules whose planning-cell power differs by less
+  than 0.01 are treated as TIED, because the
+  simulation's own Monte Carlo error at a power near 0.93
+  is about 0.006. Among the tied the SMALLER m is taken:
+  the rule that tolerates fewer opposite-direction
+  detections, and so is the harder of the two to satisfy
+  by luck.
+
+  39 firing(s) were ONE RULE UNDER TWO
+  FAMILY NAMES -- same k, same m, identical power,
+  identical
+  false-claim rate, differing only in whether the
+  threshold is written as a count or as a proportion
+  of N. Resolving those is bookkeeping and no
+  decision was made; they are counted here and listed
+  in tie_breaks.csv.
+
+  5 SUBSTANTIVE firing(s), where the
+  tie-break changed the registered rule:
+
+    planning cell, colour, N = 11
+      most powerful  count-absolute k >= 5, m <= 4   0.837348
+      registered     count-proportional k >= 5, m <= 2   0.833983
+      power given up 0.003365
+    planning cell, colour, N = 15
+      most powerful  count-absolute k >= 6, m <= 4   0.932893
+      registered     count-proportional k >= 6, m <= 3   0.931971
+      power given up 0.000922
+    planning cell, colour, N = 19
+      most powerful  count-absolute k >= 7, m <= 4   0.971848
+      registered     count-proportional k >= 7, m <= 3   0.968870
+      power given up 0.002978
+    planning cell, fog, N = 11
+      most powerful  count-absolute k >= 5, m <= 4   0.567601
+      registered     count-proportional k >= 5, m <= 2   0.565338
+      power given up 0.002263
+    planning cell, fog, N = 20
+      most powerful  count-absolute k >= 7, m <= 3   0.804064
+      registered     count-proportional k >= 5, m <= 1   0.796849
+      power given up 0.007215
+
+  The most power given up at any of them was
+  0.007215, which is inside
+  the simulation's own error, in exchange for a
+  rule that is harder to satisfy by chance.
+  THE ORDER OF THE TIE-BREAK. Ties go to the lowest
+  upper-bound false-claim rate first, then the smaller m,
+  then the smaller k, then the family. The measured rate
+  comes first because it IS the quantity a stricter rule
+  is wanted for; a smaller m is a proxy that can disagree
+  with it. Under the previous order -- m first -- the
+  selection was THE SAME in every cell at every N, so
+  the change moved no registered rule here.
+
+7. WHAT THE TUNING COSTS
+----------------------------------------------------------------------
+  The count rule is calibrated at ONE cell: the planning
+  weights at half share. A rule tuned at a cell is better
+  there and can be worse away from it, so the
+  planning-cell power on its own is the rule quoting its
+  own best case. Two further cells are in the table for
+  both rules at every N:
+
+    cost_lower_half
+      the robustness weights (colour 0.3/SD, fog 0.5/SD) at share 0.5,
+      lapse 0.1
+    cost_planning_qtr
+      the planning weights (colour 0.5/SD, fog 0.7/SD) at share 0.25,
+      lapse 0.1
+
+  Crossovers, per cell and feature:
+    lower_half, colour       sign overtakes from N = 15
+    lower_half, fog          the count rule wins throughout
+    planning_qtr, colour     sign overtakes from N = 15
+    planning_qtr, fog        the count rule wins throughout
+
+  Where the sign test overtakes, the registered rule is
+  the weaker of the two IN THAT CELL. That is the trade,
+  and it belongs in the registration next to the
+  planning-cell power rather than behind it: the planning
+  cell is registered because it is the scenario in which
+  a study of 10 to 20 participants can succeed at all,
+  not because it is the only one considered.
+
+8. WHAT THIS TABLE IS NOT
+----------------------------------------------------------------------
+  Two outputs of the step-8 run choose a different rule
+  for each scenario, and NEITHER IS THE REGISTERED
+  ANALYSIS:
+    existence_power.csv  takes the best admissible rule
+                         separately for each responder
+                         share.
+    the behavioural      selects under the practical
+    section              standard, not the strict one.
+  A real study cannot choose its rule after learning the
+  responder share. Quote power for registration only from
+  this table, whose rules are fixed per N under the
+  strict standard with the Monte Carlo margin.
+
+9. FILES
+----------------------------------------------------------------------
+  registration_table.csv    every candidate, both rules,
+                            with the two cost columns
+  combined_rule.csv         the registered rule alone
+  combined_rule_power.png   its power against N
+  switch_point.json         the scan behind section 3
+  tie_breaks.csv            every tie-break firing
+  tie_order_change.csv      what the tie order changed,
+                            if anything
+  c1_compact.csv            C1 at one stated scenario
+  c1_cells.csv              C1, every scenario at those
+                            counts -- NOT to be averaged
+  equal_behaviour_check.csv the two pairs
+
+OVERALL: PASS

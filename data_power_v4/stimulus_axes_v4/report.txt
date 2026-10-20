@@ -1,0 +1,313 @@
+SCORING THE FINAL STIMULI ON THE v4 AXES  (score_stimuli_on_axes_v4.py)
+==============================================================================
+Date      : 2026-10-19 17:23
+Mode      : full run, 47 scenes
+Stimuli   : data/stimulus_set_v4_ext_haze_eq/stimulus_manifest.csv (2115 of 2115 images encoded)
+Trials    : data/frozen_trial_list_v4/trial_list.csv (180 analysed trials with both images encoded)
+Encoder   : openai/clip-vit-large-patch14-336 + un2CLIP (openai_vit_l_14_336.ckpt), own projection, 'openai' preprocessing, fp32, TF32 off (as 03)
+Axes      : data/axes_v4; corpus means and SDs from data/scores_v4/score_catalog.csv
+
+WHAT THIS IS, AND WHAT IT IS NOT
+------------------------------------------------------------------------------
+  CLIP is not a human observer. This checks that the edits move the text-defined
+  concepts (A07 fog, A13 vividless, ...) in the intended direction and more than the
+  neighbouring concepts. It does not show what participants will see.
+
+1. CHECKS
+------------------------------------------------------------------------------
+  M1   PASS  2115 manifest rows (47 scenes; expected 47 x 45 = 2115); 2115 files in data/stimulus_set_v4_ext_haze_eq/stimuli; rows without a file 0, files without a row 0, duplicate filenames 0; not 512x512: 0; modes {'RGB': 2115}
+  M2   PASS  every scene has the 45 planned cells, one reference (k=1, h=0, kind 'grid', no contrast_level) and one source_path
+  M3   PASS  47 scenes, each matching exactly one corpus row ({'path': 47})
+  T1   PASS  data/frozen_trial_list_v4/trial_list.csv sha256 2a01fe7d6afec29f... matches data/frozen_trial_list_v4/checksums.sha256
+  T2   PASS  180 analysed trials (expected 180; {'fog_only': 60, 'sat_only': 60, 'conflict': 30, 'together': 30}); filenames not in the manifest 0; a_is_left inconsistent 0; trials across two scenes 0
+  T3   PASS  pred_sat and pred_fog recomputed from the manifest features (image A minus image B): max |diff| 6.66e-16 and 2.22e-16 (positive = A less colourful / foggier)
+  A1   PASS  264 vectors, unit length (max error 9.9e-08); 9 v4 axes, 9 nocontrol, 6 controls; corpus mean and SD for each
+  A2   PASS  enclosure and darkness directions rebuilt from the caption embeddings; nocontrol vectors reproduced, min cos 1.000000
+  F1   PASS  12 stimulus PNGs re-measured (11 features, incl. sat_mean and contrast_local): max relative difference from the manifest 1.6e-16 (driveway_00001180__ck1__fh0.png contrast_local)
+  E1   PASS  weights: 391 tensors loaded; missing 0, unexpected 0, unused checkpoint keys 0
+  E2   PASS  un2CLIP projection applied (differs from the standard one by up to 2.65e-04)
+  E3   PASS  official loader, same pixels: min cos 1.000000 (16 stimuli)
+  E3b  PASS  official vs 'openai' preprocessing: min cos 1.000000
+  C1   PASS  image_index.csv is the index step 03 encoded (fingerprint 8cf642efe046...; 1,111,881 rows aligned with the embeddings)
+  C2   PASS  79 corpus images re-encoded (47 scene sources + 32 random), opened as 03 opens them: min cos with stored embeddings 0.9999999, with stored pooled vectors 1.000000
+  C3   PASS  z-scores on 24 axes vs scores_z.npy: max |diff| 4.9e-06 from the stored embeddings (tol 0.0001), 4.9e-06 from the re-encoded ones (tol 0.001)
+  S1   PASS  2115 stimulus embeddings finite, norm 1.000000 - 1.000000
+  S2   PASS  8 stimuli re-encoded one at a time: min cos with their stored rows 0.9999999
+  R1   PASS  reference stimulus vs stored corpus embedding of the same photograph: min cos 0.99747, median 0.99924; below 0.99: 0
+  Control directions: corpus SD estimated from 200,000 stored embeddings (sampled SD / stored SD for A07 = 0.9987).
+
+2. CRITERIA, STATED BEFORE THE RESULTS
+------------------------------------------------------------------------------
+  Changes: per scene, each cell minus the scene's own k=1, h=0 stimulus, in units of
+  the axis's corpus SD (sd_raw over all 1.1M encoded images, as 06 and 09c).
+  Intervals: 95% percentile intervals from 2000 resamples of scenes. They describe scenes
+  like these hand-screened ones, not photographs in general. These are descriptive
+  checks: the intervals are NOT corrected for multiple comparisons.
+
+  Each level is tested on a quantity whose intended sign is given. Classes:
+    shown      interval entirely on the intended side of 0
+    not shown  interval includes 0 (a weak step, not a wrong one)
+    reversed   interval entirely on the other side of 0
+  Verdict per question: PASS if every level is shown; PARTIAL if no level is reversed
+  but at least one is not shown; FAIL if any level is reversed.
+
+  (a) every fog level (at the original colour) raises fog (A07) more than vividless (A13).
+      Levels p35, p25, p15, p10, p05 at k=1; tested d(A07) - d(A13), intended > 0.
+  (b) every colour level below the original raises vividless (A13) more than fog (A07).
+      Levels p25, p10, p05, p01 at h=0; tested d(A13) - d(A07), intended > 0.
+  (c) the colour levels above the original lower vividless (A13).
+      Levels p65, p75 at h=0; tested d(A13), intended < 0.
+  (d) every fog level (at the original colour) moves fog (A07) more than flat (A11) and more than lifeless (A14).
+      Levels p35, p25, p15, p10, p05 at k=1; tested d(A07) - d(A11) and d(A07) - d(A14), intended > 0
+      (10 tests).
+
+  Primary: v4 axes, sd_raw. Also reported: the verdicts with sd_raw_colour (each axis
+  divided by its SD over colour images; only changes are listed), and v4@nocontrol
+  (sensitivity only: the darkness direction also reads colour, so nocontrol understates
+  colour effects).
+
+3. REFERENCE IMAGE
+------------------------------------------------------------------------------
+  Each scene's k=1, h=0 stimulus is the unmanipulated 512 px square of CLIP's own region
+  of the photograph. Its cosine with the stored corpus embedding of the same photograph
+  (only the resampling differs; warning below 0.99):
+    min 0.99747   median 0.99924   max 1.00000   below 0.99: 0
+    picnic_area_00000702                         0.99747  (path)
+    driveway_00001180                            0.99757  (path)
+    campus_00004529                              0.99768  (path)
+    train_station_platform_00003977              0.99791  (path)
+    shopping_mall_indoor_00003139                0.99814  (path)
+    (lowest five shown; every scene in reference_check.csv)
+
+4. QUESTIONS (a)-(d)   [v4 axes, sd_raw]
+------------------------------------------------------------------------------
+  (a) every fog level (at the original colour) raises fog (A07) more than vividless (A13)
+      level         tested            mean [95% interval]        same  class
+      p35           d(A07) - d(A13)   -0.07 [-0.11, -0.03]       0.66  reversed
+      p25           d(A07) - d(A13)   -0.15 [-0.20, -0.10]       0.85  reversed
+      p15           d(A07) - d(A13)   -0.17 [-0.24, -0.10]       0.79  reversed
+      p10           d(A07) - d(A13)   -0.13 [-0.21, -0.03]       0.68  reversed
+      p05           d(A07) - d(A13)   +0.04 [-0.08, +0.16]       0.57  not shown
+      VERDICT: FAIL   not shown: p05   reversed: p35, p25, p15, p10
+      On the trials shown (section 9, joint no-intercept regression on all analysed
+      trials; does pred_fog track A07 more than A13 with pred_sat held fixed?):
+        b_fog on dA07  +0.59 [+0.47, +0.73]
+        b_fog on dA13  +0.02 [-0.07, +0.11]
+        b_fog(A07) - b_fog(A13) +0.57 [+0.46, +0.68]  -> shown
+
+  (b) every colour level below the original raises vividless (A13) more than fog (A07)
+      level         tested            mean [95% interval]        same  class
+      p25           d(A13) - d(A07)   +0.50 [+0.45, +0.54]       1.00  shown
+      p10           d(A13) - d(A07)   +0.71 [+0.64, +0.79]       1.00  shown
+      p05           d(A13) - d(A07)   +0.78 [+0.69, +0.86]       1.00  shown
+      p01           d(A13) - d(A07)   +0.86 [+0.74, +0.97]       0.98  shown
+      VERDICT: PASS
+
+  (c) the colour levels above the original lower vividless (A13)
+      level         tested            mean [95% interval]        same  class
+      p65           d(A13)            -0.32 [-0.35, -0.28]       0.98  shown
+      p75           d(A13)            -0.55 [-0.61, -0.49]       0.98  shown
+      VERDICT: PASS
+
+  (d) every fog level (at the original colour) moves fog (A07) more than flat (A11) and more than lifeless (A14)
+      level         tested            mean [95% interval]        same  class
+      p35 vs A11    d(A07) - d(A11)   +0.13 [+0.08, +0.19]       0.70  shown
+      p35 vs A14    d(A07) - d(A14)   +0.14 [+0.10, +0.17]       0.85  shown
+      p25 vs A11    d(A07) - d(A11)   +0.17 [+0.10, +0.24]       0.74  shown
+      p25 vs A14    d(A07) - d(A14)   +0.20 [+0.16, +0.25]       0.91  shown
+      p15 vs A11    d(A07) - d(A11)   +0.32 [+0.22, +0.42]       0.83  shown
+      p15 vs A14    d(A07) - d(A14)   +0.29 [+0.23, +0.35]       0.89  shown
+      p10 vs A11    d(A07) - d(A11)   +0.51 [+0.38, +0.63]       0.87  shown
+      p10 vs A14    d(A07) - d(A14)   +0.36 [+0.28, +0.43]       0.89  shown
+      p05 vs A11    d(A07) - d(A11)   +0.92 [+0.75, +1.09]       0.96  shown
+      p05 vs A14    d(A07) - d(A14)   +0.51 [+0.40, +0.61]       0.91  shown
+      VERDICT: PASS
+
+  4b. Sensitivity: v4@nocontrol (sd_raw)
+      (a) FAIL      (same classes as v4)
+      (b) PASS      (same classes as v4)
+      (c) PASS      (same classes as v4)
+      (d) PARTIAL   levels changed: p25 vs A11: shown -> not shown
+
+  4c. With sd_raw_colour instead of sd_raw (only changes listed)
+      No verdict and no level class changes.
+      SDs (raw cosine units), all images / colour images: A07 0.0322/0.0321, A13 0.0481/0.0469, A11 0.0367/0.0368, A14 0.0467/0.0462
+
+5. (e) DO FOG AND COLOUR COMBINE ADDITIVELY?
+------------------------------------------------------------------------------
+  Per scene: interaction = d(k,h) - d(k,h=0) - d(k=1,h), for the 30 combined cells;
+  0 = additive. Feature rows separate non-additivity in the stimuli from that in CLIP.
+  quantity               cells *   +   -  median |inter|  median |obs|
+  A07                      25/30  20   5           0.129         0.808
+  A13                      26/30   0  26           0.105         1.285
+  A11                      28/30   3  25           0.100         0.091
+  A14                      26/30  24   2           0.077         0.595
+  ctrl_quality             18/30  11   7           0.058         0.656
+  d_sat_mean_sd            30/30  20  10           0.274         1.245
+  d_contrast_local_sd      20/30  20   0           0.007         1.063
+  (cells * = intervals excluding 0; + / - = their sign; units: corpus SD of the axis or
+  of the feature)
+
+  Interaction for A07 (rows fog, columns colour; * interval excludes 0):
+                p75      p65      p25      p10      p05      p01
+    p35      -0.01    -0.01    +0.02*   +0.07*   +0.07*   +0.05*
+    p25      -0.00    +0.01    +0.09*   +0.15*   +0.15*   +0.12*
+    p15      -0.03    -0.03*   +0.17*   +0.24*   +0.23*   +0.16*
+    p10      -0.10*   -0.08*   +0.20*   +0.27*   +0.26*   +0.16*
+    p05      -0.22*   -0.14*   +0.22*   +0.29*   +0.27*   +0.12*
+
+  Interaction for A13 (rows fog, columns colour; * interval excludes 0):
+                p75      p65      p25      p10      p05      p01
+    p35      -0.11*   -0.06*   -0.04*   -0.04*   -0.04*   -0.04*
+    p25      -0.13*   -0.05*   -0.07*   -0.09*   -0.09*   -0.12*
+    p15      -0.11*   -0.03    -0.10*   -0.14*   -0.15*   -0.21*
+    p10      -0.08*   -0.01    -0.12*   -0.16*   -0.19*   -0.27*
+    p05      -0.04    -0.00    -0.15*   -0.22*   -0.26*   -0.37*
+
+6. (f) THE CONTRAST-UP CELLS (rendered, not shown; descriptive)
+------------------------------------------------------------------------------
+  gain g10875: A07 -0.10 [-0.12, -0.08]; A13 -0.06 [-0.08, -0.04]; A11 -0.07 [-0.09, -0.05]; A14 +0.03 [+0.01, +0.05]
+               ctrl_quality -0.11 [-0.14, -0.09]; ctrl_weather -0.04 [-0.06, -0.02]; ctrl_greyscale +0.06 [+0.04, +0.08]; d_contrast_local_sd +0.23 [+0.22, +0.24]; d_sat_mean_sd +0.23 [+0.20, +0.25]
+  gain g11100: A07 -0.12 [-0.14, -0.10]; A13 -0.08 [-0.11, -0.06]; A11 -0.08 [-0.10, -0.05]; A14 +0.03 [+0.01, +0.05]
+               ctrl_quality -0.14 [-0.17, -0.10]; ctrl_weather -0.05 [-0.07, -0.03]; ctrl_greyscale +0.07 [+0.05, +0.10]; d_contrast_local_sd +0.28 [+0.27, +0.29]; d_sat_mean_sd +0.28 [+0.25, +0.31]
+  gain g11500: A07 -0.15 [-0.17, -0.12]; A13 -0.11 [-0.14, -0.08]; A11 -0.08 [-0.11, -0.06]; A14 +0.04 [+0.01, +0.06]
+               ctrl_quality -0.16 [-0.20, -0.12]; ctrl_weather -0.06 [-0.08, -0.03]; ctrl_greyscale +0.09 [+0.06, +0.12]; d_contrast_local_sd +0.37 [+0.36, +0.39]; d_sat_mean_sd +0.37 [+0.33, +0.40]
+
+7. CELL EFFECTS: KEY AXES AND CONTROLS (mean d, corpus SD; * interval excludes 0)
+------------------------------------------------------------------------------
+   top = the v4 axis with the largest share d^2 / sum d^2 over the nine (0.11 = all equal)
+  cell              A07      A13      A11      A14  ctrl_qu  ctrl_we  ctrl_gr   dsat    dcl  top
+  p75 h=0        -0.09*   -0.55*   -0.09*   -0.19*   -0.21*   -0.07*   -0.36*  +0.86  +0.01  A13 0.68
+  p75 p35        +0.08*   -0.41*   -0.14*   -0.14*   -0.09*   +0.06*   -0.44*  +0.44  -0.42  A13 0.37
+  p75 p25        +0.19*   -0.24*   -0.09*   -0.06*   +0.08*   +0.14*   -0.48*  +0.17  -0.72  A04 0.30
+  p75 p15        +0.37*   -0.00    -0.01    +0.06*   +0.37*   +0.25*   -0.48*  -0.12  -1.06  A04 0.38
+  p75 p10        +0.50*   +0.18*   +0.06*   +0.15*   +0.57*   +0.34*   -0.47*  -0.30  -1.28  A04 0.37
+  p75 p05        +0.77*   +0.44*   +0.13*   +0.32*   +0.88*   +0.55*   -0.39*  -0.55  -1.59  A07 0.33
+  p65 h=0        -0.05*   -0.32*   -0.06*   -0.11*   -0.15*   -0.04*   -0.21*  +0.45  +0.00  A13 0.67
+  p65 p35        +0.12*   -0.13*   -0.09*   -0.04*   +0.00    +0.08*   -0.27*  +0.05  -0.42  A04 0.28
+  p65 p25        +0.24*   +0.07*   -0.01    +0.02    +0.21*   +0.16*   -0.27*  -0.19  -0.72  A03 0.39
+  p65 p15        +0.42*   +0.32*   +0.09*   +0.12*   +0.46*   +0.29*   -0.24*  -0.44  -1.06  A03 0.32
+  p65 p10        +0.56*   +0.48*   +0.15*   +0.22*   +0.64*   +0.41*   -0.20*  -0.60  -1.28  A04 0.26
+  p65 p05        +0.89*   +0.72*   +0.16*   +0.42*   +0.93*   +0.67*   -0.14*  -0.81  -1.59  A07 0.33
+  k=1 p35        +0.17*   +0.24*   +0.05*   +0.04*   +0.18*   +0.10*   -0.00   -0.35  -0.43  A03 0.33
+  k=1 p25        +0.28*   +0.44*   +0.11*   +0.08*   +0.33*   +0.19*   +0.02   -0.55  -0.72  A03 0.30
+  k=1 p15        +0.49*   +0.66*   +0.17*   +0.20*   +0.54*   +0.37*   +0.05*  -0.76  -1.06  A13 0.32
+  k=1 p10        +0.68*   +0.81*   +0.18*   +0.32*   +0.70*   +0.53*   +0.09*  -0.89  -1.28  A13 0.33
+  k=1 p05        +1.07*   +1.03*   +0.15*   +0.56*   +1.02*   +0.85*   +0.14*  -1.06  -1.59  A07 0.33
+  p25 h=0        +0.07*   +0.56*   +0.10*   +0.15*   +0.20*   +0.06*   +0.46*  -0.60  -0.01  A13 0.70
+  p25 p35        +0.26*   +0.77*   +0.09*   +0.20*   +0.29*   +0.21*   +0.42*  -0.84  -0.43  A13 0.57
+  p25 p25        +0.44*   +0.93*   +0.11*   +0.29*   +0.41*   +0.37*   +0.44*  -0.98  -0.73  A13 0.50
+  p25 p15        +0.72*   +1.12*   +0.12*   +0.45*   +0.64*   +0.62*   +0.46*  -1.12  -1.06  A13 0.45
+  p25 p10        +0.94*   +1.25*   +0.12*   +0.60*   +0.83*   +0.80*   +0.49*  -1.21  -1.28  A13 0.42
+  p25 p05        +1.36*   +1.45*   +0.08    +0.85*   +1.19*   +1.14*   +0.56*  -1.33  -1.59  A13 0.37
+  p10 h=0        +0.26*   +0.97*   +0.01    +0.42*   +0.28*   +0.29*   +0.92*  -1.01  -0.01  A13 0.69
+  p10 p35        +0.50*   +1.18*   +0.01    +0.49*   +0.41*   +0.49*   +0.89*  -1.18  -0.43  A13 0.58
+  p10 p25        +0.69*   +1.32*   +0.02    +0.59*   +0.56*   +0.66*   +0.92*  -1.28  -0.73  A13 0.53
+  p10 p15        +0.98*   +1.50*   +0.04    +0.77*   +0.83*   +0.92*   +0.96*  -1.38  -1.06  A13 0.48
+  p10 p10        +1.21*   +1.61*   +0.03    +0.91*   +1.02*   +1.09*   +1.00*  -1.44  -1.28  A13 0.44
+  p10 p05        +1.62*   +1.79*   -0.00    +1.17*   +1.37*   +1.41*   +1.07*  -1.52  -1.59  A13 0.38
+  p05 h=0        +0.42*   +1.19*   -0.06    +0.61*   +0.34*   +0.49*   +1.31*  -1.21  -0.01  A13 0.64
+  p05 p35        +0.66*   +1.40*   -0.06    +0.69*   +0.50*   +0.68*   +1.30*  -1.35  -0.43  A13 0.57
+  p05 p25        +0.85*   +1.54*   -0.04    +0.80*   +0.67*   +0.85*   +1.32*  -1.42  -0.73  A13 0.53
+  p05 p15        +1.13*   +1.70*   -0.02    +0.97*   +0.92*   +1.09*   +1.36*  -1.50  -1.06  A13 0.48
+  p05 p10        +1.36*   +1.81*   -0.03    +1.12*   +1.13*   +1.27*   +1.40*  -1.55  -1.28  A13 0.45
+  p05 p05        +1.76*   +1.97*   -0.05    +1.39*   +1.49*   +1.57*   +1.44*  -1.61  -1.59  A13 0.39
+  p01 h=0        +0.66*   +1.51*   -0.15*   +0.96*   +0.45*   +0.80*   +2.22*  -1.52  -0.01  A13 0.57
+  p01 p35        +0.88*   +1.71*   -0.14*   +1.06*   +0.63*   +0.96*   +2.21*  -1.60  -0.43  A13 0.55
+  p01 p25        +1.06*   +1.83*   -0.13*   +1.17*   +0.80*   +1.10*   +2.20*  -1.64  -0.73  A13 0.52
+  p01 p15        +1.30*   +1.96*   -0.11*   +1.33*   +1.06*   +1.30*   +2.18*  -1.68  -1.06  A13 0.48
+  p01 p10        +1.50*   +2.05*   -0.11*   +1.46*   +1.25*   +1.43*   +2.19*  -1.71  -1.28  A13 0.45
+  p01 p05        +1.85*   +2.17*   -0.12*   +1.69*   +1.59*   +1.68*   +2.17*  -1.74  -1.59  A13 0.40
+  dsat / dcl = change of sat_mean / contrast_local in feature SD units (39.182 / 9.348).
+  Every cell, axis, interval and set: cell_effects.csv. Heatmaps: heatmap_<axis>.png.
+
+8. PER FEATURE UNIT (within-scene regression, no intercept)
+------------------------------------------------------------------------------
+  Per scene, over its 41 manipulated colour x fog cells: d(axis) = b_fog * fog + b_desat * desat,
+  fog = -d contrast_local / 9.348, desat = -d sat_mean / 39.182 (oriented like pred_fog / pred_sat:
+  positive = foggier / less colourful). Slopes are axis SD per feature SD, averaged over
+  scenes; R^2 is uncentred (no-intercept model).
+  axis              per SD fog                per SD desaturation         R2 med (min)
+  A07               +0.42 [+0.36, +0.48]      +0.44 [+0.37, +0.52]          0.94 (0.67)
+  A13               -0.01 [-0.08, +0.06]      +1.10 [+1.03, +1.18]          0.98 (0.94)
+  A11               +0.07 [+0.03, +0.11]      -0.05 [-0.10, -0.01]          0.67 (0.18)
+  A14               +0.03 [-0.02, +0.08]      +0.61 [+0.54, +0.68]          0.90 (0.55)
+  nc_A07            +0.51 [+0.45, +0.58]      +0.04 [-0.02, +0.09]          0.93 (0.52)
+  nc_A13            +0.02 [-0.04, +0.10]      +0.91 [+0.85, +0.98]          0.99 (0.95)
+  nc_A11            +0.11 [+0.06, +0.16]      -0.08 [-0.14, -0.03]          0.69 (0.01)
+  nc_A14            +0.09 [+0.04, +0.14]      +0.27 [+0.21, +0.33]          0.80 (0.14)
+  ctrl_quality      +0.42 [+0.35, +0.49]      +0.33 [+0.26, +0.41]          0.95 (0.79)
+  Specificity of the slopes:
+    fog slope: A07 - A13            +0.44 [+0.36, +0.51]  same sign 0.94
+    desaturation slope: A13 - A07   +0.66 [+0.60, +0.72]  same sign 1.00
+    fog slope: A07 - A11            +0.35 [+0.27, +0.44]  same sign 0.87
+    fog slope: A07 - A14            +0.39 [+0.33, +0.46]  same sign 0.98
+  Within-scene r(fog, desat) over the cells: median +0.38 (range +0.01 to +0.55).
+
+9. THE TRIALS PARTICIPANTS WILL SEE
+------------------------------------------------------------------------------
+  dA = axis(image A) - axis(image B) in corpus SD, oriented like pred_*: pred_fog > 0 =
+  A foggier, pred_sat > 0 = A less colourful. Expected: pred_fog with dA07 and pred_sat
+  with dA13 positive. Intervals resample scenes. 'uninformative' = predictor SD < 0.1
+  within the type (nearly constant by construction).
+
+  all analysed: 180 trials, 47 scenes; SD of pred_fog 0.61, of pred_sat 1.02
+    pair                Pearson r [interval]      uncentred r [interval]     signs
+    pred_fog x dA07     +0.54 [+0.44, +0.63]      +0.54 [+0.44, +0.64]        0.87
+    pred_fog x dA13     +0.12 [+0.02, +0.21]      +0.12 [+0.03, +0.22]        0.68
+    pred_sat x dA07     +0.70 [+0.62, +0.78]      +0.70 [+0.63, +0.78]        0.80
+    pred_sat x dA13     +0.96 [+0.94, +0.97]      +0.96 [+0.94, +0.97]        0.88
+    joint regression, no intercept: dA = b_fog * pred_fog + b_sat * pred_sat
+      dA07   b_fog +0.59 [+0.47, +0.73]     b_sat +0.49 [+0.38, +0.61]
+      dA13   b_fog +0.02 [-0.07, +0.11]     b_sat +1.09 [+1.00, +1.19]
+      b_fog(A07) - b_fog(A13)   +0.57 [+0.46, +0.68]  -> shown
+      b_sat(A13) - b_sat(A07)   +0.60 [+0.50, +0.70]  -> shown
+
+  sat_only: 60 trials, 35 scenes; SD of pred_fog 0.01, of pred_sat 1.52
+    pair                Pearson r [interval]      uncentred r [interval]     signs
+    pred_fog x dA07     +0.55 [+0.43, +0.69]      +0.55 [+0.42, +0.69]        0.92  uninformative
+    pred_fog x dA13     +0.75 [+0.67, +0.83]      +0.75 [+0.68, +0.83]        0.92  uninformative
+    pred_sat x dA07     +0.85 [+0.79, +0.90]      +0.85 [+0.79, +0.90]        1.00
+    pred_sat x dA13     +0.97 [+0.95, +0.98]      +0.97 [+0.95, +0.98]        1.00
+    joint regression: not fitted (a predictor is nearly constant in this type)
+
+  fog_only: 60 trials, 38 scenes; SD of pred_fog 0.79, of pred_sat 0.05
+    pair                Pearson r [interval]      uncentred r [interval]     signs
+    pred_fog x dA07     +0.89 [+0.85, +0.93]      +0.88 [+0.84, +0.93]        1.00
+    pred_fog x dA13     +0.30 [-0.00, +0.52]      +0.28 [-0.03, +0.52]        0.62
+    pred_sat x dA07     +0.30 [+0.09, +0.51]      +0.31 [+0.10, +0.51]        0.58  uninformative
+    pred_sat x dA13     +0.40 [+0.24, +0.59]      +0.39 [+0.23, +0.56]        0.67  uninformative
+    joint regression: not fitted (a predictor is nearly constant in this type)
+
+  together: 30 trials, 26 scenes; SD of pred_fog 0.81, of pred_sat 1.11
+    pair                Pearson r [interval]      uncentred r [interval]     signs
+    pred_fog x dA07     +0.84 [+0.75, +0.92]      +0.82 [+0.74, +0.92]        1.00
+    pred_fog x dA13     +0.84 [+0.76, +0.91]      +0.83 [+0.74, +0.91]        1.00
+    pred_sat x dA07     +0.84 [+0.72, +0.93]      +0.84 [+0.75, +0.93]        1.00
+    pred_sat x dA13     +0.97 [+0.95, +0.99]      +0.97 [+0.95, +0.99]        1.00
+    joint regression, no intercept: dA = b_fog * pred_fog + b_sat * pred_sat
+      dA07   b_fog +0.64 [+0.34, +1.11]     b_sat +0.54 [+0.14, +0.90]
+      dA13   b_fog +0.15 [-0.06, +0.48]     b_sat +1.01 [+0.82, +1.16]
+      b_fog(A07) - b_fog(A13)   +0.49 [+0.21, +0.85]  -> shown
+      b_sat(A13) - b_sat(A07)   +0.47 [+0.12, +0.86]  -> shown
+
+  conflict: 30 trials, 22 scenes; SD of pred_fog 0.55, of pred_sat 0.62
+    pair                Pearson r [interval]      uncentred r [interval]     signs
+    pred_fog x dA07     -0.40 [-0.65, +0.00]      -0.42 [-0.66, +0.00]        0.37
+    pred_fog x dA13     -0.89 [-0.94, -0.83]      -0.89 [-0.94, -0.83]        0.03
+    pred_sat x dA07     +0.51 [+0.11, +0.74]      +0.52 [+0.11, +0.74]        0.63
+    pred_sat x dA13     +0.92 [+0.85, +0.96]      +0.92 [+0.86, +0.96]        0.97
+    joint regression, no intercept: dA = b_fog * pred_fog + b_sat * pred_sat
+      dA07   b_fog +0.84 [+0.01, +1.52]     b_sat +1.08 [+0.30, +1.81]
+      dA13   b_fog -0.30 [-0.87, +0.44]     b_sat +1.11 [+0.55, +1.93]
+      b_fog(A07) - b_fog(A13)   +1.14 [+0.26, +1.66]  -> shown
+      b_sat(A13) - b_sat(A07)   +0.03 [-0.58, +1.05]  -> not shown
+  signs = share of trials where the axis difference has the predictor's sign.
+
+10. FILES
+------------------------------------------------------------------------------
+  data/stimulus_axes_v4: report.txt, embeddings_768.npy, pooled_1024.npy (float32), image_scores.csv,
+  score_keys.csv, scene_effects.csv, cell_effects.csv, question_levels.csv, additivity.csv,
+  scene_slopes.csv, trial_axis_differences.csv, trial_stats.csv, corpus_check.csv,
+  reference_check.csv, heatmap_A07.png, heatmap_A13.png, heatmap_A11.png, heatmap_A14.png, run_meta.json
+  Elapsed: 1.2 min

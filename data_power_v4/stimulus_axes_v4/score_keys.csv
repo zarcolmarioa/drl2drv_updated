@@ -1,0 +1,27 @@
+set,label,key,col,mean_raw,sd_raw,mean_raw_colour,sd_raw_colour,sd_source
+v4,A01,"v4::A01 unreal, fake, artificial",201,-0.0309867,0.0340517,-0.0311972,0.0340683,score_catalog.csv
+v4,A02,"v4::A02 dreamlike, in a dream",206,-0.00935752,0.033516,-0.00903099,0.0336078,score_catalog.csv
+v4,A03,"v4::A03 movie, picture, film set",211,0.0121193,0.0335543,0.01178,0.033464,score_catalog.csv
+v4,A04,"v4::A04 simulation, video game",216,-0.00137075,0.0316933,-0.000585722,0.0314155,score_catalog.csv
+v4,A05,"v4::A05 veil, glass wall, barrier, bubble",221,-0.0406744,0.0325296,-0.0408514,0.0325766,score_catalog.csv
+v4,A07,"v4::A07 fog, blurry, hazy",226,-0.0456662,0.0322459,-0.0461351,0.0321167,score_catalog.csv
+v4,A11,"v4::A11 flat, two-dimensional",231,-0.00187962,0.036671,-0.00171658,0.0367741,score_catalog.csv
+v4,A13,"v4::A13 dull, less vivid, colorless",236,0.0251445,0.0480948,0.0230028,0.0469237,score_catalog.csv
+v4,A14,"v4::A14 lifeless, dead, empty",241,-0.0303948,0.0467472,-0.0319095,0.0461519,score_catalog.csv
+v4@nocontrol,nc_A01,"v4@nocontrol::A01 unreal, fake, artificial",205,-0.0250359,0.0351593,-0.025138,0.0352077,score_catalog.csv
+v4@nocontrol,nc_A02,"v4@nocontrol::A02 dreamlike, in a dream",210,-0.0137191,0.0320406,-0.0135334,0.032145,score_catalog.csv
+v4@nocontrol,nc_A03,"v4@nocontrol::A03 movie, picture, film set",215,0.0134058,0.033488,0.0131155,0.0334121,score_catalog.csv
+v4@nocontrol,nc_A04,"v4@nocontrol::A04 simulation, video game",220,0.00397427,0.0314296,0.00484582,0.0310877,score_catalog.csv
+v4@nocontrol,nc_A05,"v4@nocontrol::A05 veil, glass wall, barrier, bubble",225,-0.0276082,0.0324924,-0.0274852,0.0325338,score_catalog.csv
+v4@nocontrol,nc_A07,"v4@nocontrol::A07 fog, blurry, hazy",230,-0.0342619,0.0304678,-0.0341192,0.0303328,score_catalog.csv
+v4@nocontrol,nc_A11,"v4@nocontrol::A11 flat, two-dimensional",235,-0.00930233,0.0329885,-0.00910051,0.0330592,score_catalog.csv
+v4@nocontrol,nc_A13,"v4@nocontrol::A13 dull, less vivid, colorless",240,0.0397746,0.0442497,0.0382297,0.0436465,score_catalog.csv
+v4@nocontrol,nc_A14,"v4@nocontrol::A14 lifeless, dead, empty",245,-0.0168487,0.0402838,-0.0175898,0.0401952,score_catalog.csv
+controls,ctrl_quality,controls::quality,195,-0.0170741,0.0268263,-0.0174207,0.0268418,score_catalog.csv
+controls,ctrl_age,controls::age,196,-0.00521537,0.0269559,-0.00610727,0.0259222,score_catalog.csv
+controls,ctrl_weather,controls::weather,197,-0.0599607,0.0378868,-0.0606352,0.0378373,score_catalog.csv
+controls,ctrl_mood,controls::mood,198,-0.00593133,0.0362616,-0.00689018,0.0361143,score_catalog.csv
+controls,ctrl_threat,controls::threat,199,-0.0381698,0.0395073,-0.0389107,0.0394776,score_catalog.csv
+controls,ctrl_greyscale,controls::greyscale,200,-0.0804971,0.0355923,-0.0840463,0.0295617,score_catalog.csv
+direction,dir_enclosure,direction::enclosure,,-0.041031103,0.067134313,,,"sample of 200,000 embeddings"
+direction,dir_darkness,direction::darkness,,-0.032251497,0.04746167,,,"sample of 200,000 embeddings"

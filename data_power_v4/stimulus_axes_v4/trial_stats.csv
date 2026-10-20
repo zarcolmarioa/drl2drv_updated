@@ -1,0 +1,39 @@
+type,statistic,predictor,axis,n_trials,n_scenes,uninformative,pearson,pearson_lo,pearson_hi,uncentred,uncentred_lo,uncentred_hi,sign_agreement,estimate,lo,hi
+all analysed,correlation,pred_fog,A07,180,47,False,0.53888,0.43838,0.63041,0.54132,0.44015,0.63691,0.86667,,,
+all analysed,correlation,pred_fog,A13,180,47,False,0.11741,0.020689,0.21053,0.12276,0.025408,0.21898,0.68333,,,
+all analysed,correlation,pred_sat,A07,180,47,False,0.70179,0.62122,0.77697,0.70299,0.62807,0.7783,0.8,,,
+all analysed,correlation,pred_sat,A13,180,47,False,0.95595,0.93713,0.97356,0.95614,0.93753,0.97361,0.88333,,,
+all analysed,joint regression coefficient,pred_fog,A07,180,47,,,,,,,,,0.58787,0.47155,0.72663
+all analysed,joint regression coefficient,pred_sat,A07,180,47,,,,,,,,,0.48853,0.38461,0.6051
+all analysed,joint regression coefficient,pred_fog,A13,180,47,,,,,,,,,0.015975,-0.070801,0.10752
+all analysed,joint regression coefficient,pred_sat,A13,180,47,,,,,,,,,1.0873,1.0017,1.1883
+all analysed,joint regression contrast,b_fog(A07) - b_fog(A13),,180,47,,,,,,,,,0.57189,0.46133,0.68258
+all analysed,joint regression contrast,b_sat(A13) - b_sat(A07),,180,47,,,,,,,,,0.59881,0.502,0.69816
+sat_only,correlation,pred_fog,A07,60,35,True,0.55291,0.4305,0.69242,0.55061,0.42492,0.68892,0.91667,,,
+sat_only,correlation,pred_fog,A13,60,35,True,0.7487,0.67296,0.83334,0.75162,0.6786,0.83176,0.91667,,,
+sat_only,correlation,pred_sat,A07,60,35,False,0.84878,0.79202,0.90334,0.84552,0.79032,0.90119,1,,,
+sat_only,correlation,pred_sat,A13,60,35,False,0.96886,0.95127,0.98388,0.9691,0.95324,0.98385,1,,,
+fog_only,correlation,pred_fog,A07,60,38,False,0.88509,0.84581,0.92938,0.88487,0.84191,0.93143,1,,,
+fog_only,correlation,pred_fog,A13,60,38,False,0.29726,-0.00045394,0.52218,0.28387,-0.030786,0.5188,0.61667,,,
+fog_only,correlation,pred_sat,A07,60,38,True,0.30498,0.093461,0.51188,0.30921,0.10383,0.51008,0.58333,,,
+fog_only,correlation,pred_sat,A13,60,38,True,0.39864,0.23616,0.59121,0.3871,0.22688,0.56374,0.66667,,,
+together,correlation,pred_fog,A07,30,26,False,0.83524,0.75266,0.92388,0.82378,0.74209,0.92346,1,,,
+together,correlation,pred_fog,A13,30,26,False,0.83742,0.76039,0.90787,0.83003,0.74042,0.9067,1,,,
+together,correlation,pred_sat,A07,30,26,False,0.83567,0.72203,0.92652,0.83744,0.7465,0.92732,1,,,
+together,correlation,pred_sat,A13,30,26,False,0.97282,0.94746,0.99243,0.97189,0.94764,0.99006,1,,,
+together,joint regression coefficient,pred_fog,A07,30,26,,,,,,,,,0.63593,0.34139,1.1105
+together,joint regression coefficient,pred_sat,A07,30,26,,,,,,,,,0.54325,0.13844,0.90299
+together,joint regression coefficient,pred_fog,A13,30,26,,,,,,,,,0.15042,-0.061243,0.47749
+together,joint regression coefficient,pred_sat,A13,30,26,,,,,,,,,1.0085,0.82472,1.1625
+together,joint regression contrast,b_fog(A07) - b_fog(A13),,30,26,,,,,,,,,0.48551,0.20864,0.84584
+together,joint regression contrast,b_sat(A13) - b_sat(A07),,30,26,,,,,,,,,0.4653,0.12445,0.85707
+conflict,correlation,pred_fog,A07,30,22,False,-0.39586,-0.65094,0.0026824,-0.41569,-0.66437,0.0028208,0.36667,,,
+conflict,correlation,pred_fog,A13,30,22,False,-0.89401,-0.94289,-0.83135,-0.89395,-0.9421,-0.82956,0.033333,,,
+conflict,correlation,pred_sat,A07,30,22,False,0.51306,0.11349,0.74081,0.52111,0.11491,0.73793,0.63333,,,
+conflict,correlation,pred_sat,A13,30,22,False,0.91548,0.85478,0.96182,0.9165,0.85954,0.96143,0.96667,,,
+conflict,joint regression coefficient,pred_fog,A07,30,22,,,,,,,,,0.83869,0.014495,1.5225
+conflict,joint regression coefficient,pred_sat,A07,30,22,,,,,,,,,1.079,0.30177,1.8123
+conflict,joint regression coefficient,pred_fog,A13,30,22,,,,,,,,,-0.29672,-0.87268,0.44164
+conflict,joint regression coefficient,pred_sat,A13,30,22,,,,,,,,,1.1066,0.55498,1.9347
+conflict,joint regression contrast,b_fog(A07) - b_fog(A13),,30,22,,,,,,,,,1.1354,0.26029,1.6608
+conflict,joint regression contrast,b_sat(A13) - b_sat(A07),,30,22,,,,,,,,,0.027602,-0.57831,1.0473
