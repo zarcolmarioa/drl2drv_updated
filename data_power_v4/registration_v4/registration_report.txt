@@ -1,7 +1,7 @@
 REGISTRATION TABLE REPORT  (v4, step 8b)
 ======================================================================
 Source        : data/power_v4_n10_20/frozen
-Output        : data/registration_v4
+Output        : data/registration_v4_2
 Standard      : strict with the 95% MC margin
 Sample sizes  : 10..20
 Planning cell : share 0.5, lapse 0.1, colour 0.5/SD, fog 0.7/SD

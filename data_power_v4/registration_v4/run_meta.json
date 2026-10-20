@@ -1,8 +1,8 @@
 {
  "script": "registration_table_v4.py",
- "built": "2026-10-19 23:50:19",
+ "built": "2026-10-20 11:03:23",
  "source": "data/power_v4_n10_20/frozen",
- "output": "data/registration_v4",
+ "output": "data/registration_v4_2",
  "registered_rule": "count",
  "tie_break": [
   "worst_upper",

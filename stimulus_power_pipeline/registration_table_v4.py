@@ -362,7 +362,7 @@ THIN_FALSE_WARN = 0.045
 #   full filtered set is written separately.
 C1_EFFECT = {"colour": 0.50, "fog": 0.70}
 C1_SHARE = 0.5
-C1_STRATEGY = 0.0
+C1_STRATEGY = 0.25
 C1_LAPSE_PAIR = (0.1, 0.1)
 C1_MEASURES = ("power_colour_gated", "power_fog_gated",
                "power_either_gated", "gate_fires", "inconclusive")
