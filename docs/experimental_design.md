@@ -134,7 +134,8 @@ that follows Suzuki et al.
 - People differ in their contrast-to-colour balance, compared between people
   only.
 - A person's descriptions predict their weights. The descriptions come from the
-  CDS items, the interview coded blind to the task, and the word ratings.
+  CDS items, the interview (coded before the participant does the task), and
+  the word ratings.
 - The grid blocks and the shift from "normal" to "episode".
 - Dose-response, additivity of the two features, and prevalence.
 - A per-person binomial analysis of the single-feature trials, following
@@ -157,6 +158,87 @@ Two further cases:
   manipulated range does not reach the experience.
 - **The repeated trials show low consistency.** The task or memory is too
   noisy to conclude.
+
+### 2.4 Who takes part, when recruitment stops, and who is analysed
+
+**Where people come from.** Participants and controls come from one pool: the
+respondents to an earlier online survey with the Cambridge Depersonalisation
+Scale (CDS-29), who are sent a short online questionnaire. Both groups have
+therefore read the same CDS wording. Data collection starts when the
+questionnaire is sent, and the questionnaire stays open for **4 weeks**.
+
+Below, **AfS** is the sum of the CDS item scores for items 2, 13, 19 and 29,
+the Alienation from Surroundings factor of Sierra et al. (2005).
+
+**Participants.** A respondent is eligible if they:
+- answer Yes or Not sure to having had an experience in which they or the world
+  around them felt different from usual, in a way that is hard to put into
+  words;
+- give an interpretable answer to how long it lasted (not an episode that
+  occurred only while falling asleep, or under alcohol or medication);
+- are willing to be contacted.
+
+Eligible respondents are invited in priority tiers, formed from whether they say
+"the world around you" was what felt different and from their AfS score (6 or
+above, or below 6). Within a tier, the most recent episode comes first. Everyone
+is interviewed before doing the task. Respondents with a high CDS total but
+little or no AfS endorsement (total 70 or above, AfS 2 or below) are contrast
+cases for the interview; if they also do the task, their results are **reported
+separately** and they do not count toward the sample size for H1 and H2.
+
+**Controls.** A respondent is a control candidate if they:
+- answer No to having had such an experience ("Not sure" is excluded);
+- are willing to be contacted;
+- have AfS = 0, that is, none of CDS items 2, 13, 19 and 29 endorsed at all;
+- have a CDS total of **20 or below**. This cut-off was fixed before
+  registration. It is the median total among the respondents with AfS = 0.
+
+All candidates are invited. Controls are not interviewed.
+
+**When recruitment stops.**
+- **Participants:** at **20 analysable participants**, or when every eligible
+  candidate has been invited and has done the task, declined, or not replied
+  within 3 weeks of a reminder, whichever comes first.
+- **Second wave.** If fewer than 20 participants are analysable when the pool is
+  exhausted, the questionnaire may be sent once more, open for 4 weeks, with the
+  same rules.
+- **Controls:** the same rule, with a maximum of **30**. If fewer than 20
+  controls complete, a reserve band (AfS = 0 and a CDS total of 21 to 35) is
+  invited; this is the controls' second wave.
+
+**Who is analysable.** The thresholds and the decision rules were computed for
+exactly the 180 analysed trials of the frozen trial list, so a person counts
+only with all 180. The experiment makes this all or nothing: every trial needs
+a key press, there is no time limit, and nothing is saved until the end. A
+person is analysable if:
+- the session is complete and uploaded;
+- it is not a test or development session;
+- both images fitted on the screen, so no image was cut off;
+- they failed fewer than 3 of the 10 catch trials.
+
+One restart is allowed; the first complete session is analysed, and restarts
+are reported. People who are not analysable do not count toward the sample
+size, and recruitment continues within the pool. The same rules apply to
+controls. With fewer than 10 analysable participants, no H1 or H2 claim is made
+(section 2.2). With fewer than 20 analysable controls, C1 is reported
+descriptively.
+
+**Excluded from one analysis only.**
+- **Flat word ratings** (the same rating for all 10 words): left out of the
+  word-rating analysis only. The ratings come after the task and are used only
+  in an exploratory analysis.
+- **A missing grid, word-rating or state block:** that person is left out of
+  that analysis only. None of these blocks is needed for H1 or H2.
+
+**Not exclusions.**
+- The 15 consistency trials are a quality report only.
+- Very fast responses (under 300 ms on image trials) are used only in the
+  attention check that comes before C1, which compares the two groups.
+
+**The first sessions.** The first sessions also check that the interview fits
+its time limit and that the experiment runs as intended. They count as normal
+sessions if neither the interview guide nor the experiment is changed
+afterwards; otherwise they are reported separately.
 
 ---
 
