@@ -63,6 +63,30 @@
    "detail": "0 invalid rows"
   },
   {
+   "check": "[messy] every trial number is in the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "unknown: []"
+  },
+  {
+   "check": "[messy] trial types agree with the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 rows differ"
+  },
+  {
+   "check": "[messy] side_pressed is 'left' or 'right' on image trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 other values"
+  },
+  {
+   "check": "[messy] chose_A in the tidy table equals chose A derived from side_pressed and the frozen list's a_is_left",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "7839 image-trial rows agree"
+  },
+  {
    "check": "[messy] every non-test session's ID is in the participant table",
    "result": "PASS",
    "stops_run": true,

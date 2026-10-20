@@ -1,7 +1,7 @@
 STUDY ANALYSIS  (v4)  --  analyse_study_v4.py
 ========================================================================
 dataset      data/sim_study_v4/datasets/P-both_n10__C-matched_n30  (tidy tables)
-run          2026-10-20 22:58:46
+run          2026-10-21 00:08:16
 python 3.11.15, numpy 2.4.4, pandas 3.0.3
 Shareable: every person is a pseudonym. The key is in PRIVATE/.
 
@@ -160,6 +160,10 @@ CHECKS
   [PASS] [P-both_n10__C-matched_n30] survey ResponseIds are unique
   [PASS] [P-both_n10__C-matched_n30] participant table has participant_id, group, tier
   [PASS] [P-both_n10__C-matched_n30] participant table: groups and tiers valid  (0 invalid rows)
+  [PASS] [P-both_n10__C-matched_n30] every trial number is in the frozen list  (unknown: [])
+  [PASS] [P-both_n10__C-matched_n30] trial types agree with the frozen list  (0 rows differ)
+  [PASS] [P-both_n10__C-matched_n30] side_pressed is 'left' or 'right' on image trials  (0 other values)
+  [PASS] [P-both_n10__C-matched_n30] chose_A in the tidy table equals chose A derived from side_pressed and the frozen list's a_is_left  (8844 image-trial rows agree)
   [PASS] [P-both_n10__C-matched_n30] every non-test session's ID is in the participant table  (0 unknown)
   [PASS] [P-both_n10__C-matched_n30] session group agrees with the participant table  (0 sessions differ)
   [PASS] [P-both_n10__C-matched_n30] final N within the maxima (20 participants, 30 controls)  (N = 10 and 30)

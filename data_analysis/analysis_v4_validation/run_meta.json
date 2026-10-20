@@ -1,7 +1,7 @@
 {
  "script": "analyse_study_v4.py",
  "run_mode": "validate_sim",
- "started": "2026-10-20 22:58:42",
+ "started": "2026-10-21 00:08:12",
  "output": "data/analysis_v4_validation",
  "python": "3.11.15",
  "numpy": "2.4.4",
@@ -420,7 +420,6 @@
    "analysed",
    "key_pressed",
    "side_pressed",
-   "chose_A",
    "rt_ms",
    "catch_key",
    "catch_pass",
@@ -495,7 +494,7 @@
   "combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
   "grid_trials.csv": "6da71b77f3e3420df23c646df696267687d5752926939d43a415e2360c05fc00",
   "detection_curve.csv": "c2f8aea861abd801f940230d058293ceae2e0190f203b09dc4d3c83b93a4e830",
-  "this script": "2b69d059f9fb07eac767c5ba32766887db022645e79fef033ed99a4c7e9f8318",
+  "this script": "3294aa36e83662108fd7525276c071a8bce1251db839b907c920d1ae93c2d896",
   "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730"
  },
  "thresholds": {
@@ -2304,6 +2303,12 @@
    "detail": "23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour"
   },
   {
+   "check": "negative test: chose_A flipped for one session stops the run and lists exactly that session's trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "201 rows flipped; run stopped; 201 listed in 1 session(s)"
+  },
+  {
    "check": "null_random_n10.npz: trial order matches the frozen list",
    "result": "PASS",
    "stops_run": true,
@@ -2424,5 +2429,5 @@
    "detail": "12/12 cells"
   }
  ],
- "elapsed_s": 57.2
+ "elapsed_s": 56.8
 }

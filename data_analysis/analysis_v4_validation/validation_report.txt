@@ -1,6 +1,6 @@
 VALIDATION ON SIMULATED DATA  --  analyse_study_v4.py
 ========================================================================
-run 2026-10-20 22:59:39  simulation data/sim_study_v4
+run 2026-10-21 00:09:09  simulation data/sim_study_v4
 
 datasets analysed: 32; failed: 0
 
@@ -481,6 +481,7 @@ CHECKS (shared, plus every non-PASS and every truth check)
   [PASS] C1 inconclusive when controls lapse more (single draws)  (2/2)
   [PASS] no claim under no effect, H1/H2 (single draws)  (18/18; a miss among these is expected 34% of the time)
   [FAIL] no claim under no effect, C1 (single draws)  (23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour)
+  [PASS] negative test: chose_A flipped for one session stops the run and lists exactly that session's trials  (201 rows flipped; run stopped; 201 listed in 1 session(s))
   [PASS] null_random_n10.npz: trial order matches the frozen list
   [PASS] false claims, H1, null_random_n10.npz  (0/1000 vs false_guesser 5.907e-05, allowed 0..1)
   [PASS] false claims, H2, null_random_n10.npz  (0/1000 vs false_guesser 5.622e-05, allowed 0..1)

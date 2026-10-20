@@ -63,6 +63,30 @@
    "detail": "0 invalid rows"
   },
   {
+   "check": "[P-both_n15__C-matched_n30] every trial number is in the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "unknown: []"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] trial types agree with the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 rows differ"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] side_pressed is 'left' or 'right' on image trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 other values"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] chose_A in the tidy table equals chose A derived from side_pressed and the frozen list's a_is_left",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "9648 image-trial rows agree"
+  },
+  {
    "check": "[P-both_n15__C-matched_n30] every non-test session's ID is in the participant table",
    "result": "PASS",
    "stops_run": true,

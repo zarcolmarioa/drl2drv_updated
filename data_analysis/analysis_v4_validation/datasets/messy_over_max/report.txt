@@ -1,7 +1,7 @@
 STUDY ANALYSIS  (v4)  --  analyse_study_v4.py
 ========================================================================
 dataset      data/sim_study_v4/datasets/messy_over_max  (tidy tables)
-run          2026-10-20 22:59:22
+run          2026-10-21 00:08:52
 python 3.11.15, numpy 2.4.4, pandas 3.0.3
 Shareable: every person is a pseudonym. The key is in PRIVATE/.
 
@@ -172,6 +172,10 @@ CHECKS
   [PASS] [messy_over_max] survey ResponseIds are unique
   [PASS] [messy_over_max] participant table has participant_id, group, tier
   [PASS] [messy_over_max] participant table: groups and tiers valid  (0 invalid rows)
+  [PASS] [messy_over_max] every trial number is in the frozen list  (unknown: [])
+  [PASS] [messy_over_max] trial types agree with the frozen list  (0 rows differ)
+  [PASS] [messy_over_max] side_pressed is 'left' or 'right' on image trials  (0 other values)
+  [PASS] [messy_over_max] chose_A in the tidy table equals chose A derived from side_pressed and the frozen list's a_is_left  (10452 image-trial rows agree)
   [PASS] [messy_over_max] every non-test session's ID is in the participant table  (0 unknown)
   [PASS] [messy_over_max] session group agrees with the participant table  (0 sessions differ)
   [PASS] [messy_over_max] every participant session has a completion time (needed to apply the maximum)  (0 missing)
