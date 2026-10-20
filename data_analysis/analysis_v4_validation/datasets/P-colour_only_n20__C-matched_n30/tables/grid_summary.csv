@@ -1,0 +1,5 @@
+group,feature,n_people,n_with_shift,n_missing_block,n_both_episode_screens_none,shift_mean,shift_median,shift_sd,episode_answers_at_original,normal_answers_at_original,episode_none,set_code_0,set_code_1,cell_px_median
+participant,colour,20,20,0,0,-0.35820404871064265,-0.31078505365552367,0.5821431051858726,12,24,,7,13,199.0
+participant,fog,20,20,0,0,-0.07444307784043912,0.0,0.144612553232008,31,38,0.0,7,13,199.0
+control,colour,30,30,0,0,-0.06890914539933873,0.0,0.5581333605587029,21,37,,15,15,199.0
+control,fog,30,30,0,0,-0.08006965315461535,0.0,0.16599380929317087,46,56,2.0,15,15,199.0

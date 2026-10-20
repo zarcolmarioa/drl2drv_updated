@@ -1,0 +1,442 @@
+SIMULATED STUDY DATA  (v4)  --  simulate_study_data_v4.py
+========================================================================
+run          2026-10-20 22:57:30  (11 s)
+output       data/sim_study_v4
+master seed  20261020
+python 3.11.15, numpy 2.4.4, pandas 3.0.3
+
+INPUTS
+------------------------------------------------------------------------
+  trial_list.csv               2a01fe7d6afec29fb2c1c647dff7458c26136d7c49b09df4e2e44184bb831c93
+  checksums.sha256             806e9e6031ef85c6002e797e546963a21874e67016c539780b7ddd23d8058704
+  combined_rule.csv            9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a
+  grid_trials.csv              6da71b77f3e3420df23c646df696267687d5752926939d43a415e2360c05fc00
+  this script                  e4837e3a64b5f8e97a58ce61f5ac8e34ef273a76b737e5bb6c547b7b45cf6fa4
+  simulate_power_v4_n10_20.py  852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730
+  frozen package: version 'both', seed 42, 369 files verified
+
+THRESHOLDS (recomputed with compute_floors on the frozen list)
+------------------------------------------------------------------------
+  colour  upper +0.28632  lower -0.28961   registered +0.286 / -0.290
+  fog     upper +0.48805  lower -0.48560   registered +0.488 / -0.486
+
+THE MODEL
+------------------------------------------------------------------------
+  Each person: taste ~ Normal(0, taste_mult x upper threshold) on both
+  features; with probability `strategy` +0.5/SD on both; responders
+  (exactly round(share x N) analysable participants) add the effect.
+  Personal lapse rate, catch failures and fast-response share from the
+  power script's draw_attention; choices from simulate_lapsing at that
+  lapse rate. A recruit with >= 3 catch failures is excluded and
+  recruitment continues, so every dataset ends at its stated N.
+  Word ratings, grid choices, CDS scores and session fields are
+  well-formed and loosely tied to the weights; they model nothing.
+  Placeholders until the experiment update is merged: the catch key
+  sequence and the survey layout (one header row). State items are
+  rated 0-6, as specified in the experiment changes.
+
+DATASETS
+------------------------------------------------------------------------
+  verdicts: realised (in these exact data) | design expectation;
+  '!' marks an expectation the realised verdict misses. Under no
+  effect each verdict is a single draw and misses at the false-claim
+  rate; the registered H1/H2 rates are tested by the false-claim
+  batches, not by these datasets.
+
+  P-null_random_n09__C-matched_n30
+    sessions 40  analysable P 9 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    0+/0-     descriptive   | descriptive
+    H2 colour 0+/0-     descriptive   | descriptive
+    gate      did not fire (p catch 0.941, rt 0.78)
+    C1 colour not supported (p 0.686) | no claim
+    C1 fog    not supported (p 0.686) | no claim
+  P-null_random_n10__C-matched_n30
+    sessions 42  analysable P 10 / C 30  excluded (catch) P 0 / C 2  Tier D 0
+    H1 fog    0+/0-     not supported | no claim
+    H2 colour 0+/0-     not supported | no claim
+    gate      did not fire (p catch 0.693, rt 0.901)
+    C1 colour supported (p 0.0128)    | no claim !
+    C1 fog    not supported (p 0.778) | no claim
+  P-null_random_n15__C-matched_n30
+    sessions 46  analysable P 15 / C 30  excluded (catch) P 1 / C 0  Tier D 0
+    H1 fog    2+/0-     not supported | no claim
+    H2 colour 0+/1-     not supported | no claim
+    gate      fired (p catch 0.735, rt 0.0108)
+    C1 colour inconclusive (p 0.81)   | no claim
+    C1 fog    inconclusive (p 0.031)  | no claim
+  P-null_random_n20__C-matched_n30
+    sessions 54  analysable P 20 / C 30  excluded (catch) P 2 / C 2  Tier D 0
+    H1 fog    0+/0-     not supported | no claim
+    H2 colour 0+/1-     not supported | no claim
+    gate      did not fire (p catch 0.562, rt 0.0627)
+    C1 colour not supported (p 0.753) | no claim
+    C1 fog    not supported (p 0.364) | no claim
+  P-null_taste_worst_n09__C-matched_n30
+    sessions 39  analysable P 9 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    2+/3-     descriptive   | descriptive
+    H2 colour 1+/2-     descriptive   | descriptive
+    gate      did not fire (p catch 1, rt 0.186)
+    C1 colour not supported (p 0.802) | no claim
+    C1 fog    not supported (p 0.861) | no claim
+  P-null_taste_worst_n10__C-matched_n30
+    sessions 40  analysable P 10 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    2+/2-     not supported | no claim
+    H2 colour 3+/2-     not supported | no claim
+    gate      did not fire (p catch 1, rt 0.83)
+    C1 colour not supported (p 0.371) | no claim
+    C1 fog    not supported (p 0.718) | no claim
+  P-null_taste_worst_n15__C-matched_n30
+    sessions 45  analysable P 15 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    1+/5-     not supported | no claim
+    H2 colour 2+/1-     not supported | no claim
+    gate      fired (p catch 1, rt 0.00413)
+    C1 colour inconclusive (p 0.797)  | no claim
+    C1 fog    inconclusive (p 0.994)  | no claim
+  P-null_taste_worst_n20__C-matched_n30
+    sessions 50  analysable P 20 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    6+/4-     not supported | no claim
+    H2 colour 4+/4-     not supported | no claim
+    gate      did not fire (p catch 1, rt 0.914)
+    C1 colour not supported (p 0.293) | no claim
+    C1 fog    not supported (p 0.504) | no claim
+  P-fog_only_n09__C-matched_n30
+    sessions 41  analysable P 9 / C 30  excluded (catch) P 0 / C 2  Tier D 0
+    H1 fog    2+/0-     descriptive   | descriptive
+    H2 colour 1+/0-     descriptive   | descriptive
+    gate      did not fire (p catch 0.0554, rt 0.493)
+    C1 colour not supported (p 0.829) | no claim
+    C1 fog    not supported (p 0.171) | supported (likely)
+  P-fog_only_n10__C-matched_n30
+    sessions 41  analysable P 10 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    4+/0-     supported     | supported (likely)
+    H2 colour 1+/1-     not supported | no claim
+    gate      did not fire (p catch 0.985, rt 0.76)
+    C1 colour not supported (p 0.506) | no claim
+    C1 fog    not supported (p 0.155) | supported (likely)
+  P-fog_only_n15__C-matched_n30
+    sessions 46  analysable P 15 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    8+/0-     supported     | supported (likely)
+    H2 colour 1+/2-     not supported | no claim
+    gate      did not fire (p catch 0.22, rt 0.182)
+    C1 colour not supported (p 0.969) | no claim
+    C1 fog    supported (p 0.000301)  | supported (likely)
+  P-fog_only_n20__C-matched_n30
+    sessions 53  analysable P 20 / C 30  excluded (catch) P 2 / C 1  Tier D 0
+    H1 fog    10+/1-    supported     | supported (likely)
+    H2 colour 3+/4-     not supported | no claim
+    gate      did not fire (p catch 0.539, rt 0.817)
+    C1 colour not supported (p 0.643) | no claim
+    C1 fog    supported (p 0.00186)   | supported (likely)
+  P-colour_only_n09__C-matched_n30
+    sessions 42  analysable P 9 / C 30  excluded (catch) P 0 / C 3  Tier D 0
+    H1 fog    0+/0-     descriptive   | descriptive
+    H2 colour 4+/0-     descriptive   | descriptive
+    gate      did not fire (p catch 0.251, rt 0.23)
+    C1 colour not supported (p 0.0997)| supported (likely)
+    C1 fog    not supported (p 0.649) | no claim
+  P-colour_only_n10__C-matched_n30
+    sessions 41  analysable P 10 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    1+/0-     not supported | no claim
+    H2 colour 3+/0-     not supported | supported (likely)
+    gate      did not fire (p catch 0.194, rt 0.198)
+    C1 colour not supported (p 0.0922)| supported (likely)
+    C1 fog    not supported (p 0.127) | no claim
+  P-colour_only_n15__C-matched_n30
+    sessions 47  analysable P 15 / C 30  excluded (catch) P 0 / C 2  Tier D 0
+    H1 fog    3+/1-     not supported | no claim
+    H2 colour 7+/3-     supported     | supported (likely)
+    gate      did not fire (p catch 0.943, rt 0.249)
+    C1 colour not supported (p 0.246) | supported (likely)
+    C1 fog    not supported (p 0.0662)| no claim
+  P-colour_only_n20__C-matched_n30
+    sessions 51  analysable P 20 / C 30  excluded (catch) P 1 / C 0  Tier D 0
+    H1 fog    3+/0-     not supported | no claim
+    H2 colour 10+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.166, rt 0.191)
+    C1 colour supported (p 0.000424)  | supported (likely)
+    C1 fog    not supported (p 0.179) | no claim
+  P-both_n09__C-matched_n30
+    sessions 43  analysable P 9 / C 30  excluded (catch) P 1 / C 3  Tier D 0
+    H1 fog    1+/1-     descriptive   | descriptive
+    H2 colour 3+/0-     descriptive   | descriptive
+    gate      did not fire (p catch 0.806, rt 0.675)
+    C1 colour supported (p 0.00298)   | supported (likely)
+    C1 fog    supported (p 0.0237)    | supported (likely)
+  P-both_n10__C-matched_n30
+    sessions 44  analysable P 10 / C 30  excluded (catch) P 1 / C 3  Tier D 0
+    H1 fog    2+/0-     not supported | supported (likely)
+    H2 colour 4+/1-     not supported | supported (likely)
+    gate      did not fire (p catch 0.923, rt 0.324)
+    C1 colour not supported (p 0.0255)| supported (likely)
+    C1 fog    not supported (p 0.115) | supported (likely)
+  P-both_n15__C-matched_n30
+    sessions 48  analysable P 15 / C 30  excluded (catch) P 0 / C 3  Tier D 0
+    H1 fog    7+/0-     supported     | supported (likely)
+    H2 colour 6+/2-     supported     | supported (likely)
+    gate      did not fire (p catch 0.917, rt 0.377)
+    C1 colour supported (p 0.0345)    | supported (likely)
+    C1 fog    supported (p 0.000175)  | supported (likely)
+  P-both_n20__C-matched_n30
+    sessions 55  analysable P 20 / C 30  excluded (catch) P 1 / C 4  Tier D 0
+    H1 fog    4+/0-     not supported | supported (likely)
+    H2 colour 11+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.852, rt 0.711)
+    C1 colour supported (p 0.00154)   | supported (likely)
+    C1 fog    not supported (p 0.0624)| supported (likely)
+  P-everyone_n09__C-matched_n30
+    sessions 45  analysable P 9 / C 30  excluded (catch) P 2 / C 4  Tier D 0
+    H1 fog    6+/0-     descriptive   | descriptive
+    H2 colour 9+/0-     descriptive   | descriptive
+    gate      did not fire (p catch 0.538, rt 0.401)
+    C1 colour supported (p 5.84e-06)  | supported (likely)
+    C1 fog    supported (p 0.000648)  | supported (likely)
+  P-everyone_n10__C-matched_n30
+    sessions 45  analysable P 10 / C 30  excluded (catch) P 0 / C 5  Tier D 0
+    H1 fog    8+/0-     supported     | supported (likely)
+    H2 colour 6+/0-     supported     | supported (likely)
+    gate      did not fire (p catch 0.416, rt 0.938)
+    C1 colour supported (p 3.19e-06)  | supported (likely)
+    C1 fog    supported (p 5.73e-05)  | supported (likely)
+  P-everyone_n15__C-matched_n30
+    sessions 45  analysable P 15 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    10+/0-    supported     | supported (likely)
+    H2 colour 14+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.194, rt 0.965)
+    C1 colour supported (p 4.23e-08)  | supported (likely)
+    C1 fog    supported (p 3.17e-06)  | supported (likely)
+  P-everyone_n20__C-matched_n30
+    sessions 51  analysable P 20 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    13+/0-    supported     | supported (likely)
+    H2 colour 15+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.203, rt 0.445)
+    C1 colour supported (p 7.29e-08)  | supported (likely)
+    C1 fog    supported (p 1.01e-07)  | supported (likely)
+  P-both_n20__C-no_strategy_n19
+    sessions 43  analysable P 20 / C 19  excluded (catch) P 1 / C 3  Tier D 0
+    H1 fog    6+/0-     supported     | supported (likely)
+    H2 colour 10+/1-    supported     | supported (likely)
+    gate      did not fire (p catch 0.346, rt 0.606)
+    C1 colour descriptive (p 0.0119)  | descriptive
+    C1 fog    descriptive (p 0.363)   | descriptive
+  P-both_n20__C-no_strategy_n30
+    sessions 52  analysable P 20 / C 30  excluded (catch) P 0 / C 2  Tier D 0
+    H1 fog    9+/0-     supported     | supported (likely)
+    H2 colour 10+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.895, rt 0.144)
+    C1 colour supported (p 0.0158)    | supported (likely)
+    C1 fog    supported (p 0.000395)  | supported (likely)
+  P-both_n20__C-quarter_strategy_n19
+    sessions 41  analysable P 20 / C 19  excluded (catch) P 1 / C 1  Tier D 0
+    H1 fog    11+/0-    supported     | supported (likely)
+    H2 colour 11+/0-    supported     | supported (likely)
+    gate      did not fire (p catch 0.179, rt 0.781)
+    C1 colour descriptive (p 0.0055)  | descriptive
+    C1 fog    descriptive (p 0.011)   | descriptive
+  P-both_n20__C-quarter_strategy_n30
+    sessions 51  analysable P 20 / C 30  excluded (catch) P 0 / C 1  Tier D 0
+    H1 fog    9+/0-     supported     | supported (likely)
+    H2 colour 9+/0-     supported     | supported (likely)
+    gate      did not fire (p catch 0.189, rt 0.0718)
+    C1 colour supported (p 0.00174)   | supported (likely)
+    C1 fog    supported (p 0.00461)   | supported (likely)
+  P-both_n20__C-lapse_more_n19
+    sessions 43  analysable P 20 / C 19  excluded (catch) P 0 / C 4  Tier D 0
+    H1 fog    6+/0-     supported     | supported (likely)
+    H2 colour 10+/1-    supported     | supported (likely)
+    gate      fired (p catch 2.01e-06, rt 3.4e-08)
+    C1 colour descriptive (p 0.0238)  | descriptive
+    C1 fog    descriptive (p 0.00017) | descriptive
+  P-both_n20__C-lapse_more_n30
+    sessions 58  analysable P 20 / C 30  excluded (catch) P 0 / C 8  Tier D 0
+    H1 fog    6+/1-     supported     | supported (likely)
+    H2 colour 9+/0-     supported     | supported (likely)
+    gate      fired (p catch 2.28e-07, rt 1.68e-09)
+    C1 colour inconclusive (p 0.0398) | inconclusive
+    C1 fog    inconclusive (p 0.0577) | inconclusive
+  messy
+    sessions 39  analysable P 10 / C 20  excluded (catch) P 1 / C 1  Tier D 1
+    H1 fog    4+/1-     not supported | supported (likely)
+    H2 colour 5+/0-     supported     | supported (likely)
+    gate      did not fire (p catch 0.811, rt 0.987)
+    C1 colour not supported (p 0.0592)| supported (likely)
+    C1 fog    supported (p 0.00929)   | supported (likely)
+  messy_over_max
+    sessions 52  analysable P 20 / C 30  excluded (catch) P 0 / C 0  Tier D 0
+    H1 fog    7+/0-     supported     | supported (likely)
+    H2 colour 9+/0-     supported     | supported (likely)
+    gate      did not fire (p catch 0.82, rt 0.52)
+    C1 colour supported (p 0.00111)   | supported (likely)
+    C1 fog    supported (p 0.00211)   | supported (likely)
+
+FALSE-CLAIM BATCHES (preview; the registered check is the analysis's)
+------------------------------------------------------------------------
+  null_random_n10.npz      H1 k >= 4, m <= 0     0/1000 vs false_guesser 5.907e-05 [0..1]  within
+  null_random_n10.npz      H2 k >= 4, m <= 0     0/1000 vs false_guesser 5.622e-05 [0..1]  within
+  null_random_n10.npz      H1 or H2 (descriptive)      0 (0.000)
+  null_random_n15.npz      H1 k >= 5, m <= 1     0/1000 vs false_guesser 2.167e-05 [0..0]  within
+  null_random_n15.npz      H2 k >= 6, m <= 3     0/1000 vs false_guesser 8.58e-07 [0..0]  within
+  null_random_n15.npz      H1 or H2 (descriptive)      0 (0.000)
+  null_random_n20.npz      H1 k >= 5, m <= 1     0/1000 vs false_guesser 9.795e-05 [0..1]  within
+  null_random_n20.npz      H2 k >= 7, m <= 3     0/1000 vs false_guesser 2.954e-07 [0..0]  within
+  null_random_n20.npz      H1 or H2 (descriptive)      0 (0.000)
+  null_taste_worst_n10.npz H1 k >= 4, m <= 0    19/1000 vs false_worst 0.02244 [14..32]  within
+  null_taste_worst_n10.npz H2 k >= 4, m <= 0    24/1000 vs false_worst 0.02195 [13..31]  within
+  null_taste_worst_n10.npz H1 or H2 (descriptive)     42 (0.042)
+  null_taste_worst_n15.npz H1 k >= 5, m <= 1    48/1000 vs false_worst 0.04209 [30..55]  within
+  null_taste_worst_n15.npz H2 k >= 6, m <= 3    35/1000 vs false_worst 0.03629 [25..48]  within
+  null_taste_worst_n15.npz H1 or H2 (descriptive)     83 (0.083)
+  null_taste_worst_n20.npz H1 k >= 5, m <= 1    41/1000 vs false_worst 0.0414 [30..54]  within
+  null_taste_worst_n20.npz H2 k >= 7, m <= 3    39/1000 vs false_worst 0.03957 [28..52]  within
+  null_taste_worst_n20.npz H1 or H2 (descriptive)     76 (0.076)
+
+CHECKS
+------------------------------------------------------------------------
+  [PASS] frozen package matches checksums.sha256  (369 files, seed 42)
+  [PASS] frozen list: 211 trials, registered counts, analysed rows in load_trials' order  (211 trials, 180 analysed)
+  [PASS] copied functions reproduce the stored reference values  (101/101 quantities agree)
+  [PASS] copied functions agree with the power script run now  (101/101 quantities)
+  [PASS] copied functions are verbatim (syntax tree)  (18/18 identical)
+  [PASS] copied settings equal the power script's  (29/29 equal)
+  [PASS] verify_frozen gives the power script's verdict  (same FROZEN.json facts)
+  [PASS] recomputed thresholds equal the registered ones (3 dp)  (colour (0.286, -0.29), fog (0.488, -0.486))
+  [PASS] combined_rule.csv has the expected columns
+  [PASS] combined_rule.csv equals the registered rule at every N, false-claim upper bound <= 0.05  (22 rules)
+  [PASS] grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen
+  [PASS] [P-null_random_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_random_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_random_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-null_random_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_random_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_random_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_random_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-null_random_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_random_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_random_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_random_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-null_random_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_random_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_random_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_random_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-null_random_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-fog_only_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-fog_only_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-fog_only_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-fog_only_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-fog_only_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-fog_only_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-fog_only_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-fog_only_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-fog_only_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-fog_only_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-fog_only_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-fog_only_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-fog_only_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-fog_only_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-fog_only_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-fog_only_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-colour_only_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-colour_only_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-colour_only_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-colour_only_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-colour_only_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-colour_only_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-colour_only_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-colour_only_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-colour_only_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-colour_only_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-colour_only_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-colour_only_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-colour_only_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-colour_only_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-colour_only_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-colour_only_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-both_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-both_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-both_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-both_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-both_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-both_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-both_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-everyone_n09__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-everyone_n09__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-everyone_n09__C-matched_n30] analysable N as specified  (P 9, C 30)
+  [PASS] [P-everyone_n09__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-everyone_n10__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-everyone_n10__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-everyone_n10__C-matched_n30] analysable N as specified  (P 10, C 30)
+  [PASS] [P-everyone_n10__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-everyone_n15__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-everyone_n15__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-everyone_n15__C-matched_n30] analysable N as specified  (P 15, C 30)
+  [PASS] [P-everyone_n15__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-everyone_n20__C-matched_n30] well-formed and consistent with its truth
+  [PASS] [P-everyone_n20__C-matched_n30] every session's realised status is its intended one
+  [PASS] [P-everyone_n20__C-matched_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-everyone_n20__C-matched_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-no_strategy_n19] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-no_strategy_n19] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-no_strategy_n19] analysable N as specified  (P 20, C 19)
+  [PASS] [P-both_n20__C-no_strategy_n19] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-no_strategy_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-no_strategy_n30] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-no_strategy_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-both_n20__C-no_strategy_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-quarter_strategy_n19] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-quarter_strategy_n19] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-quarter_strategy_n19] analysable N as specified  (P 20, C 19)
+  [PASS] [P-both_n20__C-quarter_strategy_n19] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-quarter_strategy_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-quarter_strategy_n30] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-quarter_strategy_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-both_n20__C-quarter_strategy_n30] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-lapse_more_n19] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-lapse_more_n19] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-lapse_more_n19] analysable N as specified  (P 20, C 19)
+  [PASS] [P-both_n20__C-lapse_more_n19] survey .xlsx reads back unchanged
+  [PASS] [P-both_n20__C-lapse_more_n30] well-formed and consistent with its truth
+  [PASS] [P-both_n20__C-lapse_more_n30] every session's realised status is its intended one
+  [PASS] [P-both_n20__C-lapse_more_n30] analysable N as specified  (P 20, C 30)
+  [PASS] [P-both_n20__C-lapse_more_n30] survey .xlsx reads back unchanged
+  [PASS] [messy] well-formed and consistent with its truth
+  [PASS] [messy] every session's realised status is its intended one
+  [PASS] [messy] analysable N as specified  (P 10, C 20)
+  [PASS] [messy] survey .xlsx reads back unchanged
+  [PASS] [messy_over_max] well-formed and consistent with its truth
+  [PASS] [messy_over_max] every session's realised status is its intended one
+  [PASS] [messy_over_max] analysable N as specified  (P 20, C 30)
+  [PASS] [messy_over_max] survey .xlsx reads back unchanged
+  [PASS] verdicts the design fixes (descriptive below 10 participants or 20 controls)  (18 verdicts)
+  [PASS] C1 inconclusive when controls lapse more  (2 verdicts)
+  [PASS] no claim under no effect, H1/H2 (single draws)  (18/18 no claim; a miss somewhere among these is expected 34% of the time)
+  [FAIL] no claim under no effect, C1 (single draws)  (23/24 no claim; a miss somewhere among these is expected 46% of the time; chance claim in: P-null_random_n10__C-matched_n30 C1_colour)
+  [INFO] attention check firing with no lapse difference  (2 of 28 datasets (the registered gate's matched false-alarm rate is about 0.04); a firing there makes C1 inconclusive, not a claim)
+  [PASS] messy dataset: every exclusion count as designed  ({"test_or_dev": {"participant": 3, "control": 0}, "repeat_not_used": {"participant": 1, "control": 0}, "excluded_no_consent": {"participant": 1, "control": 0}, "excluded_images_fit": {"participant": 1, "control": 0}, "excluded_catch": {"participant": 1, "control": 1}, "tier_D": {"participant": 1, "control": 0}, "beyond_maximum": {"participant": 0, "control": 0}, "analysable": {"participant": 10, "control": 20}})
+  [PASS] over-maximum dataset: the last to complete (control) started before the group's last starter
+  [PASS] over-maximum dataset: the last to complete (participant) started before the group's last starter
+  [PASS] over-maximum dataset: the first 20 and 30 by completion time kept, the last to complete in each group set aside  ({"test_or_dev": {"participant": 0, "control": 0}, "repeat_not_used": {"participant": 0, "control": 0}, "excluded_no_consent": {"participant": 0, "control": 0}, "excluded_images_fit": {"participant": 0, "control": 0}, "excluded_catch": {"participant": 0, "control": 0}, "tier_D": {"participant": 0, "control": 0}, "beyond_maximum": {"participant": 1, "control": 1}, "analysable": {"participant": 20, "control": 30}})
+  [PASS] false-claim batches: preview rates within the binomial 95% range of the registered rates (H1, H2 separately)  (12/12 cells; the registered check runs in the analysis script)

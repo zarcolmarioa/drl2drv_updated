@@ -1,0 +1,169 @@
+{
+ "dataset": "P-both_n20__C-quarter_strategy_n19",
+ "kind": "control scenario",
+ "seed": {
+  "MASTER_SEED": 20261020,
+  "stream": "SeedSequence([MASTER_SEED, crc32('P-both_n20__C-quarter_strategy_n19')])"
+ },
+ "participants": {
+  "scenario": "both",
+  "population": {
+   "taste_mult": 0.5,
+   "lapse": 0.1,
+   "share": 0.5,
+   "w_colour": 0.5,
+   "w_fog": 0.7,
+   "strategy": 0.25
+  },
+  "analysable_N": 20
+ },
+ "controls": {
+  "scenario": "quarter_strategy",
+  "population": {
+   "taste_mult": 0.5,
+   "lapse": 0.1,
+   "strategy": 0.25
+  },
+  "analysable_N": 19
+ },
+ "exclusion_order": [
+  "test_or_dev",
+  "repeat_not_used",
+  "excluded_no_consent",
+  "excluded_images_fit",
+  "excluded_catch",
+  "tier_D (analysed separately)"
+ ],
+ "expected_status_counts": {
+  "analysable": {
+   "participant": 20,
+   "control": 19
+  },
+  "excluded_catch": {
+   "participant": 1,
+   "control": 1
+  }
+ },
+ "partial_exclusions_among_analysable_participants": {
+  "flat_word_ratings": 0,
+  "no_word_block": 0,
+  "no_grid_shift_colour": 1,
+  "no_grid_shift_fog": 0,
+  "both_episode_fog_screens_none": 0,
+  "no_state_block": 0,
+  "no_interview_date": 0
+ },
+ "design_expectation": {
+  "H1": {
+   "verdict": "supported",
+   "kind": "likely",
+   "why": "effect present; registered planning power 0.797"
+  },
+  "H2": {
+   "verdict": "supported",
+   "kind": "likely",
+   "why": "effect present; registered planning power 0.969"
+  },
+  "C1_colour": {
+   "verdict": "descriptive",
+   "kind": "fixed",
+   "why": "19 controls < 20"
+  },
+  "C1_fog": {
+   "verdict": "descriptive",
+   "kind": "fixed",
+   "why": "19 controls < 20"
+  }
+ },
+ "realised": {
+  "n_participants": 20,
+  "n_controls": 19,
+  "n_tier_D": 0,
+  "H1": {
+   "feature": "fog",
+   "predicted": 11,
+   "opposite": 0,
+   "n": 20,
+   "k": 5,
+   "m": 1,
+   "verdict": "supported"
+  },
+  "H2": {
+   "feature": "colour",
+   "predicted": 11,
+   "opposite": 0,
+   "n": 20,
+   "k": 7,
+   "m": 3,
+   "verdict": "supported"
+  },
+  "gate": {
+   "fired": false,
+   "fired_catch": false,
+   "fired_rt": false,
+   "p_catch": 0.17877454387742275,
+   "p_rt": 0.7812509925103499
+  },
+  "C1_colour": {
+   "p": 0.005497928131139286,
+   "method": "asymptotic",
+   "holm_reject": true,
+   "verdict": "descriptive"
+  },
+  "C1_fog": {
+   "p": 0.011012040698149464,
+   "method": "asymptotic",
+   "holm_reject": true,
+   "verdict": "descriptive"
+  },
+  "status_counts": {
+   "test_or_dev": {
+    "participant": 0,
+    "control": 0
+   },
+   "repeat_not_used": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_no_consent": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_images_fit": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_catch": {
+    "participant": 1,
+    "control": 1
+   },
+   "tier_D": {
+    "participant": 0,
+    "control": 0
+   },
+   "beyond_maximum": {
+    "participant": 0,
+    "control": 0
+   },
+   "analysable": {
+    "participant": 20,
+    "control": 19
+   }
+  }
+ },
+ "thresholds_used": {
+  "colour": [
+   0.2863223717155787,
+   -0.2896056357511166
+  ],
+  "fog": [
+   0.4880483057825434,
+   -0.48559721218587304
+  ]
+ },
+ "notes": [
+  "realised = what these exact data give, computed from the tidy tables with the copied power-script functions (fit_firth_batch path). The analysis must reproduce it.",
+  "design_expectation = what the design says; a 'firm' 'not supported' can still fail by chance at the registered false-claim rate.",
+  "C1 and its attention check are run on the analysable people, after the >= 3 catch-failure exclusion."
+ ]
+}

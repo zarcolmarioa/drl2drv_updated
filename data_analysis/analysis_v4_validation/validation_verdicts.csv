@@ -1,0 +1,129 @@
+dataset,item,expected,kind,verdict,miss,p_miss
+P-both_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-both_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-both_n09__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-both_n09__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-both_n10__C-matched_n30,H1,supported,likely,not supported,False,
+P-both_n10__C-matched_n30,H2,supported,likely,not supported,False,
+P-both_n10__C-matched_n30,C1_colour,supported,likely,not supported,False,
+P-both_n10__C-matched_n30,C1_fog,supported,likely,not supported,False,
+P-both_n15__C-matched_n30,H1,supported,likely,supported,False,
+P-both_n15__C-matched_n30,H2,supported,likely,supported,False,
+P-both_n15__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-both_n15__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-both_n20__C-lapse_more_n19,H1,supported,likely,supported,False,
+P-both_n20__C-lapse_more_n19,H2,supported,likely,supported,False,
+P-both_n20__C-lapse_more_n19,C1_colour,descriptive,fixed,descriptive,False,
+P-both_n20__C-lapse_more_n19,C1_fog,descriptive,fixed,descriptive,False,
+P-both_n20__C-lapse_more_n30,H1,supported,likely,supported,False,
+P-both_n20__C-lapse_more_n30,H2,supported,likely,supported,False,
+P-both_n20__C-lapse_more_n30,C1_colour,inconclusive,near_certain,inconclusive,False,
+P-both_n20__C-lapse_more_n30,C1_fog,inconclusive,near_certain,inconclusive,False,
+P-both_n20__C-matched_n30,H1,supported,likely,not supported,False,
+P-both_n20__C-matched_n30,H2,supported,likely,supported,False,
+P-both_n20__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-both_n20__C-matched_n30,C1_fog,supported,likely,not supported,False,
+P-both_n20__C-no_strategy_n19,H1,supported,likely,supported,False,
+P-both_n20__C-no_strategy_n19,H2,supported,likely,supported,False,
+P-both_n20__C-no_strategy_n19,C1_colour,descriptive,fixed,descriptive,False,
+P-both_n20__C-no_strategy_n19,C1_fog,descriptive,fixed,descriptive,False,
+P-both_n20__C-no_strategy_n30,H1,supported,likely,supported,False,
+P-both_n20__C-no_strategy_n30,H2,supported,likely,supported,False,
+P-both_n20__C-no_strategy_n30,C1_colour,supported,likely,supported,False,
+P-both_n20__C-no_strategy_n30,C1_fog,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n19,H1,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n19,H2,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n19,C1_colour,descriptive,fixed,descriptive,False,
+P-both_n20__C-quarter_strategy_n19,C1_fog,descriptive,fixed,descriptive,False,
+P-both_n20__C-quarter_strategy_n30,H1,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n30,H2,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n30,C1_colour,supported,likely,supported,False,
+P-both_n20__C-quarter_strategy_n30,C1_fog,supported,likely,supported,False,
+P-colour_only_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-colour_only_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-colour_only_n09__C-matched_n30,C1_colour,supported,likely,not supported,False,
+P-colour_only_n09__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-colour_only_n10__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0224439093512534
+P-colour_only_n10__C-matched_n30,H2,supported,likely,not supported,False,
+P-colour_only_n10__C-matched_n30,C1_colour,supported,likely,not supported,False,
+P-colour_only_n10__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-colour_only_n15__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0420857573941697
+P-colour_only_n15__C-matched_n30,H2,supported,likely,supported,False,
+P-colour_only_n15__C-matched_n30,C1_colour,supported,likely,not supported,False,
+P-colour_only_n15__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-colour_only_n20__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0413975231250285
+P-colour_only_n20__C-matched_n30,H2,supported,likely,supported,False,
+P-colour_only_n20__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-colour_only_n20__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-everyone_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-everyone_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-everyone_n09__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-everyone_n09__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-everyone_n10__C-matched_n30,H1,supported,likely,supported,False,
+P-everyone_n10__C-matched_n30,H2,supported,likely,supported,False,
+P-everyone_n10__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-everyone_n10__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-everyone_n15__C-matched_n30,H1,supported,likely,supported,False,
+P-everyone_n15__C-matched_n30,H2,supported,likely,supported,False,
+P-everyone_n15__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-everyone_n15__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-everyone_n20__C-matched_n30,H1,supported,likely,supported,False,
+P-everyone_n20__C-matched_n30,H2,supported,likely,supported,False,
+P-everyone_n20__C-matched_n30,C1_colour,supported,likely,supported,False,
+P-everyone_n20__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-fog_only_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-fog_only_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-fog_only_n09__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-fog_only_n09__C-matched_n30,C1_fog,supported,likely,not supported,False,
+P-fog_only_n10__C-matched_n30,H1,supported,likely,supported,False,
+P-fog_only_n10__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0219549718713389
+P-fog_only_n10__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-fog_only_n10__C-matched_n30,C1_fog,supported,likely,not supported,False,
+P-fog_only_n15__C-matched_n30,H1,supported,likely,supported,False,
+P-fog_only_n15__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0362921644355047
+P-fog_only_n15__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-fog_only_n15__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-fog_only_n20__C-matched_n30,H1,supported,likely,supported,False,
+P-fog_only_n20__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0395719049808233
+P-fog_only_n20__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-fog_only_n20__C-matched_n30,C1_fog,supported,likely,supported,False,
+P-null_random_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-null_random_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-null_random_n09__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-null_random_n09__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-null_random_n10__C-matched_n30,H1,no claim,no_claim,not supported,False,5.9066589748360586e-05
+P-null_random_n10__C-matched_n30,H2,no claim,no_claim,not supported,False,5.621821708359132e-05
+P-null_random_n10__C-matched_n30,C1_colour,no claim,no_claim,supported,True,0.025
+P-null_random_n10__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-null_random_n15__C-matched_n30,H1,no claim,no_claim,not supported,False,2.1666604618607065e-05
+P-null_random_n15__C-matched_n30,H2,no claim,no_claim,not supported,False,8.580141037130026e-07
+P-null_random_n15__C-matched_n30,C1_colour,no claim,no_claim,inconclusive,False,0.025
+P-null_random_n15__C-matched_n30,C1_fog,no claim,no_claim,inconclusive,False,0.025
+P-null_random_n20__C-matched_n30,H1,no claim,no_claim,not supported,False,9.795294453888238e-05
+P-null_random_n20__C-matched_n30,H2,no claim,no_claim,not supported,False,2.954454737353056e-07
+P-null_random_n20__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-null_random_n20__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n09__C-matched_n30,H1,descriptive,fixed,descriptive,False,
+P-null_taste_worst_n09__C-matched_n30,H2,descriptive,fixed,descriptive,False,
+P-null_taste_worst_n09__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n09__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n10__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0224439093512534
+P-null_taste_worst_n10__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0219549718713389
+P-null_taste_worst_n10__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n10__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n15__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0420857573941697
+P-null_taste_worst_n15__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0362921644355047
+P-null_taste_worst_n15__C-matched_n30,C1_colour,no claim,no_claim,inconclusive,False,0.025
+P-null_taste_worst_n15__C-matched_n30,C1_fog,no claim,no_claim,inconclusive,False,0.025
+P-null_taste_worst_n20__C-matched_n30,H1,no claim,no_claim,not supported,False,0.0413975231250285
+P-null_taste_worst_n20__C-matched_n30,H2,no claim,no_claim,not supported,False,0.0395719049808233
+P-null_taste_worst_n20__C-matched_n30,C1_colour,no claim,no_claim,not supported,False,0.025
+P-null_taste_worst_n20__C-matched_n30,C1_fog,no claim,no_claim,not supported,False,0.025
+messy,H1,supported,likely,not supported,False,
+messy,H2,supported,likely,supported,False,
+messy,C1_colour,supported,likely,not supported,False,
+messy,C1_fog,supported,likely,supported,False,
+messy_over_max,H1,supported,likely,supported,False,
+messy_over_max,H2,supported,likely,supported,False,
+messy_over_max,C1_colour,supported,likely,supported,False,
+messy_over_max,C1_fog,supported,likely,supported,False,

@@ -1,0 +1,173 @@
+{
+ "dataset": "P-null_random_n10__C-matched_n30",
+ "kind": "participant scenario",
+ "seed": {
+  "MASTER_SEED": 20261020,
+  "stream": "SeedSequence([MASTER_SEED, crc32('P-null_random_n10__C-matched_n30')])"
+ },
+ "participants": {
+  "scenario": "null_random",
+  "population": {
+   "taste_mult": 0.0,
+   "lapse": 0.1,
+   "share": 0.0,
+   "w_colour": 0.0,
+   "w_fog": 0.0,
+   "strategy": 0.0
+  },
+  "analysable_N": 10
+ },
+ "controls": {
+  "scenario": "matched (same taste and lapse, no strategy)",
+  "population": {
+   "taste_mult": 0.0,
+   "lapse": 0.1,
+   "strategy": 0.0
+  },
+  "analysable_N": 30
+ },
+ "exclusion_order": [
+  "test_or_dev",
+  "repeat_not_used",
+  "excluded_no_consent",
+  "excluded_images_fit",
+  "excluded_catch",
+  "tier_D (analysed separately)"
+ ],
+ "expected_status_counts": {
+  "analysable": {
+   "participant": 10,
+   "control": 30
+  },
+  "excluded_catch": {
+   "participant": 0,
+   "control": 2
+  }
+ },
+ "partial_exclusions_among_analysable_participants": {
+  "flat_word_ratings": 0,
+  "no_word_block": 0,
+  "no_grid_shift_colour": 0,
+  "no_grid_shift_fog": 0,
+  "both_episode_fog_screens_none": 0,
+  "no_state_block": 0,
+  "no_interview_date": 0
+ },
+ "design_expectation": {
+  "H1": {
+   "verdict": "no claim",
+   "kind": "no_claim",
+   "p_miss": 5.9066589748360586e-05,
+   "why": "no effect; registered false-claim rate 5.907e-05"
+  },
+  "H2": {
+   "verdict": "no claim",
+   "kind": "no_claim",
+   "p_miss": 5.621821708359132e-05,
+   "why": "no effect; registered false-claim rate 5.622e-05"
+  },
+  "C1_colour": {
+   "verdict": "no claim",
+   "kind": "no_claim",
+   "p_miss": 0.025,
+   "why": "no effect: 'not supported' or, if the attention check fires by chance, 'inconclusive'; never 'supported'"
+  },
+  "C1_fog": {
+   "verdict": "no claim",
+   "kind": "no_claim",
+   "p_miss": 0.025,
+   "why": "no effect: 'not supported' or, if the attention check fires by chance, 'inconclusive'; never 'supported'"
+  }
+ },
+ "realised": {
+  "n_participants": 10,
+  "n_controls": 30,
+  "n_tier_D": 0,
+  "H1": {
+   "feature": "fog",
+   "predicted": 0,
+   "opposite": 0,
+   "n": 10,
+   "k": 4,
+   "m": 0,
+   "verdict": "not supported"
+  },
+  "H2": {
+   "feature": "colour",
+   "predicted": 0,
+   "opposite": 0,
+   "n": 10,
+   "k": 4,
+   "m": 0,
+   "verdict": "not supported"
+  },
+  "gate": {
+   "fired": false,
+   "fired_catch": false,
+   "fired_rt": false,
+   "p_catch": 0.6934699062605583,
+   "p_rt": 0.9010235603887157
+  },
+  "C1_colour": {
+   "p": 0.012765084782110435,
+   "method": "asymptotic",
+   "holm_reject": true,
+   "verdict": "supported"
+  },
+  "C1_fog": {
+   "p": 0.7779390809988932,
+   "method": "asymptotic",
+   "holm_reject": false,
+   "verdict": "not supported"
+  },
+  "status_counts": {
+   "test_or_dev": {
+    "participant": 0,
+    "control": 0
+   },
+   "repeat_not_used": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_no_consent": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_images_fit": {
+    "participant": 0,
+    "control": 0
+   },
+   "excluded_catch": {
+    "participant": 0,
+    "control": 2
+   },
+   "tier_D": {
+    "participant": 0,
+    "control": 0
+   },
+   "beyond_maximum": {
+    "participant": 0,
+    "control": 0
+   },
+   "analysable": {
+    "participant": 10,
+    "control": 30
+   }
+  }
+ },
+ "thresholds_used": {
+  "colour": [
+   0.2863223717155787,
+   -0.2896056357511166
+  ],
+  "fog": [
+   0.4880483057825434,
+   -0.48559721218587304
+  ]
+ },
+ "notes": [
+  "realised = what these exact data give, computed from the tidy tables with the copied power-script functions (fit_firth_batch path). The analysis must reproduce it.",
+  "design_expectation = what the design says; a 'firm' 'not supported' can still fail by chance at the registered false-claim rate.",
+  "C1 and its attention check are run on the analysable people, after the >= 3 catch-failure exclusion."
+ ]
+}

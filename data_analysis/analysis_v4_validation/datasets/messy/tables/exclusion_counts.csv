@@ -1,0 +1,10 @@
+status,participant,control
+test_or_dev,3,0
+incomplete,0,0
+repeat_not_used,1,0
+excluded_no_consent,1,0
+excluded_images_fit,1,0
+excluded_catch,1,1
+tier_D,1,0
+beyond_maximum,0,0
+analysable,10,20

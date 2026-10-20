@@ -1,0 +1,174 @@
+{
+ "dataset": "messy_over_max",
+ "status": "complete",
+ "checks": [
+  {
+   "check": "[messy_over_max] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/messy_over_max/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[messy_over_max] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/messy_over_max/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[messy_over_max] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[messy_over_max] every non-test session's ID is in the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 unknown"
+  },
+  {
+   "check": "[messy_over_max] session group agrees with the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 sessions differ"
+  },
+  {
+   "check": "[messy_over_max] every participant session has a completion time (needed to apply the maximum)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 missing"
+  },
+  {
+   "check": "[messy_over_max] every control session has a completion time (needed to apply the maximum)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 missing"
+  },
+  {
+   "check": "[messy_over_max] final N within the maxima (20 participants, 30 controls)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "N = 20 and 30"
+  },
+  {
+   "check": "[messy_over_max] beyond the maximum, listed and not analysed",
+   "result": "INFO",
+   "stops_run": false,
+   "detail": "1 participants, 1 controls"
+  },
+  {
+   "check": "[messy_over_max] every Firth fit converged (score ~ 0)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 not converged"
+  },
+  {
+   "check": "[messy_over_max] C1 colour: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.001108327053 vs 0.001108327053 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[messy_over_max] C1 fog: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.002108031951 vs 0.002108031951 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[messy_over_max] C1: holm_two and _c1_test give the same verdicts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] grid rows agree with the grid package and the set code",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[messy_over_max] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[messy_over_max] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] truth: H1, H2, attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"beyond_maximum\": {\"participant\": 1, \"control\": 1}}"
+  },
+  {
+   "check": "[messy_over_max] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[messy_over_max] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  }
+ ]
+}

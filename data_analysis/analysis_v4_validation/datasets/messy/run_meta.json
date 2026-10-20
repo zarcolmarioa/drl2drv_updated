@@ -1,0 +1,156 @@
+{
+ "dataset": "messy",
+ "status": "complete",
+ "checks": [
+  {
+   "check": "[messy] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/messy/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[messy] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/messy/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[messy] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[messy] every non-test session's ID is in the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 unknown"
+  },
+  {
+   "check": "[messy] session group agrees with the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 sessions differ"
+  },
+  {
+   "check": "[messy] final N within the maxima (20 participants, 30 controls)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "N = 10 and 20"
+  },
+  {
+   "check": "[messy] every Firth fit converged (score ~ 0)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 not converged"
+  },
+  {
+   "check": "[messy] C1 colour: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.05916852503 vs 0.05916852503 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[messy] C1 fog: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.009294147913 vs 0.009294147913 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[messy] C1: holm_two and _c1_test give the same verdicts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] grid rows agree with the grid package and the set code",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[messy] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[messy] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: H1, H2, attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 20}, \"excluded_catch\": {\"participant\": 1, \"control\": 1}, \"excluded_images_fit\": {\"participant\": 1, \"control\": 0}, \"excluded_no_consent\": {\"participant\": 1, \"control\": 0}, \"repeat_not_used\": {\"participant\": 1, \"control\": 0}, \"test_or_dev\": {\"participant\": 3, \"control\": 0}, \"tier_D\": {\"participant\": 1, \"control\": 0}}"
+  },
+  {
+   "check": "[messy] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 1, \"no_word_block\": 1, \"no_grid_shift_colour\": 1, \"no_grid_shift_fog\": 2, \"both_episode_fog_screens_none\": 1, \"no_state_block\": 1, \"no_interview_date\": 1}"
+  },
+  {
+   "check": "[messy] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  }
+ ]
+}

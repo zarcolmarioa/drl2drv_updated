@@ -1,0 +1,5 @@
+item,expected,kind,verdict,miss,p_miss
+H1,descriptive,fixed,descriptive,False,
+H2,descriptive,fixed,descriptive,False,
+C1_colour,supported,likely,not supported,False,
+C1_fog,no claim,no_claim,not supported,False,0.025

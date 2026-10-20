@@ -1,0 +1,19 @@
+file,null,n,claim,feature,rule,registered_rate,registered_rate_column,preview_claims,preview_rate,binomial_95_lo,binomial_95_hi,preview_within
+null_random_n10.npz,null_random,10,H1,fog,"k >= 4, m <= 0",5.9066589748360586e-05,false_guesser,0,0.0,0.0,1.0,True
+null_random_n10.npz,null_random,10,H2,colour,"k >= 4, m <= 0",5.621821708359132e-05,false_guesser,0,0.0,0.0,1.0,True
+null_random_n10.npz,null_random,10,H1 or H2 (descriptive),,,,none registered,0,0.0,,,
+null_random_n15.npz,null_random,15,H1,fog,"k >= 5, m <= 1",2.1666604618607065e-05,false_guesser,0,0.0,0.0,0.0,True
+null_random_n15.npz,null_random,15,H2,colour,"k >= 6, m <= 3",8.580141037130026e-07,false_guesser,0,0.0,0.0,0.0,True
+null_random_n15.npz,null_random,15,H1 or H2 (descriptive),,,,none registered,0,0.0,,,
+null_random_n20.npz,null_random,20,H1,fog,"k >= 5, m <= 1",9.795294453888238e-05,false_guesser,0,0.0,0.0,1.0,True
+null_random_n20.npz,null_random,20,H2,colour,"k >= 7, m <= 3",2.954454737353056e-07,false_guesser,0,0.0,0.0,0.0,True
+null_random_n20.npz,null_random,20,H1 or H2 (descriptive),,,,none registered,0,0.0,,,
+null_taste_worst_n10.npz,null_taste_worst,10,H1,fog,"k >= 4, m <= 0",0.0224439093512534,false_worst,19,0.019,14.0,32.0,True
+null_taste_worst_n10.npz,null_taste_worst,10,H2,colour,"k >= 4, m <= 0",0.0219549718713389,false_worst,24,0.024,13.0,31.0,True
+null_taste_worst_n10.npz,null_taste_worst,10,H1 or H2 (descriptive),,,,none registered,42,0.042,,,
+null_taste_worst_n15.npz,null_taste_worst,15,H1,fog,"k >= 5, m <= 1",0.0420857573941697,false_worst,48,0.048,30.0,55.0,True
+null_taste_worst_n15.npz,null_taste_worst,15,H2,colour,"k >= 6, m <= 3",0.0362921644355047,false_worst,35,0.035,25.0,48.0,True
+null_taste_worst_n15.npz,null_taste_worst,15,H1 or H2 (descriptive),,,,none registered,83,0.083,,,
+null_taste_worst_n20.npz,null_taste_worst,20,H1,fog,"k >= 5, m <= 1",0.0413975231250285,false_worst,41,0.041,30.0,54.0,True
+null_taste_worst_n20.npz,null_taste_worst,20,H2,colour,"k >= 7, m <= 3",0.0395719049808233,false_worst,39,0.039,28.0,52.0,True
+null_taste_worst_n20.npz,null_taste_worst,20,H1 or H2 (descriptive),,,,none registered,76,0.076,,,

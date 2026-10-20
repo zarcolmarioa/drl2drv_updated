@@ -1,0 +1,5 @@
+item,expected,kind,verdict,miss,p_miss
+H1,supported,likely,supported,False,
+H2,supported,likely,supported,False,
+C1_colour,inconclusive,near_certain,inconclusive,False,
+C1_fog,inconclusive,near_certain,inconclusive,False,

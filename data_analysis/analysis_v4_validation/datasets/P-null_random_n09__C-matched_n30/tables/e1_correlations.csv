@@ -1,0 +1,5 @@
+pair,description,weight,n,rho,ci_lo,ci_hi,boot_degenerate
+CDS item 13 vs fog weight,cds_q13,w_fog,9,-0.5421104980065684,-0.9302059914924531,0.31607787428201567,6
+"CDS item 2 vs colour weight (reported, not a colour test)",cds_q02,w_colour,9,-0.07595545253127499,-0.8943658210757892,0.8819171036881969,0
+foggy minus baseline vs fog weight,foggy_rel,w_fog,9,0.25941649671427414,-0.3944954128440367,0.7049073768502414,0
+faded minus baseline vs colour weight,faded_rel,w_colour,9,-0.6950150912113306,-0.9764705882352941,-0.1177447357871185,1

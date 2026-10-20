@@ -1,0 +1,17 @@
+analysis,kind,n,statistic,rule,p,verdict,registered_false_claim,registered_power
+H1 (fog),primary,10,"4 predicted, 0 opposite","k >= 4, m <= 0",,supported,0.0224439093512534,0.4434561012801697
+H2 (colour),primary,10,"1 predicted, 1 opposite","k >= 4, m <= 0",,not supported,0.0219549718713389,0.5907743703902281
+attention check: catch failures,gate,10+30,,,0.9845566917248572,no,,
+attention check: responses < 300 ms,gate,10+30,,,0.7604379138097748,no,,
+C1 colour,primary,10+30,U = 150.0 (asymptotic),,0.5062301784103567,not supported,,
+C1 fog,primary,10+30,U = 183.0 (asymptotic),,0.15502206193826218,not supported,,
+"C1 colour, zero catch failures",secondary (registered),4+21,,,0.2643270367109868,not supported,,
+"C1 fog, zero catch failures",secondary (registered),4+21,,,0.047676629501671126,not supported,,
+"t-test and BF, colour",secondary,10,"t = 0.253, BF10 = 0.375",,0.4031211069967285,inconclusive,,
+"t-test and BF, colour (capped)",secondary,10,"t = 0.253, BF10 = 0.375",,0.4031211069967285,inconclusive,,
+"t-test and BF, fog",secondary,10,"t = 1.209, BF10 = 0.944",,0.12872647430923606,inconclusive,,
+"t-test and BF, fog (capped)",secondary,10,"t = 1.209, BF10 = 0.944",,0.12872647430923606,inconclusive,,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,10,0 following,,0.32461714115261975,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,30,2 following,,0.07233513770489051,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,10,1 following,,0.23949842831219065,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,30,1 following,,0.4126111966518113,,,

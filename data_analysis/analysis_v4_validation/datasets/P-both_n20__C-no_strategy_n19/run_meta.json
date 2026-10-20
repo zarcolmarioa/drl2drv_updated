@@ -1,0 +1,168 @@
+{
+ "dataset": "P-both_n20__C-no_strategy_n19",
+ "status": "complete",
+ "checks": [
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/P-both_n20__C-no_strategy_n19/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/P-both_n20__C-no_strategy_n19/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] every non-test session's ID is in the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 unknown"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] session group agrees with the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 sessions differ"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] final N within the maxima (20 participants, 30 controls)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "N = 20 and 19"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] every Firth fit converged (score ~ 0)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 not converged"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] C1 colour: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.0118531899 vs 0.0118531899 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] C1 fog: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.3627117737 vs 0.3627117737 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] C1: holm_two and _c1_test give the same verdicts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] grid rows agree with the grid package and the set code",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: H1, H2, attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 19}, \"excluded_catch\": {\"participant\": 1, \"control\": 3}}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] design: C1_colour descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] design: C1_fog descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  }
+ ]
+}

@@ -1,0 +1,187 @@
+STUDY ANALYSIS  (v4)  --  analyse_study_v4.py
+========================================================================
+dataset      data/sim_study_v4/datasets/P-everyone_n20__C-matched_n30  (tidy tables)
+run          2026-10-20 22:59:06
+python 3.11.15, numpy 2.4.4, pandas 3.0.3
+Shareable: every person is a pseudonym. The key is in PRIVATE/.
+
+REGISTERED QUANTITIES USED
+------------------------------------------------------------------------
+  thresholds colour  +0.28632 / -0.28961   (registered +0.286 / -0.290)
+  thresholds fog     +0.48805 / -0.48560   (registered +0.488 / -0.486)
+  cap        colour  +/-8.37797   (registered 8.378; 120 informative trials at |predictor| >= 0.2)
+  cap        fog     +/-10.26917   (registered 10.269; 120 informative trials at |predictor| >= 0.2)
+
+A. WHO IS ANALYSABLE
+------------------------------------------------------------------------
+  step                          participants  controls
+  test or development session              0         0
+  not complete                             0         0
+  later session (listed)                   0         0
+  no consent                               0         0
+  images did not fit                       0         0
+  >= 3 catch failures                      0         1
+  Tier D (separate)                        0         0
+  beyond the maximum (listed)              0         0
+  ANALYSABLE                              20        30
+  partial exclusions among analysable participants:
+    flat word ratings                  0
+    no word block                      0
+    no grid shift colour               0
+    no grid shift fog                  0
+    both episode fog screens none      0
+    no state block                     0
+    no interview date                  0
+    no survey row                      0
+  FINAL N: 20 participants, 30 controls (+ 0 Tier D, reported separately)
+
+B. PER-PERSON WEIGHTS  (Firth, no intercept; 95% profile intervals)
+------------------------------------------------------------------------
+  code     colour            interval class              fog            interval class        
+  P01      +0.181 [  -0.11,    0.48] not detected    +0.609 [   0.12,    1.12] predicted    
+  P02      +0.041 [  -0.24,    0.33] not detected    +0.452 [  -0.03,    0.95] not detected 
+  P03      +0.393 [   0.09,    0.71] predicted       +0.691 [   0.19,    1.22] predicted    
+  P04      +0.723 [   0.39,    1.09] predicted       +0.831 [   0.31,    1.38] predicted    
+  P05      +0.698 [   0.37,    1.06] predicted       +0.405 [  -0.09,    0.92] not detected 
+  P06      +0.398 [   0.10,    0.72] predicted       +0.591 [   0.09,    1.11] predicted    
+  P07      +0.275 [  -0.01,    0.58] not detected    +0.180 [  -0.30,    0.67] not detected 
+  P08      +0.246 [  -0.04,    0.55] not detected    +0.445 [  -0.04,    0.95] not detected 
+  P09      +0.479 [   0.17,    0.81] predicted       +0.539 [   0.04,    1.06] predicted    
+  P10      +0.426 [   0.12,    0.75] predicted       +0.850 [   0.34,    1.40] predicted    
+  P11      +0.617 [   0.30,    0.97] predicted       +0.790 [   0.27,    1.34] predicted    
+  P12      +0.357 [   0.06,    0.67] predicted       +0.253 [  -0.23,    0.75] not detected 
+  P13      +0.289 [  -0.01,    0.60] predicted       +0.808 [   0.30,    1.35] predicted    
+  P14      +0.477 [   0.17,    0.80] predicted       +0.367 [  -0.12,    0.87] not detected 
+  P15      +0.485 [   0.17,    0.82] predicted       +1.026 [   0.50,    1.60] predicted    
+  P16      +0.585 [   0.26,    0.94] predicted       +1.072 [   0.53,    1.65] predicted    
+  P17      +0.330 [   0.03,    0.65] predicted       +1.391 [   0.83,    2.01] predicted    
+  P18      +0.622 [   0.30,    0.97] predicted       +0.647 [   0.14,    1.18] predicted    
+  P19      +0.389 [   0.08,    0.71] predicted       +1.184 [   0.64,    1.77] predicted    
+  P20      +0.139 [  -0.15,    0.43] not detected    +0.046 [  -0.43,    0.53] not detected 
+  C01      -0.197 [  -0.49,    0.09] not detected    -0.047 [  -0.53,    0.43] not detected 
+  C02      -0.174 [  -0.47,    0.11] not detected    +0.238 [  -0.24,    0.72] not detected 
+  C03      -0.034 [  -0.32,    0.25] not detected    +0.044 [  -0.44,    0.52] not detected 
+  C04      +0.067 [  -0.22,    0.35] not detected    -0.045 [  -0.53,    0.44] not detected 
+  C05      +0.259 [  -0.03,    0.56] not detected    +0.269 [  -0.21,    0.76] not detected 
+  C06      +0.010 [  -0.28,    0.30] not detected    +0.270 [  -0.21,    0.76] not detected 
+  C07      -0.017 [  -0.30,    0.27] not detected    -0.184 [  -0.67,    0.30] not detected 
+  C08      -0.236 [  -0.53,    0.05] not detected    +0.273 [  -0.21,    0.76] not detected 
+  C09      -0.140 [  -0.43,    0.14] not detected    -0.024 [  -0.51,    0.46] not detected 
+  C10      -0.216 [  -0.51,    0.07] not detected    +0.119 [  -0.36,    0.60] not detected 
+  C11      -0.072 [  -0.36,    0.21] not detected    +0.412 [  -0.07,    0.91] not detected 
+  C12      +0.219 [  -0.07,    0.51] not detected    -0.647 [  -1.16,   -0.16] opposite     
+  C13      -0.098 [  -0.39,    0.19] not detected    -0.282 [  -0.77,    0.20] not detected 
+  C14      +0.367 [   0.07,    0.68] predicted       +0.070 [  -0.41,    0.56] not detected 
+  C15      -0.275 [  -0.58,    0.01] not detected    -0.082 [  -0.57,    0.40] not detected 
+  C16      +0.124 [  -0.17,    0.42] not detected    +0.797 [   0.29,    1.33] predicted    
+  C17      -0.000 [  -0.29,    0.29] not detected    -0.195 [  -0.68,    0.28] not detected 
+  C18      +0.134 [  -0.15,    0.42] not detected    +0.156 [  -0.32,    0.64] not detected 
+  C19      +0.161 [  -0.12,    0.45] not detected    +0.027 [  -0.45,    0.51] not detected 
+  C20      -0.049 [  -0.34,    0.24] not detected    -0.413 [  -0.91,    0.07] not detected 
+  C21      +0.083 [  -0.20,    0.37] not detected    -0.274 [  -0.76,    0.21] not detected 
+  C22      -0.194 [  -0.49,    0.09] not detected    -0.210 [  -0.70,    0.27] not detected 
+  C23      -0.549 [  -0.88,   -0.24] opposite        +0.140 [  -0.35,    0.63] not detected 
+  C24      +0.221 [  -0.07,    0.52] not detected    +0.233 [  -0.25,    0.72] not detected 
+  C25      +0.363 [   0.07,    0.67] predicted       +0.061 [  -0.42,    0.55] not detected 
+  C26      -0.096 [  -0.39,    0.19] not detected    -0.293 [  -0.78,    0.19] not detected 
+  C27      -0.520 [  -0.85,   -0.21] opposite        -0.557 [  -1.08,   -0.06] opposite     
+  C28      -0.239 [  -0.54,    0.05] not detected    -0.478 [  -0.98,    0.01] not detected 
+  C29      -0.120 [  -0.41,    0.16] not detected    +0.020 [  -0.46,    0.50] not detected 
+  C30      +0.159 [  -0.13,    0.45] not detected    +0.139 [  -0.34,    0.62] not detected 
+
+C. H1 (FOG) AND H2 (COLOUR)  -- primary, two separate claims at 5%
+------------------------------------------------------------------------
+  H1 fog: 13 predicted, 0 opposite, 7 not detected (N = 20)
+     rule k >= 5, m <= 1  ->  SUPPORTED
+     registered false-claim rate 0.0414 (upper bound 0.0421); power at the planning cell 0.797
+  H2 colour: 15 predicted, 0 opposite, 5 not detected (N = 20)
+     rule k >= 7, m <= 3  ->  SUPPORTED
+     registered false-claim rate 0.0396 (upper bound 0.0421); power at the planning cell 0.969
+
+D. C1 (PARTICIPANTS AGAINST CONTROLS)  -- primary
+------------------------------------------------------------------------
+  people excluded for >= 3 catch failures: participants 0, controls 1
+  NOTE: the registered gate and C1 simulation did not apply that exclusion;
+  here both run on the analysable people, after it.
+  attention check: catch failures, controls worse, one-sided p 0.2025;
+                   responses < 300 ms, controls worse, one-sided p 0.4446
+                   Holm across the two at 0.05: does not fire
+  C1 colour: medians +0.395 vs -0.042, U = 566.0, one-sided p 7.3e-08 (asymptotic), Holm rejects ->  SUPPORTED
+  C1 fog   : medians +0.628 vs +0.024, U = 563.0, one-sided p 1.0e-07 (asymptotic), Holm rejects ->  SUPPORTED
+  zero catch failures (registered secondary): 9 participants, 12 controls
+    colour: one-sided p 9.5e-05, Holm rejects
+    fog   : one-sided p 0.0001, Holm rejects
+    fast-response re-check in the subsample (diagnostic): does not fire
+
+E. SECONDARY: one-sided t-test and JZS Bayes factor (scale 0.707)
+------------------------------------------------------------------------
+  colour uncapped                     mean +0.408, t(19) = 9.882, p 3.2e-09, BF10 3.81e+06 (evidence for (BF10 > 3))
+  colour capped at +/-8.378, 0 clipped mean +0.408, t(19) = 9.882, p 3.2e-09, BF10 3.81e+06 (evidence for (BF10 > 3))
+  fog    uncapped                     mean +0.659, t(19) = 8.556, p 3.0e-08, BF10 4.7e+05 (evidence for (BF10 > 3))
+  fog    capped at +/-10.269, 0 clipped mean +0.659, t(19) = 8.556, p 3.0e-08, BF10 4.7e+05 (evidence for (BF10 > 3))
+
+F. EXPLORATORY AND DESCRIPTIVE  (intervals, no claims)
+------------------------------------------------------------------------
+  Prevalence (descriptive; no 'excludes zero' inference):
+    colour 15+/0- of 20, assuming a weak 0.30/SD responder (sensitivity 0.50): estimate 1.00, mode 1.00, 95% HPDI [0.64, 1.00]
+    colour 15+/0- of 20, assuming a moderate 0.50/SD responder (sensitivity 0.86): estimate 0.87, mode 0.80, 95% HPDI [0.52, 0.99]
+    colour 15+/0- of 20, assuming a strong 0.70/SD responder (sensitivity 0.99): estimate 0.76, mode 0.69, 95% HPDI [0.43, 0.88]
+    fog    13+/0- of 20, assuming a weak 0.30/SD responder (sensitivity 0.22): estimate 1.00, mode 1.00, 95% HPDI [0.37, 1.00]
+    fog    13+/0- of 20, assuming a moderate 0.50/SD responder (sensitivity 0.51): estimate 1.00, mode 1.00, 95% HPDI [0.58, 1.00]
+    fog    13+/0- of 20, assuming a strong 0.70/SD responder (sensitivity 0.79): estimate 0.82, mode 0.74, 95% HPDI [0.45, 0.98]
+  Suzuki-style (>= 39 of 60 counts as following):
+    colour (sat_only)  participant  7/20 following, mean 0.647, one-sided p 4.9e-10
+    colour (sat_only)  control      0/30 following, mean 0.477, one-sided p 0.9274
+    fog (fog_only)     participant  9/20 following, mean 0.625, one-sided p 3.8e-08
+    fog (fog_only)     control      0/30 following, mean 0.499, one-sided p 0.5184
+  H3, angle atan2(b_fog, b_sat) in degrees, between people only:
+    participant  n 20: median 58.2, IQR [44.0, 66.1], range [18.4, 84.8]; detected predicted on both 12
+    control      n 30: median 9.6, IQR [-105.2, 86.2], range [-170.5, 170.5]; detected predicted on both 0
+  E1, descriptions against weights (participants; Spearman, 10000 bootstrap resamples):
+    CDS item 13 vs fog weight                    n 20  rho  0.11  [-0.39, 0.60]
+    CDS item 2 vs colour weight (reported, not a colour test) n 20  rho -0.45  [-0.75, -0.01]
+    foggy minus baseline vs fog weight           n 20  rho  0.10  [-0.43, 0.63]
+    faded minus baseline vs colour weight        n 20  rho  0.44  [-0.10, 0.81]
+  E2, grid shift (episode minus normal, corpus SD):
+    participant  colour n 20/20: mean -0.728, median -0.686; at original episode/normal 4/15
+    participant  fog    n 20/20: mean -0.286, median -0.302; at original episode/normal 15/36
+    control      colour n 30/30: mean -0.045, median -0.000; at original episode/normal 21/29
+    control      fog    n 30/30: mean -0.025, median 0.000; at original episode/normal 52/57
+    (fog answers at the original are censored: the axis has no clearer column)
+  Dose-response and additivity: tables/dose_response.csv
+  Quality and covariates: tables/quality.csv
+
+SIMULATED DATA: COMPARISON WITH THE TRUTH
+------------------------------------------------------------------------
+  H1         expected supported      (likely) got supported
+  H2         expected supported      (likely) got supported
+  C1_colour  expected supported      (likely) got supported
+  C1_fog     expected supported      (likely) got supported
+
+CHECKS
+------------------------------------------------------------------------
+  [PASS] [P-everyone_n20__C-matched_n30] tidy tables have every expected column
+  [PASS] [P-everyone_n20__C-matched_n30] session flags are all True/False
+  [PASS] [P-everyone_n20__C-matched_n30] session ids are unique
+  [PASS] [P-everyone_n20__C-matched_n30] word ratings and state items are whole numbers 0-6
+  [PASS] [P-everyone_n20__C-matched_n30] survey file found  (data/sim_study_v4/datasets/P-everyone_n20__C-matched_n30/private/survey_FAKE.xlsx)
+  [PASS] [P-everyone_n20__C-matched_n30] participant table found  (data/sim_study_v4/datasets/P-everyone_n20__C-matched_n30/private/participant_table_FAKE.csv)
+  [PASS] [P-everyone_n20__C-matched_n30] survey has ResponseId and Q01_score .. Q29_score
+  [PASS] [P-everyone_n20__C-matched_n30] survey ResponseIds are unique
+  [PASS] [P-everyone_n20__C-matched_n30] participant table has participant_id, group, tier
+  [PASS] [P-everyone_n20__C-matched_n30] participant table: groups and tiers valid  (0 invalid rows)
+  [PASS] [P-everyone_n20__C-matched_n30] every non-test session's ID is in the participant table  (0 unknown)
+  [PASS] [P-everyone_n20__C-matched_n30] session group agrees with the participant table  (0 sessions differ)
+  [PASS] [P-everyone_n20__C-matched_n30] final N within the maxima (20 participants, 30 controls)  (N = 20 and 30)
+  [PASS] [P-everyone_n20__C-matched_n30] every Firth fit converged (score ~ 0)  (0 not converged)
+  [PASS] [P-everyone_n20__C-matched_n30] C1 colour: mw_p_batch and scipy's Mann-Whitney agree  (7.294067055e-08 vs 7.294067055e-08 (asymptotic / asymptotic))
+  [PASS] [P-everyone_n20__C-matched_n30] C1 fog: mw_p_batch and scipy's Mann-Whitney agree  (1.005734174e-07 vs 1.005734174e-07 (asymptotic / asymptotic))
+  [PASS] [P-everyone_n20__C-matched_n30] C1: holm_two and _c1_test give the same verdicts
+  [PASS] [P-everyone_n20__C-matched_n30] grid rows agree with the grid package and the set code
+  [PASS] [P-everyone_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-everyone_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.5e-12)
+  [PASS] [P-everyone_n20__C-matched_n30] truth: every class
+  [PASS] [P-everyone_n20__C-matched_n30] truth: H1, H2, attention check and C1 as realised
+  [PASS] [P-everyone_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-everyone_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-everyone_n20__C-matched_n30] truth: grid shift per person

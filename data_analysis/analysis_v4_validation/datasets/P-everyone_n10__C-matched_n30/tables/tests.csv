@@ -1,0 +1,17 @@
+analysis,kind,n,statistic,rule,p,verdict,registered_false_claim,registered_power
+H1 (fog),primary,10,"8 predicted, 0 opposite","k >= 4, m <= 0",,supported,0.0224439093512534,0.4434561012801697
+H2 (colour),primary,10,"6 predicted, 0 opposite","k >= 4, m <= 0",,supported,0.0219549718713389,0.5907743703902281
+attention check: catch failures,gate,10+30,,,0.416051697075026,no,,
+attention check: responses < 300 ms,gate,10+30,,,0.9376759576830925,no,,
+C1 colour,primary,10+30,U = 295.0 (asymptotic),,3.1895000628354592e-06,supported,,
+C1 fog,primary,10+30,U = 274.0 (asymptotic),,5.7278232788546444e-05,supported,,
+"C1 colour, zero catch failures",secondary (registered),6+17,,,0.0005656632134114171,supported,,
+"C1 fog, zero catch failures",secondary (registered),6+17,,,0.0028413170497953106,supported,,
+"t-test and BF, colour",secondary,10,"t = 8.115, BF10 = 2.3e+03",,9.877596476084183e-06,evidence for (BF10 > 3),,
+"t-test and BF, colour (capped)",secondary,10,"t = 8.115, BF10 = 2.3e+03",,9.877596476084183e-06,evidence for (BF10 > 3),,
+"t-test and BF, fog",secondary,10,"t = 6.369, BF10 = 457",,6.493691334384836e-05,evidence for (BF10 > 3),,
+"t-test and BF, fog (capped)",secondary,10,"t = 6.369, BF10 = 457",,6.493691334384836e-05,evidence for (BF10 > 3),,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,10,5 following,,9.03821890669375e-06,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,30,1 following,,0.5709374765086898,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,10,6 following,,4.516392797600578e-05,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,30,0 following,,0.4079881503725561,,,

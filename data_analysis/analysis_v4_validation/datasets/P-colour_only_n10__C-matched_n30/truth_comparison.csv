@@ -1,0 +1,5 @@
+item,expected,kind,verdict,miss,p_miss
+H1,no claim,no_claim,not supported,False,0.0224439093512534
+H2,supported,likely,not supported,False,
+C1_colour,supported,likely,not supported,False,
+C1_fog,no claim,no_claim,not supported,False,0.025

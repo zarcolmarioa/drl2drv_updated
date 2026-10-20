@@ -1,0 +1,1462 @@
+{
+ "script": "simulate_study_data_v4.py",
+ "started": "2026-10-20 22:57:19",
+ "output": "data/sim_study_v4",
+ "python": "3.11.15",
+ "numpy": "2.4.4",
+ "pandas": "3.0.3",
+ "scipy": "1.17.1",
+ "settings": {
+  "FROZEN_ROOT": "data/frozen_trial_list_v4",
+  "FROZEN_TRIAL_LIST": "trial_list.csv",
+  "COMBINED_RULE": "data/registration_v4/combined_rule.csv",
+  "GRID_TRIALS": "data/grid_block_v4/package/grid_trials.csv",
+  "POWER_SCRIPT": "simulate_power_v4_n10_20.py",
+  "OUTPUT_ROOT": "data/sim_study_v4",
+  "MASTER_SEED": 20261020,
+  "REGISTERED_THRESHOLDS": {
+   "colour": [
+    0.286,
+    -0.29
+   ],
+   "fog": [
+    0.488,
+    -0.486
+   ]
+  },
+  "REGISTERED_RULES": {
+   "colour": {
+    "10": [
+     4,
+     0
+    ],
+    "11": [
+     5,
+     2
+    ],
+    "12": [
+     5,
+     2
+    ],
+    "13": [
+     5,
+     1
+    ],
+    "14": [
+     5,
+     1
+    ],
+    "15": [
+     6,
+     3
+    ],
+    "16": [
+     6,
+     2
+    ],
+    "17": [
+     6,
+     2
+    ],
+    "18": [
+     6,
+     2
+    ],
+    "19": [
+     7,
+     3
+    ],
+    "20": [
+     7,
+     3
+    ]
+   },
+   "fog": {
+    "10": [
+     4,
+     0
+    ],
+    "11": [
+     5,
+     2
+    ],
+    "12": [
+     5,
+     2
+    ],
+    "13": [
+     5,
+     1
+    ],
+    "14": [
+     5,
+     1
+    ],
+    "15": [
+     5,
+     1
+    ],
+    "16": [
+     5,
+     1
+    ],
+    "17": [
+     5,
+     1
+    ],
+    "18": [
+     5,
+     1
+    ],
+    "19": [
+     5,
+     1
+    ],
+    "20": [
+     5,
+     1
+    ]
+   }
+  },
+  "N_MIN_CLAIM": 10,
+  "N_MAX_PARTICIPANTS": 20,
+  "N_MAX_CONTROLS": 30,
+  "MIN_CONTROLS_C1": 20,
+  "CATCH_FAIL_EXCLUDE": 3,
+  "C1_NULL_RATE_GUIDE": 0.025,
+  "PARTICIPANT_SCENARIOS": {
+   "null_random": {
+    "taste_mult": 0.0,
+    "lapse": 0.1,
+    "share": 0.0,
+    "w_colour": 0.0,
+    "w_fog": 0.0,
+    "strategy": 0.0
+   },
+   "null_taste_worst": {
+    "taste_mult": 1.0,
+    "lapse": 0.0,
+    "share": 0.0,
+    "w_colour": 0.0,
+    "w_fog": 0.0,
+    "strategy": 0.0
+   },
+   "fog_only": {
+    "taste_mult": 0.5,
+    "lapse": 0.1,
+    "share": 0.5,
+    "w_colour": 0.0,
+    "w_fog": 0.7,
+    "strategy": 0.0
+   },
+   "colour_only": {
+    "taste_mult": 0.5,
+    "lapse": 0.1,
+    "share": 0.5,
+    "w_colour": 0.5,
+    "w_fog": 0.0,
+    "strategy": 0.0
+   },
+   "both": {
+    "taste_mult": 0.5,
+    "lapse": 0.1,
+    "share": 0.5,
+    "w_colour": 0.5,
+    "w_fog": 0.7,
+    "strategy": 0.0
+   },
+   "everyone": {
+    "taste_mult": 0.5,
+    "lapse": 0.1,
+    "share": 1.0,
+    "w_colour": 0.5,
+    "w_fog": 0.7,
+    "strategy": 0.0
+   }
+  },
+  "PARTICIPANT_NS": [
+   9,
+   10,
+   15,
+   20
+  ],
+  "BASELINE_CONTROLS_N": 30,
+  "CONTROL_SCENARIOS": {
+   "no_strategy": {
+    "control": {
+     "taste_mult": 0.5,
+     "lapse": 0.1,
+     "strategy": 0.0
+    },
+    "participant_overrides": {}
+   },
+   "quarter_strategy": {
+    "control": {
+     "taste_mult": 0.5,
+     "lapse": 0.1,
+     "strategy": 0.25
+    },
+    "participant_overrides": {
+     "strategy": 0.25
+    }
+   },
+   "lapse_more": {
+    "control": {
+     "taste_mult": 0.5,
+     "lapse": 0.2,
+     "strategy": 0.0
+    },
+    "participant_overrides": {
+     "lapse": 0.0
+    }
+   }
+  },
+  "CONTROL_NS": [
+   19,
+   30
+  ],
+  "CONTROL_SCENARIO_PARTICIPANTS": [
+   "both",
+   20
+  ],
+  "FALSE_CLAIM_NULLS": {
+   "null_random": 0.0,
+   "null_taste_worst": 1.0
+  },
+  "FALSE_CLAIM_NS": [
+   10,
+   15,
+   20
+  ],
+  "FALSE_CLAIM_STUDIES": 1000,
+  "MESSY_CORE_PARTICIPANTS": 10,
+  "MESSY_CONTROLS": 20,
+  "MESSY_OVER_MAX": [
+   21,
+   31
+  ],
+  "WORD_IDS": [
+   "foggy",
+   "faded",
+   "veiled",
+   "lifeless",
+   "unreal",
+   "dreamlike",
+   "distant",
+   "like_a_picture",
+   "oppressive",
+   "threatening"
+  ],
+  "WORD_MAX": 6,
+  "STATE_ITEMS": [
+   "state_q02",
+   "state_q13",
+   "state_q19",
+   "state_q29"
+  ],
+  "STATE_ITEM_MAX": 6,
+  "CDS_ITEMS": 29,
+  "AFS_ITEMS": [
+   2,
+   13,
+   19,
+   29
+  ],
+  "SURVEY_EXTRA_RESPONDENTS": 15,
+  "CATCH_KEYS": [
+   "up",
+   "down",
+   "down",
+   "up",
+   "up",
+   "down",
+   "up",
+   "down",
+   "down",
+   "up"
+  ],
+  "RT_ENGAGED_MEDIAN": 1100.0,
+  "RT_ENGAGED_SIGMA": 0.55,
+  "RT_FAST_RANGE": [
+   150,
+   299
+  ],
+  "GRID_NORMAL": {
+   "colour": [
+    0.0,
+    0.7
+   ],
+   "fog": [
+    -0.6,
+    0.6
+   ]
+  },
+  "GRID_EPISODE_SLOPE": {
+   "colour": 2.0,
+   "fog": 1.6
+  },
+  "GRID_EPISODE_SD": 0.7,
+  "GRID_SCREEN_SD": 0.4,
+  "GRID_NONE_P": 0.04,
+  "GRID_WINDOWS": [
+   [
+    1280,
+    720
+   ],
+   [
+    1366,
+    768
+   ],
+   [
+    1440,
+    900
+   ],
+   [
+    1536,
+    864
+   ],
+   [
+    1920,
+    1080
+   ],
+   [
+    2560,
+    1440
+   ],
+   [
+    1120,
+    680
+   ]
+  ],
+  "TIDY_TRIALS": "trials.csv",
+  "TIDY_SESSIONS": "sessions.csv",
+  "TIDY_GRID": "grid.csv",
+  "SURVEY_FILE": "survey_FAKE.xlsx",
+  "PARTICIPANT_TABLE_FILE": "participant_table_FAKE.csv",
+  "TEST_IDS": [
+   "Z_21121989",
+   "CHAIN_2026"
+  ],
+  "ID_PATTERN": "^R_[A-Za-z0-9]{15}$",
+  "IDENTITY_SEED": 20261020,
+  "IDENTITY_W": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.5,
+    0.0
+   ],
+   [
+    0.0,
+    0.7
+   ],
+   [
+    0.5,
+    0.7
+   ],
+   [
+    -0.3,
+    0.2
+   ],
+   [
+    1.5,
+    -0.4
+   ],
+   [
+    3.0,
+    3.0
+   ],
+   [
+    0.29,
+    0.49
+   ]
+  ],
+  "IDENTITY_ABS_TOL": 1e-09,
+  "IDENTITY_REL_TOL": 1e-09,
+  "UNHASHED": [
+   "checksums.sha256",
+   "FROZEN.json",
+   "freeze_report.txt"
+  ],
+  "FROZEN_SEED": 42,
+  "PRED_SAT": "pred_sat",
+  "PRED_FOG": "pred_fog",
+  "SD_SAT": 39.182,
+  "SD_FOG": 9.348,
+  "PRED_REBUILD_TOL": 1e-09,
+  "ESTIMATOR": "firth",
+  "FIRTH_ITER": 200,
+  "FIRTH_TOL": 1e-10,
+  "FIRTH_MAX_STEP": 5.0,
+  "NONRESPONDER_SPREAD_MULT": 0.5,
+  "TASTE_SPREADS_IN_FLOORS": [
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "ALPHA": 0.05,
+  "FLOOR_ALPHA": 0.025,
+  "N_FLOOR_PEOPLE": 20000,
+  "DETECTION_SIDED": "two",
+  "C1_STRATEGY_WEIGHT": 0.5,
+  "C1_EXACT_MAX_N": 20,
+  "C1_HOLM": true,
+  "GATE_ALPHA": 0.05,
+  "N_CATCH_TRIALS": 10,
+  "CATCH_P_FAIL_PER_LAPSE": 0.75,
+  "LAPSE_BETWEEN_SD": 0.5,
+  "RT_GATE": true,
+  "RT_FAST_CUTOFF_MS": 300,
+  "RT_FAST_GIVEN_LAPSE": 0.4,
+  "RT_FAST_GIVEN_ENGAGED": 0.005,
+  "RANDOM_SEED": 42,
+  "COPIED_SETTINGS": [
+   "UNHASHED",
+   "FROZEN_SEED",
+   "PRED_SAT",
+   "PRED_FOG",
+   "SD_SAT",
+   "SD_FOG",
+   "PRED_REBUILD_TOL",
+   "ESTIMATOR",
+   "FIRTH_ITER",
+   "FIRTH_TOL",
+   "FIRTH_MAX_STEP",
+   "NONRESPONDER_SPREAD_MULT",
+   "TASTE_SPREADS_IN_FLOORS",
+   "ALPHA",
+   "FLOOR_ALPHA",
+   "N_FLOOR_PEOPLE",
+   "DETECTION_SIDED",
+   "C1_STRATEGY_WEIGHT",
+   "C1_EXACT_MAX_N",
+   "C1_HOLM",
+   "GATE_ALPHA",
+   "N_CATCH_TRIALS",
+   "CATCH_P_FAIL_PER_LAPSE",
+   "LAPSE_BETWEEN_SD",
+   "RT_GATE",
+   "RT_FAST_CUTOFF_MS",
+   "RT_FAST_GIVEN_LAPSE",
+   "RT_FAST_GIVEN_ENGAGED",
+   "RANDOM_SEED"
+  ],
+  "COPIED_FUNCTIONS": [
+   "fit_logit_batch",
+   "fit_firth",
+   "fit_firth_batch",
+   "fit_batch",
+   "simulate_many",
+   "lapse_p",
+   "simulate_lapsing",
+   "sha256_of",
+   "verify_frozen",
+   "load_trials",
+   "compute_floors",
+   "classify",
+   "rule_mask_count",
+   "mw_exact_sf",
+   "mw_p_batch",
+   "_c1_gate",
+   "_c1_test",
+   "draw_attention"
+  ],
+  "FREE_TEXTS": [
+   "(simulated) greyer than any of these",
+   "(simulated) as if behind a dirty window",
+   "(simulated) flatter, but not darker",
+   "(simulated) hard to say"
+  ],
+  "SESSION_COLUMNS": [
+   "session_id",
+   "participant_id",
+   "group",
+   "session_start_time",
+   "session_end_time",
+   "complete",
+   "is_test",
+   "is_dev",
+   "consent_given",
+   "images_fit",
+   "device_pixel_ratio",
+   "gamma_estimate",
+   "set_code",
+   "language",
+   "interview_date",
+   "n_catch_fail",
+   "flat_word_ratings",
+   "has_word_block",
+   "has_grid_episode",
+   "has_grid_normal",
+   "has_state_block",
+   "word_foggy",
+   "word_faded",
+   "word_veiled",
+   "word_lifeless",
+   "word_unreal",
+   "word_dreamlike",
+   "word_distant",
+   "word_like_a_picture",
+   "word_oppressive",
+   "word_threatening",
+   "state_q02",
+   "state_q13",
+   "state_q19",
+   "state_q29"
+  ]
+ },
+ "inputs_sha256": {
+  "trial_list.csv": "2a01fe7d6afec29fb2c1c647dff7458c26136d7c49b09df4e2e44184bb831c93",
+  "checksums.sha256": "806e9e6031ef85c6002e797e546963a21874e67016c539780b7ddd23d8058704",
+  "combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+  "grid_trials.csv": "6da71b77f3e3420df23c646df696267687d5752926939d43a415e2360c05fc00",
+  "this script": "e4837e3a64b5f8e97a58ce61f5ac8e34ef273a76b737e5bb6c547b7b45cf6fa4",
+  "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730"
+ },
+ "thresholds": {
+  "upper": [
+   0.2863223717155787,
+   0.4880483057825434
+  ],
+  "lower": [
+   -0.2896056357511166,
+   -0.48559721218587304
+  ]
+ },
+ "finished": "2026-10-20 22:57:30",
+ "elapsed_s": 11.2,
+ "datasets": [
+  "P-null_random_n09__C-matched_n30",
+  "P-null_random_n10__C-matched_n30",
+  "P-null_random_n15__C-matched_n30",
+  "P-null_random_n20__C-matched_n30",
+  "P-null_taste_worst_n09__C-matched_n30",
+  "P-null_taste_worst_n10__C-matched_n30",
+  "P-null_taste_worst_n15__C-matched_n30",
+  "P-null_taste_worst_n20__C-matched_n30",
+  "P-fog_only_n09__C-matched_n30",
+  "P-fog_only_n10__C-matched_n30",
+  "P-fog_only_n15__C-matched_n30",
+  "P-fog_only_n20__C-matched_n30",
+  "P-colour_only_n09__C-matched_n30",
+  "P-colour_only_n10__C-matched_n30",
+  "P-colour_only_n15__C-matched_n30",
+  "P-colour_only_n20__C-matched_n30",
+  "P-both_n09__C-matched_n30",
+  "P-both_n10__C-matched_n30",
+  "P-both_n15__C-matched_n30",
+  "P-both_n20__C-matched_n30",
+  "P-everyone_n09__C-matched_n30",
+  "P-everyone_n10__C-matched_n30",
+  "P-everyone_n15__C-matched_n30",
+  "P-everyone_n20__C-matched_n30",
+  "P-both_n20__C-no_strategy_n19",
+  "P-both_n20__C-no_strategy_n30",
+  "P-both_n20__C-quarter_strategy_n19",
+  "P-both_n20__C-quarter_strategy_n30",
+  "P-both_n20__C-lapse_more_n19",
+  "P-both_n20__C-lapse_more_n30",
+  "messy",
+  "messy_over_max"
+ ],
+ "checks": [
+  {
+   "check": "frozen package matches checksums.sha256",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "369 files, seed 42"
+  },
+  {
+   "check": "frozen list: 211 trials, registered counts, analysed rows in load_trials' order",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "211 trials, 180 analysed"
+  },
+  {
+   "check": "copied functions reproduce the stored reference values",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "101/101 quantities agree"
+  },
+  {
+   "check": "copied functions agree with the power script run now",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "101/101 quantities"
+  },
+  {
+   "check": "copied functions are verbatim (syntax tree)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "18/18 identical"
+  },
+  {
+   "check": "copied settings equal the power script's",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "29/29 equal"
+  },
+  {
+   "check": "verify_frozen gives the power script's verdict",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "same FROZEN.json facts"
+  },
+  {
+   "check": "recomputed thresholds equal the registered ones (3 dp)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "colour (0.286, -0.29), fog (0.488, -0.486)"
+  },
+  {
+   "check": "combined_rule.csv has the expected columns",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "combined_rule.csv equals the registered rule at every N, false-claim upper bound <= 0.05",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "22 rules"
+  },
+  {
+   "check": "grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 9, C 30"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 30"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 15, C 30"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 19"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 19"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 19"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 10, C 20"
+  },
+  {
+   "check": "[messy] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] well-formed and consistent with its truth",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] every session's realised status is its intended one",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] analysable N as specified",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "P 20, C 30"
+  },
+  {
+   "check": "[messy_over_max] survey .xlsx reads back unchanged",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "verdicts the design fixes (descriptive below 10 participants or 20 controls)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "18 verdicts"
+  },
+  {
+   "check": "C1 inconclusive when controls lapse more",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "2 verdicts"
+  },
+  {
+   "check": "no claim under no effect, H1/H2 (single draws)",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "18/18 no claim; a miss somewhere among these is expected 34% of the time"
+  },
+  {
+   "check": "no claim under no effect, C1 (single draws)",
+   "result": "FAIL",
+   "stops_run": false,
+   "detail": "23/24 no claim; a miss somewhere among these is expected 46% of the time; chance claim in: P-null_random_n10__C-matched_n30 C1_colour"
+  },
+  {
+   "check": "attention check firing with no lapse difference",
+   "result": "INFO",
+   "stops_run": false,
+   "detail": "2 of 28 datasets (the registered gate's matched false-alarm rate is about 0.04); a firing there makes C1 inconclusive, not a claim"
+  },
+  {
+   "check": "messy dataset: every exclusion count as designed",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"test_or_dev\": {\"participant\": 3, \"control\": 0}, \"repeat_not_used\": {\"participant\": 1, \"control\": 0}, \"excluded_no_consent\": {\"participant\": 1, \"control\": 0}, \"excluded_images_fit\": {\"participant\": 1, \"control\": 0}, \"excluded_catch\": {\"participant\": 1, \"control\": 1}, \"tier_D\": {\"participant\": 1, \"control\": 0}, \"beyond_maximum\": {\"participant\": 0, \"control\": 0}, \"analysable\": {\"participant\": 10, \"control\": 20}}"
+  },
+  {
+   "check": "over-maximum dataset: the last to complete (control) started before the group's last starter",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "over-maximum dataset: the last to complete (participant) started before the group's last starter",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "over-maximum dataset: the first 20 and 30 by completion time kept, the last to complete in each group set aside",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"test_or_dev\": {\"participant\": 0, \"control\": 0}, \"repeat_not_used\": {\"participant\": 0, \"control\": 0}, \"excluded_no_consent\": {\"participant\": 0, \"control\": 0}, \"excluded_images_fit\": {\"participant\": 0, \"control\": 0}, \"excluded_catch\": {\"participant\": 0, \"control\": 0}, \"tier_D\": {\"participant\": 0, \"control\": 0}, \"beyond_maximum\": {\"participant\": 1, \"control\": 1}, \"analysable\": {\"participant\": 20, \"control\": 30}}"
+  },
+  {
+   "check": "false-claim batches: preview rates within the binomial 95% range of the registered rates (H1, H2 separately)",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "12/12 cells; the registered check runs in the analysis script"
+  }
+ ],
+ "status": "complete"
+}

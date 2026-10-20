@@ -1,0 +1,19 @@
+file,null,n,claim,rule,registered_column,registered_rate,claims,studies,rate,binomial_95_lo,binomial_95_hi,within,simulation_preview
+null_random_n10.npz,null_random,10,H1,"k >= 4, m <= 0",false_guesser,5.9066589748360586e-05,0,1000,0.0,0.0,1.0,True,0.0
+null_random_n10.npz,null_random,10,H2,"k >= 4, m <= 0",false_guesser,5.621821708359132e-05,0,1000,0.0,0.0,1.0,True,0.0
+null_random_n10.npz,null_random,10,H1 or H2 (descriptive),,,,0,1000,0.0,,,,
+null_random_n15.npz,null_random,15,H1,"k >= 5, m <= 1",false_guesser,2.1666604618607065e-05,0,1000,0.0,0.0,0.0,True,0.0
+null_random_n15.npz,null_random,15,H2,"k >= 6, m <= 3",false_guesser,8.580141037130026e-07,0,1000,0.0,0.0,0.0,True,0.0
+null_random_n15.npz,null_random,15,H1 or H2 (descriptive),,,,0,1000,0.0,,,,
+null_random_n20.npz,null_random,20,H1,"k >= 5, m <= 1",false_guesser,9.795294453888238e-05,0,1000,0.0,0.0,1.0,True,0.0
+null_random_n20.npz,null_random,20,H2,"k >= 7, m <= 3",false_guesser,2.954454737353056e-07,0,1000,0.0,0.0,0.0,True,0.0
+null_random_n20.npz,null_random,20,H1 or H2 (descriptive),,,,0,1000,0.0,,,,
+null_taste_worst_n10.npz,null_taste_worst,10,H1,"k >= 4, m <= 0",false_worst,0.0224439093512534,19,1000,0.019,14.0,32.0,True,19.0
+null_taste_worst_n10.npz,null_taste_worst,10,H2,"k >= 4, m <= 0",false_worst,0.0219549718713389,24,1000,0.024,13.0,31.0,True,24.0
+null_taste_worst_n10.npz,null_taste_worst,10,H1 or H2 (descriptive),,,,42,1000,0.042,,,,
+null_taste_worst_n15.npz,null_taste_worst,15,H1,"k >= 5, m <= 1",false_worst,0.0420857573941697,48,1000,0.048,30.0,55.0,True,48.0
+null_taste_worst_n15.npz,null_taste_worst,15,H2,"k >= 6, m <= 3",false_worst,0.0362921644355047,35,1000,0.035,25.0,48.0,True,35.0
+null_taste_worst_n15.npz,null_taste_worst,15,H1 or H2 (descriptive),,,,83,1000,0.083,,,,
+null_taste_worst_n20.npz,null_taste_worst,20,H1,"k >= 5, m <= 1",false_worst,0.0413975231250285,41,1000,0.041,30.0,54.0,True,41.0
+null_taste_worst_n20.npz,null_taste_worst,20,H2,"k >= 7, m <= 3",false_worst,0.0395719049808233,39,1000,0.039,28.0,52.0,True,39.0
+null_taste_worst_n20.npz,null_taste_worst,20,H1 or H2 (descriptive),,,,76,1000,0.076,,,,
