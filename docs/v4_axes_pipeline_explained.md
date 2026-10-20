@@ -4,7 +4,8 @@ This document explains, for a reader with no other context, how the nine **v4 ax
 
 - **Project folder:** all paths are relative to the project folder (`drl2drv_updated/`). Scripts are in its pipeline folder.
 - **Script conventions:** every script is standalone, with a SETTINGS block at the top and no command-line arguments. Each writes to its own output folder, a report (`*_report.txt`) and a `run_meta.json` (settings, input fingerprints, check results).
-- **Scope:** only the steps that produced the final axes and their validation. How the experiment's stimuli are made is a separate part of the project and is not covered here.
+- **Scope:** only the steps that produced the final axes and their validation. How the experiment's stimuli are made is a separate part of the project and is not covered here. How the **final stimuli** score on the fog and vividless axes is in `docs/v4_stimulus_power_explained.md`, section 11b (see also section 11 below).
+- **Status (20 Oct 2026):** updated after the review: wording of the stability figures and link sizes (4.1, 5, 6.2, 7), the weather control (6.1, 8), three places where the text disagreed with the code (2.2, 2.4, 3.3), the darkness values (2.6), the fog axis's daylight negatives (2.7), and a new section 11 on limitations and on what the axes do and do not predict.
 
 ## Context: earlier axis versions (v2 and v3)
 
@@ -54,6 +55,7 @@ The scripts of steps 05–09 keep every axis set in the same files and check tha
 | 8 | Why fog ↔ `contrast_local` and vividless ↔ `sat_mean` | (from 07, 09a, 09b, 09c) |
 | 9 | Earlier axis sets (v2, v3) in the v4 files, and misleading folder names | (05, 06, 07, 09a, 09b, 09c) |
 | 10 | What this project folder contains and what is not included | – |
+| 11 | Limitations, and what the axes do and do not predict | – |
 
 ---
 
@@ -125,6 +127,8 @@ What the script does:
 
 **Result:** 1,718 verified phrases.
 
+**Note on the report.** `stageV_report.txt` lists 9 overlapping spans as "not merged". All 9 were merged by hand review afterwards, so the phrase pool contains none of them unmerged.
+
 **Files:**
 - `stageA_verified.csv`: the phrase pool, one row per phrase;
 - `stageV_items.csv`: every item with its verification status;
@@ -183,7 +187,7 @@ What happens:
    - **words:** every word comes from the quote, its context, or the allowed list;
    - **form:** the caption fits "a scene that looks ___";
    - **deleted content words;**
-   - **fluency:** a GPT-2 score;
+   - **fluency:** a GPT-2 score (switched on for the run that produced the saved outputs; see the note below);
    - **meta words** ("feeling", "experience", pronouns…).
 
    A caption is accepted automatically when both models wrote the same caption and it passes every check. The rest go to a review file.
@@ -196,6 +200,10 @@ What happens:
 6. **Support is recounted** and the keeping rules applied again. A15 (vivid, heightened) was dropped: its support rested on one source describing a drug-induced experience.
 
 **Result:** 274 captioned texts, 243 distinct captions in **9 axes**.
+
+**Note on the committed check script.** The saved Stage C outputs come from the run of 5 Oct 2026 (protocol 1.6), with the fluency check on and the reviewer's accepted suggestions applied (`check_meta.json`: `"protocol": "1.6"`, `"accept_suggestions": true`). The script was edited afterwards and not rerun: as committed it has `USE_FLUENCY = False` ("dropped 6 Oct", protocol 1.7) and `ACCEPT_SUGGESTIONS = False`. Run as committed, it does not reproduce the saved captions: 105 of the 290 captions come back as "open", because the rows decided by accepting a suggestion are stored with an empty decision, and the support counts change (fog, A07: 33 → 23 captioned texts; vividless, A13: 11 → 9). To reproduce the saved outputs, set both settings to `True`.
+
+**A gap in the word check.** The check treats two words as forms of the same word when one starts with the other's stem. So "colorless" and "colored" count as the same word (the stem "colorles" starts with "color"), and a caption that turned "colorless" into "colored" would pass the word check without being flagged as a deleted content word. Every caption was also reviewed by hand, and no such reversal is known in the final captions, but the automatic check alone would not catch one.
 
 **Files:**
 - `stageC_captions.csv`: final, with quote → caption and every edit logged;
@@ -255,7 +263,7 @@ What the script does:
 
 **Result:**
 - **A05 had to be revised:** its enclosure lean was 0.31, mostly from "open" negatives.
-- **Fog, vividless and lifeless lean towards darkness** (0.32, 0.35, 0.41), but the lean is in the qualities themselves ("foggy" vs "clear" already reads as darker). It can't be removed by changing negatives. It was accepted and is reported with every result through a sensitivity version of each axis with both control directions removed (**v4@nocontrol**, built in step 05).
+- **Fog, vividless and lifeless lean towards darkness** (0.32, 0.35, 0.41 in the first run; 0.32, 0.36, 0.43 on the final axes after Stage D2, in `check17_D2/`), but the lean is in the qualities themselves ("foggy" vs "clear" already reads as darker). It can't be removed by changing negatives. It was accepted and is reported with every result through a sensitivity version of each axis with both control directions removed (**v4@nocontrol**, built in step 05).
 
 **Files:**
 - `check17_axes.csv`: each axis's cosine with each control, with and without suspect pairs;
@@ -275,6 +283,8 @@ What the script does:
    - **keep:** everything else.
 2. **Every non-trivial row is reviewed by hand** in `stageD2_revision.csv`.
 3. **Writes the final axes.** The scene-property check is then run again on them: A05's enclosure lean fell to 0.27, and the remainder, which comes from its positives (veil, glass wall), was accepted.
+
+**The light and people rules were not applied evenly.** Stage D2 kept light words out of new negatives, and replaced the veil pair A05-06 because its negative brought in light. The fog axis (A07) nevertheless keeps 7 negatives that add lighting ("as if seen in daylight" twice, "as if seen in the daylight", "as if lit by daylight", "as if objects were surrounded by daylight", "as if navigating through daylight in slow motion", and "shadowy → well-lit"). They were kept because daylight is the natural opposite of the fog and darkness phrases they are paired with; without them, the fog axis has a cosine of 0.97 with the published one, so they change it little. The people rule has the same gap: the lifeless pair A14-11 ("an inhabited space") was kept, while A14-01 and A14-09 were replaced for bringing in people. This is listed as a limitation in section 11.
 
 **Result:** 191 pairs. The final file is **`axes/v4/stageD2/axes_v4.yaml`**:
 - `template`: "a scene that looks {}";
@@ -361,7 +371,7 @@ All features are measured on **exactly the region CLIP sees**: the central squar
 - **The primary analyses use colour photographs only** (`is_greyscale` = False).
 - **Files:** `image_flags.csv` (per image: `is_greyscale`, toning flags, measures), `colour_measures.npy`, `threshold_analysis.csv`, `flags_report.txt`.
 
-**`04c_compute_extra_features.py`. Output:** `data/features_extra/`, the folder 04b, 07, 09a, 09b and 09c read. The script's OUTPUT_DIR setting currently says `data/features_extra_v2`: if 04c is rerun as it stands, it writes there, and the later steps would have to be pointed to that folder.
+**`04c_compute_extra_features.py`. Output:** `data/features_extra/`, the folder 04b, 07, 09a, 09b and 09c read, which holds the output of 04c version 2 (the version described here). The script's OUTPUT_DIR setting is also `data/features_extra`. Its comment ("version 1: _extra") and its docstring ("Use a new OUTPUT_DIR; version 1's folder is kept for reference") are out of date. If 04c is rerun, give it a new OUTPUT_DIR so that this folder is not overwritten; the folder's `extra_report.txt` records which version wrote it.
 - Computes 10 additional candidate features on the same region. Two of them enter the final set:
   - `hue_spread` (hue variety): 1 − |Σ(a\*, b\*)| / Σ chroma over chromatic pixels; 0 when all colour points the same way. Undefined for greyscale photographs.
   - `cast_b` (colour of the light): mean CIELAB b\* of the brightest non-clipped pixels; + yellow/warm, − blue/cool.
@@ -421,15 +431,15 @@ What the script does:
 5. **Builds six control axes** from single caption pairs:
    - quality: "a bad photo" vs "a good photo";
    - age: "an old photo" vs "a new photo";
-   - weather: "a scene in foggy weather" vs "a scene in clear weather";
+   - weather: "a scene in foggy weather" vs "a scene in clear weather" (built, but not used as evidence: it is close to the fog axis itself; see 6.1);
    - mood: "a sad scene" vs "a happy scene";
    - threat: "a scary scene" vs "a peaceful scene";
    - greyscale: "a black and white photo" vs "a colour photo".
 6. **Tests stability** on 20,000 random images: split-half, leave-one-out, bootstrap and m-curve. Halves are drawn **by pair**, so a positive stays with its negative.
-   - **Split-half** works like this. The axis's pairs are randomly split into two halves 200 times. Each half builds its own axis, every image is scored on both, and the two sets of scores are correlated. The Spearman–Brown formula corrects the correlation to full length.
+   - **Split-half** (reported below as the **stability of the text direction**) works like this. The axis's pairs are randomly split into two halves 200 times. Each half builds its own axis, every image is scored on both, and the two sets of scores are correlated. The Spearman–Brown formula corrects the correlation to full length.
 
 **Result:**
-- **Split-half reliability:** A02 0.97, **A07 0.95**, **A13 0.94**, A05 0.93, A01 0.91, A14 0.89, A11 0.84, A04 0.83, A03 0.71.
+- **Stability of the text direction (split-half):** A02 0.97, **A07 0.95**, **A13 0.94**, A05 0.93, A01 0.91, A14 0.89, A11 0.84, A04 0.83, A03 0.71. This shows that halves of the caption list point the same way in CLIP space. It is not the reliability of a measure of the experience: many pairs share the same contrast word (vividless has "vivid" in 7 of its 10 negatives; fog has "clear" in 9 of 29 and "daylight" in 6), which by itself makes the halves agree.
 - **Leave-one-out:** minimum cosine 0.95–1.00.
 - **Overlap:** no two v4 axes have a text cosine ≥ 0.8; the highest is A13–A14 at 0.38.
 
@@ -481,7 +491,7 @@ The two experiment axes:
 4. **between β:** the same regression on the 332 category means (one category = one observation). Together with the within model, this separates "kinds of place that are grey score higher" from "within a kind of place, greyer images score higher".
 5. **Consistency:** the within statistics computed inside each category separately. "Same sign" is the share of categories whose estimate has the same sign as the pooled one.
 6. **Uncertainty:** 95% intervals from 1,000 resamples of whole categories. Category-clustered standard errors are a cross-check.
-7. **A link:** |β| ≥ 0.05 with an interval excluding 0.
+7. **A link:** |β| ≥ 0.05 with an interval excluding 0. This is a low bar: with about a million images almost any non-zero β passes it, so it marks what this corpus can detect, not what is large. Links are therefore described by their size, with the shared variance (ρ²) given next to β for the experiment pairs (section 7).
 8. **Sensitivity (R2b):** the same model for `v4@nocontrol`, reported next to every result.
 9. **Control share:** the share of each axis's within-category variance explained by the quality, mood and threat controls together.
 
@@ -526,7 +536,8 @@ Every check refits the within-category model of section 5 (colour images, the 12
 |---|---|---|---|
 | Vividless × `sat_mean` | −0.40 | **−0.19** (survives) | 7 of its 11 links survive |
 | Fog × `contrast_local` | −0.27 | **−0.15** (survives) | its only link that survives |
-| Fog × `sat_mean` | −0.30 | **−0.01 with all controls** (gone) | absorbed by the "foggy weather" control |
+
+**The weather control is not used as evidence.** "A scene in foggy weather" vs "a scene in clear weather" is close to the fog axis itself, so adding it as a covariate removes most of what the fog axis is, and any genuine fog link with it. With all controls, fog's saturation link falls from −0.30 to −0.01; this is **not** evidence that saturation is a side effect of fog, because the same reasoning would remove any fog link. That fog × local contrast still survives this (−0.15) shows its robustness, nothing more. The quality control ("a bad photo") overlaps blur in a similar way (+1.37 SD in the sweep, 6.3).
 
 **Fog and vividless are not a pair to merge.** The only pair at r ≥ 0.5 is vividless–lifeless (A13–A14, r 0.67; text cosine 0.38, below the merge threshold of 0.8). Holding lifeless constant, vividless keeps its saturation link (−0.40 → −0.27) and loses its local-contrast link (−0.19 → −0.04). The colour link belongs to vividless.
 
@@ -546,7 +557,7 @@ Every check refits the within-category model of section 5 (colour images, the 12
 
 What the script does:
 1. **Treats every caption pair as a questionnaire item:** a pair item = positive sentence − negative sentence, scored on every image.
-2. **Reliability:**
+2. **Stability of the text direction** (computed as reliability statistics):
    - pair alpha (Cronbach's α of an axis's pair items);
    - item-rest r (each pair against the axis rebuilt without it);
    - alpha if a pair is deleted.
@@ -559,7 +570,7 @@ What the script does:
 6. **Image-anchored axes:** the mean embedding of the top images minus that of the bottom images of each axis, compared with the text axis.
 
 **Results for the experiment axes:**
-- **Reliability:** pair alpha **A13 0.94, A07 0.93** (range over the nine axes 0.65–0.96).
+- **Stability of the text direction:** pair alpha **A13 0.94, A07 0.93** (range over the nine axes 0.65–0.96). As in 4.1, this shows that the pairs point the same way in CLIP space, helped by repeated contrast words; it is not the reliability of a measure of the experience.
 - **Stability:** no single pair moves a key link by more than about 0.03.
 - **Weak pairs:** 26 of 191 pairs agree weakly with their axis (item-rest r < 0.2), mostly in A01 and A05. Fog has 2 and vividless 0.
 - **Where the links come from:**
@@ -652,16 +663,17 @@ What the scripts do:
 
 **Detail for the two experiment axes** (colour images; 95% intervals in brackets):
 
-| Axis × feature | within ρ | within β | between β | same sign (β), share of categories | β without darkness/enclosure |
-|---|---|---|---|---|---|
-| **Fog × `contrast_local`** | −0.29 [−0.30, −0.28] | **−0.27** [−0.28, −0.26] | −0.72 [−0.95, −0.51] | 100% | −0.24 |
-| Fog × `sat_mean` | −0.26 [−0.28, −0.25] | −0.30 [−0.31, −0.28] | −0.18 [−0.40, −0.00] | 93% | −0.13 |
-| Fog × `sat_std` | −0.18 [−0.20, −0.17] | −0.06 [−0.07, −0.04] | +0.12 [−0.04, +0.29] | 74% | +0.03 |
-| **Vividless × `sat_mean`** | −0.50 [−0.51, −0.49] | **−0.40** [−0.42, −0.39] | −0.60 [−0.79, −0.42] | 100% | −0.30 |
-| Vividless × `contrast_local` | −0.23 [−0.24, −0.22] | −0.19 [−0.20, −0.18] | −0.08 [−0.28, +0.15] | 99% | −0.15 |
-| Vividless × `sat_std` | −0.42 [−0.43, −0.41] | −0.23 [−0.24, −0.22] | −0.34 [−0.49, −0.17] | 99% | −0.19 |
+| Axis × feature | within ρ | shared variance (ρ²) | within β | between β | same sign (β), share of categories | β without darkness/enclosure |
+|---|---|---|---|---|---|---|
+| **Fog × `contrast_local`** | −0.29 [−0.30, −0.28] | 8% | **−0.27** [−0.28, −0.26] | −0.72 [−0.95, −0.51] | 100% | −0.24 |
+| Fog × `sat_mean` | −0.26 [−0.28, −0.25] | 7% | −0.30 [−0.31, −0.28] | −0.18 [−0.40, −0.00] | 93% | −0.13 |
+| Fog × `sat_std` | −0.18 [−0.20, −0.17] | 3% | −0.06 [−0.07, −0.04] | +0.12 [−0.04, +0.29] | 74% | +0.03 |
+| **Vividless × `sat_mean`** | −0.50 [−0.51, −0.49] | 25% | **−0.40** [−0.42, −0.39] | −0.60 [−0.79, −0.42] | 100% | −0.30 |
+| Vividless × `contrast_local` | −0.23 [−0.24, −0.22] | 5% | −0.19 [−0.20, −0.18] | −0.08 [−0.28, +0.15] | 99% | −0.15 |
+| Vividless × `sat_std` | −0.42 [−0.43, −0.41] | 18% | −0.23 [−0.24, −0.22] | −0.34 [−0.49, −0.17] | 99% | −0.19 |
 
 **Reading the tables:**
+- **Sizes describe this corpus only.** They depend on the images (Places365, filtered to mostly empty scenes, and how much each feature varies within a category), the CLIP model and the captions, how the features are measured (the central square at 256 px) and, for β, which other features are in the model. They are not a general property of fog or vividness, and they do not predict how strongly participants will respond to the stimuli. Fog × local contrast is clearly present and modest in size (about 8% shared variance); vividless × saturation is larger (about 25%).
 - Fog and vividless both lean towards less colour and less fine detail, but in different proportions.
 - Vividless is above all a colour axis: amount, spread and variety of colour.
 - Fog is the axis whose local-contrast link is the most consistent (every category) and the most robust (it survives the controls, the other axes and the removal of darkness/enclosure).
@@ -686,7 +698,7 @@ The experiment needs two features that **tell fog and vividless apart**, not jus
 - Using saturation for both would base the two dimensions on one feature, and they could not be separated. This pairing is the only one in which each axis gets the feature it owns more.
 
 **The other tests agree:**
-- 09a: with all controls, fog's saturation link vanishes (−0.30 → −0.01), while its local-contrast link survives the controls and the other axes (−0.15).
+- 09a: fog's local-contrast link survives the controls and the other axes (−0.15). (Fog's saturation link vanishes when the weather control is included, but that control is close to the fog axis itself and is not used as evidence; see 6.1.)
 - 09a: with lifeless held constant, vividless keeps saturation and loses local contrast.
 - 09b: fog's local-contrast link comes entirely from its positive captions (fog, blur, haze).
 
@@ -781,3 +793,22 @@ This folder holds the scripts listed in the guide table, `axes/v4/` (the outputs
 | `data/scores`, `data/confounds_v3`, `data/checks_v3` (the earlier run) | The equality checks of 06 (S5), 07 (R1) and 09a (R1). Each can be switched off by setting it to `None` in the script's SETTINGS. |
 | `data/axes`, `data/scores`, `data/checks_v3/duplicate_groups.csv` | `09c_manipulation_sweep.py`. It doesn't need rerunning: its outputs are in `data/sweep_v2/`. If it is rerun, point `DUP_CSV` to `data/checks_v4/duplicate_groups.csv`. |
 | `data/encoded_all_categories_un2clip_v2_full/`, `results/methodological_analysis_un2clip_v2_full/` (the old pipeline) | Optional comparisons in 02, 04, 05 and 07; can be switched off |
+
+---
+
+## 11. Limitations, and what the axes do and do not predict
+
+### What the axes predict, and what they don't
+
+- **The axes motivate which features to manipulate,** not how participants will weigh them. Both axes relate to both features: fog to saturation (β −0.30) and local contrast (−0.27), vividless to saturation (−0.40) and local contrast (−0.19). Someone whose experience matches "fog" is therefore predicted to prefer both less saturated and less detailed images, and so is someone whose experience matches "vividless"; only the proportions differ.
+- **The corpus does not predict a crossover** between people who endorse "fog" words and people who endorse "vividless" words, and the numeric ratios would change with another image set or CLIP model. Any expectation about how a person balances the two features comes from patients' own descriptions, not from the corpus, and is tested only as an exploratory question.
+- **Naming.** The colour axis used in the experiment is **vividless** (A13, "dull, less vivid, colorless"). "Lifeless" is a different axis (A14, "lifeless, dead, empty"), and the earlier design's "lifeless" axis was v2's. The experiment's word ratings use "faded" as the colour target, with "lifeless" as a nearby word.
+
+### Limitations
+
+1. **The colour axis's link to saturation leans on the word "vivid".** The link between the vividless axis and saturation is partly carried by caption pairs whose negative contains "vivid", which CLIP reads strongly (7 of the 10 negatives contain "vivid" or "vividness"; the saturation link comes mostly from the negative pole, 6.2). The choice of saturation as the manipulated feature also rests on patients' descriptions of faded colour and on prior work, and the final stimuli show that lowering saturation moves the vividless axis strongly and specifically (`docs/v4_stimulus_power_explained.md`, section 11b). A test with caption variants that avoid "vivid" was not run.
+2. **CLIP largely ignores "less", "lacking" and similar words.** The negation check of Stage D tested explicit negation words (not, no, without…) but not words or prefixes that express a lack. CLIP barely separates such positives from their negatives (for example "less vivid" vs "vivid", cosine 0.963), so phrases like "less vivid", "like things lacking vividness" or "unclear" add little to their axes. They are under-represented rather than distorting the axes.
+3. **One person made all the judgement calls.** All human review decisions in building the axes (resolving disagreements between the two models, defining the axes, choosing captions and negatives) were made by a single reviewer, and their reliability was not assessed.
+4. **The light and people rules for negatives were applied unevenly** (section 2.7). The fog axis keeps 7 daylight negatives; without them its direction changes little (cosine 0.97).
+5. **The stability figures are not reliabilities of a measure of the experience** (4.1, 6.2): repeated contrast words make halves of the caption list agree.
+6. **Sizes describe this corpus** (section 7), and the "link" threshold marks what a million images can detect, not what is large (section 5).
