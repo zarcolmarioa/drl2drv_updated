@@ -1279,9 +1279,11 @@ controls:
 - colour: 0.606 → 0.632 (**+0.026**)
 - fog: 0.574 → 0.655 (**+0.081**)
 
-The gain is larger on fog than on colour, which is the argument for recruiting
-40 controls if they are available. At 20 participants, ten more controls buy
-about as much on fog as five more participants would.
+The gain is larger on fog than on colour. At 20 participants, ten more
+controls buy about as much on fog as five more participants would. The
+registered maximum is nevertheless **30 controls**, with C1 reported
+descriptively below 20 (decided 20 Oct; see `experimental_design.md`,
+section 2.4).
 
 Two properties of the no-effect grid are worth naming. The per-feature rate sits
 between **0.017 and 0.028** and the two-feature disjunction between **0.035 and
@@ -1315,8 +1317,9 @@ exactly zero in every cell.
 
 ### Sequential stopping
 
-**Not registered.** The plan is a single final analysis at a maximum N and an end
-date. The earlier advice to stop at a particular sample size came from a jump in
+**Not registered.** The plan is a single final analysis, run when recruitment
+stops: at the maximum N, or when the candidate pool is exhausted
+(`experimental_design.md`, section 2.4). The earlier advice to stop at a particular sample size came from a jump in
 a fixed-count rule rather than from any loss of power, and the sample-size sweep
 now extends past that jump and shows what extra participants actually buy.
 
@@ -1360,8 +1363,8 @@ admissibility standard        strict   {0.25, 0.5, 0.75, 1.0} x floor
                                        certified on the upper bound of a 95% MC interval
 strict rate on its own set   0.04826
 registered rule          the count rule alone, calibrated per N, no switch
-participants              10 to 20   maximum 20 or the end date, whichever first
-controls                        30   40 if they are easy to recruit
+participants              10 to 20   maximum 20, or fewer when the pool is exhausted
+controls                  maximum 30   C1 descriptive below 20
 C1 power, 30 controls          colour 0.41 / 0.52 / 0.61, fog 0.40 / 0.52 / 0.57
                                        at 10 / 15 / 20 participants; half responding,
                                        a quarter of both groups using the strategy
@@ -1375,7 +1378,7 @@ grid package                    144   images, 43.7 MB
 
 **These are the authoritative power figures.** Each row is fixed before the data
 arrive and depends only on the final number of analysable participants, which is
-set by a maximum N and an end date, never by a result. Power is at the planning
+set by the maximum N and the pool-based stopping rule, never by a result. Power is at the planning
 cell: half the participants responding, colour 0.50/SD (p = 0.6191 on a typical
 informative trial), fog 0.70/SD (p = 0.6104), lapse 0.1. "Margin" is how far
 the rule's upper-bound worst false-claim rate sits below the 0.05 target; ⚠ marks
@@ -1398,7 +1401,7 @@ a margin under 0.005.
 The power does not rise monotonically with N; see "integer calibration" in
 section 12. The figures above are per N and are the ones to quote.
 
-**Fewer than 10 analysable participants.** If the end date arrives with fewer
+**Fewer than 10 analysable participants.** If recruitment stops with fewer
 than 10, **neither existence claim is made.** The counts in each direction
 are reported descriptively, per feature, and nothing is concluded from them. C1
 is still run: it compares two groups and does not depend on the per-person rule.
