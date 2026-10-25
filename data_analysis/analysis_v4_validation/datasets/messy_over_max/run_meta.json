@@ -63,6 +63,18 @@
    "detail": "0 invalid rows"
   },
   {
+   "check": "[messy_over_max] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "52 complete session(s) checked, 52 session(s) checked for duplicates"
+  },
+  {
+   "check": "[messy_over_max] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "520 catch rows; columns checked: catch_key, catch_pass"
+  },
+  {
    "check": "[messy_over_max] every trial number is in the frozen list",
    "result": "PASS",
    "stops_run": true,

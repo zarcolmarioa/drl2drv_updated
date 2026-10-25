@@ -63,6 +63,18 @@
    "detail": "0 invalid rows"
   },
   {
+   "check": "[P-both_n20__C-no_strategy_n19] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "43 complete session(s) checked, 43 session(s) checked for duplicates"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "430 catch rows; columns checked: catch_key, catch_pass"
+  },
+  {
    "check": "[P-both_n20__C-no_strategy_n19] every trial number is in the frozen list",
    "result": "PASS",
    "stops_run": true,

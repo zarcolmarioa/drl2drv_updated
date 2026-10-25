@@ -1,6 +1,6 @@
 VALIDATION ON SIMULATED DATA  --  analyse_study_v4.py
 ========================================================================
-run 2026-10-21 00:09:09  simulation data/sim_study_v4
+run 2026-10-21 13:51:36  simulation data/sim_study_v4
 
 datasets analysed: 32; failed: 0
 
@@ -200,6 +200,8 @@ CHECKS (shared, plus every non-PASS and every truth check)
   [PASS] verify_frozen gives the power script's verdict  (same FROZEN.json facts)
   [PASS] recomputed thresholds equal the registered ones (3 dp)  (colour (0.286, -0.29), fog (0.488, -0.486))
   [PASS] combined_rule.csv equals the registered rule at every N from 10 to 20  (22 rules)
+  [PASS] CATCH_SEQUENCE: one key per catch trial in the frozen list, balanced 5 up / 5 down  (10 keys for 10 catch trials: up down down up up down up down down up (placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js))
+  [PASS] CATCH_SEQUENCE equals the simulation's CATCH_KEYS  (simulation: ['up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'up'])
   [PASS] grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen
   [PASS] prevalence sensitivities equal the registered ones (2 dp)  (colour (0.5, 0.86, 0.99), fog (0.22, 0.51, 0.79))
   [PASS] the cap reproduces the registered values (3 dp), is symmetric, and is a maximum  (colour 8.37797, fog 10.26917)
@@ -481,7 +483,9 @@ CHECKS (shared, plus every non-PASS and every truth check)
   [PASS] C1 inconclusive when controls lapse more (single draws)  (2/2)
   [PASS] no claim under no effect, H1/H2 (single draws)  (18/18; a miss among these is expected 34% of the time)
   [FAIL] no claim under no effect, C1 (single draws)  (23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour)
-  [PASS] negative test: chose_A flipped for one session stops the run and lists exactly that session's trials  (201 rows flipped; run stopped; 201 listed in 1 session(s))
+  [PASS] negative test: chose_A flipped for one session stops the run and lists exactly the planted problem  (run stopped at 'chose_A'; 201 rows flipped, 201 listed in 1 session(s))
+  [PASS] negative test: one trial duplicated and another missing stops the run and lists exactly the planted problem  (run stopped at 'trial sets'; trial 17 replaced by a copy of trial 28; listed: complete session missing frozen trials [17]; trial number appears more than once [28])
+  [PASS] negative test: catch_pass disagreeing with the recorded key stops the run and lists exactly the planted problem  (run stopped at 'catch scoring'; catch_pass flipped on trial 23; 1 row(s) listed)
   [PASS] null_random_n10.npz: trial order matches the frozen list
   [PASS] false claims, H1, null_random_n10.npz  (0/1000 vs false_guesser 5.907e-05, allowed 0..1)
   [PASS] false claims, H2, null_random_n10.npz  (0/1000 vs false_guesser 5.622e-05, allowed 0..1)

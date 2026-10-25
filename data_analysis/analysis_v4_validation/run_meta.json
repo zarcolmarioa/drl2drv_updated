@@ -1,7 +1,7 @@
 {
  "script": "analyse_study_v4.py",
  "run_mode": "validate_sim",
- "started": "2026-10-21 00:08:12",
+ "started": "2026-10-21 13:50:35",
  "output": "data/analysis_v4_validation",
  "python": "3.11.15",
  "numpy": "2.4.4",
@@ -161,6 +161,19 @@
   "N_MAX_CONTROLS": 30,
   "MIN_CONTROLS_C1": 20,
   "CATCH_FAIL_EXCLUDE": 3,
+  "CATCH_SEQUENCE": [
+   "up",
+   "down",
+   "down",
+   "up",
+   "up",
+   "down",
+   "up",
+   "down",
+   "down",
+   "up"
+  ],
+  "CATCH_SEQUENCE_SOURCE": "placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js",
   "SUZUKI_FOLLOW": 39,
   "WORD_IDS": [
    "foggy",
@@ -420,10 +433,7 @@
    "analysed",
    "key_pressed",
    "side_pressed",
-   "rt_ms",
-   "catch_key",
-   "catch_pass",
-   "repeat_of"
+   "rt_ms"
   ],
   "SESSION_COLUMNS": [
    "session_id",
@@ -486,6 +496,12 @@
    "tier_D",
    "beyond_maximum",
    "analysable"
+  ],
+  "QUADRANTS": [
+   "both positive",
+   "colour only",
+   "fog only",
+   "both negative"
   ]
  },
  "inputs_sha256": {
@@ -494,7 +510,7 @@
   "combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
   "grid_trials.csv": "6da71b77f3e3420df23c646df696267687d5752926939d43a415e2360c05fc00",
   "detection_curve.csv": "c2f8aea861abd801f940230d058293ceae2e0190f203b09dc4d3c83b93a4e830",
-  "this script": "3294aa36e83662108fd7525276c071a8bce1251db839b907c920d1ae93c2d896",
+  "this script": "2ed029360d57ae95e5db8554f7dd23ece03084bb0a483d9ca10fab2b6499caeb",
   "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730"
  },
  "thresholds": {
@@ -615,6 +631,18 @@
    "result": "PASS",
    "stops_run": true,
    "detail": "22 rules"
+  },
+  {
+   "check": "CATCH_SEQUENCE: one key per catch trial in the frozen list, balanced 5 up / 5 down",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "10 keys for 10 catch trials: up down down up up down up down down up (placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js)"
+  },
+  {
+   "check": "CATCH_SEQUENCE equals the simulation's CATCH_KEYS",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "simulation: ['up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'up']"
   },
   {
    "check": "grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen",
@@ -2303,10 +2331,22 @@
    "detail": "23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour"
   },
   {
-   "check": "negative test: chose_A flipped for one session stops the run and lists exactly that session's trials",
+   "check": "negative test: chose_A flipped for one session stops the run and lists exactly the planted problem",
    "result": "PASS",
    "stops_run": true,
-   "detail": "201 rows flipped; run stopped; 201 listed in 1 session(s)"
+   "detail": "run stopped at 'chose_A'; 201 rows flipped, 201 listed in 1 session(s)"
+  },
+  {
+   "check": "negative test: one trial duplicated and another missing stops the run and lists exactly the planted problem",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped at 'trial sets'; trial 17 replaced by a copy of trial 28; listed: complete session missing frozen trials [17]; trial number appears more than once [28]"
+  },
+  {
+   "check": "negative test: catch_pass disagreeing with the recorded key stops the run and lists exactly the planted problem",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped at 'catch scoring'; catch_pass flipped on trial 23; 1 row(s) listed"
   },
   {
    "check": "null_random_n10.npz: trial order matches the frozen list",
@@ -2429,5 +2469,5 @@
    "detail": "12/12 cells"
   }
  ],
- "elapsed_s": 56.8
+ "elapsed_s": 60.8
 }

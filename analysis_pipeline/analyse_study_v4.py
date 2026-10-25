@@ -21,7 +21,11 @@ Two layers
 
 What it does, in the registered order
 -------------------------------------
-  A  who is analysable: test and development sessions, the first complete
+  A  who is analysable. First, the trial sets: every (session, trial) is
+     unique, and every complete session holds exactly the 211 frozen trial
+     numbers with their trial types and analysed flags. Catch trials are
+     scored here, against the registered catch sequence. Then: test and
+     development sessions, the first complete
      session per ID, consent, images that did not fit, 3 or more catch
      failures; Tier D set aside and reported separately; beyond the
      maximum (the first 20 participants and 30 controls by completion
@@ -39,7 +43,9 @@ What it does, in the registered order
   E  secondary: one-sided t-test and one-sided JZS Bayes factor on the
      weights, with and without the cap
   F  exploratory and descriptive: prevalence under three sensitivities,
-     the Suzuki-style counts, H3 (the weight angle), E1 (descriptions
+     the Suzuki-style counts, H3 (the direction of the weight pair:
+     quadrant counts, and angles within the both-positive quadrant), E1
+     (descriptions
      against weights), E2 (the grid shift), dose-response and additivity,
      quality and covariates
   G  outputs: report, tables, figures, run_meta.json; shareable outputs
@@ -194,6 +200,25 @@ N_MAX_PARTICIPANTS = 20
 N_MAX_CONTROLS = 30
 MIN_CONTROLS_C1 = 20      # below this, C1 is descriptive
 CATCH_FAIL_EXCLUDE = 3    # 3 or more of the 10 catch trials failed
+
+# CATCH_SEQUENCE
+#   The expected key on each catch trial, in the order the catch trials
+#   appear in the frozen list. A catch trial passes only if the key
+#   recorded on it equals this key; catch failures, and so the >= 3
+#   exclusion and the attention check, come from this scoring alone.
+#   Keys are compared case-insensitively with any "arrow" prefix removed,
+#   so "ArrowUp" and "up" are the same key.
+#
+#   PLACEHOLDER. The experiment's config.js still holds the old six-key
+#   sequence; the registered ten-key sequence arrives with the experiment
+#   update and must be copied here before the analysis is frozen. Three
+#   checks guard it: it must have one key per catch trial and be balanced
+#   5 up / 5 down; any catch_key in the data must agree with it; and in
+#   validate_sim mode it must equal the simulation's CATCH_KEYS.
+CATCH_SEQUENCE = ["up", "down", "down", "up", "up",
+                  "down", "up", "down", "down", "up"]
+CATCH_SEQUENCE_SOURCE = ("placeholder, equal to simulate_study_data_v4.py's "
+                         "CATCH_KEYS; replace from the updated config.js")
 
 # --- Exploratory settings ---
 SUZUKI_FOLLOW = 39            # of 60 single-feature trials
@@ -2198,9 +2223,10 @@ def compute_caps(X, checks):
 
 TRIAL_COLUMNS = ["session_id", "participant_id", "group", "trial",
                  "trial_type", "analysed", "key_pressed", "side_pressed",
-                 "rt_ms", "catch_key", "catch_pass", "repeat_of"]
-# chose_A is OPTIONAL in the tidy trials table: the analysis derives it
-# (derive_chose_A) and, when the table carries one, requires agreement.
+                 "rt_ms"]
+# chose_A, catch_key and catch_pass are OPTIONAL in the tidy trials table:
+# the analysis derives all three (derive_chose_A, score_catch) and, when
+# the table carries one, requires exact agreement.
 SESSION_COLUMNS = (
     ["session_id", "participant_id", "group", "session_start_time",
      "session_end_time", "complete", "is_test", "is_dev", "consent_given", "images_fit",
@@ -2239,7 +2265,8 @@ def load_tidy(dataset_dir, checks):
               "has_state_block"):
         S[c] = S[c].fillna(False).astype(bool)
     T["analysed"] = to_bool(T.analysed).astype(bool)
-    T["catch_pass"] = to_bool(T.catch_pass)
+    if "catch_pass" in T.columns:
+        T["catch_pass"] = to_bool(T.catch_pass)
     G["chose_none"] = to_bool(G.chose_none).fillna(False).astype(bool)
     S["interview_date"] = S.interview_date.fillna("")
     G["free_text"] = G.free_text.fillna("")
@@ -2261,6 +2288,172 @@ def load_tidy(dataset_dir, checks):
     checks.require("word ratings and state items are whole numbers 0-6",
                    not bad, "; ".join(bad))
     return {"trials": T, "sessions": S, "grid": G}
+
+
+def check_trial_sets(tidy, L, checks, out):
+    """Each session's trials, against the frozen list.
+
+    Every session: (session_id, trial) unique, every trial number in the
+    frozen list, and the session present in the sessions table. Every
+    COMPLETE session (complete flag set, not a test or development
+    session): exactly the 211 frozen trial numbers, each once, with the
+    frozen list's trial type and analysed flag on every row, and the 10
+    catch trials. Test and development sessions are exempt from the
+    exact-set check only, because a development run can be trial-limited
+    and both are excluded from everything.
+
+    The point is the case a row count cannot see: a duplicated row that
+    replaces another trial leaves the count at 211. Any problem stops the
+    run; the list is written to PRIVATE/trial_set_problems_PRIVATE.csv,
+    because session ids carry participant ids.
+    """
+    T, S = tidy["trials"], tidy["sessions"]
+    tl = L.by_trial
+    frozen = set(int(t) for t in tl.index)
+    n_catch = int((tl.trial_type == "catch").sum())
+    probs = []
+
+    def add(sid, problem, trials):
+        probs.append({"session_id": sid, "problem": problem,
+                      "trials": " ".join(str(int(t)) for t in
+                                         sorted(set(trials)))})
+
+    for sid in sorted(set(T.session_id) - set(S.session_id)):
+        add(sid, "session not in the sessions table", [])
+    dup = T[T.duplicated(["session_id", "trial"], keep=False)]
+    for sid, d in dup.groupby("session_id"):
+        add(sid, "trial number appears more than once", d.trial)
+    unk = T[~T.trial.isin(frozen)]
+    for sid, d in unk.groupby("session_id"):
+        add(sid, "trial number not in the frozen list", d.trial)
+    check = S[S.complete & ~(S.is_test | S.is_dev)].session_id
+    by = {sid: d for sid, d in T.groupby("session_id")}
+    for sid in check:
+        d = by.get(sid, T.iloc[:0])
+        have = set(int(t) for t in d.trial)
+        if have != frozen or len(d) != len(frozen):
+            miss = frozen - have
+            if miss:
+                add(sid, "complete session missing frozen trials", miss)
+            if len(d) != len(frozen) and not miss:
+                add(sid, f"complete session has {len(d)} rows, not "
+                         f"{len(frozen)}", [])
+        k = d[d.trial.isin(frozen)]
+        tt = tl.trial_type.reindex(k.trial).to_numpy()
+        bad = k.trial[k.trial_type.to_numpy() != tt]
+        if len(bad):
+            add(sid, "trial type differs from the frozen list", bad)
+        af = tl.analysed.astype(bool).reindex(k.trial).to_numpy()
+        bad = k.trial[k.analysed.astype(bool).to_numpy() != af]
+        if len(bad):
+            add(sid, "analysed flag differs from the frozen list", bad)
+        nc = int((k.trial_type == "catch").sum())
+        if nc != n_catch:
+            add(sid, f"complete session has {nc} catch trials, not "
+                     f"{n_catch}", [])
+    path = os.path.join(out, "PRIVATE", "trial_set_problems_PRIVATE.csv")
+    if probs:
+        p = pd.DataFrame(probs)
+        p.to_csv(path, index=False)
+        checks.require(
+            "trial sets: (session, trial) unique and every complete session "
+            "holds exactly the frozen trials", False,
+            f"{len(p)} problem(s) in {p.session_id.nunique()} session(s): "
+            + "; ".join(sorted(set(p.problem)))[:200]
+            + "; full list in PRIVATE/trial_set_problems_PRIVATE.csv")
+    checks.require("trial sets: (session, trial) unique and every complete "
+                   "session holds exactly the frozen trials", True,
+                   f"{len(check)} complete session(s) checked, "
+                   f"{T.session_id.nunique()} session(s) checked for "
+                   "duplicates")
+
+
+def norm_key(v):
+    """'ArrowUp', 'arrowup', 'UP', 'up' -> 'up'. Missing stays missing."""
+    if v is None or (isinstance(v, float) and np.isnan(v)):
+        return np.nan
+    s = str(v).strip().lower()
+    if s in ("", "nan", "none"):
+        return np.nan
+    return s[5:] if s.startswith("arrow") else s
+
+
+def catch_key_map(L):
+    """{catch trial number: expected key}, in frozen-list order."""
+    tl = L.tl
+    cat = tl.trial[tl.trial_type == "catch"].to_numpy()
+    return {int(t): norm_key(k) for t, k in zip(cat, CATCH_SEQUENCE)}
+
+
+def score_catch(T, L, checks, out):
+    """Catch trials scored in the analysis, against CATCH_SEQUENCE.
+
+    A catch trial passes only if the key recorded on it (key_pressed)
+    equals the expected key for that catch trial; a missing key fails.
+    Where the table carries catch_key or catch_pass, every row must agree
+    with this (catch_key = the expected key, catch_pass = the derived
+    verdict; both empty on image trials). A mismatch stops the run; the
+    list is written to PRIVATE/catch_mismatches_PRIVATE.csv. The derived
+    columns then replace the table's, so the >= 3 exclusion and the
+    attention check read only the analysis's own scoring.
+    """
+    exp = catch_key_map(L)
+    is_c = T.trial.isin(exp.keys()).to_numpy()
+    expected = np.array([exp.get(int(t), np.nan) for t in T.trial],
+                        dtype=object)
+    pressed = np.array([norm_key(v) for v in T.key_pressed], dtype=object)
+    derived = np.full(len(T), None, dtype=object)
+    derived[is_c] = [p == e for p, e in zip(pressed[is_c], expected[is_c])]
+    rows = []
+
+    def add(mask, problem, given):
+        for i in np.flatnonzero(mask):
+            rows.append({"session_id": T.session_id.iloc[i],
+                         "trial": int(T.trial.iloc[i]),
+                         "problem": problem,
+                         "key_pressed": T.key_pressed.iloc[i],
+                         "expected_key": expected[i],
+                         "value_in_table": given[i],
+                         "catch_pass_derived": derived[i]})
+
+    if "catch_key" in T.columns:
+        ck = np.array([norm_key(v) for v in T.catch_key], dtype=object)
+        bad = np.array([(c != e) if is_c[i] else
+                        not (isinstance(c, float) and np.isnan(c))
+                        for i, (c, e) in enumerate(zip(ck, expected))])
+        add(bad, "catch_key differs from CATCH_SEQUENCE",
+            T.catch_key.to_numpy(dtype=object))
+    if "catch_pass" in T.columns:
+        cp = T.catch_pass.to_numpy(dtype=object)
+        bad = np.array([
+            (not isinstance(c, (bool, np.bool_)) or bool(c) != d)
+            if is_c[i] else not (c is None or (isinstance(c, float)
+                                               and np.isnan(c)))
+            for i, (c, d) in enumerate(zip(cp, derived))])
+        add(bad, "catch_pass differs from the recorded key", cp)
+    path = os.path.join(out, "PRIVATE", "catch_mismatches_PRIVATE.csv")
+    if rows:
+        m = pd.DataFrame(rows)
+        m.to_csv(path, index=False)
+        checks.require(
+            "catch scoring: catch_key and catch_pass in the tidy table agree "
+            "with the analysis's own scoring", False,
+            f"{len(m)} mismatch(es) in {m.session_id.nunique()} session(s) "
+            f"({'; '.join(sorted(set(m.problem)))}); full list in "
+            "PRIVATE/catch_mismatches_PRIVATE.csv")
+    present = [c for c in ("catch_key", "catch_pass") if c in T.columns]
+    if present:
+        checks.require("catch scoring: catch_key and catch_pass in the tidy "
+                       "table agree with the analysis's own scoring", True,
+                       f"{int(is_c.sum())} catch rows; columns checked: "
+                       f"{', '.join(present)}")
+    else:
+        checks.info("catch trials scored from the recorded keys only",
+                    "no catch_key or catch_pass column in the tidy table")
+    T = T.copy()
+    T["catch_key"] = expected
+    T["catch_pass"] = derived
+    return T
 
 
 def derive_chose_A(T, L, checks, out):
@@ -2922,18 +3115,47 @@ def suzuki_tests(people):
     return pd.DataFrame(rows)
 
 
+QUADRANTS = ["both positive", "colour only", "fog only", "both negative"]
+
+
+def quadrant(wc, wf):
+    """Which quadrant the weight pair (b_sat, b_fog) lies in.
+
+    'colour only' = colour weight positive, fog weight not; 'fog only' the
+    reverse. A weight of exactly zero counts as not positive.
+    """
+    return np.select([(wc > 0) & (wf > 0), (wc > 0) & (wf <= 0),
+                      (wc <= 0) & (wf > 0)], QUADRANTS[:3], QUADRANTS[3])
+
+
 def h3_summary(people):
-    """H3: the weight angle atan2(b_fog, b_sat), compared between people
-    only, with no per-person test; plus who is detected on both."""
+    """H3: the direction of the weight pair, compared between people only,
+    with no per-person test.
+
+    The direction is atan2(b_fog, b_sat). It is a direction, not an
+    order-preserving form of the ratio across quadrants -- (1, 1) and
+    (-1, -1) have the same ratio and opposite directions -- and angles
+    wrap at +/-180 degrees, so a linear summary is meaningful only within
+    one quadrant. Reported: the count of people in each quadrant, and the
+    angles of those in the both-positive quadrant (0 to 90 degrees, where
+    a larger angle means relatively more weight on fog). Plus who is
+    detected on both features.
+    """
     rows = []
     for grp in ("participant", "control"):
         d = people[people.group_label == grp]
-        a = d.angle_deg.to_numpy(float)
-        r = {"group": grp, "n": len(a)}
+        r = {"group": grp, "n": len(d)}
+        for qd in QUADRANTS:
+            r[f"n_{qd.replace(' ', '_')}"] = int((d.quadrant == qd).sum())
+        a = d.direction_deg[d.quadrant == "both positive"].to_numpy(float)
+        r["both_positive_n"] = len(a)
         if len(a):
             q = np.percentile(a, [0, 25, 50, 75, 100])
-            r.update({"min": q[0], "q1": q[1], "median": q[2], "q3": q[3],
-                      "max": q[4]})
+            r.update({"both_positive_min_deg": q[0],
+                      "both_positive_q1_deg": q[1],
+                      "both_positive_median_deg": q[2],
+                      "both_positive_q3_deg": q[3],
+                      "both_positive_max_deg": q[4]})
         r["detected_predicted_both"] = int(
             ((d.class_colour == "predicted") & (d.class_fog == "predicted"))
             .sum())
@@ -3241,6 +3463,58 @@ def fig_c1(people, c1, path):
     plt.close(fig)
 
 
+def fig_weight_pairs(people, th, path):
+    """H3: each person's (b_sat, b_fog), with zero lines and thresholds."""
+    fig, ax = plt.subplots(figsize=(7.2, 6.4))
+    w = people[["w_colour", "w_fog"]].to_numpy(float)
+    lims = []
+    for j in range(2):
+        m = np.abs(w[:, j]).max() if len(w) else 1.0
+        lims.append(float(min(4.0, max(1.0, 1.15 * m,
+                                       1.4 * abs(th["lower"][j]),
+                                       1.4 * th["upper"][j]))))
+    n_edge = 0
+    for grp in ("participant", "control", "tier_D"):
+        d = people[people.group_label == grp]
+        if not len(d):
+            continue
+        col, mk, lab = GROUP_STYLE[grp]
+        x = d.w_colour.to_numpy(float)
+        y = d.w_fog.to_numpy(float)
+        edge = (np.abs(x) > lims[0]) | (np.abs(y) > lims[1])
+        n_edge += int(edge.sum())
+        ax.scatter(np.clip(x, -lims[0], lims[0]),
+                   np.clip(y, -lims[1], lims[1]), marker=mk, s=40,
+                   color=col, edgecolor="white", lw=0.8, zorder=3,
+                   label=f"{lab} (n {len(d)})")
+    ax.axhline(0, color="#999999", lw=0.8, zorder=1)
+    ax.axvline(0, color="#999999", lw=0.8, zorder=1)
+    for v in (th["upper"][0], th["lower"][0]):
+        ax.axvline(v, color="#555555", lw=0.9, ls="--", zorder=1)
+    for v in (th["upper"][1], th["lower"][1]):
+        ax.axhline(v, color="#555555", lw=0.9, ls="--", zorder=1)
+    ax.set_xlim(-lims[0], lims[0])
+    ax.set_ylim(-lims[1], lims[1])
+    ax.set_xlabel(f"colour weight b_sat per corpus SD (thresholds "
+                  f"{th['upper'][0]:+.3f} / {th['lower'][0]:+.3f})",
+                  fontsize=9, color="#333333")
+    ax.set_ylabel(f"fog weight b_fog per corpus SD (thresholds "
+                  f"{th['upper'][1]:+.3f} / {th['lower'][1]:+.3f})",
+                  fontsize=9, color="#333333")
+    ax.set_title("H3: direction of the weight pair, per person"
+                 + (f"; {n_edge} drawn at the edge" if n_edge else ""),
+                 fontsize=10, color="#222222")
+    ax.grid(color="#eeeeee", lw=0.6)
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.tick_params(colors="#444444", labelsize=8)
+    ax.legend(fontsize=8, frameon=False, loc="upper center",
+              bbox_to_anchor=(0.5, -0.11), ncol=3)
+    fig.tight_layout()
+    fig.savefig(path, dpi=FIG_DPI)
+    plt.close(fig)
+
+
 def fig_grid(people, path):
     fig, axes = plt.subplots(1, 2, figsize=(9, 4))
     rng = np.random.default_rng(1)
@@ -3437,6 +3711,8 @@ def analyse_dataset(dataset_dir, out, sh, checks):
     tidy = (load_tidy(dataset_dir, checks) if INPUT_FORMAT == "tidy"
             else load_raw(dataset_dir, checks))
     sv, pt, sp, pp = load_private(dataset_dir, checks)
+    check_trial_sets(tidy, L, checks, out)
+    tidy["trials"] = score_catch(tidy["trials"], L, checks, out)
     tidy["trials"] = derive_chose_A(tidy["trials"], L, checks, out)
     T, G = tidy["trials"], tidy["grid"]
 
@@ -3468,7 +3744,9 @@ def analyse_dataset(dataset_dir, out, sh, checks):
     for f in ("colour", "fog"):
         W[f"w_{f}_capped"] = np.clip(W[f"w_{f}"], caps[f]["lower"],
                                      caps[f]["upper"])
-    W["angle_deg"] = np.degrees(np.arctan2(W.w_fog, W.w_colour))
+    # H3: the direction of the weight pair, and its quadrant.
+    W["direction_deg"] = np.degrees(np.arctan2(W.w_fog, W.w_colour))
+    W["quadrant"] = quadrant(W.w_colour.to_numpy(), W.w_fog.to_numpy())
     Pw = W[W.group_label == "participant"]
     Cw = W[W.group_label == "control"]
 
@@ -3526,7 +3804,8 @@ def analyse_dataset(dataset_dir, out, sh, checks):
     share_cols = (["code", "group_label", "tier", "status",
                    "w_colour", "ci_lo_colour", "ci_hi_colour", "class_colour",
                    "w_fog", "ci_lo_fog", "ci_hi_fog", "class_fog",
-                   "w_colour_capped", "w_fog_capped", "angle_deg",
+                   "w_colour_capped", "w_fog_capped", "quadrant",
+                   "direction_deg",
                    "n_catch_fail", "fast_share", "consistency",
                    "rt_median_ms", "rt_q1_ms", "rt_q3_ms", "side_left_share",
                    "suzuki_sat_predicted", "follows_sat",
@@ -3555,7 +3834,7 @@ def analyse_dataset(dataset_dir, out, sh, checks):
     prev.to_csv(os.path.join(tdir, "prevalence.csv"), index=False)
     sec.to_csv(os.path.join(tdir, "secondary_tests.csv"), index=False)
     suzt.to_csv(os.path.join(tdir, "suzuki_tests.csv"), index=False)
-    h3.to_csv(os.path.join(tdir, "h3_balance.csv"), index=False)
+    h3.to_csv(os.path.join(tdir, "h3_direction.csv"), index=False)
     e1.to_csv(os.path.join(tdir, "e1_correlations.csv"), index=False)
     dose.to_csv(os.path.join(tdir, "dose_response.csv"), index=False)
     sh["cap_table"].to_csv(os.path.join(tdir, "cap_sweep.csv"), index=False)
@@ -3592,6 +3871,8 @@ def analyse_dataset(dataset_dir, out, sh, checks):
         fig_c1(people, c1, os.path.join(out, "figures",
                                         "c1_distributions.png"))
         fig_grid(people, os.path.join(out, "figures", "grid_shifts.png"))
+        fig_weight_pairs(people, th, os.path.join(out, "figures",
+                                                  "weight_pairs.png"))
 
     truth_rows = None
     if os.path.isfile(os.path.join(dataset_dir, "truth.json")):
@@ -3685,6 +3966,8 @@ def write_report(out, res, sh, checks):
         W(f"  thresholds {f:7s} {th['upper'][j]:+.5f} / {th['lower'][j]:+.5f}"
           f"   (registered {REGISTERED_THRESHOLDS[f][0]:+.3f} / "
           f"{REGISTERED_THRESHOLDS[f][1]:+.3f})")
+    W(f"  catch keys {' '.join(norm_key(k) for k in CATCH_SEQUENCE)}"
+      f"   ({CATCH_SEQUENCE_SOURCE})")
     for f in ("colour", "fog"):
         W(f"  cap        {f:7s} +/-{caps[f]['upper']:.5f}   (registered "
           f"{REGISTERED_CAP[f]:.3f}; {caps[f]['n_informative']} informative "
@@ -3818,13 +4101,23 @@ def write_report(out, res, sh, checks):
           + (f", mean {r.mean_proportion:.3f}, one-sided p "
              f"{fmt_p(r.p_one_sided)}" if pd.notna(r.get("t", np.nan))
              else ""))
-    W("  H3, angle atan2(b_fog, b_sat) in degrees, between people only:")
+    W("  H3, direction of the weight pair (b_sat, b_fog), between people "
+      "only:")
+    W("    quadrant counts; angles atan2(b_fog, b_sat) summarised only "
+      "within the both-positive quadrant")
     for _, r in res["h3"].iterrows():
         if r.n:
-            W(f"    {r.group:12s} n {r.n}: median {r['median']:.1f}, IQR "
-              f"[{r.q1:.1f}, {r.q3:.1f}], range [{r['min']:.1f}, "
-              f"{r['max']:.1f}]; detected predicted on both "
-              f"{r.detected_predicted_both}")
+            W(f"    {r.group:12s} n {r.n}: both positive {r.n_both_positive}, "
+              f"colour only {r.n_colour_only}, fog only {r.n_fog_only}, "
+              f"both negative {r.n_both_negative}; detected predicted on "
+              f"both {r.detected_predicted_both}")
+            if r.both_positive_n:
+                W(f"      both positive: angle median "
+                  f"{r.both_positive_median_deg:.1f} deg, IQR "
+                  f"[{r.both_positive_q1_deg:.1f}, "
+                  f"{r.both_positive_q3_deg:.1f}], range "
+                  f"[{r.both_positive_min_deg:.1f}, "
+                  f"{r.both_positive_max_deg:.1f}]")
     W("  E1, descriptions against weights (participants; Spearman, "
       f"{BOOTSTRAP_REPS} bootstrap resamples):")
     for _, r in res["e1"].iterrows():
@@ -3880,6 +4173,20 @@ def shared_setup(root, checks):
                    got == REGISTERED_THRESHOLDS,
                    f"colour {got['colour']}, fog {got['fog']}")
     rules = load_rules(checks)
+    n_catch = int((L.tl.trial_type == "catch").sum())
+    seq = [norm_key(k) for k in CATCH_SEQUENCE]
+    checks.require("CATCH_SEQUENCE: one key per catch trial in the frozen "
+                   "list, balanced 5 up / 5 down",
+                   len(seq) == n_catch == N_CATCH_TRIALS
+                   and seq.count("up") == seq.count("down") == n_catch // 2,
+                   f"{len(seq)} keys for {n_catch} catch trials: "
+                   f"{' '.join(seq)} ({CATCH_SEQUENCE_SOURCE})")
+    if RUN_MODE == "validate_sim":
+        mp = os.path.join(SIM_ROOT, "run_meta.json")
+        sim_seq = ([norm_key(k) for k in json.load(open(mp))["settings"]
+                    .get("CATCH_KEYS", [])] if os.path.isfile(mp) else None)
+        checks.require("CATCH_SEQUENCE equals the simulation's CATCH_KEYS",
+                       sim_seq == seq, f"simulation: {sim_seq}")
     screens = load_grid(checks)
     sens = load_sensitivities(checks)
     caps, cap_table = compute_caps(X, checks)
@@ -4000,7 +4307,7 @@ def run_validation(root, sh, checks, meta):
                     + ("; missed: " + ", ".join(miss.dataset + " "
                                                 + miss["item"])
                        if len(miss) else ""))
-    negative_test_flipped_chose_A(root, sh, checks)
+    negative_tests(root, sh, checks)
     fc = false_claim_check(SIM_ROOT, sh["L"], sh["th"], sh["rules"], checks,
                            root)
     write_validation_report(root, tab, fc, checks, failed)
@@ -4010,20 +4317,21 @@ def run_validation(root, sh, checks, meta):
         f"STOPPED: {len(failed)} dataset(s) failed: {failed[0]}"
 
 
-def negative_test_flipped_chose_A(root, sh, checks):
-    """A dataset that MUST stop: chose_A flipped for one session.
+def _negative_test(root, sh, checks, name, title, mutate, check_word,
+                   list_file, verify):
+    """One dataset that MUST stop the run.
 
-    Copies the messy simulated dataset (without its truth files), flips
-    chose_A on every image trial of its first analysable participant
+    Copies the messy simulated dataset (without its truth files), applies
+    `mutate` to its trials table for its first analysable participant
     session, and runs the full analysis on it. Passes only if the run
-    stops at the chose_A check and the mismatch list names exactly that
-    session's flipped trials and nothing else.
+    stops at the named check and `verify` finds exactly the planted
+    problem -- no more, no less -- in the private list that check writes.
     """
     print("\n" + "=" * 60)
-    print("NEGATIVE TEST: chose_A flipped for one session")
+    print(f"NEGATIVE TEST: {title}")
     print("=" * 60)
     src = os.path.join(SIM_ROOT, "datasets", "messy")
-    dst = os.path.join(root, "negative_tests", "flipped_chose_A")
+    dst = os.path.join(root, "negative_tests", name)
     for sub in ("tidy", "private"):
         shutil.copytree(os.path.join(src, sub), os.path.join(dst, sub))
     tp = pd.read_csv(os.path.join(src, "truth_people.csv"),
@@ -4032,31 +4340,90 @@ def negative_test_flipped_chose_A(root, sh, checks):
                                & (tp.group == "participant")])[0]
     tpath = os.path.join(dst, "tidy", TIDY_TRIALS)
     T = pd.read_csv(tpath, dtype={"session_id": str})
-    sel = (T.session_id == sid) & T.chose_A.notna()
-    T.loc[sel, "chose_A"] = 1 - T.loc[sel, "chose_A"]
+    T, planted = mutate(T, sid)
     T.to_csv(tpath, index=False)
-    ck = Checks(prefix="[negative test] ")
+    ck = Checks(prefix=f"[negative test: {name}] ")
     out = os.path.join(dst, "out")
     stopped, msg = False, ""
     try:
         analyse_dataset(dst, out, sh, ck)
     except CheckFailed as e:
         stopped, msg = True, str(e)
-    mp = os.path.join(out, "PRIVATE", "chose_A_mismatches_PRIVATE.csv")
-    mm = (pd.read_csv(mp, dtype={"session_id": str}) if os.path.isfile(mp)
-          else pd.DataFrame(columns=["session_id", "trial"]))
-    want = set(T.trial[sel])
-    ok = (stopped and "chose_A" in msg and set(mm.session_id) == {sid}
-          and set(mm.trial) == want and len(mm) == int(sel.sum()))
+    lp = os.path.join(out, "PRIVATE", list_file)
+    listed = (pd.read_csv(lp, dtype={"session_id": str})
+              if os.path.isfile(lp) else pd.DataFrame())
+    ok_list, detail = verify(listed, sid, planted)
+    ok = stopped and check_word in msg and ok_list
     write_json(os.path.join(dst, "run_meta.json"),
-               {"test": "flipped chose_A", "stopped": stopped,
-                "message": msg, "flipped_trials": int(sel.sum()),
-                "listed": len(mm), "checks": ck.rows})
-    checks.require("negative test: chose_A flipped for one session stops "
-                   "the run and lists exactly that session's trials", ok,
-                   f"{int(sel.sum())} rows flipped; run "
-                   f"{'stopped' if stopped else 'DID NOT STOP'}; "
-                   f"{len(mm)} listed in {mm.session_id.nunique()} session(s)")
+               {"test": title, "stopped": stopped, "message": msg,
+                "planted": planted, "listed_rows": len(listed),
+                "checks": ck.rows})
+    checks.require(f"negative test: {title} stops the run and lists exactly "
+                   "the planted problem", ok,
+                   f"run {'stopped' if stopped else 'DID NOT STOP'}"
+                   + (f" at '{check_word}'" if stopped and check_word in msg
+                      else "") + f"; {detail}")
+
+
+def negative_tests(root, sh, checks):
+    """Three planted faults, each of which must stop the run."""
+    trial_an = [int(t) for t in sh["L"].trial_an]
+
+    def flip_chose(T, sid):
+        sel = (T.session_id == sid) & T.chose_A.notna()
+        T.loc[sel, "chose_A"] = 1 - T.loc[sel, "chose_A"]
+        return T, {"session_id": sid,
+                   "trials": sorted(int(t) for t in T.trial[sel])}
+
+    def ver_chose(m, sid, pl):
+        ok = (len(m) and set(m.session_id) == {sid}
+              and sorted(m.trial.astype(int)) == pl["trials"])
+        return bool(ok), (f"{len(pl['trials'])} rows flipped, {len(m)} "
+                          f"listed in {m.session_id.nunique() if len(m) else 0}"
+                          " session(s)")
+
+    def dup_trial(T, sid):
+        x, y = trial_an[10], trial_an[20]
+        ix = T.index[(T.session_id == sid) & (T.trial == x)][0]
+        iy = T.index[(T.session_id == sid) & (T.trial == y)][0]
+        T.loc[ix] = T.loc[iy].values
+        return T, {"session_id": sid, "duplicated": y, "missing": x}
+
+    def ver_dup(p, sid, pl):
+        if not len(p):
+            return False, "no list written"
+        got = {(r.problem, str(r.trials)) for r in p.itertuples()}
+        want = {("trial number appears more than once", str(pl["duplicated"])),
+                ("complete session missing frozen trials", str(pl["missing"]))}
+        ok = set(p.session_id) == {sid} and got == want
+        return ok, (f"trial {pl['missing']} replaced by a copy of trial "
+                    f"{pl['duplicated']}; listed: "
+                    + "; ".join(f"{a} [{b}]" for a, b in sorted(got)))
+
+    def flip_catch(T, sid):
+        c = T.index[(T.session_id == sid) & (T.trial_type == "catch")][0]
+        v = str(T.loc[c, "catch_pass"]) == "True"
+        T.loc[c, "catch_pass"] = not v
+        return T, {"session_id": sid, "trial": int(T.loc[c, "trial"]),
+                   "catch_pass_was": v}
+
+    def ver_catch(m, sid, pl):
+        ok = (len(m) == 1 and m.session_id.iloc[0] == sid
+              and int(m.trial.iloc[0]) == pl["trial"]
+              and m.problem.iloc[0] == "catch_pass differs from the "
+                                      "recorded key")
+        return bool(ok), (f"catch_pass flipped on trial {pl['trial']}; "
+                          f"{len(m)} row(s) listed")
+
+    _negative_test(root, sh, checks, "flipped_chose_A",
+                   "chose_A flipped for one session", flip_chose, "chose_A",
+                   "chose_A_mismatches_PRIVATE.csv", ver_chose)
+    _negative_test(root, sh, checks, "duplicated_trial",
+                   "one trial duplicated and another missing", dup_trial,
+                   "trial sets", "trial_set_problems_PRIVATE.csv", ver_dup)
+    _negative_test(root, sh, checks, "catch_pass_disagrees",
+                   "catch_pass disagreeing with the recorded key", flip_catch,
+                   "catch scoring", "catch_mismatches_PRIVATE.csv", ver_catch)
 
 
 def write_validation_report(root, tab, fc, checks, failed):

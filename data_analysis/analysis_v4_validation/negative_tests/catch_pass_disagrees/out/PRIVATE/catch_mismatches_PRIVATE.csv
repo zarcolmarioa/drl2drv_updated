@@ -1,0 +1,2 @@
+session_id,trial,problem,key_pressed,expected_key,value_in_table,catch_pass_derived
+R_1mGf6ZzyKDkLF4o_2026-12-13T23-54-27Z,23,catch_pass differs from the recorded key,up,up,False,True

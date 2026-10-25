@@ -1,0 +1,79 @@
+{
+ "test": "one trial duplicated and another missing",
+ "stopped": true,
+ "message": "[negative test: duplicated_trial] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials: 2 problem(s) in 1 session(s): complete session missing frozen trials; trial number appears more than once; full list in PRIVATE/trial_set_problems_PRIVATE.csv",
+ "planted": {
+  "session_id": "R_1mGf6ZzyKDkLF4o_2026-12-13T23-54-27Z",
+  "duplicated": 28,
+  "missing": 17
+ },
+ "listed_rows": 2,
+ "checks": [
+  {
+   "check": "[negative test: duplicated_trial] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/analysis_v4_validation/negative_tests/duplicated_trial/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[negative test: duplicated_trial] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/analysis_v4_validation/negative_tests/duplicated_trial/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[negative test: duplicated_trial] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: duplicated_trial] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[negative test: duplicated_trial] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials",
+   "result": "FAIL",
+   "stops_run": true,
+   "detail": "2 problem(s) in 1 session(s): complete session missing frozen trials; trial number appears more than once; full list in PRIVATE/trial_set_problems_PRIVATE.csv"
+  }
+ ]
+}

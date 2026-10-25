@@ -1,7 +1,7 @@
 STUDY ANALYSIS  (v4)  --  analyse_study_v4.py
 ========================================================================
 dataset      data/sim_study_v4/datasets/messy  (tidy tables)
-run          2026-10-21 00:08:51
+run          2026-10-21 13:51:18
 python 3.11.15, numpy 2.4.4, pandas 3.0.3
 Shareable: every person is a pseudonym. The key is in PRIVATE/.
 
@@ -9,6 +9,7 @@ REGISTERED QUANTITIES USED
 ------------------------------------------------------------------------
   thresholds colour  +0.28632 / -0.28961   (registered +0.286 / -0.290)
   thresholds fog     +0.48805 / -0.48560   (registered +0.488 / -0.486)
+  catch keys up down down up up down up down down up   (placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js)
   cap        colour  +/-8.37797   (registered 8.378; 120 informative trials at |predictor| >= 0.2)
   cap        fog     +/-10.26917   (registered 10.269; 120 informative trials at |predictor| >= 0.2)
 
@@ -116,9 +117,12 @@ F. EXPLORATORY AND DESCRIPTIVE  (intervals, no claims)
     colour (sat_only)  control      0/20 following, mean 0.499, one-sided p 0.5191
     fog (fog_only)     participant  4/10 following, mean 0.582, one-sided p 0.0124
     fog (fog_only)     control      1/20 following, mean 0.501, one-sided p 0.4764
-  H3, angle atan2(b_fog, b_sat) in degrees, between people only:
-    participant  n 10: median 62.2, IQR [40.6, 68.8], range [-160.7, 126.4]; detected predicted on both 4
-    control      n 20: median -29.8, IQR [-83.9, 53.4], range [-132.3, 116.0]; detected predicted on both 0
+  H3, direction of the weight pair (b_sat, b_fog), between people only:
+    quadrant counts; angles atan2(b_fog, b_sat) summarised only within the both-positive quadrant
+    participant  n 10: both positive 6, colour only 0, fog only 2, both negative 2; detected predicted on both 4
+      both positive: angle median 62.2 deg, IQR [56.8, 64.3], range [35.7, 70.1]
+    control      n 20: both positive 3, colour only 8, fog only 4, both negative 5; detected predicted on both 0
+      both positive: angle median 51.5 deg, IQR [26.6, 55.4], range [1.8, 59.3]
   E1, descriptions against weights (participants; Spearman, 10000 bootstrap resamples):
     CDS item 13 vs fog weight                    n 10  rho  0.23  [-0.51, 0.91]
     CDS item 2 vs colour weight (reported, not a colour test) n 10  rho  0.17  [-0.58, 0.84]
@@ -152,6 +156,8 @@ CHECKS
   [PASS] [messy] survey ResponseIds are unique
   [PASS] [messy] participant table has participant_id, group, tier
   [PASS] [messy] participant table: groups and tiers valid  (0 invalid rows)
+  [PASS] [messy] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials  (36 complete session(s) checked, 39 session(s) checked for duplicates)
+  [PASS] [messy] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring  (390 catch rows; columns checked: catch_key, catch_pass)
   [PASS] [messy] every trial number is in the frozen list  (unknown: [])
   [PASS] [messy] trial types agree with the frozen list  (0 rows differ)
   [PASS] [messy] side_pressed is 'left' or 'right' on image trials  (0 other values)
