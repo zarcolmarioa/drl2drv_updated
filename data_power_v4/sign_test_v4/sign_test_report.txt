@@ -1,0 +1,394 @@
+SIGN TEST AS THE PRIMARY RULE FOR H1 AND H2  (sign_test_registration_v4)
+==========================================================================
+run      2026-10-26 15:29:55  (8.8 s)
+output   data/sign_test_v4
+python   3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+
+WHAT THIS IS
+--------------------------------------------------------------------------
+Primary rule for H1 (fog) and H2 (colour): the sign test (Dixon & Mood, 1946).
+Among the participants detected in either direction, the number detected in the
+predicted direction is tested against Binomial(d, 0.5), one-sided, exact, alpha 0.05,
+with no floor on the number predicted. Secondary, registered rule: the count rule
+of combined_rule.csv, unchanged. Thresholds, scenarios and nulls are unchanged.
+
+INPUTS
+--------------------------------------------------------------------------
+  data/power_v4_n10_20/frozen/rule_sweep.csv
+      sha256 0d5d03282c95492419f0db561c87035db4bd2d6d5185f78e53a8b9d5e3bcffd7
+  data/registration_v4/combined_rule.csv
+      sha256 9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a
+  data/registration_v4/registration_table.csv
+      sha256 fffc96842d8c99d5bb67b972df96a9d9ed7ab7a4aec2e49d81215a3197edc9ad
+  data/power_v4_n10_20/power_report.txt
+      sha256 4296cfb4cdc4be54c1f1a6b94c1a126d078c68fc0ab27d93e4de04d4299332b5
+  simulate_power_v4_n10_20.py
+      sha256 852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730
+  /home/mario/Documents/drl2drv_updated/sign_test_registration_v4.py
+      sha256 ae143bdeedd38b3fdad2359bbc52cd09c4068a3f1409fd4bea894125e0b7d43c
+
+WHAT WAS READ, DERIVED AND SIMULATED
+--------------------------------------------------------------------------
+  Read      rule_sweep.csv: the sign rows (minimum predicted 0) and the rows of
+            the registered count rule; registration_table.csv: the count rule's
+            figures; combined_rule.csv: its (k, m) per N.
+  Derived   the per-person rates the sweep was built from, recovered exactly from
+            its count-rule rows (no-effect rates as multiples of 1/40,000;
+            responders' rates as multiples of 1/600); from them, by exact
+            enumeration: the exact false-claim rates and their worst case over q
+            (item 3), P(at least 5 detections) (item 4), and the joint rates of
+            the two rules (item 5).
+  Simulated NOTHING.
+
+CHECKS
+--------------------------------------------------------------------------
+  [PASS] data/power_v4_n10_20/frozen/rule_sweep.csv is the committed copy (SHA-256)  (0d5d03282c954924...)
+  [PASS] data/registration_v4/combined_rule.csv is the committed copy (SHA-256)  (9e9e9a2a2b74c709...)
+  [PASS] data/registration_v4/registration_table.csv is the committed copy (SHA-256)  (fffc96842d8c99d5...)
+  [PASS] data/power_v4_n10_20/power_report.txt is the committed copy (SHA-256)  (4296cfb4cdc4be54...)
+  [PASS] simulate_power_v4_n10_20.py is the committed copy (SHA-256)  (852f3b33eb349153...)
+  [PASS] ALPHA equals the sweep's RULE_SIGN_ALPHA  (0.05 / 0.05)
+  [PASS] the registered variant is a sweep variant  (minimum predicted 0)
+  [PASS] copied functions are verbatim (syntax tree)  (7/7 identical)
+  [PASS] copied settings equal the power script's  (10/10 equal)
+  [PASS] copied functions give the original's results  (12/12 identical to 1e-12)
+  [PASS] rule_sweep.csv has every column this script reads
+  [PASS] the sweep's non-responders sit at NONRESPONDER_SPREAD_MULT  ([np.float64(0.5)])
+  [PASS] combined_rule.csv covers both features x N 10..20  (22 rules)
+  [PASS] sign rows with minimum predicted 0 exist for every feature x N 10..20  (22 rows)
+  [PASS] the worst of the five nulls equals the sweep's worst_strict / worst_upper_strict  (largest gap 0.0e+00)
+  [PASS] no-effect rates: one multiple of 1/40,000 per null reproduces every count-rule false-claim rate  (worst fit 5.7e-15, nearest other candidate misses by 1.1e-04)
+  [PASS] recovered rates agree with the 4-decimal values in power_report.txt  (8 values compared)
+  [PASS] responder rates: one pair of multiples of 1/600 per type reproduces every count-rule power at full response  (worst fit 3.6e-15, nearest other candidate misses by 4.6e-03)
+  [PASS] the recovered rates rebuild every sign and registered-count power and false-claim value of the sweep (sign rows out-of-sample)  (sign_false 9.9e-17, count_false 1.0e-16, sign_power 1.1e-16, count_power 1.1e-16)
+  [PASS] sign rows equal the sign rows of registration_table.csv (to its rounding)  (198/198 values)
+  [PASS] count rule: registration_table.csv equals the sweep row of the registered rule (to its rounding)  (132/132 values)
+  [PASS] the quarter-share cell: registration_table's power_s0.25_l0.1 and cost_planning_qtr agree  (largest gap 0.0e+00 over 44 rows)
+  [PASS] decision table reproduces scipy's one-sided binomial p-values, and every boundary is the smallest that works  (d = 1..20)
+  [PASS] the sign test can fire from 5 detections and not below  (first at d = 5)
+  [PASS] exact trinomial rate equals the sweep's sign rate at every N and null  (110 values; largest |difference| 9.9e-17, largest |z| against the sweep's SE 6.4e-12)
+  [PASS] the vectorised enumeration agrees with the copied trinomial_grid  (7.5e-16)
+  [PASS] sign test: worst case over all q is at or below 0.05 at every N  (largest 0.0481 (N = 18))
+  [PASS] sign test: worst case never exceeds the largest size given d
+  [INFO] item 4 derivation  (exact, from the per-person rates recovered from the sweep (the same rates that rebuild its power); no simulation)
+  [PASS] P(either) = P(sign) + P(count) - P(both) in every cell  (1.4e-17)
+  [INFO] P(either) within the calibrated nulls  (worst 0.0522 (colour, N = 18, taste 1x); 1 cell(s) above 0.05)
+
+THE PER-PERSON RATES, RECOVERED FROM THE SWEEP
+--------------------------------------------------------------------------
+No effect: P(predicted) = P(opposite) = q per direction. The review's 'about
+0.182 (colour) and 0.186 (fog) at the worst spread' are the taste-1x rows:
+the symmetrised rates of classification_rates() in the power script, printed
+to 4 decimals in its report (prevalence section, assumed_taste_1x alpha).
+feature    null        q   as_count  fit_max_abs_err
+    fog guesser 0.024650  986/40000     1.998401e-15
+    fog    0.25 0.039500 1580/40000     1.720846e-15
+    fog     0.5 0.079875 3195/40000     2.553513e-15
+    fog    0.75 0.135050 5402/40000     3.219647e-15
+    fog       1 0.185525 7421/40000     3.774758e-15
+ colour guesser 0.024325  973/40000     1.609823e-15
+ colour    0.25 0.036025 1441/40000     1.498801e-15
+ colour     0.5 0.077850 3114/40000     2.775558e-15
+ colour    0.75 0.133125 5325/40000     5.662137e-15
+ colour       1 0.181950 7278/40000     3.663736e-15
+
+Responders (used by item 4 and by the rebuilt power):
+feature  weight_per_SD  lapse  p_predicted  p_opposite       as_count
+    fog            0.3    0.0     0.226667    0.001667 136/600, 1/600
+    fog            0.3    0.1     0.185000    0.000000 111/600, 0/600
+    fog            0.3    0.2     0.185000    0.001667 111/600, 1/600
+    fog            0.5    0.0     0.533333    0.000000 320/600, 0/600
+    fog            0.5    0.1     0.453333    0.000000 272/600, 0/600
+    fog            0.5    0.2     0.366667    0.000000 220/600, 0/600
+    fog            0.7    0.0     0.771667    0.000000 463/600, 0/600
+    fog            0.7    0.1     0.713333    0.000000 428/600, 0/600
+    fog            0.7    0.2     0.613333    0.000000 368/600, 0/600
+ colour            0.3    0.0     0.528333    0.000000 317/600, 0/600
+ colour            0.3    0.1     0.456667    0.000000 274/600, 0/600
+ colour            0.3    0.2     0.403333    0.000000 242/600, 0/600
+ colour            0.5    0.0     0.916667    0.000000 550/600, 0/600
+ colour            0.5    0.1     0.850000    0.000000 510/600, 0/600
+ colour            0.5    0.2     0.735000    0.000000 441/600, 0/600
+ colour            0.7    0.0     0.991667    0.000000 595/600, 0/600
+ colour            0.7    0.1     0.988333    0.000000 593/600, 0/600
+ colour            0.7    0.2     0.956667    0.000000 574/600, 0/600
+
+1. THE SIGN TEST (PRIMARY) WITH THE COUNT RULE (SECONDARY)
+--------------------------------------------------------------------------
+False-claim rate: the worst of the five no-effect models (random choosers and
+tastes 0.25, 0.5, 0.75, 1 x threshold), point and 95% upper bound. Power at
+lapse 0.1 unless stated; weights per SD: planning colour 0.5 / fog 0.7,
+weaker pair colour 0.3 / fog 0.5. 'quarter' is also the cost cell
+'planning weights at a quarter share' (one cell, two labels). Every column
+is in sign_test_table.csv.
+
+  H1 fog, sign test (primary)
+ n  false  upper  planning  weaker  quarter    all  plan_l0  plan_l0.2
+10 0.0073 0.0076    0.2264  0.0536   0.0075 0.9618   0.2916     0.1395
+11 0.0091 0.0095    0.3959  0.1081   0.0341 0.9833   0.4808     0.2631
+12 0.0108 0.0112    0.3859  0.1126   0.0395 0.9930   0.4648     0.2615
+13 0.0124 0.0128    0.3763  0.1164   0.0444 0.9971   0.4501     0.2593
+14 0.0138 0.0141    0.5207  0.1833   0.1159 0.9989   0.6026     0.3799
+15 0.0150 0.0153    0.6484  0.2600   0.1195 0.9996   0.7285     0.4983
+16 0.0161 0.0164    0.6301  0.2572   0.1223 0.9998   0.7088     0.4849
+17 0.0170 0.0173    0.6129  0.2543   0.1244 0.9999   0.6903     0.4723
+18 0.0178 0.0180    0.7171  0.3292   0.1261 1.0000   0.7893     0.5750
+19 0.0185 0.0187    0.8015  0.4055   0.2166 1.0000   0.8643     0.6668
+20 0.0192 0.0194    0.7867  0.3968   0.2141 1.0000   0.8514     0.6516
+
+  H1 fog, count rule (secondary): N10 k >= 4, m <= 0, N15 k >= 5, m <= 1, N20 k >= 5, m <= 1 ...
+ n  false  upper  planning  weaker  quarter    all  plan_l0  plan_l0.2
+10 0.0224 0.0229    0.4435  0.1705   0.0445 0.9919   0.5081     0.3300
+11 0.0330 0.0351    0.5653  0.1532   0.0560 0.9833   0.6836     0.3763
+12 0.0450 0.0475    0.5841  0.1707   0.0699 0.9930   0.6981     0.3982
+13 0.0344 0.0356    0.5499  0.1740   0.0749 0.9971   0.6493     0.3845
+14 0.0388 0.0399    0.7029  0.2700   0.1980 0.9989   0.7823     0.5376
+15 0.0421 0.0430    0.7980  0.3731   0.2112 0.9996   0.8494     0.6619
+16 0.0441 0.0447    0.7799  0.3799   0.2225 0.9998   0.8269     0.6538
+17 0.0449 0.0452    0.7598  0.3848   0.2320 0.9999   0.8026     0.6435
+18 0.0446 0.0447    0.8031  0.4759   0.2398 1.0000   0.8269     0.7202
+19 0.0434 0.0438    0.8246  0.5572   0.3850 1.0000   0.8366     0.7705
+20 0.0414 0.0421    0.7968  0.5501   0.3823 1.0000   0.8076     0.7477
+
+  H2 colour, sign test (primary)
+ n  false  upper  planning  weaker  quarter    all  plan_l0  plan_l0.2
+10 0.0069 0.0072    0.3996  0.0541   0.0096 0.9986   0.5108     0.2490
+11 0.0087 0.0091    0.5973  0.1098   0.0501 0.9997   0.6824     0.4288
+12 0.0104 0.0108    0.5739  0.1143   0.0573 0.9999   0.6550     0.4167
+13 0.0120 0.0124    0.5531  0.1181   0.0637 1.0000   0.6311     0.4055
+14 0.0134 0.0138    0.7120  0.1866   0.1789 1.0000   0.7975     0.5546
+15 0.0146 0.0150    0.8258  0.2650   0.1813 1.0000   0.8885     0.6826
+16 0.0157 0.0160    0.8067  0.2621   0.1826 1.0000   0.8712     0.6639
+17 0.0167 0.0170    0.7884  0.2591   0.1832 1.0000   0.8544     0.6463
+18 0.0175 0.0178    0.8736  0.3356   0.1831 1.0000   0.9271     0.7490
+19 0.0182 0.0185    0.9317  0.4132   0.3146 1.0000   0.9700     0.8296
+20 0.0189 0.0191    0.9227  0.4045   0.3078 1.0000   0.9647     0.8156
+
+  H2 colour, count rule (secondary): N10 k >= 4, m <= 0, N15 k >= 6, m <= 3, N20 k >= 7, m <= 3 ...
+ n  false  upper  planning  weaker  quarter    all  plan_l0  plan_l0.2
+10 0.0220 0.0224    0.5908  0.1730   0.0569 0.9999   0.6407     0.4713
+11 0.0308 0.0328    0.8340  0.1545   0.0819 0.9997   0.9380     0.6067
+12 0.0422 0.0447    0.8410  0.1717   0.1007 0.9999   0.9385     0.6238
+13 0.0330 0.0343    0.7747  0.1752   0.1067 1.0000   0.8573     0.5867
+14 0.0376 0.0388    0.8612  0.2728   0.3041 1.0000   0.8938     0.7361
+15 0.0363 0.0389    0.9320  0.2014   0.1273 1.0000   0.9847     0.7471
+16 0.0351 0.0370    0.9190  0.2147   0.1422 1.0000   0.9675     0.7464
+17 0.0415 0.0435    0.9153  0.2296   0.1603 1.0000   0.9604     0.7522
+18 0.0474 0.0493    0.9544  0.3267   0.1782 1.0000   0.9701     0.8578
+19 0.0326 0.0349    0.9689  0.2382   0.1683 1.0000   0.9931     0.8330
+20 0.0396 0.0421    0.9688  0.2534   0.1875 1.0000   0.9915     0.8398
+
+2. THE DECISION TABLE
+--------------------------------------------------------------------------
+d = participants detected in either direction. 'Needs' is the smallest number
+in the predicted direction that supports the claim; p is the exact one-sided
+binomial p at that boundary (scipy.stats.binomtest agrees).
+  d =  1   no claim possible (even 1 of 1 gives p = 0.5000)
+  d =  2   no claim possible (even 2 of 2 gives p = 0.2500)
+  d =  3   no claim possible (even 3 of 3 gives p = 0.1250)
+  d =  4   no claim possible (even 4 of 4 gives p = 0.0625)
+  d =  5   needs  5 (all of them; at most 0 opposite)   p = 0.0312
+  d =  6   needs  6 (all of them; at most 0 opposite)   p = 0.0156
+  d =  7   needs  7 (all of them; at most 0 opposite)   p = 0.0078
+  d =  8   needs  7 (7 of 8; at most 1 opposite)   p = 0.0352
+  d =  9   needs  8 (8 of 9; at most 1 opposite)   p = 0.0195
+  d = 10   needs  9 (9 of 10; at most 1 opposite)   p = 0.0107
+  d = 11   needs  9 (9 of 11; at most 2 opposite)   p = 0.0327
+  d = 12   needs 10 (10 of 12; at most 2 opposite)   p = 0.0193
+  d = 13   needs 10 (10 of 13; at most 3 opposite)   p = 0.0461
+  d = 14   needs 11 (11 of 14; at most 3 opposite)   p = 0.0287
+  d = 15   needs 12 (12 of 15; at most 3 opposite)   p = 0.0176
+  d = 16   needs 12 (12 of 16; at most 4 opposite)   p = 0.0384
+  d = 17   needs 13 (13 of 17; at most 4 opposite)   p = 0.0245
+  d = 18   needs 13 (13 of 18; at most 5 opposite)   p = 0.0481
+  d = 19   needs 14 (14 of 19; at most 5 opposite)   p = 0.0318
+  d = 20   needs 15 (15 of 20; at most 5 opposite)   p = 0.0207
+
+3. EXACT FALSE-CLAIM RATES, AND THE WORST CASE OVER q
+--------------------------------------------------------------------------
+The sweep's rates are themselves exact enumerations at simulated per-person
+rates, so at the same q the exact value agrees to floating-point precision
+(CHECK 3) -- far inside the Monte Carlo error, which belongs to q.
+
+  H1 fog: exact (= sweep) by N; columns are the no-effect models
+null  guesser, nominal 2.5%  guesser, realised  taste 0.25x  taste 0.5x  taste 0.75x  taste 1x
+n                                                                                             
+10                  0.00000            0.00000      0.00002     0.00037      0.00277   0.00726
+11                  0.00000            0.00000      0.00003     0.00058      0.00386   0.00911
+12                  0.00001            0.00001      0.00005     0.00086      0.00506   0.01084
+13                  0.00001            0.00001      0.00007     0.00119      0.00632   0.01240
+14                  0.00001            0.00001      0.00010     0.00159      0.00759   0.01379
+15                  0.00002            0.00002      0.00014     0.00205      0.00884   0.01501
+16                  0.00003            0.00002      0.00018     0.00256      0.01005   0.01606
+17                  0.00003            0.00003      0.00024     0.00312      0.01119   0.01698
+18                  0.00005            0.00004      0.00031     0.00372      0.01227   0.01779
+19                  0.00006            0.00006      0.00039     0.00436      0.01326   0.01850
+20                  0.00008            0.00007      0.00049     0.00502      0.01418   0.01916
+
+  H2 colour: exact (= sweep) by N; columns are the no-effect models
+null  guesser, nominal 2.5%  guesser, realised  taste 0.25x  taste 0.5x  taste 0.75x  taste 1x
+n                                                                                             
+10                  0.00000            0.00000      0.00001     0.00033      0.00264   0.00690
+11                  0.00000            0.00000      0.00002     0.00053      0.00369   0.00872
+12                  0.00001            0.00000      0.00003     0.00078      0.00486   0.01044
+13                  0.00001            0.00001      0.00005     0.00108      0.00609   0.01201
+14                  0.00001            0.00001      0.00007     0.00145      0.00734   0.01341
+15                  0.00002            0.00002      0.00009     0.00188      0.00857   0.01465
+16                  0.00003            0.00002      0.00013     0.00236      0.00977   0.01573
+17                  0.00003            0.00003      0.00017     0.00288      0.01092   0.01667
+18                  0.00005            0.00004      0.00021     0.00345      0.01199   0.01750
+19                  0.00006            0.00005      0.00027     0.00406      0.01299   0.01824
+20                  0.00008            0.00007      0.00034     0.00469      0.01391   0.01890
+
+  Worst case over EVERY symmetric no-effect model (q in [0, 0.5]). For the sign
+  test this is guaranteed: given d detections its size is at most alpha. The
+  count rule (secondary) is calibrated only at the five models above; outside
+  them it is not bounded by 5%.
+
+  H1 fog
+ n  sign_worst_over_q  sign_q_at_worst     count_rule  count_worst_over_q  count_q_at_worst  either_worst_over_q
+10             0.0208           0.4065 k >= 4, m <= 0              0.0254            0.2297               0.0265
+11             0.0327           0.5000 k >= 5, m <= 2              0.1277            0.3391               0.1277
+12             0.0232           0.4686 k >= 5, m <= 2              0.1224            0.3113               0.1224
+13             0.0461           0.5000 k >= 5, m <= 1              0.0486            0.2521               0.0489
+14             0.0339           0.4732 k >= 5, m <= 1              0.0475            0.2343               0.0479
+15             0.0304           0.4349 k >= 5, m <= 1              0.0466            0.2188               0.0471
+16             0.0384           0.5000 k >= 5, m <= 1              0.0458            0.2053               0.0465
+17             0.0295           0.4012 k >= 5, m <= 1              0.0452            0.1933               0.0459
+18             0.0481           0.5000 k >= 5, m <= 1              0.0447            0.1826               0.0481
+19             0.0369           0.4783 k >= 5, m <= 1              0.0442            0.1730               0.0451
+20             0.0339           0.4456 k >= 5, m <= 1              0.0438            0.1644               0.0447
+
+  H2 colour
+ n  sign_worst_over_q  sign_q_at_worst     count_rule  count_worst_over_q  count_q_at_worst  either_worst_over_q
+10             0.0208           0.4065 k >= 4, m <= 0              0.0254            0.2297               0.0265
+11             0.0327           0.5000 k >= 5, m <= 2              0.1277            0.3391               0.1277
+12             0.0232           0.4686 k >= 5, m <= 2              0.1224            0.3113               0.1224
+13             0.0461           0.5000 k >= 5, m <= 1              0.0486            0.2521               0.0489
+14             0.0339           0.4732 k >= 5, m <= 1              0.0475            0.2343               0.0479
+15             0.0304           0.4349 k >= 6, m <= 3              0.1408            0.3152               0.1412
+16             0.0384           0.5000 k >= 6, m <= 2              0.0680            0.2666               0.0700
+17             0.0295           0.4012 k >= 6, m <= 2              0.0666            0.2510               0.0688
+18             0.0481           0.5000 k >= 6, m <= 2              0.0654            0.2372               0.0679
+19             0.0369           0.4783 k >= 7, m <= 3              0.0841            0.2766               0.0849
+20             0.0339           0.4456 k >= 7, m <= 3              0.0826            0.2629               0.0835
+
+4. HOW OFTEN THE SIGN TEST CAN FIRE AT ALL
+--------------------------------------------------------------------------
+P(at least 5 detections, both directions together). Exact, from the recovered
+per-person rates in the sweep's own mixture of responders and taste-0.5x
+non-responders; nothing simulated.
+
+  H1 fog
+scenario  planning  cost_lower_half  quarter  all_respond  planning_lapse0  planning_lapse0.2  no effect, taste 0.5x  no effect, taste 1x
+n                                                                                                                                        
+10           0.459            0.148    0.073        0.962            0.555              0.316                  0.013                0.296
+11           0.668            0.246    0.194        0.983            0.768              0.492                  0.021                0.388
+12           0.701            0.286    0.236        0.993            0.794              0.533                  0.031                0.478
+13           0.732            0.325    0.279        0.997            0.817              0.572                  0.044                0.563
+14           0.856            0.437    0.474        0.999            0.918              0.713                  0.059                0.641
+15           0.929            0.546    0.516        1.000            0.967              0.819                  0.077                0.709
+16           0.937            0.581    0.556        1.000            0.971              0.837                  0.098                0.768
+17           0.945            0.613    0.594        1.000            0.975              0.855                  0.122                0.817
+18           0.975            0.702    0.630        1.000            0.990              0.914                  0.148                0.857
+19           0.989            0.775    0.777        1.000            0.997              0.951                  0.175                0.890
+20           0.990            0.796    0.800        1.000            0.997              0.956                  0.205                0.916
+
+  H2 colour
+scenario  planning  cost_lower_half  quarter  all_respond  planning_lapse0  planning_lapse0.2  no effect, taste 0.5x  no effect, taste 1x
+n                                                                                                                                        
+10           0.692            0.147    0.089        0.999            0.825              0.487                  0.012                0.280
+11           0.885            0.246    0.260        1.000            0.960              0.701                  0.019                0.369
+12           0.899            0.284    0.310        1.000            0.966              0.732                  0.028                0.457
+13           0.912            0.323    0.359        1.000            0.971              0.760                  0.039                0.542
+14           0.972            0.436    0.621        1.000            0.995              0.878                  0.054                0.620
+15           0.992            0.546    0.660        1.000            0.999              0.943                  0.071                0.689
+16           0.993            0.580    0.696        1.000            0.999              0.950                  0.090                0.749
+17           0.994            0.612    0.728        1.000            0.999              0.956                  0.112                0.800
+18           0.999            0.701    0.757        1.000            1.000              0.981                  0.136                0.842
+19           1.000            0.775    0.900        1.000            1.000              0.992                  0.162                0.877
+20           1.000            0.796    0.912        1.000            1.000              0.993                  0.190                0.905
+
+5. PRIMARY AND SECONDARY TOGETHER, WITH NO EFFECT
+--------------------------------------------------------------------------
+P(sign test supports), P(count rule supports), P(either), P(both), exactly.
+
+  H1 fog  (random choosers and the widest calibrated taste; all models
+  in primary_secondary_null.csv)
+                p_sign                    p_count                   p_either         
+null guesser, realised taste 1x guesser, realised taste 1x guesser, realised taste 1x
+n                                                                                    
+10              0.0000   0.0073            0.0001   0.0224            0.0001   0.0227
+11              0.0000   0.0091            0.0000   0.0330            0.0000   0.0330
+12              0.0000   0.0108            0.0000   0.0450            0.0000   0.0450
+13              0.0000   0.0124            0.0000   0.0344            0.0000   0.0344
+14              0.0000   0.0138            0.0000   0.0388            0.0000   0.0389
+15              0.0000   0.0150            0.0000   0.0421            0.0000   0.0422
+16              0.0000   0.0161            0.0000   0.0441            0.0000   0.0444
+17              0.0000   0.0170            0.0000   0.0449            0.0000   0.0454
+18              0.0000   0.0178            0.0001   0.0446            0.0001   0.0455
+19              0.0001   0.0185            0.0001   0.0434            0.0001   0.0447
+20              0.0001   0.0192            0.0001   0.0414            0.0001   0.0434
+
+  H2 colour  (random choosers and the widest calibrated taste; all models
+  in primary_secondary_null.csv)
+                p_sign                    p_count                   p_either         
+null guesser, realised taste 1x guesser, realised taste 1x guesser, realised taste 1x
+n                                                                                    
+10              0.0000   0.0069            0.0001   0.0220            0.0001   0.0221
+11              0.0000   0.0087            0.0000   0.0308            0.0000   0.0308
+12              0.0000   0.0104            0.0000   0.0422            0.0000   0.0422
+13              0.0000   0.0120            0.0000   0.0330            0.0000   0.0330
+14              0.0000   0.0134            0.0000   0.0376            0.0000   0.0376
+15              0.0000   0.0146            0.0000   0.0363            0.0000   0.0428
+16              0.0000   0.0157            0.0000   0.0351            0.0000   0.0411
+17              0.0000   0.0167            0.0000   0.0415            0.0000   0.0470
+18              0.0000   0.0175            0.0000   0.0474            0.0000   0.0522
+19              0.0001   0.0182            0.0000   0.0326            0.0001   0.0395
+20              0.0001   0.0189            0.0000   0.0396            0.0001   0.0456
+
+WHAT THE SIGN TEST GAINS AND COSTS RELATIVE TO THE COUNT RULE
+--------------------------------------------------------------------------
+GAINS. The sign test's false-claim rate does not depend on the taste
+spread: under any symmetric no-effect model it is at most 0.0481 (N = 18),
+and at most 0.0194 (upper bound) under the five simulated models. The
+count rule holds its 5% (upper bound at most 0.0493) only at the spreads
+it was calibrated against; outside them its rate reaches 0.1408 (N = 15, q
+= 0.315 per direction). The sign test is a standard, published test (Dixon
+& Mood, 1946); the count rule is this study's own construction, selected
+per N by simulation.
+
+COSTS. In the planning cell the sign test is less powerful than the count
+rule at every N in the range: the difference (sign minus count) ranges
+-0.217 to -0.010 on fog and -0.267 to -0.037 on colour. The test cannot
+fire with fewer than 5 detections, and with 5 to 7 it needs every detected
+participant in the predicted direction; at N = 10 in the planning cell,
+P(at least 5 detections) is fog 0.46, colour 0.69. In the two cost cells:
+weaker pair, half respond, fog: the count rule is more powerful at every
+N; weaker pair, half respond, colour: the sign test is at least as
+powerful from N = 15; planning weights, quarter respond, fog: the count
+rule is more powerful at every N; planning weights, quarter respond,
+colour: the sign test is at least as powerful from N = 15. Its guarantee,
+like the count rule's calibration, holds for symmetric no-effect models
+only: neither rule is protected against a preference shared across people
+in the predicted direction.
+
+PRIMARY AND SECONDARY TOGETHER. Each rule is calibrated on its own. With
+no effect, the probability that at least one of the two claims is made
+reaches 0.0522 within the calibrated models (colour, N = 18, taste 1x; 1
+cell(s) above 0.05), and 0.14 over all symmetric models (colour, N = 15,
+where the count rule alone reaches 0.14). The two rules are not a family
+with joint control at 5%.
+
+FILES
+--------------------------------------------------------------------------
+  decision_table.csv
+  exact_false_claim.csv
+  firing_probability.csv
+  identity_check.csv
+  primary_secondary_null.csv
+  recovered_rates.csv
+  run_meta.json
+  sign_test_registration.png
+  sign_test_table.csv
+  worst_case_over_q.csv

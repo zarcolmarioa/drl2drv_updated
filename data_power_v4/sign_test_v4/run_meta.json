@@ -1,0 +1,397 @@
+{
+ "script": "sign_test_registration_v4.py",
+ "started": "2026-10-26 15:29:55",
+ "output": "data/sign_test_v4",
+ "python": "3.11.15",
+ "numpy": "2.4.4",
+ "scipy": "1.17.1",
+ "pandas": "3.0.3",
+ "matplotlib": "3.10.9",
+ "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+ "simulated": "nothing",
+ "input_sha256": {
+  "data/power_v4_n10_20/frozen/rule_sweep.csv": "0d5d03282c95492419f0db561c87035db4bd2d6d5185f78e53a8b9d5e3bcffd7",
+  "data/registration_v4/combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+  "data/registration_v4/registration_table.csv": "fffc96842d8c99d5bb67b972df96a9d9ed7ab7a4aec2e49d81215a3197edc9ad",
+  "data/power_v4_n10_20/power_report.txt": "4296cfb4cdc4be54c1f1a6b94c1a126d078c68fc0ab27d93e4de04d4299332b5",
+  "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+  "/home/mario/Documents/drl2drv_updated/sign_test_registration_v4.py": "ae143bdeedd38b3fdad2359bbc52cd09c4068a3f1409fd4bea894125e0b7d43c"
+ },
+ "recovered_no_effect_rates": {
+  "fog|guesser": 0.02465,
+  "fog|0.25": 0.0395,
+  "fog|0.5": 0.079875,
+  "fog|0.75": 0.13505,
+  "fog|1": 0.185525,
+  "colour|guesser": 0.024325,
+  "colour|0.25": 0.036025,
+  "colour|0.5": 0.07785,
+  "colour|0.75": 0.133125,
+  "colour|1": 0.18195
+ },
+ "elapsed_s": 8.756775617599487,
+ "checks": [
+  {
+   "check": "data/power_v4_n10_20/frozen/rule_sweep.csv is the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "0d5d03282c954924..."
+  },
+  {
+   "check": "data/registration_v4/combined_rule.csv is the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "9e9e9a2a2b74c709..."
+  },
+  {
+   "check": "data/registration_v4/registration_table.csv is the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "fffc96842d8c99d5..."
+  },
+  {
+   "check": "data/power_v4_n10_20/power_report.txt is the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "4296cfb4cdc4be54..."
+  },
+  {
+   "check": "simulate_power_v4_n10_20.py is the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "852f3b33eb349153..."
+  },
+  {
+   "check": "ALPHA equals the sweep's RULE_SIGN_ALPHA",
+   "result": "PASS",
+   "detail": "0.05 / 0.05"
+  },
+  {
+   "check": "the registered variant is a sweep variant",
+   "result": "PASS",
+   "detail": "minimum predicted 0"
+  },
+  {
+   "check": "copied functions are verbatim (syntax tree)",
+   "result": "PASS",
+   "detail": "7/7 identical"
+  },
+  {
+   "check": "copied settings equal the power script's",
+   "result": "PASS",
+   "detail": "10/10 equal"
+  },
+  {
+   "check": "copied functions give the original's results",
+   "result": "PASS",
+   "detail": "12/12 identical to 1e-12"
+  },
+  {
+   "check": "rule_sweep.csv has every column this script reads",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "the sweep's non-responders sit at NONRESPONDER_SPREAD_MULT",
+   "result": "PASS",
+   "detail": "[np.float64(0.5)]"
+  },
+  {
+   "check": "combined_rule.csv covers both features x N 10..20",
+   "result": "PASS",
+   "detail": "22 rules"
+  },
+  {
+   "check": "sign rows with minimum predicted 0 exist for every feature x N 10..20",
+   "result": "PASS",
+   "detail": "22 rows"
+  },
+  {
+   "check": "the worst of the five nulls equals the sweep's worst_strict / worst_upper_strict",
+   "result": "PASS",
+   "detail": "largest gap 0.0e+00"
+  },
+  {
+   "check": "no-effect rates: one multiple of 1/40,000 per null reproduces every count-rule false-claim rate",
+   "result": "PASS",
+   "detail": "worst fit 5.7e-15, nearest other candidate misses by 1.1e-04"
+  },
+  {
+   "check": "recovered rates agree with the 4-decimal values in power_report.txt",
+   "result": "PASS",
+   "detail": "8 values compared"
+  },
+  {
+   "check": "responder rates: one pair of multiples of 1/600 per type reproduces every count-rule power at full response",
+   "result": "PASS",
+   "detail": "worst fit 3.6e-15, nearest other candidate misses by 4.6e-03"
+  },
+  {
+   "check": "the recovered rates rebuild every sign and registered-count power and false-claim value of the sweep (sign rows out-of-sample)",
+   "result": "PASS",
+   "detail": "sign_false 9.9e-17, count_false 1.0e-16, sign_power 1.1e-16, count_power 1.1e-16"
+  },
+  {
+   "check": "sign rows equal the sign rows of registration_table.csv (to its rounding)",
+   "result": "PASS",
+   "detail": "198/198 values"
+  },
+  {
+   "check": "count rule: registration_table.csv equals the sweep row of the registered rule (to its rounding)",
+   "result": "PASS",
+   "detail": "132/132 values"
+  },
+  {
+   "check": "the quarter-share cell: registration_table's power_s0.25_l0.1 and cost_planning_qtr agree",
+   "result": "PASS",
+   "detail": "largest gap 0.0e+00 over 44 rows"
+  },
+  {
+   "check": "decision table reproduces scipy's one-sided binomial p-values, and every boundary is the smallest that works",
+   "result": "PASS",
+   "detail": "d = 1..20"
+  },
+  {
+   "check": "the sign test can fire from 5 detections and not below",
+   "result": "PASS",
+   "detail": "first at d = 5"
+  },
+  {
+   "check": "exact trinomial rate equals the sweep's sign rate at every N and null",
+   "result": "PASS",
+   "detail": "110 values; largest |difference| 9.9e-17, largest |z| against the sweep's SE 6.4e-12"
+  },
+  {
+   "check": "the vectorised enumeration agrees with the copied trinomial_grid",
+   "result": "PASS",
+   "detail": "7.5e-16"
+  },
+  {
+   "check": "sign test: worst case over all q is at or below 0.05 at every N",
+   "result": "PASS",
+   "detail": "largest 0.0481 (N = 18)"
+  },
+  {
+   "check": "sign test: worst case never exceeds the largest size given d",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "item 4 derivation",
+   "result": "INFO",
+   "detail": "exact, from the per-person rates recovered from the sweep (the same rates that rebuild its power); no simulation"
+  },
+  {
+   "check": "P(either) = P(sign) + P(count) - P(both) in every cell",
+   "result": "PASS",
+   "detail": "1.4e-17"
+  },
+  {
+   "check": "P(either) within the calibrated nulls",
+   "result": "INFO",
+   "detail": "worst 0.0522 (colour, N = 18, taste 1x); 1 cell(s) above 0.05"
+  }
+ ],
+ "settings": {
+  "IN_ROOT": "data/power_v4_n10_20/frozen",
+  "SWEEP_CSV": "data/power_v4_n10_20/frozen/rule_sweep.csv",
+  "POWER_REPORT": "data/power_v4_n10_20/power_report.txt",
+  "REG_ROOT": "data/registration_v4",
+  "COMBINED_CSV": "data/registration_v4/combined_rule.csv",
+  "REGTABLE_CSV": "data/registration_v4/registration_table.csv",
+  "POWER_SCRIPT": "simulate_power_v4_n10_20.py",
+  "COMMITTED_SHA256": {
+   "data/power_v4_n10_20/frozen/rule_sweep.csv": "0d5d03282c95492419f0db561c87035db4bd2d6d5185f78e53a8b9d5e3bcffd7",
+   "data/registration_v4/combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+   "data/registration_v4/registration_table.csv": "fffc96842d8c99d5bb67b972df96a9d9ed7ab7a4aec2e49d81215a3197edc9ad",
+   "data/power_v4_n10_20/power_report.txt": "4296cfb4cdc4be54c1f1a6b94c1a126d078c68fc0ab27d93e4de04d4299332b5",
+   "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730"
+  },
+  "OUT_ROOT": "data/sign_test_v4",
+  "ON_EXISTING": "new",
+  "N_MIN": 10,
+  "N_MAX": 20,
+  "SIGN_FAMILY": "sign",
+  "SIGN_MIN_PREDICTED": 0,
+  "ALPHA": 0.05,
+  "TARGET_FALSE": 0.05,
+  "FIRE_MIN_DETECTIONS": 5,
+  "DECISION_D_MAX": 20,
+  "NULLS": [
+   "guesser",
+   "0.25",
+   "0.5",
+   "0.75",
+   "1"
+  ],
+  "NULL_COL": {
+   "guesser": "false_guesser",
+   "0.25": "false_taste_0.25",
+   "0.5": "false_taste_0.5",
+   "0.75": "false_taste_0.75",
+   "1": "false_taste_1"
+  },
+  "NOMINAL_GUESSER_Q": 0.025,
+  "PLANNING_WEIGHT": {
+   "colour": 0.5,
+   "fog": 0.7
+  },
+  "ROBUSTNESS_WEIGHT": {
+   "colour": 0.3,
+   "fog": 0.5
+  },
+  "PLANNING_SHARE": 0.5,
+  "PLANNING_LAPSE": 0.1,
+  "COST_LAPSE": 0.1,
+  "CELLS": {
+   "planning": [
+    "planning",
+    0.5,
+    0.1
+   ],
+   "cost_lower_half": [
+    "robustness",
+    0.5,
+    0.1
+   ],
+   "quarter": [
+    "planning",
+    0.25,
+    0.1
+   ],
+   "all_respond": [
+    "planning",
+    1.0,
+    0.1
+   ],
+   "planning_lapse0": [
+    "planning",
+    0.5,
+    0.0
+   ],
+   "planning_lapse0.2": [
+    "planning",
+    0.5,
+    0.2
+   ]
+  },
+  "CELL_LABEL": {
+   "planning": "planning cell (half respond, lapse 0.1)",
+   "cost_lower_half": "cost cell: weaker pair, half respond",
+   "quarter": "quarter respond = cost cell: planning weights, quarter share",
+   "all_respond": "all respond",
+   "planning_lapse0": "planning cell at lapse 0",
+   "planning_lapse0.2": "planning cell at lapse 0.2"
+  },
+  "REGTABLE_POWER_COL": {
+   "planning": "power_planning_s0.5_l0.1",
+   "cost_lower_half": "cost_lower_half",
+   "quarter": "power_s0.25_l0.1",
+   "all_respond": "power_s1_l0.1",
+   "planning_lapse0": "power_s0.5_l0",
+   "planning_lapse0.2": null
+  },
+  "EXACT_TOL": 1e-12,
+  "UNIQUE_GAP": 1e-09,
+  "RESP_OPP_MAX": 60,
+  "RECOVER_N": [
+   10,
+   20
+  ],
+  "Q_GRID": 20001,
+  "FIG_DPI": 150,
+  "SERIES_COLOURS": [
+   "#0072B2",
+   "#009E73",
+   "#D55E00",
+   "#CC79A7"
+  ],
+  "SERIES_MARKERS": [
+   "o",
+   "s",
+   "^",
+   "D"
+  ],
+  "SERIES_STYLES": [
+   "-",
+   "--",
+   "-.",
+   ":"
+  ],
+  "FEATURES": [
+   "fog",
+   "colour"
+  ],
+  "CLAIM": {
+   "fog": "H1 fog",
+   "colour": "H2 colour"
+  },
+  "RULE_SIGN_ALPHA": 0.05,
+  "RULE_SIGN_MIN_PREDICTED": [
+   0,
+   3,
+   5,
+   8
+  ],
+  "SAMPLE_SIZES": [
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   25,
+   30,
+   40,
+   60
+  ],
+  "N_TASTE_PEOPLE": 20000,
+  "N_DETECT_PEOPLE": 600,
+  "TASTE_SPREADS_IN_FLOORS": [
+   0.25,
+   0.5,
+   0.75,
+   1.0
+  ],
+  "NONRESPONDER_SPREAD_MULT": 0.5,
+  "RULE_RESPONDER_WEIGHTS": [
+   0.3,
+   0.5,
+   0.7
+  ],
+  "RULE_RESPONDER_SHARES": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "LAPSE_RATES": [
+   0.0,
+   0.1,
+   0.2
+  ],
+  "COPIED_SETTINGS": [
+   "RULE_SIGN_ALPHA",
+   "RULE_SIGN_MIN_PREDICTED",
+   "SAMPLE_SIZES",
+   "N_TASTE_PEOPLE",
+   "N_DETECT_PEOPLE",
+   "TASTE_SPREADS_IN_FLOORS",
+   "NONRESPONDER_SPREAD_MULT",
+   "RULE_RESPONDER_WEIGHTS",
+   "RULE_RESPONDER_SHARES",
+   "LAPSE_RATES"
+  ],
+  "COPIED_FUNCTIONS": [
+   "sha256_of",
+   "trinomial_grid",
+   "combine_grids",
+   "sign_test_critical",
+   "rule_mask_count",
+   "rule_mask_sign",
+   "rule_false_claim_exact"
+  ],
+  "OPTIONAL_INPUTS": "{'data/power_v4_n10_20/power_report.txt'}"
+ },
+ "result": "complete"
+}
