@@ -1,0 +1,3 @@
+group,n,n_both_positive,n_colour_only,n_fog_only,n_both_negative,both_positive_n,both_positive_min_deg,both_positive_q1_deg,both_positive_median_deg,both_positive_q3_deg,both_positive_max_deg,detected_predicted_both,detected_either_direction_both
+participant,20,12,3,3,2,12,3.4383348480126945,28.58339916029326,49.09627671016802,68.13820417363658,88.68721898790491,4,4
+control,30,7,12,6,5,7,30.015635216476674,42.22935080278729,45.53190138420083,72.56253922715231,83.7120254058114,0,0

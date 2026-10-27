@@ -1,0 +1,17 @@
+analysis,kind,n,statistic,rule,p,verdict,note,registered_false_claim,registered_power
+H1 (fog),sign test (registered),20,"7 predicted of d = 7 detected, 0 opposite","sign test, alpha 0.05, minimum predicted 0",0.0078125,supported,,0.0191585310823516,0.7866796057229912
+H1 (fog),count rule (sensitivity),20,"7 predicted of d = 7 detected, 0 opposite","k >= 5, m <= 1",,supported,never supports a claim; the sign test decides,0.0413975231250285,0.7968486683450157
+H2 (colour),sign test (registered),20,"9 predicted of d = 9 detected, 0 opposite","sign test, alpha 0.05, minimum predicted 0",0.001953125,supported,,0.018901593715902,0.92273564216755
+H2 (colour),count rule (sensitivity),20,"9 predicted of d = 9 detected, 0 opposite","k >= 7, m <= 3",,supported,never supports a claim; the sign test decides,0.0395719049808233,0.9687873990630004
+attention check: catch failures,gate,20+30,,,0.8197609362096113,not significant after Holm correction,,,
+attention check: responses < 300 ms,gate,20+30,,,0.5198091639973772,not significant after Holm correction,,,
+C1 colour,primary,20+30,U = 455.0 (asymptotic),,0.0011083270529174847,supported,significant after Holm correction,,
+C1 fog,primary,20+30,U = 445.0 (asymptotic),,0.0021080319514049286,supported,significant after Holm correction,,
+"t-test and BF, colour",secondary,20,"t = 3.385, BF10 = 27.4",,0.0015526199520656165,evidence for (BF10 > 3),,,
+"t-test and BF, colour (capped)",secondary,20,"t = 3.385, BF10 = 27.4",,0.0015526199520656165,evidence for (BF10 > 3),,,
+"t-test and BF, fog",secondary,20,"t = 3.940, BF10 = 81.8",,0.0004393309371092715,evidence for (BF10 > 3),,,
+"t-test and BF, fog (capped)",secondary,20,"t = 3.940, BF10 = 81.8",,0.0004393309371092715,evidence for (BF10 > 3),,,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,20,9 following,,0.0020158290745896086,,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,30,0 following,,0.5159381276459153,,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,20,2 following,,0.0005346104418435227,,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,30,1 following,,0.5695066532291506,,,,

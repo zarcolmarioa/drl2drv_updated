@@ -1,0 +1,329 @@
+quantity,this_script,reference,ok,against
+_c1_gate/catch,FFFFT,FFFFT,True,stored reference
+_c1_gate/fired,TFTFT,TFTFT,True,stored reference
+_c1_gate/rt,TFTFF,TFTFF,True,stored reference
+_c1_test/colour,FTTFF,FTTFF,True,stored reference
+_c1_test/fog,FFFFF,FFFFF,True,stored reference
+_c1_zero_catch/n,"[4.0, 5.0, 2.0, 4.0, 6.0, 5.0, 7.0, 6.0, 3.0, 4.0]","[4.0, 5.0, 2.0, 4.0, 6.0, 5.0, 7.0, 6.0, 3.0, 4.0]",True,stored reference
+_c1_zero_catch/reject_colour,FFFFF,FFFFF,True,stored reference
+_c1_zero_catch/reject_fog,FFFFF,FFFFF,True,stored reference
+_c1_zero_catch/rt_fires,TFFFF,TFFFF,True,stored reference
+_c1_zero_catch/usable,TTFFT,TTFFT,True,stored reference
+"_jzs_g_form/2.1,10",1.4456188579096265,1.4456188579096265,True,stored reference
+"as_probability/0.5,0.97",0.6189278548001903,0.6189278548001903,True,stored reference
+classify/opposite/colour,500.0,500.0,True,stored reference
+classify/opposite/fog,500.0,500.0,True,stored reference
+classify/predicted/colour,500.0,500.0,True,stored reference
+classify/predicted/fog,500.0,500.0,True,stored reference
+compute_floors/lower/colour,-0.2896056357511166,-0.2896056357511166,True,stored reference
+compute_floors/lower/fog,-0.48559721218587304,-0.48559721218587304,True,stored reference
+compute_floors/null_mean/colour,-0.0008310777540807818,-0.0008310777540807824,True,stored reference
+compute_floors/null_mean/fog,0.0007845519680728472,0.0007845519680728465,True,stored reference
+compute_floors/sd/colour,0.14638289895502238,0.1463828989550224,True,stored reference
+compute_floors/sd/fog,0.2467603087799088,0.2467603087799088,True,stored reference
+compute_floors/upper/colour,0.2863223717155787,0.2863223717155787,True,stored reference
+compute_floors/upper/fog,0.4880483057825434,0.4880483057825434,True,stored reference
+draw_attention/catch_sha256,7ceb8b64c86e853afce124af9a6561e645d477fb07b0880afd80d36e9f372e3b,7ceb8b64c86e853afce124af9a6561e645d477fb07b0880afd80d36e9f372e3b,True,stored reference
+draw_attention/fast_sum,2.2611111111111115,2.2611111111111115,True,stored reference
+draw_attention/lapse_sum,5.4037404488652925,5.4037404488652925,True,stored reference
+fit_batch/0/colour,0.22286672374858107,0.22286672374858105,True,stored reference
+fit_batch/0/fog,0.01668980157963181,0.016689801579631798,True,stored reference
+fit_batch/1/colour,0.49604541171474625,0.49604541171474625,True,stored reference
+fit_batch/1/fog,-0.0016736860652614707,-0.0016736860652614355,True,stored reference
+fit_batch/2/colour,-0.020093563640438693,-0.0200935636404387,True,stored reference
+fit_batch/2/fog,0.5870986019640844,0.5870986019640844,True,stored reference
+fit_batch/3/colour,0.38740410475173026,0.38740410475173026,True,stored reference
+fit_batch/3/fog,0.9306131889740917,0.9306131889740917,True,stored reference
+fit_batch/4/colour,-0.15767489445247507,-0.1576748944524751,True,stored reference
+fit_batch/4/fog,-0.14769331456940193,-0.14769331456940193,True,stored reference
+fit_batch/5/colour,0.9667252625391509,0.9667252625391509,True,stored reference
+fit_batch/5/fog,-0.5063622568924957,-0.5063622568924957,True,stored reference
+fit_batch/6/colour,2.140861514971723,2.140861514971723,True,stored reference
+fit_batch/6/fog,1.2287162688283497,1.2287162688283497,True,stored reference
+fit_batch/7/colour,0.5216060663101221,0.5216060663101221,True,stored reference
+fit_batch/7/fog,0.18513815764394095,0.18513815764394095,True,stored reference
+fit_firth/0/colour,0.22286672374863853,0.22286672374863856,True,stored reference
+fit_firth/0/fog,0.016689801579676335,0.016689801579676315,True,stored reference
+fit_firth/1/colour,0.496045411714619,0.4960454117146191,True,stored reference
+fit_firth/1/fog,-0.0016736860653579222,-0.0016736860653579092,True,stored reference
+fit_firth/2/colour,-0.020093563640474543,-0.02009356364047454,True,stored reference
+fit_firth/2/fog,0.5870986019640363,0.5870986019640364,True,stored reference
+fit_firth/3/colour,0.387404104751744,0.3874041047517441,True,stored reference
+fit_firth/3/fog,0.9306131889741245,0.9306131889741246,True,stored reference
+fit_firth/4/colour,-0.1576748944525717,-0.15767489445257168,True,stored reference
+fit_firth/4/fog,-0.14769331456947754,-0.14769331456947749,True,stored reference
+fit_firth/5/colour,0.9667252625393563,0.9667252625393563,True,stored reference
+fit_firth/5/fog,-0.5063622568917688,-0.5063622568917688,True,stored reference
+fit_firth/6/colour,2.140861514971723,2.140861514971723,True,stored reference
+fit_firth/6/fog,1.22871626882835,1.22871626882835,True,stored reference
+fit_firth/7/colour,0.5216060663100633,0.5216060663100633,True,stored reference
+fit_firth/7/fog,0.1851381576439,0.1851381576439,True,stored reference
+fit_firth_batch/0/colour,0.22286672374858107,0.22286672374858105,True,stored reference
+fit_firth_batch/0/fog,0.01668980157963181,0.016689801579631798,True,stored reference
+fit_firth_batch/1/colour,0.49604541171474625,0.49604541171474625,True,stored reference
+fit_firth_batch/1/fog,-0.0016736860652614707,-0.0016736860652614355,True,stored reference
+fit_firth_batch/2/colour,-0.020093563640438693,-0.0200935636404387,True,stored reference
+fit_firth_batch/2/fog,0.5870986019640844,0.5870986019640844,True,stored reference
+fit_firth_batch/3/colour,0.38740410475173026,0.38740410475173026,True,stored reference
+fit_firth_batch/3/fog,0.9306131889740917,0.9306131889740917,True,stored reference
+fit_firth_batch/4/colour,-0.15767489445247507,-0.1576748944524751,True,stored reference
+fit_firth_batch/4/fog,-0.14769331456940193,-0.14769331456940193,True,stored reference
+fit_firth_batch/5/colour,0.9667252625391509,0.9667252625391509,True,stored reference
+fit_firth_batch/5/fog,-0.5063622568924957,-0.5063622568924957,True,stored reference
+fit_firth_batch/6/colour,2.140861514971723,2.140861514971723,True,stored reference
+fit_firth_batch/6/fog,1.2287162688283497,1.2287162688283497,True,stored reference
+fit_firth_batch/7/colour,0.5216060663101221,0.5216060663101221,True,stored reference
+fit_firth_batch/7/fog,0.18513815764394095,0.18513815764394095,True,stored reference
+fit_logit_batch/0/colour,0.22718511508970068,0.2271851150897008,True,stored reference
+fit_logit_batch/0/fog,0.01766677891913002,0.017666778919130016,True,stored reference
+fit_logit_batch/1/colour,0.5059669742679315,0.5059669742679315,True,stored reference
+fit_logit_batch/1/fog,-0.00024347505040722808,-0.00024347505040727189,True,stored reference
+fit_logit_batch/2/colour,-0.019718181141671356,-0.01971818114167136,True,stored reference
+fit_logit_batch/2/fog,0.5964710175695054,0.5964710175695054,True,stored reference
+fit_logit_batch/3/colour,0.3960258068482941,0.3960258068482941,True,stored reference
+fit_logit_batch/3/fog,0.9464972354074181,0.9464972354074183,True,stored reference
+fit_logit_batch/4/colour,-0.16089950559945929,-0.16089950559945929,True,stored reference
+fit_logit_batch/4/fog,-0.15055178814075887,-0.1505517881407587,True,stored reference
+fit_logit_batch/5/colour,0.9875132325086207,0.9875132325086207,True,stored reference
+fit_logit_batch/5/fog,-0.5120769121358539,-0.5120769121358539,True,stored reference
+"holm_two/0.001,0.2",TF,TF,True,stored reference
+"holm_two/0.01,0.04",TT,TT,True,stored reference
+"holm_two/0.03,0.04",FF,FF,True,stored reference
+"holm_two/0.2,0.024",FT,FT,True,stored reference
+informative_medians/colour,0.9713604453755071,0.9713604453755071,True,stored reference
+informative_medians/colour_n,120.0,120.0,True,stored reference
+informative_medians/fog,0.6416750913202939,0.6416750913202939,True,stored reference
+informative_medians/fog_n,120.0,120.0,True,stored reference
+"jzs_bayes_factor/-1.0,15/one",0.1466309056826484,0.14663090568264842,True,stored reference
+"jzs_bayes_factor/-1.0,15/two",0.4029288826371138,0.40292888263711385,True,stored reference
+"jzs_bayes_factor/0.5,20/one",0.35355222878647574,0.35355222878647574,True,stored reference
+"jzs_bayes_factor/0.5,20/two",0.2600153765676458,0.2600153765676458,True,stored reference
+"jzs_bayes_factor/2.1,10/one",2.763762221888209,2.763762221888209,True,stored reference
+"jzs_bayes_factor/2.1,10/two",1.4456188579096574,1.4456188579096574,True,stored reference
+"jzs_bayes_factor/3.4,12/one",18.04275852902397,18.04275852902397,True,stored reference
+"jzs_bayes_factor/3.4,12/two",9.06818484168585,9.06818484168585,True,stored reference
+"lapse_p/lapse0.2/[3,17]",0.599771613299786,0.599771613299786,True,stored reference
+lapse_p/lapse0.2/sum,736.3802812058475,736.3802812058475,True,stored reference
+"lapse_p/lapse0/[3,17]",0.6247145166247325,0.6247145166247325,True,stored reference
+lapse_p/lapse0/sum,740.4753515073091,740.4753515073091,True,stored reference
+load_trials/X_sha256,ecb4c8a53546a5b10535cb19f5baac3e21dc4e3a1673c5a9c2d98131f2dd20ee,ecb4c8a53546a5b10535cb19f5baac3e21dc4e3a1673c5a9c2d98131f2dd20ee,True,stored reference
+mann_whitney_one_sided/exact/0,"[70.0, 0.04894022386282448]","[70.0, 0.04894022386282448]",True,stored reference
+mann_whitney_one_sided/exact/0/method,exact,exact,True,stored reference
+mann_whitney_one_sided/exact/1,"[54.0, 0.3392156862745098]","[54.0, 0.3392156862745098]",True,stored reference
+mann_whitney_one_sided/exact/1/method,exact,exact,True,stored reference
+mann_whitney_one_sided/ties/0,"[134.0, 0.06239791329212847]","[134.0, 0.06239791329212847]",True,stored reference
+mann_whitney_one_sided/ties/0/method,asymptotic,asymptotic,True,stored reference
+mann_whitney_one_sided/ties/1,"[131.5, 0.07631931163686224]","[131.5, 0.07631931163686224]",True,stored reference
+mann_whitney_one_sided/ties/1/method,asymptotic,asymptotic,True,stored reference
+"mw_exact_sf/5,6/[20]",0.21428571428571427,0.21428571428571427,True,stored reference
+"mw_exact_sf/5,6/sum",16.0,16.0,True,stored reference
+mw_p_batch/asym/method,asymptotic,asymptotic,True,stored reference
+mw_p_batch/asym/p,"[0.002140310584960722, 0.07078690058441392, 0.24403704658262404, 0.014223516488281518, 0.08707084160752154]","[0.002140310584960722, 0.07078690058441392, 0.24403704658262404, 0.014223516488281518, 0.08707084160752154]",True,stored reference
+mw_p_batch/exact/method,exact,exact,True,stored reference
+mw_p_batch/exact/p,"[0.04894022386282448, 0.3392156862745098, 0.04124791617051679, 0.23633404778915615, 0.04894022386282448]","[0.04894022386282448, 0.3392156862745098, 0.04124791617051679, 0.23633404778915615, 0.04894022386282448]",True,stored reference
+mw_p_batch/ties/method,asymptotic,asymptotic,True,stored reference
+mw_p_batch/ties/p,"[0.06239791329212847, 0.07631931163686224, 0.30006595575169154, 0.11095632451944115, 0.0043147765520927354]","[0.06239791329212847, 0.07631931163686224, 0.30006595575169154, 0.11095632451944115, 0.0043147765520927354]",True,stored reference
+penalised_loglik/0,-120.24370429500797,-120.24370429500797,True,stored reference
+penalised_loglik/1,-116.02897273387214,-116.02897273387214,True,stored reference
+penalised_loglik/2,-118.63555894522017,-118.63555894522017,True,stored reference
+penalised_loglik/3,-110.78872720550008,-110.78872720550007,True,stored reference
+penalised_loglik/4,-120.57723774196428,-120.57723774196428,True,stored reference
+penalised_loglik/5,-103.94020300467484,-103.94020300467484,True,stored reference
+penalised_loglik/6,-72.12537201026973,-72.12537201026973,True,stored reference
+penalised_loglik/7,-114.9877880531155,-114.9877880531155,True,stored reference
+"prevalence/0,0,10,0.22/hpdi_hi",0.78,0.78,True,stored reference
+"prevalence/0,0,10,0.22/hpdi_lo",0.0,0.0,True,stored reference
+"prevalence/0,0,10,0.22/mode",0.005,0.005,True,stored reference
+"prevalence/0,0,10,0.22/moment",0.0,0.0,True,stored reference
+"prevalence/0,0,10,0.22/moment_raw",0.0,0.0,True,stored reference
+"prevalence/0,0,10,0.22/post_sum",201.40486603125584,201.40486603125584,True,stored reference
+"prevalence/3,4,15,0.51/hpdi_hi",0.54,0.54,True,stored reference
+"prevalence/3,4,15,0.51/hpdi_lo",0.0,0.0,True,stored reference
+"prevalence/3,4,15,0.51/mode",0.0,0.0,True,stored reference
+"prevalence/3,4,15,0.51/moment",0.0,0.0,True,stored reference
+"prevalence/3,4,15,0.51/moment_raw",-0.13071895424836602,-0.13071895424836602,True,stored reference
+"prevalence/3,4,15,0.51/post_sum",201.6367367341002,201.6367367341002,True,stored reference
+"prevalence/5,1,12,0.86/hpdi_hi",0.63,0.63,True,stored reference
+"prevalence/5,1,12,0.86/hpdi_lo",0.0,0.0,True,stored reference
+"prevalence/5,1,12,0.86/mode",0.32,0.32,True,stored reference
+"prevalence/5,1,12,0.86/moment",0.38759689922480617,0.38759689922480617,True,stored reference
+"prevalence/5,1,12,0.86/moment_raw",0.38759689922480617,0.38759689922480617,True,stored reference
+"prevalence/5,1,12,0.86/post_sum",200.30119131175644,200.30119131175644,True,stored reference
+"prevalence/9,0,20,0.5/hpdi_hi",1.0,1.0,True,stored reference
+"prevalence/9,0,20,0.5/hpdi_lo",0.385,0.385,True,stored reference
+"prevalence/9,0,20,0.5/mode",0.79,0.79,True,stored reference
+"prevalence/9,0,20,0.5/moment",0.9,0.9,True,stored reference
+"prevalence/9,0,20,0.5/moment_raw",0.9,0.9,True,stored reference
+"prevalence/9,0,20,0.5/post_sum",200.70972969754033,200.70972969754033,True,stored reference
+"rule_mask_count/10,4,0/shape",11.0,11.0,True,stored reference
+"rule_mask_count/10,4,0/sum",7.0,7.0,True,stored reference
+"rule_mask_count/12,5,2/shape",13.0,13.0,True,stored reference
+"rule_mask_count/12,5,2/sum",24.0,24.0,True,stored reference
+"rule_mask_count/20,7,3/shape",21.0,21.0,True,stored reference
+"rule_mask_count/20,7,3/sum",56.0,56.0,True,stored reference
+simulate_lapsing/sha256,f4e368fd878343f913ab2258dfcb7a0785e79e75a7216a663fa4be8764d2036f,f4e368fd878343f913ab2258dfcb7a0785e79e75a7216a663fa4be8764d2036f,True,stored reference
+simulate_many/sha256,653b845a5e48a86ed72be5fc4719df890f9441f05f95ec95840a2c718cbb1c24,653b845a5e48a86ed72be5fc4719df890f9441f05f95ec95840a2c718cbb1c24,True,stored reference
+_c1_gate/catch,FFFFT,FFFFT,True,"power script, run now"
+_c1_gate/fired,TFTFT,TFTFT,True,"power script, run now"
+_c1_gate/rt,TFTFF,TFTFF,True,"power script, run now"
+_c1_test/colour,FTTFF,FTTFF,True,"power script, run now"
+_c1_test/fog,FFFFF,FFFFF,True,"power script, run now"
+_c1_zero_catch/n,"[4.0, 5.0, 2.0, 4.0, 6.0, 5.0, 7.0, 6.0, 3.0, 4.0]","[4.0, 5.0, 2.0, 4.0, 6.0, 5.0, 7.0, 6.0, 3.0, 4.0]",True,"power script, run now"
+_c1_zero_catch/reject_colour,FFFFF,FFFFF,True,"power script, run now"
+_c1_zero_catch/reject_fog,FFFFF,FFFFF,True,"power script, run now"
+_c1_zero_catch/rt_fires,TFFFF,TFFFF,True,"power script, run now"
+_c1_zero_catch/usable,TTFFT,TTFFT,True,"power script, run now"
+"_jzs_g_form/2.1,10",1.4456188579096265,1.4456188579096265,True,"power script, run now"
+"as_probability/0.5,0.97",0.6189278548001903,0.6189278548001903,True,"power script, run now"
+classify/opposite/colour,500.0,500.0,True,"power script, run now"
+classify/opposite/fog,500.0,500.0,True,"power script, run now"
+classify/predicted/colour,500.0,500.0,True,"power script, run now"
+classify/predicted/fog,500.0,500.0,True,"power script, run now"
+compute_floors/lower/colour,-0.2896056357511166,-0.2896056357511166,True,"power script, run now"
+compute_floors/lower/fog,-0.48559721218587304,-0.48559721218587304,True,"power script, run now"
+compute_floors/null_mean/colour,-0.0008310777540807818,-0.0008310777540807818,True,"power script, run now"
+compute_floors/null_mean/fog,0.0007845519680728472,0.0007845519680728472,True,"power script, run now"
+compute_floors/sd/colour,0.14638289895502238,0.14638289895502238,True,"power script, run now"
+compute_floors/sd/fog,0.2467603087799088,0.2467603087799088,True,"power script, run now"
+compute_floors/upper/colour,0.2863223717155787,0.2863223717155787,True,"power script, run now"
+compute_floors/upper/fog,0.4880483057825434,0.4880483057825434,True,"power script, run now"
+draw_attention/catch_sha256,7ceb8b64c86e853afce124af9a6561e645d477fb07b0880afd80d36e9f372e3b,7ceb8b64c86e853afce124af9a6561e645d477fb07b0880afd80d36e9f372e3b,True,"power script, run now"
+draw_attention/fast_sum,2.2611111111111115,2.2611111111111115,True,"power script, run now"
+draw_attention/lapse_sum,5.4037404488652925,5.4037404488652925,True,"power script, run now"
+fit_batch/0/colour,0.22286672374858107,0.22286672374858107,True,"power script, run now"
+fit_batch/0/fog,0.01668980157963181,0.01668980157963181,True,"power script, run now"
+fit_batch/1/colour,0.49604541171474625,0.49604541171474625,True,"power script, run now"
+fit_batch/1/fog,-0.0016736860652614707,-0.0016736860652614707,True,"power script, run now"
+fit_batch/2/colour,-0.020093563640438693,-0.020093563640438693,True,"power script, run now"
+fit_batch/2/fog,0.5870986019640844,0.5870986019640844,True,"power script, run now"
+fit_batch/3/colour,0.38740410475173026,0.38740410475173026,True,"power script, run now"
+fit_batch/3/fog,0.9306131889740917,0.9306131889740917,True,"power script, run now"
+fit_batch/4/colour,-0.15767489445247507,-0.15767489445247507,True,"power script, run now"
+fit_batch/4/fog,-0.14769331456940193,-0.14769331456940193,True,"power script, run now"
+fit_batch/5/colour,0.9667252625391509,0.9667252625391509,True,"power script, run now"
+fit_batch/5/fog,-0.5063622568924957,-0.5063622568924957,True,"power script, run now"
+fit_batch/6/colour,2.140861514971723,2.140861514971723,True,"power script, run now"
+fit_batch/6/fog,1.2287162688283497,1.2287162688283497,True,"power script, run now"
+fit_batch/7/colour,0.5216060663101221,0.5216060663101221,True,"power script, run now"
+fit_batch/7/fog,0.18513815764394095,0.18513815764394095,True,"power script, run now"
+fit_firth/0/colour,0.22286672374863853,0.22286672374863853,True,"power script, run now"
+fit_firth/0/fog,0.016689801579676335,0.016689801579676335,True,"power script, run now"
+fit_firth/1/colour,0.496045411714619,0.496045411714619,True,"power script, run now"
+fit_firth/1/fog,-0.0016736860653579222,-0.0016736860653579222,True,"power script, run now"
+fit_firth/2/colour,-0.020093563640474543,-0.020093563640474543,True,"power script, run now"
+fit_firth/2/fog,0.5870986019640363,0.5870986019640363,True,"power script, run now"
+fit_firth/3/colour,0.387404104751744,0.387404104751744,True,"power script, run now"
+fit_firth/3/fog,0.9306131889741245,0.9306131889741245,True,"power script, run now"
+fit_firth/4/colour,-0.1576748944525717,-0.1576748944525717,True,"power script, run now"
+fit_firth/4/fog,-0.14769331456947754,-0.14769331456947754,True,"power script, run now"
+fit_firth/5/colour,0.9667252625393563,0.9667252625393563,True,"power script, run now"
+fit_firth/5/fog,-0.5063622568917688,-0.5063622568917688,True,"power script, run now"
+fit_firth/6/colour,2.140861514971723,2.140861514971723,True,"power script, run now"
+fit_firth/6/fog,1.22871626882835,1.22871626882835,True,"power script, run now"
+fit_firth/7/colour,0.5216060663100633,0.5216060663100633,True,"power script, run now"
+fit_firth/7/fog,0.1851381576439,0.1851381576439,True,"power script, run now"
+fit_firth_batch/0/colour,0.22286672374858107,0.22286672374858107,True,"power script, run now"
+fit_firth_batch/0/fog,0.01668980157963181,0.01668980157963181,True,"power script, run now"
+fit_firth_batch/1/colour,0.49604541171474625,0.49604541171474625,True,"power script, run now"
+fit_firth_batch/1/fog,-0.0016736860652614707,-0.0016736860652614707,True,"power script, run now"
+fit_firth_batch/2/colour,-0.020093563640438693,-0.020093563640438693,True,"power script, run now"
+fit_firth_batch/2/fog,0.5870986019640844,0.5870986019640844,True,"power script, run now"
+fit_firth_batch/3/colour,0.38740410475173026,0.38740410475173026,True,"power script, run now"
+fit_firth_batch/3/fog,0.9306131889740917,0.9306131889740917,True,"power script, run now"
+fit_firth_batch/4/colour,-0.15767489445247507,-0.15767489445247507,True,"power script, run now"
+fit_firth_batch/4/fog,-0.14769331456940193,-0.14769331456940193,True,"power script, run now"
+fit_firth_batch/5/colour,0.9667252625391509,0.9667252625391509,True,"power script, run now"
+fit_firth_batch/5/fog,-0.5063622568924957,-0.5063622568924957,True,"power script, run now"
+fit_firth_batch/6/colour,2.140861514971723,2.140861514971723,True,"power script, run now"
+fit_firth_batch/6/fog,1.2287162688283497,1.2287162688283497,True,"power script, run now"
+fit_firth_batch/7/colour,0.5216060663101221,0.5216060663101221,True,"power script, run now"
+fit_firth_batch/7/fog,0.18513815764394095,0.18513815764394095,True,"power script, run now"
+fit_logit_batch/0/colour,0.22718511508970068,0.22718511508970068,True,"power script, run now"
+fit_logit_batch/0/fog,0.01766677891913002,0.01766677891913002,True,"power script, run now"
+fit_logit_batch/1/colour,0.5059669742679315,0.5059669742679315,True,"power script, run now"
+fit_logit_batch/1/fog,-0.00024347505040722808,-0.00024347505040722808,True,"power script, run now"
+fit_logit_batch/2/colour,-0.019718181141671356,-0.019718181141671356,True,"power script, run now"
+fit_logit_batch/2/fog,0.5964710175695054,0.5964710175695054,True,"power script, run now"
+fit_logit_batch/3/colour,0.3960258068482941,0.3960258068482941,True,"power script, run now"
+fit_logit_batch/3/fog,0.9464972354074181,0.9464972354074181,True,"power script, run now"
+fit_logit_batch/4/colour,-0.16089950559945929,-0.16089950559945929,True,"power script, run now"
+fit_logit_batch/4/fog,-0.15055178814075887,-0.15055178814075887,True,"power script, run now"
+fit_logit_batch/5/colour,0.9875132325086207,0.9875132325086207,True,"power script, run now"
+fit_logit_batch/5/fog,-0.5120769121358539,-0.5120769121358539,True,"power script, run now"
+"holm_two/0.001,0.2",TF,TF,True,"power script, run now"
+"holm_two/0.01,0.04",TT,TT,True,"power script, run now"
+"holm_two/0.03,0.04",FF,FF,True,"power script, run now"
+"holm_two/0.2,0.024",FT,FT,True,"power script, run now"
+informative_medians/colour,0.9713604453755071,0.9713604453755071,True,"power script, run now"
+informative_medians/colour_n,120.0,120.0,True,"power script, run now"
+informative_medians/fog,0.6416750913202939,0.6416750913202939,True,"power script, run now"
+informative_medians/fog_n,120.0,120.0,True,"power script, run now"
+"jzs_bayes_factor/-1.0,15/one",0.1466309056826484,0.1466309056826484,True,"power script, run now"
+"jzs_bayes_factor/-1.0,15/two",0.4029288826371138,0.4029288826371138,True,"power script, run now"
+"jzs_bayes_factor/0.5,20/one",0.35355222878647574,0.35355222878647574,True,"power script, run now"
+"jzs_bayes_factor/0.5,20/two",0.2600153765676458,0.2600153765676458,True,"power script, run now"
+"jzs_bayes_factor/2.1,10/one",2.763762221888209,2.763762221888209,True,"power script, run now"
+"jzs_bayes_factor/2.1,10/two",1.4456188579096574,1.4456188579096574,True,"power script, run now"
+"jzs_bayes_factor/3.4,12/one",18.04275852902397,18.04275852902397,True,"power script, run now"
+"jzs_bayes_factor/3.4,12/two",9.06818484168585,9.06818484168585,True,"power script, run now"
+"lapse_p/lapse0.2/[3,17]",0.599771613299786,0.599771613299786,True,"power script, run now"
+lapse_p/lapse0.2/sum,736.3802812058475,736.3802812058475,True,"power script, run now"
+"lapse_p/lapse0/[3,17]",0.6247145166247325,0.6247145166247325,True,"power script, run now"
+lapse_p/lapse0/sum,740.4753515073091,740.4753515073091,True,"power script, run now"
+load_trials/X_sha256,ecb4c8a53546a5b10535cb19f5baac3e21dc4e3a1673c5a9c2d98131f2dd20ee,ecb4c8a53546a5b10535cb19f5baac3e21dc4e3a1673c5a9c2d98131f2dd20ee,True,"power script, run now"
+mann_whitney_one_sided/exact/0,"[70.0, 0.04894022386282448]","[70.0, 0.04894022386282448]",True,"power script, run now"
+mann_whitney_one_sided/exact/0/method,exact,exact,True,"power script, run now"
+mann_whitney_one_sided/exact/1,"[54.0, 0.3392156862745098]","[54.0, 0.3392156862745098]",True,"power script, run now"
+mann_whitney_one_sided/exact/1/method,exact,exact,True,"power script, run now"
+mann_whitney_one_sided/ties/0,"[134.0, 0.06239791329212847]","[134.0, 0.06239791329212847]",True,"power script, run now"
+mann_whitney_one_sided/ties/0/method,asymptotic,asymptotic,True,"power script, run now"
+mann_whitney_one_sided/ties/1,"[131.5, 0.07631931163686224]","[131.5, 0.07631931163686224]",True,"power script, run now"
+mann_whitney_one_sided/ties/1/method,asymptotic,asymptotic,True,"power script, run now"
+"mw_exact_sf/5,6/[20]",0.21428571428571427,0.21428571428571427,True,"power script, run now"
+"mw_exact_sf/5,6/sum",16.0,16.0,True,"power script, run now"
+mw_p_batch/asym/method,asymptotic,asymptotic,True,"power script, run now"
+mw_p_batch/asym/p,"[0.002140310584960722, 0.07078690058441392, 0.24403704658262404, 0.014223516488281518, 0.08707084160752154]","[0.002140310584960722, 0.07078690058441392, 0.24403704658262404, 0.014223516488281518, 0.08707084160752154]",True,"power script, run now"
+mw_p_batch/exact/method,exact,exact,True,"power script, run now"
+mw_p_batch/exact/p,"[0.04894022386282448, 0.3392156862745098, 0.04124791617051679, 0.23633404778915615, 0.04894022386282448]","[0.04894022386282448, 0.3392156862745098, 0.04124791617051679, 0.23633404778915615, 0.04894022386282448]",True,"power script, run now"
+mw_p_batch/ties/method,asymptotic,asymptotic,True,"power script, run now"
+mw_p_batch/ties/p,"[0.06239791329212847, 0.07631931163686224, 0.30006595575169154, 0.11095632451944115, 0.0043147765520927354]","[0.06239791329212847, 0.07631931163686224, 0.30006595575169154, 0.11095632451944115, 0.0043147765520927354]",True,"power script, run now"
+penalised_loglik/0,-120.24370429500797,-120.24370429500797,True,"power script, run now"
+penalised_loglik/1,-116.02897273387214,-116.02897273387214,True,"power script, run now"
+penalised_loglik/2,-118.63555894522017,-118.63555894522017,True,"power script, run now"
+penalised_loglik/3,-110.78872720550008,-110.78872720550008,True,"power script, run now"
+penalised_loglik/4,-120.57723774196428,-120.57723774196428,True,"power script, run now"
+penalised_loglik/5,-103.94020300467484,-103.94020300467484,True,"power script, run now"
+penalised_loglik/6,-72.12537201026973,-72.12537201026973,True,"power script, run now"
+penalised_loglik/7,-114.9877880531155,-114.9877880531155,True,"power script, run now"
+"prevalence/0,0,10,0.22/hpdi_hi",0.78,0.78,True,"power script, run now"
+"prevalence/0,0,10,0.22/hpdi_lo",0.0,0.0,True,"power script, run now"
+"prevalence/0,0,10,0.22/mode",0.005,0.005,True,"power script, run now"
+"prevalence/0,0,10,0.22/moment",0.0,0.0,True,"power script, run now"
+"prevalence/0,0,10,0.22/moment_raw",0.0,0.0,True,"power script, run now"
+"prevalence/0,0,10,0.22/post_sum",201.40486603125584,201.40486603125584,True,"power script, run now"
+"prevalence/3,4,15,0.51/hpdi_hi",0.54,0.54,True,"power script, run now"
+"prevalence/3,4,15,0.51/hpdi_lo",0.0,0.0,True,"power script, run now"
+"prevalence/3,4,15,0.51/mode",0.0,0.0,True,"power script, run now"
+"prevalence/3,4,15,0.51/moment",0.0,0.0,True,"power script, run now"
+"prevalence/3,4,15,0.51/moment_raw",-0.13071895424836602,-0.13071895424836602,True,"power script, run now"
+"prevalence/3,4,15,0.51/post_sum",201.6367367341002,201.6367367341002,True,"power script, run now"
+"prevalence/5,1,12,0.86/hpdi_hi",0.63,0.63,True,"power script, run now"
+"prevalence/5,1,12,0.86/hpdi_lo",0.0,0.0,True,"power script, run now"
+"prevalence/5,1,12,0.86/mode",0.32,0.32,True,"power script, run now"
+"prevalence/5,1,12,0.86/moment",0.38759689922480617,0.38759689922480617,True,"power script, run now"
+"prevalence/5,1,12,0.86/moment_raw",0.38759689922480617,0.38759689922480617,True,"power script, run now"
+"prevalence/5,1,12,0.86/post_sum",200.30119131175644,200.30119131175644,True,"power script, run now"
+"prevalence/9,0,20,0.5/hpdi_hi",1.0,1.0,True,"power script, run now"
+"prevalence/9,0,20,0.5/hpdi_lo",0.385,0.385,True,"power script, run now"
+"prevalence/9,0,20,0.5/mode",0.79,0.79,True,"power script, run now"
+"prevalence/9,0,20,0.5/moment",0.9,0.9,True,"power script, run now"
+"prevalence/9,0,20,0.5/moment_raw",0.9,0.9,True,"power script, run now"
+"prevalence/9,0,20,0.5/post_sum",200.70972969754033,200.70972969754033,True,"power script, run now"
+"rule_mask_count/10,4,0/shape",11.0,11.0,True,"power script, run now"
+"rule_mask_count/10,4,0/sum",7.0,7.0,True,"power script, run now"
+"rule_mask_count/12,5,2/shape",13.0,13.0,True,"power script, run now"
+"rule_mask_count/12,5,2/sum",24.0,24.0,True,"power script, run now"
+"rule_mask_count/20,7,3/shape",21.0,21.0,True,"power script, run now"
+"rule_mask_count/20,7,3/sum",56.0,56.0,True,"power script, run now"
+simulate_lapsing/sha256,f4e368fd878343f913ab2258dfcb7a0785e79e75a7216a663fa4be8764d2036f,f4e368fd878343f913ab2258dfcb7a0785e79e75a7216a663fa4be8764d2036f,True,"power script, run now"
+simulate_many/sha256,653b845a5e48a86ed72be5fc4719df890f9441f05f95ec95840a2c718cbb1c24,653b845a5e48a86ed72be5fc4719df890f9441f05f95ec95840a2c718cbb1c24,True,"power script, run now"

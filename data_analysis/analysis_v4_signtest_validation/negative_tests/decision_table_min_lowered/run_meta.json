@@ -1,0 +1,16 @@
+{
+ "test": "minimum predicted at d = 10 lowered by one",
+ "stopped": true,
+ "message": "[negative test: decision_table_min_lowered] sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary): d = 10: script (9, 1, 0.0107421875), table (8, 2, 0.0107421875)",
+ "rows_marked": [
+  10
+ ],
+ "checks": [
+  {
+   "check": "[negative test: decision_table_min_lowered] sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary)",
+   "result": "FAIL",
+   "stops_run": true,
+   "detail": "d = 10: script (9, 1, 0.0107421875), table (8, 2, 0.0107421875)"
+  }
+ ]
+}

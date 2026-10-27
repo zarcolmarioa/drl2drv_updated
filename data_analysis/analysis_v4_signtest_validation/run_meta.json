@@ -1,0 +1,3396 @@
+{
+ "script": "analyse_study_v4_signtest.py",
+ "run_mode": "validate_sim",
+ "started": "2026-10-27 10:05:15",
+ "output": "data/analysis_v4_signtest_validation",
+ "python": "3.11.15",
+ "numpy": "2.4.4",
+ "pandas": "3.0.3",
+ "scipy": "1.17.1",
+ "settings": {
+  "RUN_MODE": "validate_sim",
+  "DATASET_DIR": "data/sim_study_v4/datasets/messy",
+  "INPUT_FORMAT": "tidy",
+  "SURVEY_FILE": null,
+  "PARTICIPANT_TABLE": null,
+  "SIM_ROOT": "data/sim_study_v4",
+  "FROZEN_ROOT": "data/frozen_trial_list_v4",
+  "FROZEN_TRIAL_LIST": "trial_list.csv",
+  "COMBINED_RULE": "data/registration_v4/combined_rule.csv",
+  "GRID_TRIALS": "data/grid_block_v4/package/grid_trials.csv",
+  "DETECTION_CURVE": "data/power_v4_n10_20/frozen/detection_curve.csv",
+  "POWER_SCRIPT": "simulate_power_v4_n10_20.py",
+  "DECISION_TABLE": "data/sign_test_v4/decision_table.csv",
+  "SIGN_TEST_TABLE": "data/sign_test_v4/sign_test_table.csv",
+  "SIGN_TEST_SCRIPT": "sign_test_registration_v4.py",
+  "SIGN_MIN_PREDICTED": 0,
+  "SIGN_TEST_RULE": "sign test, alpha 0.05, minimum predicted 0",
+  "DECISION_D_MAX": 20,
+  "OUTPUT_ROOT": "data/analysis_v4_signtest",
+  "MAKE_FIGURES": true,
+  "REGISTERED_THRESHOLDS": {
+   "colour": [
+    0.286,
+    -0.29
+   ],
+   "fog": [
+    0.488,
+    -0.486
+   ]
+  },
+  "REGISTERED_RULES": {
+   "colour": {
+    "10": [
+     4,
+     0
+    ],
+    "11": [
+     5,
+     2
+    ],
+    "12": [
+     5,
+     2
+    ],
+    "13": [
+     5,
+     1
+    ],
+    "14": [
+     5,
+     1
+    ],
+    "15": [
+     6,
+     3
+    ],
+    "16": [
+     6,
+     2
+    ],
+    "17": [
+     6,
+     2
+    ],
+    "18": [
+     6,
+     2
+    ],
+    "19": [
+     7,
+     3
+    ],
+    "20": [
+     7,
+     3
+    ]
+   },
+   "fog": {
+    "10": [
+     4,
+     0
+    ],
+    "11": [
+     5,
+     2
+    ],
+    "12": [
+     5,
+     2
+    ],
+    "13": [
+     5,
+     1
+    ],
+    "14": [
+     5,
+     1
+    ],
+    "15": [
+     5,
+     1
+    ],
+    "16": [
+     5,
+     1
+    ],
+    "17": [
+     5,
+     1
+    ],
+    "18": [
+     5,
+     1
+    ],
+    "19": [
+     5,
+     1
+    ],
+    "20": [
+     5,
+     1
+    ]
+   }
+  },
+  "REGISTERED_CAP": {
+   "colour": 8.378,
+   "fog": 10.269
+  },
+  "PREVALENCE_SENSITIVITIES": [
+   [
+    "weak",
+    0.3
+   ],
+   [
+    "moderate",
+    0.5
+   ],
+   [
+    "strong",
+    0.7
+   ]
+  ],
+  "REGISTERED_SENSITIVITIES": {
+   "colour": [
+    0.5,
+    0.86,
+    0.99
+   ],
+   "fog": [
+    0.22,
+    0.51,
+    0.79
+   ]
+  },
+  "N_MIN_CLAIM": 10,
+  "N_MAX_PARTICIPANTS": 20,
+  "N_MAX_CONTROLS": 30,
+  "MIN_CONTROLS_C1": 20,
+  "CATCH_FAIL_EXCLUDE": 3,
+  "CATCH_SEQUENCE": [
+   "up",
+   "down",
+   "down",
+   "up",
+   "up",
+   "down",
+   "up",
+   "down",
+   "down",
+   "up"
+  ],
+  "CATCH_SEQUENCE_SOURCE": "placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js",
+  "SUZUKI_FOLLOW": 39,
+  "WORD_IDS": [
+   "foggy",
+   "faded",
+   "veiled",
+   "lifeless",
+   "unreal",
+   "dreamlike",
+   "distant",
+   "like_a_picture",
+   "oppressive",
+   "threatening"
+  ],
+  "WORD_BASELINE": [
+   "unreal",
+   "dreamlike",
+   "distant",
+   "like_a_picture"
+  ],
+  "STATE_ITEMS": [
+   "state_q02",
+   "state_q13",
+   "state_q19",
+   "state_q29"
+  ],
+  "WORD_MAX": 6,
+  "STATE_ITEM_MAX": 6,
+  "CDS_ITEMS": 29,
+  "AFS_ITEMS": [
+   2,
+   13,
+   19,
+   29
+  ],
+  "E1_PAIRS": [
+   [
+    "cds_q13",
+    "w_fog",
+    "CDS item 13 vs fog weight"
+   ],
+   [
+    "cds_q02",
+    "w_colour",
+    "CDS item 2 vs colour weight (reported, not a colour test)"
+   ],
+   [
+    "foggy_rel",
+    "w_fog",
+    "foggy minus baseline vs fog weight"
+   ],
+   [
+    "faded_rel",
+    "w_colour",
+    "faded minus baseline vs colour weight"
+   ]
+  ],
+  "BOOTSTRAP_REPS": 10000,
+  "BOOTSTRAP_SEED": 20261021,
+  "CI_LEVEL": 0.95,
+  "PROFILE_SEARCH_MAX": 50.0,
+  "PROFILE_XTOL": 1e-08,
+  "LOCAL_TZ": "Asia/Tokyo",
+  "TIDY_TRIALS": "trials.csv",
+  "TIDY_SESSIONS": "sessions.csv",
+  "TIDY_GRID": "grid.csv",
+  "TEST_IDS": [
+   "Z_21121989",
+   "CHAIN_2026"
+  ],
+  "ID_PATTERN": "^R_[A-Za-z0-9]{15}$",
+  "GROUP_STYLE": {
+   "participant": [
+    "#0072B2",
+    "o",
+    "participants"
+   ],
+   "control": [
+    "#D55E00",
+    "s",
+    "controls"
+   ],
+   "tier_D": [
+    "#009E73",
+    "^",
+    "Tier D"
+   ]
+  },
+  "FIG_DPI": 150,
+  "IDENTITY_SEED": 20261020,
+  "IDENTITY_W": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.5,
+    0.0
+   ],
+   [
+    0.0,
+    0.7
+   ],
+   [
+    0.5,
+    0.7
+   ],
+   [
+    -0.3,
+    0.2
+   ],
+   [
+    1.5,
+    -0.4
+   ],
+   [
+    3.0,
+    3.0
+   ],
+   [
+    0.29,
+    0.49
+   ]
+  ],
+  "IDENTITY_ABS_TOL": 1e-09,
+  "IDENTITY_REL_TOL": 1e-09,
+  "MW_AGREE_TOL": 1e-09,
+  "TRUTH_WEIGHT_TOL": 1e-07,
+  "FALSE_CLAIM_EXTRA_SPREADS": [
+   0.25,
+   0.5,
+   0.75
+  ],
+  "FALSE_CLAIM_EXTRA_NS": [
+   10,
+   15,
+   20
+  ],
+  "FALSE_CLAIM_EXTRA_STUDIES": 1000,
+  "FALSE_CLAIM_EXTRA_SEED": 20261026,
+  "FALSE_CLAIM_CI": 0.95,
+  "FALSE_CLAIM_MAX": 0.05,
+  "UNHASHED": [
+   "checksums.sha256",
+   "FROZEN.json",
+   "freeze_report.txt"
+  ],
+  "FROZEN_SEED": 42,
+  "PRED_SAT": "pred_sat",
+  "PRED_FOG": "pred_fog",
+  "SD_SAT": 39.182,
+  "SD_FOG": 9.348,
+  "PRED_REBUILD_TOL": 1e-09,
+  "ESTIMATOR": "firth",
+  "FIRTH_ITER": 200,
+  "FIRTH_TOL": 1e-10,
+  "FIRTH_MAX_STEP": 5.0,
+  "CAP_INFORMATIVE_SD": 0.2,
+  "CAP_THRESHOLD_SWEEP": [
+   0.05,
+   0.1,
+   0.15,
+   0.2,
+   0.25,
+   0.3,
+   0.4
+  ],
+  "ALPHA": 0.05,
+  "ONE_TAILED": true,
+  "BF_SCALE": 0.707,
+  "BF_ONE_SIDED": true,
+  "BF_THRESHOLD": 3.0,
+  "BF_FORM_TOL": 1e-06,
+  "FLOOR_ALPHA": 0.025,
+  "N_FLOOR_PEOPLE": 20000,
+  "DETECTION_SIDED": "two",
+  "PREVALENCE_HPDI": 0.95,
+  "PREVALENCE_N_GRID": 201,
+  "PREVALENCE_C_GRID": 201,
+  "PREVALENCE_ZERO_EPS": 0.001,
+  "C1_EXACT_MAX_N": 20,
+  "C1_HOLM": true,
+  "C1_ZERO_MIN_N": 4,
+  "GATE_ALPHA": 0.05,
+  "N_CATCH_TRIALS": 10,
+  "CATCH_P_FAIL_PER_LAPSE": 0.75,
+  "LAPSE_BETWEEN_SD": 0.5,
+  "RT_GATE": true,
+  "RT_FAST_CUTOFF_MS": 300,
+  "RT_FAST_GIVEN_LAPSE": 0.4,
+  "RT_FAST_GIVEN_ENGAGED": 0.005,
+  "RANDOM_SEED": 42,
+  "COPIED_SETTINGS": [
+   "UNHASHED",
+   "FROZEN_SEED",
+   "PRED_SAT",
+   "PRED_FOG",
+   "SD_SAT",
+   "SD_FOG",
+   "PRED_REBUILD_TOL",
+   "ESTIMATOR",
+   "FIRTH_ITER",
+   "FIRTH_TOL",
+   "FIRTH_MAX_STEP",
+   "CAP_INFORMATIVE_SD",
+   "CAP_THRESHOLD_SWEEP",
+   "ALPHA",
+   "ONE_TAILED",
+   "BF_SCALE",
+   "BF_ONE_SIDED",
+   "BF_THRESHOLD",
+   "BF_FORM_TOL",
+   "FLOOR_ALPHA",
+   "N_FLOOR_PEOPLE",
+   "DETECTION_SIDED",
+   "PREVALENCE_HPDI",
+   "PREVALENCE_N_GRID",
+   "PREVALENCE_C_GRID",
+   "PREVALENCE_ZERO_EPS",
+   "C1_EXACT_MAX_N",
+   "C1_HOLM",
+   "C1_ZERO_MIN_N",
+   "GATE_ALPHA",
+   "N_CATCH_TRIALS",
+   "CATCH_P_FAIL_PER_LAPSE",
+   "LAPSE_BETWEEN_SD",
+   "RT_GATE",
+   "RT_FAST_CUTOFF_MS",
+   "RT_FAST_GIVEN_LAPSE",
+   "RT_FAST_GIVEN_ENGAGED",
+   "RANDOM_SEED"
+  ],
+  "RULE_SIGN_ALPHA": 0.05,
+  "SIGN_COPIED_SETTINGS": [
+   "RULE_SIGN_ALPHA"
+  ],
+  "COPIED_FUNCTIONS": [
+   "fit_logit_batch",
+   "fit_firth",
+   "fit_firth_batch",
+   "fit_batch",
+   "penalised_loglik",
+   "simulate_many",
+   "lapse_p",
+   "simulate_lapsing",
+   "_jzs_g_form",
+   "jzs_bayes_factor",
+   "check_bayes_factor",
+   "sha256_of",
+   "verify_frozen",
+   "load_trials",
+   "informative_medians",
+   "as_probability",
+   "compute_floors",
+   "classify",
+   "rule_mask_count",
+   "prevalence_posterior_shared",
+   "prevalence_moment_raw",
+   "prevalence_moment",
+   "hpdi",
+   "mw_exact_sf",
+   "mw_p_batch",
+   "mann_whitney_one_sided",
+   "holm_two",
+   "_c1_gate",
+   "_c1_test",
+   "_c1_zero_catch",
+   "draw_attention"
+  ],
+  "SIGN_COPIED_FUNCTIONS": [
+   "sign_test_critical",
+   "rule_mask_sign",
+   "rule_mask_count"
+  ],
+  "SIGN_IDENTITY_REFERENCE": {
+   "RULE_SIGN_ALPHA": 0.05,
+   "rule_mask_count/n 10, k 4, m 0": [
+    44.0,
+    55.0,
+    66.0,
+    77.0,
+    88.0,
+    99.0,
+    110.0
+   ],
+   "rule_mask_count/n 15, k 6, m 3": [
+    96.0,
+    97.0,
+    98.0,
+    99.0,
+    112.0,
+    113.0,
+    114.0,
+    115.0,
+    128.0,
+    129.0,
+    130.0,
+    131.0,
+    144.0,
+    145.0,
+    146.0,
+    147.0,
+    160.0,
+    161.0,
+    162.0,
+    163.0,
+    176.0,
+    177.0,
+    178.0,
+    179.0,
+    192.0,
+    193.0,
+    194.0,
+    195.0,
+    208.0,
+    209.0,
+    210.0,
+    211.0,
+    224.0,
+    225.0,
+    226.0,
+    227.0,
+    240.0,
+    241.0,
+    242.0,
+    243.0
+   ],
+   "rule_mask_count/n 20, k 5, m 1": [
+    105.0,
+    106.0,
+    126.0,
+    127.0,
+    147.0,
+    148.0,
+    168.0,
+    169.0,
+    189.0,
+    190.0,
+    210.0,
+    211.0,
+    231.0,
+    232.0,
+    252.0,
+    253.0,
+    273.0,
+    274.0,
+    294.0,
+    295.0,
+    315.0,
+    316.0,
+    336.0,
+    337.0,
+    357.0,
+    358.0,
+    378.0,
+    379.0,
+    399.0,
+    400.0,
+    420.0,
+    421.0
+   ],
+   "rule_mask_count/n 9, k 4, m 0": [
+    40.0,
+    50.0,
+    60.0,
+    70.0,
+    80.0,
+    90.0
+   ],
+   "rule_mask_sign/n 10, k_min 0": [
+    55.0,
+    66.0,
+    77.0,
+    78.0,
+    88.0,
+    89.0,
+    99.0,
+    100.0,
+    101.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0
+   ],
+   "rule_mask_sign/n 10, k_min 6": [
+    66.0,
+    77.0,
+    78.0,
+    88.0,
+    89.0,
+    99.0,
+    100.0,
+    101.0,
+    110.0,
+    111.0,
+    112.0,
+    113.0
+   ],
+   "rule_mask_sign/n 15, k_min 0": [
+    80.0,
+    96.0,
+    112.0,
+    113.0,
+    128.0,
+    129.0,
+    144.0,
+    145.0,
+    146.0,
+    160.0,
+    161.0,
+    162.0,
+    163.0,
+    176.0,
+    177.0,
+    178.0,
+    179.0,
+    192.0,
+    193.0,
+    194.0,
+    195.0,
+    196.0,
+    208.0,
+    209.0,
+    210.0,
+    211.0,
+    212.0,
+    213.0,
+    224.0,
+    225.0,
+    226.0,
+    227.0,
+    228.0,
+    229.0,
+    240.0,
+    241.0,
+    242.0,
+    243.0,
+    244.0,
+    245.0,
+    246.0
+   ],
+   "rule_mask_sign/n 15, k_min 6": [
+    96.0,
+    112.0,
+    113.0,
+    128.0,
+    129.0,
+    144.0,
+    145.0,
+    146.0,
+    160.0,
+    161.0,
+    162.0,
+    163.0,
+    176.0,
+    177.0,
+    178.0,
+    179.0,
+    192.0,
+    193.0,
+    194.0,
+    195.0,
+    196.0,
+    208.0,
+    209.0,
+    210.0,
+    211.0,
+    212.0,
+    213.0,
+    224.0,
+    225.0,
+    226.0,
+    227.0,
+    228.0,
+    229.0,
+    240.0,
+    241.0,
+    242.0,
+    243.0,
+    244.0,
+    245.0,
+    246.0
+   ],
+   "rule_mask_sign/n 20, k_min 0": [
+    105.0,
+    126.0,
+    147.0,
+    148.0,
+    168.0,
+    169.0,
+    189.0,
+    190.0,
+    191.0,
+    210.0,
+    211.0,
+    212.0,
+    213.0,
+    231.0,
+    232.0,
+    233.0,
+    234.0,
+    252.0,
+    253.0,
+    254.0,
+    255.0,
+    256.0,
+    273.0,
+    274.0,
+    275.0,
+    276.0,
+    277.0,
+    278.0,
+    294.0,
+    295.0,
+    296.0,
+    297.0,
+    298.0,
+    299.0,
+    315.0,
+    316.0,
+    317.0,
+    318.0,
+    319.0,
+    320.0,
+    321.0,
+    336.0,
+    337.0,
+    338.0,
+    339.0,
+    340.0,
+    341.0,
+    342.0,
+    343.0,
+    357.0,
+    358.0,
+    359.0,
+    360.0,
+    361.0,
+    362.0,
+    363.0,
+    364.0,
+    378.0,
+    379.0,
+    380.0,
+    381.0,
+    382.0,
+    383.0,
+    384.0,
+    385.0,
+    386.0,
+    399.0,
+    400.0,
+    401.0,
+    402.0,
+    403.0,
+    404.0,
+    405.0,
+    406.0,
+    407.0,
+    408.0,
+    420.0,
+    421.0,
+    422.0,
+    423.0,
+    424.0,
+    425.0,
+    426.0,
+    427.0,
+    428.0,
+    429.0,
+    430.0
+   ],
+   "rule_mask_sign/n 20, k_min 6": [
+    126.0,
+    147.0,
+    148.0,
+    168.0,
+    169.0,
+    189.0,
+    190.0,
+    191.0,
+    210.0,
+    211.0,
+    212.0,
+    213.0,
+    231.0,
+    232.0,
+    233.0,
+    234.0,
+    252.0,
+    253.0,
+    254.0,
+    255.0,
+    256.0,
+    273.0,
+    274.0,
+    275.0,
+    276.0,
+    277.0,
+    278.0,
+    294.0,
+    295.0,
+    296.0,
+    297.0,
+    298.0,
+    299.0,
+    315.0,
+    316.0,
+    317.0,
+    318.0,
+    319.0,
+    320.0,
+    321.0,
+    336.0,
+    337.0,
+    338.0,
+    339.0,
+    340.0,
+    341.0,
+    342.0,
+    343.0,
+    357.0,
+    358.0,
+    359.0,
+    360.0,
+    361.0,
+    362.0,
+    363.0,
+    364.0,
+    378.0,
+    379.0,
+    380.0,
+    381.0,
+    382.0,
+    383.0,
+    384.0,
+    385.0,
+    386.0,
+    399.0,
+    400.0,
+    401.0,
+    402.0,
+    403.0,
+    404.0,
+    405.0,
+    406.0,
+    407.0,
+    408.0,
+    420.0,
+    421.0,
+    422.0,
+    423.0,
+    424.0,
+    425.0,
+    426.0,
+    427.0,
+    428.0,
+    429.0,
+    430.0
+   ],
+   "rule_mask_sign/n 9, k_min 0": [
+    50.0,
+    60.0,
+    70.0,
+    71.0,
+    80.0,
+    81.0,
+    90.0,
+    91.0,
+    92.0
+   ],
+   "rule_mask_sign/n 9, k_min 6": [
+    60.0,
+    70.0,
+    71.0,
+    80.0,
+    81.0,
+    90.0,
+    91.0,
+    92.0
+   ],
+   "sign_test_critical/25, alpha 0.01": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    10.0,
+    11.0,
+    12.0,
+    12.0,
+    13.0,
+    14.0,
+    14.0,
+    15.0,
+    15.0,
+    16.0,
+    17.0,
+    17.0,
+    18.0,
+    19.0,
+    19.0
+   ],
+   "sign_test_critical/25, alpha 0.10": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    4.0,
+    5.0,
+    6.0,
+    6.0,
+    7.0,
+    7.0,
+    8.0,
+    9.0,
+    9.0,
+    10.0,
+    10.0,
+    11.0,
+    12.0,
+    12.0,
+    13.0,
+    13.0,
+    14.0,
+    14.0,
+    15.0,
+    16.0,
+    16.0,
+    17.0
+   ],
+   "sign_test_critical/40, default alpha": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    5.0,
+    6.0,
+    7.0,
+    7.0,
+    8.0,
+    9.0,
+    9.0,
+    10.0,
+    10.0,
+    11.0,
+    12.0,
+    12.0,
+    13.0,
+    13.0,
+    14.0,
+    15.0,
+    15.0,
+    16.0,
+    16.0,
+    17.0,
+    18.0,
+    18.0,
+    19.0,
+    19.0,
+    20.0,
+    20.0,
+    21.0,
+    22.0,
+    22.0,
+    23.0,
+    23.0,
+    24.0,
+    24.0,
+    25.0,
+    26.0,
+    26.0
+   ]
+  },
+  "SIGN_ID_N": [
+   9,
+   10,
+   15,
+   20
+  ],
+  "SIGN_ID_COUNT": {
+   "9": [
+    4,
+    0
+   ],
+   "10": [
+    4,
+    0
+   ],
+   "15": [
+    6,
+    3
+   ],
+   "20": [
+    5,
+    1
+   ]
+  },
+  "TRIAL_COLUMNS": [
+   "session_id",
+   "participant_id",
+   "group",
+   "trial",
+   "trial_type",
+   "analysed",
+   "key_pressed",
+   "side_pressed",
+   "rt_ms"
+  ],
+  "SESSION_COLUMNS": [
+   "session_id",
+   "participant_id",
+   "group",
+   "session_start_time",
+   "session_end_time",
+   "complete",
+   "is_test",
+   "is_dev",
+   "consent_given",
+   "images_fit",
+   "device_pixel_ratio",
+   "gamma_estimate",
+   "set_code",
+   "interview_date",
+   "has_word_block",
+   "has_grid_episode",
+   "has_grid_normal",
+   "has_state_block",
+   "word_foggy",
+   "word_faded",
+   "word_veiled",
+   "word_lifeless",
+   "word_unreal",
+   "word_dreamlike",
+   "word_distant",
+   "word_like_a_picture",
+   "word_oppressive",
+   "word_threatening",
+   "state_q02",
+   "state_q13",
+   "state_q19",
+   "state_q29"
+  ],
+  "GRID_COLUMNS": [
+   "session_id",
+   "participant_id",
+   "block",
+   "set_code",
+   "scene_set",
+   "screen",
+   "feature",
+   "column_order",
+   "scene_ids",
+   "chosen_display_column",
+   "chosen_level_index",
+   "chose_none",
+   "free_text",
+   "rt_ms",
+   "cell_px"
+  ],
+  "STATUS_ORDER": [
+   "test_or_dev",
+   "incomplete",
+   "repeat_not_used",
+   "excluded_no_consent",
+   "excluded_images_fit",
+   "excluded_catch",
+   "tier_D",
+   "beyond_maximum",
+   "analysable"
+  ],
+  "QUADRANTS": [
+   "both positive",
+   "colour only",
+   "fog only",
+   "both negative"
+  ]
+ },
+ "inputs_sha256": {
+  "trial_list.csv": "2a01fe7d6afec29fb2c1c647dff7458c26136d7c49b09df4e2e44184bb831c93",
+  "checksums.sha256": "806e9e6031ef85c6002e797e546963a21874e67016c539780b7ddd23d8058704",
+  "combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+  "decision_table.csv": "b8b6870f0226ac58c9d7e40e03305e65e4c52d632d714fe41c33b9be9321f77e",
+  "sign_test_table.csv": "363b7038f1286897e59cfcdb8cff1d5a7baa1e60cf50c85735ef92bf4d9c204c",
+  "grid_trials.csv": "6da71b77f3e3420df23c646df696267687d5752926939d43a415e2360c05fc00",
+  "detection_curve.csv": "c2f8aea861abd801f940230d058293ceae2e0190f203b09dc4d3c83b93a4e830",
+  "this script": "1519a49b703e9d0e50ed0c3de60c0db1fa1b20c5e4da23904eb2ebbcf1e3c9ba",
+  "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+  "sign_test_registration_v4.py": "ae143bdeedd38b3fdad2359bbc52cd09c4068a3f1409fd4bea894125e0b7d43c"
+ },
+ "thresholds": {
+  "upper": [
+   0.2863223717155787,
+   0.4880483057825434
+  ],
+  "lower": [
+   -0.2896056357511166,
+   -0.48559721218587304
+  ]
+ },
+ "caps": {
+  "colour": {
+   "upper": 8.37797200120463,
+   "lower": -8.377972001204595,
+   "n_informative": 120
+  },
+  "fog": {
+   "upper": 10.269172183816664,
+   "lower": -10.26917218381666,
+   "n_informative": 120
+  }
+ },
+ "datasets": [
+  "P-both_n09__C-matched_n30",
+  "P-both_n10__C-matched_n30",
+  "P-both_n15__C-matched_n30",
+  "P-both_n20__C-lapse_more_n19",
+  "P-both_n20__C-lapse_more_n30",
+  "P-both_n20__C-matched_n30",
+  "P-both_n20__C-no_strategy_n19",
+  "P-both_n20__C-no_strategy_n30",
+  "P-both_n20__C-quarter_strategy_n19",
+  "P-both_n20__C-quarter_strategy_n30",
+  "P-colour_only_n09__C-matched_n30",
+  "P-colour_only_n10__C-matched_n30",
+  "P-colour_only_n15__C-matched_n30",
+  "P-colour_only_n20__C-matched_n30",
+  "P-everyone_n09__C-matched_n30",
+  "P-everyone_n10__C-matched_n30",
+  "P-everyone_n15__C-matched_n30",
+  "P-everyone_n20__C-matched_n30",
+  "P-fog_only_n09__C-matched_n30",
+  "P-fog_only_n10__C-matched_n30",
+  "P-fog_only_n15__C-matched_n30",
+  "P-fog_only_n20__C-matched_n30",
+  "P-null_random_n09__C-matched_n30",
+  "P-null_random_n10__C-matched_n30",
+  "P-null_random_n15__C-matched_n30",
+  "P-null_random_n20__C-matched_n30",
+  "P-null_taste_worst_n09__C-matched_n30",
+  "P-null_taste_worst_n10__C-matched_n30",
+  "P-null_taste_worst_n15__C-matched_n30",
+  "P-null_taste_worst_n20__C-matched_n30",
+  "messy",
+  "messy_over_max"
+ ],
+ "datasets_failed": [],
+ "status": "complete",
+ "checks": [
+  {
+   "check": "frozen package matches checksums.sha256",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "369 files, seed 42"
+  },
+  {
+   "check": "frozen list: 211 trials, registered counts, analysed rows in load_trials' order",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "211 trials, 180 analysed"
+  },
+  {
+   "check": "copied functions reproduce the stored reference values",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "164/164 quantities agree"
+  },
+  {
+   "check": "JZS Bayes factor self-check (check_bayes_factor)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "one- and two-sided forms agree"
+  },
+  {
+   "check": "copied functions agree with the power script run now",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "164/164 quantities"
+  },
+  {
+   "check": "copied functions are verbatim (syntax tree)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "31/31 identical"
+  },
+  {
+   "check": "copied settings equal the power script's",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "38/38 equal"
+  },
+  {
+   "check": "verify_frozen gives the power script's verdict",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "same FROZEN.json facts"
+  },
+  {
+   "check": "recomputed thresholds equal the registered ones (3 dp)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "colour (0.286, -0.29), fog (0.488, -0.486)"
+  },
+  {
+   "check": "combined_rule.csv equals the registered rule at every N from 10 to 20",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "22 rules"
+  },
+  {
+   "check": "sign-test copies reproduce the stored reference values",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "16/16 quantities agree"
+  },
+  {
+   "check": "sign-test copies agree with the sign-test registration script run now",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "16/16 quantities"
+  },
+  {
+   "check": "sign-test copies are verbatim from the sign-test registration script (syntax tree)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "3/3 identical"
+  },
+  {
+   "check": "RULE_SIGN_ALPHA equals the sign-test registration script's",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.05"
+  },
+  {
+   "check": "sign-test copies agree with the power script run now",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "16/16 quantities"
+  },
+  {
+   "check": "sign-test copies are verbatim from the power script (syntax tree)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "3/3 identical"
+  },
+  {
+   "check": "RULE_SIGN_ALPHA equals the power script's",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.05"
+  },
+  {
+   "check": "sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "20/20 rows identical; no claim possible below d = 5"
+  },
+  {
+   "check": "sign test: critical counts up to the largest N agree with the decision table's",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "d = 0..20"
+  },
+  {
+   "check": "sign_test_table.csv: the sign test and the registered count rule at every N from 10 to 20",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "44 rows"
+  },
+  {
+   "check": "sign test: registered worst-case false-claim upper bound at or below 0.05 at every N",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "largest 0.0194"
+  },
+  {
+   "check": "CATCH_SEQUENCE: one key per catch trial in the frozen list, balanced 5 up / 5 down",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "10 keys for 10 catch trials: up down down up up down up down down up (placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js)"
+  },
+  {
+   "check": "CATCH_SEQUENCE equals the simulation's CATCH_KEYS",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "simulation: ['up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'up']"
+  },
+  {
+   "check": "grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "prevalence sensitivities equal the registered ones (2 dp)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "colour (0.5, 0.86, 0.99), fog (0.22, 0.51, 0.79)"
+  },
+  {
+   "check": "the cap reproduces the registered values (3 dp), is symmetric, and is a maximum",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "colour 8.37797, fog 10.26917"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}, \"excluded_catch\": {\"participant\": 1, \"control\": 3}}"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-both_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-both_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 2/2: not supported; H2 4/5: not supported"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}, \"excluded_catch\": {\"participant\": 1, \"control\": 3}}"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 7/7: supported; H2 6/8: not supported"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 3}}"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 6/6: supported; H2 10/11: supported"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 19}, \"excluded_catch\": {\"participant\": 0, \"control\": 4}}"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] design: C1_colour descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n19] design: C1_fog descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-both_n20__C-lapse_more_n19: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 6/7: not supported; H2 9/9: supported"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 8}}"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-lapse_more_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n20__C-lapse_more_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 4/4: not supported; H2 11/11: supported"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 1, \"control\": 4}}"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 6/6: supported; H2 10/11: supported"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 19}, \"excluded_catch\": {\"participant\": 1, \"control\": 3}}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] design: C1_colour descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n19] design: C1_fog descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-both_n20__C-no_strategy_n19: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 9/9: supported; H2 10/10: supported"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 2}}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-no_strategy_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n20__C-no_strategy_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 11/11: supported; H2 11/11: supported"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 19}, \"excluded_catch\": {\"participant\": 1, \"control\": 1}}"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 1, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] design: C1_colour descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n19] design: C1_fog descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-both_n20__C-quarter_strategy_n19: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.9e-12"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 9/9: supported; H2 9/9: supported"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-both_n20__C-quarter_strategy_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-both_n20__C-quarter_strategy_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 3}}"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-colour_only_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-colour_only_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.6e-12"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 1/1: not supported; H2 3/3: not supported"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-colour_only_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-colour_only_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 3/4: not supported; H2 7/10: not supported"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 2}}"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-colour_only_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-colour_only_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 3/3: not supported; H2 10/10: supported"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 1, \"control\": 0}}"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-colour_only_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-colour_only_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.9e-12"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}, \"excluded_catch\": {\"participant\": 2, \"control\": 4}}"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-everyone_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-everyone_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 8/8: supported; H2 6/6: supported"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 5}}"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-everyone_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-everyone_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 2.0e-12"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 10/10: supported; H2 14/14: supported"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}}"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-everyone_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-everyone_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 13/13: supported; H2 15/15: supported"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-everyone_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-everyone_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 2}}"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-fog_only_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-fog_only_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 4/4: not supported; H2 1/2: not supported"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-fog_only_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-fog_only_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.6e-12"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 8/8: supported; H2 1/3: not supported"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-fog_only_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-fog_only_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 10/11: supported; H2 3/7: not supported"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 2, \"control\": 1}}"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 1, \"both_episode_fog_screens_none\": 1, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-fog_only_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-fog_only_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.6e-12"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 1}}"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-null_random_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-null_random_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.6e-12"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 0/0: not supported; H2 0/0: not supported"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}, \"excluded_catch\": {\"participant\": 0, \"control\": 2}}"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_random_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_random_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 2/2: not supported; H2 0/1: not supported"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}, \"excluded_catch\": {\"participant\": 1, \"control\": 0}}"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_random_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_random_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 0/0: not supported; H2 0/1: not supported"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"excluded_catch\": {\"participant\": 2, \"control\": 2}}"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_random_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_random_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.7e-12"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 9, \"control\": 30}}"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] design: H1 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "[P-null_taste_worst_n09__C-matched_n30] design: H2 descriptive",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "descriptive"
+  },
+  {
+   "check": "dataset P-null_taste_worst_n09__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.9e-12"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 2/4: not supported; H2 3/5: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}}"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_taste_worst_n10__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 1/6: not supported; H2 2/3: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 15, \"control\": 30}}"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_taste_worst_n15__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_taste_worst_n15__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.9e-12"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 6/10: not supported; H2 4/8: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}}"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_taste_worst_n20__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset P-null_taste_worst_n20__C-matched_n30: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[messy] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.5e-12"
+  },
+  {
+   "check": "[messy] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 4/5: not supported; H2 5/5: supported"
+  },
+  {
+   "check": "[messy] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 20}, \"excluded_catch\": {\"participant\": 1, \"control\": 1}, \"excluded_images_fit\": {\"participant\": 1, \"control\": 0}, \"excluded_no_consent\": {\"participant\": 1, \"control\": 0}, \"repeat_not_used\": {\"participant\": 1, \"control\": 0}, \"test_or_dev\": {\"participant\": 3, \"control\": 0}, \"tier_D\": {\"participant\": 1, \"control\": 0}}"
+  },
+  {
+   "check": "[messy] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 1, \"no_word_block\": 1, \"no_grid_shift_colour\": 1, \"no_grid_shift_fog\": 2, \"both_episode_fog_screens_none\": 1, \"no_state_block\": 1, \"no_interview_date\": 1}"
+  },
+  {
+   "check": "[messy] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset messy: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] beyond the maximum, listed and not analysed",
+   "result": "INFO",
+   "stops_run": false,
+   "detail": "1 participants, 1 controls"
+  },
+  {
+   "check": "[messy_over_max] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[messy_over_max] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.8e-12"
+  },
+  {
+   "check": "[messy_over_max] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[messy_over_max] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 7/7: supported; H2 9/9: supported"
+  },
+  {
+   "check": "[messy_over_max] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 20, \"control\": 30}, \"beyond_maximum\": {\"participant\": 1, \"control\": 1}}"
+  },
+  {
+   "check": "[messy_over_max] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[messy_over_max] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "dataset messy_over_max: analysed and every truth check passed",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": ""
+  },
+  {
+   "check": "C1 inconclusive when controls lapse more (single draws)",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "2/2"
+  },
+  {
+   "check": "no claim under no effect, H1/H2 (sign test) (single draws)",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "18/18; a miss among these is expected 15% of the time"
+  },
+  {
+   "check": "no claim under no effect, C1 (single draws)",
+   "result": "FAIL",
+   "stops_run": false,
+   "detail": "23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour"
+  },
+  {
+   "check": "negative test: chose_A flipped for one session stops the run and lists exactly the planted problem",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped at 'chose_A'; 201 rows flipped, 201 listed in 1 session(s)"
+  },
+  {
+   "check": "negative test: one trial duplicated and another missing stops the run and lists exactly the planted problem",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped at 'trial sets'; trial 17 replaced by a copy of trial 28; listed: complete session missing frozen trials [17]; trial number appears more than once [28]"
+  },
+  {
+   "check": "negative test: catch_pass disagreeing with the recorded key stops the run and lists exactly the planted problem",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped at 'catch scoring'; catch_pass flipped on trial 23; 1 row(s) listed"
+  },
+  {
+   "check": "negative test: decision_table.csv with the minimum predicted at d = 10 lowered by one stops the run and marks exactly that row",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped; rows marked: [10]"
+  },
+  {
+   "check": "negative test: decision_table.csv with the p at the boundary for d = 15 moved by one ulp stops the run and marks exactly that row",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "run stopped; rows marked: [15]"
+  },
+  {
+   "check": "null_random_n10.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "null_random_n15.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "null_random_n20.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "null_taste_worst_n10.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "null_taste_worst_n15.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "null_taste_worst_n20.npz: trial order matches the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "false claims, sign test, H1, guesser, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.82e-06 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, guesser, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.709e-06 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, guesser, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.723e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, guesser, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.622e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, guesser, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 7.069e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, guesser, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 6.677e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.25x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 1.665e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.25x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 1.087e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.25x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.0001366 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.25x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 9.222e-05 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.25x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.000487 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.25x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.0003399 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.5x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.0003723 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.5x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.0003346 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.5x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.002048 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.5x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "1/1000 = 0.0010, 95% CP [0.0000, 0.0056]; registered false_taste_0.5 0.001878 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.5x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "5/1000 = 0.0050, 95% CP [0.0016, 0.0116]; registered false_taste_0.5 0.005023 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.5x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "8/1000 = 0.0080, 95% CP [0.0035, 0.0157]; registered false_taste_0.5 0.00469 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.75x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "3/1000 = 0.0030, 95% CP [0.0006, 0.0087]; registered false_taste_0.75 0.00277 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.75x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "1/1000 = 0.0010, 95% CP [0.0000, 0.0056]; registered false_taste_0.75 0.002637 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.75x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "6/1000 = 0.0060, 95% CP [0.0022, 0.0130]; registered false_taste_0.75 0.008842 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.75x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "11/1000 = 0.0110, 95% CP [0.0055, 0.0196]; registered false_taste_0.75 0.008574 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 0.75x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "7/1000 = 0.0070, 95% CP [0.0028, 0.0144]; registered false_taste_0.75 0.01418 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 0.75x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "9/1000 = 0.0090, 95% CP [0.0041, 0.0170]; registered false_taste_0.75 0.01391 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 1x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "7/1000 = 0.0070, 95% CP [0.0028, 0.0144]; registered false_taste_1 0.007259 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 1x, N 10",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "5/1000 = 0.0050, 95% CP [0.0016, 0.0116]; registered false_taste_1 0.006896 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 1x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "15/1000 = 0.0150, 95% CP [0.0084, 0.0246]; registered false_taste_1 0.01501 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 1x, N 15",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "14/1000 = 0.0140, 95% CP [0.0077, 0.0234]; registered false_taste_1 0.01465 inside"
+  },
+  {
+   "check": "false claims, sign test, H1, taste 1x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "13/1000 = 0.0130, 95% CP [0.0069, 0.0221]; registered false_taste_1 0.01916 inside"
+  },
+  {
+   "check": "false claims, sign test, H2, taste 1x, N 20",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "17/1000 = 0.0170, 95% CP [0.0099, 0.0271]; registered false_taste_1 0.0189 inside"
+  },
+  {
+   "check": "false claims, sign test: 95% Clopper-Pearson upper end at or below 0.05 in every condition, N and claim",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "30/30; largest upper end 0.0271"
+  },
+  {
+   "check": "false claims, sign test: registered value inside the 95% interval",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "30/30 inside; 0 flagged (about 1.5 expected by chance if every registered value were exact)"
+  },
+  {
+   "check": "false claims, count rule: this analysis's counts equal the simulation's preview counts",
+   "result": "PASS",
+   "stops_run": false,
+   "detail": "12 cells"
+  },
+  {
+   "check": "false claims, count rule (sensitivity): registered value inside the 95% interval",
+   "result": "INFO",
+   "stops_run": false,
+   "detail": "29/30; upper end at or below 0.05 in 27/30"
+  },
+  {
+   "check": "H1/H2: sign test and count rule disagree",
+   "result": "INFO",
+   "stops_run": false,
+   "detail": "4 of 52 claims with N >= 10; the sign test decides"
+  }
+ ],
+ "elapsed_s": 85.6
+}

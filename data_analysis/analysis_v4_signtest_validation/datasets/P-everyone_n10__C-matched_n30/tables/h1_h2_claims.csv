@@ -1,0 +1,3 @@
+claim,feature,N,d,a_predicted,opposite,not_detected,sign_test_p_one_sided_exact,sign_test_min_predicted_for_d,sign_test_verdict,sign_test_note,count_rule,count_rule_result,agree,decided_by,sign_registered_false_claim_worst,sign_registered_false_claim_worst_upper,sign_registered_power_planning,count_registered_false_claim_worst,count_registered_power_planning
+H1,fog,10,8,8,0,2,0.00390625,7,supported,,"k >= 4, m <= 0",supported,True,sign test,0.0072588253671705,0.0076001120278521,0.2263999503775507,0.0224439093512534,0.4434561012801697
+H2,colour,10,6,6,0,4,0.015625,6,supported,,"k >= 4, m <= 0",supported,True,sign test,0.0068960120253792,0.0072327804918677,0.399589817047371,0.0219549718713389,0.5907743703902281

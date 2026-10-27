@@ -1,0 +1,5 @@
+item,expected,kind,verdict,miss,p_miss,p_miss_population,count_rule_verdict
+H1,descriptive,fixed,descriptive,False,,,
+H2,descriptive,fixed,descriptive,False,,,
+C1_colour,supported,likely,supported,False,,,
+C1_fog,supported,likely,supported,False,,,

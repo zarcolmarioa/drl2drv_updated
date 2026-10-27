@@ -1,0 +1,261 @@
+{
+ "dataset": "P-null_taste_worst_n10__C-matched_n30",
+ "status": "complete",
+ "checks": [
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/P-null_taste_worst_n10__C-matched_n30/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/sim_study_v4/datasets/P-null_taste_worst_n10__C-matched_n30/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "40 complete session(s) checked, 40 session(s) checked for duplicates"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "400 catch rows; columns checked: catch_key, catch_pass"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] every trial number is in the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "unknown: []"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] trial types agree with the frozen list",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 rows differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] side_pressed is 'left' or 'right' on image trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 other values"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] chose_A in the tidy table equals chose A derived from side_pressed and the frozen list's a_is_left",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "8040 image-trial rows agree"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] every non-test session's ID is in the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 unknown"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] session group agrees with the participant table",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 sessions differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] final N within the maxima (20 participants, 30 controls)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "N = 10 and 30"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] every Firth fit converged (score ~ 0)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 not converged"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] H1: the sign-test mask, p <= 0.05 and scipy's binomtest agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "a = 2 of d = 4, p 0.6875 (binomtest 0.6875), mask: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] H2: the sign-test mask, p <= 0.05 and scipy's binomtest agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "a = 3 of d = 5, p 0.5 (binomtest 0.5), mask: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] C1 colour: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.3714691009 vs 0.3714691009 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] C1 fog: mw_p_batch and scipy's Mann-Whitney agree",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0.718314912 vs 0.718314912 (asymptotic / asymptotic)"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] C1: holm_two and _c1_test give the same results",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] grid rows agree with the grid package and the set code",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: every session's status",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 differ"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "max difference 1.9e-12"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: every class",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "H1 2/4: not supported; H2 3/5: not supported"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: exclusion counts per step and group",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"analysable\": {\"participant\": 10, \"control\": 30}}"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: partial exclusions",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "{\"flat_word_ratings\": 0, \"no_word_block\": 0, \"no_grid_shift_colour\": 0, \"no_grid_shift_fog\": 0, \"both_episode_fog_screens_none\": 0, \"no_state_block\": 0, \"no_interview_date\": 0}"
+  },
+  {
+   "check": "[P-null_taste_worst_n10__C-matched_n30] truth: grid shift per person",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  }
+ ],
+ "results": {
+  "H1": {
+   "feature": "fog",
+   "N": 10,
+   "d": 4,
+   "a_predicted": 2,
+   "opposite": 2,
+   "sign_test (registered)": {
+    "p_one_sided_exact": 0.6875,
+    "verdict": "not supported"
+   },
+   "count_rule (sensitivity)": {
+    "rule": "k >= 4, m <= 0",
+    "result": "not supported",
+    "agrees_with_sign_test": true
+   }
+  },
+  "H2": {
+   "feature": "colour",
+   "N": 10,
+   "d": 5,
+   "a_predicted": 3,
+   "opposite": 2,
+   "sign_test (registered)": {
+    "p_one_sided_exact": 0.5,
+    "verdict": "not supported"
+   },
+   "count_rule (sensitivity)": {
+    "rule": "k >= 4, m <= 0",
+    "result": "not supported",
+    "agrees_with_sign_test": true
+   }
+  },
+  "attention_check": {
+   "p_catch": 1.0,
+   "p_rt": 0.8301882910504774,
+   "significant_after_holm": false
+  },
+  "C1_colour": {
+   "p": 0.37146910093317215,
+   "method": "asymptotic",
+   "significant_after_holm": false,
+   "verdict": "not supported"
+  },
+  "C1_fog": {
+   "p": 0.7183149120413492,
+   "method": "asymptotic",
+   "significant_after_holm": false,
+   "verdict": "not supported"
+  }
+ }
+}

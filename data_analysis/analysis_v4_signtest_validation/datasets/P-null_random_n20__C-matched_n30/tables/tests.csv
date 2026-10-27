@@ -1,0 +1,17 @@
+analysis,kind,n,statistic,rule,p,verdict,note,registered_false_claim,registered_power
+H1 (fog),sign test (registered),20,"0 predicted of d = 0 detected, 0 opposite","sign test, alpha 0.05, minimum predicted 0",1.0,not supported,d = 0 <= 4: no claim is possible (even 0 of 0 in the predicted direction gives p = 1),0.0191585310823516,0.7866796057229912
+H1 (fog),count rule (sensitivity),20,"0 predicted of d = 0 detected, 0 opposite","k >= 5, m <= 1",,not supported,never supports a claim; the sign test decides,0.0413975231250285,0.7968486683450157
+H2 (colour),sign test (registered),20,"0 predicted of d = 1 detected, 1 opposite","sign test, alpha 0.05, minimum predicted 0",1.0,not supported,d = 1 <= 4: no claim is possible (even 1 of 1 in the predicted direction gives p = 0.5),0.018901593715902,0.92273564216755
+H2 (colour),count rule (sensitivity),20,"0 predicted of d = 1 detected, 1 opposite","k >= 7, m <= 3",,not supported,never supports a claim; the sign test decides,0.0395719049808233,0.9687873990630004
+attention check: catch failures,gate,20+30,,,0.5615550010465845,not significant after Holm correction,,,
+attention check: responses < 300 ms,gate,20+30,,,0.0626720886029728,not significant after Holm correction,,,
+C1 colour,primary,20+30,U = 266.0 (asymptotic),,0.7527603337695746,not supported,not significant after Holm correction,,
+C1 fog,primary,20+30,U = 318.0 (asymptotic),,0.36446409121809875,not supported,not significant after Holm correction,,
+"t-test and BF, colour",secondary,20,"t = -1.554, BF10 = 0.102",,0.9316398224509062,evidence against (BF01 > 3),,,
+"t-test and BF, colour (capped)",secondary,20,"t = -1.554, BF10 = 0.102",,0.9316398224509062,evidence against (BF01 > 3),,,
+"t-test and BF, fog",secondary,20,"t = 0.238, BF10 = 0.28",,0.4073002589145977,evidence against (BF01 > 3),,,
+"t-test and BF, fog (capped)",secondary,20,"t = 0.238, BF10 = 0.28",,0.4073002589145977,evidence against (BF01 > 3),,,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,20,0 following,,0.7399381245249509,,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,30,0 following,,0.5892876420457587,,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,20,0 following,,0.2923307110808079,,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,30,1 following,,0.6543798312973281,,,,

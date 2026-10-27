@@ -1,0 +1,19 @@
+analysis,kind,n,statistic,rule,p,verdict,note,registered_false_claim,registered_power
+H1 (fog),sign test (registered),15,"1 predicted of d = 6 detected, 5 opposite","sign test, alpha 0.05, minimum predicted 0",0.984375,not supported,,0.0150051895450498,0.6484260938008355
+H1 (fog),count rule (sensitivity),15,"1 predicted of d = 6 detected, 5 opposite","k >= 5, m <= 1",,not supported,never supports a claim; the sign test decides,0.0420857573941697,0.798018309929358
+H2 (colour),sign test (registered),15,"2 predicted of d = 3 detected, 1 opposite","sign test, alpha 0.05, minimum predicted 0",0.5,not supported,d = 3 <= 4: no claim is possible (even 3 of 3 in the predicted direction gives p = 0.125),0.0146473702194673,0.825764012791203
+H2 (colour),count rule (sensitivity),15,"2 predicted of d = 3 detected, 1 opposite","k >= 6, m <= 3",,not supported,never supports a claim; the sign test decides,0.0362921644355047,0.9319705591366224
+attention check: catch failures,gate,15+30,,,1.0,not significant after Holm correction,,,
+attention check: responses < 300 ms,gate,15+30,,,0.00413198840215535,significant after Holm correction,,,
+C1 colour,primary,15+30,U = 191.0 (asymptotic),,0.7969178096433371,inconclusive,not significant after Holm correction,,
+C1 fog,primary,15+30,U = 121.0 (asymptotic),,0.9940663240062539,inconclusive,not significant after Holm correction,,
+"C1 colour, zero catch failures",secondary (registered; reported because the attention check is significant),15+30,,,0.7969178096433371,not significant after Holm correction,,,
+"C1 fog, zero catch failures",secondary (registered; reported because the attention check is significant),15+30,,,0.9940663240062539,not significant after Holm correction,,,
+"t-test and BF, colour",secondary,15,"t = 1.395, BF10 = 1.05",,0.09242822773143027,inconclusive,,,
+"t-test and BF, colour (capped)",secondary,15,"t = 1.395, BF10 = 1.05",,0.09242822773143027,inconclusive,,,
+"t-test and BF, fog",secondary,15,"t = -2.048, BF10 = 0.103",,0.9700880317002901,evidence against (BF01 > 3),,,
+"t-test and BF, fog (capped)",secondary,15,"t = -2.048, BF10 = 0.103",,0.9700880317002901,evidence against (BF01 > 3),,,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,15,1 following,,0.0657883215102038,,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,30,9 following,,0.02952243231480508,,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,15,1 following,,0.9602228524642943,,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,30,4 following,,0.10959887607192614,,,,

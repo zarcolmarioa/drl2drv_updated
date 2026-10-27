@@ -1,0 +1,5 @@
+item,expected,kind,verdict,miss,p_miss,p_miss_population,count_rule_verdict
+H1,no claim,no_claim,not supported,False,0.0072588253671705,false_taste_1,not supported
+H2,no claim,no_claim,not supported,False,0.0068960120253792,false_taste_1,not supported
+C1_colour,no claim,no_claim,not supported,False,0.025,,
+C1_fog,no claim,no_claim,not supported,False,0.025,,

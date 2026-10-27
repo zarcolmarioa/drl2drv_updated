@@ -1,0 +1,16 @@
+{
+ "test": "p at the boundary for d = 15 moved by one ulp",
+ "stopped": true,
+ "message": "[negative test: decision_table_p_one_ulp] sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary): d = 15: script (12, 3, 0.017578125), table (12, 3, 0.017578125000000003)",
+ "rows_marked": [
+  15
+ ],
+ "checks": [
+  {
+   "check": "[negative test: decision_table_p_one_ulp] sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary)",
+   "result": "FAIL",
+   "stops_run": true,
+   "detail": "d = 15: script (12, 3, 0.017578125), table (12, 3, 0.017578125000000003)"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+analysis,kind,n,statistic,rule,p,verdict,note,registered_false_claim,registered_power
+H1 (fog),sign test (registered),20,"6 predicted of d = 6 detected, 0 opposite","sign test, alpha 0.05, minimum predicted 0",0.015625,supported,,0.0191585310823516,0.7866796057229912
+H1 (fog),count rule (sensitivity),20,"6 predicted of d = 6 detected, 0 opposite","k >= 5, m <= 1",,supported,never supports a claim; the sign test decides,0.0413975231250285,0.7968486683450157
+H2 (colour),sign test (registered),20,"10 predicted of d = 11 detected, 1 opposite","sign test, alpha 0.05, minimum predicted 0",0.005859375,supported,,0.018901593715902,0.92273564216755
+H2 (colour),count rule (sensitivity),20,"10 predicted of d = 11 detected, 1 opposite","k >= 7, m <= 3",,supported,never supports a claim; the sign test decides,0.0395719049808233,0.9687873990630004
+attention check: catch failures,gate,20+19,,,2.0060092054835747e-06,significant after Holm correction,,,
+attention check: responses < 300 ms,gate,20+19,,,3.4025254807836806e-08,significant after Holm correction,,,
+C1 colour,primary,20+19,U = 261.0 (asymptotic),,0.02380242279350097,descriptive,significant after Holm correction,,
+C1 fog,primary,20+19,U = 318.0 (asymptotic),,0.00017019943278564115,descriptive,significant after Holm correction,,
+"C1 colour, zero catch failures",secondary (registered; reported because the attention check is significant),20+5,,,0.03086312116757048,significant after Holm correction,,,
+"C1 fog, zero catch failures",secondary (registered; reported because the attention check is significant),20+5,,,0.01362422044615295,significant after Holm correction,,,
+"t-test and BF, colour",secondary,20,"t = 2.777, BF10 = 8.72",,0.006008729573080455,evidence for (BF10 > 3),,,
+"t-test and BF, colour (capped)",secondary,20,"t = 2.777, BF10 = 8.72",,0.006008729573080455,evidence for (BF10 > 3),,,
+"t-test and BF, fog",secondary,20,"t = 4.459, BF10 = 231",,0.00013453763500929125,evidence for (BF10 > 3),,,
+"t-test and BF, fog (capped)",secondary,20,"t = 4.459, BF10 = 231",,0.00013453763500929125,evidence for (BF10 > 3),,,
+"Suzuki-style t-test, colour (sat_only), participant",exploratory,20,8 following,,0.006799920101525521,,,,
+"Suzuki-style t-test, colour (sat_only), control",exploratory,19,1 following,,0.5177917475722772,,,,
+"Suzuki-style t-test, fog (fog_only), participant",exploratory,20,5 following,,0.008794215712971284,,,,
+"Suzuki-style t-test, fog (fog_only), control",exploratory,19,0 following,,0.9220193180043302,,,,

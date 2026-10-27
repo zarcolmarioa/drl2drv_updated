@@ -1,0 +1,85 @@
+{
+ "test": "catch_pass disagreeing with the recorded key",
+ "stopped": true,
+ "message": "[negative test: catch_pass_disagrees] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring: 1 mismatch(es) in 1 session(s) (catch_pass differs from the recorded key); full list in PRIVATE/catch_mismatches_PRIVATE.csv",
+ "planted": {
+  "session_id": "R_1mGf6ZzyKDkLF4o_2026-12-13T23-54-27Z",
+  "trial": 23,
+  "catch_pass_was": true
+ },
+ "listed_rows": 1,
+ "checks": [
+  {
+   "check": "[negative test: catch_pass_disagrees] tidy tables have every expected column",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] session flags are all True/False",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] session ids are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] word ratings and state items are whole numbers 0-6",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] survey file found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/analysis_v4_signtest_validation/negative_tests/catch_pass_disagrees/private/survey_FAKE.xlsx"
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] participant table found",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "data/analysis_v4_signtest_validation/negative_tests/catch_pass_disagrees/private/participant_table_FAKE.csv"
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] survey has ResponseId and Q01_score .. Q29_score",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] survey ResponseIds are unique",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] participant table has participant_id, group, tier",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": ""
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] participant table: groups and tiers valid",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "0 invalid rows"
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] trial sets: (session, trial) unique and every complete session holds exactly the frozen trials",
+   "result": "PASS",
+   "stops_run": true,
+   "detail": "36 complete session(s) checked, 39 session(s) checked for duplicates"
+  },
+  {
+   "check": "[negative test: catch_pass_disagrees] catch scoring: catch_key and catch_pass in the tidy table agree with the analysis's own scoring",
+   "result": "FAIL",
+   "stops_run": true,
+   "detail": "1 mismatch(es) in 1 session(s) (catch_pass differs from the recorded key); full list in PRIVATE/catch_mismatches_PRIVATE.csv"
+  }
+ ]
+}

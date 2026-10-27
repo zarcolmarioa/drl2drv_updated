@@ -1,0 +1,670 @@
+VALIDATION ON SIMULATED DATA  --  analyse_study_v4_signtest.py
+========================================================================
+run 2026-10-27 10:06:40  simulation data/sim_study_v4
+
+datasets analysed: 32; failed: 0
+
+H1 AND H2 PER DATASET: SIGN TEST (registered), COUNT RULE (sensitivity) beside it
+------------------------------------------------------------------------
+  dataset                                  claim   N    a/d opp        p sign test      count rule    
+  P-both_n09__C-matched_n30                H1      9  1/2     1          no verdict     no verdict    
+  P-both_n09__C-matched_n30                H2      9  3/3     0          no verdict     no verdict    
+  P-both_n10__C-matched_n30                H1     10  2/2     0   0.2500 not supported  not supported 
+  P-both_n10__C-matched_n30                H2     10  4/5     1   0.1875 not supported  not supported 
+  P-both_n15__C-matched_n30                H1     15  7/7     0   0.0078 supported      supported     
+  P-both_n15__C-matched_n30                H2     15  6/8     2   0.1445 not supported  supported       DISAGREE (sign test decides)
+  P-both_n20__C-lapse_more_n19             H1     20  6/6     0   0.0156 supported      supported     
+  P-both_n20__C-lapse_more_n19             H2     20 10/11    1   0.0059 supported      supported     
+  P-both_n20__C-lapse_more_n30             H1     20  6/7     1   0.0625 not supported  supported       DISAGREE (sign test decides)
+  P-both_n20__C-lapse_more_n30             H2     20  9/9     0   0.0020 supported      supported     
+  P-both_n20__C-matched_n30                H1     20  4/4     0   0.0625 not supported  not supported 
+  P-both_n20__C-matched_n30                H2     20 11/11    0   0.0005 supported      supported     
+  P-both_n20__C-no_strategy_n19            H1     20  6/6     0   0.0156 supported      supported     
+  P-both_n20__C-no_strategy_n19            H2     20 10/11    1   0.0059 supported      supported     
+  P-both_n20__C-no_strategy_n30            H1     20  9/9     0   0.0020 supported      supported     
+  P-both_n20__C-no_strategy_n30            H2     20 10/10    0   0.0010 supported      supported     
+  P-both_n20__C-quarter_strategy_n19       H1     20 11/11    0   0.0005 supported      supported     
+  P-both_n20__C-quarter_strategy_n19       H2     20 11/11    0   0.0005 supported      supported     
+  P-both_n20__C-quarter_strategy_n30       H1     20  9/9     0   0.0020 supported      supported     
+  P-both_n20__C-quarter_strategy_n30       H2     20  9/9     0   0.0020 supported      supported     
+  P-colour_only_n09__C-matched_n30         H1      9  0/0     0          no verdict     no verdict    
+  P-colour_only_n09__C-matched_n30         H2      9  4/4     0          no verdict     no verdict    
+  P-colour_only_n10__C-matched_n30         H1     10  1/1     0   0.5000 not supported  not supported 
+  P-colour_only_n10__C-matched_n30         H2     10  3/3     0   0.1250 not supported  not supported 
+  P-colour_only_n15__C-matched_n30         H1     15  3/4     1   0.3125 not supported  not supported 
+  P-colour_only_n15__C-matched_n30         H2     15  7/10    3   0.1719 not supported  supported       DISAGREE (sign test decides)
+  P-colour_only_n20__C-matched_n30         H1     20  3/3     0   0.1250 not supported  not supported 
+  P-colour_only_n20__C-matched_n30         H2     20 10/10    0   0.0010 supported      supported     
+  P-everyone_n09__C-matched_n30            H1      9  6/6     0          no verdict     no verdict    
+  P-everyone_n09__C-matched_n30            H2      9  9/9     0          no verdict     no verdict    
+  P-everyone_n10__C-matched_n30            H1     10  8/8     0   0.0039 supported      supported     
+  P-everyone_n10__C-matched_n30            H2     10  6/6     0   0.0156 supported      supported     
+  P-everyone_n15__C-matched_n30            H1     15 10/10    0   0.0010 supported      supported     
+  P-everyone_n15__C-matched_n30            H2     15 14/14    0   0.0001 supported      supported     
+  P-everyone_n20__C-matched_n30            H1     20 13/13    0   0.0001 supported      supported     
+  P-everyone_n20__C-matched_n30            H2     20 15/15    0   0.0000 supported      supported     
+  P-fog_only_n09__C-matched_n30            H1      9  2/2     0          no verdict     no verdict    
+  P-fog_only_n09__C-matched_n30            H2      9  1/1     0          no verdict     no verdict    
+  P-fog_only_n10__C-matched_n30            H1     10  4/4     0   0.0625 not supported  supported       DISAGREE (sign test decides)
+  P-fog_only_n10__C-matched_n30            H2     10  1/2     1   0.7500 not supported  not supported 
+  P-fog_only_n15__C-matched_n30            H1     15  8/8     0   0.0039 supported      supported     
+  P-fog_only_n15__C-matched_n30            H2     15  1/3     2   0.8750 not supported  not supported 
+  P-fog_only_n20__C-matched_n30            H1     20 10/11    1   0.0059 supported      supported     
+  P-fog_only_n20__C-matched_n30            H2     20  3/7     4   0.7734 not supported  not supported 
+  P-null_random_n09__C-matched_n30         H1      9  0/0     0          no verdict     no verdict    
+  P-null_random_n09__C-matched_n30         H2      9  0/0     0          no verdict     no verdict    
+  P-null_random_n10__C-matched_n30         H1     10  0/0     0   1.0000 not supported  not supported 
+  P-null_random_n10__C-matched_n30         H2     10  0/0     0   1.0000 not supported  not supported 
+  P-null_random_n15__C-matched_n30         H1     15  2/2     0   0.2500 not supported  not supported 
+  P-null_random_n15__C-matched_n30         H2     15  0/1     1   1.0000 not supported  not supported 
+  P-null_random_n20__C-matched_n30         H1     20  0/0     0   1.0000 not supported  not supported 
+  P-null_random_n20__C-matched_n30         H2     20  0/1     1   1.0000 not supported  not supported 
+  P-null_taste_worst_n09__C-matched_n30    H1      9  2/5     3          no verdict     no verdict    
+  P-null_taste_worst_n09__C-matched_n30    H2      9  1/3     2          no verdict     no verdict    
+  P-null_taste_worst_n10__C-matched_n30    H1     10  2/4     2   0.6875 not supported  not supported 
+  P-null_taste_worst_n10__C-matched_n30    H2     10  3/5     2   0.5000 not supported  not supported 
+  P-null_taste_worst_n15__C-matched_n30    H1     15  1/6     5   0.9844 not supported  not supported 
+  P-null_taste_worst_n15__C-matched_n30    H2     15  2/3     1   0.5000 not supported  not supported 
+  P-null_taste_worst_n20__C-matched_n30    H1     20  6/10    4   0.3770 not supported  not supported 
+  P-null_taste_worst_n20__C-matched_n30    H2     20  4/8     4   0.6367 not supported  not supported 
+  messy                                    H1     10  4/5     1   0.1875 not supported  not supported 
+  messy                                    H2     10  5/5     0   0.0312 supported      supported     
+  messy_over_max                           H1     20  7/7     0   0.0078 supported      supported     
+  messy_over_max                           H2     20  9/9     0   0.0020 supported      supported     
+  sign test and count rule disagree in 4 of 52 claims with N >= 10
+
+VERDICTS AGAINST THE DESIGN (H1/H2: the sign test; the count rule's verdict matches the
+simulation's own in every dataset that passed)
+------------------------------------------------------------------------
+  P-both_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-both_n10__C-matched_n30
+    H1         not supported  expected supported (likely)  [count rule: not supported]
+    H2         not supported  expected supported (likely)  [count rule: not supported]
+    C1_colour  not supported  expected supported (likely)
+    C1_fog     not supported  expected supported (likely)
+  P-both_n15__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         not supported  expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-both_n20__C-lapse_more_n19
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  descriptive    expected descriptive (fixed)
+    C1_fog     descriptive    expected descriptive (fixed)
+  P-both_n20__C-lapse_more_n30
+    H1         not supported  expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  inconclusive   expected inconclusive (near_certain)
+    C1_fog     inconclusive   expected inconclusive (near_certain)
+  P-both_n20__C-matched_n30
+    H1         not supported  expected supported (likely)  [count rule: not supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     not supported  expected supported (likely)
+  P-both_n20__C-no_strategy_n19
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  descriptive    expected descriptive (fixed)
+    C1_fog     descriptive    expected descriptive (fixed)
+  P-both_n20__C-no_strategy_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-both_n20__C-quarter_strategy_n19
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  descriptive    expected descriptive (fixed)
+    C1_fog     descriptive    expected descriptive (fixed)
+  P-both_n20__C-quarter_strategy_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-colour_only_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  not supported  expected supported (likely)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-colour_only_n10__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected supported (likely)  [count rule: not supported]
+    C1_colour  not supported  expected supported (likely)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-colour_only_n15__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected supported (likely)  [count rule: supported]
+    C1_colour  not supported  expected supported (likely)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-colour_only_n20__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-everyone_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-everyone_n10__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-everyone_n15__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-everyone_n20__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  P-fog_only_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected supported (likely)
+  P-fog_only_n10__C-matched_n30
+    H1         not supported  expected supported (likely)  [count rule: supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected supported (likely)
+  P-fog_only_n15__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     supported      expected supported (likely)
+  P-fog_only_n20__C-matched_n30
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     supported      expected supported (likely)
+  P-null_random_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-null_random_n10__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  supported      expected no claim (no_claim)  MISS
+    C1_fog     not supported  expected no claim (no_claim)
+  P-null_random_n15__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  inconclusive   expected no claim (no_claim)
+    C1_fog     inconclusive   expected no claim (no_claim)
+  P-null_random_n20__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-null_taste_worst_n09__C-matched_n30
+    H1         descriptive    expected descriptive (fixed)
+    H2         descriptive    expected descriptive (fixed)
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-null_taste_worst_n10__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected no claim (no_claim)
+  P-null_taste_worst_n15__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  inconclusive   expected no claim (no_claim)
+    C1_fog     inconclusive   expected no claim (no_claim)
+  P-null_taste_worst_n20__C-matched_n30
+    H1         not supported  expected no claim (no_claim)  [count rule: not supported]
+    H2         not supported  expected no claim (no_claim)  [count rule: not supported]
+    C1_colour  not supported  expected no claim (no_claim)
+    C1_fog     not supported  expected no claim (no_claim)
+  messy
+    H1         not supported  expected supported (likely)  [count rule: not supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  not supported  expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+  messy_over_max
+    H1         supported      expected supported (likely)  [count rule: supported]
+    H2         supported      expected supported (likely)  [count rule: supported]
+    C1_colour  supported      expected supported (likely)
+    C1_fog     supported      expected supported (likely)
+
+FALSE-CLAIM CHECK (this analysis's per-person path; 1,000 studies per condition and N;
+two-sided 95% Clopper-Pearson intervals; pass = upper end <= 0.05; flag = registered
+value outside the interval)
+------------------------------------------------------------------------
+  null         N claim | SIGN TEST (registered)                                | COUNT RULE (sensitivity)
+                       |    claims   rate          95% CP registered            |    claims          95% CP registered
+  guesser     10 H1    |    0/1000 0.0000 [0.0000,0.0037]   1.82e-06 in   pass |    0/1000 [0.0000,0.0037]   5.91e-05
+  guesser     10 H2    |    0/1000 0.0000 [0.0000,0.0037]   1.71e-06 in   pass |    0/1000 [0.0000,0.0037]   5.62e-05
+  guesser     15 H1    |    0/1000 0.0000 [0.0000,0.0037]   1.72e-05 in   pass |    0/1000 [0.0000,0.0037]   2.17e-05
+  guesser     15 H2    |    0/1000 0.0000 [0.0000,0.0037]   1.62e-05 in   pass |    0/1000 [0.0000,0.0037]   8.58e-07
+  guesser     20 H1    |    0/1000 0.0000 [0.0000,0.0037]   7.07e-05 in   pass |    0/1000 [0.0000,0.0037]    9.8e-05
+  guesser     20 H2    |    0/1000 0.0000 [0.0000,0.0037]   6.68e-05 in   pass |    0/1000 [0.0000,0.0037]   2.95e-07
+  taste 0.25x 10 H1    |    0/1000 0.0000 [0.0000,0.0037]   1.66e-05 in   pass |    0/1000 [0.0000,0.0037]   0.000329
+  taste 0.25x 10 H2    |    0/1000 0.0000 [0.0000,0.0037]   1.09e-05 in   pass |    0/1000 [0.0000,0.0037]   0.000237
+  taste 0.25x 15 H1    |    0/1000 0.0000 [0.0000,0.0037]   0.000137 in   pass |    0/1000 [0.0000,0.0037]   0.000194
+  taste 0.25x 15 H2    |    0/1000 0.0000 [0.0000,0.0037]   9.22e-05 in   pass |    0/1000 [0.0000,0.0037]   8.25e-06
+  taste 0.25x 20 H1    |    0/1000 0.0000 [0.0000,0.0037]   0.000487 in   pass |    0/1000 [0.0000,0.0037]   0.000794
+  taste 0.25x 20 H2    |    0/1000 0.0000 [0.0000,0.0037]    0.00034 in   pass |    0/1000 [0.0000,0.0037]   4.03e-06
+  taste 0.5x  10 H1    |    0/1000 0.0000 [0.0000,0.0037]   0.000372 in   pass |    1/1000 [0.0000,0.0056]    0.00338
+  taste 0.5x  10 H2    |    0/1000 0.0000 [0.0000,0.0037]   0.000335 in   pass |    2/1000 [0.0002,0.0072]    0.00313
+  taste 0.5x  15 H1    |    0/1000 0.0000 [0.0000,0.0037]    0.00205 in   pass |    0/1000 [0.0000,0.0037]    0.00391 flag
+  taste 0.5x  15 H2    |    1/1000 0.0010 [0.0000,0.0056]    0.00188 in   pass |    1/1000 [0.0000,0.0056]   0.000598
+  taste 0.5x  20 H1    |    5/1000 0.0050 [0.0016,0.0116]    0.00502 in   pass |   14/1000 [0.0077,0.0234]     0.0115
+  taste 0.5x  20 H2    |    8/1000 0.0080 [0.0035,0.0157]    0.00469 in   pass |    0/1000 [0.0000,0.0037]   0.000531
+  taste 0.75x 10 H1    |    3/1000 0.0030 [0.0006,0.0087]    0.00277 in   pass |   15/1000 [0.0084,0.0246]     0.0133
+  taste 0.75x 10 H2    |    1/1000 0.0010 [0.0000,0.0056]    0.00264 in   pass |   11/1000 [0.0055,0.0196]     0.0129
+  taste 0.75x 15 H1    |    6/1000 0.0060 [0.0022,0.0130]    0.00884 in   pass |   17/1000 [0.0099,0.0271]     0.0225
+  taste 0.75x 15 H2    |   11/1000 0.0110 [0.0055,0.0196]    0.00857 in   pass |   10/1000 [0.0048,0.0183]    0.00917
+  taste 0.75x 20 H1    |    7/1000 0.0070 [0.0028,0.0144]     0.0142 in   pass |   33/1000 [0.0228,0.0460]     0.0386
+  taste 0.75x 20 H2    |    9/1000 0.0090 [0.0041,0.0170]     0.0139 in   pass |    8/1000 [0.0035,0.0157]     0.0104
+  taste 1x    10 H1    |    7/1000 0.0070 [0.0028,0.0144]    0.00726 in   pass |   19/1000 [0.0115,0.0295]     0.0224
+  taste 1x    10 H2    |    5/1000 0.0050 [0.0016,0.0116]     0.0069 in   pass |   24/1000 [0.0154,0.0355]      0.022
+  taste 1x    15 H1    |   15/1000 0.0150 [0.0084,0.0246]      0.015 in   pass |   48/1000 [0.0356,0.0631]     0.0421
+  taste 1x    15 H2    |   14/1000 0.0140 [0.0077,0.0234]     0.0146 in   pass |   35/1000 [0.0245,0.0483]     0.0363
+  taste 1x    20 H1    |   13/1000 0.0130 [0.0069,0.0221]     0.0192 in   pass |   41/1000 [0.0296,0.0552]     0.0414
+  taste 1x    20 H2    |   17/1000 0.0170 [0.0099,0.0271]     0.0189 in   pass |   39/1000 [0.0279,0.0529]     0.0396
+  union of H1 and H2 (descriptive):
+    guesser     N 10: sign test 0/1000, count rule 0/1000
+    guesser     N 15: sign test 0/1000, count rule 0/1000
+    guesser     N 20: sign test 0/1000, count rule 0/1000
+    taste 0.25x N 10: sign test 0/1000, count rule 0/1000
+    taste 0.25x N 15: sign test 0/1000, count rule 0/1000
+    taste 0.25x N 20: sign test 0/1000, count rule 0/1000
+    taste 0.5x  N 10: sign test 0/1000, count rule 3/1000
+    taste 0.5x  N 15: sign test 1/1000, count rule 1/1000
+    taste 0.5x  N 20: sign test 12/1000, count rule 14/1000
+    taste 0.75x N 10: sign test 4/1000, count rule 25/1000
+    taste 0.75x N 15: sign test 17/1000, count rule 27/1000
+    taste 0.75x N 20: sign test 16/1000, count rule 41/1000
+    taste 1x    N 10: sign test 12/1000, count rule 42/1000
+    taste 1x    N 15: sign test 29/1000, count rule 83/1000
+    taste 1x    N 20: sign test 30/1000, count rule 76/1000
+
+CHECKS (shared, plus every non-PASS and every truth check)
+------------------------------------------------------------------------
+  [PASS] frozen package matches checksums.sha256  (369 files, seed 42)
+  [PASS] frozen list: 211 trials, registered counts, analysed rows in load_trials' order  (211 trials, 180 analysed)
+  [PASS] copied functions reproduce the stored reference values  (164/164 quantities agree)
+  [PASS] JZS Bayes factor self-check (check_bayes_factor)  (one- and two-sided forms agree)
+  [PASS] copied functions agree with the power script run now  (164/164 quantities)
+  [PASS] copied functions are verbatim (syntax tree)  (31/31 identical)
+  [PASS] copied settings equal the power script's  (38/38 equal)
+  [PASS] verify_frozen gives the power script's verdict  (same FROZEN.json facts)
+  [PASS] recomputed thresholds equal the registered ones (3 dp)  (colour (0.286, -0.29), fog (0.488, -0.486))
+  [PASS] combined_rule.csv equals the registered rule at every N from 10 to 20  (22 rules)
+  [PASS] sign-test copies reproduce the stored reference values  (16/16 quantities agree)
+  [PASS] sign-test copies agree with the sign-test registration script run now  (16/16 quantities)
+  [PASS] sign-test copies are verbatim from the sign-test registration script (syntax tree)  (3/3 identical)
+  [PASS] RULE_SIGN_ALPHA equals the sign-test registration script's  (0.05)
+  [PASS] sign-test copies agree with the power script run now  (16/16 quantities)
+  [PASS] sign-test copies are verbatim from the power script (syntax tree)  (3/3 identical)
+  [PASS] RULE_SIGN_ALPHA equals the power script's  (0.05)
+  [PASS] sign-test decisions for d = 1..20 equal decision_table.csv exactly (minimum predicted, maximum opposite, p at the boundary)  (20/20 rows identical; no claim possible below d = 5)
+  [PASS] sign test: critical counts up to the largest N agree with the decision table's  (d = 0..20)
+  [PASS] sign_test_table.csv: the sign test and the registered count rule at every N from 10 to 20  (44 rows)
+  [PASS] sign test: registered worst-case false-claim upper bound at or below 0.05 at every N  (largest 0.0194)
+  [PASS] CATCH_SEQUENCE: one key per catch trial in the frozen list, balanced 5 up / 5 down  (10 keys for 10 catch trials: up down down up up down up down down up (placeholder, equal to simulate_study_data_v4.py's CATCH_KEYS; replace from the updated config.js))
+  [PASS] CATCH_SEQUENCE equals the simulation's CATCH_KEYS  (simulation: ['up', 'down', 'down', 'up', 'up', 'down', 'up', 'down', 'down', 'up'])
+  [PASS] grid_trials.csv: 2 sets x 4 screens x 3 rows x 6 columns, one feature per screen
+  [PASS] prevalence sensitivities equal the registered ones (2 dp)  (colour (0.5, 0.86, 0.99), fog (0.22, 0.51, 0.79))
+  [PASS] the cap reproduces the registered values (3 dp), is symmetric, and is a maximum  (colour 8.37797, fog 10.26917)
+  [PASS] [P-both_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-both_n09__C-matched_n30] truth: every class
+  [PASS] [P-both_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}, "excluded_catch": {"participant": 1, "control": 3}})
+  [PASS] [P-both_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-both_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-both_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-both_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-both_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-both_n10__C-matched_n30] truth: every class
+  [PASS] [P-both_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 2/2: not supported; H2 4/5: not supported)
+  [PASS] [P-both_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}, "excluded_catch": {"participant": 1, "control": 3}})
+  [PASS] [P-both_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-both_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-both_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-both_n15__C-matched_n30] truth: every class
+  [PASS] [P-both_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 7/7: supported; H2 6/8: not supported)
+  [PASS] [P-both_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}, "excluded_catch": {"participant": 0, "control": 3}})
+  [PASS] [P-both_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-both_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: every class
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 6/6: supported; H2 10/11: supported)
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 19}, "excluded_catch": {"participant": 0, "control": 4}})
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-lapse_more_n19] truth: grid shift per person
+  [PASS] [P-both_n20__C-lapse_more_n19] design: C1_colour descriptive  (descriptive)
+  [PASS] [P-both_n20__C-lapse_more_n19] design: C1_fog descriptive  (descriptive)
+  [PASS] dataset P-both_n20__C-lapse_more_n19: analysed and every truth check passed
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: every class
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 6/7: not supported; H2 9/9: supported)
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 0, "control": 8}})
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-lapse_more_n30] truth: grid shift per person
+  [PASS] dataset P-both_n20__C-lapse_more_n30: analysed and every truth check passed
+  [PASS] [P-both_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-both_n20__C-matched_n30] truth: every class
+  [PASS] [P-both_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 4/4: not supported; H2 11/11: supported)
+  [PASS] [P-both_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 1, "control": 4}})
+  [PASS] [P-both_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-both_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.5e-12)
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: every class
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 6/6: supported; H2 10/11: supported)
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 19}, "excluded_catch": {"participant": 1, "control": 3}})
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-no_strategy_n19] truth: grid shift per person
+  [PASS] [P-both_n20__C-no_strategy_n19] design: C1_colour descriptive  (descriptive)
+  [PASS] [P-both_n20__C-no_strategy_n19] design: C1_fog descriptive  (descriptive)
+  [PASS] dataset P-both_n20__C-no_strategy_n19: analysed and every truth check passed
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: every class
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 9/9: supported; H2 10/10: supported)
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 0, "control": 2}})
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-no_strategy_n30] truth: grid shift per person
+  [PASS] dataset P-both_n20__C-no_strategy_n30: analysed and every truth check passed
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.5e-12)
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: every class
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 11/11: supported; H2 11/11: supported)
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 19}, "excluded_catch": {"participant": 1, "control": 1}})
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 1, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-quarter_strategy_n19] truth: grid shift per person
+  [PASS] [P-both_n20__C-quarter_strategy_n19] design: C1_colour descriptive  (descriptive)
+  [PASS] [P-both_n20__C-quarter_strategy_n19] design: C1_fog descriptive  (descriptive)
+  [PASS] dataset P-both_n20__C-quarter_strategy_n19: analysed and every truth check passed
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: every session's status  (0 differ)
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.9e-12)
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: every class
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 9/9: supported; H2 9/9: supported)
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-both_n20__C-quarter_strategy_n30] truth: grid shift per person
+  [PASS] dataset P-both_n20__C-quarter_strategy_n30: analysed and every truth check passed
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: every class
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}, "excluded_catch": {"participant": 0, "control": 3}})
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-colour_only_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-colour_only_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-colour_only_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-colour_only_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.6e-12)
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: every class
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 1/1: not supported; H2 3/3: not supported)
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-colour_only_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-colour_only_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: every class
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 3/4: not supported; H2 7/10: not supported)
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}, "excluded_catch": {"participant": 0, "control": 2}})
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-colour_only_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-colour_only_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: every class
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 3/3: not supported; H2 10/10: supported)
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 1, "control": 0}})
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-colour_only_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-colour_only_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-everyone_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-everyone_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.9e-12)
+  [PASS] [P-everyone_n09__C-matched_n30] truth: every class
+  [PASS] [P-everyone_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-everyone_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}, "excluded_catch": {"participant": 2, "control": 4}})
+  [PASS] [P-everyone_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-everyone_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-everyone_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-everyone_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-everyone_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-everyone_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-everyone_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-everyone_n10__C-matched_n30] truth: every class
+  [PASS] [P-everyone_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-everyone_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 8/8: supported; H2 6/6: supported)
+  [PASS] [P-everyone_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}, "excluded_catch": {"participant": 0, "control": 5}})
+  [PASS] [P-everyone_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-everyone_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-everyone_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-everyone_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-everyone_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 2.0e-12)
+  [PASS] [P-everyone_n15__C-matched_n30] truth: every class
+  [PASS] [P-everyone_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-everyone_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 10/10: supported; H2 14/14: supported)
+  [PASS] [P-everyone_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}})
+  [PASS] [P-everyone_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-everyone_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-everyone_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-everyone_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-everyone_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.5e-12)
+  [PASS] [P-everyone_n20__C-matched_n30] truth: every class
+  [PASS] [P-everyone_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-everyone_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 13/13: supported; H2 15/15: supported)
+  [PASS] [P-everyone_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-everyone_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-everyone_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-everyone_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: every class
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}, "excluded_catch": {"participant": 0, "control": 2}})
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-fog_only_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-fog_only_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-fog_only_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-fog_only_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: every class
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 4/4: not supported; H2 1/2: not supported)
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-fog_only_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-fog_only_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.6e-12)
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: every class
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 8/8: supported; H2 1/3: not supported)
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-fog_only_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-fog_only_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: every class
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 10/11: supported; H2 3/7: not supported)
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 2, "control": 1}})
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 1, "both_episode_fog_screens_none": 1, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-fog_only_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-fog_only_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_random_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_random_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.6e-12)
+  [PASS] [P-null_random_n09__C-matched_n30] truth: every class
+  [PASS] [P-null_random_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_random_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}, "excluded_catch": {"participant": 0, "control": 1}})
+  [PASS] [P-null_random_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_random_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-null_random_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-null_random_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-null_random_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_random_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_random_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.6e-12)
+  [PASS] [P-null_random_n10__C-matched_n30] truth: every class
+  [PASS] [P-null_random_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_random_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 0/0: not supported; H2 0/0: not supported)
+  [PASS] [P-null_random_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}, "excluded_catch": {"participant": 0, "control": 2}})
+  [PASS] [P-null_random_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_random_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_random_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_random_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_random_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-null_random_n15__C-matched_n30] truth: every class
+  [PASS] [P-null_random_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_random_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 2/2: not supported; H2 0/1: not supported)
+  [PASS] [P-null_random_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}, "excluded_catch": {"participant": 1, "control": 0}})
+  [PASS] [P-null_random_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_random_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_random_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_random_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_random_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-null_random_n20__C-matched_n30] truth: every class
+  [PASS] [P-null_random_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_random_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 0/0: not supported; H2 0/1: not supported)
+  [PASS] [P-null_random_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "excluded_catch": {"participant": 2, "control": 2}})
+  [PASS] [P-null_random_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_random_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_random_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.7e-12)
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: every class
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 9, "control": 30}})
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] truth: grid shift per person
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] design: H1 descriptive  (descriptive)
+  [PASS] [P-null_taste_worst_n09__C-matched_n30] design: H2 descriptive  (descriptive)
+  [PASS] dataset P-null_taste_worst_n09__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.9e-12)
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: every class
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 2/4: not supported; H2 3/5: not supported)
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 30}})
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_taste_worst_n10__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_taste_worst_n10__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: every class
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 1/6: not supported; H2 2/3: not supported)
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 15, "control": 30}})
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_taste_worst_n15__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_taste_worst_n15__C-matched_n30: analysed and every truth check passed
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: every session's status  (0 differ)
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.9e-12)
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: every class
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 6/10: not supported; H2 4/8: not supported)
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}})
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [P-null_taste_worst_n20__C-matched_n30] truth: grid shift per person
+  [PASS] dataset P-null_taste_worst_n20__C-matched_n30: analysed and every truth check passed
+  [PASS] [messy] truth: every session's status  (0 differ)
+  [PASS] [messy] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.5e-12)
+  [PASS] [messy] truth: every class
+  [PASS] [messy] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [messy] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 4/5: not supported; H2 5/5: supported)
+  [PASS] [messy] truth: exclusion counts per step and group  ({"analysable": {"participant": 10, "control": 20}, "excluded_catch": {"participant": 1, "control": 1}, "excluded_images_fit": {"participant": 1, "control": 0}, "excluded_no_consent": {"participant": 1, "control": 0}, "repeat_not_used": {"participant": 1, "control": 0}, "test_or_dev": {"participant": 3, "control": 0}, "tier_D": {"participant": 1, "control": 0}})
+  [PASS] [messy] truth: partial exclusions  ({"flat_word_ratings": 1, "no_word_block": 1, "no_grid_shift_colour": 1, "no_grid_shift_fog": 2, "both_episode_fog_screens_none": 1, "no_state_block": 1, "no_interview_date": 1})
+  [PASS] [messy] truth: grid shift per person
+  [PASS] dataset messy: analysed and every truth check passed
+  [INFO] [messy_over_max] beyond the maximum, listed and not analysed  (1 participants, 1 controls)
+  [PASS] [messy_over_max] truth: every session's status  (0 differ)
+  [PASS] [messy_over_max] truth: weights (fit_firth vs the simulation's fit_firth_batch)  (max difference 1.8e-12)
+  [PASS] [messy_over_max] truth: every class
+  [PASS] [messy_over_max] truth: H1 and H2 counts, the count rule (sensitivity), attention check and C1 as realised
+  [PASS] [messy_over_max] truth: sign-test verdicts equal decision_table.csv read at the simulated counts  (H1 7/7: supported; H2 9/9: supported)
+  [PASS] [messy_over_max] truth: exclusion counts per step and group  ({"analysable": {"participant": 20, "control": 30}, "beyond_maximum": {"participant": 1, "control": 1}})
+  [PASS] [messy_over_max] truth: partial exclusions  ({"flat_word_ratings": 0, "no_word_block": 0, "no_grid_shift_colour": 0, "no_grid_shift_fog": 0, "both_episode_fog_screens_none": 0, "no_state_block": 0, "no_interview_date": 0})
+  [PASS] [messy_over_max] truth: grid shift per person
+  [PASS] dataset messy_over_max: analysed and every truth check passed
+  [PASS] C1 inconclusive when controls lapse more (single draws)  (2/2)
+  [PASS] no claim under no effect, H1/H2 (sign test) (single draws)  (18/18; a miss among these is expected 15% of the time)
+  [FAIL] no claim under no effect, C1 (single draws)  (23/24; a miss among these is expected 46% of the time; missed: P-null_random_n10__C-matched_n30 C1_colour)
+  [PASS] negative test: chose_A flipped for one session stops the run and lists exactly the planted problem  (run stopped at 'chose_A'; 201 rows flipped, 201 listed in 1 session(s))
+  [PASS] negative test: one trial duplicated and another missing stops the run and lists exactly the planted problem  (run stopped at 'trial sets'; trial 17 replaced by a copy of trial 28; listed: complete session missing frozen trials [17]; trial number appears more than once [28])
+  [PASS] negative test: catch_pass disagreeing with the recorded key stops the run and lists exactly the planted problem  (run stopped at 'catch scoring'; catch_pass flipped on trial 23; 1 row(s) listed)
+  [PASS] negative test: decision_table.csv with the minimum predicted at d = 10 lowered by one stops the run and marks exactly that row  (run stopped; rows marked: [10])
+  [PASS] negative test: decision_table.csv with the p at the boundary for d = 15 moved by one ulp stops the run and marks exactly that row  (run stopped; rows marked: [15])
+  [PASS] null_random_n10.npz: trial order matches the frozen list
+  [PASS] null_random_n15.npz: trial order matches the frozen list
+  [PASS] null_random_n20.npz: trial order matches the frozen list
+  [PASS] null_taste_worst_n10.npz: trial order matches the frozen list
+  [PASS] null_taste_worst_n15.npz: trial order matches the frozen list
+  [PASS] null_taste_worst_n20.npz: trial order matches the frozen list
+  [PASS] false claims, sign test, H1, guesser, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.82e-06 inside)
+  [PASS] false claims, sign test, H2, guesser, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.709e-06 inside)
+  [PASS] false claims, sign test, H1, guesser, N 15  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.723e-05 inside)
+  [PASS] false claims, sign test, H2, guesser, N 15  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 1.622e-05 inside)
+  [PASS] false claims, sign test, H1, guesser, N 20  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 7.069e-05 inside)
+  [PASS] false claims, sign test, H2, guesser, N 20  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_guesser 6.677e-05 inside)
+  [PASS] false claims, sign test, H1, taste 0.25x, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 1.665e-05 inside)
+  [PASS] false claims, sign test, H2, taste 0.25x, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 1.087e-05 inside)
+  [PASS] false claims, sign test, H1, taste 0.25x, N 15  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.0001366 inside)
+  [PASS] false claims, sign test, H2, taste 0.25x, N 15  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 9.222e-05 inside)
+  [PASS] false claims, sign test, H1, taste 0.25x, N 20  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.000487 inside)
+  [PASS] false claims, sign test, H2, taste 0.25x, N 20  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.25 0.0003399 inside)
+  [PASS] false claims, sign test, H1, taste 0.5x, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.0003723 inside)
+  [PASS] false claims, sign test, H2, taste 0.5x, N 10  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.0003346 inside)
+  [PASS] false claims, sign test, H1, taste 0.5x, N 15  (0/1000 = 0.0000, 95% CP [0.0000, 0.0037]; registered false_taste_0.5 0.002048 inside)
+  [PASS] false claims, sign test, H2, taste 0.5x, N 15  (1/1000 = 0.0010, 95% CP [0.0000, 0.0056]; registered false_taste_0.5 0.001878 inside)
+  [PASS] false claims, sign test, H1, taste 0.5x, N 20  (5/1000 = 0.0050, 95% CP [0.0016, 0.0116]; registered false_taste_0.5 0.005023 inside)
+  [PASS] false claims, sign test, H2, taste 0.5x, N 20  (8/1000 = 0.0080, 95% CP [0.0035, 0.0157]; registered false_taste_0.5 0.00469 inside)
+  [PASS] false claims, sign test, H1, taste 0.75x, N 10  (3/1000 = 0.0030, 95% CP [0.0006, 0.0087]; registered false_taste_0.75 0.00277 inside)
+  [PASS] false claims, sign test, H2, taste 0.75x, N 10  (1/1000 = 0.0010, 95% CP [0.0000, 0.0056]; registered false_taste_0.75 0.002637 inside)
+  [PASS] false claims, sign test, H1, taste 0.75x, N 15  (6/1000 = 0.0060, 95% CP [0.0022, 0.0130]; registered false_taste_0.75 0.008842 inside)
+  [PASS] false claims, sign test, H2, taste 0.75x, N 15  (11/1000 = 0.0110, 95% CP [0.0055, 0.0196]; registered false_taste_0.75 0.008574 inside)
+  [PASS] false claims, sign test, H1, taste 0.75x, N 20  (7/1000 = 0.0070, 95% CP [0.0028, 0.0144]; registered false_taste_0.75 0.01418 inside)
+  [PASS] false claims, sign test, H2, taste 0.75x, N 20  (9/1000 = 0.0090, 95% CP [0.0041, 0.0170]; registered false_taste_0.75 0.01391 inside)
+  [PASS] false claims, sign test, H1, taste 1x, N 10  (7/1000 = 0.0070, 95% CP [0.0028, 0.0144]; registered false_taste_1 0.007259 inside)
+  [PASS] false claims, sign test, H2, taste 1x, N 10  (5/1000 = 0.0050, 95% CP [0.0016, 0.0116]; registered false_taste_1 0.006896 inside)
+  [PASS] false claims, sign test, H1, taste 1x, N 15  (15/1000 = 0.0150, 95% CP [0.0084, 0.0246]; registered false_taste_1 0.01501 inside)
+  [PASS] false claims, sign test, H2, taste 1x, N 15  (14/1000 = 0.0140, 95% CP [0.0077, 0.0234]; registered false_taste_1 0.01465 inside)
+  [PASS] false claims, sign test, H1, taste 1x, N 20  (13/1000 = 0.0130, 95% CP [0.0069, 0.0221]; registered false_taste_1 0.01916 inside)
+  [PASS] false claims, sign test, H2, taste 1x, N 20  (17/1000 = 0.0170, 95% CP [0.0099, 0.0271]; registered false_taste_1 0.0189 inside)
+  [PASS] false claims, sign test: 95% Clopper-Pearson upper end at or below 0.05 in every condition, N and claim  (30/30; largest upper end 0.0271)
+  [PASS] false claims, sign test: registered value inside the 95% interval  (30/30 inside; 0 flagged (about 1.5 expected by chance if every registered value were exact))
+  [PASS] false claims, count rule: this analysis's counts equal the simulation's preview counts  (12 cells)
+  [INFO] false claims, count rule (sensitivity): registered value inside the 95% interval  (29/30; upper end at or below 0.05 in 27/30)
+  [INFO] H1/H2: sign test and count rule disagree  (4 of 52 claims with N >= 10; the sign test decides)
