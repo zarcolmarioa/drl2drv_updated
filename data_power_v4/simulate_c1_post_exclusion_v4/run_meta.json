@@ -1,0 +1,576 @@
+{
+ "script": "simulate_c1_post_exclusion_v4.py",
+ "started": "2026-10-27 10:18:48",
+ "output": "data/simulate_c1_post_exclusion_v4_2",
+ "python": "3.11.15",
+ "numpy": "2.4.4",
+ "scipy": "1.17.1",
+ "pandas": "3.0.3",
+ "matplotlib": "3.10.9",
+ "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+ "input_sha256": {
+  "data/registration_v4/combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+  "data/registration_v4/c1_cells.csv": "54f26c6bbe9ce3a29319b46520bbbb1e8c3c3895fdbc070fd67e6fca35ef1cb0",
+  "data/registration_v4/c1_compact.csv": "5b812e39eaa7beb77aa6611dbb2e470631ee59162b8b8c05342e40c35c398598",
+  "data/power_v4_n10_20/frozen/c1_power.csv": "f7033f3160e9fe4de6f23049ff8f3d4fcae20caa030299112cce11767950e807",
+  "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+  "/home/mario/Documents/drl2drv_updated/simulate_c1_post_exclusion_v4.py": "4d6c6fcee68d29c6e824b4ed99da3cd1edf6f372d6e9c06c49d30b0d137a0b13"
+ },
+ "frozen": {
+  "frozen_at": "2026-10-18T17:39:39",
+  "version": "both",
+  "source": "data/trials_v4_ext/both",
+  "frozen_root": "data/frozen_trial_list_v4",
+  "seed": 42,
+  "colour_cut_sat_mean": 31.1,
+  "colour_cut_SD": 0.7937,
+  "variant": "extended",
+  "catch_mode": "no_images",
+  "catch_trials": 10,
+  "catch_exclusion_rule": "exclude a participant failing 3 or more catch trials",
+  "sd_sat": 39.182,
+  "sd_fog": 9.348,
+  "n_files": 369,
+  "n_images": 349,
+  "checks_passed": 54,
+  "checks_failed": 0,
+  "checks_noted": 0,
+  "design": {
+   "r": -0.1146862959762241,
+   "scenes": 47,
+   "max_per_scene": 7,
+   "counts": {
+    "fog_only": 60,
+    "sat_only": 60,
+    "conflict": 30,
+    "together": 30,
+    "consistency": 15,
+    "catch": 10,
+    "practice": 6
+   }
+  },
+  "settings": {
+   "Pairs from": "data/pair_analysis_v4_ext/extended/all_pairs.csv",
+   "Stimuli from": "data/stimulus_set_v4_ext_haze_eq/stimuli",
+   "Variant": "extended",
+   "Colour cut": "|d_sat| >= 31.1 sat_mean units (0.794 SD)",
+   "Bins": "fixed  sat_only 5; fog_only 3; together 3; conflict 3",
+   "Counts": "60 sat_only, 60 fog_only, 60 mixed (50% conflict)",
+   "Extras": "15 consistency, 10 catch, 6 practice",
+   "Catch": "mode 'no_images'; exclude a participant failing 3 or more",
+   "Conflict": "balanced subset only",
+   "Scene cap": "2 per type",
+   "Streams": "per_type: 13 generators, each seeded from (seed 42, draw name)",
+   "Seed": "42  (+ 19 replicate draw(s) under seeds/, for step 6)"
+  },
+  "provenance_captured": [
+   "data/trials_v4_ext/both/trials_report.txt",
+   "data/trials_v4_ext/trials_overview.txt",
+   "data/trials_v4_ext/stream_check.csv",
+   "data/trials_v4_ext/seeds_summary.csv",
+   "data/choose_colour_v4/choose_report.txt",
+   "data/choose_colour_v4/information.csv",
+   "data/choose_colour_v4/differences.csv",
+   "data/choose_colour_v4/fog_control.csv",
+   "data/robustness_v4/robustness_report.txt",
+   "data/robustness_v4/ranking.csv",
+   "data/robustness_v4/weights.csv",
+   "data/robustness_v4/differences_by_lapse.csv"
+  ],
+  "provenance_missing": [],
+  "checksums": "checksums.sha256"
+ },
+ "elapsed_min": 5.870170283317566,
+ "checks": [
+  {
+   "check": "data/registration_v4/combined_rule.csv exists",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "combined_rule.csv matches the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "9e9e9a2a2b74c709..."
+  },
+  {
+   "check": "data/registration_v4/c1_cells.csv exists",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "c1_cells.csv matches the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "54f26c6bbe9ce3a2..."
+  },
+  {
+   "check": "data/registration_v4/c1_compact.csv exists",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "c1_compact.csv matches the committed copy (SHA-256)",
+   "result": "PASS",
+   "detail": "5b812e39eaa7beb7..."
+  },
+  {
+   "check": "data/power_v4_n10_20/frozen/c1_power.csv exists",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "c1_power.csv matches the registration's record",
+   "result": "PASS",
+   "detail": "f7033f3160e9fe4d..."
+  },
+  {
+   "check": "simulate_power_v4_n10_20.py exists next to this script",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "simulate_power_v4_n10_20.py is the committed version (SHA-256)",
+   "result": "PASS",
+   "detail": "852f3b33eb349153..."
+  },
+  {
+   "check": "frozen trial list verified; 180 analysed trials",
+   "result": "PASS",
+   "detail": "180 analysed trials"
+  },
+  {
+   "check": "computed thresholds round to the registered ones",
+   "result": "PASS",
+   "detail": "[0.286, -0.29, 0.488, -0.486]"
+  },
+  {
+   "check": "copied functions are verbatim (syntax tree)",
+   "result": "PASS",
+   "detail": "21/21 identical"
+  },
+  {
+   "check": "copied settings equal the power script's",
+   "result": "PASS",
+   "detail": "41/41 equal"
+  },
+  {
+   "check": "every setting the copies read is a copied setting",
+   "result": "PASS",
+   "detail": "41 read"
+  },
+  {
+   "check": "copied functions give the original's results",
+   "result": "PASS",
+   "detail": "27/27 identical to 1e-12"
+  },
+  {
+   "check": "replay has the same cells as c1_power.csv",
+   "result": "PASS",
+   "detail": "3549 vs 3549 rows"
+  },
+  {
+   "check": "replay: attention columns identical to c1_power.csv",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "replay: weight-dependent rates within 2 studies per cell of c1_power.csv",
+   "result": "PASS",
+   "detail": "worst 0 studies, 0 cell-columns differ at all"
+  },
+  {
+   "check": "replay reproduces c1_cells.csv (attention exact, weights within 2 studies)",
+   "result": "PASS",
+   "detail": "2457/2457 cells matched; worst 0 studies"
+  },
+  {
+   "check": "replay kept every registered pool",
+   "result": "PASS",
+   "detail": "117/117"
+  },
+  {
+   "check": "validation has every registered cell at 20/30 controls",
+   "result": "PASS",
+   "detail": "1638 cells"
+  },
+  {
+   "check": "validation: exclusion off reproduces c1_cells.csv within Monte Carlo error",
+   "result": "PASS",
+   "detail": "21294 comparisons (0 skipped); 3.2% beyond 1.96; max |z| 3.87; mean z +0.000; SD z 0.838"
+  },
+  {
+   "check": "with the exclusion, nobody analysable has 3+ catch failures",
+   "result": "PASS",
+   "detail": "max 2"
+  },
+  {
+   "check": "with the exclusion off, nobody is excluded",
+   "result": "PASS",
+   "detail": ""
+  },
+  {
+   "check": "recruitment: numbers excluded match the negative binomial expectation from each pool's own exclusion share",
+   "result": "PASS",
+   "detail": "worst 1.55 SE"
+  },
+  {
+   "check": "pools' exclusion share against the exact lapse-model probability",
+   "result": "INFO",
+   "detail": "largest difference 0.0024 (pools of 20,000: SE about 0.003)"
+  }
+ ],
+ "settings": {
+  "FROZEN_ROOT": "data/frozen_trial_list_v4",
+  "FROZEN_TRIAL_LIST": "trial_list.csv",
+  "REGISTRATION_DIR": "data/registration_v4",
+  "POWER_FROZEN_DIR": "data/power_v4_n10_20/frozen",
+  "POWER_SCRIPT": "simulate_power_v4_n10_20.py",
+  "COMMITTED_SHA256": {
+   "combined_rule.csv": "9e9e9a2a2b74c709792a0bc88767b20a9a0ed2f021fbf79fe419eb9382377a0a",
+   "c1_cells.csv": "54f26c6bbe9ce3a29319b46520bbbb1e8c3c3895fdbc070fd67e6fca35ef1cb0",
+   "c1_compact.csv": "5b812e39eaa7beb77aa6611dbb2e470631ee59162b8b8c05342e40c35c398598"
+  },
+  "POWER_RUN_SHA256": {
+   "c1_power.csv": "f7033f3160e9fe4de6f23049ff8f3d4fcae20caa030299112cce11767950e807"
+  },
+  "POWER_SCRIPT_SHA256": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+  "OUTPUT_ROOT": "data/simulate_c1_post_exclusion_v4",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "REGISTERED_THRESHOLDS": {
+   "colour": [
+    0.286,
+    -0.29
+   ],
+   "fog": [
+    0.488,
+    -0.486
+   ]
+  },
+  "CATCH_FAIL_EXCLUDE": 3,
+  "MIN_CONTROLS_C1": 20,
+  "N_MAX_PARTICIPANTS": 20,
+  "N_MAX_CONTROLS": 30,
+  "PARTICIPANT_N": [
+   10,
+   15,
+   20
+  ],
+  "CONTROL_N": [
+   20,
+   30
+  ],
+  "STUDIES_PER_CELL": 4000,
+  "RUN_REPLAY": true,
+  "REPLAY_STUDY_TOL": 2,
+  "VAL_Z": 1.96,
+  "VAL_MAX_SHARE_BEYOND": 0.08,
+  "VAL_MAX_ABS_Z": 4.5,
+  "VAL_MEAN_Z": 0.1,
+  "VAL_MIN_N": 50,
+  "VAL_MEASURES": [
+   [
+    "power_colour_raw",
+    null
+   ],
+   [
+    "power_fog_raw",
+    null
+   ],
+   [
+    "power_either_raw",
+    null
+   ],
+   [
+    "gate_fires",
+    null
+   ],
+   [
+    "gate_fires_catch",
+    null
+   ],
+   [
+    "gate_fires_rt",
+    null
+   ],
+   [
+    "power_colour_gated",
+    null
+   ],
+   [
+    "power_fog_gated",
+    null
+   ],
+   [
+    "power_either_gated",
+    null
+   ],
+   [
+    "zero_usable",
+    null
+   ],
+   [
+    "zero_power_either",
+    "zero_usable"
+   ],
+   [
+    "zero_rt_fires",
+    "zero_usable"
+   ],
+   [
+    "zero_power_rt_clean",
+    "zero_usable"
+   ]
+  ],
+  "SEED_VALIDATION_DRAWS": 20261101,
+  "SEED_MAIN_POOLS": 20261102,
+  "SEED_MAIN_DRAWS": 20261103,
+  "IDENTITY_SEED": 20261104,
+  "SERIES_COLOURS": [
+   "#0072B2",
+   "#009E73",
+   "#D55E00",
+   "#CC79A7"
+  ],
+  "SERIES_MARKERS": [
+   "o",
+   "s",
+   "^",
+   "D"
+  ],
+  "SERIES_STYLES": [
+   "-",
+   "--",
+   "-.",
+   ":"
+  ],
+  "UNHASHED": [
+   "checksums.sha256",
+   "FROZEN.json",
+   "freeze_report.txt"
+  ],
+  "FROZEN_SEED": 42,
+  "PRED_SAT": "pred_sat",
+  "PRED_FOG": "pred_fog",
+  "SD_SAT": 39.182,
+  "SD_FOG": 9.348,
+  "PRED_REBUILD_TOL": 1e-09,
+  "ESTIMATOR": "firth",
+  "FIRTH_ITER": 200,
+  "FIRTH_TOL": 1e-10,
+  "FIRTH_MAX_STEP": 5.0,
+  "CAP_INFORMATIVE_SD": 0.2,
+  "NONRESPONDER_SPREAD_MULT": 0.5,
+  "RULE_RESPONDER_WEIGHTS": [
+   0.3,
+   0.5,
+   0.7
+  ],
+  "ALPHA": 0.05,
+  "FLOOR_ALPHA": 0.025,
+  "N_FLOOR_PEOPLE": 20000,
+  "DETECTION_SIDED": "two",
+  "C1_STRATEGY_RATES": [
+   0.0,
+   0.25,
+   0.5
+  ],
+  "C1_STRATEGY_WEIGHT": 0.5,
+  "C1_PARTICIPANT_N": [
+   10,
+   15,
+   20
+  ],
+  "C1_CONTROL_RATIOS": [
+   1.0,
+   1.5,
+   2.0
+  ],
+  "C1_CONTROL_ABSOLUTE": [
+   20,
+   30,
+   40
+  ],
+  "C1_LAPSE_PAIRS": [
+   [
+    0.0,
+    0.0
+   ],
+   [
+    0.1,
+    0.0
+   ],
+   [
+    0.2,
+    0.0
+   ],
+   [
+    0.0,
+    0.1
+   ],
+   [
+    0.0,
+    0.2
+   ],
+   [
+    0.1,
+    0.1
+   ],
+   [
+    0.2,
+    0.2
+   ]
+  ],
+  "C1_EXACT_MAX_N": 20,
+  "C1_POOL_PEOPLE": 20000,
+  "C1_STUDIES": 2000,
+  "C1_HOLM": true,
+  "C1_ZERO_MIN_N": 4,
+  "C1_RESPONDER_SHARES": [
+   0.5,
+   1.0
+  ],
+  "GATE_ALPHA": 0.05,
+  "N_CATCH_TRIALS": 10,
+  "CATCH_P_FAIL_PER_LAPSE": 0.75,
+  "LAPSE_BETWEEN_SD": 0.5,
+  "RT_GATE": true,
+  "RT_FAST_CUTOFF_MS": 300,
+  "RT_FAST_GIVEN_LAPSE": 0.4,
+  "RT_FAST_GIVEN_ENGAGED": 0.005,
+  "GATE_ACTION": "inconclusive",
+  "GATE_SECONDARY_ZERO_CATCH": true,
+  "RANDOM_SEED": 42,
+  "COPIED_SETTINGS": [
+   "UNHASHED",
+   "FROZEN_SEED",
+   "PRED_SAT",
+   "PRED_FOG",
+   "SD_SAT",
+   "SD_FOG",
+   "PRED_REBUILD_TOL",
+   "ESTIMATOR",
+   "FIRTH_ITER",
+   "FIRTH_TOL",
+   "FIRTH_MAX_STEP",
+   "CAP_INFORMATIVE_SD",
+   "NONRESPONDER_SPREAD_MULT",
+   "RULE_RESPONDER_WEIGHTS",
+   "ALPHA",
+   "FLOOR_ALPHA",
+   "N_FLOOR_PEOPLE",
+   "DETECTION_SIDED",
+   "C1_STRATEGY_RATES",
+   "C1_STRATEGY_WEIGHT",
+   "C1_PARTICIPANT_N",
+   "C1_CONTROL_RATIOS",
+   "C1_CONTROL_ABSOLUTE",
+   "C1_LAPSE_PAIRS",
+   "C1_EXACT_MAX_N",
+   "C1_POOL_PEOPLE",
+   "C1_STUDIES",
+   "C1_HOLM",
+   "C1_ZERO_MIN_N",
+   "C1_RESPONDER_SHARES",
+   "GATE_ALPHA",
+   "N_CATCH_TRIALS",
+   "CATCH_P_FAIL_PER_LAPSE",
+   "LAPSE_BETWEEN_SD",
+   "RT_GATE",
+   "RT_FAST_CUTOFF_MS",
+   "RT_FAST_GIVEN_LAPSE",
+   "RT_FAST_GIVEN_ENGAGED",
+   "GATE_ACTION",
+   "GATE_SECONDARY_ZERO_CATCH",
+   "RANDOM_SEED"
+  ],
+  "COPIED_FUNCTIONS": [
+   "fit_logit_batch",
+   "fit_firth_batch",
+   "fit_batch",
+   "simulate_many",
+   "sha256_of",
+   "verify_frozen",
+   "load_trials",
+   "informative_medians",
+   "as_probability",
+   "compute_floors",
+   "classify",
+   "mw_exact_sf",
+   "mw_p_batch",
+   "holm_two",
+   "_c1_pool",
+   "_c1_gate",
+   "_c1_draw",
+   "_c1_test",
+   "_c1_zero_catch",
+   "draw_attention",
+   "run_c1"
+  ],
+  "KEYS": [
+   "effect_on",
+   "effect_sd",
+   "responder_share",
+   "n_participants",
+   "n_controls",
+   "strategy_rate",
+   "lapse_participants",
+   "lapse_controls"
+  ],
+  "ATTENTION_COLS": [
+   "gate_fires",
+   "gate_fires_catch",
+   "gate_fires_rt",
+   "inconclusive",
+   "zero_usable",
+   "zero_n_participants",
+   "zero_n_controls",
+   "zero_lapse_participants",
+   "zero_lapse_controls",
+   "zero_rt_fires"
+  ],
+  "WEIGHT_COLS": [
+   [
+    "power_colour_raw",
+    null
+   ],
+   [
+    "power_fog_raw",
+    null
+   ],
+   [
+    "power_either_raw",
+    null
+   ],
+   [
+    "power_colour_gated",
+    null
+   ],
+   [
+    "power_fog_gated",
+    null
+   ],
+   [
+    "power_either_gated",
+    null
+   ],
+   [
+    "zero_power_either",
+    "zero_usable"
+   ],
+   [
+    "zero_power_rt_clean",
+    "zero_usable"
+   ]
+  ],
+  "IDENTITY_TOL": 1e-12
+ },
+ "result": "complete",
+ "validation": {
+  "comparisons": 21294,
+  "skipped": 0,
+  "share_beyond": 0.03226260918568611,
+  "max_abs_z": 3.866889740125688,
+  "mean_z": 0.00010461754821460841,
+  "sd_z": 0.8375982883209445
+ }
+}

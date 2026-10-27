@@ -1,0 +1,19 @@
+column,kind,max_abs_diff,max_studies_diff,cells_differing,ok
+gate_fires,attention (exact),0.0,,0,True
+gate_fires_catch,attention (exact),0.0,,0,True
+gate_fires_rt,attention (exact),0.0,,0,True
+inconclusive,attention (exact),0.0,,0,True
+zero_usable,attention (exact),0.0,,0,True
+zero_n_participants,attention (exact),0.0,,0,True
+zero_n_controls,attention (exact),0.0,,0,True
+zero_lapse_participants,attention (exact),9.71445146547012e-17,,0,True
+zero_lapse_controls,attention (exact),9.71445146547012e-17,,0,True
+zero_rt_fires,attention (exact),1.1102230246251565e-16,,0,True
+power_colour_raw,weight-dependent,0.0,0.0,0,True
+power_fog_raw,weight-dependent,0.0,0.0,0,True
+power_either_raw,weight-dependent,0.0,0.0,0,True
+power_colour_gated,weight-dependent,0.0,0.0,0,True
+power_fog_gated,weight-dependent,0.0,0.0,0,True
+power_either_gated,weight-dependent,0.0,0.0,0,True
+zero_power_either,weight-dependent,1.1102230246251565e-16,2.219335826225688e-13,0,True
+zero_power_rt_clean,weight-dependent,1.1102230246251565e-16,2.219335826225688e-13,0,True

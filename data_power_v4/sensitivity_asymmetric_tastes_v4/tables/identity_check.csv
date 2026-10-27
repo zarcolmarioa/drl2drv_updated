@@ -1,0 +1,37 @@
+quantity,max_abs_diff,ok
+fit_firth_batch,0.0,True
+fit_batch,0.0,True
+fit_logit_batch,0.0,True
+simulate_many,0.0,True
+lapse_p,0.0,True
+simulate_lapsing,0.0,True
+"compute_floors (upper, lower, sd, nulls)",0.0,True
+"classification_rates (every null, both features)",0.0,True
+classify,0.0,True
+informative_medians,0.0,True
+as_probability,0.0,True
+trinomial_grid,0.0,True
+rule_mask_count,0.0,True
+rule_false_claim_exact,0.0,True
+_c1_pool,0.0,True
+draw_attention,0.0,True
+_c1_draw (6),0.0,True
+mw_p_batch (exact null),0.0,True
+"mw_p_batch, ties (exact null)",0.0,True
+_c1_test (exact null),0.0,True
+_c1_gate (exact null),0.0,True
+_c1_zero_catch (exact null),0.0,True
+_c1_draw (25),0.0,True
+mw_p_batch (normal approximation),0.0,True
+"mw_p_batch, ties (normal approximation)",0.0,True
+_c1_test (normal approximation),0.0,True
+_c1_gate (normal approximation),0.0,True
+_c1_zero_catch (normal approximation),0.0,True
+mw_exact_sf,0.0,True
+holm_two,0.0,True
+verify_frozen,0.0,True
+load_trials,0.0,True
+"c1_pool_biased, mu = 0  ==  _c1_pool, no effect",0.0,True
+"c1_pool_biased, mu on colour  ==  _c1_pool, everyone responding on colour",0.0,True
+"c1_pool_biased, mu on fog  ==  _c1_pool, everyone responding on fog",0.0,True
+joint enumeration: per-feature margins == rule_false_claim_exact,2.1510571102112408e-16,True

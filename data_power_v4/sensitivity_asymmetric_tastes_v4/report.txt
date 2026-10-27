@@ -1,0 +1,417 @@
+REGISTERED RULES UNDER A SHARED DIRECTIONAL PREFERENCE
+(sensitivity_asymmetric_tastes_v4)
+======================================================================
+run          2026-10-27 10:25:10  (2.6 min)
+output       data/sensitivity_asymmetric_tastes_v4
+python       3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+
+WHAT THIS IS
+----------------------------------------------------------------------
+The registered 5% false-claim rate for H1 and H2 assumes that people without the
+memory effect have tastes centred on zero. Here their tastes are centred on mu,
+in the predicted direction, and the registered thresholds and (k, m) are applied
+unchanged. Claim rates are exact given the measured per-person rates; their
+Monte Carlo SE is carried through (se_* columns, *_upper = point + 1.96 SE).
+
+Thresholds: reproduction checks use the computed ones; everything else the
+registered (rounded) ones.
+  colour computed +0.28632 / -0.28961; registered +0.286 / -0.290
+  fog    computed +0.48805 / -0.48560; registered +0.488 / -0.486
+
+SETTINGS
+----------------------------------------------------------------------
+  bias targets   ['colour', 'fog', 'both']
+  mu             [0.0, 0.1, 0.25, 0.5, 0.75, 1.0] x that feature's upper threshold
+  spreads        [0.25, 0.5, 0.75, 1.0] x upper threshold
+  lapse          [0.0, 0.1] (one fixed rate per person; with a fixed rate the
+                 catch exclusion is independent of the weights and cannot change
+                 these rates, so it is not simulated in this part)
+  people / pool  20,000
+  N              10-20, registered (k, m) per N from combined_rule.csv
+  mixtures       share biased [0.1, 0.25, 0.5]
+  C1 part        mu [0.25, 0.5, 1.0] (and 0) on ['colour', 'fog', 'both'], spread 0.5x,
+                 strategy [0.0, 0.25], 7 lapse pairs, [10, 15, 20] x [20, 30],
+                 4000 studies per cell, post-exclusion procedure
+  seeds          reproduction 20261201, pools 20261202, C1 pools 20261203,
+                 C1 draws 20261204; replay uses the power script's own
+
+CRITERIA, FIXED BEFORE THE RUN
+----------------------------------------------------------------------
+  replay         classification_rates with its own seed and the computed thresholds
+                 must reproduce every registered false-claim rate (five nulls, all
+                 22 rules) to within 2 people in 20,000 per rate.
+  independent    this script's code, new seed, mu = 0, lapse 0: every per-person
+                 rate and every registered false-claim rate within 3.3 combined SE.
+
+CHECKS
+----------------------------------------------------------------------
+  [PASS] data/registration_v4/combined_rule.csv exists
+  [PASS] combined_rule.csv matches the committed copy (SHA-256)  (9e9e9a2a2b74c709...)
+  [PASS] data/registration_v4/c1_cells.csv exists
+  [PASS] c1_cells.csv matches the committed copy (SHA-256)  (54f26c6bbe9ce3a2...)
+  [PASS] data/registration_v4/c1_compact.csv exists
+  [PASS] c1_compact.csv matches the committed copy (SHA-256)  (5b812e39eaa7beb7...)
+  [PASS] data/power_v4_n10_20/frozen/rule_sweep.csv exists
+  [PASS] rule_sweep.csv matches the registration's record  (0d5d03282c954924...)
+  [PASS] simulate_power_v4_n10_20.py exists next to this script
+  [PASS] simulate_power_v4_n10_20.py is the committed version (SHA-256)  (852f3b33eb349153...)
+  [PASS] frozen trial list verified; 180 analysed trials  (180 analysed trials)
+  [PASS] computed thresholds round to the registered ones  ([0.286, -0.29, 0.488, -0.486])
+  [PASS] copied functions are verbatim (syntax tree)  (26/26 identical)
+  [PASS] copied settings equal the power script's  (34/34 equal)
+  [PASS] every setting the copies read is a copied setting  (30 read)
+  [PASS] copied functions give the original's results; this script's own pieces reduce to them  (36/36 identical)
+  [PASS] combined_rule.csv has a rule for every feature and N in 10-20
+  [PASS] replay: classification_rates reproduces every registered false-claim rate (combined_rule false_worst and rule_sweep, all five nulls)  (132/132; worst |diff| 1.04e-16)
+  [PASS] independent reproduction at mu = 0: per-person and false-claim rates within 3.3 SE of the registered values  (130 comparisons, max |z| 1.98)
+  [INFO] median informative difference (typical trial)  (colour 0.971 SD, fog 0.642 SD)
+  [PASS] joint enumeration agrees with the exact per-feature rates in every cell  (worst 5.7e-15)
+  [INFO] mu = 0, registered thresholds, spread 1.0: largest difference from false_worst  (0.0045 (Monte Carlo and threshold rounding; the criterion is the independent check above))
+
+RESULTS
+======================================================================
+
+1. THE SIZE OF EACH BIAS, AS BEHAVIOUR
+----------------------------------------------------------------------
+Probability that a person with exactly the mean taste picks the predicted image
+on a typical informative trial of that feature (median informative difference),
+and on a 1.0 SD difference.
+target  mu_mult  mu_colour_per_SD  mu_fog_per_SD  p_typical_colour  p_typical_fog  p_1SD_colour  p_1SD_fog
+colour     0.00            0.0000         0.0000            0.5000         0.5000        0.5000     0.5000
+colour     0.10            0.0286         0.0000            0.5069         0.5000        0.5071     0.5000
+colour     0.25            0.0715         0.0000            0.5174         0.5000        0.5179     0.5000
+colour     0.50            0.1430         0.0000            0.5347         0.5000        0.5357     0.5000
+colour     0.75            0.2145         0.0000            0.5519         0.5000        0.5534     0.5000
+colour     1.00            0.2860         0.0000            0.5690         0.5000        0.5710     0.5000
+   fog     0.00            0.0000         0.0000            0.5000         0.5000        0.5000     0.5000
+   fog     0.10            0.0000         0.0488            0.5000         0.5078        0.5000     0.5122
+   fog     0.25            0.0000         0.1220            0.5000         0.5196        0.5000     0.5305
+   fog     0.50            0.0000         0.2440            0.5000         0.5391        0.5000     0.5607
+   fog     0.75            0.0000         0.3660            0.5000         0.5584        0.5000     0.5905
+   fog     1.00            0.0000         0.4880            0.5000         0.5777        0.5000     0.6196
+  both     0.00            0.0000         0.0000            0.5000         0.5000        0.5000     0.5000
+  both     0.10            0.0286         0.0488            0.5069         0.5078        0.5071     0.5122
+  both     0.25            0.0715         0.1220            0.5174         0.5196        0.5179     0.5305
+  both     0.50            0.1430         0.2440            0.5347         0.5391        0.5357     0.5607
+  both     0.75            0.2145         0.3660            0.5519         0.5584        0.5534     0.5905
+  both     1.00            0.2860         0.4880            0.5690         0.5777        0.5710     0.6196
+
+2. PER-PERSON CLASSIFICATION (the biased feature, lapse 0)
+----------------------------------------------------------------------
+
+  colour: P(predicted) / P(opposite); rows mu, columns spread
+spread              0.25             0.50             0.75             1.00
+mu_mult                                                                    
+0.00     0.0386 / 0.0362  0.0832 / 0.0756  0.1343 / 0.1359  0.1812 / 0.1826
+0.10     0.0579 / 0.0288  0.1034 / 0.0606   0.159 / 0.1088  0.2062 / 0.1588
+0.25     0.0954 / 0.0145  0.1466 / 0.0388  0.1973 / 0.0798   0.247 / 0.1275
+0.50      0.1866 / 0.004  0.2353 / 0.0168  0.2889 / 0.0466  0.3292 / 0.0838
+0.75     0.3299 / 0.0012  0.3554 / 0.0076  0.3853 / 0.0264  0.4016 / 0.0592
+1.00     0.4972 / 0.0002  0.4955 / 0.0023  0.4976 / 0.0142  0.5022 / 0.0384
+
+  fog: P(predicted) / P(opposite); rows mu, columns spread
+spread              0.25             0.50             0.75             1.00
+mu_mult                                                                    
+0.00     0.0401 / 0.0394  0.0844 / 0.0804  0.1344 / 0.1365    0.188 / 0.181
+0.10     0.0583 / 0.0269  0.1026 / 0.0622   0.159 / 0.1126  0.2082 / 0.1584
+0.25     0.0976 / 0.0128  0.1474 / 0.0404  0.2039 / 0.0825   0.248 / 0.1308
+0.50     0.1938 / 0.0044  0.2398 / 0.0174  0.2874 / 0.0466  0.3253 / 0.0894
+0.75      0.3272 / 0.001  0.3674 / 0.0075  0.3831 / 0.0264  0.4064 / 0.0614
+1.00     0.4854 / 0.0002  0.4947 / 0.0023  0.4936 / 0.0137  0.5039 / 0.0367
+
+3. P(CLAIM) WITH NO MEMORY EFFECT, against the registered false_worst
+----------------------------------------------------------------------
+The registered false_worst is the rate at spread 1.0, mu = 0. Rows: mu;
+columns: spread. Worst N in 10-20 and the N where it occurs.
+
+  lapse 0, bias on colour: p_H2_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00       0.0 (N10)  0.004 (N10)  0.019 (N18)  0.046 (N18)
+0.10     0.001 (N10)   0.01 (N10)  0.044 (N18)  0.088 (N18)
+0.25      0.01 (N10)   0.04 (N14)  0.114 (N18)  0.192 (N18)
+0.50     0.103 (N14)  0.233 (N18)   0.41 (N18)  0.491 (N18)
+0.75     0.576 (N18)  0.663 (N18)  0.746 (N18)   0.74 (N20)
+1.00     0.949 (N18)  0.948 (N18)  0.948 (N18)  0.939 (N20)
+
+  lapse 0, bias on fog: p_H1_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.014 (N20)  0.037 (N20)  0.049 (N17)
+0.10     0.005 (N20)  0.035 (N20)  0.083 (N20)  0.084 (N18)
+0.25     0.039 (N20)  0.137 (N20)  0.218 (N20)  0.171 (N18)
+0.50     0.343 (N20)  0.522 (N20)  0.567 (N20)   0.41 (N18)
+0.75     0.835 (N20)  0.902 (N20)  0.845 (N20)  0.652 (N17)
+1.00     0.992 (N20)  0.992 (N20)  0.963 (N20)  0.857 (N16)
+
+  lapse 0, bias on both: p_H2_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00       0.0 (N10)  0.004 (N10)  0.019 (N18)  0.046 (N18)
+0.10     0.002 (N10)   0.01 (N10)  0.045 (N18)  0.091 (N18)
+0.25      0.01 (N10)   0.04 (N14)  0.123 (N18)  0.185 (N18)
+0.50     0.105 (N14)  0.258 (N18)    0.4 (N18)  0.448 (N18)
+0.75     0.564 (N18)  0.683 (N18)   0.73 (N18)   0.74 (N18)
+1.00     0.949 (N18)   0.94 (N18)  0.945 (N18)  0.932 (N20)
+
+  lapse 0, bias on both: p_H1_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.014 (N20)  0.037 (N20)  0.049 (N17)
+0.10     0.004 (N20)  0.033 (N20)  0.078 (N20)  0.078 (N18)
+0.25     0.033 (N20)  0.124 (N20)  0.214 (N20)  0.166 (N18)
+0.50     0.298 (N20)  0.488 (N20)  0.562 (N20)  0.389 (N18)
+0.75     0.825 (N20)  0.891 (N20)   0.85 (N20)  0.663 (N18)
+1.00     0.993 (N20)  0.993 (N20)  0.958 (N20)  0.848 (N16)
+
+  lapse 0, bias on both: p_either_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.015 (N20)  0.051 (N18)  0.093 (N18)
+0.10     0.004 (N20)  0.036 (N20)  0.109 (N18)  0.162 (N18)
+0.25     0.034 (N20)  0.141 (N20)  0.287 (N18)  0.322 (N18)
+0.50     0.346 (N20)  0.591 (N20)  0.714 (N20)  0.664 (N18)
+0.75     0.916 (N20)  0.961 (N20)  0.953 (N20)  0.914 (N18)
+1.00       1.0 (N20)    1.0 (N20)  0.997 (N18)  0.989 (N20)
+
+  lapse 0.1, bias on colour: p_H2_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00       0.0 (N10)  0.002 (N10)  0.012 (N14)  0.038 (N18)
+0.10     0.001 (N10)  0.007 (N10)  0.024 (N14)  0.066 (N18)
+0.25     0.005 (N10)   0.02 (N10)  0.065 (N18)  0.152 (N18)
+0.50     0.059 (N10)  0.142 (N18)  0.267 (N18)  0.376 (N18)
+0.75     0.389 (N18)  0.522 (N18)  0.619 (N18)   0.67 (N18)
+1.00     0.833 (N18)  0.858 (N18)  0.883 (N18)   0.89 (N18)
+
+  lapse 0.1, bias on fog: p_H1_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.007 (N20)  0.029 (N20)  0.047 (N19)
+0.10     0.003 (N20)  0.025 (N20)  0.069 (N20)  0.083 (N20)
+0.25     0.017 (N20)  0.091 (N20)  0.173 (N20)  0.166 (N20)
+0.50     0.197 (N20)  0.365 (N20)  0.488 (N20)  0.408 (N20)
+0.75     0.684 (N20)  0.783 (N20)  0.798 (N20)  0.665 (N19)
+1.00     0.966 (N20)   0.97 (N20)  0.956 (N20)  0.846 (N18)
+
+  lapse 0.1, bias on both: p_H2_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00       0.0 (N10)  0.002 (N10)  0.012 (N14)  0.038 (N18)
+0.10     0.001 (N10)  0.006 (N10)  0.026 (N14)  0.067 (N18)
+0.25     0.006 (N10)  0.023 (N14)  0.085 (N18)  0.151 (N18)
+0.50     0.067 (N14)  0.145 (N18)  0.267 (N18)  0.362 (N18)
+0.75     0.365 (N18)  0.508 (N18)  0.599 (N18)  0.671 (N18)
+1.00     0.815 (N18)   0.85 (N18)  0.875 (N18)  0.884 (N18)
+
+  lapse 0.1, bias on both: p_H1_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.007 (N20)  0.029 (N20)  0.047 (N19)
+0.10     0.002 (N20)  0.022 (N20)  0.063 (N20)  0.081 (N20)
+0.25     0.018 (N20)  0.086 (N20)  0.157 (N20)  0.173 (N20)
+0.50     0.206 (N20)  0.388 (N20)  0.494 (N20)  0.389 (N20)
+0.75     0.673 (N20)  0.788 (N20)  0.802 (N20)  0.692 (N19)
+1.00     0.961 (N20)  0.975 (N20)  0.959 (N20)   0.86 (N19)
+
+  lapse 0.1, bias on both: p_either_claim
+spread          0.25         0.50         0.75         1.00
+mu_mult                                                    
+0.00     0.001 (N20)  0.007 (N20)  0.034 (N18)  0.082 (N18)
+0.10     0.002 (N20)  0.023 (N20)  0.076 (N20)   0.14 (N18)
+0.25     0.019 (N20)  0.094 (N20)  0.204 (N20)  0.293 (N18)
+0.50     0.236 (N20)  0.449 (N20)    0.6 (N20)  0.607 (N18)
+0.75     0.774 (N20)  0.885 (N20)  0.911 (N20)  0.899 (N18)
+1.00     0.993 (N20)  0.996 (N20)  0.994 (N20)  0.985 (N18)
+
+  At every N (lapse 0, spread 1.0, the registered worst case):
+
+  bias on colour: p_H2_claim
+n           10     11     12     13     14     15     16     17     18     19     20
+mu_mult                                                                             
+0.00     0.022  0.030  0.042  0.032  0.037  0.036  0.034  0.041  0.046  0.032  0.039
+0.10     0.038  0.052  0.070  0.059  0.067  0.064  0.065  0.077  0.088  0.063  0.076
+0.25     0.078  0.104  0.139  0.125  0.143  0.136  0.145  0.170  0.192  0.148  0.176
+0.50     0.213  0.272  0.344  0.338  0.376  0.363  0.397  0.448  0.491  0.424  0.479
+0.75     0.371  0.467  0.557  0.560  0.603  0.599  0.645  0.697  0.738  0.686  0.740
+1.00     0.583  0.727  0.805  0.804  0.830  0.852  0.882  0.910  0.927  0.915  0.939
+
+  bias on fog: p_H1_claim
+n           10     11     12     13     14     15     16     17     18     19     20
+mu_mult                                                                             
+0.00     0.024  0.035  0.048  0.037  0.042  0.046  0.048  0.049  0.049  0.048  0.046
+0.10     0.039  0.054  0.073  0.061  0.070  0.076  0.081  0.084  0.084  0.083  0.081
+0.25     0.077  0.105  0.140  0.124  0.141  0.154  0.164  0.169  0.171  0.169  0.165
+0.50     0.198  0.262  0.331  0.320  0.355  0.381  0.398  0.408  0.410  0.406  0.398
+0.75     0.370  0.479  0.569  0.565  0.606  0.632  0.647  0.652  0.649  0.641  0.628
+1.00     0.594  0.732  0.809  0.811  0.838  0.852  0.857  0.856  0.850  0.841  0.831
+
+  bias on both: p_either_claim
+n           10     11     12     13     14     15     16     17     18     19     20
+mu_mult                                                                             
+0.00     0.045  0.064  0.088  0.068  0.078  0.080  0.081  0.088  0.093  0.078  0.083
+0.10     0.074  0.102  0.138  0.115  0.130  0.133  0.138  0.151  0.162  0.137  0.147
+0.25     0.146  0.200  0.261  0.232  0.260  0.267  0.280  0.303  0.322  0.285  0.304
+0.50     0.342  0.437  0.534  0.517  0.564  0.574  0.603  0.638  0.664  0.622  0.649
+0.75     0.611  0.716  0.805  0.811  0.848  0.855  0.879  0.900  0.914  0.894  0.909
+1.00     0.828  0.920  0.959  0.961  0.972  0.976  0.982  0.986  0.989  0.985  0.989
+
+  Registered false_worst, per N (H2 colour / H1 fog):
+  N10 0.022/0.022  N11 0.031/0.033  N12 0.042/0.045  N13 0.033/0.034  N14 0.038/0.039  N15 0.036/0.042  N16 0.035/0.044  N17 0.042/0.045  N18 0.047/0.045  N19 0.033/0.043  N20 0.040/0.041
+
+4. WHERE THE 5% IS CROSSED (lapse 0)
+----------------------------------------------------------------------
+The smallest mu (x threshold) at which the claim rate, at its worst N, exceeds 0.05.
+  bias on colour p_H2_claim      spread 0.25  first above 0.05 at mu 0.5x (0.103)
+  bias on colour p_H2_claim      spread 0.5   first above 0.05 at mu 0.5x (0.233)
+  bias on colour p_H2_claim      spread 0.75  first above 0.05 at mu 0.25x (0.114)
+  bias on colour p_H2_claim      spread 1     first above 0.05 at mu 0.1x (0.088)
+  bias on fog    p_H1_claim      spread 0.25  first above 0.05 at mu 0.5x (0.343)
+  bias on fog    p_H1_claim      spread 0.5   first above 0.05 at mu 0.25x (0.137)
+  bias on fog    p_H1_claim      spread 0.75  first above 0.05 at mu 0.1x (0.083)
+  bias on fog    p_H1_claim      spread 1     first above 0.05 at mu 0.1x (0.084)
+  bias on both   p_either_claim  spread 0.25  first above 0.05 at mu 0.5x (0.346)
+  bias on both   p_either_claim  spread 0.5   first above 0.05 at mu 0.25x (0.141)
+  bias on both   p_either_claim  spread 0.75  first above 0.05 at mu 0x (0.051)
+  bias on both   p_either_claim  spread 1     first above 0.05 at mu 0x (0.093)
+
+5. MIXTURES: a share of the null people biased (lapse 0, spread 1.0)
+----------------------------------------------------------------------
+
+  bias on colour: p_H2_claim, worst N; rows mu, columns share biased
+share_biased   0.10   0.25   0.50
+mu_mult                          
+0.10          0.050  0.055  0.065
+0.25          0.055  0.071  0.103
+0.50          0.067  0.107  0.204
+0.75          0.077  0.143  0.310
+1.00          0.092  0.198  0.486
+
+  bias on fog: p_H1_claim, worst N; rows mu, columns share biased
+share_biased   0.10   0.25   0.50
+mu_mult                          
+0.10          0.052  0.057  0.065
+0.25          0.057  0.070  0.096
+0.50          0.066  0.098  0.172
+0.75          0.075  0.128  0.258
+1.00          0.086  0.171  0.376
+
+  bias on both: p_either_claim, worst N; rows mu, columns share biased
+share_biased   0.10   0.25   0.50
+mu_mult                          
+0.10          0.099  0.108  0.124
+0.25          0.109  0.134  0.186
+0.50          0.126  0.187  0.321
+0.75          0.145  0.250  0.481
+1.00          0.166  0.318  0.627
+
+6. C1 WITH THE SAME BIAS IN BOTH GROUPS (no memory effect)
+----------------------------------------------------------------------
+False positive = C1 supported for either feature after the attention check;
+worst and mean over the 12 cells (3 x 2 sizes x 2 strategies) of each lapse pair.
+mu = 0 ('none') is the reference run with this script's own pools.
+target  mu_mult  lapse_participants  lapse_controls  fp_either_mean  fp_either_worst  fp_colour_worst  fp_fog_worst  ungated_either_worst  gate_fires_mean  zero_catch_worst
+  none     0.00                 0.0             0.0           0.045            0.051            0.028         0.029                 0.053            0.023             0.053
+  none     0.00                 0.0             0.1           0.000            0.000            0.000         0.000                 0.058            1.000             0.050
+  none     0.00                 0.0             0.2           0.000            0.000            0.000         0.000                 0.076            1.000             0.058
+  none     0.00                 0.1             0.0           0.044            0.052            0.028         0.026                 0.052            0.000             0.051
+  none     0.00                 0.1             0.1           0.045            0.052            0.027         0.030                 0.055            0.044             0.047
+  none     0.00                 0.2             0.0           0.036            0.048            0.024         0.026                 0.048            0.000             0.044
+  none     0.00                 0.2             0.2           0.045            0.052            0.029         0.029                 0.055            0.044             0.044
+colour     0.25                 0.0             0.0           0.046            0.051            0.029         0.027                 0.052            0.023             0.052
+colour     0.25                 0.0             0.1           0.000            0.000            0.000         0.000                 0.070            1.000             0.057
+colour     0.25                 0.0             0.2           0.000            0.000            0.000         0.000                 0.093            1.000             0.064
+colour     0.25                 0.1             0.0           0.036            0.044            0.023         0.024                 0.044            0.000             0.043
+colour     0.25                 0.1             0.1           0.043            0.050            0.028         0.026                 0.052            0.045             0.049
+colour     0.25                 0.2             0.0           0.030            0.042            0.016         0.027                 0.042            0.000             0.042
+colour     0.25                 0.2             0.2           0.044            0.047            0.028         0.027                 0.049            0.045             0.047
+colour     0.50                 0.0             0.0           0.044            0.050            0.029         0.028                 0.050            0.023             0.050
+colour     0.50                 0.0             0.1           0.000            0.000            0.000         0.000                 0.084            1.000             0.064
+colour     0.50                 0.0             0.2           0.000            0.000            0.000         0.000                 0.118            1.000             0.073
+colour     0.50                 0.1             0.0           0.034            0.046            0.022         0.026                 0.046            0.000             0.044
+colour     0.50                 0.1             0.1           0.045            0.050            0.027         0.027                 0.054            0.045             0.051
+colour     0.50                 0.2             0.0           0.025            0.034            0.011         0.024                 0.034            0.000             0.033
+colour     0.50                 0.2             0.2           0.044            0.050            0.028         0.027                 0.054            0.045             0.043
+colour     1.00                 0.0             0.0           0.046            0.055            0.028         0.028                 0.056            0.023             0.056
+colour     1.00                 0.0             0.1           0.000            0.000            0.000         0.000                 0.104            1.000             0.074
+colour     1.00                 0.0             0.2           0.000            0.000            0.000         0.000                 0.173            1.000             0.092
+colour     1.00                 0.1             0.0           0.028            0.033            0.010         0.025                 0.033            0.000             0.036
+colour     1.00                 0.1             0.1           0.043            0.050            0.029         0.026                 0.052            0.043             0.051
+colour     1.00                 0.2             0.0           0.021            0.029            0.004         0.026                 0.029            0.000             0.031
+colour     1.00                 0.2             0.2           0.042            0.048            0.025         0.026                 0.051            0.044             0.042
+   fog     0.25                 0.0             0.0           0.046            0.053            0.032         0.026                 0.054            0.024             0.054
+   fog     0.25                 0.0             0.1           0.000            0.000            0.000         0.000                 0.068            1.000             0.059
+   fog     0.25                 0.0             0.2           0.000            0.000            0.000         0.000                 0.096            1.000             0.064
+   fog     0.25                 0.1             0.0           0.037            0.047            0.029         0.019                 0.047            0.000             0.042
+   fog     0.25                 0.1             0.1           0.044            0.050            0.026         0.027                 0.053            0.044             0.047
+   fog     0.25                 0.2             0.0           0.031            0.040            0.027         0.015                 0.040            0.000             0.035
+   fog     0.25                 0.2             0.2           0.041            0.046            0.027         0.026                 0.049            0.047             0.044
+   fog     0.50                 0.0             0.0           0.045            0.052            0.031         0.030                 0.053            0.023             0.053
+   fog     0.50                 0.0             0.1           0.000            0.000            0.000         0.000                 0.072            1.000             0.060
+   fog     0.50                 0.0             0.2           0.000            0.000            0.000         0.000                 0.123            1.000             0.071
+   fog     0.50                 0.1             0.0           0.035            0.043            0.028         0.018                 0.043            0.000             0.041
+   fog     0.50                 0.1             0.1           0.044            0.054            0.026         0.028                 0.056            0.043             0.050
+   fog     0.50                 0.2             0.0           0.027            0.038            0.027         0.010                 0.038            0.000             0.040
+   fog     0.50                 0.2             0.2           0.043            0.048            0.028         0.025                 0.050            0.046             0.045
+   fog     1.00                 0.0             0.0           0.045            0.050            0.029         0.028                 0.052            0.023             0.052
+   fog     1.00                 0.0             0.1           0.000            0.000            0.000         0.000                 0.108            1.000             0.086
+   fog     1.00                 0.0             0.2           0.000            0.000            0.000         0.000                 0.210            1.000             0.103
+   fog     1.00                 0.1             0.0           0.027            0.034            0.023         0.012                 0.034            0.000             0.039
+   fog     1.00                 0.1             0.1           0.042            0.050            0.032         0.026                 0.052            0.043             0.048
+   fog     1.00                 0.2             0.0           0.022            0.031            0.026         0.006                 0.031            0.000             0.032
+   fog     1.00                 0.2             0.2           0.043            0.050            0.027         0.027                 0.053            0.044             0.043
+  both     0.25                 0.0             0.0           0.044            0.052            0.028         0.027                 0.053            0.023             0.053
+  both     0.25                 0.0             0.1           0.000            0.000            0.000         0.000                 0.078            1.000             0.067
+  both     0.25                 0.0             0.2           0.000            0.000            0.000         0.000                 0.110            1.000             0.071
+  both     0.25                 0.1             0.0           0.033            0.042            0.024         0.021                 0.042            0.000             0.042
+  both     0.25                 0.1             0.1           0.044            0.050            0.028         0.031                 0.052            0.045             0.047
+  both     0.25                 0.2             0.0           0.024            0.034            0.016         0.018                 0.034            0.000             0.039
+  both     0.25                 0.2             0.2           0.043            0.049            0.026         0.026                 0.051            0.046             0.043
+  both     0.50                 0.0             0.0           0.045            0.049            0.028         0.028                 0.050            0.023             0.050
+  both     0.50                 0.0             0.1           0.000            0.000            0.000         0.000                 0.090            1.000             0.074
+  both     0.50                 0.0             0.2           0.000            0.000            0.000         0.000                 0.142            1.000             0.085
+  both     0.50                 0.1             0.0           0.024            0.029            0.016         0.015                 0.029            0.000             0.032
+  both     0.50                 0.1             0.1           0.044            0.054            0.028         0.028                 0.056            0.044             0.047
+  both     0.50                 0.2             0.0           0.015            0.020            0.010         0.010                 0.020            0.000             0.026
+  both     0.50                 0.2             0.2           0.044            0.050            0.026         0.027                 0.052            0.046             0.044
+  both     1.00                 0.0             0.0           0.045            0.050            0.026         0.029                 0.050            0.023             0.050
+  both     1.00                 0.0             0.1           0.000            0.000            0.000         0.000                 0.140            1.000             0.102
+  both     1.00                 0.0             0.2           0.000            0.000            0.000         0.000                 0.292            1.000             0.133
+  both     1.00                 0.1             0.0           0.015            0.018            0.011         0.010                 0.018            0.000             0.022
+  both     1.00                 0.1             0.1           0.044            0.051            0.027         0.027                 0.052            0.045             0.048
+  both     1.00                 0.2             0.0           0.005            0.008            0.004         0.004                 0.008            0.000             0.017
+  both     1.00                 0.2             0.2           0.042            0.048            0.029         0.025                 0.051            0.045             0.043
+
+  matched lapses: worst 0.055, mean 0.044 (nominal 0.05); at mu = 0 worst 0.052
+  controls lapse more: worst after the check 0.000; ungated worst 0.292
+  Monte Carlo SE of one cell's rate near 0.05: 0.0034
+
+NOTES
+----------------------------------------------------------------------
+- Claim rates are exact given the per-person rates measured on 20,000 simulated
+  people per pool. 'either' and 'both' are exact given the measured 3 x 3 joint
+  table (the two classifications of one person are fitted jointly and are not
+  independent).
+- H1 and H2 are two separate registered claims, each calibrated at 5%. 'Either
+  claim' is not a registered quantity: even at mu = 0 it is close to the sum of
+  the two rates (up to about 0.09 at spread 1.0). It is reported because a
+  shared bias on both features raises both at once.
+- A shared bias at mu = 1.0 puts the average null person's weight AT the detection
+  threshold; the grid is a sensitivity range, not an estimate of any population.
+
+FILES
+----------------------------------------------------------------------
+  tables/bias_as_probability.csv
+  tables/c1_bias_cells.csv
+  tables/c1_bias_summary.csv
+  tables/claim_rates.csv
+  tables/identity_check.csv
+  tables/joint_rates.csv
+  tables/mixture_claim_rates.csv
+  tables/per_person_rates.csv
+  tables/validation_mu0.csv
+  figures/c1_false_positive_bias.png
+  figures/claim_rate_vs_bias_lapse0.1.png
+  figures/claim_rate_vs_bias_lapse0.png
+  figures/mixtures.png
+  figures/per_person_rates.png
