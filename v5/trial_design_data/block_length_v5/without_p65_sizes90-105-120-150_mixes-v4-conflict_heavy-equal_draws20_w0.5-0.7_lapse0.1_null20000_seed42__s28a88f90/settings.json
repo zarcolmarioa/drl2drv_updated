@@ -1,0 +1,304 @@
+{
+  "script2": {
+    "CAPACITY_SCRIPT": "analyse_pair_capacity_v5.py",
+    "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+    "CAPACITY_OVERRIDES": {},
+    "SCRIPT1_RUN_DIR": "data/pair_capacity_v5/disjoint-pair_match-scene_bin_cap2_satcut31.1_contol0.72_sizes90-105-120-150_levels-with_p65-without_p65_draws20_seed42__sc4d2297d",
+    "V4_TRIAL_LIST": "data/frozen_trial_list_v4/trial_list.csv",
+    "INCLUDE_V4_REFERENCE": true,
+    "V4_REGISTERED_THRESHOLDS": {
+      "upper": [
+        0.286,
+        0.488
+      ],
+      "lower": [
+        -0.29,
+        -0.486
+      ]
+    },
+    "V4_THRESHOLD_TOL": 0.005,
+    "LEVEL_SET": "without_p65",
+    "BLOCK_SIZES": [
+      90,
+      105,
+      120,
+      150
+    ],
+    "MIXES": [
+      "v4",
+      "conflict_heavy",
+      "equal"
+    ],
+    "N_DRAWS": 20,
+    "PLANNING_WEIGHTS": [
+      0.5,
+      0.7
+    ],
+    "LAPSE": 0.1,
+    "DETECTION_LAPSES": [
+      0.0,
+      0.1
+    ],
+    "N_THRESHOLD_PEOPLE": 20000,
+    "THRESHOLD_ALPHA": 0.025,
+    "N_DETECTION_PEOPLE": 10000,
+    "TASTE_SD": [
+      0.143,
+      0.244
+    ],
+    "PAIRED_SCENARIOS": {
+      "no effect": {
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "share": 1.0
+      },
+      "planning": {
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "share": 1.0
+      },
+      "planning, spread 50%": {
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.25,
+          0.35
+        ],
+        "share": 1.0
+      },
+      "planning, 50% respond": {
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "share": 0.5
+      },
+      "half shift, spread 50%": {
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.125,
+          0.175
+        ],
+        "share": 1.0
+      }
+    },
+    "NULL_SCENARIO": "no effect",
+    "PRIMARY_SCENARIO": "planning",
+    "PAIRED_N": [
+      10,
+      15,
+      20
+    ],
+    "PAIRED_TESTS": [
+      "t",
+      "wilcoxon"
+    ],
+    "PRIMARY_TEST": "t",
+    "ALPHA": 0.05,
+    "POOL_PEOPLE": 10000,
+    "N_STUDIES": 4000,
+    "POWER_TARGET": 0.8,
+    "SET_THRESHOLD_TOL": 0.05,
+    "EST_CORR_MAX": 0.3,
+    "EXTREME_WEIGHT": 5.0,
+    "EXTREME_SHARE_MAX": 0.001,
+    "TYPE1_FWER": 0.01,
+    "PRACTICE_BY_BLOCK": [
+      6,
+      2
+    ],
+    "CATCH_PER_BLOCK": 5,
+    "CONSISTENCY_PER_BLOCK": 8,
+    "SECONDS_PER_TRIAL": [
+      3.5,
+      4.5
+    ],
+    "FIXED_MINUTES": 2.0,
+    "BETWEEN_BLOCKS_MINUTES": 1.0,
+    "V4_SESSION": {
+      "trials": 211,
+      "minutes": [
+        14,
+        18
+      ]
+    },
+    "MAKE_FIGURE": true,
+    "OUTPUT_ROOT": "data/block_length_v5",
+    "ON_EXISTING": "new",
+    "RANDOM_SEED": 42
+  },
+  "script1_in_force": {
+    "BALANCED_CONFLICT_ONLY": true,
+    "BALANCE_ASSIGNMENT": true,
+    "BIN_EDGES_SD": {
+      "sat_only": [
+        0.58,
+        0.79,
+        1.1,
+        1.8
+      ],
+      "fog_only": [
+        0.5894,
+        0.8259
+      ],
+      "together": [
+        0.5517,
+        0.8362
+      ],
+      "conflict": [
+        0.4506,
+        0.5714
+      ]
+    },
+    "BLOCK_SIZES": [
+      90,
+      105,
+      120,
+      150
+    ],
+    "CATCH_TYPE": "together",
+    "COS_DIFF_MAX": 0.05,
+    "DISJOINT": "pair",
+    "EPS": 1e-09,
+    "EXPECTED_POOL": {
+      "total": 34366,
+      "sat_only": 6282,
+      "fog_only": 2136,
+      "together": 17666,
+      "conflict": 8282,
+      "balanced_conflict": 4300
+    },
+    "FOG_ONLY_SAT_TOL": 3.0,
+    "FOG_SIGN": -1.0,
+    "ILP_TIME_LIMIT": 60,
+    "INFO_TOL_TOTAL": 0.05,
+    "INFO_TOL_TYPE": 0.1,
+    "KS_MAX_D": 0.1,
+    "LEVEL_SETS": {
+      "with_p65": {
+        "drop_colour": [],
+        "drop_fog": []
+      },
+      "without_p65": {
+        "drop_colour": [
+          "p65"
+        ],
+        "drop_fog": []
+      }
+    },
+    "MANIFEST_CSV": "data/stimulus_set_v4_ext_haze_eq/stimulus_manifest.csv",
+    "MAX_CAP_SEARCH": 4,
+    "MAX_PER_SCENE_PER_TYPE": 2,
+    "MIN_PAIRS_PER_BIN": 10,
+    "MIN_SCENE_SHARE": 0.85,
+    "N_CATCH_PER_BLOCK": 10,
+    "N_DRAWS": 20,
+    "N_PRACTICE_PER_BLOCK": 6,
+    "ON_EXISTING": "new",
+    "ORIGINAL_COLOUR": "k=1",
+    "ORIGINAL_FOG": "h=0",
+    "OUTPUT_ROOT": "data/pair_capacity_v5",
+    "P65_DECISION": [
+      "with_p65",
+      "without_p65"
+    ],
+    "PAIRS_CSV": "data/pair_analysis_v4_ext/extended/all_pairs.csv",
+    "PRACTICE_MAG_QUANTILE": 0.6,
+    "PRACTICE_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together"
+    ],
+    "RANDOM_SEED": 42,
+    "REQUIRED_COLS": [
+      "scene_id",
+      "type",
+      "colour_a",
+      "fog_a_level",
+      "colour_b",
+      "fog_b_level",
+      "file_a",
+      "file_b",
+      "sat_a",
+      "sat_b",
+      "fog_a",
+      "fog_b",
+      "d_sat",
+      "d_fog",
+      "pred_sat",
+      "pred_fog",
+      "balanced"
+    ],
+    "REQUIRED_PASS_SHARE": 0.9,
+    "SAT_ONLY_CON_TOL": 0.72,
+    "SAT_ONLY_MIN_DSAT": 31.1,
+    "SCENE_MATCH": "scene_bin",
+    "SD_FOG": 9.348,
+    "SD_SAT": 39.182,
+    "SPREAD_SCENES": true,
+    "TYPES": [
+      "sat_only",
+      "fog_only",
+      "together",
+      "conflict"
+    ],
+    "TYPE_MIXES": {
+      "v4": {
+        "sat_only": 0.3333333333333333,
+        "fog_only": 0.3333333333333333,
+        "together": 0.16666666666666666,
+        "conflict": 0.16666666666666666
+      },
+      "conflict_heavy": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "together": 0.15,
+        "conflict": 0.25
+      },
+      "equal": {
+        "sat_only": 0.25,
+        "fog_only": 0.25,
+        "together": 0.25,
+        "conflict": 0.25
+      }
+    },
+    "TYPE_ORDER": [
+      "sat_only",
+      "fog_only",
+      "conflict",
+      "together"
+    ],
+    "TYPE_TRIES": 5,
+    "V4_BALANCE_HI": 1.7,
+    "V4_BALANCE_LO": 0.6,
+    "V4_MIN_DFOG_FOG_ONLY": 4.2,
+    "V4_MIN_DFOG_MIXED": 3.0,
+    "V4_MIN_DSAT_MIXED": 8.0,
+    "V4_MIN_DSAT_SAT_ONLY": 17.0,
+    "V4_PAIR_SAT_TOL": 3.0,
+    "V4_TRIAL_LIST": "data/frozen_trial_list_v4/trial_list.csv",
+    "VIF_MAX": 1.25,
+    "WRITE_EXAMPLE_SETS": true
+  }
+}
