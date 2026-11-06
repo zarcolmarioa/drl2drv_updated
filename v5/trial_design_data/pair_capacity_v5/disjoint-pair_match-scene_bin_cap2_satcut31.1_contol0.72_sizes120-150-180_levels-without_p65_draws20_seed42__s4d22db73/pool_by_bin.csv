@@ -1,0 +1,15 @@
+level_set,type,bin,pairs,scenes_1,scenes_2
+without_p65,sat_only,1,0,0,0
+without_p65,sat_only,2,0,0,0
+without_p65,sat_only,3,517,47,47
+without_p65,sat_only,4,598,47,47
+without_p65,sat_only,5,131,36,24
+without_p65,fog_only,1,298,40,39
+without_p65,fog_only,2,323,47,47
+without_p65,fog_only,3,322,47,47
+without_p65,together,1,2131,47,47
+without_p65,together,2,2050,47,47
+without_p65,together,3,2017,47,47
+without_p65,conflict,1,333,34,34
+without_p65,conflict,2,389,40,39
+without_p65,conflict,3,757,47,47

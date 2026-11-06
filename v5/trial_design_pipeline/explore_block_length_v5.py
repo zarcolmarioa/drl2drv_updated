@@ -15,9 +15,15 @@ WHAT THIS ANSWERS
         upper threshold;
       * PAIRED-TEST POWER: a first estimate of the power of a one-sided
         paired test on each person's weight difference between the two
-        blocks, at N = 10, 15 and 20;
+        blocks, at N = 10, 15 and 20, under the v4 preregistration's
+        planning scenario (primary) and the other scenarios in SETTINGS;
+      * CHOICE PROBABILITY: the share of predicted-image choices the
+        planning weights give on a typical informative trial of each list,
+        against v4's interpretation (0.6191 and 0.6104);
       * SEPARATION of the two weights (the correlation of their estimates,
-        and the number of conflict trials), and the SESSION LENGTH.
+        and the number of conflict trials), and the SESSION LENGTH of the
+        two pair blocks, built from the experiment's fixed durations plus
+        an assumed response time.
 
     Contrast is the bottleneck (its trials carry about a third of the
     saturation information), so every contrast figure is reported first.
@@ -50,11 +56,21 @@ REUSED (imported, not copied, so there is one definition of each)
 THE PERSON MODEL FOR THE PAIRED TEST (all settings)
     Each simulated person has a stable TASTE on each weight, the same in
     both blocks, drawn from Normal(0, TASTE_SD); TASTE_SD is v4's assumed
-    non-responder spread (0.5 x the registered v4 thresholds). In the
-    TARGET block (derealization episode in the report group; the
-    comparison group's analogue is the same arithmetic) a responder adds a
-    SHIFT drawn from Normal(shift mean, shift SD); a non-responder adds
-    nothing. The REFERENCE block (ordinary episode) carries taste only.
+    non-responder spread (0.5 x the registered v4 thresholds). A share of
+    people are RESPONDERS. A responder may carry a SHARED preference, the
+    same in both blocks, and adds a SHIFT drawn from Normal(shift mean,
+    shift SD) in the TARGET block only (derealization episode in the
+    report group; the comparison group's analogue is the same arithmetic).
+    A non-responder has taste only. The REFERENCE block (ordinary episode)
+    carries taste plus any shared preference. The difference between the
+    blocks therefore holds only the shift.
+
+    "planning" is the v4 preregistration's planning scenario: half the
+    group respond, with a derealization-specific shift of 0.5 (saturation)
+    and 0.7 (contrast) per corpus SD; the rest have taste only; lapse 0.1.
+    "half shift" is the same people, but half of each responder's
+    preference is shared by both episodes, so only half of it separates
+    the blocks. The others are sensitivity rows.
     Every person lapses at LAPSE in both blocks. Each block's weights are
     fitted separately with Firth, and the per-person difference
     (target - reference) is tested one-sided against zero across the N
@@ -73,7 +89,8 @@ OUTPUTS (one new folder per run, never overwritten)
     summary_by_combination.csv   one row per size x mix (+ v4 reference)
     lists.csv                 one row per block list (draw x set)
     paired_power.csv          one row per draw x scenario x N x test
-    session_length.csv        trials and minutes per size
+    session_length.csv        trials, breaks and minutes per size and
+                              response-time assumption (pair blocks only)
     checks.csv                every check, PASS or FAIL
     paired_power_con.png, paired_power_sat.png
                               power against block size per scenario
@@ -103,8 +120,8 @@ CAPACITY_OVERRIDES = {}
 #   there, draw 0 of every combination is checked against them. None or a
 #   missing folder skips that check.
 SCRIPT1_RUN_DIR = ("data/pair_capacity_v5/disjoint-pair_match-scene_bin_cap2"
-                   "_satcut31.1_contol0.72_sizes90-105-120-150_levels-with_p65"
-                   "-without_p65_draws20_seed42__sc4d2297d")
+                   "_satcut31.1_contol0.72_sizes120-150-180_levels-without_p65"
+                   "_draws20_seed42__s4d22db73")
 
 # --- The v4 reference ---
 V4_TRIAL_LIST = "data/frozen_trial_list_v4/trial_list.csv"
@@ -121,8 +138,8 @@ V4_THRESHOLD_TOL = 0.005
 
 # --- What to explore ---
 LEVEL_SET = "without_p65"              # a key of script 1's LEVEL_SETS
-BLOCK_SIZES = [90, 105, 120, 150]      # analysed trials per block
-MIXES = ["v4", "conflict_heavy", "equal"]   # keys of script 1's TYPE_MIXES
+BLOCK_SIZES = [120, 150, 180]          # analysed trials per block
+MIXES = ["conflict_heavy", "v4"]       # keys of script 1's TYPE_MIXES
 
 # N_DRAWS
 #   Pairs of matched sets drawn per size x mix. Every quantity is reported
@@ -164,24 +181,47 @@ N_DETECTION_PEOPLE = 10_000
 TASTE_SD = (0.143, 0.244)
 
 # PAIRED_SCENARIOS
-#   name -> shift mean (sat, con), shift SD (sat, con), responder share.
-#   The shift is what a responder adds in the target block. The "no effect"
-#   scenario has no shift at all and checks the false-positive rate.
-#   (Not called "null": pandas reads that word back from a CSV as missing.)
+#   name -> per responder: "shift" (sat, con), the target-block-only part,
+#   with between-responder SD "shift_sd"; "shared" (sat, con), a preference
+#   present in BOTH blocks, which cancels in the difference; and "share",
+#   the share of responders. Everyone also has taste (TASTE_SD) and lapses
+#   at LAPSE. Listed in report order: the "no effect" scenario checks the
+#   false-positive rate (not called "null": pandas reads that word back
+#   from a CSV as missing); then the headline scenarios; then sensitivity.
+#
+#   planning    the v4 preregistration's planning scenario: half respond,
+#               shift 0.5 / 0.7 per SD between the derealization block and
+#               the ordinary block, the rest taste only, lapse 0.1.
+#   half shift  the same responders, but half of each one's preference is
+#               shared by both episodes, so the shift between blocks is
+#               0.25 / 0.35.
+#   all respond ...  the sensitivity rows (the first run's scenarios, with
+#               every person a responder; "all respond" was called
+#               "planning" in the first run).
 PAIRED_SCENARIOS = {
-    "no effect":             {"shift": (0.0, 0.0), "shift_sd": (0.0, 0.0),
-                              "share": 1.0},
-    "planning":              {"shift": (0.5, 0.7), "shift_sd": (0.0, 0.0),
-                              "share": 1.0},
-    "planning, spread 50%":  {"shift": (0.5, 0.7), "shift_sd": (0.25, 0.35),
-                              "share": 1.0},
-    "planning, 50% respond": {"shift": (0.5, 0.7), "shift_sd": (0.0, 0.0),
-                              "share": 0.5},
-    "half shift, spread 50%": {"shift": (0.25, 0.35),
-                               "shift_sd": (0.125, 0.175), "share": 1.0},
+    "no effect":  {"shift": (0.0, 0.0), "shift_sd": (0.0, 0.0),
+                   "shared": (0.0, 0.0), "share": 1.0},
+    "planning":   {"shift": (0.5, 0.7), "shift_sd": (0.0, 0.0),
+                   "shared": (0.0, 0.0), "share": 0.5},
+    "half shift": {"shift": (0.25, 0.35), "shift_sd": (0.0, 0.0),
+                   "shared": (0.25, 0.35), "share": 0.5},
+    "all respond": {"shift": (0.5, 0.7), "shift_sd": (0.0, 0.0),
+                    "shared": (0.0, 0.0), "share": 1.0},
+    "all respond, spread 50%": {"shift": (0.5, 0.7),
+                                "shift_sd": (0.25, 0.35),
+                                "shared": (0.0, 0.0), "share": 1.0},
+    "all respond, half shift, spread 50%": {"shift": (0.25, 0.35),
+                                            "shift_sd": (0.125, 0.175),
+                                            "shared": (0.0, 0.0),
+                                            "share": 1.0},
 }
 NULL_SCENARIO = "no effect"
 PRIMARY_SCENARIO = "planning"
+
+# HEADLINE_SCENARIOS
+#   Reported in every table, primary first. The rest of PAIRED_SCENARIOS
+#   (apart from NULL_SCENARIO) are sensitivity rows, in sections 5 and 6.
+HEADLINE_SCENARIOS = ("planning", "half shift")
 
 PAIRED_N = [10, 15, 20]
 
@@ -209,6 +249,22 @@ N_STUDIES = 4_000
 #   (primary scenario and test) reaches this. A reading aid, not a rule.
 POWER_TARGET = 0.80
 
+# --- What the planning weights mean (v4's interpretation) ---
+#
+# INFORMATIVE_SD
+#   A trial is informative about a weight when |its predictor| >= this (SD
+#   units): v4's CAP_INFORMATIVE_SD. The typical informative trial is the
+#   median |predictor| among those trials (v4's informative_medians).
+# V4_CHOICE_PROB / CHOICE_PROB_TOL
+#   v4's interpretation of the planning weights: on a typical informative
+#   trial of the frozen list a responder picks the predicted image with
+#   probability 0.6191 (saturation 0.5) and 0.6104 (contrast 0.7), before
+#   lapses (v4 design document, section 12). The v4 list must reproduce
+#   these, and each new combination's mean must lie within the tolerance.
+INFORMATIVE_SD = 0.20
+V4_CHOICE_PROB = (0.6191, 0.6104)
+CHOICE_PROB_TOL = 0.02
+
 # --- Checks ---
 SET_THRESHOLD_TOL = 0.05   # the two matched sets' thresholds, relative diff
 EST_CORR_MAX = 0.30        # |corr(saturation, contrast estimates)| under null
@@ -222,25 +278,55 @@ EXTREME_SHARE_MAX = 0.001  # ... and the largest share allowed
 #   Bonferroni-corrected over all cells for this familywise rate.
 TYPE1_FWER = 0.01
 
-# --- Session length (approximate) ---
+# --- Session length: an ESTIMATE of the two PAIR BLOCKS only ---
+#
+# Built from its parts. It covers the two pair blocks (their instructions,
+# practice, trials and breaks) and nothing else: not consent, calibration,
+# the grid blocks, word ratings or questionnaires. It is to be replaced by
+# a timed pilot.
 #
 # Trial counts per block on top of the analysed trials. These only feed the
-# length estimate; script 3 sets the real counts.
+# estimate; script 3 sets the real counts.
 PRACTICE_BY_BLOCK = (6, 2)     # first block, second block
 CATCH_PER_BLOCK = 5
 CONSISTENCY_PER_BLOCK = 8
 
-# SECONDS_PER_TRIAL / FIXED_MINUTES / BETWEEN_BLOCKS_MINUTES
-#   v4's assumptions (freeze report): 3.5 to 4.5 seconds per trial plus about
-#   two minutes of instructions and breaks, i.e. 14 to 18 minutes for its
-#   211 trials. THE PER-TRIAL TIME IS APPROXIMATE and should be checked
-#   against the first participants' timestamps. One extra minute is assumed
-#   for the instructions between the two blocks. The grid blocks and any
-#   questionnaires are not included.
-SECONDS_PER_TRIAL = (3.5, 4.5)
-FIXED_MINUTES = 2.0
-BETWEEN_BLOCKS_MINUTES = 1.0
-V4_SESSION = {"trials": 211, "minutes": (14, 18)}
+# Fixed durations, copied from the experiment's config.js
+# (github.com/zarcolmarioa/dpdr_experiment, branch v4-study-design, commit
+# 1bbbefb, 2026-10-30), and how src/phases/pairs.js uses them:
+#   image trial   fixation FIXATION_MS, then the pair until a key (self-
+#                 paced, no timeout), then a blank BLANK_MS
+#   practice      the first PRACTICE_FEEDBACK_TRIALS practice trials add a
+#                 feedback screen of PRACTICE_FEEDBACK_MS (first block only
+#                 here, FEEDBACK_IN_BLOCK)
+#   catch trial   no fixation, no blank: CATCH_LOCKOUT_MS, then one key
+#   breaks        a break screen before every BREAK_EVERY-th main trial
+#                 (never before the first): floor((n_main - 1) / BREAK_EVERY)
+#                 per block, assuming the experiment applies it per block
+FIXATION_MS = 500
+BLANK_MS = 250
+PRACTICE_FEEDBACK_MS = 900
+PRACTICE_FEEDBACK_TRIALS = 2
+FEEDBACK_IN_BLOCK = (True, False)
+CATCH_LOCKOUT_MS = 750
+BREAK_EVERY = 41
+
+# Assumed, not from the configuration (self-paced parts):
+# RESPONSE_TIME_S   image trial, pair onset to key press, per assumption
+# CATCH_RESPONSE_S  catch trial, end of lockout to key press
+# SCREEN_S          each self-paced screen; "block instructions" is the
+#                   per-block introduction (which episode to bring to mind)
+RESPONSE_TIME_S = {"fast": 2.0, "typical": 3.0, "slow": 4.0}
+CATCH_RESPONSE_S = {"fast": 1.0, "typical": 1.5, "slow": 2.5}
+SCREEN_S = {"block instructions": 45, "practice intro": 20,
+            "practice end": 10, "break": 30}
+
+# V4_SESSION
+#   The same model applied to the v4 session (6 practice, 205 main trials of
+#   which 10 catch, 4 breaks, one block), for comparison with the v4 freeze
+#   report's 14 to 18 minutes. Reported, not checked.
+V4_SESSION = {"practice": 6, "main": 205, "catch": 10,
+              "freeze_report_minutes": (14, 18)}
 
 MAKE_FIGURE = True
 OUTPUT_ROOT = "data/block_length_v5"
@@ -309,9 +395,15 @@ def check_settings(cap):
             raise ValueError(f"mix {m!r} is not in script 1's TYPE_MIXES")
     if LAPSE not in DETECTION_LAPSES:
         raise ValueError("LAPSE must be one of DETECTION_LAPSES")
-    for s in (NULL_SCENARIO, PRIMARY_SCENARIO):
+    for s in (NULL_SCENARIO, PRIMARY_SCENARIO) + tuple(HEADLINE_SCENARIOS):
         if s not in PAIRED_SCENARIOS:
             raise ValueError(f"{s!r} is not in PAIRED_SCENARIOS")
+    if HEADLINE_SCENARIOS[0] != PRIMARY_SCENARIO:
+        raise ValueError("HEADLINE_SCENARIOS must start with PRIMARY_SCENARIO")
+    for k, v in PAIRED_SCENARIOS.items():
+        if set(v) != {"shift", "shift_sd", "shared", "share"}:
+            raise ValueError(f"scenario {k!r} needs shift, shift_sd, shared "
+                             "and share")
     if PRIMARY_TEST not in PAIRED_TESTS:
         raise ValueError("PRIMARY_TEST must be one of PAIRED_TESTS")
     for k in CAPACITY_OVERRIDES:
@@ -392,7 +484,9 @@ def paired_pool(v4, XA, XB, scen, rng):
     shift = (np.asarray(scen["shift"])
              + rng.normal(0.0, 1.0, (P, 2)) * np.asarray(scen["shift_sd"]))
     shift = np.where(resp[:, None], shift, 0.0)
-    W_tgt, W_ref = taste + shift, taste
+    shared = np.where(resp[:, None], np.asarray(scen["shared"]), 0.0)
+    W_ref = taste + shared
+    W_tgt = W_ref + shift
     on_A = (np.arange(P) % 2) == 0
     est_t = np.empty((P, 2))
     est_r = np.empty((P, 2))
@@ -483,13 +577,43 @@ def info_of(X):
     return float((xs ** 2).sum()), float((xc ** 2).sum()), cos
 
 
+def informative_medians(X):
+    """Median |predictor| among the trials informative about each weight
+    (|predictor| >= INFORMATIVE_SD): v4's informative_medians, with the
+    threshold as a setting. Checked against v4's function on the v4 list."""
+    out = {}
+    for k, w in enumerate(W_NAMES):
+        a = np.abs(X[:, k])
+        info = a >= INFORMATIVE_SD
+        out[w] = float(np.median(a[info])) if info.any() else np.nan
+        out[w + "_n"] = int(info.sum())
+    return out
+
+
+def choice_probability(v4, X):
+    """The share of predicted-image choices the planning weights give on a
+    typical informative trial: v4.as_probability(weight, median), and the
+    same after lapses, (1 - LAPSE) p + LAPSE / 2."""
+    med = informative_medians(X)
+    out = {}
+    for k, w in enumerate(W_NAMES):
+        p = v4.as_probability(PLANNING_WEIGHTS[k], med[w])
+        out[f"inf_median_{w}"] = med[w]
+        out[f"inf_n_{w}"] = med[w + "_n"]
+        out[f"p_choice_{w}"] = p
+        out[f"p_choice_{w}_lapse"] = (1 - LAPSE) * p + LAPSE / 2
+    return out
+
+
 def analyse_list(v4, X, rng_th, rng_det, label_row):
-    """Thresholds, precision and detection for one block list."""
+    """Thresholds, precision, detection and choice probability for one
+    block list."""
     th = thresholds(v4, X, rng_th)
     isat, icon, cos = info_of(X)
     row = dict(label_row)
     row.update({"n_analysed": len(X), "info_sat": isat, "info_con": icon,
                 "cos": cos})
+    row.update(choice_probability(v4, X))
     for k, w in enumerate(W_NAMES):
         row[f"thr_upper_{w}"] = th["upper"][k]
         row[f"thr_lower_{w}"] = th["lower"][k]
@@ -590,24 +714,58 @@ def summarise(lists, paired):
     return pd.DataFrame(rows)
 
 
+def block_seconds(n_practice, n_main, n_catch, feedback, level):
+    """Seconds for one pair block under one response-time assumption, and
+    its number of breaks. n_main includes the catch trials."""
+    rt = RESPONSE_TIME_S[level]
+    image = (FIXATION_MS + BLANK_MS) / 1000 + rt
+    n_image = n_practice + n_main - n_catch
+    sec = n_image * image
+    sec += n_catch * (CATCH_LOCKOUT_MS / 1000 + CATCH_RESPONSE_S[level])
+    if feedback:
+        sec += min(PRACTICE_FEEDBACK_TRIALS, n_practice) \
+            * PRACTICE_FEEDBACK_MS / 1000
+    breaks = (n_main - 1) // BREAK_EVERY if BREAK_EVERY > 0 else 0
+    sec += breaks * SCREEN_S["break"]
+    sec += SCREEN_S["block instructions"]
+    if n_practice:
+        sec += SCREEN_S["practice intro"] + SCREEN_S["practice end"]
+    return sec, breaks
+
+
 def session_rows():
+    """Trials, breaks and minutes for the two pair blocks, per size and
+    response-time assumption."""
     rows = []
-    sizes = list(BLOCK_SIZES)
-    for n in sizes:
-        per_block = [n + CONSISTENCY_PER_BLOCK + CATCH_PER_BLOCK + p
-                     for p in PRACTICE_BY_BLOCK]
-        total = sum(per_block)
-        lo = total * SECONDS_PER_TRIAL[0] / 60 + FIXED_MINUTES \
-            + BETWEEN_BLOCKS_MINUTES
-        hi = total * SECONDS_PER_TRIAL[1] / 60 + FIXED_MINUTES \
-            + BETWEEN_BLOCKS_MINUTES
-        rows.append({"analysed_per_block": n,
-                     "trials_block_1": per_block[0],
-                     "trials_block_2": per_block[1],
-                     "trials_total": total,
-                     "analysed_total": 2 * n,
-                     "minutes_low": lo, "minutes_high": hi})
+    for n in BLOCK_SIZES:
+        n_main = n + CONSISTENCY_PER_BLOCK + CATCH_PER_BLOCK
+        row = {"analysed_per_block": n, "main_per_block": n_main,
+               "practice_block_1": PRACTICE_BY_BLOCK[0],
+               "practice_block_2": PRACTICE_BY_BLOCK[1],
+               "trials_total": 2 * n_main + sum(PRACTICE_BY_BLOCK),
+               "analysed_total": 2 * n}
+        for level in RESPONSE_TIME_S:
+            tot = 0.0
+            for b in (0, 1):
+                sec, brk = block_seconds(PRACTICE_BY_BLOCK[b], n_main,
+                                         CATCH_PER_BLOCK,
+                                         FEEDBACK_IN_BLOCK[b], level)
+                row[f"minutes_block_{b + 1}_{level}"] = sec / 60
+                row["breaks_per_block"] = brk
+                tot += sec
+            row[f"minutes_total_{level}"] = tot / 60
+        rows.append(row)
     return pd.DataFrame(rows)
+
+
+def v4_session_minutes():
+    out = {}
+    for level in RESPONSE_TIME_S:
+        sec, brk = block_seconds(V4_SESSION["practice"], V4_SESSION["main"],
+                                 V4_SESSION["catch"], True, level)
+        out[level] = sec / 60
+    out["breaks"] = brk
+    return out
 
 
 # ============================================================
@@ -683,6 +841,16 @@ def make_figure(paired, v4_paired, out_dir):
 # Report
 # ============================================================
 
+def scenario_role(name):
+    if name == NULL_SCENARIO:
+        return "null check"
+    if name == PRIMARY_SCENARIO:
+        return "primary"
+    if name in HEADLINE_SCENARIOS:
+        return "headline"
+    return "sensitivity"
+
+
 def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
                  matching, t0, cap):
     L = []
@@ -719,13 +887,19 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
     w("")
     w("Person model for the paired test: stable taste ~ Normal(0, "
       f"{TASTE_SD}) in both blocks;")
-    w("a responder adds a shift in the target block; lapse "
-      f"{LAPSE} in both blocks; block order not modelled.")
+    w("a responder adds a shared preference to both blocks and a shift to "
+      "the target block")
+    w(f"only; lapse {LAPSE} in both blocks; block order not modelled.")
+    w(f"  {'scenario':36s} {'role':11s} {'responders':>10s}  shift "
+      "(sd)                  shared")
     for k, s in PAIRED_SCENARIOS.items():
-        w(f"  {k:24s} shift {s['shift']}, shift SD {s['shift_sd']}, "
-          f"responders {s['share']:.0%}")
-    w(f"Primary: scenario '{PRIMARY_SCENARIO}', {PRIMARY_TEST}-test, "
-      f"alpha {ALPHA} one-sided per weight, uncorrected.")
+        w(f"  {k:36s} {scenario_role(k):11s} {s['share']:10.0%}  "
+          f"{str(s['shift']):12s} ({s['shift_sd'][0]:g}, "
+          f"{s['shift_sd'][1]:g})   {s['shared']}")
+    w(f"Primary: scenario '{PRIMARY_SCENARIO}' (the v4 preregistration's "
+      "planning scenario),")
+    w(f"{PRIMARY_TEST}-test, alpha {ALPHA} one-sided per weight, "
+      "uncorrected.")
     w("")
     w("Inputs and provenance")
     for line in log:
@@ -750,40 +924,69 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
               f"{r[f'plan_sd_{weight}_lapse{LAPSE:g}']:21.3f} "
               f"{r[f'det_{weight}_lapse{LAPSE:g}']:21.3f}")
         w("")
-        w(f"Paired-test power, {wname}, scenario '{PRIMARY_SCENARIO}', "
-          f"{PRIMARY_TEST}-test")
-        w(f"{'size':>4s} {'mix':15s} "
-          + " ".join(f"{'N = ' + str(N):>21s}" for N in PAIRED_N))
-        pp = paired[(paired.scenario == PRIMARY_SCENARIO)
-                    & (paired.test == PRIMARY_TEST)]
-        for _, r in summ.iterrows():
-            g = pp[(pp["size"] == r["size"]) & (pp.mix == r.mix)]
-            w(f"{r['size']:4d} {r.mix:15s} " + " ".join(
-                f"{rng_str(g[g.N == N][f'power_{weight}']):>21s}"
-                for N in PAIRED_N))
-        if v4_rows is not None:
-            q = v4_rows["paired"]
-            q = q[(q.scenario == PRIMARY_SCENARIO)
-                  & (q.test == PRIMARY_TEST)]
-            w(f"{180:4d} {'v4 list x2 (ref)':15s} " + " ".join(
-                f"{q[q.N == N][f'power_{weight}'].iloc[0]:21.3f}"
-                for N in PAIRED_N))
-        w("")
+        for sc in HEADLINE_SCENARIOS:
+            w(f"Paired-test power, {wname}, scenario '{sc}' "
+              f"({scenario_role(sc)}), {PRIMARY_TEST}-test")
+            w(f"{'size':>4s} {'mix':15s} "
+              + " ".join(f"{'N = ' + str(N):>21s}" for N in PAIRED_N))
+            pp = paired[(paired.scenario == sc)
+                        & (paired.test == PRIMARY_TEST)]
+            for _, r in summ.iterrows():
+                g = pp[(pp["size"] == r["size"]) & (pp.mix == r.mix)]
+                w(f"{r['size']:4d} {r.mix:15s} " + " ".join(
+                    f"{rng_str(g[g.N == N][f'power_{weight}']):>21s}"
+                    for N in PAIRED_N))
+            if v4_rows is not None:
+                q = v4_rows["paired"]
+                q = q[(q.scenario == sc) & (q.test == PRIMARY_TEST)]
+                w(f"{180:4d} {'v4 list x2 (ref)':15s} " + " ".join(
+                    f"{q[q.N == N][f'power_{weight}'].iloc[0]:21.3f}"
+                    for N in PAIRED_N))
+            w("")
         _ = wi
 
     w("2. CONTRAST (the bottleneck)")
     w("-" * 78)
     w("Per block list: information (sum x_con^2), upper threshold, SD of the "
       "contrast")
-    w("estimate for a person at the planning weights, and the share of such "
-      "people detected.")
+    w("estimate for a responder at the planning weights, and the share of "
+      "such people detected.")
     table("con", "contrast")
     w("3. SATURATION")
     w("-" * 78)
     table("sat", "saturation")
 
+    w("4. WHAT THE PLANNING WEIGHTS MEAN ON THESE LISTS")
+    w("-" * 78)
+    w(f"Share of predicted-image choices a responder at saturation "
+      f"{PLANNING_WEIGHTS[0]} / contrast {PLANNING_WEIGHTS[1]} per SD")
+    w("makes on a TYPICAL INFORMATIVE trial: the median |predictor| among "
+      f"trials with |predictor| >= {INFORMATIVE_SD}")
+    w("(v4's definition). v4's interpretation: "
+      f"{V4_CHOICE_PROB[0]:.4f} (saturation), {V4_CHOICE_PROB[1]:.4f} "
+      f"(contrast), before lapses.")
+    w(f"{'size':>4s} {'mix':15s} {'median |x_sat|':>20s} {'P(sat)':>20s} "
+      f"{'median |x_con|':>20s} {'P(con)':>20s}")
+    for _, r in summ.iterrows():
+        g = lists[(lists["size"] == r["size"]) & (lists.mix == r.mix)]
+        w(f"{r['size']:4d} {r.mix:15s} {rng_str(g.inf_median_sat):>20s} "
+          f"{rng_str(g.p_choice_sat):>20s} {rng_str(g.inf_median_con):>20s} "
+          f"{rng_str(g.p_choice_con):>20s}")
+    if v4_rows is not None:
+        r = v4_rows["list"]
+        w(f"{180:4d} {'v4 frozen (ref)':15s} {r['inf_median_sat']:20.3f} "
+          f"{r['p_choice_sat']:20.4f} {r['inf_median_con']:20.3f} "
+          f"{r['p_choice_con']:20.4f}")
+    g = lists
+    w(f"After lapses ({LAPSE}): saturation {rng_str(g.p_choice_sat_lapse)}, "
+      f"contrast {rng_str(g.p_choice_con_lapse)} over all lists.")
+    w("Informative trials per list: saturation "
+      f"{rng_str(g.inf_n_sat, '{:.0f}')}, contrast "
+      f"{rng_str(g.inf_n_con, '{:.0f}')}.")
+    w("")
+
     # smallest size reaching target
-    w(f"4. SMALLEST BLOCK SIZE REACHING POWER {POWER_TARGET:.2f} "
+    w(f"5. SMALLEST BLOCK SIZE REACHING POWER {POWER_TARGET:.2f} "
       f"({PRIMARY_TEST}-test), per scenario")
     w("-" * 78)
     w("'mean' uses the mean power over draws; 'every draw' requires the "
@@ -793,7 +996,7 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
         if sc == NULL_SCENARIO:
             continue
         pp = paired[(paired.scenario == sc) & (paired.test == PRIMARY_TEST)]
-        w(f"[{sc}]")
+        w(f"[{sc}]  ({scenario_role(sc)})")
         for weight, wname in (("con", "contrast"), ("sat", "saturation"),
                               ("both", "both")):
             for mix in MIXES:
@@ -812,14 +1015,15 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
     w("  (each cell: by mean / in every draw)")
     w("")
 
-    w("5. PAIRED-TEST POWER, ALL SCENARIOS AND TESTS (mean over draws)")
+    w("6. PAIRED-TEST POWER, ALL SCENARIOS AND TESTS (mean over draws)")
     w("-" * 78)
     agg = (paired.groupby(["scenario", "test", "size", "mix", "N"],
                           sort=False)
            [["power_con", "power_sat", "power_both"]].mean().reset_index())
     for sc in PAIRED_SCENARIOS:
         for test in PAIRED_TESTS:
-            w(f"[{sc}] {test}-test        contrast / saturation / both")
+            w(f"[{sc}] ({scenario_role(sc)}) {test}-test        "
+              "contrast / saturation / both")
             g = agg[(agg.scenario == sc) & (agg.test == test)]
             w(f"  {'size':>4s} {'mix':15s} " + " ".join(
                 f"{'N=' + str(N):>20s}" for N in PAIRED_N))
@@ -841,12 +1045,12 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
     dd = dd.sort_values(["_o", "size"], kind="stable")
     w("Per-person weight difference (target - reference), mean and SD over "
       "the pool:")
-    w(f"  {'scenario':24s} {'size':>4s} {'mix':15s} {'contrast':>17s} "
+    w(f"  {'scenario':36s} {'size':>4s} {'mix':15s} {'contrast':>17s} "
       f"{'saturation':>17s} {'dz con':>7s} {'dz sat':>7s}")
     for _, r in dd.iterrows():
         dzc = r.mean_diff_con / r.sd_diff_con if r.sd_diff_con else np.nan
         dzs = r.mean_diff_sat / r.sd_diff_sat if r.sd_diff_sat else np.nan
-        w(f"  {r.scenario:24s} {r['size']:4d} {r.mix:15s} "
+        w(f"  {r.scenario:36s} {r['size']:4d} {r.mix:15s} "
           f"{r.mean_diff_con:+7.3f} sd {r.sd_diff_con:5.3f} "
           f"{r.mean_diff_sat:+7.3f} sd {r.sd_diff_sat:5.3f} "
           f"{dzc:7.2f} {dzs:7.2f}")
@@ -854,7 +1058,7 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
       "every fitted weight)")
     w("")
 
-    w("6. SEPARATING THE TWO WEIGHTS")
+    w("7. SEPARATING THE TWO WEIGHTS")
     w("-" * 78)
     w("Conflict trials per block, and the correlation of the two estimates "
       "among random")
@@ -873,30 +1077,54 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
           f"{r['cos']:.3f}")
     w("")
 
-    w("7. SESSION LENGTH (APPROXIMATE)")
+    w("8. SESSION LENGTH OF THE TWO PAIR BLOCKS (AN ESTIMATE)")
     w("-" * 78)
+    w("COVERS ONLY THE TWO PAIR BLOCKS: their instructions, practice, "
+      "trials and breaks.")
+    w("Not consent, calibration, the grid blocks, word ratings or "
+      "questionnaires.")
+    w("THE RESULT IS AN ESTIMATE, to be replaced by a timed pilot.")
+    w("Fixed durations from the experiment's config.js (dpdr_experiment, "
+      "v4-study-design, 1bbbefb):")
+    w(f"  fixation {FIXATION_MS} ms + blank {BLANK_MS} ms per image trial; "
+      f"catch lockout {CATCH_LOCKOUT_MS} ms; practice")
+    w(f"  feedback {PRACTICE_FEEDBACK_MS} ms on the first "
+      f"{PRACTICE_FEEDBACK_TRIALS} practice trials (first block); a break "
+      f"every {BREAK_EVERY} main trials.")
+    w("Assumed (self-paced): response time per image trial "
+      + ", ".join(f"{k} {v:g} s" for k, v in RESPONSE_TIME_S.items())
+      + ";")
+    w("  catch response " + ", ".join(f"{k} {v:g} s" for k, v in
+                                      CATCH_RESPONSE_S.items())
+      + "; screens " + ", ".join(f"{k} {v:g} s" for k, v in
+                                 SCREEN_S.items()) + ".")
     w(f"Per block: analysed + {CONSISTENCY_PER_BLOCK} consistency + "
-      f"{CATCH_PER_BLOCK} catch + practice {PRACTICE_BY_BLOCK} "
+      f"{CATCH_PER_BLOCK} catch, plus practice {PRACTICE_BY_BLOCK} "
       "(first, second block).")
-    w(f"At {SECONDS_PER_TRIAL[0]} to {SECONDS_PER_TRIAL[1]} s per trial "
-      f"(v4's assumption, APPROXIMATE), plus {FIXED_MINUTES:g} min of "
-      "instructions")
-    w(f"and breaks and {BETWEEN_BLOCKS_MINUTES:g} min between blocks. Grid "
-      "blocks and questionnaires not included.")
+    levels = list(RESPONSE_TIME_S)
+    w(f"  {'per block':>9s} {'trials':>7s} {'breaks':>7s}   " + "   ".join(
+        f"{lv + ' (b1+b2)':>22s}" for lv in levels))
     for _, r in sess.iterrows():
-        w(f"  {int(r.analysed_per_block):4d} per block: "
-          f"{int(r.trials_block_1)} + {int(r.trials_block_2)} = "
-          f"{int(r.trials_total)} trials ({int(r.analysed_total)} analysed)"
-          f"  ->  {r.minutes_low:.0f} to {r.minutes_high:.0f} min")
-    v4lo = V4_SESSION["trials"] * SECONDS_PER_TRIAL[0] / 60 + FIXED_MINUTES
-    v4hi = V4_SESSION["trials"] * SECONDS_PER_TRIAL[1] / 60 + FIXED_MINUTES
-    w(f"  v4 reference: {V4_SESSION['trials']} trials, one block -> "
-      f"{v4lo:.0f} to {v4hi:.0f} min (v4's freeze report: "
-      f"{V4_SESSION['minutes'][0]} to {V4_SESSION['minutes'][1]})")
+        cells = []
+        for lv in levels:
+            cells.append(f"{r[f'minutes_total_{lv}']:5.1f} min "
+                         f"({r[f'minutes_block_1_{lv}']:.1f}+"
+                         f"{r[f'minutes_block_2_{lv}']:.1f})")
+        w(f"  {int(r.analysed_per_block):9d} {int(r.trials_total):7d} "
+          f"{int(r.breaks_per_block):7d}   " + "   ".join(
+              f"{c:>22s}" for c in cells))
+    v4m = v4_session_minutes()
+    w(f"  For comparison, the same model on the v4 session (one block, "
+      f"{V4_SESSION['practice'] + V4_SESSION['main']} trials, "
+      f"{v4m['breaks']} breaks): " + ", ".join(
+          f"{lv} {v4m[lv]:.1f}" for lv in levels) + " min")
+    w(f"  (v4's freeze report estimated {V4_SESSION['freeze_report_minutes'][0]}"
+      f" to {V4_SESSION['freeze_report_minutes'][1]} min with its own "
+      "per-trial assumption).")
     w("")
 
     if v4_rows is not None:
-        w("8. THE v4 REFERENCE")
+        w("9. THE v4 REFERENCE")
         w("-" * 78)
         r = v4_rows["list"]
         w("The frozen v4 list (180 analysed trials) as one block list. Its "
@@ -914,7 +1142,7 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
           f"{r[f'det_con_lapse{LAPSE:g}']:.3f}")
         w("")
 
-    w("9. CHECKS")
+    w("10. CHECKS")
     w("-" * 78)
     cf = ck.frame()
     for row in cf.itertuples():
@@ -925,13 +1153,13 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
     w(f"  {int((cf.status == 'PASS').sum())} PASS, {n_f} FAIL, "
       f"{int((cf.status == 'SKIPPED').sum())} SKIPPED")
     w("")
-    w("10. NOTES AND LIMITS")
+    w("11. NOTES AND LIMITS")
     w("-" * 78)
     w("* Power is a first estimate under the stated person model. The shift "
       "sizes, the taste")
     w("  spread, the share of responders and the lapse rate are assumptions, "
       "not estimates;")
-    w("  section 5 shows how far the answer moves when they change.")
+    w("  section 6 shows how far the answer moves when they change.")
     w("* Each weight is tested on its own at alpha, uncorrected. A corrected "
       "or joint primary")
     w("  test would need the power read from 'both' or recomputed.")
@@ -941,8 +1169,10 @@ def write_report(out_dir, ck, log, lists, paired, summ, v4_rows, sess,
     w("* Taste is assumed stable across blocks. Taste that differed between "
       "blocks would")
     w("  add its own variance to every difference.")
-    w("* The session length is approximate: the per-trial time is v4's "
-      "assumption, untested.")
+    w("* The session length covers the two pair blocks only and is an "
+      "estimate: the response")
+    w("  times and screen times are assumptions, to be replaced by a timed "
+      "pilot.")
     with open(os.path.join(out_dir, "block_length_report.txt"), "w") as f:
         f.write("\n".join(L) + "\n")
     return n_f
@@ -1025,6 +1255,21 @@ def main():
                                                        <= V4_THRESHOLD_TOL)),
                    f"got {got[0]:+.3f} / {got[1]:+.3f}, registered "
                    f"{want[0]:+.3f} / {want[1]:+.3f}")
+        ok_med = True
+        if abs(INFORMATIVE_SD - v4.CAP_INFORMATIVE_SD) < 1e-12:
+            ref = v4.informative_medians(X4)
+            ok_med = (np.isclose(ref["colour"], row4["inf_median_sat"])
+                      and np.isclose(ref["fog"], row4["inf_median_con"]))
+            ck.add("v4 reference", "informative medians equal v4's "
+                   "informative_medians", bool(ok_med),
+                   f"saturation {row4['inf_median_sat']:.4f}, contrast "
+                   f"{row4['inf_median_con']:.4f}")
+        got = (row4["p_choice_sat"], row4["p_choice_con"])
+        ck.add("v4 reference", "the planning weights reproduce v4's choice "
+               "probabilities (0.6191 / 0.6104)",
+               bool(abs(got[0] - V4_CHOICE_PROB[0]) <= 5e-4
+                    and abs(got[1] - V4_CHOICE_PROB[1]) <= 5e-4),
+               f"got {got[0]:.4f} / {got[1]:.4f}")
         p4 = []
         analyse_pair_of_lists(v4, X4, X4, {"size": 180, "mix": "v4 x2",
                                            "draw": 0}, st, p4)
@@ -1146,12 +1391,15 @@ def main():
         ck.add("v4 reference", f"share of |weight| > {EXTREME_WEIGHT:g} <= "
                f"{EXTREME_SHARE_MAX}", ext <= EXTREME_SHARE_MAX,
                f"worst {ext:.5f}")
-    v4lo = V4_SESSION["trials"] * SECONDS_PER_TRIAL[0] / 60 + FIXED_MINUTES
-    v4hi = V4_SESSION["trials"] * SECONDS_PER_TRIAL[1] / 60 + FIXED_MINUTES
-    ck.add("session length", "the method reproduces v4's estimate for its "
-           "211 trials", round(v4lo) == V4_SESSION["minutes"][0]
-           and round(v4hi) == V4_SESSION["minutes"][1],
-           f"{v4lo:.1f} to {v4hi:.1f} min")
+    for (size, mix), g in lists.groupby(["size", "mix"], sort=False):
+        dev = [abs(g.p_choice_sat.mean() - V4_CHOICE_PROB[0]),
+               abs(g.p_choice_con.mean() - V4_CHOICE_PROB[1])]
+        ck.add(f"n={size} {mix}", "planning weights give v4's choice "
+               f"probabilities within {CHOICE_PROB_TOL} (typical informative "
+               "trial)", max(dev) <= CHOICE_PROB_TOL + 1e-9,
+               f"saturation {g.p_choice_sat.mean():.4f}, contrast "
+               f"{g.p_choice_con.mean():.4f} (v4 {V4_CHOICE_PROB[0]:.4f}, "
+               f"{V4_CHOICE_PROB[1]:.4f})")
 
     # --- outputs ---
     summ = summarise(lists, paired)

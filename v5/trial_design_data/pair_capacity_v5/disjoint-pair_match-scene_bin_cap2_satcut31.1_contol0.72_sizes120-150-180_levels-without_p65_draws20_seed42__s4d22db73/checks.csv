@@ -1,0 +1,134 @@
+scope,check,status,detail
+input,pair table has the required columns,PASS,35 columns
+input,pool counts match the v4 extended inventory,PASS,"all of total 34,366, sat_only 6,282, fog_only 2,136, together 17,666, conflict 8,282, balanced_conflict 4,300"
+input,"every pair is listed in both directions, with negated differences and the same type",PASS,0 without a reverse
+input,"d_sat, d_fog re-derive from the measured features",PASS,
+input,pred_sat = -d_sat/SD_SAT and pred_fog = d_fog/SD_FOG,PASS,"SD_SAT 39.182, SD_FOG 9.348"
+input,every type re-derives with v4 classify_pair,PASS,"0 of 34,366 rows disagree"
+input,"every conflict `balanced` flag re-derives (corpus-SD balance in [0.6, 1.7])",PASS,0 disagree
+input,"the unedited photograph (colour k=1, fog h=0) is in no pair",PASS,0 image slots; images at h=0 of any colour: 0
+manifest,every pool image is in the manifest with use pair/both,PASS,"1,645 distinct images, 0 not in manifest, 0 with another `use`"
+manifest,pool features equal the manifest's measured features,PASS,"max |diff| sat_mean 0.00e+00, contrast_local 3.55e-15"
+manifest,every unedited image is grid-only and in no pair,PASS,"188 unedited images in the manifest, 0 in the pool"
+without_p65,each unordered pair appears once in the pool,PASS,"9,866 pairs, 0 duplicates"
+without_p65,no dropped level in the pool,PASS,"colour levels ['k=1', 'p01', 'p05', 'p10', 'p25', 'p75']; fog levels ['p05', 'p10', 'p15', 'p25', 'p35']"
+without_p65 n=120 v4,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=120 v4,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=120 v4,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=120 conflict_heavy,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=150 v4,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=150 v4,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=150 conflict_heavy,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=180 v4,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=180 v4,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: type counts equal the target in both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: bin counts equal the quotas in both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: no pair in both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: no pair twice within a set,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: sat_only: |d_sat| >= cut,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: sat_only: |d_con| <= contrast tolerance,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: fog_only: |d_sat| <= 3,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: conflict: all balanced,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: information x_sat within 5%,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: information x_con within 5%,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: information per type within 10%,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: KS |x_sat| <= 0.1,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: KS |x_con| <= 0.1,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: predictor correlation (cos) differs by <= 0.05,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: VIF <= 1.25 in both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: predicted image on the left in half of each type (+-1 if odd),PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: each set uses >= 85% of the scenes it may use,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: <= 2 per scene per type in each set,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: same scenes: each scene x type x bin count equal in both sets,PASS,100% of 20 draws
+without_p65 n=180 conflict_heavy,draws: practice and catch reserved in full for both sets,PASS,100% of 20 draws

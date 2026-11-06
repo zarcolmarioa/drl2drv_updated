@@ -1,0 +1,425 @@
+==============================================================================
+v5 STEP 2: HOW MANY TRIALS PER BLOCK?
+explore_block_length_v5.py
+==============================================================================
+run finished  2026-11-06 10:31:34   elapsed 446 s
+output        data/block_length_v5/without_p65_sizes120-150-180_mixes-conflict_heavy-v4_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s6821ca69
+
+1. WHAT THIS RUN DID
+------------------------------------------------------------------------------
+For each block size x type mix it drew 20 pairs of matched sets with script 1's
+functions (level set 'without_p65'), and on every set (= one block list) it simulated:
+  * 20,000 random choosers -> two-sided thresholds (2.5% per tail) and the
+    null spread of each weight;
+  * 10,000 people at the planning weights (saturation 0.5, contrast 0.7 per SD)
+    at each lapse rate [0.0, 0.1] -> detection and precision;
+and on each pair of sets, per scenario, 10,000 people fitted on both blocks, from which 4,000
+studies of N = [10, 15, 20] were sampled -> paired-test power. Firth throughout (v4's
+fit_firth_batch). Figures are the mean over draws, with the range [min-max] over
+draws (and over the two sets of each draw, for per-list figures).
+
+Person model for the paired test: stable taste ~ Normal(0, (0.143, 0.244)) in both blocks;
+a responder adds a shared preference to both blocks and a shift to the target block
+only; lapse 0.1 in both blocks; block order not modelled.
+  scenario                             role        responders  shift (sd)                  shared
+  no effect                            null check        100%  (0.0, 0.0)   (0, 0)   (0.0, 0.0)
+  planning                             primary            50%  (0.5, 0.7)   (0, 0)   (0.0, 0.0)
+  half shift                           headline           50%  (0.25, 0.35) (0, 0)   (0.25, 0.35)
+  all respond                          sensitivity       100%  (0.5, 0.7)   (0, 0)   (0.0, 0.0)
+  all respond, spread 50%              sensitivity       100%  (0.5, 0.7)   (0.25, 0.35)   (0.0, 0.0)
+  all respond, half shift, spread 50%  sensitivity       100%  (0.25, 0.35) (0.125, 0.175)   (0.0, 0.0)
+Primary: scenario 'planning' (the v4 preregistration's planning scenario),
+t-test, alpha 0.05 one-sided per weight, uncorrected.
+
+Inputs and provenance
+  script 1   analyse_pair_capacity_v5.py  sha256 5a8483a2a3884822
+  v4 sim     simulate_power_v4_n10_20.py  sha256 852f3b33eb349153
+  overrides  none
+  pair table      data/pair_analysis_v4_ext/extended/all_pairs.csv: 34,366 ordered pairs, 47 scenes
+  v4 list    data/frozen_trial_list_v4/trial_list.csv: 180 analysed trials
+  false-positive rate, t-test, all cells pooled: 0.0500 (alpha 0.05)
+  false-positive rate, wilcoxon-test, all cells pooled: 0.0462 (alpha 0.05)
+
+2. CONTRAST (the bottleneck)
+------------------------------------------------------------------------------
+Per block list: information (sum x_con^2), upper threshold, SD of the contrast
+estimate for a responder at the planning weights, and the share of such people detected.
+size mix                              info       threshold (upper)           SD at plan.     detect, lapse 0.1
+ 120 conflict_heavy       44.3 [39.8-48.3]     0.593 [0.565-0.631]   0.319 [0.306-0.335]   0.526 [0.482-0.561]
+ 120 v4                   43.8 [39.9-48.0]     0.598 [0.564-0.640]   0.323 [0.305-0.338]   0.520 [0.473-0.568]
+ 150 conflict_heavy       54.3 [49.7-58.7]     0.534 [0.507-0.567]   0.286 [0.272-0.298]   0.615 [0.567-0.653]
+ 150 v4                   54.1 [51.0-58.8]     0.538 [0.515-0.556]   0.289 [0.275-0.300]   0.607 [0.580-0.644]
+ 180 conflict_heavy       67.4 [63.2-71.9]     0.480 [0.461-0.496]   0.258 [0.248-0.267]   0.705 [0.675-0.736]
+ 180 v4                   65.6 [60.9-72.2]     0.488 [0.465-0.510]   0.263 [0.252-0.270]   0.692 [0.655-0.729]
+ 180 v4 frozen (ref)                  67.2                   0.488                 0.259                 0.681
+
+Paired-test power, contrast, scenario 'planning' (primary), t-test
+size mix                            N = 10                N = 15                N = 20
+ 120 conflict_heavy    0.517 [0.485-0.544]   0.692 [0.656-0.743]   0.809 [0.773-0.844]
+ 120 v4                0.513 [0.464-0.554]   0.687 [0.636-0.744]   0.802 [0.757-0.837]
+ 150 conflict_heavy    0.556 [0.500-0.593]   0.738 [0.693-0.774]   0.847 [0.816-0.880]
+ 150 v4                0.562 [0.531-0.595]   0.742 [0.695-0.778]   0.850 [0.809-0.871]
+ 180 conflict_heavy    0.604 [0.573-0.630]   0.779 [0.750-0.806]   0.885 [0.853-0.901]
+ 180 v4                0.604 [0.580-0.636]   0.780 [0.762-0.807]   0.885 [0.856-0.914]
+ 180 v4 list x2 (ref)                 0.566                 0.750                 0.863
+
+Paired-test power, contrast, scenario 'half shift' (headline), t-test
+size mix                            N = 10                N = 15                N = 20
+ 120 conflict_heavy    0.251 [0.210-0.277]   0.340 [0.300-0.387]   0.418 [0.367-0.467]
+ 120 v4                0.246 [0.220-0.277]   0.329 [0.278-0.370]   0.407 [0.358-0.455]
+ 150 conflict_heavy    0.281 [0.242-0.301]   0.384 [0.344-0.410]   0.470 [0.409-0.507]
+ 150 v4                0.273 [0.253-0.290]   0.371 [0.345-0.402]   0.459 [0.424-0.499]
+ 180 conflict_heavy    0.311 [0.287-0.334]   0.424 [0.397-0.457]   0.525 [0.489-0.553]
+ 180 v4                0.313 [0.289-0.339]   0.422 [0.392-0.457]   0.518 [0.474-0.565]
+ 180 v4 list x2 (ref)                 0.298                 0.390                 0.513
+
+3. SATURATION
+------------------------------------------------------------------------------
+size mix                              info       threshold (upper)           SD at plan.     detect, lapse 0.1
+ 120 conflict_heavy    118.1 [107.6-129.4]     0.364 [0.345-0.384]   0.202 [0.194-0.212]   0.641 [0.599-0.684]
+ 120 v4                120.3 [108.3-130.8]     0.360 [0.343-0.380]   0.200 [0.192-0.212]   0.651 [0.610-0.694]
+ 150 conflict_heavy    144.3 [131.4-155.4]     0.329 [0.315-0.348]   0.182 [0.173-0.190]   0.731 [0.686-0.765]
+ 150 v4                154.1 [135.3-168.1]     0.319 [0.303-0.343]   0.177 [0.170-0.191]   0.753 [0.693-0.792]
+ 180 conflict_heavy    175.8 [163.2-197.4]     0.297 [0.274-0.307]   0.165 [0.159-0.172]   0.812 [0.780-0.856]
+ 180 v4                185.2 [166.0-199.5]     0.290 [0.277-0.305]   0.161 [0.155-0.168]   0.830 [0.799-0.863]
+ 180 v4 frozen (ref)                 189.5                   0.286                 0.161                 0.837
+
+Paired-test power, saturation, scenario 'planning' (primary), t-test
+size mix                            N = 10                N = 15                N = 20
+ 120 conflict_heavy    0.575 [0.544-0.607]   0.753 [0.725-0.790]   0.862 [0.835-0.887]
+ 120 v4                0.585 [0.540-0.629]   0.761 [0.722-0.807]   0.871 [0.837-0.905]
+ 150 conflict_heavy    0.623 [0.597-0.657]   0.800 [0.770-0.824]   0.899 [0.873-0.917]
+ 150 v4                0.629 [0.582-0.664]   0.807 [0.771-0.838]   0.907 [0.875-0.923]
+ 180 conflict_heavy    0.653 [0.626-0.682]   0.829 [0.810-0.846]   0.920 [0.902-0.935]
+ 180 v4                0.662 [0.635-0.692]   0.839 [0.816-0.862]   0.929 [0.919-0.944]
+ 180 v4 list x2 (ref)                 0.671                 0.837                 0.924
+
+Paired-test power, saturation, scenario 'half shift' (headline), t-test
+size mix                            N = 10                N = 15                N = 20
+ 120 conflict_heavy    0.286 [0.259-0.323]   0.392 [0.352-0.450]   0.486 [0.432-0.532]
+ 120 v4                0.288 [0.257-0.309]   0.399 [0.372-0.440]   0.491 [0.468-0.513]
+ 150 conflict_heavy    0.327 [0.295-0.353]   0.446 [0.406-0.480]   0.552 [0.507-0.594]
+ 150 v4                0.332 [0.307-0.358]   0.458 [0.432-0.496]   0.561 [0.516-0.594]
+ 180 conflict_heavy    0.353 [0.325-0.384]   0.493 [0.450-0.540]   0.602 [0.545-0.654]
+ 180 v4                0.369 [0.342-0.389]   0.505 [0.458-0.543]   0.615 [0.563-0.662]
+ 180 v4 list x2 (ref)                 0.356                 0.489                 0.612
+
+4. WHAT THE PLANNING WEIGHTS MEAN ON THESE LISTS
+------------------------------------------------------------------------------
+Share of predicted-image choices a responder at saturation 0.5 / contrast 0.7 per SD
+makes on a TYPICAL INFORMATIVE trial: the median |predictor| among trials with |predictor| >= 0.2
+(v4's definition). v4's interpretation: 0.6191 (saturation), 0.6104 (contrast), before lapses.
+size mix                   median |x_sat|               P(sat)       median |x_con|               P(con)
+ 120 conflict_heavy   0.911 [0.810-1.018]  0.612 [0.600-0.625]  0.616 [0.592-0.647]  0.606 [0.602-0.611]
+ 120 v4               0.975 [0.875-1.113]  0.619 [0.608-0.636]  0.624 [0.601-0.680]  0.608 [0.604-0.617]
+ 150 conflict_heavy   0.905 [0.850-0.983]  0.611 [0.605-0.620]  0.613 [0.589-0.652]  0.606 [0.602-0.612]
+ 150 v4               0.979 [0.891-1.069]  0.620 [0.610-0.631]  0.641 [0.611-0.681]  0.610 [0.605-0.617]
+ 180 conflict_heavy   0.905 [0.853-1.008]  0.611 [0.605-0.623]  0.621 [0.585-0.657]  0.607 [0.601-0.613]
+ 180 v4               0.981 [0.902-1.052]  0.620 [0.611-0.629]  0.642 [0.617-0.670]  0.611 [0.606-0.615]
+ 180 v4 frozen (ref)                0.971               0.6191                0.642               0.6104
+After lapses (0.1): saturation 0.604 [0.590-0.622], contrast 0.597 [0.591-0.605] over all lists.
+Informative trials per list: saturation 102 [80-126], contrast 102 [80-126].
+
+5. SMALLEST BLOCK SIZE REACHING POWER 0.80 (t-test), per scenario
+------------------------------------------------------------------------------
+'mean' uses the mean power over draws; 'every draw' requires the worst draw to reach it;
+'none' = no size up to 180 reaches it.
+[planning]  (primary)
+  contrast   conflict_heavy  N=10: none / none   N=15: none / none   N=20:  120 /  150
+  contrast   v4              N=10: none / none   N=15: none / none   N=20:  120 /  150
+  saturation conflict_heavy  N=10: none / none   N=15:  180 /  180   N=20:  120 /  120
+  saturation v4              N=10: none / none   N=15:  150 /  180   N=20:  120 /  120
+  both       conflict_heavy  N=10: none / none   N=15: none / none   N=20:  180 /  180
+  both       v4              N=10: none / none   N=15: none / none   N=20:  180 /  180
+
+[half shift]  (headline)
+  contrast   conflict_heavy  N=10: none / none   N=15: none / none   N=20: none / none
+  contrast   v4              N=10: none / none   N=15: none / none   N=20: none / none
+  saturation conflict_heavy  N=10: none / none   N=15: none / none   N=20: none / none
+  saturation v4              N=10: none / none   N=15: none / none   N=20: none / none
+  both       conflict_heavy  N=10: none / none   N=15: none / none   N=20: none / none
+  both       v4              N=10: none / none   N=15: none / none   N=20: none / none
+
+[all respond]  (sensitivity)
+  contrast   conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  contrast   v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  saturation conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  saturation v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  both       conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  both       v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+
+[all respond, spread 50%]  (sensitivity)
+  contrast   conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  contrast   v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  saturation conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  saturation v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  both       conflict_heavy  N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+  both       v4              N=10:  120 /  120   N=15:  120 /  120   N=20:  120 /  120
+
+[all respond, half shift, spread 50%]  (sensitivity)
+  contrast   conflict_heavy  N=10: none / none   N=15:  120 /  150   N=20:  120 /  120
+  contrast   v4              N=10: none / none   N=15:  120 /  150   N=20:  120 /  120
+  saturation conflict_heavy  N=10:  180 /  180   N=15:  120 /  120   N=20:  120 /  120
+  saturation v4              N=10:  150 /  180   N=15:  120 /  120   N=20:  120 /  120
+  both       conflict_heavy  N=10: none / none   N=15:  150 /  180   N=20:  120 /  120
+  both       v4              N=10: none / none   N=15:  150 /  180   N=20:  120 /  120
+
+  (each cell: by mean / in every draw)
+
+6. PAIRED-TEST POWER, ALL SCENARIOS AND TESTS (mean over draws)
+------------------------------------------------------------------------------
+[no effect] (null check) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   120 v4                    0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   150 conflict_heavy        0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   150 v4                    0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   180 conflict_heavy        0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   180 v4                    0.05/0.05/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+
+[no effect] (null check) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   120 v4                    0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   150 conflict_heavy        0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   150 v4                    0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   180 conflict_heavy        0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+   180 v4                    0.04/0.04/0.00       0.05/0.05/0.00       0.05/0.05/0.00
+
+[planning] (primary) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.52/0.58/0.34       0.69/0.75/0.56       0.81/0.86/0.72
+   120 v4                    0.51/0.59/0.34       0.69/0.76/0.55       0.80/0.87/0.72
+   150 conflict_heavy        0.56/0.62/0.40       0.74/0.80/0.63       0.85/0.90/0.78
+   150 v4                    0.56/0.63/0.40       0.74/0.81/0.63       0.85/0.91/0.79
+   180 conflict_heavy        0.60/0.65/0.45       0.78/0.83/0.68       0.88/0.92/0.83
+   180 v4                    0.60/0.66/0.45       0.78/0.84/0.68       0.89/0.93/0.84
+
+[planning] (primary) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.46/0.51/0.28       0.65/0.71/0.51       0.78/0.83/0.67
+   120 v4                    0.46/0.52/0.28       0.65/0.72/0.50       0.77/0.84/0.67
+   150 conflict_heavy        0.50/0.56/0.33       0.70/0.76/0.57       0.82/0.87/0.73
+   150 v4                    0.50/0.56/0.33       0.70/0.76/0.57       0.82/0.88/0.74
+   180 conflict_heavy        0.54/0.58/0.37       0.74/0.78/0.62       0.85/0.89/0.78
+   180 v4                    0.54/0.59/0.37       0.74/0.79/0.62       0.86/0.90/0.79
+
+[half shift] (headline) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.25/0.29/0.08       0.34/0.39/0.15       0.42/0.49/0.22
+   120 v4                    0.25/0.29/0.08       0.33/0.40/0.14       0.41/0.49/0.21
+   150 conflict_heavy        0.28/0.33/0.11       0.38/0.45/0.19       0.47/0.55/0.28
+   150 v4                    0.27/0.33/0.10       0.37/0.46/0.18       0.46/0.56/0.27
+   180 conflict_heavy        0.31/0.35/0.13       0.42/0.49/0.23       0.52/0.60/0.34
+   180 v4                    0.31/0.37/0.13       0.42/0.51/0.23       0.52/0.61/0.33
+
+[half shift] (headline) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.22/0.25/0.06       0.32/0.37/0.13       0.40/0.46/0.20
+   120 v4                    0.21/0.25/0.06       0.31/0.37/0.12       0.39/0.47/0.19
+   150 conflict_heavy        0.24/0.29/0.08       0.36/0.42/0.17       0.45/0.53/0.25
+   150 v4                    0.24/0.29/0.08       0.35/0.43/0.16       0.44/0.53/0.24
+   180 conflict_heavy        0.27/0.31/0.10       0.40/0.46/0.21       0.50/0.57/0.31
+   180 v4                    0.27/0.32/0.10       0.40/0.47/0.20       0.49/0.59/0.30
+
+[all respond] (sensitivity) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.99/1.00/0.99       1.00/1.00/1.00       1.00/1.00/1.00
+   120 v4                    0.99/1.00/0.99       1.00/1.00/1.00       1.00/1.00/1.00
+   150 conflict_heavy        1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   150 v4                    1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   180 conflict_heavy        1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   180 v4                    1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+
+[all respond] (sensitivity) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.99/1.00/0.99       1.00/1.00/1.00       1.00/1.00/1.00
+   120 v4                    0.99/1.00/0.98       1.00/1.00/1.00       1.00/1.00/1.00
+   150 conflict_heavy        1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   150 v4                    1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   180 conflict_heavy        1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+   180 v4                    1.00/1.00/1.00       1.00/1.00/1.00       1.00/1.00/1.00
+
+[all respond, spread 50%] (sensitivity) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.96/0.98/0.93       1.00/1.00/0.99       1.00/1.00/1.00
+   120 v4                    0.96/0.98/0.94       1.00/1.00/0.99       1.00/1.00/1.00
+   150 conflict_heavy        0.97/0.99/0.96       1.00/1.00/1.00       1.00/1.00/1.00
+   150 v4                    0.97/0.99/0.96       1.00/1.00/1.00       1.00/1.00/1.00
+   180 conflict_heavy        0.99/0.99/0.98       1.00/1.00/1.00       1.00/1.00/1.00
+   180 v4                    0.98/0.99/0.98       1.00/1.00/1.00       1.00/1.00/1.00
+
+[all respond, spread 50%] (sensitivity) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.94/0.97/0.90       0.99/1.00/0.99       1.00/1.00/1.00
+   120 v4                    0.94/0.97/0.91       0.99/1.00/0.99       1.00/1.00/1.00
+   150 conflict_heavy        0.96/0.98/0.94       1.00/1.00/1.00       1.00/1.00/1.00
+   150 v4                    0.96/0.98/0.94       1.00/1.00/1.00       1.00/1.00/1.00
+   180 conflict_heavy        0.98/0.99/0.96       1.00/1.00/1.00       1.00/1.00/1.00
+   180 v4                    0.97/0.99/0.96       1.00/1.00/1.00       1.00/1.00/1.00
+
+[all respond, half shift, spread 50%] (sensitivity) t-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.64/0.73/0.46       0.81/0.89/0.71       0.90/0.95/0.86
+   120 v4                    0.63/0.73/0.45       0.80/0.88/0.71       0.90/0.95/0.85
+   150 conflict_heavy        0.71/0.79/0.56       0.86/0.93/0.80       0.94/0.98/0.92
+   150 v4                    0.70/0.80/0.55       0.86/0.94/0.80       0.94/0.98/0.92
+   180 conflict_heavy        0.77/0.85/0.65       0.91/0.96/0.87       0.97/0.99/0.96
+   180 v4                    0.76/0.86/0.64       0.91/0.96/0.87       0.97/0.99/0.96
+
+[all respond, half shift, spread 50%] (sensitivity) wilcoxon-test        contrast / saturation / both
+  size mix                             N=10                 N=15                 N=20
+   120 conflict_heavy        0.58/0.68/0.40       0.78/0.87/0.68       0.89/0.95/0.84
+   120 v4                    0.58/0.68/0.39       0.78/0.87/0.67       0.88/0.94/0.83
+   150 conflict_heavy        0.66/0.75/0.49       0.84/0.91/0.77       0.93/0.97/0.91
+   150 v4                    0.65/0.76/0.48       0.84/0.92/0.77       0.93/0.97/0.90
+   180 conflict_heavy        0.72/0.80/0.58       0.90/0.94/0.85       0.96/0.98/0.95
+   180 v4                    0.71/0.82/0.57       0.89/0.95/0.84       0.96/0.99/0.95
+
+Per-person weight difference (target - reference), mean and SD over the pool:
+  scenario                             size mix                      contrast        saturation  dz con  dz sat
+  no effect                             120 conflict_heavy   -0.001 sd 0.429  +0.000 sd 0.264   -0.00    0.00
+  no effect                             120 v4               +0.000 sd 0.432  +0.000 sd 0.261    0.00    0.00
+  no effect                             150 conflict_heavy   -0.002 sd 0.387  -0.000 sd 0.237   -0.00   -0.00
+  no effect                             150 v4               +0.001 sd 0.390  +0.001 sd 0.231    0.00    0.00
+  no effect                             180 conflict_heavy   -0.001 sd 0.347  +0.000 sd 0.215   -0.00    0.00
+  no effect                             180 v4               +0.001 sd 0.355  +0.001 sd 0.210    0.00    0.01
+  planning                              120 conflict_heavy   +0.311 sd 0.534  +0.219 sd 0.348    0.58    0.63
+  planning                              120 v4               +0.311 sd 0.539  +0.221 sd 0.346    0.58    0.64
+  planning                              150 conflict_heavy   +0.310 sd 0.501  +0.221 sd 0.329    0.62    0.67
+  planning                              150 v4               +0.312 sd 0.502  +0.221 sd 0.324    0.62    0.68
+  planning                              180 conflict_heavy   +0.309 sd 0.470  +0.219 sd 0.312    0.66    0.70
+  planning                              180 v4               +0.311 sd 0.473  +0.220 sd 0.308    0.66    0.71
+  half shift                            120 conflict_heavy   +0.155 sd 0.464  +0.109 sd 0.292    0.33    0.37
+  half shift                            120 v4               +0.154 sd 0.468  +0.109 sd 0.290    0.33    0.38
+  half shift                            150 conflict_heavy   +0.155 sd 0.422  +0.110 sd 0.267    0.37    0.41
+  half shift                            150 v4               +0.152 sd 0.427  +0.109 sd 0.262    0.36    0.42
+  half shift                            180 conflict_heavy   +0.153 sd 0.387  +0.109 sd 0.247    0.40    0.44
+  half shift                            180 v4               +0.154 sd 0.391  +0.109 sd 0.242    0.39    0.45
+  all respond                           120 conflict_heavy   +0.621 sd 0.441  +0.441 sd 0.276    1.41    1.60
+  all respond                           120 v4               +0.621 sd 0.445  +0.441 sd 0.273    1.39    1.62
+  all respond                           150 conflict_heavy   +0.622 sd 0.397  +0.441 sd 0.247    1.57    1.78
+  all respond                           150 v4               +0.619 sd 0.401  +0.441 sd 0.241    1.55    1.83
+  all respond                           180 conflict_heavy   +0.620 sd 0.357  +0.440 sd 0.225    1.74    1.95
+  all respond                           180 v4               +0.621 sd 0.364  +0.441 sd 0.220    1.71    2.00
+  all respond, spread 50%               120 conflict_heavy   +0.617 sd 0.539  +0.436 sd 0.351    1.14    1.24
+  all respond, spread 50%               120 v4               +0.616 sd 0.541  +0.439 sd 0.350    1.14    1.25
+  all respond, spread 50%               150 conflict_heavy   +0.617 sd 0.503  +0.437 sd 0.330    1.23    1.32
+  all respond, spread 50%               150 v4               +0.617 sd 0.505  +0.436 sd 0.324    1.22    1.34
+  all respond, spread 50%               180 conflict_heavy   +0.616 sd 0.472  +0.437 sd 0.312    1.30    1.40
+  all respond, spread 50%               180 v4               +0.616 sd 0.475  +0.437 sd 0.308    1.30    1.42
+  all respond, half shift, spread 50%   120 conflict_heavy   +0.313 sd 0.461  +0.224 sd 0.289    0.68    0.77
+  all respond, half shift, spread 50%   120 v4               +0.313 sd 0.462  +0.222 sd 0.288    0.68    0.77
+  all respond, half shift, spread 50%   150 conflict_heavy   +0.314 sd 0.420  +0.223 sd 0.265    0.75    0.84
+  all respond, half shift, spread 50%   150 v4               +0.314 sd 0.423  +0.222 sd 0.259    0.74    0.85
+  all respond, half shift, spread 50%   180 conflict_heavy   +0.313 sd 0.383  +0.223 sd 0.245    0.82    0.91
+  all respond, half shift, spread 50%   180 v4               +0.312 sd 0.388  +0.223 sd 0.241    0.80    0.93
+  (the mean difference is below the shift because lapses attenuate every fitted weight)
+
+7. SEPARATING THE TWO WEIGHTS
+------------------------------------------------------------------------------
+Conflict trials per block, and the correlation of the two estimates among random
+choosers (how far one weight's error leaks into the other), and the predictor cos.
+   120 conflict_heavy  conflict  30, together  18   corr(estimates)    -0.033 [-0.098-0.036]   cos 0.033 [-0.032-0.097]
+   120 v4              conflict  20, together  20   corr(estimates)   -0.092 [-0.191--0.029]   cos 0.091 [0.038-0.179]
+   150 conflict_heavy  conflict  37, together  23   corr(estimates)    -0.026 [-0.075-0.031]   cos 0.025 [-0.023-0.071]
+   150 v4              conflict  25, together  25   corr(estimates)   -0.099 [-0.145--0.038]   cos 0.100 [0.034-0.149]
+   180 conflict_heavy  conflict  45, together  27   corr(estimates)    -0.035 [-0.074-0.005]   cos 0.033 [-0.008-0.075]
+   180 v4              conflict  30, together  30   corr(estimates)   -0.095 [-0.146--0.043]   cos 0.097 [0.040-0.142]
+   180 v4 frozen (ref) conflict  30, together  30   corr(estimates)                   -0.120   cos 0.120
+
+8. SESSION LENGTH OF THE TWO PAIR BLOCKS (AN ESTIMATE)
+------------------------------------------------------------------------------
+COVERS ONLY THE TWO PAIR BLOCKS: their instructions, practice, trials and breaks.
+Not consent, calibration, the grid blocks, word ratings or questionnaires.
+THE RESULT IS AN ESTIMATE, to be replaced by a timed pilot.
+Fixed durations from the experiment's config.js (dpdr_experiment, v4-study-design, 1bbbefb):
+  fixation 500 ms + blank 250 ms per image trial; catch lockout 750 ms; practice
+  feedback 900 ms on the first 2 practice trials (first block); a break every 41 main trials.
+Assumed (self-paced): response time per image trial fast 2 s, typical 3 s, slow 4 s;
+  catch response fast 1 s, typical 1.5 s, slow 2.5 s; screens block instructions 45 s, practice intro 20 s, practice end 10 s, break 30 s.
+Per block: analysed + 8 consistency + 5 catch, plus practice (6, 2) (first, second block).
+  per block  trials  breaks             fast (b1+b2)          typical (b1+b2)             slow (b1+b2)
+        120     274       3       17.9 min (9.1+8.9)     22.4 min (11.3+11.1)     27.0 min (13.7+13.3)
+        150     334       3     20.7 min (10.4+10.2)     26.2 min (13.2+12.9)     31.7 min (16.0+15.7)
+        180     394       4     24.4 min (12.3+12.1)     30.9 min (15.6+15.3)     37.5 min (18.9+18.6)
+  For comparison, the same model on the v4 session (one block, 211 trials, 4 breaks): fast 12.8, typical 16.2, slow 19.7 min
+  (v4's freeze report estimated 14 to 18 min with its own per-trial assumption).
+
+9. THE v4 REFERENCE
+------------------------------------------------------------------------------
+The frozen v4 list (180 analysed trials) as one block list. Its thresholds use v4's
+own seed and reproduce the registered values (see the checks). For the paired test
+the same list is used as BOTH blocks: a reference for information only, not a
+valid design (it repeats every pair).
+  thresholds  saturation +0.286 / -0.290, contrast +0.488 / -0.486
+  detection at the planning weights, lapse 0.1: saturation 0.837, contrast 0.681
+
+10. CHECKS
+------------------------------------------------------------------------------
+  PASS    [estimator] batch Firth fit equals the single-person fit  (max |diff| 3.5e-12 over 20 people)
+  PASS    [estimator] vectorised one-sided Wilcoxon equals SciPy's exact test  (max |diff| in p 0.0e+00, 200 studies at each N)
+  PASS    [v4 reference] upper thresholds reproduce the registered v4 values  (got +0.286 / +0.488, registered +0.286 / +0.488)
+  PASS    [v4 reference] lower thresholds reproduce the registered v4 values  (got -0.290 / -0.486, registered -0.290 / -0.486)
+  PASS    [v4 reference] informative medians equal v4's informative_medians  (saturation 0.9714, contrast 0.6417)
+  PASS    [v4 reference] the planning weights reproduce v4's choice probabilities (0.6191 / 0.6104)  (got 0.6191 / 0.6104)
+  PASS    [n=120 conflict_heavy] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [n=120 v4] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [n=150 conflict_heavy] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [n=150 v4] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [n=180 conflict_heavy] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [n=180 v4] every draw is built and passes script 1's matching checks  (20 of 20)
+  PASS    [reproduction] draw 0 equals script 1's saved example set (pair for pair, both sets)  (6 of 6 combinations)
+  PASS    [n=120 conflict_heavy] the two sets' upper thresholds agree within 5%  (worst 2.5%)
+  PASS    [n=120 conflict_heavy] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.098)
+  PASS    [n=120 conflict_heavy] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=120 conflict_heavy] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=120 conflict_heavy] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0518 (z +1.27, t, N=20, sat))
+  PASS    [n=120 v4] the two sets' upper thresholds agree within 5%  (worst 3.6%)
+  PASS    [n=120 v4] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.191)
+  PASS    [n=120 v4] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=120 v4] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=120 v4] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0505 (z +0.39, t, N=20, sat))
+  PASS    [n=150 conflict_heavy] the two sets' upper thresholds agree within 5%  (worst 4.2%)
+  PASS    [n=150 conflict_heavy] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.075)
+  PASS    [n=150 conflict_heavy] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=150 conflict_heavy] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=150 conflict_heavy] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0504 (z +0.45, t, N=10, sat))
+  PASS    [n=150 v4] the two sets' upper thresholds agree within 5%  (worst 4.5%)
+  PASS    [n=150 v4] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.145)
+  PASS    [n=150 v4] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=150 v4] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=150 v4] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0509 (z +0.64, t, N=20, con))
+  PASS    [n=180 conflict_heavy] the two sets' upper thresholds agree within 5%  (worst 4.3%)
+  PASS    [n=180 conflict_heavy] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.074)
+  PASS    [n=180 conflict_heavy] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=180 conflict_heavy] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=180 conflict_heavy] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0517 (z +1.18, t, N=20, sat))
+  PASS    [n=180 v4] the two sets' upper thresholds agree within 5%  (worst 4.3%)
+  PASS    [n=180 v4] |corr(estimates)| <= 0.3 under the null (weights separable)  (worst 0.146)
+  PASS    [n=180 v4] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=180 v4] every Firth fit converged  (worst share unconverged 0.00000)
+  PASS    [n=180 v4] false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell  (worst 0.0522 (z +1.88, t, N=15, sat))
+  PASS    [v4 reference] share of |weight| > 5 <= 0.001  (worst 0.00000)
+  PASS    [n=120 conflict_heavy] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6120, contrast 0.6061 (v4 0.6191, 0.6104))
+  PASS    [n=120 v4] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6195, contrast 0.6075 (v4 0.6191, 0.6104))
+  PASS    [n=150 conflict_heavy] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6113, contrast 0.6057 (v4 0.6191, 0.6104))
+  PASS    [n=150 v4] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6200, contrast 0.6103 (v4 0.6191, 0.6104))
+  PASS    [n=180 conflict_heavy] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6113, contrast 0.6069 (v4 0.6191, 0.6104))
+  PASS    [n=180 v4] planning weights give v4's choice probabilities within 0.02 (typical informative trial)  (saturation 0.6202, contrast 0.6105 (v4 0.6191, 0.6104))
+
+  50 PASS, 0 FAIL, 0 SKIPPED
+
+11. NOTES AND LIMITS
+------------------------------------------------------------------------------
+* Power is a first estimate under the stated person model. The shift sizes, the taste
+  spread, the share of responders and the lapse rate are assumptions, not estimates;
+  section 6 shows how far the answer moves when they change.
+* Each weight is tested on its own at alpha, uncorrected. A corrected or joint primary
+  test would need the power read from 'both' or recomputed.
+* Block order is not modelled: an order effect would add to the difference in half
+  the people and subtract in the other half, widening its spread.
+* Taste is assumed stable across blocks. Taste that differed between blocks would
+  add its own variance to every difference.
+* The session length covers the two pair blocks only and is an estimate: the response
+  times and screen times are assumptions, to be replaced by a timed pilot.

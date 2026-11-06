@@ -116,35 +116,48 @@ ON_EXISTING = "new"
 #   Analysed trials PER BLOCK. Practice, catch and consistency trials come
 #   on top (practice and catch are reserved below; consistency repeats
 #   reuse a block's own pairs and cost no capacity).
-BLOCK_SIZES = [90, 105, 120, 150]
+# BLOCK_SIZES = [90, 105, 120, 150]
+BLOCK_SIZES = [120, 150, 180]
 
 # TYPE_MIXES
 #   Share of each block's analysed trials per type. Counts are rounded by
 #   largest remainder (ties broken in TYPES order), so they always sum to
 #   the block size; the realised counts are in the report.
+# TYPE_MIXES = {
+#     "v4":             {"sat_only": 1 / 3, "fog_only": 1 / 3,
+#                        "together": 1 / 6, "conflict": 1 / 6},
+#     "conflict_heavy": {"sat_only": 0.30, "fog_only": 0.30,
+#                        "together": 0.15, "conflict": 0.25},
+#     "equal":          {"sat_only": 0.25, "fog_only": 0.25,
+#                        "together": 0.25, "conflict": 0.25},
+# }
 TYPE_MIXES = {
     "v4":             {"sat_only": 1 / 3, "fog_only": 1 / 3,
                        "together": 1 / 6, "conflict": 1 / 6},
     "conflict_heavy": {"sat_only": 0.30, "fog_only": 0.30,
                        "together": 0.15, "conflict": 0.25},
-    "equal":          {"sat_only": 0.25, "fog_only": 0.25,
-                       "together": 0.25, "conflict": 0.25},
-}
+} 
 
 # LEVEL_SETS
 #   Which rendered levels may appear in a pair. A pair is dropped when
 #   either image carries a dropped level. Colour labels as in all_pairs.csv:
 #   p75, p65, k=1, p25, p10, p05, p01. Fog labels: p35, p25, p15, p10, p05.
+# LEVEL_SETS = {
+#     "with_p65":    {"drop_colour": [], "drop_fog": []},
+#     "without_p65": {"drop_colour": ["p65"], "drop_fog": []},
+# }
+
 LEVEL_SETS = {
-    "with_p65":    {"drop_colour": [], "drop_fog": []},
     "without_p65": {"drop_colour": ["p65"], "drop_fog": []},
-}
+}                                   # delete the "with_p65" entry
+
 
 # P65_DECISION
 #   (level set with p65, level set without p65). Decision rule: for a given
 #   size and mix, if the set without p65 is feasible, p65 is dropped.
 #   None skips the decision section.
-P65_DECISION = ("with_p65", "without_p65")
+# P65_DECISION = ("with_p65", "without_p65")
+P65_DECISION = None   
 
 # DISJOINT
 #   What the two sets may not share.

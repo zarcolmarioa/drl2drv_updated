@@ -1,0 +1,51 @@
+scope,check,status,detail
+estimator,batch Firth fit equals the single-person fit,PASS,max |diff| 3.5e-12 over 20 people
+estimator,vectorised one-sided Wilcoxon equals SciPy's exact test,PASS,"max |diff| in p 0.0e+00, 200 studies at each N"
+v4 reference,upper thresholds reproduce the registered v4 values,PASS,"got +0.286 / +0.488, registered +0.286 / +0.488"
+v4 reference,lower thresholds reproduce the registered v4 values,PASS,"got -0.290 / -0.486, registered -0.290 / -0.486"
+v4 reference,informative medians equal v4's informative_medians,PASS,"saturation 0.9714, contrast 0.6417"
+v4 reference,the planning weights reproduce v4's choice probabilities (0.6191 / 0.6104),PASS,got 0.6191 / 0.6104
+n=120 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=120 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=150 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=150 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=180 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=180 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+reproduction,"draw 0 equals script 1's saved example set (pair for pair, both sets)",PASS,6 of 6 combinations
+n=120 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 2.5%
+n=120 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.098
+n=120 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=120 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0518 (z +1.27, t, N=20, sat)"
+n=120 v4,the two sets' upper thresholds agree within 5%,PASS,worst 3.6%
+n=120 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.191
+n=120 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=120 v4,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0505 (z +0.39, t, N=20, sat)"
+n=150 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 4.2%
+n=150 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.075
+n=150 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=150 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=150 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0504 (z +0.45, t, N=10, sat)"
+n=150 v4,the two sets' upper thresholds agree within 5%,PASS,worst 4.5%
+n=150 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.145
+n=150 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=150 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=150 v4,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0509 (z +0.64, t, N=20, con)"
+n=180 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 4.3%
+n=180 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.074
+n=180 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=180 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=180 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0517 (z +1.18, t, N=20, sat)"
+n=180 v4,the two sets' upper thresholds agree within 5%,PASS,worst 4.3%
+n=180 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.146
+n=180 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=180 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=180 v4,false-positive rate under 'no effect' <= alpha + 3.64 between-draw SE in every cell,PASS,"worst 0.0522 (z +1.88, t, N=15, sat)"
+v4 reference,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 conflict_heavy,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6120, contrast 0.6061 (v4 0.6191, 0.6104)"
+n=120 v4,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6195, contrast 0.6075 (v4 0.6191, 0.6104)"
+n=150 conflict_heavy,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6113, contrast 0.6057 (v4 0.6191, 0.6104)"
+n=150 v4,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6200, contrast 0.6103 (v4 0.6191, 0.6104)"
+n=180 conflict_heavy,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6113, contrast 0.6069 (v4 0.6191, 0.6104)"
+n=180 v4,planning weights give v4's choice probabilities within 0.02 (typical informative trial),PASS,"saturation 0.6202, contrast 0.6105 (v4 0.6191, 0.6104)"
