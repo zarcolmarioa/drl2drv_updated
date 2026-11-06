@@ -8,8 +8,10 @@ WHAT THIS DOES
        a FAIL, or whose set_info.json does not match its own set files.
     2. ORDERS. N_ORDERS orders of each set's block (analysed + consistency +
        catch trials), built by a seeded constructive search:
-         * catch trials: one in each of SEGMENTS equal parts of the block,
-           never in the first or last CATCH_EDGE trials;
+         * catch trials: one in each of SEGMENTS parts of the block, never
+           in the first or last CATCH_EDGE trials; the parts end where the
+           breaks fall (every BREAK_EVERY main trials), so each stretch
+           between breaks holds one catch trial;
          * every other trial type is placed under a RUNNING BALANCE: after
            any number of trials, each type's count stays within one of its
            share (consistency's share starts after CONSISTENCY_MIN_DISTANCE),
@@ -33,7 +35,10 @@ WHAT THIS DOES
        = 32 cells; every cell twice in 64 slots), and the sequence is built
        to keep every prefix as balanced as possible: the report gives the
        balance at the first 10, 15, 20, 30 and all slots. Both groups use
-       the same table, so they are balanced alike. Deterministic.
+       the same table, so they are balanced alike. Deterministic. Slots
+       beyond N_SLOTS reuse the table (slot n -> row ((n - 1) mod N_SLOTS)
+       + 1); a check confirms the balance after any number of slots then
+       equals the balance after (that number mod N_SLOTS) slots.
     4. PACKAGE, in the format of the plan: design.json, assignment.json,
        lists/, practice/, preload.json, stimuli/, manifest.csv, README.txt,
        and a CSV copy of every JSON.
@@ -81,10 +86,23 @@ N_ORDER_CANDIDATES = 40      # valid orders built per set before choosing
 MAX_ATTEMPTS = 20_000        # restarts allowed per set to reach them
 
 # SEGMENTS
-#   The block is divided into this many equal parts for the type-spread
-#   check, and holds one catch trial in each (so it must equal the number of
-#   catch trials per set).
+#   The block is divided into this many parts for the type-spread check,
+#   and holds one catch trial in each (so it must equal the number of catch
+#   trials per set). The parts end exactly where the breaks fall (see
+#   BREAK_EVERY), so each stretch between two breaks is one segment.
 SEGMENTS = 5
+
+# BREAK_EVERY
+#   Main trials (analysed, consistency and catch; practice not counted)
+#   between two breaks within a block.
+#     "per_segment"  ceil(main trials per block / SEGMENTS), worked out per
+#                    package (150 per block: 167 main trials -> 34;
+#                    180: 200 -> 40). The default.
+#     an integer     that number for every package.
+#   Segment boundaries are BREAK_EVERY, 2 x BREAK_EVERY, ..., so the block
+#   must split into exactly SEGMENTS parts; the script stops otherwise.
+#   Recorded per package in design.json (timing) and the README.
+BREAK_EVERY = "per_segment"
 
 # TYPE_SPREAD_TOL
 #   In every segment, each type's count must be within this of its expected
@@ -93,15 +111,19 @@ TYPE_SPREAD_TOL = 1
 
 # SCENE_GAP / SCENE_GAP_SEARCH_MAX / SCENE_GAP_POLICY
 #   Two trials of the same scene must be at least SCENE_GAP trials apart
-#   (positions i < j with j - i >= SCENE_GAP; 5 means at least four other
+#   (positions i < j with j - i >= SCENE_GAP; 30 means at least 29 other
 #   trials between them). Catch trials show no images and do not count.
-#   The largest gap at which every order of both sets can still be built is
-#   searched up to SCENE_GAP_SEARCH_MAX and reported.
-#     "min"      build with SCENE_GAP (the default)
+#   The same gap applies to both block sizes. The largest gap at which every
+#   order of both sets can still be built is searched upward from SCENE_GAP
+#   to SCENE_GAP_SEARCH_MAX and reported (the earlier search from 5 found 34
+#   at 150 per block and 36 at 180; 30 leaves a margin).
+#     "fixed"    build every order with SCENE_GAP (the default)
 #     "largest"  build with the largest achievable gap
-SCENE_GAP = 5
+#   The realised smallest gap of every order is reported and recorded in
+#   design.json.
+SCENE_GAP = 30
 SCENE_GAP_SEARCH_MAX = 40
-SCENE_GAP_POLICY = "min"
+SCENE_GAP_POLICY = "fixed"
 GAP_SEARCH_ATTEMPTS = 2_000  # restarts per set per gap in the search
 
 CONSISTENCY_MIN_DISTANCE = 40
@@ -137,8 +159,15 @@ ASSIGN_RESTARTS = 60
 BALANCE_TOL = 1.0            # largest allowed deviation from an even split,
                              # per factor and for block order x set mapping
 
+# SLOT_WRAP_CYCLES
+#   Slots beyond N_SLOTS reuse the table: slot n uses row
+#   ((n - 1) mod N_SLOTS) + 1 (slot 65 -> row 1, slot 130 -> row 2). Stated
+#   in design.json, assignment.json and the README. The check that this
+#   keeps the balance runs over this many passes through the table
+#   (4 = slots 1 to 256).
+SLOT_WRAP_CYCLES = 4
+
 # --- Session settings recorded in design.json ---
-BREAK_EVERY = 41
 REST_BETWEEN_BLOCKS = True
 CATCH_KEYS = ("ArrowUp", "ArrowDown")
 CATCH_MAX_RUN = 2            # same target at most twice in a row (v4 rule)
@@ -212,11 +241,30 @@ def settings_dict(size):
     return own
 
 
-def resolve_output_dir(size):
+def break_every_for(N):
+    """Main trials between breaks for a block of N main trials."""
+    if BREAK_EVERY == "per_segment":
+        return -(-N // SEGMENTS)
+    return int(BREAK_EVERY)
+
+
+def segment_edges(N):
+    """Segment boundaries = break positions: 0, B, 2B, ..., N."""
+    B = break_every_for(N)
+    edges = list(range(0, N, B)) + [N]
+    if len(edges) - 1 != SEGMENTS:
+        raise ValueError(
+            f"a break every {B} main trials splits a block of {N} into "
+            f"{len(edges) - 1} parts, but SEGMENTS = {SEGMENTS}; the parts "
+            "between breaks are the segments, so these must agree")
+    return np.array(edges, dtype=int)
+
+
+def resolve_output_dir(size, B):
     blob = json.dumps(settings_dict(size), sort_keys=True, default=str)
     h = hashlib.sha256(blob.encode()).hexdigest()[:8]
     name = (f"v5_n{size}_orders{N_ORDERS}_gap{SCENE_GAP}-{SCENE_GAP_POLICY}"
-            f"_slots{N_SLOTS}_seed{RANDOM_SEED}__s{h}")
+            f"_break{B}_slots{N_SLOTS}_seed{RANDOM_SEED}__s{h}")
     base = os.path.join(OUTPUT_ROOT, name)
     if not os.path.exists(base):
         return base
@@ -273,7 +321,7 @@ def read_script3(d, size, ck):
 # ============================================================
 
 def catch_positions(N, n_catch, rng):
-    edges = np.round(np.linspace(0, N, SEGMENTS + 1)).astype(int)
+    edges = segment_edges(N)
     pos = []
     for k in range(SEGMENTS):
         lo = max(edges[k], CATCH_EDGE)
@@ -427,8 +475,8 @@ def measure_order(df):
     N = len(df)
     rel = df.position / (N - 1)
     out = {}
-    # type spread per segment
-    edges = np.round(np.linspace(0, N, SEGMENTS + 1)).astype(int)
+    # type spread per segment (segments end at the breaks)
+    edges = segment_edges(N)
     seg = np.searchsorted(edges, df.position, side="right") - 1
     # Expected counts per segment follow the design: one catch per
     # segment; consistency spread evenly from CONSISTENCY_MIN_DISTANCE on;
@@ -516,7 +564,8 @@ def order_checks(m, G):
          f"{CONSISTENCY_MIN_DISTANCE} apart",
          m["consistency_min_distance"] >= CONSISTENCY_MIN_DISTANCE,
          f"smallest {m['consistency_min_distance']}"),
-        (f"one catch per segment, none in the first or last {CATCH_EDGE}",
+        (f"one catch per segment (= per stretch between breaks), none in "
+         f"the first or last {CATCH_EDGE}",
          m["catch_per_segment"] == "/".join(["1"] * SEGMENTS)
          and m["catch_first"] > CATCH_EDGE
          and m["catch_last_from_end"] > CATCH_EDGE,
@@ -656,8 +705,15 @@ def assignment_table():
     return best
 
 
+def slot_rule_text():
+    return (f"slot n uses row ((n - 1) mod {N_SLOTS}) + 1 of the table: "
+            f"slots 1-{N_SLOTS} use rows 1-{N_SLOTS}, slot {N_SLOTS + 1} "
+            f"uses row 1, slot {2 * N_SLOTS + 2} uses row 2, and so on")
+
+
 def assignment_json(rows, sets_present):
     out = {"slots_per_group": N_SLOTS, "slot_param": SLOT_PARAM,
+           "slot_rule": slot_rule_text(),
            "factors": {
                "block_order": "0 = the group's first-listed episode first, "
                               "1 = second-listed first",
@@ -780,7 +836,8 @@ FILES
                     ?{param}=<n>; slots are handed out in sequence per
                     group and never reused. Each slot names, for block
                     positions 1 and 2, the episode, the set and the list,
-                    and the grid set code.
+                    and the grid set code. See SLOTS for slots beyond
+                    {slots}.
   lists/<set>_o<k>.json
                     one block's main trials (analysed, consistency, catch)
                     in presentation order. Row format = v4's
@@ -807,6 +864,22 @@ CATCH
   {catch} catch rows per block, no images; targets per block position in
   design.json. Exclude a participant with {excl} or more failures over the
   session; record failures per block too.
+
+BREAKS
+  A break every {brk} main trials within each block (main trials = the
+  {main} rows of a list: analysed, consistency and catch; practice is not
+  counted), i.e. after trials {breaks}. {brk} = ceil({main} / {segs}) when
+  set "per_segment" (this package: {brk_rule}). The stretches between breaks
+  are the {segs} segments the orders are built on: {parts} trials, one
+  catch trial in each. A rest between the two blocks: {rest}.
+  design.json: timing.break_every, timing.breaks_after_trial.
+
+SLOTS
+  {slot_rule}.
+  The balance after any number of slots then equals the balance after
+  (that number mod {slots}) slots: every {slots} slots each of the 32 cells
+  has been used equally often again (checked by the build for
+  {wrap} slots).
 """
 
 
@@ -815,9 +888,23 @@ def build_size(size, ck_global):
     ck = Checks()
     d3 = SCRIPT3_DIRS[size]
     sets, prac, info, man = read_script3(d3, size, ck)
-    out = resolve_output_dir(size)
+    main_n = len(sets["A"])
+    B = break_every_for(main_n)
+    edges = segment_edges(main_n)        # stops here if they disagree
+    out = resolve_output_dir(size, B)
     os.makedirs(out)
     print(f"\n  n={size}: output {out}")
+    parts = np.diff(edges).tolist()
+    breaks = edges[1:-1].tolist()
+    ck.add("breaks", f"a break every {B} main trials "
+           + (f"(= ceil({main_n} / {SEGMENTS}))"
+              if BREAK_EVERY == "per_segment" else "(fixed)")
+           + f" gives exactly {SEGMENTS} stretches, which are the segments",
+           len(parts) == SEGMENTS and len(sets["B"]) == main_n,
+           f"breaks after trials {breaks}; stretches {parts}")
+    ck.add("breaks", f"no short final stretch: every stretch has at least "
+           f"{B} - {SEGMENTS - 1} = {B - SEGMENTS + 1} trials",
+           min(parts) >= B - SEGMENTS + 1, f"shortest {min(parts)}")
 
     # --- the largest achievable scene gap ---
     gap_rows = []
@@ -847,7 +934,7 @@ def build_size(size, ck_global):
         why = gap_tab[gap_tab.gap == SCENE_GAP].to_string()
         raise RuntimeError(f"n={size}: no orders at scene gap {SCENE_GAP}:\n"
                            + why)
-    G_use = SCENE_GAP if SCENE_GAP_POLICY == "min" else largest
+    G_use = SCENE_GAP if SCENE_GAP_POLICY == "fixed" else largest
     print(f"    scene gap: largest achievable {largest}, used {G_use}")
 
     # --- orders ---
@@ -913,6 +1000,39 @@ def build_size(size, ck_global):
                and r["block_order x set_mapping"] <= BALANCE_TOL + 1e-9,
                f"worst factor {worst:g}, block order x set mapping "
                f"{r['block_order x set_mapping']:g}")
+    # slots beyond N_SLOTS: slot n uses row ((n - 1) mod N_SLOTS) + 1
+    W = SLOT_WRAP_CYCLES * N_SLOTS
+    wrapped = [rows[(n - 1) % N_SLOTS] for n in range(1, W + 1)]
+    dev_all = [prefix_dev(wrapped[:P]) for P in range(1, W + 1)]
+    keys = list(dev_all[0])
+    at_full = [P for P in range(N_SLOTS, W + 1, N_SLOTS)]
+    zero_ok = all(abs(dev_all[P - 1][k]) < 1e-9 for P in at_full
+                  for k in keys)
+    same_ok = all(abs(dev_all[P - 1][k] - dev_all[P % N_SLOTS - 1][k]) < 1e-9
+                  for P in range(N_SLOTS + 1, W + 1) if P % N_SLOTS
+                  for k in keys)
+    worst_first = {k: max(d[k] for d in dev_all[:N_SLOTS]) for k in keys}
+    worst_all = {k: max(d[k] for d in dev_all) for k in keys}
+    ck.add("assignment", f"slots beyond {N_SLOTS} (row ((n - 1) mod "
+           f"{N_SLOTS}) + 1): after every {N_SLOTS} slots, up to {W}, every "
+           "factor and every pair of factors is exactly balanced", zero_ok,
+           f"checked at {at_full}")
+    ck.add("assignment", f"slots beyond {N_SLOTS}: the balance after n slots "
+           f"equals the balance after (n mod {N_SLOTS}) slots for every n up "
+           f"to {W}, so it is never worse than within the first {N_SLOTS}",
+           same_ok and all(abs(worst_all[k] - worst_first[k]) < 1e-9
+                           for k in keys),
+           "worst over every prefix up to "
+           f"{W}: " + ", ".join(f"{f} {worst_all[f]:g}" for f in FACTORS)
+           + f", block order x set mapping "
+           f"{worst_all['block_order x set_mapping']:g}")
+    for P in BALANCE_PREFIXES:
+        for c in range(1, SLOT_WRAP_CYCLES):
+            Q = c * N_SLOTS + P
+            if Q <= W and Q not in set(bal.slots):
+                bal = pd.concat([bal, pd.DataFrame(
+                    [{"slots": Q, **dev_all[Q - 1]}])], ignore_index=True)
+    bal = bal.sort_values("slots").reset_index(drop=True)
     asg = assignment_json(rows, sets)
 
     # --- package ---
@@ -981,7 +1101,7 @@ def build_size(size, ck_global):
     rngc = rng_for("catch_targets", size)
     catch_seq = {str(pos): catch_targets(info["counts_per_set"]["catch"],
                                          pos, rngc) for pos in (1, 2)}
-    main_n = len(sets["A"])
+    gap_of = dict(zip(summ.list_id, summ.scene_gap_min))
     design = {
         "version": "v5", "package": name, "block_size": size,
         "main_trials_per_block": main_n,
@@ -989,14 +1109,25 @@ def build_size(size, ck_global):
         "practice_by_block": info["practice_by_block"],
         "groups": {g: {"episodes": e} for g, e in GROUPS.items()},
         "lists": {lid: {"set": lid[0], "order": int(lid.split("_o")[1]),
-                        "file": f"lists/{lid}.json", "n": len(df)}
+                        "file": f"lists/{lid}.json", "n": len(df),
+                        "scene_gap_min": int(gap_of[lid])}
                   for lid, df in lists.items()},
         "practice": {"1": "practice/block1.json",
                      "2": "practice/block2.json"},
         "assignment": {"file": "assignment.json", "slot_param": SLOT_PARAM,
                        "slots_per_group": N_SLOTS,
-                       "allocation": "in sequence per group, never reused"},
-        "timing": {"break_every": BREAK_EVERY,
+                       "allocation": "in sequence per group, never reused",
+                       "slot_rule": slot_rule_text()},
+        "timing": {"break_every": B,
+                   "break_rule": (f"ceil(main trials per block / segments) "
+                                  f"= ceil({main_n} / {SEGMENTS})"
+                                  if BREAK_EVERY == "per_segment"
+                                  else "fixed"),
+                   "break_counts": "main trials of the block (analysed, "
+                                   "consistency, catch); practice not "
+                                   "counted",
+                   "breaks_after_trial": breaks,
+                   "stretch_lengths": parts,
                    "rest_between_blocks": REST_BETWEEN_BLOCKS},
         "catch": {**info["catch"],
                   "targets_by_block_position": catch_seq},
@@ -1005,8 +1136,11 @@ def build_size(size, ck_global):
             info["choice_probability_at_planning_weights"],
         "predictors": info["predictors"],
         "order_constraints": {
-            "segments": SEGMENTS, "type_spread_tol": TYPE_SPREAD_TOL,
-            "scene_gap_used": G_use, "scene_gap_largest_achievable": largest,
+            "segments": SEGMENTS, "segment_edges": edges.tolist(),
+            "segments_end_at_breaks": True,
+            "type_spread_tol": TYPE_SPREAD_TOL,
+            "scene_gap_used": G_use, "scene_gap_policy": SCENE_GAP_POLICY,
+            "scene_gap_largest_achievable": largest,
             "consistency_min_distance": CONSISTENCY_MIN_DISTANCE,
             "catch_edge": CATCH_EDGE, "max_type_run": MAX_TYPE_RUN,
             "max_side_run": MAX_SIDE_RUN},
@@ -1023,10 +1157,18 @@ def build_size(size, ck_global):
     pd.DataFrame(flatten(design), columns=["key", "value"]).to_csv(
         os.path.join(pkg, "design.csv"), index=False)
     with open(os.path.join(pkg, "README.txt"), "w") as f:
-        f.write(README.format(name=name, size=size, slots=N_SLOTS,
-                              param=SLOT_PARAM,
-                              catch=info["counts_per_set"]["catch"],
-                              excl=info["catch"]["exclude_at_or_above"]))
+        f.write(README.format(
+            name=name, size=size, slots=N_SLOTS, param=SLOT_PARAM,
+            catch=info["counts_per_set"]["catch"],
+            excl=info["catch"]["exclude_at_or_above"],
+            brk=B, main=main_n, segs=SEGMENTS,
+            breaks=", ".join(map(str, breaks)),
+            brk_rule=("per_segment" if BREAK_EVERY == "per_segment"
+                      else f"fixed at {B}"),
+            parts=" / ".join(map(str, parts)),
+            rest="yes" if REST_BETWEEN_BLOCKS else "no",
+            slot_rule=slot_rule_text()[0].upper() + slot_rule_text()[1:],
+            wrap=f"{SLOT_WRAP_CYCLES * N_SLOTS}"))
 
     # --- outputs ---
     summ.to_csv(os.path.join(out, "orders_summary.csv"), index=False)
@@ -1091,7 +1233,11 @@ def write_report(out, size, ck, d3, info, gap_tab, largest, G_use, summ, bal,
         w(f"  why the search stopped at gap {gap_tab.gap.max()}: "
           + "; ".join(f"set {r.set}: {r.reasons}" for r in last.itertuples()
                       if r.valid < N_ORDERS))
-    w("  (the realised smallest gap of each kept order is in section 3)")
+    w("Realised smallest scene gap of each kept order: " + ", ".join(
+        f"{r.list_id} {r.scene_gap_min}" for r in summ.itertuples()))
+    w(f"  (every order must reach {G_use}; the builder places a scene's next "
+      "trial as soon as the gap allows, so the smallest gap usually equals "
+      "the gap set)")
     w("")
     w("3. THE ORDERS")
     w("-" * 78)
@@ -1149,6 +1295,11 @@ def write_report(out, size, ck, d3, info, gap_tab, largest, G_use, summ, bal,
                          for s, c in enumerate(rows[:16])))
     w("  participant slot 1: " + json.dumps(
         asg["groups"]["participant"][0]["blocks"]))
+    w(f"Slots beyond {N_SLOTS}: {slot_rule_text()}. After every {N_SLOTS} "
+      "slots each cell has been used equally often, so the balance after "
+      f"n slots equals the balance after n mod {N_SLOTS}; checked up to "
+      f"{SLOT_WRAP_CYCLES * N_SLOTS} slots (rows above {N_SLOTS} in the "
+      "table are those wrapped prefixes).")
     w("")
     w("5. PACKAGE")
     w("-" * 78)
@@ -1161,10 +1312,12 @@ def write_report(out, size, ck, d3, info, gap_tab, largest, G_use, summ, bal,
       "(catch-only images ship but are not preloaded)")
     w(f"  catch targets: block 1 {design['catch']['targets_by_block_position']['1']}, "
       f"block 2 {design['catch']['targets_by_block_position']['2']}")
-    nb = (design["main_trials_per_block"] - 1) // BREAK_EVERY
-    last_part = design["main_trials_per_block"] - nb * BREAK_EVERY
-    w(f"  breaks: every {BREAK_EVERY} main trials -> {nb} per block; the "
-      f"last part of each block has {last_part} trials")
+    tm = design["timing"]
+    w(f"  breaks: every {tm['break_every']} main trials ({tm['break_rule']})"
+      f", after trials {tm['breaks_after_trial']};")
+    w(f"    stretches {tm['stretch_lengths']}, each one segment with one "
+      "catch trial; rest between blocks: "
+      f"{'yes' if tm['rest_between_blocks'] else 'no'}")
     w("")
     w("6. CHECKS")
     w("-" * 78)
@@ -1183,8 +1336,12 @@ def write_report(out, size, ck, d3, info, gap_tab, largest, G_use, summ, bal,
 def main():
     t0 = time.time()
     print("v5 step 4: trial orders, assignment and package")
-    if SCENE_GAP_POLICY not in ("min", "largest"):
-        raise ValueError("SCENE_GAP_POLICY must be 'min' or 'largest'")
+    if SCENE_GAP_POLICY not in ("fixed", "largest"):
+        raise ValueError("SCENE_GAP_POLICY must be 'fixed' or 'largest'")
+    if BREAK_EVERY != "per_segment" and not (
+            isinstance(BREAK_EVERY, int) and BREAK_EVERY > 0):
+        raise ValueError("BREAK_EVERY must be 'per_segment' or a positive "
+                         "integer")
     results = []
     for size in SCRIPT3_DIRS:
         build_size(size, results)
