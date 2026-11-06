@@ -1,0 +1,27 @@
+{
+  "frozen": "2026-11-06 12:12:59",
+  "package": "v5_150",
+  "block_size": 150,
+  "files_hashed": 571,
+  "checksums_sha256": "fbab22efc75243ee8289a51122a1935dcf1bfab8878bfee4337349425fd4592c",
+  "design_json_sha256": "8049500d9744e157edb8bf7611e5caec80347b83dacd66dc713996308f482c3a",
+  "assignment_json_sha256": "804b40e4a597c6537a2a381ad346032ae914eb5899fd53a72ae60b619ff3b8e2",
+  "script3_dir": "data/trials_v5/v5_n150_conflict_heavy_without_p65_cand50_prefer-off_seed42__s6fe003f5",
+  "script4_dir": "data/trial_orders_v5/v5_n150_orders4_gap30-fixed_break34_slots64_seed42__s7fff70ee",
+  "scripts_sha256": {
+    "analyse_pair_capacity_v5.py": "5a8483a2a388482295c998ffcbe91e4a0f2df70f668d472cc4718d3a138addc7",
+    "build_trials_v5.py": "ec90dfcd52166acfd09ae33122e28f580a32697019920341a58cca6120df0387",
+    "make_trial_orders_v5.py": "f2432b235d3edb56400543c0ac352678625c68e9d5334b894062633a4065c840",
+    "/home/mario/Documents/drl2drv_updated/freeze_trial_lists_v5.py": "ea5a2060ca941f411d496ad7dceb1524b103cb7a8990e6a41e2d3853ffbec581"
+  },
+  "checks": {
+    "pass": 115,
+    "fail": 0
+  },
+  "unhashed": [
+    "checksums.sha256",
+    "FROZEN.json",
+    "freeze_report.txt"
+  ],
+  "use": "copy package/ to the experiment as data/sets/v5_150/; verify checksums.sha256 before any analysis"
+}

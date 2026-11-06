@@ -1,0 +1,89 @@
+{
+  "version": "v5",
+  "block_size": 180,
+  "mix": "conflict_heavy",
+  "level_set": "without_p65",
+  "chosen_candidate": 13,
+  "selection_keys": [
+    [
+      "weaker_set_info_con",
+      "max"
+    ],
+    [
+      "ab_diff_info_con",
+      "min"
+    ],
+    [
+      "weaker_set_info_sat",
+      "max"
+    ]
+  ],
+  "prefer_large_diffs": false,
+  "counts_per_set": {
+    "analysed": 180,
+    "sat_only": 54,
+    "fog_only": 54,
+    "together": 27,
+    "conflict": 45,
+    "consistency": 15,
+    "consistency_by_type": {
+      "sat_only": 5,
+      "fog_only": 4,
+      "together": 2,
+      "conflict": 4
+    },
+    "catch": 5
+  },
+  "practice_by_block": [
+    6,
+    3
+  ],
+  "catch": {
+    "mode": "no_images",
+    "per_block": 5,
+    "exclude_at_or_above": 3,
+    "exclusion_scope": "session (both blocks)",
+    "record_failures_per_block": true
+  },
+  "thresholds": {
+    "A": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.30192692608241883,
+        "con": 0.46810291318433955
+      },
+      "lower": {
+        "sat": -0.30359085959483584,
+        "con": -0.463756953589982
+      }
+    },
+    "B": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.302332615457306,
+        "con": 0.45126196119726997
+      },
+      "lower": {
+        "sat": -0.30049787896685914,
+        "con": -0.46259326361602315
+      }
+    }
+  },
+  "choice_probability_at_planning_weights": {
+    "A": {
+      "sat": 0.610534883223456,
+      "con": 0.6036591281400163
+    },
+    "B": {
+      "sat": 0.6093860745343982,
+      "con": 0.6033812680436703
+    }
+  },
+  "predictors": "pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice",
+  "script1_sha256": "5a8483a2a388482295c998ffcbe91e4a0f2df70f668d472cc4718d3a138addc7",
+  "script3_sha256": "ec90dfcd52166acfd09ae33122e28f580a32697019920341a58cca6120df0387"
+}

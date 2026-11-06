@@ -1,0 +1,116 @@
+scope,check,status,detail
+v4 check 6: builds,script 3's checks all PASS (no BUILD_FAILED.txt),PASS,0 FAIL
+v4 check 6: builds,script 4's checks all PASS,PASS,0 FAIL
+provenance,script 1 on disk is the one that built the folder (analyse_pair_capacity_v5.py),PASS,"recorded 5a8483a2a3884822, on disk 5a8483a2a3884822"
+provenance,script 3 on disk is the one that built the folder (build_trials_v5.py),PASS,"recorded ec90dfcd52166acf, on disk ec90dfcd52166acf"
+provenance,script 4 on disk is the one that built the folder (make_trial_orders_v5.py),PASS,"recorded f2432b235d3edb56, on disk f2432b235d3edb56"
+provenance,design.json names this script 3 folder and its set_info.json,PASS,
+provenance,"script 3's settings (and script 1's, in force) equal the build's settings.json",PASS,
+rebuild: script 3,the rebuild writes exactly the same files,PASS,"638 files; only in original [], only in rebuild []"
+rebuild: script 3,every file is byte-identical (reports and settings.json as stated),PASS,"638 compared, 0 differ []"
+provenance,script 4's settings equal the build's settings.json,PASS,
+rebuild: script 4,the rebuild writes exactly the same files,PASS,"663 files; only in original [], only in rebuild []"
+rebuild: script 4,every file is byte-identical (reports and settings.json as stated),PASS,"663 compared, 0 differ []"
+v4 check 1: complete,"every file the design names exists, and stimuli/",PASS,28 files; missing []
+v4 check 2: copies agree,"every JSON equals its CSV copy (lists, practice, assignment, preload, design)",PASS,differ: []
+v4 check 3: images close,"every referenced image ships, and every shipped image is referenced",PASS,"628 referenced, 628 shipped; missing [], unreferenced []"
+v4 check 3: images close,manifest.csv names exactly the shipped files,PASS,
+v4 check 3: images close,preload.json is exactly the images shown; the catch-only images ship but are not preloaded,PASS,"617 preloaded, 11 catch-only"
+v4 check 3: images close,"left_path / right_path follow a_is_left, file_a and file_b on every row",PASS,
+v4 check 4: re-measure,every shipped image's SHA-256 matches the manifest,PASS,0 differ
+v4 check 4: re-measure,re-measured features equal the manifest (<= 0.0001),PASS,largest difference 1.42e-14
+v4 check 4: re-measure,the shipped images rebuild every row's d_sat and d_fog (<= 0.0001) and pred_sat and pred_fog (<= 1e-05),PASS,"largest: d 2.84e-14, pred 7.77e-16"
+breaks,break_every = ceil(200 / 5) = 40,PASS,design.json: 40 (ceil(main trials per block / segments) = ceil(200 / 5))
+breaks,"the breaks fall on the segment boundaries: segment edges = 0, B, 2B, ..., N, and breaks_after_trial and stretch_lengths agree",PASS,"edges [0, 40, 80, 120, 160, 200], breaks [40, 80, 120, 160]"
+breaks,no short final stretch: every stretch >= 40 - 4,PASS,"stretches [40, 40, 40, 40, 40]"
+breaks,the README states the break interval and positions,PASS,
+v4 check 5: A_o1,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: A_o1,the list is a permutation of its set's items (set A),PASS,
+v4 check 5: A_o1,"catch rows: no_images, not analysed, no repeat",PASS,
+order A_o1,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order A_o1,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order A_o1,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [22, 68, 86, 159, 178]"
+order A_o1,type spread within 1 per segment,PASS,worst 0.81
+order A_o1,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: A_o1,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: A_o2,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: A_o2,the list is a permutation of its set's items (set A),PASS,
+v4 check 5: A_o2,"catch rows: no_images, not analysed, no repeat",PASS,
+order A_o2,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order A_o2,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order A_o2,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [11, 65, 95, 152, 170]"
+order A_o2,type spread within 1 per segment,PASS,worst 0.81
+order A_o2,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: A_o2,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: A_o3,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: A_o3,the list is a permutation of its set's items (set A),PASS,
+v4 check 5: A_o3,"catch rows: no_images, not analysed, no repeat",PASS,
+order A_o3,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order A_o3,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order A_o3,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [25, 41, 96, 156, 184]"
+order A_o3,type spread within 1 per segment,PASS,worst 0.81
+order A_o3,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: A_o3,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: A_o4,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: A_o4,the list is a permutation of its set's items (set A),PASS,
+v4 check 5: A_o4,"catch rows: no_images, not analysed, no repeat",PASS,
+order A_o4,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order A_o4,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order A_o4,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [11, 45, 87, 145, 186]"
+order A_o4,type spread within 1 per segment,PASS,worst 0.81
+order A_o4,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: A_o4,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: B_o1,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: B_o1,the list is a permutation of its set's items (set B),PASS,
+v4 check 5: B_o1,"catch rows: no_images, not analysed, no repeat",PASS,
+order B_o1,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order B_o1,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order B_o1,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [14, 52, 104, 127, 177]"
+order B_o1,type spread within 1 per segment,PASS,worst 0.81
+order B_o1,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: B_o1,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: B_o2,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: B_o2,the list is a permutation of its set's items (set B),PASS,
+v4 check 5: B_o2,"catch rows: no_images, not analysed, no repeat",PASS,
+order B_o2,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order B_o2,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order B_o2,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [17, 48, 85, 159, 177]"
+order B_o2,type spread within 1 per segment,PASS,worst 0.81
+order B_o2,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: B_o2,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: B_o3,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: B_o3,the list is a permutation of its set's items (set B),PASS,
+v4 check 5: B_o3,"catch rows: no_images, not analysed, no repeat",PASS,
+order B_o3,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order B_o3,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order B_o3,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [25, 46, 88, 125, 170]"
+order B_o3,type spread within 1 per segment,PASS,worst 0.81
+order B_o3,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: B_o3,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+v4 check 5: B_o4,"counts, trial numbers 1..N, analysed flags",PASS,"catch 5, conflict 45, consistency 15, fog_only 54, sat_only 54, together 27"
+v4 check 5: B_o4,the list is a permutation of its set's items (set B),PASS,
+v4 check 5: B_o4,"catch rows: no_images, not analysed, no repeat",PASS,
+order B_o4,"every repeat follows its original (same pair, sides swapped), >= 40 apart",PASS,smallest distance 40
+order B_o4,"scene gap >= 30, and the realised gap equals design.json's scene_gap_min",PASS,"smallest 30, recorded 30"
+order B_o4,"one catch per segment, none in the first or last 10",PASS,"per segment [1, 1, 1, 1, 1], at [34, 49, 100, 141, 182]"
+order B_o4,type spread within 1 per segment,PASS,worst 0.81
+order B_o4,"type runs <= 4, side runs <= 4",PASS,"type 2, side 4"
+v4 check 5: B_o4,image A on the left in half of each analysed type (+-1 if odd),PASS,[]
+sets,no pair in both sets,PASS,0 shared
+sets,every order of set A holds the same items,PASS,4 orders
+sets,every order of set B holds the same items,PASS,4 orders
+practice block 1,"6 trials, distinct scenes, no pair from either set or the other practice block",PASS,"sat_only, fog_only, together, sat_only, fog_only, together"
+practice block 2,"3 trials, distinct scenes, no pair from either set or the other practice block",PASS,"sat_only, fog_only, together"
+assignment,"participant: slots 1..64; each slot has both episodes, both sets, existing lists, the same order index, and agrees with its block order and set mapping",PASS,
+assignment,"control: slots 1..64; each slot has both episodes, both sets, existing lists, the same order index, and agrees with its block order and set mapping",PASS,
+assignment,both groups use the same table,PASS,
+assignment,all 32 cells appear equally often in 64 slots,PASS,"32 cells, counts [2]"
+assignment,first 10 slots: every factor and block order x set mapping within 1 of an even split,PASS,"factors [np.float64(0.0), np.float64(0.0), np.float64(0.5), np.float64(0.0)], block order x set mapping 0.5"
+assignment,first 15 slots: every factor and block order x set mapping within 1 of an even split,PASS,"factors [np.float64(0.5), np.float64(0.5), np.float64(0.75), np.float64(0.5)], block order x set mapping 0.75"
+assignment,first 20 slots: every factor and block order x set mapping within 1 of an even split,PASS,"factors [np.float64(0.0), np.float64(0.0), np.float64(0.0), np.float64(0.0)], block order x set mapping 0.0"
+assignment,first 30 slots: every factor and block order x set mapping within 1 of an even split,PASS,"factors [np.float64(0.0), np.float64(0.0), np.float64(0.5), np.float64(0.0)], block order x set mapping 0.5"
+assignment,"design.json, assignment.json and the README state that slot n uses row ((n - 1) mod 64) + 1",PASS,
+assignment,"with that rule, up to 256 slots: exact balance after every 64, and the balance after n slots equals the balance after n mod 64 (every factor and pair of factors)",PASS,"largest deviation over all prefixes 2.25, within the first 64 2.25"
+catch,"targets per block position: one per catch row, Up/Down only, balanced within 1, at most 2 identical in a row",PASS,"{""1"": [""ArrowDown"", ""ArrowUp"", ""ArrowDown"", ""ArrowUp"", ""ArrowUp""], ""2"": [""ArrowUp"", ""ArrowDown"", ""ArrowDown"", ""ArrowUp"", ""ArrowDown""]}"
+thresholds,design.json's per-set thresholds equal set_info.json,PASS,
+freeze,"every frozen file matches checksums.sha256, and every file is listed",PASS,"675 files, 0 differ"
