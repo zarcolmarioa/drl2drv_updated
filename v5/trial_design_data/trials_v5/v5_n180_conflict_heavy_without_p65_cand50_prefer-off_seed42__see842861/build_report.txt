@@ -1,0 +1,214 @@
+==============================================================================
+v5 STEP 3: THE TWO BLOCK LISTS, 180 ANALYSED TRIALS PER BLOCK
+build_trials_v5.py
+==============================================================================
+run finished  2026-11-06 11:09:35   elapsed 36 s
+output        data/trials_v5/v5_n180_conflict_heavy_without_p65_cand50_prefer-off_seed42__see842861
+
+1. WHAT THIS RUN DID
+------------------------------------------------------------------------------
+Mix 'conflict_heavy' (sat_only 54, fog_only 54, together 27, conflict 45 per set), level set 'without_p65',
+script 1's draw rules (cap 2 per scene per type per block, matching 'scene_bin', disjoint 'pair',
+saturation-only |d_sat| >= 31.1 and |d_con| <= 0.72, contrast-only |d_sat| <= 3.0).
+50 candidate pairs of sets were drawn; the shipped one was chosen by:
+    max weaker_set_info_con
+    min ab_diff_info_con
+    max weaker_set_info_sat
+Per set: 15 consistency, 5 catch. Practice: 6 before block 1, 3 before block 2.
+Prefer larger differences: off.
+
+Inputs and provenance
+  script 1   analyse_pair_capacity_v5.py  sha256 5a8483a2a3884822
+  v4 sim     simulate_power_v4_n10_20.py  sha256 852f3b33eb349153
+  overrides  none
+  stimuli    data/stimulus_set_v4_ext_haze_eq/stimuli
+  pair table      data/pair_analysis_v4_ext/extended/all_pairs.csv: 34,366 ordered pairs, 47 scenes
+  manifest        data/stimulus_set_v4_ext_haze_eq/stimulus_manifest.csv: 2,115 images, 47 scenes
+  script 1's input checks: 13 run, all PASS or SKIPPED
+
+2. CANDIDATES AND THE SELECTION
+------------------------------------------------------------------------------
+50 of 50 pass every script 1 check. Chosen: candidate 13.
+cand pass rank    con A   con B  weaker  |A-B|    sat A   sat B  weaker
+  13  yes    1    71.88   71.88   71.88   0.00   172.93  172.93  172.93   <- SHIPPED
+   5  yes    2    71.38   71.38   71.38   0.00   182.87  182.87  182.87
+  30  yes    3    70.71   70.71   70.71   0.01   169.20  169.20  169.20
+  45  yes    4    70.61   70.61   70.61   0.00   171.34  171.30  171.30
+  44  yes    5    70.00   70.00   70.00   0.01   185.16  185.16  185.16
+   9  yes    6    69.89   69.90   69.89   0.00   185.37  185.38  185.37
+  35  yes    7    69.67   69.67   69.67   0.00   172.40  172.40  172.40
+  17  yes    8    69.55   69.55   69.55   0.00   170.74  170.74  170.74
+  20  yes    9    69.25   69.25   69.25   0.00   162.11  162.11  162.11
+  16  yes   10    69.23   69.23   69.23   0.00   174.20  174.20  174.20
+  38  yes   11    69.06   69.06   69.06   0.00   182.05  182.03  182.03
+  19  yes   12    69.06   69.05   69.05   0.01   170.52  170.51  170.51
+  21  yes   13    68.69   68.70   68.69   0.00   174.05  174.05  174.05
+  12  yes   14    68.51   68.51   68.51   0.00   185.20  185.21  185.20
+  15  yes   15    68.41   68.41   68.41   0.00   165.12  165.11  165.11
+   8  yes   16    68.33   68.35   68.33   0.02   172.75  172.75  172.75
+  22  yes   17    68.16   68.16   68.16   0.00   179.52  179.53  179.52
+  27  yes   18    67.77   67.77   67.77   0.00   175.69  175.72  175.69
+  47  yes   19    67.62   67.63   67.62   0.01   188.61  188.60  188.60
+   2  yes   20    67.47   67.47   67.47   0.00   176.73  176.73  176.73
+   3  yes   21    67.46   67.46   67.46   0.00   171.93  171.93  171.93
+   7  yes   22    67.16   67.16   67.16   0.00   177.72  177.67  177.67
+  18  yes   23    66.68   66.67   66.67   0.00   175.47  175.47  175.47
+  26  yes   24    66.64   66.64   66.64   0.00   163.84  163.85  163.84
+   1  yes   25    66.36   66.36   66.36   0.00   177.95  177.95  177.95
+  28  yes   26    66.32   66.31   66.31   0.01   176.25  176.22  176.22
+  39  yes   27    66.19   66.19   66.19   0.00   181.50  181.46  181.46
+  34  yes   28    66.16   66.16   66.16   0.01   173.29  173.30  173.29
+  33  yes   29    66.10   66.09   66.09   0.00   182.08  182.07  182.07
+  31  yes   30    66.00   66.01   66.00   0.00   176.74  176.74  176.74
+  32  yes   31    65.83   65.83   65.83   0.00   175.81  175.80  175.80
+   6  yes   32    65.47   65.47   65.47   0.00   171.32  171.32  171.32
+  25  yes   33    65.32   65.32   65.32   0.00   180.57  180.57  180.57
+  24  yes   34    65.25   65.24   65.24   0.01   176.57  176.56  176.56
+   4  yes   35    65.23   65.23   65.23   0.00   197.36  197.30  197.30
+  10  yes   36    65.11   65.11   65.11   0.00   177.13  177.13  177.13
+  37  yes   37    65.10   65.10   65.10   0.00   160.07  160.07  160.07
+  41  yes   38    65.10   65.10   65.10   0.00   167.91  167.92  167.91
+  48  yes   39    64.89   64.89   64.89   0.00   197.34  197.36  197.34
+  11  yes   40    64.70   64.71   64.70   0.00   163.25  163.24  163.24
+  40  yes   41    64.65   64.65   64.65   0.00   173.99  173.99  173.99
+  29  yes   42    64.51   64.51   64.51   0.00   186.49  186.48  186.48
+  46  yes   43    64.15   64.15   64.15   0.00   176.98  176.97  176.97
+  43  yes   44    64.00   64.01   64.00   0.01   174.17  174.17  174.17
+  36  yes   45    63.36   63.36   63.36   0.00   177.67  177.67  177.67
+  14  yes   46    63.33   63.33   63.33   0.00   175.68  175.69  175.68
+   0  yes   47    63.25   63.25   63.25   0.00   172.81  172.81  172.81
+  42  yes   48    63.12   63.12   63.12   0.00   177.24  177.24  177.24
+  49  yes   49    62.64   62.64   62.64   0.00   179.07  179.08  179.07
+  23  yes   50    61.60   61.60   61.60   0.00   169.78  169.79  169.78
+Over passing candidates, weaker-set contrast information: min 61.60, median 66.34, max 71.88.
+
+3. HOW WELL THE TWO SETS MATCH (the shipped candidate)
+------------------------------------------------------------------------------
+  A  sat_only  n= 54  info sat  127.51  con   0.00  scenes 40  A-left  27
+       |x_sat| min/10/50/90/max 0.805 / 0.944 / 1.317 / 2.133 / 2.569
+       |x_con| min/10/50/90/max 0.000 / 0.000 / 0.005 / 0.015 / 0.022
+  A  fog_only  n= 54  info sat    0.09  con  39.17  scenes 37  A-left  27
+       |x_sat| min/10/50/90/max 0.000 / 0.005 / 0.034 / 0.062 / 0.076
+       |x_con| min/10/50/90/max 0.470 / 0.505 / 0.658 / 1.245 / 1.558
+  A  together  n= 27  info sat   32.10  con  18.13  scenes 27  A-left  13
+       |x_sat| min/10/50/90/max 0.209 / 0.281 / 0.665 / 1.883 / 2.378
+       |x_con| min/10/50/90/max 0.323 / 0.427 / 0.691 / 1.203 / 1.679
+  A  conflict  n= 45  info sat   13.23  con  14.58  scenes 36  A-left  23
+       |x_sat| min/10/50/90/max 0.211 / 0.310 / 0.495 / 0.717 / 0.999
+       |x_con| min/10/50/90/max 0.321 / 0.353 / 0.503 / 0.791 / 1.090
+  B  sat_only  n= 54  info sat  127.53  con   0.00  scenes 40  A-left  27
+       |x_sat| min/10/50/90/max 0.798 / 0.944 / 1.305 / 2.073 / 2.486
+       |x_con| min/10/50/90/max 0.000 / 0.001 / 0.004 / 0.014 / 0.026
+  B  fog_only  n= 54  info sat    0.07  con  39.17  scenes 37  A-left  27
+       |x_sat| min/10/50/90/max 0.001 / 0.004 / 0.033 / 0.056 / 0.071
+       |x_con| min/10/50/90/max 0.471 / 0.506 / 0.655 / 1.241 / 1.552
+  B  together  n= 27  info sat   32.10  con  18.13  scenes 27  A-left  13
+       |x_sat| min/10/50/90/max 0.219 / 0.268 / 0.642 / 1.946 / 2.467
+       |x_con| min/10/50/90/max 0.343 / 0.418 / 0.662 / 1.209 / 1.681
+  B  conflict  n= 45  info sat   13.23  con  14.58  scenes 36  A-left  22
+       |x_sat| min/10/50/90/max 0.227 / 0.325 / 0.489 / 0.714 / 1.033
+       |x_con| min/10/50/90/max 0.323 / 0.353 / 0.483 / 0.776 / 1.088
+
+  set A: info sat  172.93, con  71.88, cos +0.064, VIF 1.004, scenes 47, A on the left 90 of 180
+  set B: info sat  172.93, con  71.88, cos +0.060, VIF 1.004, scenes 47, A on the left 89 of 180
+  information A-B: saturation 0.00%, contrast 0.00%; worst per type 0.02%
+  KS distance A-B: |x_sat| 0.040, |x_con| 0.032
+  scene x type x bin counts identical in A and B: see the checks
+
+  Saturation-only pairs, measured contrast difference |d_con| (contrast units):
+    set A: min/10/50/90/max 0.001 / 0.005 / 0.045 / 0.143 / 0.207   (rule: <= 0.72)
+    set B: min/10/50/90/max 0.001 / 0.010 / 0.038 / 0.128 / 0.247   (rule: <= 0.72)
+
+4. WHAT THE PLANNING WEIGHTS MEAN, AND THE THRESHOLDS
+------------------------------------------------------------------------------
+  set A: typical informative |x_sat| 0.899 (126 trials) -> P 0.6105;  |x_con| 0.601 (126 trials) -> P 0.6037
+         thresholds (20,000 random choosers): saturation +0.302 / -0.304, contrast +0.468 / -0.464
+  set B: typical informative |x_sat| 0.889 (126 trials) -> P 0.6094;  |x_con| 0.599 (126 trials) -> P 0.6034
+         thresholds (20,000 random choosers): saturation +0.302 / -0.300, contrast +0.451 / -0.463
+  v4 interpretation: 0.6191 / 0.6104; v4 thresholds +0.286 / +0.488 (180 trials, one list).
+
+5. CONSISTENCY, CATCH AND PRACTICE
+------------------------------------------------------------------------------
+  consistency per set: 15 (sat_only 5, fog_only 4, together 2, conflict 4), the same couples in A and B, sides swapped
+  catch, set A: Ax01 crosswalk, Ax02 japanese_garden, Ax03 train_interior, Ax04 residential_neighborhood, Ax05 cafeteria
+  catch, set B: Bx01 elevator_lobby, Bx02 train_station_platform, Bx03 shopping_mall_indoor, Bx04 japanese_garden, Bx05 downtown
+  practice P1: sat_only crosswalk, fog_only courtyard, together computer_room, sat_only auditorium, fog_only japanese_garden, together bedroom
+  practice P2: sat_only laundromat, fog_only japanese_garden, together living_room
+
+6. IMAGES
+------------------------------------------------------------------------------
+  628 images copied from data/stimulus_set_v4_ext_haze_eq/stimuli; largest re-measured difference: sat_mean 1.42e-14, contrast_local 7.11e-15
+
+7. CHECKS
+------------------------------------------------------------------------------
+  PASS    [design] the counts are feasible (script 1 stage 1)  (feasible)
+  PASS    [candidates] at least one candidate passes every script 1 check  (50 of 50)
+  PASS    [candidates] the chosen candidate is rebuilt identically from its seed  (candidate 13)
+  PASS    [candidates] candidate 0 equals script 1's draw 0 (example set)
+  PASS    [sets (script 1 checks)] type counts equal the target in both sets
+  PASS    [sets (script 1 checks)] bin counts equal the quotas in both sets
+  PASS    [sets (script 1 checks)] no pair in both sets
+  PASS    [sets (script 1 checks)] no pair twice within a set
+  SKIPPED [sets (script 1 checks)] no image in both sets  (not applicable)
+  SKIPPED [sets (script 1 checks)] no scene in both sets  (not applicable)
+  PASS    [sets (script 1 checks)] sat_only: |d_sat| >= cut
+  PASS    [sets (script 1 checks)] sat_only: |d_con| <= contrast tolerance
+  PASS    [sets (script 1 checks)] fog_only: |d_sat| <= 3
+  PASS    [sets (script 1 checks)] conflict: all balanced
+  PASS    [sets (script 1 checks)] information x_sat within 5%
+  PASS    [sets (script 1 checks)] information x_con within 5%
+  PASS    [sets (script 1 checks)] information per type within 10%
+  PASS    [sets (script 1 checks)] KS |x_sat| <= 0.1
+  PASS    [sets (script 1 checks)] KS |x_con| <= 0.1
+  PASS    [sets (script 1 checks)] predictor correlation (cos) differs by <= 0.05
+  PASS    [sets (script 1 checks)] VIF <= 1.25 in both sets
+  PASS    [sets (script 1 checks)] predicted image on the left in half of each type (+-1 if odd)
+  PASS    [sets (script 1 checks)] each set uses >= 85% of the scenes it may use
+  PASS    [sets (script 1 checks)] <= 2 per scene per type in each set
+  PASS    [sets (script 1 checks)] same scenes: each scene x type x bin count equal in both sets
+  PASS    [sets (script 1 checks)] practice and catch reserved in full for both sets
+  PASS    [set A] analysed type counts equal the target  (sat_only 54, fog_only 54, together 27, conflict 45)
+  PASS    [set A] saturation-only pairs: measured |d_con| <= 0.72 (contrast-matching rule)  (largest 0.207, median 0.045 contrast units)
+  PASS    [set A] saturation-only pairs: |d_sat| >= 31.1  (smallest 31.55)
+  PASS    [set A] contrast-only pairs: |d_sat| <= 3.0  (largest 2.991)
+  PASS    [set A] 15 consistency trials = floor(180 x 0.0833)  (sat_only 5, fog_only 4, together 2, conflict 4)
+  PASS    [set A] every consistency trial repeats an analysed pair of its set with the sides swapped
+  PASS    [set A] 5 catch trials, mode 'no_images', distinct scenes
+  PASS    [set A] image A (the predicted image) on the left in half of each type's trials (+-1 if odd)
+  PASS    [set A] catch sides balanced (+-1)  (2 of 5)
+  PASS    [set B] analysed type counts equal the target  (sat_only 54, fog_only 54, together 27, conflict 45)
+  PASS    [set B] saturation-only pairs: measured |d_con| <= 0.72 (contrast-matching rule)  (largest 0.247, median 0.038 contrast units)
+  PASS    [set B] saturation-only pairs: |d_sat| >= 31.1  (smallest 31.27)
+  PASS    [set B] contrast-only pairs: |d_sat| <= 3.0  (largest 2.801)
+  PASS    [set B] 15 consistency trials = floor(180 x 0.0833)  (sat_only 5, fog_only 4, together 2, conflict 4)
+  PASS    [set B] every consistency trial repeats an analysed pair of its set with the sides swapped
+  PASS    [set B] 5 catch trials, mode 'no_images', distinct scenes
+  PASS    [set B] image A (the predicted image) on the left in half of each type's trials (+-1 if odd)
+  PASS    [set B] catch sides balanced (+-1)  (3 of 5)
+  PASS    [consistency] the same couples are repeated in both sets (matched)
+  PASS    [practice P1] 6 trials of types ['sat_only', 'fog_only', 'together', 'sat_only', 'fog_only', 'together'] in turn, distinct scenes  (sat_only, fog_only, together, sat_only, fog_only, together)
+  PASS    [practice P1] every difference at or below the 60% quantile of its type
+  PASS    [practice P2] 3 trials of types ['sat_only', 'fog_only', 'together'] in turn, distinct scenes  (sat_only, fog_only, together)
+  PASS    [practice P2] every difference at or below the 60% quantile of its type
+  PASS    [all rows] no pair is used twice anywhere (consistency repeats aside): sets, practice and catch are disjoint  (379 pairs, 0 duplicates)
+  PASS    [all rows] no dropped level and no unedited image in any row  (colour levels ['k=1', 'p01', 'p05', 'p10', 'p25', 'p75'])
+  PASS    [set A] planning weights give v4's choice probabilities within 0.02  (saturation 0.6105, contrast 0.6037)
+  PASS    [set A] every threshold fit converged  (share unconverged 0.00000)
+  PASS    [set B] planning weights give v4's choice probabilities within 0.02  (saturation 0.6094, contrast 0.6034)
+  PASS    [set B] every threshold fit converged  (share unconverged 0.00000)
+  PASS    [thresholds] the two sets' upper thresholds agree within 5%  (largest relative difference 3.7%)
+  PASS    [images] every referenced image exists in STIMULI_SRC  (628 needed, 0 missing)
+  PASS    [images] every copy is byte-identical to its source (SHA-256)  (0 differ)
+  PASS    [images] every image is 512 x 512  (0 differ)
+  PASS    [images] re-measured sat_mean and contrast_local equal the pair table (|diff| <= 0.0001)  (0 of 628 differ)
+  PASS    [images] re-measured features equal the stimulus manifest  (0 differ)
+
+  59 PASS, 0 FAIL, 2 SKIPPED
+
+8. NOTES
+------------------------------------------------------------------------------
+* Nothing here is ordered. Rows are sorted by type and couple; script 4 makes the orders.
+* item_id is stable within this build: A001..., Ac01... (consistency), Ax01... (catch),
+  P1_01... and P2_01... (practice before block 1 and 2). repeat_of names the original's item_id.
+* 'couple' links each analysed trial to its matched partner in the other set.
+* Thresholds are per set, from random choosers, and go to design.json via set_info.json.

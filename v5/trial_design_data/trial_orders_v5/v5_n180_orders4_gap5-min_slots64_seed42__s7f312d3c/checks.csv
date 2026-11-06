@@ -1,0 +1,92 @@
+scope,check,status,detail
+script 3,folder has no BUILD_FAILED.txt and no failing check,PASS,61 checks
+script 3,set files agree with set_info.json (size and counts),PASS,"180 analysed, 15 consistency, 5 catch per set"
+scene gap,all 4 orders of both sets can be built with a scene gap of at least 5,PASS,"largest achievable 36 (searched 5-40, 2000 attempts per set per gap)"
+orders A,40 valid candidate orders built,PASS,"40 in 57 attempts; failures {'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 2, 'dead end': 15}"
+orders A,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [9, 14, 39, 26]"
+A_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+A_o1,scene gap >= 5,PASS,smallest 6
+A_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o1,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 26, last 39 from the end"
+A_o1,same type at most 4 in a row,PASS,longest 2
+A_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.006
+A_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.015
+A_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.001, x_con +0.004"
+A_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+A_o2,scene gap >= 5,PASS,smallest 5
+A_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o2,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 12, last 30 from the end"
+A_o2,same type at most 4 in a row,PASS,longest 2
+A_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.006
+A_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.014
+A_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.007, x_con -0.000"
+A_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+A_o3,scene gap >= 5,PASS,smallest 5
+A_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o3,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 39, last 14 from the end"
+A_o3,same type at most 4 in a row,PASS,longest 2
+A_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+A_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.014
+A_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.005, x_con +0.006"
+A_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+A_o4,scene gap >= 5,PASS,smallest 5
+A_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o4,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 13, last 30 from the end"
+A_o4,same type at most 4 in a row,PASS,longest 2
+A_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.011
+A_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.007, x_con +0.012"
+orders A,every order is a permutation of the set,PASS,
+orders A,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.203
+orders B,40 valid candidate orders built,PASS,"40 in 51 attempts; failures {'dead end': 10, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 1}"
+orders B,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [12, 30, 13, 36]"
+B_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+B_o1,scene gap >= 5,PASS,smallest 5
+B_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o1,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 13, last 38 from the end"
+B_o1,same type at most 4 in a row,PASS,longest 2
+B_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.006
+B_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.012
+B_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.004, x_con -0.005"
+B_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+B_o2,scene gap >= 5,PASS,smallest 5
+B_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o2,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 24, last 21 from the end"
+B_o2,same type at most 4 in a row,PASS,longest 2
+B_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+B_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.018
+B_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.001, x_con -0.002"
+B_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+B_o3,scene gap >= 5,PASS,smallest 6
+B_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o3,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 12, last 12 from the end"
+B_o3,same type at most 4 in a row,PASS,longest 2
+B_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+B_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.015
+B_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.001, x_con +0.010"
+B_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.81
+B_o4,scene gap >= 5,PASS,smallest 5
+B_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o4,"one catch per segment, none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 20, last 30 from the end"
+B_o4,same type at most 4 in a row,PASS,longest 2
+B_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+B_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.011
+B_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.017, x_con +0.006"
+orders B,every order is a permutation of the set,PASS,
+orders B,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.073
+assignment,every one of the 32 cells (block order x set mapping x order x grid code) appears 2 times in 64 slots,PASS,counts [2]
+assignment,"first 10 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 15 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.75, block order x set mapping 0.75"
+assignment,"first 20 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+assignment,"first 30 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 64 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+package,every shipped image matches script 3's manifest (SHA-256),PASS,"628 images, 0 differ"
+package,every preloaded image ships in stimuli/,PASS,"617 preloaded, 628 shipped"

@@ -1,0 +1,213 @@
+==============================================================================
+v5 STEP 4: TRIAL ORDERS, ASSIGNMENT AND PACKAGE, 180 PER BLOCK
+make_trial_orders_v5.py
+==============================================================================
+run finished  2026-11-06 11:13:24   elapsed 59 s
+output        data/trial_orders_v5/v5_n180_orders4_gap5-min_slots64_seed42__s7f312d3c
+script 3      data/trials_v5/v5_n180_conflict_heavy_without_p65_cand50_prefer-off_seed42__see842861
+
+1. WHAT THIS RUN DID
+------------------------------------------------------------------------------
+4 orders per set from 40 valid candidates, each block of 200 main trials
+(180 analysed, 15 consistency, 5 catch). Constraints:
+  5 segments, every type within 1 of its share in each (running balance)
+  scene gap >= 5; consistency >= 40 after its original; one catch per segment,
+  none in the first/last 10; type runs <= 4; side runs <= 4
+  balance: mean position per type within 0.05, per type x bin within 0.1, |corr(position,
+  size of difference)| <= 0.1; orders at most 0.3 rank-correlated with each other
+
+2. SCENE GAP
+------------------------------------------------------------------------------
+Largest gap at which all 4 orders of both sets could be built: 36
+(searched upward from 5, 2000 attempts per set per gap). Gap used: 5 (policy 'min').
+  gap  5: set A 4 valid in 8 attempts; set B 4 valid in 6 attempts
+  gap  6: set A 4 valid in 4 attempts; set B 4 valid in 5 attempts
+  gap  7: set A 4 valid in 4 attempts; set B 4 valid in 5 attempts
+  gap  8: set A 4 valid in 4 attempts; set B 4 valid in 7 attempts
+  gap  9: set A 4 valid in 8 attempts; set B 4 valid in 5 attempts
+  gap 10: set A 4 valid in 6 attempts; set B 4 valid in 6 attempts
+  gap 11: set A 4 valid in 5 attempts; set B 4 valid in 9 attempts
+  gap 12: set A 4 valid in 9 attempts; set B 4 valid in 4 attempts
+  gap 13: set A 4 valid in 7 attempts; set B 4 valid in 7 attempts
+  gap 14: set A 4 valid in 9 attempts; set B 4 valid in 10 attempts
+  gap 15: set A 4 valid in 6 attempts; set B 4 valid in 9 attempts
+  gap 16: set A 4 valid in 6 attempts; set B 4 valid in 8 attempts
+  gap 17: set A 4 valid in 6 attempts; set B 4 valid in 8 attempts
+  gap 18: set A 4 valid in 9 attempts; set B 4 valid in 8 attempts
+  gap 19: set A 4 valid in 11 attempts; set B 4 valid in 12 attempts
+  gap 20: set A 4 valid in 14 attempts; set B 4 valid in 7 attempts
+  gap 21: set A 4 valid in 5 attempts; set B 4 valid in 18 attempts
+  gap 22: set A 4 valid in 11 attempts; set B 4 valid in 8 attempts
+  gap 23: set A 4 valid in 12 attempts; set B 4 valid in 17 attempts
+  gap 24: set A 4 valid in 7 attempts; set B 4 valid in 16 attempts
+  gap 25: set A 4 valid in 13 attempts; set B 4 valid in 14 attempts
+  gap 26: set A 4 valid in 22 attempts; set B 4 valid in 18 attempts
+  gap 27: set A 4 valid in 18 attempts; set B 4 valid in 10 attempts
+  gap 28: set A 4 valid in 23 attempts; set B 4 valid in 41 attempts
+  gap 29: set A 4 valid in 73 attempts; set B 4 valid in 25 attempts
+  gap 30: set A 4 valid in 40 attempts; set B 4 valid in 14 attempts
+  gap 31: set A 4 valid in 87 attempts; set B 4 valid in 40 attempts
+  gap 32: set A 4 valid in 210 attempts; set B 4 valid in 118 attempts
+  gap 33: set A 4 valid in 78 attempts; set B 4 valid in 126 attempts
+  gap 34: set A 4 valid in 115 attempts; set B 4 valid in 107 attempts
+  gap 35: set A 4 valid in 548 attempts; set B 4 valid in 691 attempts
+  gap 36: set A 4 valid in 666 attempts; set B 4 valid in 1275 attempts
+  gap 37: set A 0 valid in 2000 attempts; set B 3 valid in 2000 attempts
+  why the search stopped at gap 37: set A: {"dead end": 1998, "built, but fails: type spread: every type within 1 of its share in each of 5 segments": 2}; set B: {"dead end": 1995, "built, but fails: type spread: every type within 1 of its share in each of 5 segments": 2}
+  (the realised smallest gap of each kept order is in section 3)
+
+3. THE ORDERS
+------------------------------------------------------------------------------
+list   cand  gap cons d  catch/seg type run side run spread pos type pos bin  r sat  r con
+A_o1      9    6     40  1/1/1/1/1        2        4   0.81    0.006   0.015 +0.001 +0.004
+A_o2     14    5     40  1/1/1/1/1        2        4   0.81    0.006   0.014 -0.007 -0.000
+A_o3     39    5     40  1/1/1/1/1        2        4   0.81    0.008   0.014 +0.005 +0.006
+A_o4     26    5     40  1/1/1/1/1        2        4   0.81    0.007   0.011 +0.007 +0.012
+B_o1     12    5     40  1/1/1/1/1        2        4   0.81    0.006   0.012 +0.004 -0.005
+B_o2     30    5     40  1/1/1/1/1        2        4   0.81    0.007   0.018 -0.001 -0.002
+B_o3     13    6     40  1/1/1/1/1        2        4   0.81    0.008   0.015 +0.001 +0.010
+B_o4     36    5     40  1/1/1/1/1        2        4   0.81    0.007   0.011 -0.017 +0.006
+  gap = smallest scene gap; cons d = smallest repeat distance; spread = worst type count
+  deviation in a segment; pos type / pos bin = worst |mean position - 0.5|; r = corr(position, |x|).
+
+Mean position (0 = first trial, 1 = last) by trial type:
+  list      sat_only    fog_only    together    conflict consistency       catch
+  A_o1         0.494       0.494       0.494       0.494       0.580       0.472
+  A_o2         0.494       0.495       0.494       0.494       0.578       0.477
+  A_o3         0.492       0.492       0.492       0.492       0.577       0.545
+  A_o4         0.493       0.494       0.493       0.494       0.578       0.493
+  B_o1         0.494       0.494       0.494       0.494       0.580       0.479
+  B_o2         0.493       0.494       0.493       0.494       0.578       0.496
+  B_o3         0.493       0.492       0.493       0.492       0.579       0.532
+  B_o4         0.494       0.494       0.493       0.494       0.581       0.477
+  (consistency sits late by design: each repeat follows its original by >= 40)
+Mean position by magnitude bin, per analysed type:
+  sat_only  3: 0.49/0.50/0.49/0.50/0.49/0.49/0.49/0.50   4: 0.49/0.49/0.49/0.49/0.49/0.49/0.50/0.50   5: 0.49/0.49/0.50/0.49/0.49/0.50/0.49/0.49   (per list, in the order above)
+  fog_only  1: 0.50/0.49/0.49/0.50/0.49/0.49/0.49/0.49   2: 0.49/0.50/0.49/0.50/0.49/0.49/0.49/0.50   3: 0.50/0.50/0.49/0.49/0.50/0.49/0.50/0.49   (per list, in the order above)
+  together  1: 0.50/0.51/0.49/0.49/0.49/0.48/0.49/0.49   2: 0.49/0.49/0.49/0.49/0.50/0.51/0.49/0.49   3: 0.49/0.49/0.50/0.50/0.49/0.49/0.50/0.50   (per list, in the order above)
+  conflict  1: 0.48/0.49/0.50/0.50/0.50/0.49/0.49/0.49   2: 0.50/0.49/0.49/0.50/0.50/0.49/0.49/0.50   3: 0.50/0.50/0.49/0.49/0.49/0.50/0.50/0.49   (per list, in the order above)
+
+4. ASSIGNMENT
+------------------------------------------------------------------------------
+Groups: participant = derealization + ordinary; control = ordinary + expectation. 64 slots per group, the
+same table for both groups; the link carries ?slot=<n>.
+Balance: the largest deviation from an even split, per factor and per pair of factors:
+  slots          block_order          set_mapping                order        grid_set_code
+     10                    0                    0                  0.5                    0
+     15                  0.5                  0.5                 0.75                  0.5
+     20                    0                    0                    0                    0
+     30                    0                    0                  0.5                    0
+     64                    0                    0                    0                    0
+  pairs of factors:
+     10 block_order x set_mapping 0.5, block_order x order 0.75, block_order x grid_set_code 0.5, set_mapping x order 0.75, set_mapping x grid_set_code 1.5, order x grid_set_code 0.75
+     15 block_order x set_mapping 0.75, block_order x order 0.875, block_order x grid_set_code 0.75, set_mapping x order 0.875, set_mapping x grid_set_code 0.75, order x grid_set_code 0.875
+     20 block_order x set_mapping 0, block_order x order 0.5, block_order x grid_set_code 0, set_mapping x order 0.5, set_mapping x grid_set_code 1, order x grid_set_code 0.5
+     30 block_order x set_mapping 0.5, block_order x order 0.75, block_order x grid_set_code 0.5, set_mapping x order 0.75, set_mapping x grid_set_code 0.5, order x grid_set_code 0.75
+     64 block_order x set_mapping 0, block_order x order 0, block_order x grid_set_code 0, set_mapping x order 0, set_mapping x grid_set_code 0, order x grid_set_code 0
+  First 16 slots (block order, set mapping, order, grid code):
+    1:0041  2:1110  3:1031  4:0120  5:1140  6:0011  7:0130  8:1021  9:0020  10:1111  11:0141  12:1030  13:1121  14:0010  15:1040  16:0131
+  participant slot 1: [{"position": 1, "episode": "derealization", "set": "A", "list": "A_o4", "practice": "practice/block1.json"}, {"position": 2, "episode": "ordinary", "set": "B", "list": "B_o4", "practice": "practice/block2.json"}]
+
+5. PACKAGE
+------------------------------------------------------------------------------
+  package/  ->  copy to the experiment as data/sets/v5_180/
+  lists: A_o1, A_o2, A_o3, A_o4, B_o1, B_o2, B_o3, B_o4; practice: block1 (6), block2 (3)
+  images: 628 shipped, 617 preloaded (catch-only images ship but are not preloaded)
+  catch targets: block 1 ['ArrowDown', 'ArrowUp', 'ArrowDown', 'ArrowUp', 'ArrowUp'], block 2 ['ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowUp', 'ArrowDown']
+  breaks: every 41 main trials -> 4 per block; the last part of each block has 36 trials
+
+6. CHECKS
+------------------------------------------------------------------------------
+  PASS    [script 3] folder has no BUILD_FAILED.txt and no failing check  (61 checks)
+  PASS    [script 3] set files agree with set_info.json (size and counts)  (180 analysed, 15 consistency, 5 catch per set)
+  PASS    [scene gap] all 4 orders of both sets can be built with a scene gap of at least 5  (largest achievable 36 (searched 5-40, 2000 attempts per set per gap))
+  PASS    [orders A] 40 valid candidate orders built  (40 in 57 attempts; failures {'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 2, 'dead end': 15})
+  PASS    [orders A] 4 orders kept, pairwise |rank correlation| <= 0.3  (candidates [9, 14, 39, 26])
+  PASS    [A_o1] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [A_o1] scene gap >= 5  (smallest 6)
+  PASS    [A_o1] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [A_o1] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 26, last 39 from the end)
+  PASS    [A_o1] same type at most 4 in a row  (longest 2)
+  PASS    [A_o1] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [A_o1] mean position of each analysed type within 0.05 of the centre  (worst 0.006)
+  PASS    [A_o1] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.015)
+  PASS    [A_o1] |corr(position, size of difference)| <= 0.1  (x_sat +0.001, x_con +0.004)
+  PASS    [A_o2] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [A_o2] scene gap >= 5  (smallest 5)
+  PASS    [A_o2] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [A_o2] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 12, last 30 from the end)
+  PASS    [A_o2] same type at most 4 in a row  (longest 2)
+  PASS    [A_o2] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [A_o2] mean position of each analysed type within 0.05 of the centre  (worst 0.006)
+  PASS    [A_o2] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.014)
+  PASS    [A_o2] |corr(position, size of difference)| <= 0.1  (x_sat -0.007, x_con -0.000)
+  PASS    [A_o3] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [A_o3] scene gap >= 5  (smallest 5)
+  PASS    [A_o3] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [A_o3] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 39, last 14 from the end)
+  PASS    [A_o3] same type at most 4 in a row  (longest 2)
+  PASS    [A_o3] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [A_o3] mean position of each analysed type within 0.05 of the centre  (worst 0.008)
+  PASS    [A_o3] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.014)
+  PASS    [A_o3] |corr(position, size of difference)| <= 0.1  (x_sat +0.005, x_con +0.006)
+  PASS    [A_o4] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [A_o4] scene gap >= 5  (smallest 5)
+  PASS    [A_o4] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [A_o4] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 13, last 30 from the end)
+  PASS    [A_o4] same type at most 4 in a row  (longest 2)
+  PASS    [A_o4] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [A_o4] mean position of each analysed type within 0.05 of the centre  (worst 0.007)
+  PASS    [A_o4] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.011)
+  PASS    [A_o4] |corr(position, size of difference)| <= 0.1  (x_sat +0.007, x_con +0.012)
+  PASS    [orders A] every order is a permutation of the set
+  PASS    [orders A] the kept orders differ (largest pairwise |rank correlation| <= 0.3)  (0.203)
+  PASS    [orders B] 40 valid candidate orders built  (40 in 51 attempts; failures {'dead end': 10, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 1})
+  PASS    [orders B] 4 orders kept, pairwise |rank correlation| <= 0.3  (candidates [12, 30, 13, 36])
+  PASS    [B_o1] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [B_o1] scene gap >= 5  (smallest 5)
+  PASS    [B_o1] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [B_o1] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 13, last 38 from the end)
+  PASS    [B_o1] same type at most 4 in a row  (longest 2)
+  PASS    [B_o1] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [B_o1] mean position of each analysed type within 0.05 of the centre  (worst 0.006)
+  PASS    [B_o1] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.012)
+  PASS    [B_o1] |corr(position, size of difference)| <= 0.1  (x_sat +0.004, x_con -0.005)
+  PASS    [B_o2] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [B_o2] scene gap >= 5  (smallest 5)
+  PASS    [B_o2] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [B_o2] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 24, last 21 from the end)
+  PASS    [B_o2] same type at most 4 in a row  (longest 2)
+  PASS    [B_o2] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [B_o2] mean position of each analysed type within 0.05 of the centre  (worst 0.007)
+  PASS    [B_o2] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.018)
+  PASS    [B_o2] |corr(position, size of difference)| <= 0.1  (x_sat -0.001, x_con -0.002)
+  PASS    [B_o3] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [B_o3] scene gap >= 5  (smallest 6)
+  PASS    [B_o3] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [B_o3] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 12, last 12 from the end)
+  PASS    [B_o3] same type at most 4 in a row  (longest 2)
+  PASS    [B_o3] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [B_o3] mean position of each analysed type within 0.05 of the centre  (worst 0.008)
+  PASS    [B_o3] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.015)
+  PASS    [B_o3] |corr(position, size of difference)| <= 0.1  (x_sat +0.001, x_con +0.010)
+  PASS    [B_o4] type spread: every type within 1 of its share in each of 5 segments  (worst 0.81)
+  PASS    [B_o4] scene gap >= 5  (smallest 5)
+  PASS    [B_o4] consistency repeats after their originals, >= 40 apart  (smallest 40)
+  PASS    [B_o4] one catch per segment, none in the first or last 10  (per segment 1/1/1/1/1, first at 20, last 30 from the end)
+  PASS    [B_o4] same type at most 4 in a row  (longest 2)
+  PASS    [B_o4] predicted image on the same side at most 4 in a row  (longest 4)
+  PASS    [B_o4] mean position of each analysed type within 0.05 of the centre  (worst 0.007)
+  PASS    [B_o4] mean position of each type x magnitude bin within 0.1 of the centre  (worst 0.011)
+  PASS    [B_o4] |corr(position, size of difference)| <= 0.1  (x_sat -0.017, x_con +0.006)
+  PASS    [orders B] every order is a permutation of the set
+  PASS    [orders B] the kept orders differ (largest pairwise |rank correlation| <= 0.3)  (0.073)
+  PASS    [assignment] every one of the 32 cells (block order x set mapping x order x grid code) appears 2 times in 64 slots  (counts [2])
+  PASS    [assignment] first 10 slots: every factor within 1 of an even split, and block order x set mapping too  (worst factor 0.5, block order x set mapping 0.5)
+  PASS    [assignment] first 15 slots: every factor within 1 of an even split, and block order x set mapping too  (worst factor 0.75, block order x set mapping 0.75)
+  PASS    [assignment] first 20 slots: every factor within 1 of an even split, and block order x set mapping too  (worst factor 0, block order x set mapping 0)
+  PASS    [assignment] first 30 slots: every factor within 1 of an even split, and block order x set mapping too  (worst factor 0.5, block order x set mapping 0.5)
+  PASS    [assignment] first 64 slots: every factor within 1 of an even split, and block order x set mapping too  (worst factor 0, block order x set mapping 0)
+  PASS    [package] every shipped image matches script 3's manifest (SHA-256)  (628 images, 0 differ)
+  PASS    [package] every preloaded image ships in stimuli/  (617 preloaded, 628 shipped)
+
+  91 PASS, 0 FAIL, 0 SKIPPED
