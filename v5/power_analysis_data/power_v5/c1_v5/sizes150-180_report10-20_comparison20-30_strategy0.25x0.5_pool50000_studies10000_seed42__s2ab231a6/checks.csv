@@ -1,0 +1,54 @@
+section,check,status,detail
+inputs,simulate_power_paired_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_power_paired_v5.py
+inputs,simulate_power_paired_v5.py is the expected version (SHA-256),PASS,14e09055fd122d03...
+inputs,simulate_c1_post_exclusion_v4.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_c1_post_exclusion_v4.py
+inputs,simulate_c1_post_exclusion_v4.py is the expected version (SHA-256),PASS,4d6c6fcee68d29c6...
+inputs (via script 7),simulate_power_v4_n10_20.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_power_v4_n10_20.py
+inputs (via script 7),simulate_power_v4_n10_20.py is the expected version (SHA-256),PASS,852f3b33eb349153...
+inputs (via script 7),analyse_pair_capacity_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/analyse_pair_capacity_v5.py
+inputs (via script 7),analyse_pair_capacity_v5.py is the expected version (SHA-256),PASS,5a8483a2a3884822...
+inputs (via script 7),explore_block_length_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/explore_block_length_v5.py
+inputs (via script 7),explore_block_length_v5.py is the expected version (SHA-256),PASS,98d641f60252be83...
+inputs (via script 7),thresholds_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/thresholds_v5.py
+inputs (via script 7),thresholds_v5.py is the expected version (SHA-256),PASS,90457ef9c8208581...
+inputs (via script 7),script 6's thresholds.csv exists,PASS,/home/mario/Documents/drl2drv_updated/data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391/thresholds.csv
+inputs (via script 7),script 6's run passed every check,PASS,"85 PASS, 0 FAIL"
+inputs (via script 7),script 6 recommended the model used here (side),PASS,script 6: side
+inputs (via script 7),thresholds found for every size and set,PASS,4 sets
+inputs (via script 7),every file read matches checksums.sha256,PASS,10 files
+inputs (via script 7),"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs (via script 7),every file read matches checksums.sha256,PASS,10 files
+inputs (via script 7),"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+package 150,"assignment table: 64 slots for the control group, each with one ordinary and one expectation block",PASS,64 rows
+package 180,"assignment table: 64 slots for the control group, each with one ordinary and one expectation block",PASS,64 rows
+tools,v4's exact Mann-Whitney equals SciPy's exact test,PASS,max |difference| in p 1.1e-16
+tools,"v4's normal-approximation Mann-Whitney (groups of 45, above its exact limit) equals SciPy's",PASS,max |difference| in p 0.0e+00
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 10 vs 20, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 20 vs 30, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 10 vs 20, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 20 vs 30, 300 studies)",PASS,0 differing decisions
+Monte Carlo,headline cells agree between independent pools,PASS,72 comparisons; largest |z| 1.72; 0.0% beyond 1.96
+results,"no effect, equal attention: the chance of a C1 claim on either feature stays at or below 0.05 + 3 SE (Holm controls it)",PASS,"largest 0.0501, mean 0.0437"
+results,equal attention: the attention check fires at or below 0.05 + 3 SE,PASS,"largest 0.0519, mean 0.0478"
+results,C1 power rises with the report group's N (within Monte Carlo noise),PASS,8 of 8 series
+results,share excluded matches the lapse model in both groups (about 5% at mean lapse 0.1),PASS,"[0.049, 0.049, 0.048, 0.047]"
+results,"the secondary check sees the shared preference under half shift, not under planning (higher rate under half shift in every cell)",PASS,mean 0.313 vs 0.045
+inputs,script 7's run passed every check,PASS,45 PASS
+Part B,script 7's SD 1.5 rows found for both sizes and both effects,PASS,176 rows
+Part B,power falls (or stays level) as pair-specific preferences strengthen (N = 20),PASS,"SD 1, 1.5, 2"
