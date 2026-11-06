@@ -1,0 +1,80 @@
+scope,check,status,detail
+estimator,batch Firth fit equals the single-person fit,PASS,max |diff| 3.5e-12 over 20 people
+estimator,vectorised one-sided Wilcoxon equals SciPy's exact test,PASS,"max |diff| in p 0.0e+00, 200 studies at each N"
+v4 reference,upper thresholds reproduce the registered v4 values,PASS,"got +0.286 / +0.488, registered +0.286 / +0.488"
+v4 reference,lower thresholds reproduce the registered v4 values,PASS,"got -0.290 / -0.486, registered -0.290 / -0.486"
+n=90 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=90 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=90 equal,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=105 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=105 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=105 equal,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=120 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=120 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=120 equal,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=150 v4,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=150 conflict_heavy,every draw is built and passes script 1's matching checks,PASS,20 of 20
+n=150 equal,every draw is built and passes script 1's matching checks,PASS,20 of 20
+reproduction,"draw 0 equals script 1's saved example set (pair for pair, both sets)",PASS,12 of 12 combinations
+n=90 v4,the two sets' upper thresholds agree within 5%,PASS,worst 3.7%
+n=90 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.197
+n=90 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=90 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=90 v4,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0510 (z +1.27, t, N=10, sat)"
+n=90 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 2.8%
+n=90 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.100
+n=90 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=90 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=90 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0507 (z +0.67, t, N=10, con)"
+n=90 equal,the two sets' upper thresholds agree within 5%,PASS,worst 2.9%
+n=90 equal,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.214
+n=90 equal,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=90 equal,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=90 equal,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0507 (z +0.57, t, N=15, con)"
+n=105 v4,the two sets' upper thresholds agree within 5%,PASS,worst 3.8%
+n=105 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.221
+n=105 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=105 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=105 v4,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0517 (z +1.29, t, N=20, con)"
+n=105 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 2.9%
+n=105 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.087
+n=105 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=105 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=105 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0510 (z +0.78, t, N=20, sat)"
+n=105 equal,the two sets' upper thresholds agree within 5%,PASS,worst 3.3%
+n=105 equal,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.177
+n=105 equal,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=105 equal,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=105 equal,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0510 (z +0.92, t, N=15, con)"
+n=120 v4,the two sets' upper thresholds agree within 5%,PASS,worst 3.6%
+n=120 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.191
+n=120 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=120 v4,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0505 (z +0.39, t, N=20, sat)"
+n=120 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 2.5%
+n=120 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.098
+n=120 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=120 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0518 (z +1.27, t, N=20, sat)"
+n=120 equal,the two sets' upper thresholds agree within 5%,PASS,worst 3.6%
+n=120 equal,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.218
+n=120 equal,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=120 equal,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=120 equal,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0527 (z +2.08, t, N=20, sat)"
+n=150 v4,the two sets' upper thresholds agree within 5%,PASS,worst 4.5%
+n=150 v4,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.145
+n=150 v4,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=150 v4,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=150 v4,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0509 (z +0.64, t, N=20, con)"
+n=150 conflict_heavy,the two sets' upper thresholds agree within 5%,PASS,worst 4.2%
+n=150 conflict_heavy,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.075
+n=150 conflict_heavy,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=150 conflict_heavy,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=150 conflict_heavy,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0504 (z +0.45, t, N=10, sat)"
+n=150 equal,the two sets' upper thresholds agree within 5%,PASS,worst 3.7%
+n=150 equal,|corr(estimates)| <= 0.3 under the null (weights separable),PASS,worst 0.179
+n=150 equal,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+n=150 equal,every Firth fit converged,PASS,worst share unconverged 0.00000
+n=150 equal,false-positive rate under 'no effect' <= alpha + 3.81 between-draw SE in every cell,PASS,"worst 0.0525 (z +2.26, t, N=15, sat)"
+v4 reference,share of |weight| > 5 <= 0.001,PASS,worst 0.00000
+session length,the method reproduces v4's estimate for its 211 trials,PASS,14.3 to 17.8 min
