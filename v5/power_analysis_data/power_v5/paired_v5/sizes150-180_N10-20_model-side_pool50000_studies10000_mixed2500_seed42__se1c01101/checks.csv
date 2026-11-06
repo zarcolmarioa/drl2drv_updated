@@ -1,0 +1,46 @@
+section,check,status,detail
+inputs,simulate_power_v4_n10_20.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_power_v4_n10_20.py
+inputs,simulate_power_v4_n10_20.py is the expected version (SHA-256),PASS,852f3b33eb349153...
+inputs,analyse_pair_capacity_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/analyse_pair_capacity_v5.py
+inputs,analyse_pair_capacity_v5.py is the expected version (SHA-256),PASS,5a8483a2a3884822...
+inputs,explore_block_length_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/explore_block_length_v5.py
+inputs,explore_block_length_v5.py is the expected version (SHA-256),PASS,98d641f60252be83...
+inputs,thresholds_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/thresholds_v5.py
+inputs,thresholds_v5.py is the expected version (SHA-256),PASS,90457ef9c8208581...
+inputs,script 6's thresholds.csv exists,PASS,/home/mario/Documents/drl2drv_updated/data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391/thresholds.csv
+inputs,script 6's run passed every check,PASS,"85 PASS, 0 FAIL"
+inputs,script 6 recommended the model used here (side),PASS,script 6: side
+inputs,thresholds found for every size and set,PASS,4 sets
+inputs,explore's paired_power.csv exists,PASS,/home/mario/Documents/drl2drv_updated/data/block_length_v5/without_p65_sizes120-150-180_mixes-conflict_heavy-v4_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s6821ca69/paired_power.csv
+package 150,every file read matches checksums.sha256,PASS,10 files
+package 150,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+package 150,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+package 180,every file read matches checksums.sha256,PASS,10 files
+package 180,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+package 180,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+tools,explore's vectorised Wilcoxon equals SciPy's exact test,PASS,max |difference| in p 0.0e+00
+tools,the paired t-test equals SciPy's,PASS,
+tools,"sign-test critical values: none below 5 detections, 5 of 5 at d = 5 (v4's Table 4 rule)",PASS,"d=5..10: [5.0, 6.0, 7.0, 7.0, 8.0, 9.0]"
+tools,the side-model fit equals v4's single-person fit_firth,PASS,max |difference| 1.7e-16
+sanity,this script reproduces explore_block_length_v5's functions under its simplified model (power and false positives on the frozen lists),PASS,72 comparisons; largest |z| 2.47; 6.9% beyond 1.96; mean z -0.23
+sanity,the frozen lists' power lies within explore's range over its 20 draws of the same size (+/- 3 SE),PASS,72 of 72 cells
+Monte Carlo,headline cells agree between two independent pools (pool-to-pool error is small),PASS,264 comparisons; largest |z| 2.66; 4.9% beyond 1.96; SD z 0.91
+results,"with no effect and no nuisances, both tests stay at or below 0.05 + 3 SE (measured Monte Carlo SE) at every N",PASS,"largest rate 0.0578, largest z +1.72; mean rate t 0.0490, Wilcoxon 0.0452"
+results,power rises with N (within 3 SE of Monte Carlo noise between neighbouring N),PASS,48 of 48 series
+results,"the share excluded for 3+ catch failures matches the lapse model (about 5% at mean lapse 0.1, no nuisances)",PASS,"share excluded, no nuisances: [0.049, 0.048]"
+mixed model,"recovers known fixed effects (40 studies of 150 people simulated from the model): z-scores centred, SD near 1, every fit converged",PASS,"mean z -0.15, SD z 1.03, iterations 16-26; mean estimated SD [0.15, 0.24, 0.2, 0.3, 0.2] (true [0.15, 0.25, 0.2, 0.3, 0.2])"
+mixed model,every mixed-model fit converged,PASS,lowest share converged 1.0000

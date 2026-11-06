@@ -1,0 +1,837 @@
+THE PRIMARY PAIRED TEST  (simulate_power_paired_v5.py, script 7)
+==============================================================================
+run       2026-11-06 15:27:59  (20.0 min)
+output    /home/mario/Documents/drl2drv_updated/data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101
+python    3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. No image-choice data exist.
+The responder shares and shifts, taste spread, lapse rates and every nuisance
+value below were chosen for planning; every power and false-positive rate here
+depends on them.
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+Per-person model: side model (script 6), Firth, fitted per block on the
+analysed trials; thresholds from script 6 (secondary sign test only).
+Primary test per feature: one-sided, derealization-block weight minus ordinary-
+block weight, alpha 0.05, uncorrected; paired t-test and exact Wilcoxon.
+Pools of 50,000 people per scenario and size, each fitted on both blocks; 10,000
+studies per cell drawn from the pool. Every rate's Monte Carlo SE is measured from
+20 disjoint sub-pools (it includes the pool's own error): largest power SE 0.0202,
+largest SE of a no-effect rate 0.0146 (columns 'se' in the CSV files).
+Recruitment: each participant takes the next slot of the frozen assignment table;
+anyone with 3+ catch failures of 10 is excluded and uses up the slot.
+N = 10-20 analysable people; tables show N = 10, 15, 20, paired_power.csv has every N.
+The person model is in the script's docstring. Values:
+  taste SD (0.143, 0.244); personal lapse Gamma, mean 0.1, SD 0.5 x mean;
+  catch p(fail) = 0.75 x lapse, 5 per block.
+  Nuisances at their defaults [ASSUMPTIONS]:
+    taste_corr         0.7
+    scene_sd_mult      1.0
+    side_sd            0.25
+    dull               (0.25, 0.35)
+    odd_share          0.25
+    order_lapse        0.05
+    order_scale        0.9
+  (scene SD = scene_sd_mult x taste SD; dull and odd in per-SD weight units; side in logit)
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          /home/mario/Documents/drl2drv_updated/simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256)
+          852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5.py exists
+          /home/mario/Documents/drl2drv_updated/analyse_pair_capacity_v5.py
+  PASS  [inputs] analyse_pair_capacity_v5.py is the expected version (SHA-256)
+          5a8483a2a3884822...
+  PASS  [inputs] explore_block_length_v5.py exists
+          /home/mario/Documents/drl2drv_updated/explore_block_length_v5.py
+  PASS  [inputs] explore_block_length_v5.py is the expected version (SHA-256)
+          98d641f60252be83...
+  PASS  [inputs] thresholds_v5.py exists
+          /home/mario/Documents/drl2drv_updated/thresholds_v5.py
+  PASS  [inputs] thresholds_v5.py is the expected version (SHA-256)
+          90457ef9c8208581...
+  PASS  [inputs] script 6's thresholds.csv exists
+          /home/mario/Documents/drl2drv_updated/data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391/thresholds.csv
+  PASS  [inputs] script 6's run passed every check
+          85 PASS, 0 FAIL
+  PASS  [inputs] script 6 recommended the model used here (side)
+          script 6: side
+  PASS  [inputs] thresholds found for every size and set
+          4 sets
+  PASS  [inputs] explore's paired_power.csv exists
+          /home/mario/Documents/drl2drv_updated/data/block_length_v5/without_p65_sizes120-150-180_mixes-conflict_heavy-v4_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s6821ca69/paired_power.csv
+  PASS  [package 150] every file read matches checksums.sha256
+          10 files
+  PASS  [package 150] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [package 150] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [package 180] every file read matches checksums.sha256
+          10 files
+  PASS  [package 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [package 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [tools] explore's vectorised Wilcoxon equals SciPy's exact test
+          max |difference| in p 0.0e+00
+  PASS  [tools] the paired t-test equals SciPy's
+  PASS  [tools] sign-test critical values: none below 5 detections, 5 of 5 at d = 5 (v4's Table 4 rule)
+          d=5..10: [5.0, 6.0, 7.0, 7.0, 8.0, 9.0]
+  PASS  [tools] the side-model fit equals v4's single-person fit_firth
+          max |difference| 1.7e-16
+  PASS  [sanity] this script reproduces explore_block_length_v5's functions under its simplified model (power and false positives on the frozen lists)
+          72 comparisons; largest |z| 2.47; 6.9% beyond 1.96; mean z -0.23
+  PASS  [sanity] the frozen lists' power lies within explore's range over its 20 draws of the same size (+/- 3 SE)
+          72 of 72 cells
+  PASS  [Monte Carlo] headline cells agree between two independent pools (pool-to-pool error is small)
+          264 comparisons; largest |z| 2.66; 4.9% beyond 1.96; SD z 0.91
+  PASS  [results] with no effect and no nuisances, both tests stay at or below 0.05 + 3 SE (measured Monte Carlo SE) at every N
+          largest rate 0.0578, largest z +1.72; mean rate t 0.0490, Wilcoxon 0.0452
+  PASS  [results] power rises with N (within 3 SE of Monte Carlo noise between neighbouring N)
+          48 of 48 series
+  PASS  [results] the share excluded for 3+ catch failures matches the lapse model (about 5% at mean lapse 0.1, no nuisances)
+          share excluded, no nuisances: [0.049, 0.048]
+  PASS  [mixed model] recovers known fixed effects (40 studies of 150 people simulated from the model): z-scores centred, SD near 1, every fit converged
+          mean z -0.15, SD z 1.03, iterations 16-26; mean estimated SD [0.15, 0.24, 0.2, 0.3, 0.2] (true [0.15, 0.25, 0.2, 0.3, 0.2])
+  PASS  [mixed model] every mixed-model fit converged
+          lowest share converged 1.0000
+
+  45 PASS, 0 FAIL
+
+3. SANITY CHECK: explore_block_length_v5's simplified model on the frozen lists
+------------------------------------------------------------------------------
+explore_functions: explore's paired_pool / study_index / paired_tests run
+unmodified (its pool and study settings set to 50,000 and 10,000); this_script: this script's simulation
+set to the same model (two-weight fit, lapse 0.1 for everyone, taste the same in
+both blocks, no exclusion). draws: explore's published range over its 20 draws.
+   size   scenario  N     test    feature  explore_functions  this_script  se_each      z  draws_min  draws_max
+    150  no effect 10        t saturation              0.054        0.049    0.003 -1.426      0.044      0.059
+    150  no effect 10 wilcoxon saturation              0.043        0.043    0.002 -0.126      0.036      0.050
+    150  no effect 10        t   contrast              0.047        0.044    0.004 -0.412      0.038      0.057
+    150  no effect 10 wilcoxon   contrast              0.040        0.036    0.003 -0.890      0.032      0.048
+    150  no effect 15        t saturation              0.051        0.046    0.004 -0.798      0.039      0.061
+    150  no effect 15 wilcoxon saturation              0.048        0.043    0.004 -0.998      0.037      0.059
+    150  no effect 15        t   contrast              0.047        0.046    0.003 -0.191      0.040      0.065
+    150  no effect 15 wilcoxon   contrast              0.043        0.043    0.003 -0.070      0.040      0.061
+    150  no effect 20        t saturation              0.045        0.045    0.004 -0.055      0.040      0.060
+    150  no effect 20 wilcoxon saturation              0.043        0.045    0.003  0.365      0.038      0.058
+    150  no effect 20        t   contrast              0.050        0.045    0.003 -1.223      0.040      0.060
+    150  no effect 20 wilcoxon   contrast              0.050        0.041    0.003 -2.207      0.041      0.055
+    150   planning 10        t saturation              0.626        0.647    0.015  0.999      0.597      0.657
+    150   planning 10 wilcoxon saturation              0.558        0.578    0.015  0.916      0.535      0.590
+    150   planning 10        t   contrast              0.573        0.598    0.017  1.075      0.500      0.593
+    150   planning 10 wilcoxon   contrast              0.508        0.536    0.017  1.131      0.452      0.530
+    150   planning 15        t saturation              0.807        0.812    0.011  0.267      0.770      0.824
+    150   planning 15 wilcoxon saturation              0.764        0.770    0.013  0.320      0.732      0.786
+    150   planning 15        t   contrast              0.749        0.761    0.014  0.595      0.693      0.774
+    150   planning 15 wilcoxon   contrast              0.712        0.722    0.015  0.478      0.662      0.733
+    150   planning 20        t saturation              0.904        0.906    0.008  0.144      0.873      0.917
+    150   planning 20 wilcoxon saturation              0.872        0.876    0.010  0.280      0.843      0.889
+    150   planning 20        t   contrast              0.861        0.878    0.008  1.536      0.816      0.880
+    150   planning 20 wilcoxon   contrast              0.826        0.848    0.009  1.712      0.781      0.855
+    150 half shift 10        t saturation              0.324        0.317    0.011 -0.459      0.295      0.353
+    150 half shift 10 wilcoxon saturation              0.284        0.275    0.010 -0.707      0.260      0.312
+    150 half shift 10        t   contrast              0.288        0.259    0.010 -2.126      0.242      0.301
+    150 half shift 10 wilcoxon   contrast              0.252        0.225    0.009 -2.116      0.208      0.271
+    150 half shift 15        t saturation              0.455        0.446    0.013 -0.447      0.406      0.480
+    150 half shift 15 wilcoxon saturation              0.419        0.417    0.013 -0.154      0.377      0.450
+    150 half shift 15        t   contrast              0.387        0.374    0.014 -0.647      0.344      0.410
+    150 half shift 15 wilcoxon   contrast              0.366        0.353    0.014 -0.666      0.322      0.385
+    150 half shift 20        t saturation              0.543        0.531    0.012 -0.713      0.507      0.594
+    150 half shift 20 wilcoxon saturation              0.519        0.501    0.011 -1.164      0.484      0.566
+    150 half shift 20        t   contrast              0.474        0.476    0.014  0.112      0.409      0.507
+    150 half shift 20 wilcoxon   contrast              0.450        0.450    0.013 -0.023      0.394      0.483
+    180  no effect 10        t saturation              0.051        0.044    0.004 -1.410      0.037      0.061
+    180  no effect 10 wilcoxon saturation              0.042        0.035    0.003 -1.566      0.032      0.053
+    180  no effect 10        t   contrast              0.047        0.048    0.004  0.087      0.041      0.059
+    180  no effect 10 wilcoxon   contrast              0.041        0.041    0.003  0.043      0.034      0.050
+    180  no effect 15        t saturation              0.051        0.045    0.004 -0.944      0.042      0.059
+    180  no effect 15 wilcoxon saturation              0.050        0.043    0.004 -1.407      0.040      0.059
+    180  no effect 15        t   contrast              0.050        0.054    0.005  0.561      0.041      0.059
+    180  no effect 15 wilcoxon   contrast              0.048        0.049    0.005  0.140      0.040      0.058
+    180  no effect 20        t saturation              0.055        0.043    0.003 -2.472      0.041      0.065
+    180  no effect 20 wilcoxon saturation              0.052        0.043    0.003 -1.999      0.040      0.067
+    180  no effect 20        t   contrast              0.052        0.054    0.004  0.306      0.039      0.066
+    180  no effect 20 wilcoxon   contrast              0.051        0.051    0.004 -0.120      0.035      0.062
+    180   planning 10        t saturation              0.651        0.666    0.015  0.711      0.626      0.682
+    180   planning 10 wilcoxon saturation              0.584        0.604    0.015  0.920      0.557      0.609
+    180   planning 10        t   contrast              0.608        0.612    0.012  0.257      0.573      0.630
+    180   planning 10 wilcoxon   contrast              0.540        0.546    0.013  0.323      0.505      0.567
+    180   planning 15        t saturation              0.826        0.842    0.010  1.069      0.810      0.846
+    180   planning 15 wilcoxon saturation              0.781        0.801    0.011  1.220      0.759      0.798
+    180   planning 15        t   contrast              0.794        0.795    0.010  0.084      0.750      0.806
+    180   planning 15 wilcoxon   contrast              0.750        0.756    0.011  0.389      0.712      0.766
+    180   planning 20        t saturation              0.920        0.928    0.008  0.770      0.902      0.935
+    180   planning 20 wilcoxon saturation              0.895        0.903    0.009  0.649      0.871      0.912
+    180   planning 20        t   contrast              0.901        0.903    0.006  0.135      0.853      0.901
+    180   planning 20 wilcoxon   contrast              0.869        0.873    0.007  0.372      0.823      0.875
+    180 half shift 10        t saturation              0.345        0.341    0.014 -0.233      0.325      0.384
+    180 half shift 10 wilcoxon saturation              0.301        0.298    0.012 -0.196      0.290      0.336
+    180 half shift 10        t   contrast              0.323        0.301    0.014 -1.074      0.287      0.334
+    180 half shift 10 wilcoxon   contrast              0.284        0.264    0.013 -1.082      0.248      0.294
+    180 half shift 15        t saturation              0.480        0.473    0.013 -0.390      0.450      0.540
+    180 half shift 15 wilcoxon saturation              0.450        0.445    0.012 -0.321      0.417      0.498
+    180 half shift 15        t   contrast              0.436        0.422    0.011 -0.888      0.397      0.457
+    180 half shift 15 wilcoxon   contrast              0.409        0.398    0.013 -0.597      0.372      0.430
+    180 half shift 20        t saturation              0.589        0.583    0.014 -0.309      0.545      0.654
+    180 half shift 20 wilcoxon saturation              0.557        0.555    0.013 -0.098      0.516      0.618
+    180 half shift 20        t   contrast              0.538        0.520    0.015 -0.903      0.489      0.553
+    180 half shift 20 wilcoxon   contrast              0.512        0.493    0.014 -0.919      0.468      0.530
+
+4. FALSE POSITIVES WITH NO EFFECT
+------------------------------------------------------------------------------
+Share of studies where the one-sided paired test is significant. t = paired
+t-test, W = Wilcoxon; con = contrast (H1), sat = saturation (H2). Monte Carlo SE about
+0.0041. Rule limit per cell 0.05 + 2 SE: 0.0552-0.0624.
+
+  Rows used by the test-choice rule (each default nuisance alone, then all)
+
+  150 trials per block
+  col                                                        t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                     
+  no nuisances                                                   0.054      0.051      0.047      0.045      0.047      0.047      0.044      0.046      0.050      0.038      0.043      0.048
+  taste stability 0.7                                            0.055      0.051      0.054      0.048      0.047      0.051      0.056      0.055      0.050      0.048      0.054      0.048
+  scene dependence (SD x1, stability 0.7)                        0.054      0.056      0.052      0.046      0.055      0.053      0.058      0.054      0.050      0.047      0.052      0.049
+  side bias (SD 0.25)                                            0.049      0.049      0.051      0.043      0.046      0.050      0.051      0.053      0.050      0.042      0.047      0.050
+  memory makes it duller (+0.25/+0.35, everyone)                 0.050      0.056      0.056      0.041      0.052      0.055      0.047      0.049      0.049      0.039      0.047      0.048
+  edited looks odd (a quarter, -0.5)                             0.057      0.055      0.057      0.048      0.054      0.055      0.050      0.052      0.050      0.044      0.051      0.049
+  block order (second block: lapse +0.05, preferences x0.9)      0.052      0.051      0.055      0.044      0.049      0.053      0.047      0.055      0.050      0.041      0.051      0.052
+  all nuisances (defaults)                                       0.051      0.048      0.049      0.044      0.048      0.049      0.047      0.050      0.048      0.039      0.048      0.050
+
+  180 trials per block
+  col                                                        t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                     
+  no nuisances                                                   0.047      0.049      0.048      0.038      0.047      0.045      0.058      0.050      0.051      0.049      0.049      0.048
+  taste stability 0.7                                            0.050      0.051      0.053      0.042      0.047      0.053      0.056      0.047      0.048      0.049      0.043      0.048
+  scene dependence (SD x1, stability 0.7)                        0.048      0.045      0.046      0.040      0.041      0.045      0.043      0.044      0.043      0.036      0.043      0.044
+  side bias (SD 0.25)                                            0.048      0.054      0.053      0.043      0.052      0.052      0.048      0.043      0.041      0.041      0.042      0.042
+  memory makes it duller (+0.25/+0.35, everyone)                 0.051      0.048      0.048      0.043      0.045      0.049      0.048      0.050      0.050      0.041      0.048      0.049
+  edited looks odd (a quarter, -0.5)                             0.045      0.045      0.046      0.039      0.043      0.047      0.048      0.046      0.048      0.042      0.044      0.047
+  block order (second block: lapse +0.05, preferences x0.9)      0.054      0.051      0.058      0.045      0.050      0.057      0.057      0.055      0.050      0.048      0.052      0.048
+  all nuisances (defaults)                                       0.053      0.053      0.050      0.044      0.049      0.047      0.050      0.050      0.049      0.040      0.048      0.047
+
+  Sensitivity rows (the ranges; not used by the rule)
+
+  150 trials per block
+  col                                                          t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                       
+  taste stability 0.5                                              0.045      0.052      0.055      0.037      0.049      0.052      0.044      0.043      0.044      0.035      0.040      0.044
+  taste stability 0.3                                              0.039      0.042      0.043      0.034      0.040      0.040      0.046      0.045      0.052      0.038      0.044      0.048
+  taste stability 0                                                0.049      0.049      0.052      0.040      0.045      0.052      0.048      0.051      0.049      0.042      0.051      0.050
+  scene dependence SD x0.5                                         0.054      0.050      0.043      0.044      0.048      0.042      0.049      0.051      0.051      0.040      0.049      0.049
+  scene dependence SD x2                                           0.048      0.045      0.054      0.040      0.043      0.051      0.045      0.056      0.057      0.040      0.052      0.054
+  scene dependence, stability 0                                    0.047      0.048      0.047      0.040      0.047      0.045      0.053      0.053      0.052      0.047      0.051      0.051
+  scene dependence, stability 1                                    0.044      0.048      0.049      0.037      0.045      0.050      0.049      0.052      0.051      0.040      0.048      0.049
+  common scene effect SD 0.1                                       0.046      0.055      0.052      0.038      0.051      0.049      0.051      0.051      0.051      0.041      0.047      0.048
+  side bias SD 0.5                                                 0.053      0.049      0.051      0.046      0.047      0.052      0.052      0.051      0.049      0.045      0.049      0.049
+  side bias SD 0.25, mean 0.2                                      0.050      0.046      0.046      0.042      0.043      0.045      0.048      0.052      0.055      0.041      0.051      0.053
+  memory makes it duller +0.5/+0.7                                 0.044      0.041      0.045      0.039      0.039      0.043      0.051      0.045      0.052      0.044      0.045      0.050
+  edited looks odd, half                                           0.055      0.047      0.050      0.042      0.044      0.048      0.045      0.049      0.051      0.038      0.046      0.051
+  block order: second-block lapse +0.10                            0.049      0.047      0.049      0.043      0.047      0.048      0.048      0.047      0.048      0.043      0.044      0.049
+  block order: preferences x0.8                                    0.042      0.049      0.046      0.036      0.046      0.046      0.045      0.056      0.054      0.039      0.052      0.055
+  block order: preferences x1.2                                    0.050      0.049      0.052      0.041      0.046      0.051      0.043      0.045      0.045      0.037      0.041      0.042
+  lapse rising across the block (+0.10)                            0.051      0.054      0.054      0.041      0.050      0.052      0.048      0.048      0.047      0.039      0.046      0.047
+  pair-specific preferences SD 1.0                                 0.053      0.055      0.054      0.045      0.052      0.052      0.045      0.048      0.047      0.036      0.046      0.046
+  pair-specific preferences SD 2.0                                 0.052      0.052      0.053      0.044      0.046      0.050      0.047      0.049      0.046      0.042      0.047      0.045
+  all nuisances (high ends)                                        0.042      0.041      0.049      0.034      0.041      0.046      0.050      0.051      0.042      0.039      0.049      0.043
+  all nuisances (defaults) + pair-specific preferences SD 1.5      0.048      0.049      0.049      0.042      0.048      0.048      0.049      0.044      0.046      0.042      0.043      0.044
+
+  180 trials per block
+  col                                                          t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                       
+  taste stability 0.5                                              0.048      0.047      0.041      0.041      0.043      0.043      0.045      0.048      0.052      0.039      0.045      0.050
+  taste stability 0.3                                              0.049      0.050      0.052      0.042      0.047      0.050      0.047      0.055      0.051      0.041      0.052      0.049
+  taste stability 0                                                0.047      0.055      0.053      0.039      0.052      0.051      0.057      0.052      0.053      0.047      0.051      0.051
+  scene dependence SD x0.5                                         0.057      0.053      0.054      0.048      0.051      0.054      0.059      0.057      0.053      0.050      0.054      0.052
+  scene dependence SD x2                                           0.048      0.046      0.042      0.040      0.046      0.041      0.048      0.047      0.051      0.042      0.043      0.050
+  scene dependence, stability 0                                    0.045      0.042      0.043      0.038      0.041      0.040      0.048      0.050      0.047      0.040      0.046      0.048
+  scene dependence, stability 1                                    0.045      0.044      0.051      0.036      0.040      0.047      0.050      0.046      0.050      0.041      0.043      0.047
+  common scene effect SD 0.1                                       0.047      0.046      0.049      0.039      0.044      0.047      0.047      0.051      0.045      0.041      0.048      0.044
+  side bias SD 0.5                                                 0.052      0.051      0.047      0.043      0.048      0.046      0.051      0.054      0.050      0.043      0.051      0.048
+  side bias SD 0.25, mean 0.2                                      0.051      0.048      0.049      0.041      0.047      0.048      0.050      0.045      0.039      0.041      0.041      0.038
+  memory makes it duller +0.5/+0.7                                 0.049      0.051      0.050      0.040      0.049      0.050      0.056      0.054      0.052      0.046      0.052      0.053
+  edited looks odd, half                                           0.044      0.042      0.044      0.038      0.039      0.044      0.052      0.049      0.055      0.043      0.046      0.053
+  block order: second-block lapse +0.10                            0.044      0.050      0.051      0.035      0.049      0.050      0.047      0.053      0.047      0.043      0.049      0.044
+  block order: preferences x0.8                                    0.047      0.052      0.048      0.039      0.050      0.048      0.053      0.055      0.048      0.044      0.052      0.047
+  block order: preferences x1.2                                    0.054      0.051      0.054      0.046      0.048      0.053      0.048      0.051      0.044      0.042      0.046      0.044
+  lapse rising across the block (+0.10)                            0.052      0.051      0.049      0.044      0.046      0.049      0.052      0.052      0.051      0.044      0.052      0.052
+  pair-specific preferences SD 1.0                                 0.047      0.055      0.049      0.041      0.051      0.050      0.046      0.047      0.051      0.040      0.046      0.049
+  pair-specific preferences SD 2.0                                 0.044      0.045      0.049      0.036      0.044      0.051      0.043      0.040      0.043      0.037      0.037      0.044
+  all nuisances (high ends)                                        0.046      0.045      0.045      0.037      0.043      0.043      0.053      0.049      0.043      0.046      0.047      0.044
+  all nuisances (defaults) + pair-specific preferences SD 1.5      0.048      0.050      0.045      0.038      0.046      0.043      0.049      0.051      0.046      0.043      0.049      0.044
+
+  THREATS NO TEST CAN REMOVE (more lapses in the derealization block,
+alone and with a shared bias; a bias that differs between episodes)
+
+  150 trials per block
+  col                                                                       t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                                    
+  derealization lapse +0.05                                                     0.046      0.050      0.048      0.038      0.048      0.048      0.046      0.050      0.049      0.037      0.049      0.049
+  derealization lapse +0.1                                                      0.050      0.054      0.051      0.041      0.047      0.045      0.050      0.048      0.048      0.042      0.044      0.043
+  derealization lapse +0.15                                                     0.050      0.047      0.053      0.043      0.043      0.051      0.048      0.049      0.049      0.040      0.048      0.046
+  derealization lapse +0.05, with edited looks odd                              0.059      0.062      0.059      0.051      0.059      0.056      0.055      0.057      0.062      0.047      0.053      0.059
+  derealization lapse +0.1, with edited looks odd                               0.055      0.060      0.061      0.046      0.058      0.057      0.077      0.086      0.083      0.067      0.082      0.076
+  derealization lapse +0.15, with edited looks odd                              0.064      0.076      0.078      0.053      0.072      0.075      0.089      0.099      0.111      0.079      0.093      0.108
+  derealization lapse +0.05, with memory makes it duller                        0.038      0.037      0.036      0.032      0.036      0.036      0.034      0.033      0.030      0.028      0.031      0.031
+  derealization lapse +0.1, with memory makes it duller                         0.025      0.022      0.019      0.022      0.020      0.019      0.025      0.018      0.015      0.021      0.019      0.015
+  derealization lapse +0.15, with memory makes it duller                        0.022      0.016      0.013      0.018      0.016      0.014      0.021      0.016      0.012      0.017      0.015      0.011
+  all nuisances (defaults), derealization lapse +0.1                            0.031      0.031      0.027      0.026      0.029      0.028      0.042      0.036      0.037      0.033      0.033      0.036
+  all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)      0.206      0.263      0.316      0.173      0.249      0.301      0.227      0.288      0.373      0.199      0.273      0.357
+  derealization lapse +0.05, with pair-specific preferences SD 1.5              0.053      0.051      0.049      0.044      0.048      0.049      0.046      0.043      0.049      0.037      0.042      0.048
+  derealization lapse +0.1, with pair-specific preferences SD 1.5               0.054      0.055      0.053      0.045      0.051      0.051      0.051      0.050      0.052      0.042      0.047      0.050
+  derealization lapse +0.15, with pair-specific preferences SD 1.5              0.051      0.055      0.052      0.042      0.052      0.051      0.048      0.048      0.043      0.039      0.048      0.042
+
+  180 trials per block
+  col                                                                       t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                                                                                                                                                    
+  derealization lapse +0.05                                                     0.055      0.055      0.052      0.045      0.053      0.052      0.045      0.048      0.043      0.039      0.046      0.042
+  derealization lapse +0.1                                                      0.045      0.052      0.051      0.038      0.046      0.050      0.054      0.053      0.057      0.046      0.052      0.055
+  derealization lapse +0.15                                                     0.055      0.050      0.047      0.045      0.049      0.047      0.046      0.052      0.050      0.039      0.048      0.048
+  derealization lapse +0.05, with edited looks odd                              0.060      0.065      0.069      0.051      0.062      0.067      0.061      0.060      0.069      0.053      0.058      0.067
+  derealization lapse +0.1, with edited looks odd                               0.065      0.076      0.075      0.054      0.071      0.075      0.076      0.088      0.085      0.063      0.081      0.080
+  derealization lapse +0.15, with edited looks odd                              0.063      0.077      0.075      0.053      0.076      0.074      0.080      0.094      0.102      0.068      0.088      0.094
+  derealization lapse +0.05, with memory makes it duller                        0.039      0.037      0.032      0.034      0.035      0.033      0.038      0.033      0.027      0.032      0.033      0.027
+  derealization lapse +0.1, with memory makes it duller                         0.027      0.021      0.018      0.022      0.019      0.018      0.020      0.014      0.013      0.017      0.014      0.013
+  derealization lapse +0.15, with memory makes it duller                        0.017      0.015      0.009      0.013      0.013      0.011      0.013      0.010      0.008      0.012      0.009      0.007
+  all nuisances (defaults), derealization lapse +0.1                            0.034      0.032      0.027      0.029      0.031      0.026      0.034      0.035      0.027      0.029      0.034      0.029
+  all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)      0.225      0.302      0.347      0.197      0.283      0.335      0.243      0.336      0.403      0.210      0.317      0.383
+  derealization lapse +0.05, with pair-specific preferences SD 1.5              0.050      0.047      0.045      0.041      0.044      0.044      0.043      0.044      0.046      0.035      0.044      0.048
+  derealization lapse +0.1, with pair-specific preferences SD 1.5               0.055      0.059      0.058      0.046      0.056      0.056      0.048      0.049      0.049      0.042      0.045      0.048
+  derealization lapse +0.15, with pair-specific preferences SD 1.5              0.041      0.048      0.048      0.034      0.045      0.045      0.046      0.053      0.049      0.040      0.049      0.047
+
+  Why the threat rows are threats: a bias present in both blocks cancels in the
+  difference only if both blocks express it equally. More lapses in the
+  derealization block shrink its weights towards zero: a shared preference against
+  the edited image (negative weights) then looks like a positive difference, a
+  shared preference for it ('duller') like a negative one. A bias stronger in one
+  episode is indistinguishable from an effect. Section 9 shows how well the
+  per-block attention measures pick up a lapse difference.
+
+5. POWER [responder shares and shifts: ASSUMPTIONS]
+------------------------------------------------------------------------------
+
+  All nuisances at their defaults (the headline)
+
+  150 trials per block
+  col                            t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                                           
+  planning                           0.467      0.630      0.750      0.411      0.591      0.719      0.516      0.682      0.809      0.462      0.645      0.779
+  half shift                         0.242      0.316      0.382      0.213      0.295      0.360      0.258      0.350      0.435      0.221      0.330      0.405
+  a quarter respond                  0.204      0.270      0.337      0.176      0.242      0.309      0.225      0.302      0.375      0.190      0.269      0.333
+  a quarter respond, half shift      0.113      0.139      0.158      0.099      0.129      0.149      0.140      0.164      0.198      0.116      0.154      0.182
+  all respond                        0.985      0.999      1.000      0.976      0.998      1.000      0.993      1.000      1.000      0.988      1.000      1.000
+  all respond, half shift            0.581      0.740      0.849      0.532      0.715      0.830      0.624      0.795      0.897      0.569      0.769      0.885
+
+  180 trials per block
+  col                            t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                                           
+  planning                           0.536      0.701      0.820      0.475      0.661      0.786      0.528      0.710      0.822      0.470      0.663      0.787
+  half shift                         0.245      0.317      0.399      0.215      0.295      0.376      0.254      0.360      0.454      0.220      0.334      0.424
+  a quarter respond                  0.211      0.299      0.376      0.180      0.271      0.343      0.225      0.309      0.401      0.188      0.272      0.351
+  a quarter respond, half shift      0.121      0.158      0.177      0.102      0.146      0.167      0.115      0.145      0.178      0.101      0.132      0.166
+  all respond                        0.992      1.000      1.000      0.987      1.000      1.000      0.998      1.000      1.000      0.996      1.000      1.000
+  all respond, half shift            0.638      0.811      0.906      0.589      0.784      0.894      0.701      0.856      0.934      0.648      0.832      0.917
+
+  No nuisances
+
+  150 trials per block
+  col                            t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                                           
+  planning                           0.562      0.739      0.856      0.503      0.699      0.822      0.641      0.817      0.913      0.579      0.771      0.882
+  half shift                         0.285      0.409      0.518      0.247      0.385      0.495      0.329      0.448      0.570      0.286      0.422      0.540
+  a quarter respond                  0.221      0.315      0.413      0.182      0.282      0.367      0.230      0.337      0.442      0.194      0.295      0.382
+  a quarter respond, half shift      0.146      0.178      0.200      0.124      0.170      0.191      0.130      0.181      0.209      0.111      0.162      0.188
+  all respond                        0.999      1.000      1.000      0.997      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000
+  all respond, half shift            0.749      0.898      0.964      0.703      0.882      0.957      0.828      0.946      0.985      0.787      0.937      0.980
+
+  180 trials per block
+  col                            t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                                           
+  planning                           0.624      0.804      0.900      0.559      0.765      0.866      0.663      0.845      0.928      0.593      0.802      0.901
+  half shift                         0.316      0.440      0.541      0.277      0.414      0.511      0.362      0.527      0.623      0.318      0.490      0.587
+  a quarter respond                  0.261      0.382      0.482      0.216      0.338      0.426      0.276      0.378      0.471      0.227      0.333      0.404
+  a quarter respond, half shift      0.150      0.186      0.217      0.129      0.169      0.204      0.168      0.204      0.246      0.141      0.184      0.226
+  all respond                        1.000      1.000      1.000      0.999      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000
+  all respond, half shift            0.837      0.948      0.983      0.794      0.933      0.978      0.872      0.966      0.992      0.839      0.960      0.990
+
+  All nuisances at their defaults plus pair-specific preferences (a sensitivity row)
+
+  150 trials per block
+  col         t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                        
+  planning        0.371      0.495      0.603      0.329      0.463      0.575      0.435      0.573      0.686      0.388      0.534      0.652
+  half shift      0.155      0.213      0.255      0.135      0.199      0.246      0.182      0.250      0.309      0.154      0.236      0.294
+
+  180 trials per block
+  col         t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  effect                                                                                                                                        
+  planning        0.417      0.574      0.686      0.372      0.546      0.660      0.442      0.619      0.733      0.395      0.585      0.702
+  half shift      0.199      0.254      0.318      0.171      0.242      0.299      0.204      0.273      0.342      0.177      0.253      0.325
+
+  Planning and half shift at every N (all nuisances at defaults):
+  test                      t            wilcoxon           
+  feature            contrast saturation contrast saturation
+  size effect     N                                         
+  150  half shift 10    0.242      0.258    0.213      0.221
+                  11    0.265      0.280    0.228      0.242
+                  12    0.271      0.295    0.251      0.269
+                  13    0.282      0.318    0.261      0.295
+                  14    0.301      0.337    0.270      0.301
+                  15    0.316      0.350    0.295      0.330
+                  16    0.335      0.375    0.310      0.345
+                  17    0.346      0.391    0.329      0.371
+                  18    0.367      0.387    0.346      0.369
+                  19    0.373      0.411    0.349      0.381
+                  20    0.382      0.435    0.360      0.405
+       planning   10    0.467      0.516    0.411      0.462
+                  11    0.508      0.552    0.449      0.484
+                  12    0.532      0.592    0.496      0.549
+                  13    0.560      0.615    0.528      0.578
+                  14    0.596      0.652    0.557      0.606
+                  15    0.630      0.682    0.591      0.645
+                  16    0.665      0.721    0.629      0.677
+                  17    0.683      0.746    0.653      0.711
+                  18    0.710      0.758    0.683      0.728
+                  19    0.727      0.788    0.693      0.749
+                  20    0.750      0.809    0.719      0.779
+  180  half shift 10    0.245      0.254    0.215      0.220
+                  11    0.264      0.270    0.225      0.232
+                  12    0.266      0.289    0.244      0.265
+                  13    0.281      0.307    0.264      0.284
+                  14    0.304      0.337    0.275      0.306
+                  15    0.317      0.360    0.295      0.334
+                  16    0.345      0.396    0.317      0.365
+                  17    0.374      0.398    0.354      0.378
+                  18    0.368      0.409    0.349      0.385
+                  19    0.384      0.439    0.355      0.408
+                  20    0.399      0.454    0.376      0.424
+       planning   10    0.536      0.528    0.475      0.470
+                  11    0.580      0.578    0.511      0.505
+                  12    0.614      0.604    0.572      0.557
+                  13    0.649      0.635    0.607      0.593
+                  14    0.678      0.680    0.635      0.630
+                  15    0.701      0.710    0.661      0.663
+                  16    0.749      0.745    0.710      0.700
+                  17    0.764      0.773    0.737      0.737
+                  18    0.785      0.792    0.754      0.756
+                  19    0.800      0.812    0.770      0.772
+                  20    0.820      0.822    0.786      0.787
+
+6. THE CHOICE OF PRIMARY TEST
+------------------------------------------------------------------------------
+The rule, fixed before the run: a test qualifies if its false-positive rate is
+at most 0.05 + 2 SE (that cell's Monte Carlo SE) in every rule row (section 4), at N = 10, 15, 20, both sizes
+and both features. Among qualifying tests, the higher mean power over planning
+and half shift (all nuisances at defaults, same N, sizes, features) wins; within
+0.02 of each other, the wilcoxon test.
+  Cells per test: 96. If a test's true rate were exactly 0.05 everywhere, about
+  2.2 of them would exceed the limit by chance alone (up to 5 in 95% of runs), so a test
+  that is exactly calibrated can fail this rule by chance; the cells over the limit
+  are listed so this can be judged. The rule is applied as fixed; this line is
+  information only.
+  t         qualifies: NO; cells over the limit 1; worst 0.0582 (scene dependence (SD x1, stability 0.7), 150, N=10, saturation);
+            mean false-positive rate 0.0504; mean power 0.4993
+            over the limit: block order (second block: lapse +0.05, preferences x0.9), 180, N=20, contrast: 0.0579 > 0.0576
+  wilcoxon  qualifies: NO; cells over the limit 1; worst 0.0567 (block order (second block: lapse +0.05, preferences x0.9), 180, N=20, contrast);
+            mean false-positive rate 0.0467; mean power 0.4641
+            over the limit: block order (second block: lapse +0.05, preferences x0.9), 180, N=20, contrast: 0.0567 > 0.0567
+
+  NO TEST QUALIFIES. The rule chooses nothing; see the cells over the limit.
+
+7. THE MIXED-EFFECTS LOGISTIC MODEL (alternative; the user's addition)
+------------------------------------------------------------------------------
+  2,500 studies per cell; the paired tests on the SAME studies beside it.
+  z: one-sided Wald z; t(N-1): the same statistic against t with N-1 df.
+   size     effect                nuisances  N    feature  mixed_z  mixed_z_se  mixed_t  paired_t  wilcoxon  gain_over_t  gain_over_t_se  gain_over_wilcoxon  gain_over_wilcoxon_se  converged  iterations_max
+    150  no effect             no nuisances 10 saturation    0.038       0.004    0.020     0.044     0.040       -0.006           0.003              -0.001                  0.004      1.000             156
+    150  no effect             no nuisances 10   contrast    0.038       0.005    0.023     0.055     0.044       -0.017           0.004              -0.006                  0.004      1.000             156
+    150  no effect             no nuisances 15 saturation    0.039       0.004    0.028     0.053     0.048       -0.014           0.004              -0.009                  0.004      1.000             120
+    150  no effect             no nuisances 15   contrast    0.036       0.005    0.026     0.049     0.046       -0.013           0.004              -0.011                  0.004      1.000             120
+    150  no effect             no nuisances 20 saturation    0.034       0.005    0.025     0.045     0.043       -0.011           0.003              -0.008                  0.002      1.000             102
+    150  no effect             no nuisances 20   contrast    0.040       0.004    0.033     0.053     0.052       -0.013           0.002              -0.012                  0.002      1.000             102
+    150  no effect all nuisances (defaults) 10 saturation    0.039       0.005    0.031     0.043     0.037       -0.004           0.003               0.002                  0.003      1.000             146
+    150  no effect all nuisances (defaults) 10   contrast    0.048       0.007    0.028     0.046     0.040        0.002           0.004               0.008                  0.006      1.000             146
+    150  no effect all nuisances (defaults) 15 saturation    0.052       0.006    0.042     0.058     0.055       -0.006           0.003              -0.003                  0.004      1.000             104
+    150  no effect all nuisances (defaults) 15   contrast    0.047       0.005    0.038     0.049     0.046       -0.002           0.003               0.001                  0.004      1.000             104
+    150  no effect all nuisances (defaults) 20 saturation    0.047       0.006    0.043     0.052     0.050       -0.005           0.003              -0.003                  0.003      1.000             104
+    150  no effect all nuisances (defaults) 20   contrast    0.050       0.005    0.043     0.053     0.050       -0.002           0.003               0.001                  0.003      1.000             104
+    150   planning all nuisances (defaults) 10 saturation    0.594       0.019    0.527     0.534     0.481        0.060           0.005               0.113                  0.007      1.000             182
+    150   planning all nuisances (defaults) 10   contrast    0.533       0.022    0.463     0.473     0.418        0.060           0.006               0.115                  0.007      1.000             182
+    150   planning all nuisances (defaults) 15 saturation    0.708       0.015    0.663     0.672     0.634        0.036           0.004               0.074                  0.009      1.000             125
+    150   planning all nuisances (defaults) 15   contrast    0.672       0.018    0.624     0.643     0.610        0.028           0.003               0.061                  0.005      1.000             125
+    150   planning all nuisances (defaults) 20 saturation    0.814       0.014    0.786     0.804     0.770        0.010           0.003               0.043                  0.005      1.000             139
+    150   planning all nuisances (defaults) 20   contrast    0.757       0.014    0.734     0.749     0.724        0.008           0.004               0.034                  0.005      1.000             139
+    150 half shift all nuisances (defaults) 10 saturation    0.270       0.017    0.212     0.248     0.207        0.022           0.007               0.062                  0.008      1.000             188
+    150 half shift all nuisances (defaults) 10   contrast    0.256       0.019    0.204     0.242     0.209        0.014           0.006               0.048                  0.007      1.000             188
+    150 half shift all nuisances (defaults) 15 saturation    0.352       0.019    0.308     0.358     0.327       -0.006           0.004               0.025                  0.006      1.000             153
+    150 half shift all nuisances (defaults) 15   contrast    0.325       0.020    0.290     0.327     0.310       -0.002           0.004               0.015                  0.006      1.000             153
+    150 half shift all nuisances (defaults) 20 saturation    0.428       0.021    0.401     0.450     0.419       -0.022           0.004               0.009                  0.006      1.000             121
+    150 half shift all nuisances (defaults) 20   contrast    0.389       0.020    0.358     0.399     0.380       -0.010           0.005               0.009                  0.006      1.000             121
+    180  no effect             no nuisances 10 saturation    0.040       0.005    0.028     0.054     0.046       -0.015           0.003              -0.006                  0.004      1.000             133
+    180  no effect             no nuisances 10   contrast    0.038       0.005    0.027     0.046     0.040       -0.008           0.002              -0.002                  0.003      1.000             133
+    180  no effect             no nuisances 15 saturation    0.033       0.004    0.024     0.045     0.039       -0.012           0.003              -0.006                  0.003      1.000             104
+    180  no effect             no nuisances 15   contrast    0.038       0.005    0.030     0.046     0.041       -0.008           0.002              -0.003                  0.002      1.000             104
+    180  no effect             no nuisances 20 saturation    0.034       0.005    0.027     0.048     0.048       -0.013           0.003              -0.014                  0.004      1.000              86
+    180  no effect             no nuisances 20   contrast    0.034       0.005    0.028     0.044     0.044       -0.010           0.003              -0.010                  0.004      1.000              86
+    180  no effect all nuisances (defaults) 10 saturation    0.055       0.007    0.039     0.054     0.044        0.001           0.003               0.011                  0.003      1.000             134
+    180  no effect all nuisances (defaults) 10   contrast    0.053       0.005    0.035     0.052     0.043        0.000           0.004               0.010                  0.003      1.000             134
+    180  no effect all nuisances (defaults) 15 saturation    0.050       0.005    0.041     0.053     0.046       -0.002           0.004               0.004                  0.004      1.000             107
+    180  no effect all nuisances (defaults) 15   contrast    0.054       0.005    0.039     0.058     0.055       -0.004           0.002              -0.001                  0.004      1.000             107
+    180  no effect all nuisances (defaults) 20 saturation    0.056       0.006    0.049     0.058     0.059       -0.002           0.002              -0.004                  0.003      1.000              72
+    180  no effect all nuisances (defaults) 20   contrast    0.042       0.004    0.034     0.043     0.042       -0.001           0.002               0.000                  0.003      1.000              72
+    180   planning all nuisances (defaults) 10 saturation    0.596       0.016    0.527     0.533     0.470        0.064           0.005               0.127                  0.009      1.000             184
+    180   planning all nuisances (defaults) 10   contrast    0.600       0.016    0.531     0.543     0.486        0.057           0.006               0.114                  0.007      1.000             184
+    180   planning all nuisances (defaults) 15 saturation    0.732       0.013    0.701     0.706     0.669        0.026           0.004               0.063                  0.006      1.000              91
+    180   planning all nuisances (defaults) 15   contrast    0.723       0.017    0.691     0.697     0.661        0.026           0.004               0.062                  0.007      1.000              91
+    180   planning all nuisances (defaults) 20 saturation    0.828       0.009    0.807     0.820     0.786        0.008           0.002               0.042                  0.004      1.000             126
+    180   planning all nuisances (defaults) 20   contrast    0.837       0.012    0.813     0.824     0.798        0.013           0.003               0.039                  0.005      1.000             126
+    180 half shift all nuisances (defaults) 10 saturation    0.276       0.016    0.216     0.258     0.216        0.018           0.005               0.060                  0.006      1.000             148
+    180 half shift all nuisances (defaults) 10   contrast    0.263       0.016    0.200     0.245     0.210        0.018           0.006               0.052                  0.008      1.000             148
+    180 half shift all nuisances (defaults) 15 saturation    0.382       0.014    0.338     0.376     0.358        0.006           0.006               0.024                  0.008      1.000             154
+    180 half shift all nuisances (defaults) 15   contrast    0.322       0.017    0.280     0.309     0.292        0.014           0.004               0.030                  0.005      1.000             154
+    180 half shift all nuisances (defaults) 20 saturation    0.448       0.019    0.410     0.460     0.426       -0.012           0.006               0.023                  0.007      1.000              95
+    180 half shift all nuisances (defaults) 20   contrast    0.394       0.023    0.364     0.395     0.375       -0.002           0.004               0.018                  0.006      1.000              95
+
+  False positives (Wald z): largest 0.0556 against a limit of up to 0.0646 -> controlled.
+  No primary test was chosen by the rule, so the mixed model is compared with both.
+  Power gain over the t test under half shift at N = 15 (size x feature): -0.006, -0.002, +0.006, +0.014; needed >= 0.05 in every one -> not worth registering.
+  Power gain over the wilcoxon test under half shift at N = 15 (size x feature): +0.025, +0.015, +0.024, +0.030; needed >= 0.05 in every one -> not worth registering.
+  VERDICT: the mixed model is NOT worth registering by this criterion.
+
+8. SECONDARY: SIGN TEST ON DETECTED COUNTS WITHIN EACH BLOCK
+------------------------------------------------------------------------------
+Per block, each person's weight is classified with the per-set thresholds of
+script 6 (side model); the claim needs d >= 5 detections and the exact one-sided
+binomial (v4's Table 4 rule). Derealization block: the secondary H1/H2.
+Ordinary block: the same rule, as a reference.
+Note: within one block the sign test asks whether a directional preference exists;
+it cannot tell a preference shared by both episodes (e.g. 'memory makes it duller',
+one of the default nuisances) from a derealization effect, so with nuisances at
+their defaults it claims in many studies with no derealization effect (second table).
+That is why the paired test is primary.
+
+  col                                                          der:con:N10  der:con:N15  der:con:N20  der:sat:N10  der:sat:N15  der:sat:N20  ord:con:N10  ord:con:N15  ord:con:N20  ord:sat:N10  ord:sat:N15  ord:sat:N20
+  size scenario                 effect                                                                                                                                                                                   
+  150  all nuisances (defaults) planning                             0.440        0.774        0.917        0.410        0.715        0.869        0.022        0.096        0.195        0.022        0.077        0.141
+                                half shift                           0.451        0.799        0.928        0.410        0.713        0.874        0.145        0.442        0.664        0.167        0.415        0.601
+                                a quarter respond                    0.156        0.424        0.653        0.157        0.361        0.522        0.021        0.093        0.190        0.021        0.086        0.152
+                                a quarter respond, half shift        0.163        0.429        0.644        0.155        0.385        0.555        0.072        0.264        0.436        0.070        0.223        0.354
+                                all respond                          0.959        1.000        1.000        0.966        1.000        1.000        0.021        0.096        0.202        0.026        0.087        0.159
+                                all respond, half shift              0.957        1.000        1.000        0.966        1.000        1.000        0.441        0.840        0.962        0.553        0.869        0.962
+  180  all nuisances (defaults) planning                             0.549        0.852        0.954        0.472        0.757        0.891        0.039        0.151        0.278        0.039        0.116        0.179
+                                half shift                           0.544        0.844        0.956        0.465        0.749        0.886        0.236        0.572        0.777        0.244        0.489        0.658
+                                a quarter respond                    0.209        0.512        0.711        0.195        0.400        0.577        0.032        0.142        0.268        0.039        0.109        0.180
+                                a quarter respond, half shift        0.215        0.505        0.695        0.175        0.373        0.541        0.108        0.323        0.514        0.100        0.267        0.403
+                                all respond                          0.986        1.000        1.000        0.980        1.000        1.000        0.034        0.135        0.272        0.027        0.094        0.172
+                                all respond, half shift              0.984        1.000        1.000        0.982        1.000        1.000        0.602        0.914        0.985        0.615        0.896        0.979
+
+  col                                      der:con:N10  der:con:N15  der:con:N20  der:sat:N10  der:sat:N15  der:sat:N20  ord:con:N10  ord:con:N15  ord:con:N20  ord:sat:N10  ord:sat:N15  ord:sat:N20
+  size scenario                 effect                                                                                                                                                               
+  150  no nuisances             no effect        0.000        0.001        0.002        0.000        0.001        0.002        0.000        0.002        0.003        0.000        0.001        0.002
+       all nuisances (defaults) no effect        0.019        0.091        0.196        0.025        0.081        0.141        0.022        0.096        0.193        0.022        0.084        0.148
+  180  no nuisances             no effect        0.000        0.002        0.006        0.000        0.001        0.003        0.001        0.002        0.005        0.000        0.001        0.003
+       all nuisances (defaults) no effect        0.036        0.133        0.249        0.034        0.100        0.171        0.034        0.135        0.248        0.030        0.093        0.167
+
+9. PER-BLOCK ATTENTION MEASURES
+------------------------------------------------------------------------------
+Means over analysable people in each pool: lapse rate, catch failures (of 5),
+consistency (share of repeats answered the same way), per block; and the share
+excluded. Then, per study, how often each measure flags more lapses in the
+derealization block (consistency: one-sided paired t; catch: one-sided sign test; alpha 0.05).
+   size                                                                 scenario  excluded_share  lapse_D  lapse_O  catch_D  catch_O  agree_D  agree_O
+    150                                                             no nuisances           0.049    0.097    0.097    0.312    0.311    0.505    0.505
+    150                                                      taste stability 0.7           0.047    0.098    0.098    0.308    0.313    0.504    0.505
+    150                                  scene dependence (SD x1, stability 0.7)           0.048    0.097    0.097    0.308    0.312    0.509    0.507
+    150                                                      side bias (SD 0.25)           0.051    0.097    0.097    0.312    0.310    0.498    0.498
+    150                           memory makes it duller (+0.25/+0.35, everyone)           0.046    0.097    0.097    0.314    0.312    0.516    0.516
+    150                                       edited looks odd (a quarter, -0.5)           0.046    0.097    0.097    0.311    0.311    0.513    0.513
+    150                block order (second block: lapse +0.05, preferences x0.9)           0.072    0.121    0.121    0.378    0.372    0.504    0.504
+    150                                                 all nuisances (defaults)           0.073    0.121    0.121    0.378    0.374    0.510    0.509
+    150                                                      taste stability 0.5           0.050    0.097    0.097    0.314    0.310    0.505    0.505
+    150                                                      taste stability 0.3           0.047    0.098    0.098    0.313    0.313    0.505    0.504
+    150                                                        taste stability 0           0.049    0.097    0.097    0.308    0.306    0.504    0.506
+    150                                                 scene dependence SD x0.5           0.049    0.097    0.097    0.311    0.307    0.506    0.505
+    150                                                   scene dependence SD x2           0.048    0.097    0.097    0.313    0.308    0.521    0.520
+    150                                            scene dependence, stability 0           0.049    0.097    0.097    0.315    0.310    0.509    0.510
+    150                                            scene dependence, stability 1           0.048    0.097    0.097    0.313    0.311    0.510    0.509
+    150                                               common scene effect SD 0.1           0.047    0.097    0.097    0.316    0.309    0.506    0.506
+    150                                                         side bias SD 0.5           0.047    0.097    0.097    0.311    0.314    0.482    0.481
+    150                                              side bias SD 0.25, mean 0.2           0.047    0.097    0.097    0.314    0.307    0.494    0.495
+    150                                         memory makes it duller +0.5/+0.7           0.048    0.097    0.097    0.307    0.314    0.544    0.544
+    150                                                   edited looks odd, half           0.049    0.097    0.097    0.309    0.313    0.522    0.521
+    150                                    block order: second-block lapse +0.10           0.103    0.146    0.145    0.437    0.431    0.503    0.505
+    150                                            block order: preferences x0.8           0.049    0.097    0.097    0.312    0.312    0.504    0.503
+    150                                            block order: preferences x1.2           0.048    0.097    0.097    0.308    0.313    0.505    0.505
+    150                                    lapse rising across the block (+0.10)           0.050    0.097    0.097    0.307    0.313    0.505    0.505
+    150                                         pair-specific preferences SD 1.0           0.049    0.097    0.097    0.306    0.310    0.573    0.573
+    150                                         pair-specific preferences SD 2.0           0.049    0.097    0.097    0.308    0.314    0.661    0.663
+    150                                                all nuisances (high ends)           0.106    0.145    0.146    0.433    0.437    0.506    0.505
+    150                                                derealization lapse +0.05           0.074    0.147    0.097    0.464    0.296    0.502    0.504
+    150                                                 derealization lapse +0.1           0.104    0.195    0.095    0.600    0.271    0.504    0.505
+    150                                                derealization lapse +0.15           0.141    0.244    0.094    0.721    0.255    0.504    0.504
+    150                         derealization lapse +0.05, with edited looks odd           0.074    0.146    0.096    0.465    0.289    0.511    0.513
+    150                          derealization lapse +0.1, with edited looks odd           0.104    0.195    0.095    0.598    0.274    0.511    0.512
+    150                         derealization lapse +0.15, with edited looks odd           0.141    0.245    0.095    0.721    0.255    0.510    0.512
+    150                   derealization lapse +0.05, with memory makes it duller           0.072    0.146    0.096    0.461    0.289    0.514    0.516
+    150                    derealization lapse +0.1, with memory makes it duller           0.105    0.195    0.095    0.600    0.275    0.513    0.516
+    150                   derealization lapse +0.15, with memory makes it duller           0.140    0.245    0.095    0.727    0.252    0.512    0.515
+    150                       all nuisances (defaults), derealization lapse +0.1           0.147    0.219    0.119    0.648    0.329    0.508    0.511
+    150 all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)           0.074    0.121    0.121    0.376    0.377    0.515    0.510
+    150         derealization lapse +0.05, with pair-specific preferences SD 1.5           0.073    0.146    0.096    0.455    0.289    0.608    0.622
+    150          derealization lapse +0.1, with pair-specific preferences SD 1.5           0.102    0.196    0.096    0.597    0.273    0.596    0.621
+    150         derealization lapse +0.15, with pair-specific preferences SD 1.5           0.139    0.244    0.094    0.724    0.255    0.585    0.621
+    150              all nuisances (defaults) + pair-specific preferences SD 1.5           0.072    0.121    0.121    0.378    0.374    0.614    0.614
+    180                                                             no nuisances           0.048    0.097    0.097    0.314    0.312    0.505    0.505
+    180                                                      taste stability 0.7           0.047    0.097    0.097    0.312    0.308    0.506    0.505
+    180                                  scene dependence (SD x1, stability 0.7)           0.049    0.097    0.097    0.308    0.313    0.509    0.509
+    180                                                      side bias (SD 0.25)           0.049    0.097    0.097    0.312    0.309    0.499    0.499
+    180                           memory makes it duller (+0.25/+0.35, everyone)           0.048    0.097    0.097    0.312    0.309    0.516    0.516
+    180                                       edited looks odd (a quarter, -0.5)           0.048    0.097    0.097    0.310    0.310    0.512    0.512
+    180                block order (second block: lapse +0.05, preferences x0.9)           0.075    0.121    0.121    0.369    0.377    0.504    0.505
+    180                                                 all nuisances (defaults)           0.073    0.121    0.121    0.376    0.371    0.510    0.510
+    180                                                      taste stability 0.5           0.047    0.097    0.097    0.314    0.313    0.506    0.504
+    180                                                      taste stability 0.3           0.051    0.097    0.097    0.308    0.310    0.505    0.506
+    180                                                        taste stability 0           0.048    0.097    0.097    0.309    0.313    0.504    0.504
+    180                                                 scene dependence SD x0.5           0.047    0.097    0.097    0.311    0.313    0.506    0.506
+    180                                                   scene dependence SD x2           0.049    0.097    0.097    0.313    0.312    0.522    0.520
+    180                                            scene dependence, stability 0           0.049    0.097    0.097    0.315    0.316    0.509    0.509
+    180                                            scene dependence, stability 1           0.048    0.097    0.097    0.309    0.309    0.511    0.510
+    180                                               common scene effect SD 0.1           0.047    0.097    0.097    0.307    0.312    0.507    0.507
+    180                                                         side bias SD 0.5           0.049    0.097    0.097    0.310    0.310    0.481    0.483
+    180                                              side bias SD 0.25, mean 0.2           0.048    0.097    0.097    0.311    0.313    0.495    0.496
+    180                                         memory makes it duller +0.5/+0.7           0.049    0.097    0.097    0.314    0.314    0.542    0.543
+    180                                                   edited looks odd, half           0.049    0.097    0.097    0.315    0.312    0.520    0.518
+    180                                    block order: second-block lapse +0.10           0.103    0.146    0.146    0.435    0.441    0.505    0.505
+    180                                            block order: preferences x0.8           0.050    0.097    0.097    0.310    0.312    0.504    0.504
+    180                                            block order: preferences x1.2           0.049    0.097    0.097    0.310    0.311    0.506    0.506
+    180                                    lapse rising across the block (+0.10)           0.047    0.097    0.097    0.311    0.309    0.505    0.505
+    180                                         pair-specific preferences SD 1.0           0.048    0.097    0.097    0.314    0.309    0.573    0.574
+    180                                         pair-specific preferences SD 2.0           0.049    0.097    0.097    0.311    0.311    0.662    0.663
+    180                                                all nuisances (high ends)           0.103    0.146    0.146    0.432    0.442    0.506    0.506
+    180                                                derealization lapse +0.05           0.073    0.146    0.096    0.455    0.292    0.505    0.505
+    180                                                 derealization lapse +0.1           0.105    0.195    0.095    0.601    0.272    0.505    0.505
+    180                                                derealization lapse +0.15           0.141    0.245    0.095    0.722    0.253    0.503    0.504
+    180                         derealization lapse +0.05, with edited looks odd           0.074    0.146    0.096    0.457    0.292    0.511    0.512
+    180                          derealization lapse +0.1, with edited looks odd           0.103    0.196    0.096    0.596    0.272    0.509    0.511
+    180                         derealization lapse +0.15, with edited looks odd           0.141    0.245    0.095    0.724    0.251    0.509    0.513
+    180                   derealization lapse +0.05, with memory makes it duller           0.074    0.146    0.096    0.460    0.291    0.513    0.515
+    180                    derealization lapse +0.1, with memory makes it duller           0.108    0.196    0.096    0.598    0.272    0.512    0.515
+    180                   derealization lapse +0.15, with memory makes it duller           0.141    0.245    0.095    0.725    0.256    0.511    0.516
+    180                       all nuisances (defaults), derealization lapse +0.1           0.142    0.220    0.120    0.647    0.330    0.508    0.509
+    180 all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)           0.072    0.121    0.121    0.380    0.372    0.515    0.510
+    180         derealization lapse +0.05, with pair-specific preferences SD 1.5           0.074    0.147    0.097    0.459    0.293    0.609    0.622
+    180          derealization lapse +0.1, with pair-specific preferences SD 1.5           0.106    0.196    0.096    0.596    0.278    0.596    0.622
+    180         derealization lapse +0.15, with pair-specific preferences SD 1.5           0.140    0.245    0.095    0.723    0.252    0.584    0.623
+    180              all nuisances (defaults) + pair-specific preferences SD 1.5           0.075    0.121    0.121    0.377    0.374    0.613    0.614
+
+                                                                                consistency_flags             catch_flags            
+  N                                                                                            10    15    20          10    15    20
+  size scenario                                                                                                                      
+  150  no nuisances                                                                         0.045 0.046 0.045       0.011 0.018 0.022
+       taste stability 0.7                                                                  0.050 0.056 0.053       0.008 0.017 0.018
+       scene dependence (SD x1, stability 0.7)                                              0.046 0.044 0.047       0.009 0.017 0.020
+       side bias (SD 0.25)                                                                  0.051 0.052 0.044       0.010 0.016 0.020
+       memory makes it duller (+0.25/+0.35, everyone)                                       0.046 0.048 0.050       0.008 0.016 0.020
+       edited looks odd (a quarter, -0.5)                                                   0.046 0.050 0.048       0.006 0.015 0.018
+       block order (second block: lapse +0.05, preferences x0.9)                            0.042 0.057 0.051       0.011 0.019 0.023
+       all nuisances (defaults)                                                             0.051 0.047 0.046       0.010 0.019 0.022
+       taste stability 0.5                                                                  0.056 0.050 0.053       0.008 0.013 0.021
+       taste stability 0.3                                                                  0.040 0.043 0.043       0.009 0.015 0.018
+       taste stability 0                                                                    0.054 0.057 0.059       0.007 0.018 0.024
+       scene dependence SD x0.5                                                             0.052 0.050 0.049       0.011 0.018 0.023
+       scene dependence SD x2                                                               0.048 0.049 0.047       0.008 0.017 0.021
+       scene dependence, stability 0                                                        0.058 0.053 0.047       0.010 0.020 0.022
+       scene dependence, stability 1                                                        0.051 0.049 0.057       0.009 0.016 0.019
+       common scene effect SD 0.1                                                           0.051 0.053 0.051       0.010 0.017 0.021
+       side bias SD 0.5                                                                     0.059 0.054 0.053       0.010 0.018 0.023
+       side bias SD 0.25, mean 0.2                                                          0.046 0.043 0.056       0.010 0.018 0.020
+       memory makes it duller +0.5/+0.7                                                     0.054 0.052 0.055       0.008 0.019 0.018
+       edited looks odd, half                                                               0.047 0.044 0.046       0.008 0.016 0.018
+       block order: second-block lapse +0.10                                                0.055 0.057 0.061       0.009 0.016 0.022
+       block order: preferences x0.8                                                        0.050 0.040 0.044       0.009 0.017 0.021
+       block order: preferences x1.2                                                        0.055 0.056 0.057       0.011 0.017 0.021
+       lapse rising across the block (+0.10)                                                0.046 0.049 0.049       0.011 0.016 0.017
+       pair-specific preferences SD 1.0                                                     0.056 0.051 0.058       0.008 0.014 0.017
+       pair-specific preferences SD 2.0                                                     0.051 0.052 0.049       0.006 0.015 0.015
+       all nuisances (high ends)                                                            0.054 0.049 0.052       0.010 0.014 0.020
+       derealization lapse +0.05                                                            0.050 0.053 0.052       0.051 0.087 0.120
+       derealization lapse +0.1                                                             0.049 0.054 0.050       0.140 0.245 0.357
+       derealization lapse +0.15                                                            0.050 0.047 0.052       0.245 0.402 0.563
+       derealization lapse +0.05, with edited looks odd                                     0.061 0.052 0.054       0.046 0.088 0.128
+       derealization lapse +0.1, with edited looks odd                                      0.046 0.044 0.049       0.117 0.221 0.327
+       derealization lapse +0.15, with edited looks odd                                     0.056 0.062 0.063       0.239 0.403 0.557
+       derealization lapse +0.05, with memory makes it duller                               0.055 0.056 0.049       0.046 0.089 0.125
+       derealization lapse +0.1, with memory makes it duller                                0.044 0.048 0.052       0.127 0.228 0.322
+       derealization lapse +0.15, with memory makes it duller                               0.058 0.055 0.054       0.241 0.421 0.570
+       all nuisances (defaults), derealization lapse +0.1                                   0.053 0.054 0.058       0.111 0.193 0.290
+       all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)             0.041 0.034 0.038       0.015 0.019 0.024
+       derealization lapse +0.05, with pair-specific preferences SD 1.5                     0.068 0.073 0.081       0.046 0.082 0.123
+       derealization lapse +0.1, with pair-specific preferences SD 1.5                      0.107 0.125 0.134       0.131 0.237 0.343
+       derealization lapse +0.15, with pair-specific preferences SD 1.5                     0.140 0.172 0.201       0.242 0.405 0.570
+       all nuisances (defaults) + pair-specific preferences SD 1.5                          0.049 0.050 0.049       0.012 0.015 0.017
+  180  no nuisances                                                                         0.050 0.051 0.052       0.010 0.017 0.022
+       taste stability 0.7                                                                  0.044 0.047 0.045       0.011 0.018 0.022
+       scene dependence (SD x1, stability 0.7)                                              0.046 0.051 0.050       0.008 0.015 0.023
+       side bias (SD 0.25)                                                                  0.049 0.047 0.050       0.011 0.018 0.021
+       memory makes it duller (+0.25/+0.35, everyone)                                       0.050 0.048 0.054       0.008 0.019 0.023
+       edited looks odd (a quarter, -0.5)                                                   0.046 0.054 0.051       0.009 0.019 0.021
+       block order (second block: lapse +0.05, preferences x0.9)                            0.048 0.048 0.051       0.011 0.016 0.023
+       all nuisances (defaults)                                                             0.048 0.050 0.046       0.010 0.017 0.020
+       taste stability 0.5                                                                  0.048 0.045 0.046       0.008 0.015 0.020
+       taste stability 0.3                                                                  0.053 0.051 0.051       0.009 0.013 0.017
+       taste stability 0                                                                    0.050 0.059 0.051       0.011 0.020 0.023
+       scene dependence SD x0.5                                                             0.051 0.047 0.046       0.011 0.017 0.020
+       scene dependence SD x2                                                               0.042 0.043 0.046       0.010 0.016 0.021
+       scene dependence, stability 0                                                        0.046 0.044 0.045       0.008 0.015 0.020
+       scene dependence, stability 1                                                        0.053 0.052 0.051       0.009 0.018 0.024
+       common scene effect SD 0.1                                                           0.051 0.050 0.047       0.006 0.014 0.018
+       side bias SD 0.5                                                                     0.049 0.048 0.054       0.009 0.018 0.023
+       side bias SD 0.25, mean 0.2                                                          0.048 0.051 0.049       0.011 0.015 0.021
+       memory makes it duller +0.5/+0.7                                                     0.058 0.052 0.055       0.011 0.019 0.023
+       edited looks odd, half                                                               0.054 0.048 0.046       0.008 0.018 0.019
+       block order: second-block lapse +0.10                                                0.046 0.048 0.048       0.009 0.013 0.018
+       block order: preferences x0.8                                                        0.058 0.055 0.052       0.009 0.016 0.020
+       block order: preferences x1.2                                                        0.047 0.050 0.050       0.009 0.015 0.019
+       lapse rising across the block (+0.10)                                                0.050 0.049 0.047       0.009 0.015 0.021
+       pair-specific preferences SD 1.0                                                     0.053 0.053 0.050       0.009 0.017 0.020
+       pair-specific preferences SD 2.0                                                     0.049 0.051 0.048       0.010 0.015 0.020
+       all nuisances (high ends)                                                            0.052 0.051 0.054       0.007 0.011 0.019
+       derealization lapse +0.05                                                            0.043 0.048 0.047       0.040 0.079 0.110
+       derealization lapse +0.1                                                             0.052 0.055 0.062       0.144 0.250 0.349
+       derealization lapse +0.15                                                            0.051 0.056 0.050       0.233 0.397 0.552
+       derealization lapse +0.05, with edited looks odd                                     0.053 0.051 0.051       0.050 0.083 0.124
+       derealization lapse +0.1, with edited looks odd                                      0.053 0.056 0.062       0.122 0.223 0.316
+       derealization lapse +0.15, with edited looks odd                                     0.050 0.060 0.055       0.247 0.418 0.589
+       derealization lapse +0.05, with memory makes it duller                               0.059 0.053 0.055       0.046 0.087 0.115
+       derealization lapse +0.1, with memory makes it duller                                0.062 0.058 0.059       0.136 0.231 0.348
+       derealization lapse +0.15, with memory makes it duller                               0.060 0.068 0.065       0.228 0.406 0.577
+       all nuisances (defaults), derealization lapse +0.1                                   0.050 0.047 0.051       0.108 0.198 0.296
+       all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)             0.038 0.038 0.043       0.011 0.018 0.024
+       derealization lapse +0.05, with pair-specific preferences SD 1.5                     0.068 0.090 0.098       0.047 0.081 0.115
+       derealization lapse +0.1, with pair-specific preferences SD 1.5                      0.102 0.132 0.143       0.117 0.212 0.308
+       derealization lapse +0.15, with pair-specific preferences SD 1.5                     0.158 0.197 0.236       0.243 0.411 0.561
+       all nuisances (defaults) + pair-specific preferences SD 1.5                          0.046 0.049 0.048       0.011 0.019 0.023
+
+10. MONTE CARLO CHECK: headline cells on two independent pools
+------------------------------------------------------------------------------
+   size     effect  N     test    feature  rate_1  rate_2   se_1       z
+    150  no effect 10        t saturation  0.0474  0.0461 0.0031 -0.2563
+    150  no effect 10        t   contrast  0.0505  0.0527 0.0031  0.4228
+    150  no effect 10 wilcoxon saturation  0.0387  0.0380 0.0027 -0.1644
+    150  no effect 10 wilcoxon   contrast  0.0438  0.0436 0.0028 -0.0427
+    150  no effect 15        t saturation  0.0503  0.0480 0.0041 -0.4403
+    150  no effect 15        t   contrast  0.0483  0.0507 0.0033  0.4417
+    150  no effect 15 wilcoxon saturation  0.0477  0.0456 0.0038 -0.4194
+    150  no effect 15 wilcoxon   contrast  0.0482  0.0484 0.0028  0.0382
+    150  no effect 20        t saturation  0.0482  0.0502 0.0030  0.3873
+    150  no effect 20        t   contrast  0.0494  0.0528 0.0036  0.7353
+    150  no effect 20 wilcoxon saturation  0.0498  0.0477 0.0035 -0.4475
+    150  no effect 20 wilcoxon   contrast  0.0487  0.0511 0.0034  0.5290
+    150   planning 10        t saturation  0.5160  0.5284 0.0162  0.5576
+    150   planning 10        t   contrast  0.4671  0.4764 0.0202  0.4127
+    150   planning 10 wilcoxon saturation  0.4616  0.4704 0.0161  0.4135
+    150   planning 10 wilcoxon   contrast  0.4108  0.4206 0.0193  0.4503
+    150   planning 15        t saturation  0.6823  0.7009 0.0135  0.9738
+    150   planning 15        t   contrast  0.6297  0.6631 0.0138  1.9056
+    150   planning 15 wilcoxon saturation  0.6446  0.6604 0.0140  0.8307
+    150   planning 15 wilcoxon   contrast  0.5914  0.6266 0.0146  1.9234
+    150   planning 20        t saturation  0.8094  0.8326 0.0094  1.5840
+    150   planning 20        t   contrast  0.7503  0.7817 0.0092  2.3177
+    150   planning 20 wilcoxon saturation  0.7787  0.7948 0.0101  1.0147
+    150   planning 20 wilcoxon   contrast  0.7193  0.7552 0.0111  2.4431
+    150 half shift 10        t saturation  0.2582  0.2762 0.0120  1.0364
+    150 half shift 10        t   contrast  0.2416  0.2266 0.0159 -0.8151
+    150 half shift 10 wilcoxon saturation  0.2213  0.2357 0.0115  0.8894
+    150 half shift 10 wilcoxon   contrast  0.2132  0.1943 0.0148 -1.1055
+    150 half shift 15        t saturation  0.3496  0.3586 0.0149  0.4365
+    150 half shift 15        t   contrast  0.3155  0.2970 0.0166 -0.9567
+    150 half shift 15 wilcoxon saturation  0.3302  0.3323 0.0146  0.1100
+    150 half shift 15 wilcoxon   contrast  0.2953  0.2770 0.0153 -1.0136
+    150 half shift 20        t saturation  0.4348  0.4227 0.0177 -0.5535
+    150 half shift 20        t   contrast  0.3816  0.3626 0.0174 -0.8741
+    150 half shift 20 wilcoxon saturation  0.4046  0.4027 0.0167 -0.0945
+    150 half shift 20 wilcoxon   contrast  0.3603  0.3381 0.0176 -1.0416
+    180  no effect 10        t saturation  0.0496  0.0550 0.0040  0.7490
+    180  no effect 10        t   contrast  0.0528  0.0504 0.0035 -0.4130
+    180  no effect 10 wilcoxon saturation  0.0402  0.0472 0.0031  1.1402
+    180  no effect 10 wilcoxon   contrast  0.0443  0.0437 0.0033 -0.1138
+    180  no effect 15        t saturation  0.0504  0.0517 0.0041  0.2135
+    180  no effect 15        t   contrast  0.0532  0.0499 0.0050 -0.4964
+    180  no effect 15 wilcoxon saturation  0.0476  0.0497 0.0039  0.3335
+    180  no effect 15 wilcoxon   contrast  0.0492  0.0482 0.0048 -0.1580
+    180  no effect 20        t saturation  0.0486  0.0540 0.0055  0.6808
+    180  no effect 20        t   contrast  0.0504  0.0478 0.0043 -0.3769
+    180  no effect 20 wilcoxon saturation  0.0466  0.0520 0.0057  0.6343
+    180  no effect 20 wilcoxon   contrast  0.0467  0.0472 0.0039  0.0823
+    180   planning 10        t saturation  0.5277  0.5442 0.0144  0.7202
+    180   planning 10        t   contrast  0.5360  0.5318 0.0126 -0.2377
+    180   planning 10 wilcoxon saturation  0.4700  0.4907 0.0148  0.8704
+    180   planning 10 wilcoxon   contrast  0.4755  0.4706 0.0123 -0.2800
+    180   planning 15        t saturation  0.7102  0.7088 0.0125 -0.0614
+    180   planning 15        t   contrast  0.7013  0.6952 0.0121 -0.3587
+    180   planning 15 wilcoxon saturation  0.6634  0.6614 0.0132 -0.0852
+    180   planning 15 wilcoxon   contrast  0.6614  0.6553 0.0130 -0.3320
+    180   planning 20        t saturation  0.8219  0.8248 0.0098  0.2204
+    180   planning 20        t   contrast  0.8200  0.8052 0.0116 -0.9440
+    180   planning 20 wilcoxon saturation  0.7869  0.7900 0.0105  0.2178
+    180   planning 20 wilcoxon   contrast  0.7859  0.7733 0.0123 -0.7499
+    180 half shift 10        t saturation  0.2536  0.2982 0.0129  2.3967
+    180 half shift 10        t   contrast  0.2453  0.2573 0.0095  0.8279
+    180 half shift 10 wilcoxon saturation  0.2197  0.2594 0.0122  2.2657
+    180 half shift 10 wilcoxon   contrast  0.2154  0.2222 0.0095  0.4941
+    180 half shift 15        t saturation  0.3605  0.3886 0.0145  1.5494
+    180 half shift 15        t   contrast  0.3167  0.3361 0.0125  1.1082
+    180 half shift 15 wilcoxon saturation  0.3337  0.3649 0.0135  1.8497
+    180 half shift 15 wilcoxon   contrast  0.2950  0.3133 0.0131  1.1001
+    180 half shift 20        t saturation  0.4544  0.4718 0.0160  0.8126
+    180 half shift 20        t   contrast  0.3994  0.4104 0.0157  0.5429
+    180 half shift 20 wilcoxon saturation  0.4240  0.4493 0.0149  1.2585
+    180 half shift 20 wilcoxon   contrast  0.3758  0.3858 0.0157  0.5134
+
+11. FILES
+------------------------------------------------------------------------------
+  block_measures.csv
+  block_measures.png
+  checks.csv
+  false_positives.png
+  mixed_model.csv
+  paired_power.csv
+  pool_replicates.csv
+  power_vs_n.png
+  report.txt
+  run_meta.json
+  sanity_explore.csv
+  scenarios.csv
+  secondary_sign.csv
+  settings.json

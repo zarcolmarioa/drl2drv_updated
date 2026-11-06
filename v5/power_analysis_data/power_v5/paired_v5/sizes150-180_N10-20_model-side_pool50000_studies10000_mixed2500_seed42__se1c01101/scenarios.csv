@@ -1,0 +1,57 @@
+scenario,effect,role,taste_corr,scene_sd_mult,scene_corr,common_scene_sd,side_mean,side_sd,side_corr,dull,odd_share,odd_weight,order_lapse,order_scale,episode_lapse,differential_bias,lapse_drift,pair_sd
+no nuisances,no effect,null (rule),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+taste stability 0.7,no effect,null (rule),0.7,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"scene dependence (SD x1, stability 0.7)",no effect,null (rule),1.0,1.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+side bias (SD 0.25),no effect,null (rule),1.0,0.0,0.7,0.0,0.0,0.25,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"edited looks odd (a quarter, -0.5)",no effect,null (rule),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"block order (second block: lapse +0.05, preferences x0.9)",no effect,null (rule),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),no effect,null (rule),0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+taste stability 0.5,no effect,null (sensitivity),0.5,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+taste stability 0.3,no effect,null (sensitivity),0.3,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+taste stability 0,no effect,null (sensitivity),0.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+scene dependence SD x0.5,no effect,null (sensitivity),1.0,0.5,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+scene dependence SD x2,no effect,null (sensitivity),1.0,2.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"scene dependence, stability 0",no effect,null (sensitivity),1.0,1.0,0.0,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"scene dependence, stability 1",no effect,null (sensitivity),1.0,1.0,1.0,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+common scene effect SD 0.1,no effect,null (sensitivity),1.0,0.0,0.7,0.1,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+side bias SD 0.5,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.5,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"side bias SD 0.25, mean 0.2",no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.2,0.25,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+memory makes it duller +0.5/+0.7,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.5, 0.7)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+"edited looks odd, half",no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.5,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+block order: second-block lapse +0.10,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.1,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+block order: preferences x0.8,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.8,0.0,"(0.0, 0.0)",0.0,0.0
+block order: preferences x1.2,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.2,0.0,"(0.0, 0.0)",0.0,0.0
+lapse rising across the block (+0.10),no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.1,0.0
+pair-specific preferences SD 1.0,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,1.0
+pair-specific preferences SD 2.0,no effect,null (sensitivity),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,2.0
+all nuisances (high ends),no effect,null (sensitivity),0.0,2.0,0.0,0.0,0.2,0.5,0.8,"(0.5, 0.7)",0.5,0.5,0.1,0.8,0.0,"(0.0, 0.0)",0.0,0.0
+derealization lapse +0.05,no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.05,"(0.0, 0.0)",0.0,0.0
+derealization lapse +0.1,no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.1,"(0.0, 0.0)",0.0,0.0
+derealization lapse +0.15,no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.15,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.05, with edited looks odd",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.0,1.0,0.05,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.1, with edited looks odd",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.0,1.0,0.1,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.15, with edited looks odd",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.0,1.0,0.15,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.05, with memory makes it duller",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,1.0,0.05,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.1, with memory makes it duller",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,1.0,0.1,"(0.0, 0.0)",0.0,0.0
+"derealization lapse +0.15, with memory makes it duller",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,1.0,0.15,"(0.0, 0.0)",0.0,0.0
+"all nuisances (defaults), derealization lapse +0.1",no effect,threat,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.1,"(0.0, 0.0)",0.0,0.0
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",no effect,threat,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.1, 0.14)",0.0,0.0
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.05,"(0.0, 0.0)",0.0,1.5
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.1,"(0.0, 0.0)",0.0,1.5
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",no effect,threat,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.15,"(0.0, 0.0)",0.0,1.5
+all nuisances (defaults) + pair-specific preferences SD 1.5,no effect,null (sensitivity),0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,1.5
+all nuisances (defaults),planning,power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,planning,power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),half shift,power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,half shift,power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),a quarter respond,power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,a quarter respond,power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),"a quarter respond, half shift",power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,"a quarter respond, half shift",power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),all respond,power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,all respond,power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults),"all respond, half shift",power,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,0.0
+no nuisances,"all respond, half shift",power (no nuisances),1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,1.0,0.0,"(0.0, 0.0)",0.0,0.0
+all nuisances (defaults) + pair-specific preferences SD 1.5,planning,power (sensitivity),0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,1.5
+all nuisances (defaults) + pair-specific preferences SD 1.5,half shift,power (sensitivity),0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.05,0.9,0.0,"(0.0, 0.0)",0.0,1.5

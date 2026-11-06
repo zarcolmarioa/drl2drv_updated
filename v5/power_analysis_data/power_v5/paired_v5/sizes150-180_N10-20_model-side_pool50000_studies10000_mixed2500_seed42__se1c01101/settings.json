@@ -1,0 +1,487 @@
+{
+  "PROJECT_ROOT": null,
+  "PACKAGES": {
+    "150": "data/frozen_trial_lists_v5/v5_150",
+    "180": "data/frozen_trial_lists_v5/v5_180"
+  },
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "SETS": [
+    "A",
+    "B"
+  ],
+  "ORDERS": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "GROUP": "participant",
+  "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+  "CAPACITY_SCRIPT": "analyse_pair_capacity_v5.py",
+  "EXPLORE_SCRIPT": "explore_block_length_v5.py",
+  "THRESHOLDS_SCRIPT": "thresholds_v5.py",
+  "EXPECTED_SHA256": {
+    "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+    "analyse_pair_capacity_v5.py": "5a8483a2a388482295c998ffcbe91e4a0f2df70f668d472cc4718d3a138addc7",
+    "explore_block_length_v5.py": "98d641f60252be83dcece7a480cc2dd184a495c1fa8751458f052a823389bfb6",
+    "thresholds_v5.py": "90457ef9c8208581f54a4e3db90cabfb1efd058bcc8f8a4ba77d79e23daa589b"
+  },
+  "THRESHOLDS_RUN_DIR": "data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391",
+  "PERSON_MODEL": "side",
+  "THRESHOLD_SOURCE": {
+    "side": "same choosers as design.json",
+    "two-weight": "design.json (registered)"
+  },
+  "EXPLORE_RESULTS_CSV": "data/block_length_v5/without_p65_sizes120-150-180_mixes-conflict_heavy-v4_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s6821ca69/paired_power.csv",
+  "EXPLORE_MIX": "conflict_heavy",
+  "OUTPUT_ROOT": "data/power_v5/paired_v5",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "TASTE_SD": [
+    0.143,
+    0.244
+  ],
+  "LAPSE_MEAN": 0.1,
+  "LAPSE_BETWEEN_SD": 0.5,
+  "LAPSE_MAX": 0.9,
+  "CATCH_PER_BLOCK": 5,
+  "CATCH_P_FAIL_PER_LAPSE": 0.75,
+  "CATCH_FAIL_EXCLUDE": 3,
+  "EXCLUSION": true,
+  "EFFECTS": {
+    "no effect": {
+      "share": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "planning": {
+      "share": 0.5,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "half shift": {
+      "share": 0.5,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    },
+    "a quarter respond": {
+      "share": 0.25,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "a quarter respond, half shift": {
+      "share": 0.25,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    },
+    "all respond": {
+      "share": 1.0,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "all respond, half shift": {
+      "share": 1.0,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    }
+  },
+  "NUISANCE_OFF": {
+    "taste_corr": 1.0,
+    "scene_sd_mult": 0.0,
+    "scene_corr": 0.7,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.0,
+    "side_sd": 0.0,
+    "side_corr": 0.8,
+    "dull": [
+      0.0,
+      0.0
+    ],
+    "odd_share": 0.0,
+    "odd_weight": 0.5,
+    "order_lapse": 0.0,
+    "order_scale": 1.0,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "NUISANCE_DEFAULT": {
+    "taste_corr": 0.7,
+    "scene_sd_mult": 1.0,
+    "scene_corr": 0.7,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.0,
+    "side_sd": 0.25,
+    "side_corr": 0.8,
+    "dull": [
+      0.25,
+      0.35
+    ],
+    "odd_share": 0.25,
+    "odd_weight": 0.5,
+    "order_lapse": 0.05,
+    "order_scale": 0.9,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "NUISANCE_HIGH": {
+    "taste_corr": 0.0,
+    "scene_sd_mult": 2.0,
+    "scene_corr": 0.0,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.2,
+    "side_sd": 0.5,
+    "side_corr": 0.8,
+    "dull": [
+      0.5,
+      0.7
+    ],
+    "odd_share": 0.5,
+    "odd_weight": 0.5,
+    "order_lapse": 0.1,
+    "order_scale": 0.8,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "DEFAULT_ROWS": [
+    [
+      "taste stability 0.7",
+      {
+        "taste_corr": 0.7
+      }
+    ],
+    [
+      "scene dependence (SD x1, stability 0.7)",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 0.7
+      }
+    ],
+    [
+      "side bias (SD 0.25)",
+      {
+        "side_sd": 0.25
+      }
+    ],
+    [
+      "memory makes it duller (+0.25/+0.35, everyone)",
+      {
+        "dull": [
+          0.25,
+          0.35
+        ]
+      }
+    ],
+    [
+      "edited looks odd (a quarter, -0.5)",
+      {
+        "odd_share": 0.25
+      }
+    ],
+    [
+      "block order (second block: lapse +0.05, preferences x0.9)",
+      {
+        "order_lapse": 0.05,
+        "order_scale": 0.9
+      }
+    ]
+  ],
+  "SENSITIVITY_ROWS": [
+    [
+      "taste stability 0.5",
+      {
+        "taste_corr": 0.5
+      }
+    ],
+    [
+      "taste stability 0.3",
+      {
+        "taste_corr": 0.3
+      }
+    ],
+    [
+      "taste stability 0",
+      {
+        "taste_corr": 0.0
+      }
+    ],
+    [
+      "scene dependence SD x0.5",
+      {
+        "scene_sd_mult": 0.5
+      }
+    ],
+    [
+      "scene dependence SD x2",
+      {
+        "scene_sd_mult": 2.0
+      }
+    ],
+    [
+      "scene dependence, stability 0",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 0.0
+      }
+    ],
+    [
+      "scene dependence, stability 1",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 1.0
+      }
+    ],
+    [
+      "common scene effect SD 0.1",
+      {
+        "common_scene_sd": 0.1
+      }
+    ],
+    [
+      "side bias SD 0.5",
+      {
+        "side_sd": 0.5
+      }
+    ],
+    [
+      "side bias SD 0.25, mean 0.2",
+      {
+        "side_sd": 0.25,
+        "side_mean": 0.2
+      }
+    ],
+    [
+      "memory makes it duller +0.5/+0.7",
+      {
+        "dull": [
+          0.5,
+          0.7
+        ]
+      }
+    ],
+    [
+      "edited looks odd, half",
+      {
+        "odd_share": 0.5
+      }
+    ],
+    [
+      "block order: second-block lapse +0.10",
+      {
+        "order_lapse": 0.1
+      }
+    ],
+    [
+      "block order: preferences x0.8",
+      {
+        "order_scale": 0.8
+      }
+    ],
+    [
+      "block order: preferences x1.2",
+      {
+        "order_scale": 1.2
+      }
+    ],
+    [
+      "lapse rising across the block (+0.10)",
+      {
+        "lapse_drift": 0.1
+      }
+    ],
+    [
+      "pair-specific preferences SD 1.0",
+      {
+        "pair_sd": 1.0
+      }
+    ],
+    [
+      "pair-specific preferences SD 2.0",
+      {
+        "pair_sd": 2.0
+      }
+    ]
+  ],
+  "EPISODE_LAPSES": [
+    0.05,
+    0.1,
+    0.15
+  ],
+  "THREAT_INTERACTION_LAPSE": 0.1,
+  "DIFFERENTIAL_BIAS": [
+    0.1,
+    0.14
+  ],
+  "PAIR_SD_FOR_ROWS": 1.5,
+  "N_GRID": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "TABLE_N": [
+    10,
+    15,
+    20
+  ],
+  "POOL_PEOPLE": 50000,
+  "N_STUDIES": 10000,
+  "N_BATCHES": 20,
+  "TESTS": [
+    "t",
+    "wilcoxon"
+  ],
+  "ALPHA": 0.05,
+  "RULE_N": [
+    10,
+    15,
+    20
+  ],
+  "RULE_SE_MULT": 2.0,
+  "RULE_TIE": 0.02,
+  "RULE_PREFER": "wilcoxon",
+  "SANITY_SCENARIOS": [
+    "no effect",
+    "planning",
+    "half shift"
+  ],
+  "SANITY_N": [
+    10,
+    15,
+    20
+  ],
+  "SANITY_MAX_Z": 3.5,
+  "SANITY_SHARE_BEYOND": 0.1,
+  "SANITY_RANGE_SE": 3.0,
+  "REPLICATE_EFFECTS": [
+    "no effect",
+    "planning",
+    "half shift"
+  ],
+  "RUN_MIXED_MODEL": true,
+  "MIXED_STUDIES": 2500,
+  "MIXED_N": [
+    10,
+    15,
+    20
+  ],
+  "MIXED_CELLS": [
+    [
+      "no effect",
+      "no nuisances"
+    ],
+    [
+      "no effect",
+      "all nuisances (defaults)"
+    ],
+    [
+      "planning",
+      "all nuisances (defaults)"
+    ],
+    [
+      "half shift",
+      "all nuisances (defaults)"
+    ]
+  ],
+  "MIXED_MAX_ITER": 300,
+  "MIXED_TOL": 1e-05,
+  "MIXED_CHUNK": 250,
+  "MIXED_GAIN": 0.05,
+  "MIXED_GAIN_N": 15,
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "paired_v5"
+}
