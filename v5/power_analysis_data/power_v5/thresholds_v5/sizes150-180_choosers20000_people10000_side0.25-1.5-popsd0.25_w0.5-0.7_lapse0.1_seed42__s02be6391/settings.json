@@ -1,0 +1,80 @@
+{
+  "PROJECT_ROOT": null,
+  "PACKAGES": {
+    "150": "data/frozen_trial_lists_v5/v5_150",
+    "180": "data/frozen_trial_lists_v5/v5_180"
+  },
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "SETS": [
+    "A",
+    "B"
+  ],
+  "ORDERS": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+  "CAPACITY_SCRIPT": "analyse_pair_capacity_v5.py",
+  "EXPECTED_SHA256": {
+    "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+    "analyse_pair_capacity_v5.py": "5a8483a2a388482295c998ffcbe91e4a0f2df70f668d472cc4718d3a138addc7"
+  },
+  "OUTPUT_ROOT": "data/power_v5/thresholds_v5",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "N_THRESHOLD_PEOPLE": 20000,
+  "THRESHOLD_ALPHA": 0.025,
+  "REPRO_SEED": 42,
+  "REPRO_STREAM_KEY": "build_trials_v5",
+  "REPRO_STREAM_NAME": "thresholds{set}",
+  "REPRO_EXACT_TOL": 1e-12,
+  "QUANTILE_Z": 4.0,
+  "SET_THRESHOLD_TOL": 0.05,
+  "PLANNING_WEIGHTS": [
+    0.5,
+    0.7
+  ],
+  "PLANNING_LAPSE": 0.1,
+  "N_PEOPLE": 10000,
+  "SIDE_BIASES": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.5
+  ],
+  "SIDE_POPULATION_SD": 0.25,
+  "SIDE_LAPSE": 0.1,
+  "RULE_SIDE_BIAS": 0.5,
+  "RULE_TAIL_MAX": 0.035,
+  "RULE_WEIGHT_BIAS_MAX": 0.05,
+  "RULE_DETECTION_LOSS_MAX": 0.01,
+  "CURVE_WEIGHTS": [
+    0.0,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    1.0,
+    1.2
+  ],
+  "CURVE_LAPSES": [
+    0.0,
+    0.1,
+    0.2
+  ],
+  "ESTIMATOR_TOL": 1e-09,
+  "PERMUTATION_TOL": 1e-10,
+  "MC_Z": 3.0,
+  "UNCONVERGED_STEP": 1e-06,
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "thresholds_v5"
+}
