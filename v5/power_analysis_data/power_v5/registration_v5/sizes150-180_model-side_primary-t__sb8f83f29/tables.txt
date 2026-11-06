@@ -1,0 +1,529 @@
+REGISTRATION TABLES (planning assumptions are assumptions, not estimates)
+
+table_thresholds
+----------------
+ block size set    feature  registered: upper  registered: lower  two-weight (frozen in design.json): upper  two-weight (frozen in design.json): lower
+        150   A saturation              0.328             -0.331                                      0.325                                     -0.328
+        150   A   contrast              0.516             -0.521                                      0.517                                     -0.521
+        150   B saturation              0.328             -0.333                                      0.327                                     -0.332
+        150   B   contrast              0.511             -0.521                                      0.509                                     -0.519
+        180   A saturation              0.301             -0.305                                      0.302                                     -0.304
+        180   A   contrast              0.469             -0.465                                      0.468                                     -0.464
+        180   B saturation              0.304             -0.301                                      0.302                                     -0.300
+        180   B   contrast              0.452             -0.462                                      0.451                                     -0.463
+
+table_primary
+-------------
+ block size  N  planning, contrast, paired t-test  planning, contrast, Wilcoxon signed-rank  planning, saturation, paired t-test  planning, saturation, Wilcoxon signed-rank  half shift, contrast, paired t-test  half shift, contrast, Wilcoxon signed-rank  half shift, saturation, paired t-test  half shift, saturation, Wilcoxon signed-rank  no effect, contrast, paired t-test  no effect, contrast, Wilcoxon signed-rank  no effect, saturation, paired t-test  no effect, saturation, Wilcoxon signed-rank
+        150 10                              0.467                                     0.411                                0.516                                       0.462                                0.242                                       0.213                                  0.258                                         0.221                               0.051                                      0.044                                 0.047                                        0.039
+        150 11                              0.508                                     0.449                                0.552                                       0.484                                0.265                                       0.228                                  0.280                                         0.242                               0.049                                      0.040                                 0.047                                        0.040
+        150 12                              0.532                                     0.496                                0.592                                       0.549                                0.271                                       0.251                                  0.295                                         0.269                               0.048                                      0.047                                 0.051                                        0.047
+        150 13                              0.560                                     0.528                                0.615                                       0.578                                0.282                                       0.261                                  0.318                                         0.295                               0.048                                      0.046                                 0.047                                        0.042
+        150 14                              0.596                                     0.557                                0.652                                       0.606                                0.301                                       0.270                                  0.337                                         0.301                               0.051                                      0.047                                 0.051                                        0.045
+        150 15                              0.630                                     0.591                                0.682                                       0.645                                0.316                                       0.295                                  0.350                                         0.330                               0.048                                      0.048                                 0.050                                        0.048
+        150 16                              0.665                                     0.629                                0.721                                       0.677                                0.335                                       0.310                                  0.375                                         0.345                               0.046                                      0.043                                 0.048                                        0.045
+        150 17                              0.683                                     0.653                                0.746                                       0.711                                0.346                                       0.329                                  0.391                                         0.371                               0.050                                      0.050                                 0.053                                        0.052
+        150 18                              0.710                                     0.683                                0.758                                       0.728                                0.367                                       0.346                                  0.387                                         0.369                               0.051                                      0.050                                 0.050                                        0.048
+        150 19                              0.727                                     0.693                                0.788                                       0.749                                0.373                                       0.349                                  0.411                                         0.381                               0.045                                      0.045                                 0.051                                        0.048
+        150 20                              0.750                                     0.719                                0.809                                       0.779                                0.382                                       0.360                                  0.435                                         0.405                               0.049                                      0.049                                 0.048                                        0.050
+        180 10                              0.536                                     0.475                                0.528                                       0.470                                0.245                                       0.215                                  0.254                                         0.220                               0.053                                      0.044                                 0.050                                        0.040
+        180 11                              0.580                                     0.511                                0.578                                       0.505                                0.264                                       0.225                                  0.270                                         0.232                               0.050                                      0.040                                 0.050                                        0.043
+        180 12                              0.614                                     0.572                                0.604                                       0.557                                0.266                                       0.244                                  0.289                                         0.265                               0.049                                      0.045                                 0.054                                        0.051
+        180 13                              0.649                                     0.607                                0.635                                       0.593                                0.281                                       0.264                                  0.307                                         0.284                               0.049                                      0.045                                 0.048                                        0.045
+        180 14                              0.678                                     0.635                                0.680                                       0.630                                0.304                                       0.275                                  0.337                                         0.306                               0.050                                      0.043                                 0.055                                        0.048
+        180 15                              0.701                                     0.661                                0.710                                       0.663                                0.317                                       0.295                                  0.360                                         0.334                               0.053                                      0.049                                 0.050                                        0.048
+        180 16                              0.749                                     0.710                                0.745                                       0.700                                0.345                                       0.317                                  0.396                                         0.365                               0.048                                      0.044                                 0.055                                        0.050
+        180 17                              0.764                                     0.737                                0.773                                       0.737                                0.374                                       0.354                                  0.398                                         0.378                               0.047                                      0.046                                 0.053                                        0.052
+        180 18                              0.785                                     0.754                                0.792                                       0.756                                0.368                                       0.349                                  0.409                                         0.385                               0.048                                      0.044                                 0.052                                        0.051
+        180 19                              0.800                                     0.770                                0.812                                       0.772                                0.384                                       0.355                                  0.439                                         0.408                               0.049                                      0.045                                 0.053                                        0.051
+        180 20                              0.820                                     0.786                                0.822                                       0.787                                0.399                                       0.376                                  0.454                                         0.424                               0.050                                      0.047                                 0.049                                        0.047
+
+table_sensitivity
+-----------------
+                                                        row  block size  N  contrast, paired t-test  contrast, Wilcoxon signed-rank  saturation, paired t-test  saturation, Wilcoxon signed-rank
+                  a quarter respond (nuisances at defaults)         150 10                    0.204                           0.176                      0.225                             0.190
+                  a quarter respond (nuisances at defaults)         150 15                    0.270                           0.242                      0.302                             0.269
+                  a quarter respond (nuisances at defaults)         150 20                    0.337                           0.309                      0.375                             0.333
+                  a quarter respond (nuisances at defaults)         180 10                    0.211                           0.180                      0.225                             0.188
+                  a quarter respond (nuisances at defaults)         180 15                    0.299                           0.271                      0.309                             0.272
+                  a quarter respond (nuisances at defaults)         180 20                    0.376                           0.343                      0.401                             0.351
+      a quarter respond, half shift (nuisances at defaults)         150 10                    0.113                           0.099                      0.140                             0.116
+      a quarter respond, half shift (nuisances at defaults)         150 15                    0.139                           0.129                      0.164                             0.154
+      a quarter respond, half shift (nuisances at defaults)         150 20                    0.158                           0.149                      0.198                             0.182
+      a quarter respond, half shift (nuisances at defaults)         180 10                    0.121                           0.102                      0.115                             0.101
+      a quarter respond, half shift (nuisances at defaults)         180 15                    0.158                           0.146                      0.145                             0.132
+      a quarter respond, half shift (nuisances at defaults)         180 20                    0.177                           0.167                      0.178                             0.166
+                        all respond (nuisances at defaults)         150 10                    0.985                           0.976                      0.993                             0.988
+                        all respond (nuisances at defaults)         150 15                    0.999                           0.998                      1.000                             1.000
+                        all respond (nuisances at defaults)         150 20                    1.000                           1.000                      1.000                             1.000
+                        all respond (nuisances at defaults)         180 10                    0.992                           0.987                      0.998                             0.996
+                        all respond (nuisances at defaults)         180 15                    1.000                           1.000                      1.000                             1.000
+                        all respond (nuisances at defaults)         180 20                    1.000                           1.000                      1.000                             1.000
+            all respond, half shift (nuisances at defaults)         150 10                    0.581                           0.532                      0.624                             0.569
+            all respond, half shift (nuisances at defaults)         150 15                    0.740                           0.715                      0.795                             0.769
+            all respond, half shift (nuisances at defaults)         150 20                    0.849                           0.830                      0.897                             0.885
+            all respond, half shift (nuisances at defaults)         180 10                    0.638                           0.589                      0.701                             0.648
+            all respond, half shift (nuisances at defaults)         180 15                    0.811                           0.784                      0.856                             0.832
+            all respond, half shift (nuisances at defaults)         180 20                    0.906                           0.894                      0.934                             0.917
+                                     planning, no nuisances         150 10                    0.562                           0.503                      0.641                             0.579
+                                     planning, no nuisances         150 15                    0.739                           0.699                      0.817                             0.771
+                                     planning, no nuisances         150 20                    0.856                           0.822                      0.913                             0.882
+                                     planning, no nuisances         180 10                    0.624                           0.559                      0.663                             0.593
+                                     planning, no nuisances         180 15                    0.804                           0.765                      0.845                             0.802
+                                     planning, no nuisances         180 20                    0.900                           0.866                      0.928                             0.901
+                                   half shift, no nuisances         150 10                    0.285                           0.247                      0.329                             0.286
+                                   half shift, no nuisances         150 15                    0.409                           0.385                      0.448                             0.422
+                                   half shift, no nuisances         150 20                    0.518                           0.495                      0.570                             0.540
+                                   half shift, no nuisances         180 10                    0.316                           0.277                      0.362                             0.318
+                                   half shift, no nuisances         180 15                    0.440                           0.414                      0.527                             0.490
+                                   half shift, no nuisances         180 20                    0.541                           0.511                      0.623                             0.587
+worst no-effect rate over the rule rows (default nuisances)         150 10                    0.057                           0.048                      0.058                             0.048
+worst no-effect rate over the rule rows (default nuisances)         150 15                    0.056                           0.055                      0.055                             0.054
+worst no-effect rate over the rule rows (default nuisances)         150 20                    0.057                           0.055                      0.050                             0.052
+worst no-effect rate over the rule rows (default nuisances)         180 10                    0.054                           0.045                      0.058                             0.049
+worst no-effect rate over the rule rows (default nuisances)         180 15                    0.054                           0.052                      0.055                             0.052
+worst no-effect rate over the rule rows (default nuisances)         180 20                    0.058                           0.057                      0.051                             0.049
+    worst no-effect rate over the sensitivity rows (ranges)         150 10                    0.055                           0.046                      0.053                             0.047
+    worst no-effect rate over the sensitivity rows (ranges)         150 15                    0.055                           0.052                      0.056                             0.052
+    worst no-effect rate over the sensitivity rows (ranges)         150 20                    0.055                           0.052                      0.057                             0.055
+    worst no-effect rate over the sensitivity rows (ranges)         180 10                    0.057                           0.048                      0.059                             0.050
+    worst no-effect rate over the sensitivity rows (ranges)         180 15                    0.055                           0.052                      0.057                             0.054
+    worst no-effect rate over the sensitivity rows (ranges)         180 20                    0.054                           0.054                      0.055                             0.053
+
+table_pair_preferences
+----------------------
+ block size     effect  pair-specific SD  N  agreement on repeats  contrast, paired t-test  contrast, Wilcoxon signed-rank  saturation, paired t-test  saturation, Wilcoxon signed-rank
+        150   planning             0.000 10                 0.509                    0.467                           0.411                      0.516                             0.462
+        150   planning             0.000 15                 0.509                    0.630                           0.591                      0.682                             0.645
+        150   planning             0.000 20                 0.509                    0.750                           0.719                      0.809                             0.779
+        150   planning             1.000 10                 0.571                    0.443                           0.387                      0.490                             0.433
+        150   planning             1.000 15                 0.571                    0.587                           0.552                      0.654                             0.612
+        150   planning             1.000 20                 0.571                    0.692                           0.664                      0.759                             0.724
+        150   planning             1.500 10                 0.615                    0.371                           0.329                      0.435                             0.388
+        150   planning             1.500 15                 0.615                    0.495                           0.463                      0.573                             0.534
+        150   planning             1.500 20                 0.615                    0.603                           0.575                      0.686                             0.652
+        150   planning             2.000 10                 0.650                    0.329                           0.287                      0.379                             0.334
+        150   planning             2.000 15                 0.650                    0.452                           0.426                      0.516                             0.490
+        150   planning             2.000 20                 0.650                    0.553                           0.532                      0.628                             0.598
+        150 half shift             0.000 10                 0.517                    0.242                           0.213                      0.258                             0.221
+        150 half shift             0.000 15                 0.517                    0.316                           0.295                      0.350                             0.330
+        150 half shift             0.000 20                 0.517                    0.382                           0.360                      0.435                             0.405
+        150 half shift             1.000 10                 0.575                    0.193                           0.164                      0.213                             0.184
+        150 half shift             1.000 15                 0.575                    0.256                           0.240                      0.281                             0.257
+        150 half shift             1.000 20                 0.575                    0.317                           0.300                      0.342                             0.326
+        150 half shift             1.500 10                 0.615                    0.155                           0.135                      0.182                             0.154
+        150 half shift             1.500 15                 0.615                    0.213                           0.199                      0.250                             0.236
+        150 half shift             1.500 20                 0.615                    0.255                           0.246                      0.309                             0.294
+        150 half shift             2.000 10                 0.655                    0.168                           0.145                      0.177                             0.154
+        150 half shift             2.000 15                 0.655                    0.205                           0.193                      0.221                             0.205
+        150 half shift             2.000 20                 0.655                    0.247                           0.236                      0.254                             0.238
+        180   planning             0.000 10                 0.509                    0.536                           0.475                      0.528                             0.470
+        180   planning             0.000 15                 0.509                    0.701                           0.661                      0.710                             0.663
+        180   planning             0.000 20                 0.509                    0.820                           0.786                      0.822                             0.787
+        180   planning             1.000 10                 0.569                    0.460                           0.401                      0.474                             0.418
+        180   planning             1.000 15                 0.569                    0.624                           0.585                      0.670                             0.628
+        180   planning             1.000 20                 0.569                    0.755                           0.723                      0.781                             0.749
+        180   planning             1.500 10                 0.614                    0.417                           0.372                      0.442                             0.395
+        180   planning             1.500 15                 0.614                    0.574                           0.546                      0.619                             0.585
+        180   planning             1.500 20                 0.614                    0.686                           0.660                      0.733                             0.702
+        180   planning             2.000 10                 0.652                    0.372                           0.330                      0.403                             0.355
+        180   planning             2.000 15                 0.652                    0.491                           0.466                      0.545                             0.512
+        180   planning             2.000 20                 0.652                    0.594                           0.572                      0.659                             0.632
+        180 half shift             0.000 10                 0.520                    0.245                           0.215                      0.254                             0.220
+        180 half shift             0.000 15                 0.520                    0.317                           0.295                      0.360                             0.334
+        180 half shift             0.000 20                 0.520                    0.399                           0.376                      0.454                             0.424
+        180 half shift             1.000 10                 0.574                    0.233                           0.200                      0.247                             0.216
+        180 half shift             1.000 15                 0.574                    0.302                           0.279                      0.317                             0.293
+        180 half shift             1.000 20                 0.574                    0.365                           0.347                      0.375                             0.354
+        180 half shift             1.500 10                 0.614                    0.199                           0.171                      0.204                             0.177
+        180 half shift             1.500 15                 0.614                    0.254                           0.242                      0.273                             0.253
+        180 half shift             1.500 20                 0.614                    0.318                           0.299                      0.342                             0.325
+        180 half shift             2.000 10                 0.655                    0.166                           0.141                      0.183                             0.156
+        180 half shift             2.000 15                 0.655                    0.224                           0.210                      0.243                             0.227
+        180 half shift             2.000 20                 0.655                    0.261                           0.250                      0.291                             0.278
+
+table_secondary_sign
+--------------------
+                                row  block size  N  derealization saturation  derealization contrast  ordinary saturation  ordinary contrast
+            no effect, no nuisances         150 10                     0.000                   0.000                0.000              0.000
+            no effect, no nuisances         150 15                     0.001                   0.001                0.001              0.002
+            no effect, no nuisances         150 20                     0.002                   0.002                0.002              0.003
+            no effect, no nuisances         180 10                     0.000                   0.000                0.000              0.001
+            no effect, no nuisances         180 15                     0.001                   0.002                0.001              0.002
+            no effect, no nuisances         180 20                     0.003                   0.006                0.003              0.005
+no effect, all nuisances (defaults)         150 10                     0.025                   0.019                0.022              0.022
+no effect, all nuisances (defaults)         150 15                     0.081                   0.091                0.084              0.096
+no effect, all nuisances (defaults)         150 20                     0.141                   0.196                0.148              0.193
+no effect, all nuisances (defaults)         180 10                     0.034                   0.036                0.030              0.034
+no effect, all nuisances (defaults)         180 15                     0.100                   0.133                0.093              0.135
+no effect, all nuisances (defaults)         180 20                     0.171                   0.249                0.167              0.248
+   planning (nuisances at defaults)         150 10                     0.410                   0.440                0.022              0.022
+   planning (nuisances at defaults)         150 15                     0.715                   0.774                0.077              0.096
+   planning (nuisances at defaults)         150 20                     0.869                   0.917                0.141              0.195
+   planning (nuisances at defaults)         180 10                     0.472                   0.549                0.039              0.039
+   planning (nuisances at defaults)         180 15                     0.757                   0.852                0.116              0.151
+   planning (nuisances at defaults)         180 20                     0.891                   0.954                0.179              0.278
+ half shift (nuisances at defaults)         150 10                     0.410                   0.451                0.167              0.145
+ half shift (nuisances at defaults)         150 15                     0.713                   0.799                0.415              0.442
+ half shift (nuisances at defaults)         150 20                     0.874                   0.928                0.601              0.664
+ half shift (nuisances at defaults)         180 10                     0.465                   0.544                0.244              0.236
+ half shift (nuisances at defaults)         180 15                     0.749                   0.844                0.489              0.572
+ half shift (nuisances at defaults)         180 20                     0.886                   0.956                0.658              0.777
+
+table_c1
+--------
+                                scenario  block size  comparison group  report group  C1 supported, contrast  C1 supported, saturation  C1 supported, either  before the attention check, either  attention check fires  secondary check, either
+                                planning         150                20            10                   0.385                     0.374                 0.481                               0.501                  0.040                    0.046
+                                planning         150                20            15                   0.477                     0.466                 0.578                               0.604                  0.040                    0.043
+                                planning         150                20            20                   0.547                     0.530                 0.650                               0.681                  0.045                    0.048
+                                planning         150                30            10                   0.427                     0.417                 0.529                               0.555                  0.045                    0.048
+                                planning         150                30            15                   0.545                     0.524                 0.641                               0.670                  0.043                    0.050
+                                planning         150                30            20                   0.609                     0.596                 0.705                               0.737                  0.044                    0.044
+                                planning         180                20            10                   0.406                     0.406                 0.506                               0.527                  0.040                    0.040
+                                planning         180                20            15                   0.495                     0.489                 0.596                               0.627                  0.047                    0.043
+                                planning         180                20            20                   0.562                     0.550                 0.662                               0.698                  0.051                    0.045
+                                planning         180                30            10                   0.441                     0.439                 0.543                               0.570                  0.043                    0.044
+                                planning         180                30            15                   0.552                     0.555                 0.656                               0.688                  0.047                    0.040
+                                planning         180                30            20                   0.625                     0.615                 0.718                               0.758                  0.051                    0.040
+                              half shift         150                20            10                   0.400                     0.395                 0.498                               0.522                  0.043                    0.252
+                              half shift         150                20            15                   0.467                     0.461                 0.568                               0.594                  0.046                    0.287
+                              half shift         150                20            20                   0.533                     0.537                 0.647                               0.680                  0.050                    0.336
+                              half shift         150                30            10                   0.433                     0.428                 0.536                               0.566                  0.050                    0.277
+                              half shift         150                30            15                   0.537                     0.536                 0.642                               0.675                  0.049                    0.335
+                              half shift         150                30            20                   0.614                     0.617                 0.716                               0.749                  0.044                    0.376
+                              half shift         180                20            10                   0.383                     0.366                 0.471                               0.494                  0.045                    0.235
+                              half shift         180                20            15                   0.501                     0.476                 0.589                               0.617                  0.043                    0.297
+                              half shift         180                20            20                   0.577                     0.556                 0.673                               0.710                  0.050                    0.358
+                              half shift         180                30            10                   0.434                     0.418                 0.528                               0.556                  0.046                    0.270
+                              half shift         180                30            15                   0.560                     0.536                 0.648                               0.680                  0.045                    0.332
+                              half shift         180                30            20                   0.646                     0.631                 0.734                               0.772                  0.049                    0.393
+                               no effect         150                20            10                   0.021                     0.020                 0.036                               0.038                  0.045                    0.040
+                               no effect         150                20            15                   0.022                     0.022                 0.039                               0.042                  0.051                    0.043
+                               no effect         150                20            20                   0.023                     0.022                 0.041                               0.043                  0.050                    0.043
+                               no effect         150                30            10                   0.023                     0.024                 0.042                               0.044                  0.048                    0.037
+                               no effect         150                30            15                   0.023                     0.024                 0.042                               0.045                  0.050                    0.043
+                               no effect         150                30            20                   0.022                     0.023                 0.041                               0.044                  0.050                    0.041
+                               no effect         180                20            10                   0.023                     0.024                 0.041                               0.043                  0.046                    0.044
+                               no effect         180                20            15                   0.022                     0.022                 0.038                               0.041                  0.051                    0.044
+                               no effect         180                20            20                   0.025                     0.026                 0.046                               0.049                  0.051                    0.047
+                               no effect         180                30            10                   0.023                     0.022                 0.040                               0.043                  0.047                    0.043
+                               no effect         180                30            15                   0.022                     0.023                 0.041                               0.042                  0.046                    0.046
+                               no effect         180                30            20                   0.021                     0.025                 0.041                               0.043                  0.048                    0.047
+         v4-style: saturation only (0.5)         150                20            10                   0.031                     0.349                 0.353                               0.370                  0.045                    0.043
+         v4-style: saturation only (0.5)         150                20            15                   0.035                     0.425                 0.429                               0.449                  0.043                    0.047
+         v4-style: saturation only (0.5)         150                20            20                   0.040                     0.496                 0.500                               0.522                  0.042                    0.048
+         v4-style: saturation only (0.5)         150                30            10                   0.034                     0.395                 0.400                               0.419                  0.044                    0.044
+         v4-style: saturation only (0.5)         150                30            15                   0.034                     0.494                 0.498                               0.519                  0.043                    0.045
+         v4-style: saturation only (0.5)         150                30            20                   0.040                     0.562                 0.565                               0.593                  0.047                    0.046
+         v4-style: saturation only (0.5)         180                20            10                   0.035                     0.356                 0.362                               0.381                  0.048                    0.045
+         v4-style: saturation only (0.5)         180                20            15                   0.038                     0.448                 0.452                               0.474                  0.045                    0.043
+         v4-style: saturation only (0.5)         180                20            20                   0.045                     0.514                 0.519                               0.548                  0.052                    0.049
+         v4-style: saturation only (0.5)         180                30            10                   0.034                     0.399                 0.404                               0.425                  0.046                    0.043
+         v4-style: saturation only (0.5)         180                30            15                   0.037                     0.517                 0.521                               0.547                  0.049                    0.048
+         v4-style: saturation only (0.5)         180                30            20                   0.041                     0.590                 0.592                               0.621                  0.045                    0.043
+           v4-style: contrast only (0.7)         150                20            10                   0.345                     0.035                 0.352                               0.367                  0.036                    0.042
+           v4-style: contrast only (0.7)         150                20            15                   0.440                     0.041                 0.445                               0.465                  0.042                    0.041
+           v4-style: contrast only (0.7)         150                20            20                   0.521                     0.039                 0.525                               0.548                  0.042                    0.045
+           v4-style: contrast only (0.7)         150                30            10                   0.384                     0.035                 0.391                               0.409                  0.041                    0.041
+           v4-style: contrast only (0.7)         150                30            15                   0.503                     0.042                 0.506                               0.528                  0.042                    0.044
+           v4-style: contrast only (0.7)         150                30            20                   0.575                     0.039                 0.577                               0.603                  0.040                    0.044
+           v4-style: contrast only (0.7)         180                20            10                   0.331                     0.026                 0.335                               0.354                  0.048                    0.038
+           v4-style: contrast only (0.7)         180                20            15                   0.436                     0.032                 0.439                               0.464                  0.051                    0.040
+           v4-style: contrast only (0.7)         180                20            20                   0.508                     0.035                 0.511                               0.539                  0.051                    0.047
+           v4-style: contrast only (0.7)         180                30            10                   0.378                     0.028                 0.381                               0.401                  0.048                    0.037
+           v4-style: contrast only (0.7)         180                30            15                   0.500                     0.036                 0.504                               0.532                  0.048                    0.045
+           v4-style: contrast only (0.7)         180                30            20                   0.573                     0.037                 0.575                               0.602                  0.047                    0.040
+  planning, script 7's default nuisances         150                20            10                   0.336                     0.350                 0.443                               0.466                  0.045                    0.045
+  planning, script 7's default nuisances         150                20            15                   0.438                     0.448                 0.554                               0.579                  0.043                    0.052
+  planning, script 7's default nuisances         150                20            20                   0.498                     0.506                 0.621                               0.652                  0.047                    0.055
+  planning, script 7's default nuisances         150                30            10                   0.374                     0.382                 0.483                               0.505                  0.043                    0.046
+  planning, script 7's default nuisances         150                30            15                   0.490                     0.497                 0.610                               0.642                  0.047                    0.054
+  planning, script 7's default nuisances         150                30            20                   0.561                     0.570                 0.674                               0.709                  0.046                    0.053
+  planning, script 7's default nuisances         180                20            10                   0.358                     0.336                 0.448                               0.471                  0.046                    0.042
+  planning, script 7's default nuisances         180                20            15                   0.435                     0.408                 0.529                               0.556                  0.045                    0.041
+  planning, script 7's default nuisances         180                20            20                   0.501                     0.478                 0.605                               0.637                  0.047                    0.044
+  planning, script 7's default nuisances         180                30            10                   0.409                     0.378                 0.503                               0.528                  0.044                    0.040
+  planning, script 7's default nuisances         180                30            15                   0.504                     0.485                 0.606                               0.635                  0.046                    0.047
+  planning, script 7's default nuisances         180                30            20                   0.579                     0.566                 0.682                               0.714                  0.043                    0.044
+half shift, script 7's default nuisances         150                20            10                   0.371                     0.353                 0.468                               0.489                  0.038                    0.230
+half shift, script 7's default nuisances         150                20            15                   0.456                     0.432                 0.563                               0.590                  0.043                    0.282
+half shift, script 7's default nuisances         150                20            20                   0.517                     0.495                 0.625                               0.656                  0.042                    0.329
+half shift, script 7's default nuisances         150                30            10                   0.409                     0.403                 0.517                               0.539                  0.034                    0.259
+half shift, script 7's default nuisances         150                30            15                   0.513                     0.501                 0.621                               0.651                  0.043                    0.328
+half shift, script 7's default nuisances         150                30            20                   0.591                     0.574                 0.695                               0.727                  0.042                    0.366
+half shift, script 7's default nuisances         180                20            10                   0.352                     0.328                 0.439                               0.464                  0.050                    0.206
+half shift, script 7's default nuisances         180                20            15                   0.452                     0.417                 0.544                               0.573                  0.049                    0.267
+half shift, script 7's default nuisances         180                20            20                   0.525                     0.475                 0.621                               0.653                  0.045                    0.316
+half shift, script 7's default nuisances         180                30            10                   0.404                     0.371                 0.499                               0.525                  0.044                    0.229
+half shift, script 7's default nuisances         180                30            15                   0.516                     0.487                 0.614                               0.648                  0.050                    0.305
+half shift, script 7's default nuisances         180                30            20                   0.594                     0.557                 0.683                               0.720                  0.048                    0.353
+ no effect, script 7's default nuisances         150                20            10                   0.025                     0.021                 0.041                               0.044                  0.046                    0.044
+ no effect, script 7's default nuisances         150                20            15                   0.029                     0.023                 0.046                               0.049                  0.046                    0.045
+ no effect, script 7's default nuisances         150                20            20                   0.028                     0.024                 0.048                               0.051                  0.047                    0.049
+ no effect, script 7's default nuisances         150                30            10                   0.031                     0.025                 0.050                               0.052                  0.042                    0.046
+ no effect, script 7's default nuisances         150                30            15                   0.030                     0.024                 0.048                               0.051                  0.044                    0.046
+ no effect, script 7's default nuisances         150                30            20                   0.027                     0.027                 0.049                               0.052                  0.047                    0.046
+ no effect, script 7's default nuisances         180                20            10                   0.021                     0.020                 0.038                               0.039                  0.040                    0.036
+ no effect, script 7's default nuisances         180                20            15                   0.022                     0.019                 0.037                               0.040                  0.045                    0.042
+ no effect, script 7's default nuisances         180                20            20                   0.023                     0.022                 0.041                               0.043                  0.046                    0.045
+ no effect, script 7's default nuisances         180                30            10                   0.024                     0.026                 0.045                               0.047                  0.040                    0.043
+ no effect, script 7's default nuisances         180                30            15                   0.025                     0.024                 0.044                               0.046                  0.046                    0.042
+ no effect, script 7's default nuisances         180                30            20                   0.022                     0.024                 0.041                               0.043                  0.044                    0.043
+
+table_attention_check
+---------------------
+                                     scenario  block size  comparison group  report group  mean lapse, report  mean lapse, comparison  check fires  fires on catch  fires on fast responses  C1 claim before the check  C1 supported after the check
+                                    no effect         150                20            10               0.100                   0.100        0.045           0.021                    0.029                      0.038                         0.036
+                                    no effect         150                20            15               0.100                   0.100        0.051           0.029                    0.028                      0.042                         0.039
+                                    no effect         150                20            20               0.100                   0.100        0.050           0.027                    0.029                      0.043                         0.041
+                                    no effect         150                30            10               0.100                   0.100        0.048           0.024                    0.029                      0.044                         0.042
+                                    no effect         150                30            15               0.100                   0.100        0.050           0.027                    0.028                      0.045                         0.042
+                                    no effect         150                30            20               0.100                   0.100        0.050           0.028                    0.030                      0.044                         0.041
+                                     planning         150                20            10               0.100                   0.100        0.040           0.021                    0.023                      0.501                         0.481
+                                     planning         150                20            15               0.100                   0.100        0.040           0.022                    0.022                      0.604                         0.578
+                                     planning         150                20            20               0.100                   0.100        0.045           0.022                    0.027                      0.681                         0.650
+                                     planning         150                30            10               0.100                   0.100        0.045           0.024                    0.025                      0.555                         0.529
+                                     planning         150                30            15               0.100                   0.100        0.043           0.023                    0.023                      0.670                         0.641
+                                     planning         150                30            20               0.100                   0.100        0.044           0.023                    0.026                      0.737                         0.705
+no effect, lapse report 0.1 / comparison 0.15         150                20            10               0.100                   0.150        0.362           0.110                    0.335                      0.049                         0.029
+no effect, lapse report 0.1 / comparison 0.15         150                20            15               0.100                   0.150        0.456           0.141                    0.431                      0.052                         0.028
+no effect, lapse report 0.1 / comparison 0.15         150                20            20               0.100                   0.150        0.516           0.164                    0.491                      0.049                         0.023
+no effect, lapse report 0.1 / comparison 0.15         150                30            10               0.100                   0.150        0.398           0.123                    0.371                      0.056                         0.032
+no effect, lapse report 0.1 / comparison 0.15         150                30            15               0.100                   0.150        0.509           0.157                    0.485                      0.052                         0.023
+no effect, lapse report 0.1 / comparison 0.15         150                30            20               0.100                   0.150        0.592           0.189                    0.571                      0.057                         0.022
+ planning, lapse report 0.1 / comparison 0.15         150                20            10               0.100                   0.150        0.370           0.117                    0.342                      0.501                         0.309
+ planning, lapse report 0.1 / comparison 0.15         150                20            15               0.100                   0.150        0.461           0.152                    0.435                      0.619                         0.329
+ planning, lapse report 0.1 / comparison 0.15         150                20            20               0.100                   0.150        0.523           0.169                    0.499                      0.700                         0.331
+ planning, lapse report 0.1 / comparison 0.15         150                30            10               0.100                   0.150        0.407           0.129                    0.378                      0.564                         0.328
+ planning, lapse report 0.1 / comparison 0.15         150                30            15               0.100                   0.150        0.511           0.163                    0.486                      0.687                         0.332
+ planning, lapse report 0.1 / comparison 0.15         150                30            20               0.100                   0.150        0.591           0.194                    0.569                      0.766                         0.307
+ no effect, lapse report 0.1 / comparison 0.2         150                20            10               0.100                   0.200        0.747           0.256                    0.733                      0.044                         0.010
+ no effect, lapse report 0.1 / comparison 0.2         150                20            15               0.100                   0.200        0.848           0.320                    0.839                      0.046                         0.006
+ no effect, lapse report 0.1 / comparison 0.2         150                20            20               0.100                   0.200        0.903           0.370                    0.896                      0.053                         0.004
+ no effect, lapse report 0.1 / comparison 0.2         150                30            10               0.100                   0.200        0.804           0.279                    0.795                      0.046                         0.009
+ no effect, lapse report 0.1 / comparison 0.2         150                30            15               0.100                   0.200        0.901           0.351                    0.895                      0.051                         0.005
+ no effect, lapse report 0.1 / comparison 0.2         150                30            20               0.100                   0.200        0.947           0.421                    0.944                      0.056                         0.002
+  planning, lapse report 0.1 / comparison 0.2         150                20            10               0.100                   0.200        0.755           0.288                    0.741                      0.541                         0.131
+  planning, lapse report 0.1 / comparison 0.2         150                20            15               0.100                   0.200        0.859           0.362                    0.850                      0.644                         0.091
+  planning, lapse report 0.1 / comparison 0.2         150                20            20               0.100                   0.200        0.908           0.407                    0.899                      0.713                         0.065
+  planning, lapse report 0.1 / comparison 0.2         150                30            10               0.100                   0.200        0.824           0.330                    0.811                      0.601                         0.102
+  planning, lapse report 0.1 / comparison 0.2         150                30            15               0.100                   0.200        0.910           0.402                    0.903                      0.716                         0.063
+  planning, lapse report 0.1 / comparison 0.2         150                30            20               0.100                   0.200        0.947           0.467                    0.944                      0.782                         0.040
+no effect, lapse report 0.15 / comparison 0.1         150                20            10               0.150                   0.100        0.006           0.005                    0.001                      0.045                         0.045
+no effect, lapse report 0.15 / comparison 0.1         150                20            15               0.150                   0.100        0.004           0.004                    0.000                      0.044                         0.043
+no effect, lapse report 0.15 / comparison 0.1         150                20            20               0.150                   0.100        0.002           0.002                    0.000                      0.048                         0.048
+no effect, lapse report 0.15 / comparison 0.1         150                30            10               0.150                   0.100        0.005           0.005                    0.000                      0.039                         0.039
+no effect, lapse report 0.15 / comparison 0.1         150                30            15               0.150                   0.100        0.003           0.003                    0.000                      0.043                         0.043
+no effect, lapse report 0.15 / comparison 0.1         150                30            20               0.150                   0.100        0.002           0.002                    0.000                      0.044                         0.044
+ planning, lapse report 0.15 / comparison 0.1         150                20            10               0.150                   0.100        0.004           0.004                    0.001                      0.480                         0.478
+ planning, lapse report 0.15 / comparison 0.1         150                20            15               0.150                   0.100        0.004           0.003                    0.000                      0.565                         0.563
+ planning, lapse report 0.15 / comparison 0.1         150                20            20               0.150                   0.100        0.003           0.003                    0.000                      0.633                         0.631
+ planning, lapse report 0.15 / comparison 0.1         150                30            10               0.150                   0.100        0.004           0.004                    0.001                      0.525                         0.523
+ planning, lapse report 0.15 / comparison 0.1         150                30            15               0.150                   0.100        0.002           0.001                    0.000                      0.630                         0.629
+ planning, lapse report 0.15 / comparison 0.1         150                30            20               0.150                   0.100        0.001           0.001                    0.000                      0.692                         0.691
+ no effect, lapse report 0.2 / comparison 0.1         150                20            10               0.200                   0.100        0.001           0.001                    0.000                      0.034                         0.034
+ no effect, lapse report 0.2 / comparison 0.1         150                20            15               0.200                   0.100        0.000           0.000                    0.000                      0.038                         0.038
+ no effect, lapse report 0.2 / comparison 0.1         150                20            20               0.200                   0.100        0.000           0.000                    0.000                      0.038                         0.038
+ no effect, lapse report 0.2 / comparison 0.1         150                30            10               0.200                   0.100        0.001           0.001                    0.000                      0.034                         0.034
+ no effect, lapse report 0.2 / comparison 0.1         150                30            15               0.200                   0.100        0.000           0.000                    0.000                      0.037                         0.037
+ no effect, lapse report 0.2 / comparison 0.1         150                30            20               0.200                   0.100        0.000           0.000                    0.000                      0.039                         0.039
+  planning, lapse report 0.2 / comparison 0.1         150                20            10               0.200                   0.100        0.001           0.001                    0.000                      0.428                         0.427
+  planning, lapse report 0.2 / comparison 0.1         150                20            15               0.200                   0.100        0.000           0.000                    0.000                      0.531                         0.531
+  planning, lapse report 0.2 / comparison 0.1         150                20            20               0.200                   0.100        0.000           0.000                    0.000                      0.618                         0.618
+  planning, lapse report 0.2 / comparison 0.1         150                30            10               0.200                   0.100        0.001           0.001                    0.000                      0.466                         0.465
+  planning, lapse report 0.2 / comparison 0.1         150                30            15               0.200                   0.100        0.000           0.000                    0.000                      0.603                         0.602
+  planning, lapse report 0.2 / comparison 0.1         150                30            20               0.200                   0.100        0.000           0.000                    0.000                      0.666                         0.666
+                                    no effect         180                20            10               0.100                   0.100        0.046           0.022                    0.029                      0.043                         0.041
+                                    no effect         180                20            15               0.100                   0.100        0.051           0.026                    0.030                      0.041                         0.038
+                                    no effect         180                20            20               0.100                   0.100        0.051           0.027                    0.029                      0.049                         0.046
+                                    no effect         180                30            10               0.100                   0.100        0.047           0.022                    0.029                      0.043                         0.040
+                                    no effect         180                30            15               0.100                   0.100        0.046           0.023                    0.030                      0.042                         0.041
+                                    no effect         180                30            20               0.100                   0.100        0.048           0.025                    0.028                      0.043                         0.041
+                                     planning         180                20            10               0.100                   0.100        0.040           0.021                    0.023                      0.527                         0.506
+                                     planning         180                20            15               0.100                   0.100        0.047           0.028                    0.025                      0.627                         0.596
+                                     planning         180                20            20               0.100                   0.100        0.051           0.029                    0.027                      0.698                         0.662
+                                     planning         180                30            10               0.100                   0.100        0.043           0.022                    0.026                      0.570                         0.543
+                                     planning         180                30            15               0.100                   0.100        0.047           0.027                    0.025                      0.688                         0.656
+                                     planning         180                30            20               0.100                   0.100        0.051           0.029                    0.027                      0.758                         0.718
+no effect, lapse report 0.1 / comparison 0.15         180                20            10               0.100                   0.150        0.359           0.106                    0.335                      0.047                         0.029
+no effect, lapse report 0.1 / comparison 0.15         180                20            15               0.100                   0.150        0.449           0.136                    0.423                      0.050                         0.026
+no effect, lapse report 0.1 / comparison 0.15         180                20            20               0.100                   0.150        0.512           0.157                    0.490                      0.052                         0.025
+no effect, lapse report 0.1 / comparison 0.15         180                30            10               0.100                   0.150        0.395           0.122                    0.369                      0.045                         0.026
+no effect, lapse report 0.1 / comparison 0.15         180                30            15               0.100                   0.150        0.513           0.155                    0.489                      0.053                         0.024
+no effect, lapse report 0.1 / comparison 0.15         180                30            20               0.100                   0.150        0.577           0.174                    0.557                      0.050                         0.021
+ planning, lapse report 0.1 / comparison 0.15         180                20            10               0.100                   0.150        0.374           0.107                    0.350                      0.538                         0.337
+ planning, lapse report 0.1 / comparison 0.15         180                20            15               0.100                   0.150        0.448           0.131                    0.424                      0.645                         0.354
+ planning, lapse report 0.1 / comparison 0.15         180                20            20               0.100                   0.150        0.527           0.165                    0.502                      0.723                         0.336
+ planning, lapse report 0.1 / comparison 0.15         180                30            10               0.100                   0.150        0.396           0.118                    0.369                      0.591                         0.356
+ planning, lapse report 0.1 / comparison 0.15         180                30            15               0.100                   0.150        0.516           0.151                    0.492                      0.706                         0.337
+ planning, lapse report 0.1 / comparison 0.15         180                30            20               0.100                   0.150        0.598           0.185                    0.579                      0.789                         0.315
+ no effect, lapse report 0.1 / comparison 0.2         180                20            10               0.100                   0.200        0.790           0.270                    0.781                      0.050                         0.011
+ no effect, lapse report 0.1 / comparison 0.2         180                20            15               0.100                   0.200        0.883           0.348                    0.877                      0.057                         0.007
+ no effect, lapse report 0.1 / comparison 0.2         180                20            20               0.100                   0.200        0.925           0.382                    0.920                      0.059                         0.004
+ no effect, lapse report 0.1 / comparison 0.2         180                30            10               0.100                   0.200        0.845           0.301                    0.836                      0.054                         0.008
+ no effect, lapse report 0.1 / comparison 0.2         180                30            15               0.100                   0.200        0.924           0.370                    0.919                      0.060                         0.005
+ no effect, lapse report 0.1 / comparison 0.2         180                30            20               0.100                   0.200        0.960           0.443                    0.958                      0.061                         0.003
+  planning, lapse report 0.1 / comparison 0.2         180                20            10               0.100                   0.200        0.796           0.304                    0.784                      0.537                         0.108
+  planning, lapse report 0.1 / comparison 0.2         180                20            15               0.100                   0.200        0.882           0.362                    0.875                      0.668                         0.079
+  planning, lapse report 0.1 / comparison 0.2         180                20            20               0.100                   0.200        0.924           0.415                    0.920                      0.741                         0.054
+  planning, lapse report 0.1 / comparison 0.2         180                30            10               0.100                   0.200        0.831           0.333                    0.822                      0.609                         0.098
+  planning, lapse report 0.1 / comparison 0.2         180                30            15               0.100                   0.200        0.924           0.407                    0.920                      0.724                         0.055
+  planning, lapse report 0.1 / comparison 0.2         180                30            20               0.100                   0.200        0.959           0.463                    0.957                      0.806                         0.033
+no effect, lapse report 0.15 / comparison 0.1         180                20            10               0.150                   0.100        0.005           0.005                    0.000                      0.041                         0.041
+no effect, lapse report 0.15 / comparison 0.1         180                20            15               0.150                   0.100        0.003           0.003                    0.000                      0.042                         0.042
+no effect, lapse report 0.15 / comparison 0.1         180                20            20               0.150                   0.100        0.003           0.003                    0.000                      0.046                         0.046
+no effect, lapse report 0.15 / comparison 0.1         180                30            10               0.150                   0.100        0.004           0.003                    0.000                      0.039                         0.039
+no effect, lapse report 0.15 / comparison 0.1         180                30            15               0.150                   0.100        0.004           0.004                    0.000                      0.041                         0.041
+no effect, lapse report 0.15 / comparison 0.1         180                30            20               0.150                   0.100        0.002           0.002                    0.000                      0.042                         0.042
+ planning, lapse report 0.15 / comparison 0.1         180                20            10               0.150                   0.100        0.005           0.005                    0.000                      0.493                         0.491
+ planning, lapse report 0.15 / comparison 0.1         180                20            15               0.150                   0.100        0.003           0.003                    0.000                      0.606                         0.604
+ planning, lapse report 0.15 / comparison 0.1         180                20            20               0.150                   0.100        0.003           0.003                    0.000                      0.673                         0.671
+ planning, lapse report 0.15 / comparison 0.1         180                30            10               0.150                   0.100        0.003           0.003                    0.000                      0.533                         0.532
+ planning, lapse report 0.15 / comparison 0.1         180                30            15               0.150                   0.100        0.002           0.002                    0.000                      0.680                         0.679
+ planning, lapse report 0.15 / comparison 0.1         180                30            20               0.150                   0.100        0.002           0.002                    0.000                      0.739                         0.737
+ no effect, lapse report 0.2 / comparison 0.1         180                20            10               0.200                   0.100        0.001           0.001                    0.000                      0.032                         0.032
+ no effect, lapse report 0.2 / comparison 0.1         180                20            15               0.200                   0.100        0.001           0.001                    0.000                      0.037                         0.037
+ no effect, lapse report 0.2 / comparison 0.1         180                20            20               0.200                   0.100        0.000           0.000                    0.000                      0.041                         0.041
+ no effect, lapse report 0.2 / comparison 0.1         180                30            10               0.200                   0.100        0.001           0.001                    0.000                      0.033                         0.033
+ no effect, lapse report 0.2 / comparison 0.1         180                30            15               0.200                   0.100        0.000           0.000                    0.000                      0.034                         0.034
+ no effect, lapse report 0.2 / comparison 0.1         180                30            20               0.200                   0.100        0.000           0.000                    0.000                      0.035                         0.035
+  planning, lapse report 0.2 / comparison 0.1         180                20            10               0.200                   0.100        0.002           0.002                    0.000                      0.456                         0.455
+  planning, lapse report 0.2 / comparison 0.1         180                20            15               0.200                   0.100        0.001           0.001                    0.000                      0.554                         0.553
+  planning, lapse report 0.2 / comparison 0.1         180                20            20               0.200                   0.100        0.000           0.000                    0.000                      0.628                         0.628
+  planning, lapse report 0.2 / comparison 0.1         180                30            10               0.200                   0.100        0.000           0.000                    0.000                      0.498                         0.498
+  planning, lapse report 0.2 / comparison 0.1         180                30            15               0.200                   0.100        0.000           0.000                    0.000                      0.618                         0.618
+  planning, lapse report 0.2 / comparison 0.1         180                30            20               0.200                   0.100        0.000           0.000                    0.000                      0.691                         0.691
+
+table_threats
+-------------
+                                                                scenario  block size  N  saturation  contrast
+                                               derealization lapse +0.05         150 10       0.046     0.046
+                                               derealization lapse +0.05         150 15       0.050     0.050
+                                               derealization lapse +0.05         150 20       0.049     0.048
+                                               derealization lapse +0.05         180 10       0.045     0.055
+                                               derealization lapse +0.05         180 15       0.048     0.055
+                                               derealization lapse +0.05         180 20       0.043     0.052
+                                                derealization lapse +0.1         150 10       0.050     0.050
+                                                derealization lapse +0.1         150 15       0.048     0.054
+                                                derealization lapse +0.1         150 20       0.048     0.051
+                                                derealization lapse +0.1         180 10       0.054     0.045
+                                                derealization lapse +0.1         180 15       0.053     0.052
+                                                derealization lapse +0.1         180 20       0.057     0.051
+                                               derealization lapse +0.15         150 10       0.048     0.050
+                                               derealization lapse +0.15         150 15       0.049     0.047
+                                               derealization lapse +0.15         150 20       0.049     0.053
+                                               derealization lapse +0.15         180 10       0.046     0.055
+                                               derealization lapse +0.15         180 15       0.052     0.050
+                                               derealization lapse +0.15         180 20       0.050     0.047
+                        derealization lapse +0.05, with edited looks odd         150 10       0.055     0.059
+                        derealization lapse +0.05, with edited looks odd         150 15       0.057     0.062
+                        derealization lapse +0.05, with edited looks odd         150 20       0.062     0.059
+                        derealization lapse +0.05, with edited looks odd         180 10       0.061     0.060
+                        derealization lapse +0.05, with edited looks odd         180 15       0.060     0.065
+                        derealization lapse +0.05, with edited looks odd         180 20       0.069     0.069
+                         derealization lapse +0.1, with edited looks odd         150 10       0.077     0.055
+                         derealization lapse +0.1, with edited looks odd         150 15       0.086     0.060
+                         derealization lapse +0.1, with edited looks odd         150 20       0.083     0.061
+                         derealization lapse +0.1, with edited looks odd         180 10       0.076     0.065
+                         derealization lapse +0.1, with edited looks odd         180 15       0.088     0.076
+                         derealization lapse +0.1, with edited looks odd         180 20       0.085     0.075
+                        derealization lapse +0.15, with edited looks odd         150 10       0.089     0.064
+                        derealization lapse +0.15, with edited looks odd         150 15       0.099     0.076
+                        derealization lapse +0.15, with edited looks odd         150 20       0.111     0.078
+                        derealization lapse +0.15, with edited looks odd         180 10       0.080     0.063
+                        derealization lapse +0.15, with edited looks odd         180 15       0.094     0.077
+                        derealization lapse +0.15, with edited looks odd         180 20       0.102     0.075
+                  derealization lapse +0.05, with memory makes it duller         150 10       0.034     0.038
+                  derealization lapse +0.05, with memory makes it duller         150 15       0.033     0.037
+                  derealization lapse +0.05, with memory makes it duller         150 20       0.030     0.036
+                  derealization lapse +0.05, with memory makes it duller         180 10       0.038     0.039
+                  derealization lapse +0.05, with memory makes it duller         180 15       0.033     0.037
+                  derealization lapse +0.05, with memory makes it duller         180 20       0.027     0.032
+                   derealization lapse +0.1, with memory makes it duller         150 10       0.025     0.025
+                   derealization lapse +0.1, with memory makes it duller         150 15       0.018     0.022
+                   derealization lapse +0.1, with memory makes it duller         150 20       0.015     0.019
+                   derealization lapse +0.1, with memory makes it duller         180 10       0.020     0.027
+                   derealization lapse +0.1, with memory makes it duller         180 15       0.014     0.021
+                   derealization lapse +0.1, with memory makes it duller         180 20       0.013     0.018
+                  derealization lapse +0.15, with memory makes it duller         150 10       0.021     0.022
+                  derealization lapse +0.15, with memory makes it duller         150 15       0.016     0.016
+                  derealization lapse +0.15, with memory makes it duller         150 20       0.012     0.013
+                  derealization lapse +0.15, with memory makes it duller         180 10       0.013     0.017
+                  derealization lapse +0.15, with memory makes it duller         180 15       0.010     0.015
+                  derealization lapse +0.15, with memory makes it duller         180 20       0.008     0.009
+                      all nuisances (defaults), derealization lapse +0.1         150 10       0.042     0.031
+                      all nuisances (defaults), derealization lapse +0.1         150 15       0.036     0.031
+                      all nuisances (defaults), derealization lapse +0.1         150 20       0.037     0.027
+                      all nuisances (defaults), derealization lapse +0.1         180 10       0.034     0.034
+                      all nuisances (defaults), derealization lapse +0.1         180 15       0.035     0.032
+                      all nuisances (defaults), derealization lapse +0.1         180 20       0.027     0.027
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         150 10       0.227     0.206
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         150 15       0.288     0.263
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         150 20       0.373     0.316
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         180 10       0.243     0.225
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         180 15       0.336     0.302
+all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)         180 20       0.403     0.347
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         150 10       0.046     0.053
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         150 15       0.043     0.051
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         150 20       0.049     0.049
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         180 10       0.043     0.050
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         180 15       0.044     0.047
+        derealization lapse +0.05, with pair-specific preferences SD 1.5         180 20       0.046     0.045
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         150 10       0.051     0.054
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         150 15       0.050     0.055
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         150 20       0.052     0.053
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         180 10       0.048     0.055
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         180 15       0.049     0.059
+         derealization lapse +0.1, with pair-specific preferences SD 1.5         180 20       0.049     0.058
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         150 10       0.048     0.051
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         150 15       0.048     0.055
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         150 20       0.043     0.052
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         180 10       0.046     0.041
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         180 15       0.053     0.048
+        derealization lapse +0.15, with pair-specific preferences SD 1.5         180 20       0.049     0.048
+
+table_block_measures
+--------------------
+                                                        scenario  block size  N  consistency flags the difference  catch failures flag the difference
+                                                    no nuisances         150 10                             0.045                               0.011
+                                                    no nuisances         150 15                             0.046                               0.018
+                                                    no nuisances         150 20                             0.045                               0.022
+                                       derealization lapse +0.05         150 10                             0.050                               0.051
+                                       derealization lapse +0.05         150 15                             0.053                               0.087
+                                       derealization lapse +0.05         150 20                             0.052                               0.120
+                                        derealization lapse +0.1         150 10                             0.049                               0.140
+                                        derealization lapse +0.1         150 15                             0.054                               0.245
+                                        derealization lapse +0.1         150 20                             0.050                               0.357
+                                       derealization lapse +0.15         150 10                             0.050                               0.245
+                                       derealization lapse +0.15         150 15                             0.047                               0.402
+                                       derealization lapse +0.15         150 20                             0.052                               0.563
+derealization lapse +0.05, with pair-specific preferences SD 1.5         150 10                             0.068                               0.046
+derealization lapse +0.05, with pair-specific preferences SD 1.5         150 15                             0.073                               0.082
+derealization lapse +0.05, with pair-specific preferences SD 1.5         150 20                             0.081                               0.123
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         150 10                             0.107                               0.131
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         150 15                             0.125                               0.237
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         150 20                             0.134                               0.343
+derealization lapse +0.15, with pair-specific preferences SD 1.5         150 10                             0.140                               0.242
+derealization lapse +0.15, with pair-specific preferences SD 1.5         150 15                             0.172                               0.405
+derealization lapse +0.15, with pair-specific preferences SD 1.5         150 20                             0.201                               0.570
+                                                    no nuisances         180 10                             0.050                               0.010
+                                                    no nuisances         180 15                             0.051                               0.017
+                                                    no nuisances         180 20                             0.052                               0.022
+                                       derealization lapse +0.05         180 10                             0.043                               0.040
+                                       derealization lapse +0.05         180 15                             0.048                               0.079
+                                       derealization lapse +0.05         180 20                             0.047                               0.110
+                                        derealization lapse +0.1         180 10                             0.052                               0.144
+                                        derealization lapse +0.1         180 15                             0.055                               0.250
+                                        derealization lapse +0.1         180 20                             0.062                               0.349
+                                       derealization lapse +0.15         180 10                             0.051                               0.233
+                                       derealization lapse +0.15         180 15                             0.056                               0.397
+                                       derealization lapse +0.15         180 20                             0.050                               0.552
+derealization lapse +0.05, with pair-specific preferences SD 1.5         180 10                             0.068                               0.047
+derealization lapse +0.05, with pair-specific preferences SD 1.5         180 15                             0.090                               0.081
+derealization lapse +0.05, with pair-specific preferences SD 1.5         180 20                             0.098                               0.115
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         180 10                             0.102                               0.117
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         180 15                             0.132                               0.212
+ derealization lapse +0.1, with pair-specific preferences SD 1.5         180 20                             0.143                               0.308
+derealization lapse +0.15, with pair-specific preferences SD 1.5         180 10                             0.158                               0.243
+derealization lapse +0.15, with pair-specific preferences SD 1.5         180 15                             0.197                               0.411
+derealization lapse +0.15, with pair-specific preferences SD 1.5         180 20                             0.236                               0.561

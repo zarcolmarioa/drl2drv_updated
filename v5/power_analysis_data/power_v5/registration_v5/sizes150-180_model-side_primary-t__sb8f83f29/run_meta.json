@@ -1,0 +1,60 @@
+{
+  "started": "2026-11-06 17:57:14",
+  "seconds": 1.621417760848999,
+  "python": "3.11.15",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "output_dir": "/home/mario/Documents/drl2drv_updated/data/power_v5/registration_v5/sizes150-180_model-side_primary-t__sb8f83f29",
+  "input_sha256": {
+    "script 6/checks.csv": "918aa847bd09a69e872a9213da50f6f31c79b64a3cfb4968944719b2be5ee18a",
+    "script 6/run_meta.json": "19c9e197bf7a2eef87bf4fde8f54d822b5d09c32cb21f775291ed712c210bcf8",
+    "script 6/settings.json": "ae95237cfdd634a30928054f48718c94316620e7369d5620a2740e5b6d9489e3",
+    "script 7/checks.csv": "beec6c868e9c8e6b1acbed81fad0535eccd3d37a92a66b06a0e05a91c391ecec",
+    "script 7/run_meta.json": "64d90d041fae6e9bb9b3127ec6a6eb1acf4dd600e8791c3939bad0b078b3ea48",
+    "script 7/settings.json": "340e2c208652bec6757dd69487176d2d73247374bd6e9bac727406f97adee1f5",
+    "script 8/checks.csv": "926863158382863bccead2fa5e397f5132011ec2dd5946ec62d66aed6d9b2df0",
+    "script 8/run_meta.json": "29e0472a142a87633e1919f0c83909b1b0b1a3ad9bf91d4bbdc522b002b0f9d3",
+    "script 8/settings.json": "cc7368840807122316d55cce557241d112055107e0bf75f1efb4c610d28954db",
+    "script 6/thresholds.csv": "0db4c989bbfc8a25b41684738bb2897c63a0ac9a780a6a751d06df1332d4899c",
+    "script 6/detection_curve.csv": "27958d9cacf09c2ed02d0d4faf036011ca671663c7edc19caf080dbb1f0ef5f4",
+    "script 7/paired_power.csv": "0fd6a18cef0998e46f01c437c7a7612485537d67bc1cc3915612ddf07de3bf1f",
+    "script 7/secondary_sign.csv": "db95ccbd24b5f366aaae0d8158a9356da2369b84b41011da58f9d624767e312b",
+    "script 7/block_measures.csv": "e9dcb33025e0aed986fd9dc5648adc90010017de2de126c0177a9afcd5fea5d7",
+    "script 8/c1.csv": "125466297e1793b0ca0759e2851d17d619b948fb65c3c26726a15ccd7810efb8",
+    "script 8/paired_pair_sd.csv": "44b87d411ece4a63e4cbdd9f8e2af0381bfc238a6a7853dbbe9e91e5d912c7bb"
+  },
+  "primary_rule": {
+    "cells": 96,
+    "p_cell": 0.022750131948179195,
+    "expected": 2.1840126670252027,
+    "chance_max": 5,
+    "tests": {
+      "t": {
+        "n_exceed": 1,
+        "exceed": [
+          "block order (second block: lapse +0.05, preferences x0.9), 180 trials, N = 20, contrast: 0.0579 > 0.0576"
+        ],
+        "mean_null": 0.05042916666666667,
+        "power": 0.4992958333333333,
+        "original_qualifies": false,
+        "amended_qualifies": true
+      },
+      "wilcoxon": {
+        "n_exceed": 1,
+        "exceed": [
+          "block order (second block: lapse +0.05, preferences x0.9), 180 trials, N = 20, contrast: 0.0567 > 0.0567"
+        ],
+        "mean_null": 0.046709375,
+        "power": 0.46408333333333335,
+        "original_qualifies": false,
+        "amended_qualifies": true
+      }
+    },
+    "original_chosen": null,
+    "original_gap": null,
+    "amended_chosen": "t",
+    "amended_gap": 0.03521249999999998
+  },
+  "checks_pass": 26,
+  "checks_fail": 0
+}

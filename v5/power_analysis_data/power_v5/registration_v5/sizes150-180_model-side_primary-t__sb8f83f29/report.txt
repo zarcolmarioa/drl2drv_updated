@@ -1,0 +1,111 @@
+REGISTRATION TABLES  (registration_tables_v5.py, script 9)
+==============================================================================
+run       2026-11-06 17:57:14  (1.5 s)
+output    /home/mario/Documents/drl2drv_updated/data/power_v5/registration_v5/sizes150-180_model-side_primary-t__sb8f83f29
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+Read the outputs of scripts 6, 7 and 8 (no simulation), checked that each
+passed every check and that they chain together through the SHA-256 each run
+recorded for the files it read, recomputed the primary-test rule (original
+and amended) from script 7's results and compared it with what script 7
+recorded, and wrote the tables, the figures and registration_summary.txt.
+Planning assumptions are assumptions, not estimates.
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [inputs] script 6: output folder exists
+          data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391
+  PASS  [inputs] script 6: its run passed every check
+          85 PASS, 0 FAIL
+  PASS  [inputs] script 7: output folder exists
+          data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101
+  PASS  [inputs] script 7: its run passed every check
+          45 PASS, 0 FAIL
+  PASS  [inputs] script 8: output folder exists
+          data/power_v5/c1_v5/sizes150-180_report10-20_comparison20-30_strategy0.25x0.5_pool50000_studies10000_seed42__s2ab231a6
+  PASS  [inputs] script 8: its run passed every check
+          53 PASS, 0 FAIL
+  PASS  [chain] script 7 read the thresholds.csv read here
+          0db4c989bbfc8a25...
+  PASS  [chain] script 8 read the thresholds.csv read here
+  PASS  [chain] script 8 read script 7's paired_power.csv read here
+          0fd6a18cef0998e4...
+  PASS  [chain] scripts 7 and 8 used the same frozen lists
+          20 files
+  PASS  [chain] script 7's per-person model is the registered one
+          side
+  PASS  [decisions] the registered per-person model is script 6's recommendation
+          script 6: side; registered: side
+  PASS  [decisions] the original rule, recomputed here, gives what script 7 recorded
+          cells over the limit [('t', 1), ('wilcoxon', 1)]; chosen None
+  PASS  [decisions] the amended rule chooses the registered primary test
+          amended rule: t (gap +0.0352); registered: t
+  PASS  [decisions] the mixed model is not registered, as script 7's verdict says
+          VERDICT: the mixed model is NOT worth registering by this criterion.
+  PASS  [tables] table_thresholds: complete
+          8 rows, 0 empty numeric cells (expected 8 rows)
+  PASS  [tables] table_primary: complete
+          22 rows, 0 empty numeric cells (expected 22 rows)
+  PASS  [tables] table_sensitivity: complete
+          48 rows, 0 empty numeric cells
+  PASS  [tables] table_pair_preferences: complete
+          48 rows, 0 empty numeric cells
+  PASS  [tables] table_secondary_sign: complete
+          24 rows, 0 empty numeric cells
+  PASS  [tables] table_c1: complete
+          96 rows, 0 empty numeric cells (expected 96 rows)
+  PASS  [tables] table_attention_check: complete
+          120 rows, 0 empty numeric cells
+  PASS  [tables] table_threats: complete
+          84 rows, 0 empty numeric cells
+  PASS  [tables] table_block_measures: complete
+          42 rows, 0 empty numeric cells
+  PASS  [tables] registered thresholds: upper above 0, lower below 0, contrast wider than saturation
+  PASS  [figures] figure text uses plain labels (no internal code names)
+          4 figures
+
+  26 PASS, 0 FAIL
+
+3. TABLES (also as CSV; tables.txt has them all)
+------------------------------------------------------------------------------
+
+  table_thresholds  (8 rows)
+
+  table_primary  (22 rows)
+
+  table_sensitivity  (48 rows)
+
+  table_pair_preferences  (48 rows)
+
+  table_secondary_sign  (24 rows)
+
+  table_c1  (96 rows)
+
+  table_attention_check  (120 rows)
+
+  table_threats  (84 rows)
+
+  table_block_measures  (42 rows)
+
+4. FILES
+------------------------------------------------------------------------------
+  checks.csv
+  figure_c1.png
+  figure_detection.png
+  figure_pair_preferences.png
+  figure_primary_power.png
+  registration_summary.txt
+  report.txt
+  run_meta.json
+  settings.json
+  table_attention_check.csv
+  table_block_measures.csv
+  table_c1.csv
+  table_pair_preferences.csv
+  table_primary.csv
+  table_secondary_sign.csv
+  table_sensitivity.csv
+  table_threats.csv
+  table_thresholds.csv
+  tables.txt

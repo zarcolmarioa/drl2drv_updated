@@ -1,0 +1,48 @@
+{
+  "PROJECT_ROOT": null,
+  "THRESHOLDS_RUN_DIR": "data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391",
+  "PAIRED_RUN_DIR": "data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101",
+  "C1_RUN_DIR": "data/power_v5/c1_v5/sizes150-180_report10-20_comparison20-30_strategy0.25x0.5_pool50000_studies10000_seed42__s2ab231a6",
+  "OUTPUT_ROOT": "data/power_v5/registration_v5",
+  "FIG_DPI": 200,
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "TABLE_N": [
+    10,
+    15,
+    20
+  ],
+  "REGISTERED_MODEL": "side",
+  "PRIMARY_TEST": "t",
+  "ROBUSTNESS_TEST": "wilcoxon",
+  "MIXED_MODEL_REGISTERED": false,
+  "DECISION_DATE": "2026-11-06",
+  "ORIGINAL_RULE": "A test qualifies if, in every rule row (no nuisance, each default nuisance alone, all defaults together; no effect), at N = 10, 15 and 20, both block sizes and both features, its false-positive rate is at most 0.05 + 2 SE (that cell's Monte Carlo SE). Among qualifying tests, the one with the higher mean power over planning and half shift (all nuisances at their defaults; same N, sizes and features) wins; within 0.02 of each other, the Wilcoxon test.",
+  "AMENDED_RULE": "As the original rule, except that a test qualifies if no more of its rule cells exceed 0.05 + 2 SE than chance gives in 95% of runs for a test whose false-positive rate is exactly 0.05 (at most 5 of 96 cells).",
+  "AMENDMENT_REASON": "The original rule asks every one of 96 cells per test to stay below a limit set at 2 Monte Carlo SE. Each cell exceeds that limit with probability about 0.023 even for a perfectly calibrated test, so about 2.2 exceedances are expected by chance alone and an exactly calibrated test fails the rule in most runs. In script 7 each test exceeded the limit in exactly one cell, the same cell for both (block order, 180 trials, N = 20, contrast), by margins below 0.001 (t-test 0.0579 against 0.0576; Wilcoxon 0.0567 against 0.0567), with mean false-positive rates of 0.050 (t) and 0.047 (Wilcoxon) over the rule rows. The amendment keeps the intent (no test whose false positives are inflated beyond chance qualifies) and removes the multiple-comparison artefact. It was made after script 7 had run, by the researcher, and is recorded here as such.",
+  "RULE_K_SE": 2.0,
+  "RULE_CHANCE_QUANTILE": 0.95,
+  "THRESHOLD_NOTE": "Both models' thresholds come from the same 20,000 random choosers (the stream that produced design.json), so the two models are compared without the Monte Carlo error of two separate threshold draws. In script 6's first run the side model's thresholds came from separate choosers; the detection-loss criterion (b) then failed on threshold noise (0.014, with a Monte Carlo SE of about 0.009) and the rule picked the two-weight model. Script 6 was changed to use the same choosers before its results were accepted; the change flipped the recommendation, and the researcher accepted it.",
+  "REALISTIC_ROWS_NOTE": "Script 8's 'realistic' C1 rows add script 7's default nuisances, except that script 7's 'edited looks odd' quarter (-0.5 on both features, against the more edited image) is replaced by v4's C1 strategy: a quarter of each group pick the more heavily edited-looking image (+0.5 on both features in every block). The two use the same slot of the person model, so they cannot both be on.",
+  "EXPECTATION_ROLE": "The comparison group's expectation block is a side benchmark. It decides nothing: it is used only in two exploratory, descriptive analyses, and no power simulation was run for them.",
+  "EXPLORATORY_ANALYSES": [
+    "Within the comparison group: expectation-block weights against the same people's ordinary-block weights (paired, per feature). Asks whether people who never had derealization expect it to look faded.",
+    "Across groups: the report group's derealization-block weights against the comparison group's expectation-block weights (the v4 version of C1), reported beside C1."
+  ],
+  "PAIR_SD_NOTE": "Pair-specific preferences (a person's preference within a specific pair, repeated with the pair) are OFF in the defaults. Power is reported at SD 1.0, 1.5 and 2.0 logit; the strength will be calibrated from the agreement on repeated trials in the pilot (agreement in the simulation is shown beside each SD).",
+  "FORBIDDEN_FIGURE_TOKENS": [
+    "\\bsat\\b",
+    "\\bcon\\b",
+    "\\bfog\\b",
+    "\\bder\\b",
+    "\\bord\\b",
+    "_",
+    "\\bpred\\b",
+    "\\best\\b",
+    "\\bo[1-4]\\b",
+    "\\bnuis\\b",
+    "\\bDPDR\\b"
+  ]
+}

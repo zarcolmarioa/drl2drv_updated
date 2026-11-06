@@ -1,0 +1,291 @@
+REGISTRATION SUMMARY: v5 POWER ANALYSIS  (registration_tables_v5.py)
+==============================================================================
+Written 2026-11-06 17:57; decisions dated 2026-11-06. Checks: 26 PASS, 0 FAIL (report.txt).
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. Every power and
+false-positive rate below comes from simulated people whose preferences
+(responders' shift of 0.5 saturation and 0.7 contrast per corpus SD, half of
+the report group responding), taste spread, lapse rates and nuisances were
+chosen for planning. No image-choice data exist yet.
+Both block sizes (150 and 180 analysed trials per block) are reported; the
+size is chosen after the timed pilot.
+
+1. WHAT IS REGISTERED
+------------------------------------------------------------------------------
+  * Per-person model: Firth logistic regression without intercept, fitted per
+  block on the analysed trials, with a saturation weight, a contrast weight
+  and a side term (+1 when image A is on the left, -1 on the right). The side
+  term is a nuisance term; its estimate is never reported as a result.
+  * Detection thresholds: per set and block size, the 2.5% tails of 20,000
+  random choosers' weights under the registered model (table 1). They replace
+  the two-weight thresholds frozen in design.json.
+  * PRIMARY test (H1 contrast, H2 saturation), in the report group: one-sided
+  paired t-test on the within-person difference (derealization-block weight
+  minus ordinary-block weight), alpha 0.05 each, uncorrected. The exact
+  Wilcoxon signed-rank test on the same differences is reported as a
+  robustness check.
+  * The mixed-effects logistic model was evaluated and is NOT registered
+  (section 4).
+  * SECONDARY: detected counts and the sign test within each block (v4's rule:
+  d >= 5 and the exact one-sided binomial), with the registered thresholds.
+  * C1: section 7. The comparison group's expectation block: section 8.
+
+2. THE PER-PERSON MODEL AND ITS THRESHOLDS (script 6)
+------------------------------------------------------------------------------
+  Rule fixed before the run: register the side model only if (a) a side bias
+  of 0.5 logit moves the two-weight model's false-detection rate above 0.035
+  in either tail or a weight by more than 0.05, and (b) the side model loses
+  at most 0.01 of detection at the planning weights.
+  Outcome: (a) holds: worst tail rate 0.0354 (180 B, saturation, right 0.5);
+  worst weight shift 0.0565 (150 B, contrast, planning weights, right 0.5);
+  the weight shift is what decides (a), the tail rate is within Monte Carlo
+  error of the limit. (b) holds: largest detection loss 0.0046 (150 A,
+  saturation). Chosen: side model.
+  How the thresholds were computed: Both models' thresholds come from the same
+  20,000 random choosers (the stream that produced design.json), so the two
+  models are compared without the Monte Carlo error of two separate threshold
+  draws. In script 6's first run the side model's thresholds came from
+  separate choosers; the detection-loss criterion (b) then failed on threshold
+  noise (0.014, with a Monte Carlo SE of about 0.009) and the rule picked the
+  two-weight model. Script 6 was changed to use the same choosers before its
+  results were accepted; the change flipped the recommendation, and the
+  researcher accepted it.
+
+   block size set    feature  registered: upper  registered: lower  two-weight (frozen in design.json): upper  two-weight (frozen in design.json): lower
+          150   A saturation              0.328             -0.331                                      0.325                                     -0.328
+          150   A   contrast              0.516             -0.521                                      0.517                                     -0.521
+          150   B saturation              0.328             -0.333                                      0.327                                     -0.332
+          150   B   contrast              0.511             -0.521                                      0.509                                     -0.519
+          180   A saturation              0.301             -0.305                                      0.302                                     -0.304
+          180   A   contrast              0.469             -0.465                                      0.468                                     -0.464
+          180   B saturation              0.304             -0.301                                      0.302                                     -0.300
+          180   B   contrast              0.452             -0.462                                      0.451                                     -0.463
+
+3. THE PRIMARY TEST: HOW IT WAS CHOSEN (script 7)
+------------------------------------------------------------------------------
+  Original rule (fixed before script 7 ran):
+    A test qualifies if, in every rule row (no nuisance, each default nuisance
+    alone, all defaults together; no effect), at N = 10, 15 and 20, both block
+    sizes and both features, its false-positive rate is at most 0.05 + 2 SE
+    (that cell's Monte Carlo SE). Among qualifying tests, the one with the
+    higher mean power over planning and half shift (all nuisances at their
+    defaults; same N, sizes and features) wins; within 0.02 of each other, the
+    Wilcoxon test.
+  Amendment (made after script 7 ran):
+    As the original rule, except that a test qualifies if no more of its rule
+    cells exceed 0.05 + 2 SE than chance gives in 95% of runs for a test whose
+    false-positive rate is exactly 0.05 (at most 5 of 96 cells).
+  Reason:
+    The original rule asks every one of 96 cells per test to stay below a limit
+    set at 2 Monte Carlo SE. Each cell exceeds that limit with probability about
+    0.023 even for a perfectly calibrated test, so about 2.2 exceedances are
+    expected by chance alone and an exactly calibrated test fails the rule in
+    most runs. In script 7 each test exceeded the limit in exactly one cell, the
+    same cell for both (block order, 180 trials, N = 20, contrast), by margins
+    below 0.001 (t-test 0.0579 against 0.0576; Wilcoxon 0.0567 against 0.0567),
+    with mean false-positive rates of 0.050 (t) and 0.047 (Wilcoxon) over the
+    rule rows. The amendment keeps the intent (no test whose false positives are
+    inflated beyond chance qualifies) and removes the multiple-comparison
+    artefact. It was made after script 7 had run, by the researcher, and is
+    recorded here as such.
+  Recomputed from script 7's results (96 rule cells per test; chance of one cell over the
+  limit for an exactly calibrated test 0.0228; expected 2.2; 95% of runs give at most 5):
+    paired t-test          cells over the limit 1; mean false-positive rate 0.0504; mean power 0.4993
+                           original rule: does not qualify; amended rule: qualifies
+                           over the limit: block order (second block: lapse +0.05, preferences x0.9), 180 trials, N = 20, contrast: 0.0579 > 0.0576
+    Wilcoxon signed-rank   cells over the limit 1; mean false-positive rate 0.0467; mean power 0.4641
+                           original rule: does not qualify; amended rule: qualifies
+                           over the limit: block order (second block: lapse +0.05, preferences x0.9), 180 trials, N = 20, contrast: 0.0567 > 0.0567
+  Original rule chooses: no test. Amended rule chooses: paired t-test (power gap +0.0352, above the tie margin).
+  REGISTERED: paired t-test (primary); Wilcoxon signed-rank (robustness check).
+
+  Registered power and false-positive rates, paired t-test, nuisances at their defaults
+  [ASSUMPTIONS] (Wilcoxon in table_primary.csv):
+   block size  N  planning contrast  planning saturation  half shift contrast  half shift saturation  no effect contrast  no effect saturation
+          150 10              0.467                0.516                0.242                  0.258               0.051                 0.047
+          150 15              0.630                0.682                0.316                  0.350               0.048                 0.050
+          150 20              0.750                0.809                0.382                  0.435               0.049                 0.048
+          180 10              0.536                0.528                0.245                  0.254               0.053                 0.050
+          180 15              0.701                0.710                0.317                  0.360               0.053                 0.050
+          180 20              0.820                0.822                0.399                  0.454               0.050                 0.049
+
+4. THE MIXED-EFFECTS LOGISTIC MODEL: NOT REGISTERED
+------------------------------------------------------------------------------
+  False positives (Wald z): largest 0.0556 against a limit of up to 0.0646 ->
+  controlled.
+  No primary test was chosen by the rule, so the mixed model is compared with
+  both.
+  Power gain over the t test under half shift at N = 15 (size x feature):
+  -0.006, -0.002, +0.006, +0.014; needed >= 0.05 in every one -> not worth
+  registering.
+  Power gain over the wilcoxon test under half shift at N = 15 (size x
+  feature): +0.025, +0.015, +0.024, +0.030; needed >= 0.05 in every one -> not
+  worth registering.
+  VERDICT: the mixed model is NOT worth registering by this criterion.
+  Criterion fixed before the run: at least 0.05 more power than the chosen
+  test under half shift at N = 15, both sizes and both features, with false
+  positives controlled.
+
+5. DEFAULTS AND SENSITIVITY
+------------------------------------------------------------------------------
+  The nuisance defaults are unchanged from script 7 (taste stability 0.7;
+  person x scene preferences, SD equal to the taste SD, stability 0.7; side
+  bias SD 0.25 logit; 'memory makes it duller' +0.25/+0.35 in everyone;
+  'edited looks odd' in a quarter, -0.5; second block lapse +0.05 and
+  preferences x0.9; equal lapse rates in the two episodes).
+  Pair-specific preferences (a person's preference within a specific pair,
+  repeated with the pair) are OFF in the defaults. Power is reported at SD
+  1.0, 1.5 and 2.0 logit; the strength will be calibrated from the agreement
+  on repeated trials in the pilot (agreement in the simulation is shown beside
+  each SD).
+  Paired t-test power at N = 20 [ASSUMPTIONS]:
+   block size     effect  pair-specific SD  agreement on repeats  contrast, paired t-test  saturation, paired t-test
+          150   planning             0.000                 0.509                    0.750                      0.809
+          150   planning             1.000                 0.571                    0.692                      0.759
+          150   planning             1.500                 0.615                    0.603                      0.686
+          150   planning             2.000                 0.650                    0.553                      0.628
+          150 half shift             0.000                 0.517                    0.382                      0.435
+          150 half shift             1.000                 0.575                    0.317                      0.342
+          150 half shift             1.500                 0.615                    0.255                      0.309
+          150 half shift             2.000                 0.655                    0.247                      0.254
+          180   planning             0.000                 0.509                    0.820                      0.822
+          180   planning             1.000                 0.569                    0.755                      0.781
+          180   planning             1.500                 0.614                    0.686                      0.733
+          180   planning             2.000                 0.652                    0.594                      0.659
+          180 half shift             0.000                 0.520                    0.399                      0.454
+          180 half shift             1.000                 0.574                    0.365                      0.375
+          180 half shift             1.500                 0.614                    0.318                      0.342
+          180 half shift             2.000                 0.655                    0.261                      0.291
+
+6. THREATS NO TEST CAN REMOVE
+------------------------------------------------------------------------------
+  A bias present in both blocks cancels in the paired difference only if both
+  blocks express it equally. More lapses in the derealization block (a
+  sensitivity row, kept out of the test choice) shrink its weights: with
+  'edited looks odd' this inflates false positives, with 'memory makes it
+  duller' it makes the test conservative. A bias stronger in one episode
+  cannot be told from an effect. Paired t-test, no effect, N = 15:
+  size                                                                            150                 180         
+  feature                                                                  saturation contrast saturation contrast
+  scenario                                                                                                        
+  derealization lapse +0.05                                                     0.050    0.050      0.048    0.055
+  derealization lapse +0.1                                                      0.048    0.054      0.053    0.052
+  derealization lapse +0.15                                                     0.049    0.047      0.052    0.050
+  derealization lapse +0.05, with edited looks odd                              0.057    0.062      0.060    0.065
+  derealization lapse +0.1, with edited looks odd                               0.086    0.060      0.088    0.076
+  derealization lapse +0.15, with edited looks odd                              0.099    0.076      0.094    0.077
+  derealization lapse +0.05, with memory makes it duller                        0.033    0.037      0.033    0.037
+  derealization lapse +0.1, with memory makes it duller                         0.018    0.022      0.014    0.021
+  derealization lapse +0.15, with memory makes it duller                        0.016    0.016      0.010    0.015
+  all nuisances (defaults), derealization lapse +0.1                            0.036    0.031      0.035    0.032
+  all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)      0.288    0.263      0.336    0.302
+  derealization lapse +0.05, with pair-specific preferences SD 1.5              0.043    0.051      0.044    0.047
+  derealization lapse +0.1, with pair-specific preferences SD 1.5               0.050    0.055      0.049    0.059
+  derealization lapse +0.15, with pair-specific preferences SD 1.5              0.048    0.055      0.053    0.048
+
+7. C1 (script 8)
+------------------------------------------------------------------------------
+  C1 compares the report group's derealization-block weights with the
+  comparison group's ORDINARY-block weights (as the PI recommended): one-sided
+  Mann-Whitney per feature, report group higher, Holm across the two features.
+  First, the attention check: the comparison group against the report group on
+  catch failures over the session and on the share of responses under 300 ms
+  (one-sided Mann-Whitney, Holm); if the comparison group looks less
+  attentive, C1 is inconclusive. Secondary check: the two groups'
+  ORDINARY-block weights, same test. Comparison group below 20: C1 descriptive
+  only.
+  Scenario (v4's C1 scenario): half the report group respond (0.5 / 0.7 per
+  SD, both features); a quarter of each group pick the more edited-looking
+  image whatever the episode; mean lapse 0.1. Script 8's 'realistic' C1 rows
+  add script 7's default nuisances, except that script 7's 'edited looks odd'
+  quarter (-0.5 on both features, against the more edited image) is replaced
+  by v4's C1 strategy: a quarter of each group pick the more heavily
+  edited-looking image (+0.5 on both features in every block). The two use the
+  same slot of the person model, so they cannot both be on.
+  C1 supported after the attention check [ASSUMPTIONS]:
+   block size  comparison  report  planning contrast  planning saturation  planning either  no effect either  check fires, equal
+          150          20      10              0.385                0.374            0.481             0.038               0.045
+          150          20      15              0.477                0.466            0.578             0.042               0.051
+          150          20      20              0.547                0.530            0.650             0.043               0.050
+          150          30      10              0.427                0.417            0.529             0.044               0.048
+          150          30      15              0.545                0.524            0.641             0.045               0.050
+          150          30      20              0.609                0.596            0.705             0.044               0.050
+          180          20      10              0.406                0.406            0.506             0.043               0.046
+          180          20      15              0.495                0.489            0.596             0.041               0.051
+          180          20      20              0.562                0.550            0.662             0.049               0.051
+          180          30      10              0.441                0.439            0.543             0.043               0.047
+          180          30      15              0.552                0.555            0.656             0.042               0.046
+          180          30      20              0.625                0.615            0.718             0.043               0.048
+  When the comparison group lapses more (mean 0.15 or 0.2 against 0.1), the
+  check fires in 36%-96% of studies; before the check, false C1 claims then
+  reach at most 0.065. With an effect, a slightly less attentive comparison
+  group therefore mostly costs power (C1 inconclusive) rather than producing
+  false claims (table_attention_check.csv).
+
+8. THE COMPARISON GROUP'S EXPECTATION BLOCK
+------------------------------------------------------------------------------
+  The comparison group's expectation block is a side benchmark. It decides
+  nothing: it is used only in two exploratory, descriptive analyses, and no
+  power simulation was run for them.
+    Exploratory 1: Within the comparison group: expectation-block weights
+    against the same people's ordinary-block weights (paired, per feature). Asks
+    whether people who never had derealization expect it to look faded.
+    Exploratory 2: Across groups: the report group's derealization-block weights
+    against the comparison group's expectation-block weights (the v4 version of
+    C1), reported beside C1.
+
+9. PER-BLOCK ATTENTION MEASURES (candidate check, not registered here)
+------------------------------------------------------------------------------
+  How often catch failures and consistency on repeated trials flag more lapses
+  in the derealization block (one-sided, 0.05), no effect [ASSUMPTIONS];
+  consistency only works if people have pair-specific preferences:
+                                                          scenario  block size  N  consistency flags the difference  catch failures flag the difference
+                                                      no nuisances         150 10                             0.045                               0.011
+                                                      no nuisances         150 15                             0.046                               0.018
+                                                      no nuisances         150 20                             0.045                               0.022
+                                         derealization lapse +0.05         150 10                             0.050                               0.051
+                                         derealization lapse +0.05         150 15                             0.053                               0.087
+                                         derealization lapse +0.05         150 20                             0.052                               0.120
+                                          derealization lapse +0.1         150 10                             0.049                               0.140
+                                          derealization lapse +0.1         150 15                             0.054                               0.245
+                                          derealization lapse +0.1         150 20                             0.050                               0.357
+                                         derealization lapse +0.15         150 10                             0.050                               0.245
+                                         derealization lapse +0.15         150 15                             0.047                               0.402
+                                         derealization lapse +0.15         150 20                             0.052                               0.563
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         150 10                             0.068                               0.046
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         150 15                             0.073                               0.082
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         150 20                             0.081                               0.123
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         150 10                             0.107                               0.131
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         150 15                             0.125                               0.237
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         150 20                             0.134                               0.343
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         150 10                             0.140                               0.242
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         150 15                             0.172                               0.405
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         150 20                             0.201                               0.570
+                                                      no nuisances         180 10                             0.050                               0.010
+                                                      no nuisances         180 15                             0.051                               0.017
+                                                      no nuisances         180 20                             0.052                               0.022
+                                         derealization lapse +0.05         180 10                             0.043                               0.040
+                                         derealization lapse +0.05         180 15                             0.048                               0.079
+                                         derealization lapse +0.05         180 20                             0.047                               0.110
+                                          derealization lapse +0.1         180 10                             0.052                               0.144
+                                          derealization lapse +0.1         180 15                             0.055                               0.250
+                                          derealization lapse +0.1         180 20                             0.062                               0.349
+                                         derealization lapse +0.15         180 10                             0.051                               0.233
+                                         derealization lapse +0.15         180 15                             0.056                               0.397
+                                         derealization lapse +0.15         180 20                             0.050                               0.552
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         180 10                             0.068                               0.047
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         180 15                             0.090                               0.081
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         180 20                             0.098                               0.115
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         180 10                             0.102                               0.117
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         180 15                             0.132                               0.212
+   derealization lapse +0.1, with pair-specific preferences SD 1.5         180 20                             0.143                               0.308
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         180 10                             0.158                               0.243
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         180 15                             0.197                               0.411
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         180 20                             0.236                               0.561
+
+10. PROVENANCE
+------------------------------------------------------------------------------
+  script 6 (thresholds_v5.py): data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391
+  script 7 (simulate_power_paired_v5.py): data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101
+  script 8 (simulate_c1_v5.py): data/power_v5/c1_v5/sizes150-180_report10-20_comparison20-30_strategy0.25x0.5_pool50000_studies10000_seed42__s2ab231a6
+  SHA-256 of every file read: run_meta.json of this folder.

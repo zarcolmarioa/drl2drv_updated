@@ -1,0 +1,43 @@
+scenario,block size,N,consistency flags the difference,catch failures flag the difference
+no nuisances,150,10,0.0449,0.0115
+no nuisances,150,15,0.0461,0.0185
+no nuisances,150,20,0.0449,0.0223
+derealization lapse +0.05,150,10,0.0497,0.0511
+derealization lapse +0.05,150,15,0.0535,0.0874
+derealization lapse +0.05,150,20,0.0518,0.12
+derealization lapse +0.1,150,10,0.049,0.1395
+derealization lapse +0.1,150,15,0.0538,0.2455
+derealization lapse +0.1,150,20,0.05,0.3569
+derealization lapse +0.15,150,10,0.0495,0.245
+derealization lapse +0.15,150,15,0.0466,0.4015
+derealization lapse +0.15,150,20,0.0521,0.5626
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,10,0.0683,0.0461
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,15,0.0735,0.0824
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,20,0.0814,0.1231
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,10,0.1067,0.1308
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,15,0.1253,0.2374
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,20,0.1335,0.3432
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,10,0.1399,0.2419
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,15,0.1721,0.4054
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,20,0.2007,0.5695
+no nuisances,180,10,0.0496,0.0096
+no nuisances,180,15,0.0505,0.0174
+no nuisances,180,20,0.0522,0.022
+derealization lapse +0.05,180,10,0.0435,0.0399
+derealization lapse +0.05,180,15,0.0476,0.0788
+derealization lapse +0.05,180,20,0.0474,0.1101
+derealization lapse +0.1,180,10,0.0517,0.1438
+derealization lapse +0.1,180,15,0.0548,0.2497
+derealization lapse +0.1,180,20,0.0622,0.3487
+derealization lapse +0.15,180,10,0.0509,0.2333
+derealization lapse +0.15,180,15,0.0555,0.3966
+derealization lapse +0.15,180,20,0.0503,0.5521
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,10,0.0676,0.0468
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,15,0.0903,0.0813
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,20,0.0975,0.1154
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,10,0.102,0.1172
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,15,0.1316,0.2125
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,20,0.1432,0.308
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,10,0.1583,0.2433
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,15,0.1972,0.4115
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,20,0.2358,0.5611

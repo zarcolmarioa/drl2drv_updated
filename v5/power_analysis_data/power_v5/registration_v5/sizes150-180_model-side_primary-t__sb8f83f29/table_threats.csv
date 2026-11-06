@@ -1,0 +1,85 @@
+scenario,block size,N,saturation,contrast
+derealization lapse +0.05,150,10,0.0463,0.0463
+derealization lapse +0.05,150,15,0.0503,0.0504
+derealization lapse +0.05,150,20,0.0488,0.0479
+derealization lapse +0.05,180,10,0.0447,0.0552
+derealization lapse +0.05,180,15,0.0483,0.0548
+derealization lapse +0.05,180,20,0.043,0.0522
+derealization lapse +0.1,150,10,0.0503,0.05
+derealization lapse +0.1,150,15,0.0481,0.0539
+derealization lapse +0.1,150,20,0.0481,0.0505
+derealization lapse +0.1,180,10,0.0544,0.0449
+derealization lapse +0.1,180,15,0.053,0.0517
+derealization lapse +0.1,180,20,0.0565,0.0507
+derealization lapse +0.15,150,10,0.0476,0.0498
+derealization lapse +0.15,150,15,0.0491,0.0466
+derealization lapse +0.15,150,20,0.0491,0.0531
+derealization lapse +0.15,180,10,0.0459,0.0546
+derealization lapse +0.15,180,15,0.0525,0.0497
+derealization lapse +0.15,180,20,0.0501,0.0469
+"derealization lapse +0.05, with edited looks odd",150,10,0.0549,0.0592
+"derealization lapse +0.05, with edited looks odd",150,15,0.0571,0.0619
+"derealization lapse +0.05, with edited looks odd",150,20,0.0625,0.0594
+"derealization lapse +0.05, with edited looks odd",180,10,0.0613,0.0599
+"derealization lapse +0.05, with edited looks odd",180,15,0.0602,0.0647
+"derealization lapse +0.05, with edited looks odd",180,20,0.0685,0.069
+"derealization lapse +0.1, with edited looks odd",150,10,0.0769,0.0553
+"derealization lapse +0.1, with edited looks odd",150,15,0.0856,0.0596
+"derealization lapse +0.1, with edited looks odd",150,20,0.0827,0.0609
+"derealization lapse +0.1, with edited looks odd",180,10,0.0759,0.0645
+"derealization lapse +0.1, with edited looks odd",180,15,0.0876,0.0757
+"derealization lapse +0.1, with edited looks odd",180,20,0.0847,0.075
+"derealization lapse +0.15, with edited looks odd",150,10,0.0889,0.0643
+"derealization lapse +0.15, with edited looks odd",150,15,0.0994,0.0764
+"derealization lapse +0.15, with edited looks odd",150,20,0.1111,0.0782
+"derealization lapse +0.15, with edited looks odd",180,10,0.0796,0.0628
+"derealization lapse +0.15, with edited looks odd",180,15,0.0942,0.0772
+"derealization lapse +0.15, with edited looks odd",180,20,0.1017,0.0752
+"derealization lapse +0.05, with memory makes it duller",150,10,0.0337,0.0383
+"derealization lapse +0.05, with memory makes it duller",150,15,0.0333,0.0366
+"derealization lapse +0.05, with memory makes it duller",150,20,0.0303,0.036
+"derealization lapse +0.05, with memory makes it duller",180,10,0.0383,0.0392
+"derealization lapse +0.05, with memory makes it duller",180,15,0.0329,0.0371
+"derealization lapse +0.05, with memory makes it duller",180,20,0.0271,0.0321
+"derealization lapse +0.1, with memory makes it duller",150,10,0.0249,0.0253
+"derealization lapse +0.1, with memory makes it duller",150,15,0.0178,0.0222
+"derealization lapse +0.1, with memory makes it duller",150,20,0.0147,0.0192
+"derealization lapse +0.1, with memory makes it duller",180,10,0.02,0.0267
+"derealization lapse +0.1, with memory makes it duller",180,15,0.0139,0.0206
+"derealization lapse +0.1, with memory makes it duller",180,20,0.0131,0.0175
+"derealization lapse +0.15, with memory makes it duller",150,10,0.0209,0.022
+"derealization lapse +0.15, with memory makes it duller",150,15,0.0162,0.0157
+"derealization lapse +0.15, with memory makes it duller",150,20,0.0116,0.0134
+"derealization lapse +0.15, with memory makes it duller",180,10,0.0133,0.0166
+"derealization lapse +0.15, with memory makes it duller",180,15,0.0104,0.0149
+"derealization lapse +0.15, with memory makes it duller",180,20,0.0079,0.0094
+"all nuisances (defaults), derealization lapse +0.1",150,10,0.0417,0.0308
+"all nuisances (defaults), derealization lapse +0.1",150,15,0.036,0.0306
+"all nuisances (defaults), derealization lapse +0.1",150,20,0.0375,0.0267
+"all nuisances (defaults), derealization lapse +0.1",180,10,0.034,0.0336
+"all nuisances (defaults), derealization lapse +0.1",180,15,0.0352,0.0322
+"all nuisances (defaults), derealization lapse +0.1",180,20,0.0271,0.0271
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",150,10,0.2266,0.206
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",150,15,0.2877,0.2629
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",150,20,0.3729,0.3163
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",180,10,0.243,0.2253
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",180,15,0.3359,0.3019
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",180,20,0.4034,0.3473
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,10,0.0459,0.0528
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,15,0.0432,0.0511
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",150,20,0.0494,0.0488
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,10,0.0426,0.05
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,15,0.044,0.0467
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",180,20,0.0465,0.0451
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,10,0.051,0.0545
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,15,0.0501,0.0546
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",150,20,0.0522,0.0526
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,10,0.0479,0.0546
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,15,0.0494,0.0589
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",180,20,0.0488,0.0577
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,10,0.0481,0.051
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,15,0.048,0.055
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",150,20,0.0428,0.0518
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,10,0.0465,0.0414
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,15,0.053,0.0475
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",180,20,0.0491,0.0478

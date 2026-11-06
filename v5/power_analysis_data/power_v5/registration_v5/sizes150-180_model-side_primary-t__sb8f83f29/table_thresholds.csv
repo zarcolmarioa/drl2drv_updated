@@ -1,0 +1,9 @@
+block size,set,feature,registered: upper,registered: lower,two-weight (frozen in design.json): upper,two-weight (frozen in design.json): lower
+150,A,saturation,0.328,-0.331,0.325,-0.328
+150,A,contrast,0.516,-0.521,0.517,-0.521
+150,B,saturation,0.328,-0.333,0.327,-0.332
+150,B,contrast,0.511,-0.521,0.509,-0.519
+180,A,saturation,0.301,-0.305,0.302,-0.304
+180,A,contrast,0.469,-0.465,0.468,-0.464
+180,B,saturation,0.304,-0.301,0.302,-0.3
+180,B,contrast,0.452,-0.462,0.451,-0.463

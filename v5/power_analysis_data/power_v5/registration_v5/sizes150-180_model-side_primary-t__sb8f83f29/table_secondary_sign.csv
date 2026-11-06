@@ -1,0 +1,25 @@
+row,block size,N,derealization saturation,derealization contrast,ordinary saturation,ordinary contrast
+"no effect, no nuisances",150,10,0.0,0.0001,0.0001,0.0
+"no effect, no nuisances",150,15,0.0008,0.0005,0.0006,0.0018
+"no effect, no nuisances",150,20,0.0022,0.0016,0.0019,0.0027
+"no effect, no nuisances",180,10,0.0003,0.0001,0.0001,0.0007
+"no effect, no nuisances",180,15,0.0007,0.002,0.0014,0.002
+"no effect, no nuisances",180,20,0.0026,0.0061,0.0033,0.0054
+"no effect, all nuisances (defaults)",150,10,0.0255,0.0193,0.0225,0.0223
+"no effect, all nuisances (defaults)",150,15,0.0811,0.0906,0.0839,0.0963
+"no effect, all nuisances (defaults)",150,20,0.1415,0.1955,0.1477,0.1929
+"no effect, all nuisances (defaults)",180,10,0.0335,0.0357,0.03,0.034
+"no effect, all nuisances (defaults)",180,15,0.0998,0.1331,0.0927,0.135
+"no effect, all nuisances (defaults)",180,20,0.1713,0.2493,0.1665,0.2479
+planning (nuisances at defaults),150,10,0.41,0.44,0.0216,0.0217
+planning (nuisances at defaults),150,15,0.7153,0.774,0.0771,0.0955
+planning (nuisances at defaults),150,20,0.8693,0.9169,0.1411,0.1953
+planning (nuisances at defaults),180,10,0.4722,0.5493,0.0387,0.0388
+planning (nuisances at defaults),180,15,0.7566,0.8517,0.1156,0.1511
+planning (nuisances at defaults),180,20,0.8915,0.9536,0.1786,0.2776
+half shift (nuisances at defaults),150,10,0.4098,0.4513,0.1674,0.145
+half shift (nuisances at defaults),150,15,0.7131,0.7986,0.4152,0.4424
+half shift (nuisances at defaults),150,20,0.8743,0.9284,0.6008,0.6637
+half shift (nuisances at defaults),180,10,0.4646,0.5445,0.2444,0.2365
+half shift (nuisances at defaults),180,15,0.749,0.844,0.4894,0.5719
+half shift (nuisances at defaults),180,20,0.8858,0.956,0.658,0.7773

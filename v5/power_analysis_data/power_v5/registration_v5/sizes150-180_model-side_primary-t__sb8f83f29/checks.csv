@@ -1,0 +1,27 @@
+section,check,status,detail
+inputs,script 6: output folder exists,PASS,data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391
+inputs,script 6: its run passed every check,PASS,"85 PASS, 0 FAIL"
+inputs,script 7: output folder exists,PASS,data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101
+inputs,script 7: its run passed every check,PASS,"45 PASS, 0 FAIL"
+inputs,script 8: output folder exists,PASS,data/power_v5/c1_v5/sizes150-180_report10-20_comparison20-30_strategy0.25x0.5_pool50000_studies10000_seed42__s2ab231a6
+inputs,script 8: its run passed every check,PASS,"53 PASS, 0 FAIL"
+chain,script 7 read the thresholds.csv read here,PASS,0db4c989bbfc8a25...
+chain,script 8 read the thresholds.csv read here,PASS,
+chain,script 8 read script 7's paired_power.csv read here,PASS,0fd6a18cef0998e4...
+chain,scripts 7 and 8 used the same frozen lists,PASS,20 files
+chain,script 7's per-person model is the registered one,PASS,side
+decisions,the registered per-person model is script 6's recommendation,PASS,script 6: side; registered: side
+decisions,"the original rule, recomputed here, gives what script 7 recorded",PASS,"cells over the limit [('t', 1), ('wilcoxon', 1)]; chosen None"
+decisions,the amended rule chooses the registered primary test,PASS,amended rule: t (gap +0.0352); registered: t
+decisions,"the mixed model is not registered, as script 7's verdict says",PASS,VERDICT: the mixed model is NOT worth registering by this criterion.
+tables,table_thresholds: complete,PASS,"8 rows, 0 empty numeric cells (expected 8 rows)"
+tables,table_primary: complete,PASS,"22 rows, 0 empty numeric cells (expected 22 rows)"
+tables,table_sensitivity: complete,PASS,"48 rows, 0 empty numeric cells"
+tables,table_pair_preferences: complete,PASS,"48 rows, 0 empty numeric cells"
+tables,table_secondary_sign: complete,PASS,"24 rows, 0 empty numeric cells"
+tables,table_c1: complete,PASS,"96 rows, 0 empty numeric cells (expected 96 rows)"
+tables,table_attention_check: complete,PASS,"120 rows, 0 empty numeric cells"
+tables,table_threats: complete,PASS,"84 rows, 0 empty numeric cells"
+tables,table_block_measures: complete,PASS,"42 rows, 0 empty numeric cells"
+tables,"registered thresholds: upper above 0, lower below 0, contrast wider than saturation",PASS,
+figures,figure text uses plain labels (no internal code names),PASS,4 figures
