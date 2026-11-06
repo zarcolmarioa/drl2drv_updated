@@ -1,0 +1,255 @@
+{
+  "PROJECT_ROOT": null,
+  "SCRIPT7": "simulate_power_paired_v5.py",
+  "EXPECTED_SHA256": {
+    "simulate_power_paired_v5.py": "14e09055fd122d032665d210713a3a32017c88dc0ea5610cb00a9aba106f366f"
+  },
+  "PAIRED_RUN_DIR": "data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101",
+  "OUTPUT_ROOT": "data/power_v5/nuisance_v5",
+  "FIG_DPI": 200,
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "N_LIST": [
+    10,
+    15,
+    20
+  ],
+  "EFFECTS_RUN": [
+    "planning",
+    "half shift"
+  ],
+  "TEST": "t",
+  "SCENE_OFF_MULT": 1e-09,
+  "NUISANCES": [
+    [
+      "taste",
+      "taste that differs between the two episodes",
+      {
+        "taste_corr": "OFF"
+      }
+    ],
+    [
+      "scene",
+      "scene-specific preferences",
+      {
+        "scene_sd_mult": 1e-09
+      }
+    ],
+    [
+      "side",
+      "a preference for one side of the screen",
+      {
+        "side_sd": "OFF"
+      }
+    ],
+    [
+      "dull",
+      "a shared preference for the duller image",
+      {
+        "dull": "OFF"
+      }
+    ],
+    [
+      "odd",
+      "a quarter of people avoiding the more edited image",
+      {
+        "odd_share": "OFF"
+      }
+    ],
+    [
+      "order",
+      "fatigue in the second block (more lapses, weaker preferences)",
+      {
+        "order_lapse": "OFF",
+        "order_scale": "OFF"
+      }
+    ]
+  ],
+  "SHORT_LABEL": {
+    "taste": "Taste differs between episodes",
+    "scene": "Scene-specific preferences",
+    "side": "Side preference",
+    "dull": "Shared preference for duller images",
+    "odd": "Some avoid the more edited image",
+    "order": "Second-block fatigue"
+  },
+  "NEGLIGIBLE": 0.01,
+  "INTERACT_SE": 2.0,
+  "INTERACT_MIN": 0.01,
+  "TOP_K": 3,
+  "EXACT_TOL": 1e-12,
+  "MAX_Z": 3.5,
+  "SHARE_BEYOND": 0.1,
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "nuisance_v5",
+  "script7_settings_used": {
+    "POOL_PEOPLE": 50000,
+    "N_STUDIES": 10000,
+    "N_BATCHES": 20,
+    "PERSON_MODEL": "side",
+    "NUISANCE_OFF": {
+      "taste_corr": 1.0,
+      "scene_sd_mult": 0.0,
+      "scene_corr": 0.7,
+      "common_scene_sd": 0.0,
+      "side_mean": 0.0,
+      "side_sd": 0.0,
+      "side_corr": 0.8,
+      "dull": [
+        0.0,
+        0.0
+      ],
+      "odd_share": 0.0,
+      "odd_weight": 0.5,
+      "order_lapse": 0.0,
+      "order_scale": 1.0,
+      "episode_lapse": 0.0,
+      "differential_bias": [
+        0.0,
+        0.0
+      ],
+      "lapse_drift": 0.0,
+      "pair_sd": 0.0
+    },
+    "NUISANCE_DEFAULT": {
+      "taste_corr": 0.7,
+      "scene_sd_mult": 1.0,
+      "scene_corr": 0.7,
+      "common_scene_sd": 0.0,
+      "side_mean": 0.0,
+      "side_sd": 0.25,
+      "side_corr": 0.8,
+      "dull": [
+        0.25,
+        0.35
+      ],
+      "odd_share": 0.25,
+      "odd_weight": 0.5,
+      "order_lapse": 0.05,
+      "order_scale": 0.9,
+      "episode_lapse": 0.0,
+      "differential_bias": [
+        0.0,
+        0.0
+      ],
+      "lapse_drift": 0.0,
+      "pair_sd": 0.0
+    },
+    "EFFECTS": {
+      "no effect": {
+        "share": 0.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "planning": {
+        "share": 0.5,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "half shift": {
+        "share": 0.5,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      },
+      "a quarter respond": {
+        "share": 0.25,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "a quarter respond, half shift": {
+        "share": 0.25,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      },
+      "all respond": {
+        "share": 1.0,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "all respond, half shift": {
+        "share": 1.0,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      }
+    },
+    "RANDOM_SEED": 42,
+    "STREAM_KEY": "paired_v5",
+    "TASTE_SD": [
+      0.143,
+      0.244
+    ],
+    "LAPSE_MEAN": 0.1
+  }
+}

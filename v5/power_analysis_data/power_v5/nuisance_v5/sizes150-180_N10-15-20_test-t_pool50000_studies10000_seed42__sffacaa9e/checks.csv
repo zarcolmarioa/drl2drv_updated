@@ -1,0 +1,48 @@
+section,check,status,detail
+inputs,simulate_power_paired_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_power_paired_v5.py
+inputs,simulate_power_paired_v5.py is the expected version (SHA-256),PASS,14e09055fd122d03...
+inputs (via script 7),simulate_power_v4_n10_20.py exists,PASS,/home/mario/Documents/drl2drv_updated/simulate_power_v4_n10_20.py
+inputs (via script 7),simulate_power_v4_n10_20.py is the expected version (SHA-256),PASS,852f3b33eb349153...
+inputs (via script 7),analyse_pair_capacity_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/analyse_pair_capacity_v5.py
+inputs (via script 7),analyse_pair_capacity_v5.py is the expected version (SHA-256),PASS,5a8483a2a3884822...
+inputs (via script 7),explore_block_length_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/explore_block_length_v5.py
+inputs (via script 7),explore_block_length_v5.py is the expected version (SHA-256),PASS,98d641f60252be83...
+inputs (via script 7),thresholds_v5.py exists,PASS,/home/mario/Documents/drl2drv_updated/thresholds_v5.py
+inputs (via script 7),thresholds_v5.py is the expected version (SHA-256),PASS,90457ef9c8208581...
+inputs (via script 7),script 6's thresholds.csv exists,PASS,/home/mario/Documents/drl2drv_updated/data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391/thresholds.csv
+inputs (via script 7),script 6's run passed every check,PASS,"85 PASS, 0 FAIL"
+inputs (via script 7),script 6 recommended the model used here (side),PASS,script 6: side
+inputs (via script 7),thresholds found for every size and set,PASS,4 sets
+inputs (via script 7),every file read matches checksums.sha256,PASS,10 files
+inputs (via script 7),"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch"
+inputs (via script 7),"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs (via script 7),every file read matches checksums.sha256,PASS,10 files
+inputs (via script 7),"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch"
+inputs (via script 7),"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs,script 7's paired_power.csv exists,PASS,/home/mario/Documents/drl2drv_updated/data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101/paired_power.csv
+inputs,script 7's run passed every check,PASS,45 PASS
+setup,the eight conditions differ from all defaults only in the nuisance switched off,PASS,
+anchors,"rerun with script 7's own stream keys, the two anchors reproduce script 7's numbers exactly",PASS,"48 cells (paired t-test, N [10, 15, 20]); largest |diff| 0.0e+00"
+common draws,"150 trials, planning: identical responders in all eight conditions",PASS,
+common draws,"150 trials, half shift: identical responders in all eight conditions",PASS,
+common draws,"180 trials, planning: identical responders in all eight conditions",PASS,
+common draws,"180 trials, half shift: identical responders in all eight conditions",PASS,
+common draws,exclusions identical to all defaults wherever the lapse rate is unchanged (all but block order and no nuisances),PASS,largest share differing 0.0000
+common draws,studies sample the same people as with all defaults wherever exclusions are unchanged,PASS,"block order / no nuisances: 2.5% of people excluded differently, 66.6% of studies with the same people"
+anchors,the matched family's anchors agree with script 7 within Monte Carlo error (scene off as SD x1e-9 in no nuisances),PASS,48 cells; largest |z| 2.02; 2% beyond 1.96
+results,nuisances cost power: total drop positive for both effects,PASS,"planning 0.095, half shift 0.106"
+figure,figure text uses plain labels,PASS,

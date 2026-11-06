@@ -1,0 +1,275 @@
+WHICH NUISANCES COST THE PRIMARY TEST POWER  (nuisance_power_v5.py)
+==============================================================================
+run       2026-11-06 18:59:42  (1.7 min on 32 cores)
+output    /home/mario/Documents/drl2drv_updated/data/power_v5/nuisance_v5/sizes150-180_N10-15-20_test-t_pool50000_studies10000_seed42__sffacaa9e
+checks    47 PASS, 0 FAIL (section 6)
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. The nuisances and their
+default sizes are planning assumptions from script 7; this ranks the assumed
+nuisances at their assumed sizes, not anything measured in participants.
+
+1. SUMMARY
+------------------------------------------------------------------------------
+  Under planning, all nuisances together cost the primary test 0.095 of power
+  on average (half shift: 0.106). The largest costs come from fatigue in the
+  second block (more lapses, weaker preferences) (0.034); taste that differs
+  between the two episodes (0.030); a shared preference for the duller image
+  (0.016) (power returned when each is switched off on its own; average over
+  both block sizes, N = 10, 15, 20 and both features). Almost nothing (less
+  than 0.01 either way) is lost to scene-specific preferences and a preference
+  for one side of the screen. A quarter of people avoiding the more edited
+  image slightly RAISES power when present (-0.011 when switched off); a
+  likely reason, not tested here, is that it offsets the shared preference for
+  the duller image, pulling those people's weights back towards zero, where
+  each choice carries more information. The order differs: taste that differs
+  between the two episodes and a shared preference for the duller image swap
+  places under half shift (difference there +0.010, SE 0.004; beyond 2 SE).
+  The six separate costs add up to only 73% (planning) and 85% (half shift) of
+  the total drop: the nuisances compound, so together they cost more than the
+  sum of their separate costs (section 4).
+
+  Suggested sentence for the supplement:
+    "Most of the power lost to the assumed nuisances came from fatigue in the
+    second block (more lapses, weaker preferences), taste that differs between
+    the two episodes and a shared preference for the duller image: switching any
+    one of these off restored about 0.02 to 0.03 of the 0.09 lost under the
+    planning scenario (average over block sizes, sample sizes of 10 to 20 and
+    both features); the nuisances also compound, so together they cost more than
+    the sum of these separate costs. Scene-specific preferences and a preference
+    for one side of the screen cost almost no power, and a quarter of people
+    avoiding the more edited image slightly raised it."
+
+2. WHAT WAS DONE
+------------------------------------------------------------------------------
+  Paired t-test (the registered primary test), power only, planning and half
+  shift, block sizes 150 and 180, N = 10, 15, 20, both features; pair-specific
+  preferences off. Eight conditions: all nuisances at script 7's defaults;
+  each of the six switched off on its own (to script 7's 'off' value); no
+  nuisances. Power returned by a nuisance = power with it off minus power with
+  all defaults. Ranked by the unweighted average over the 12 cells. Script 7's
+  person model, pools of 50,000 people, 10,000 studies per cell, SE from 20
+  sub-pools.
+  Common random numbers: within an effect and block size, all eight conditions
+  use the same random draws and the same study draws, so each recovery is a
+  paired difference and its SE is that of the difference. 'Scene dependence
+  off' is SD x 1e-09 rather than exactly 0, because script 7 draws the scene
+  deviations only when they are on and a 0 would shift every later draw; at x
+  1e-9 the deviations are numerically nothing. Changing the second-block lapse
+  changes catch failures and so who is excluded: in the block-order and
+  no-nuisance conditions some studies sample different people (section 5),
+  which makes those two paired differences somewhat noisier.
+
+3. RANKING (power returned when switched off; average of 12 cells, with SE)
+------------------------------------------------------------------------------
+
+  planning
+    1. fatigue in the second block (more lapses, weaker preferences)  +0.0339 (SE 0.0020)
+    2. taste that differs between the two episodes                    +0.0304 (SE 0.0020)
+    3. a shared preference for the duller image                       +0.0160 (SE 0.0023)
+    4. scene-specific preferences                                     +0.0002 (SE 0.0026) (costs almost nothing)
+    5. a preference for one side of the screen                        +0.0001 (SE 0.0018) (costs almost nothing)
+    6. a quarter of people avoiding the more edited image             -0.0111 (SE 0.0019) (raises power when present)
+
+  half shift
+    1. fatigue in the second block (more lapses, weaker preferences)  +0.0398 (SE 0.0022)
+    2. a shared preference for the duller image                       +0.0343 (SE 0.0032)
+    3. taste that differs between the two episodes                    +0.0242 (SE 0.0022)
+    4. scene-specific preferences                                     +0.0041 (SE 0.0022) (costs almost nothing)
+    5. a preference for one side of the screen                        +0.0009 (SE 0.0022) (costs almost nothing)
+    6. a quarter of people avoiding the more edited image             -0.0134 (SE 0.0025) (raises power when present)
+
+  The order differs: taste that differs between the two episodes and a shared
+  preference for the duller image swap places under half shift (difference
+  there +0.010, SE 0.004; beyond 2 SE).
+
+  At N = 20 (per block size and feature, planning):
+   size    feature  taste  scene   side   dull    odd  order  total drop
+    150 saturation +0.015 -0.005 -0.001 +0.015 -0.016 +0.031      +0.069
+    150   contrast +0.030 -0.012 -0.001 +0.014 -0.012 +0.038      +0.099
+    180 saturation +0.026 +0.004 +0.002 +0.019 -0.012 +0.032      +0.074
+    180   contrast +0.039 +0.005 -0.000 +0.021 -0.003 +0.039      +0.098
+
+4. DO THE SIX ADD UP?
+------------------------------------------------------------------------------
+  Total drop = power with no nuisances minus power with all defaults. If the
+  nuisances acted independently, the six recoveries would sum to it.
+  'Interacting' if the sum differs from the total by more than 2 SE and by
+  more than 0.01.
+  planning    total drop 0.0948 (SE 0.0040); sum of the six 0.0695 (SE 0.0068);
+              sum minus total -0.0253 (SE 0.0060); ratio 0.73 -> INTERACTING
+  half shift  total drop 0.1058 (SE 0.0049); sum of the six 0.0900 (SE 0.0078);
+              sum minus total -0.0158 (SE 0.0062); ratio 0.85 -> INTERACTING
+  A ratio above 1 means switching nuisances off one at a time returns more
+  power in total than switching them all off together (they overlap); below 1,
+  that they compound (each costs more in the presence of the others).
+
+5. COMMON DRAWS: HOW CLOSE THE MATCHING IS
+------------------------------------------------------------------------------
+  condition        people excluded differently   studies with the same people
+  all defaults                          0.00%                         100.0%
+  dull                                  0.00%                         100.0%
+  none                                  2.49%                          66.6%
+  odd                                   0.00%                         100.0%
+  order                                 2.49%                          66.6%
+  scene                                 0.00%                         100.0%
+  side                                  0.00%                         100.0%
+  taste                                 0.00%                         100.0%
+
+6. CHECKS
+------------------------------------------------------------------------------
+  PASS  [inputs] simulate_power_paired_v5.py exists
+          /home/mario/Documents/drl2drv_updated/simulate_power_paired_v5.py
+  PASS  [inputs] simulate_power_paired_v5.py is the expected version (SHA-256)
+          14e09055fd122d03...
+  PASS  [inputs (via script 7)] simulate_power_v4_n10_20.py exists
+          /home/mario/Documents/drl2drv_updated/simulate_power_v4_n10_20.py
+  PASS  [inputs (via script 7)] simulate_power_v4_n10_20.py is the expected version (SHA-256)
+          852f3b33eb349153...
+  PASS  [inputs (via script 7)] analyse_pair_capacity_v5.py exists
+          /home/mario/Documents/drl2drv_updated/analyse_pair_capacity_v5.py
+  PASS  [inputs (via script 7)] analyse_pair_capacity_v5.py is the expected version (SHA-256)
+          5a8483a2a3884822...
+  PASS  [inputs (via script 7)] explore_block_length_v5.py exists
+          /home/mario/Documents/drl2drv_updated/explore_block_length_v5.py
+  PASS  [inputs (via script 7)] explore_block_length_v5.py is the expected version (SHA-256)
+          98d641f60252be83...
+  PASS  [inputs (via script 7)] thresholds_v5.py exists
+          /home/mario/Documents/drl2drv_updated/thresholds_v5.py
+  PASS  [inputs (via script 7)] thresholds_v5.py is the expected version (SHA-256)
+          90457ef9c8208581...
+  PASS  [inputs (via script 7)] script 6's thresholds.csv exists
+          /home/mario/Documents/drl2drv_updated/data/power_v5/thresholds_v5/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02be6391/thresholds.csv
+  PASS  [inputs (via script 7)] script 6's run passed every check
+          85 PASS, 0 FAIL
+  PASS  [inputs (via script 7)] script 6 recommended the model used here (side)
+          script 6: side
+  PASS  [inputs (via script 7)] thresholds found for every size and set
+          4 sets
+  PASS  [inputs (via script 7)] every file read matches checksums.sha256
+          10 files
+  PASS  [inputs (via script 7)] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch
+  PASS  [inputs (via script 7)] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs (via script 7)] every file read matches checksums.sha256
+          10 files
+  PASS  [inputs (via script 7)] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch
+  PASS  [inputs (via script 7)] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] script 7's paired_power.csv exists
+          /home/mario/Documents/drl2drv_updated/data/power_v5/paired_v5/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__se1c01101/paired_power.csv
+  PASS  [inputs] script 7's run passed every check
+          45 PASS
+  PASS  [setup] the eight conditions differ from all defaults only in the nuisance switched off
+  PASS  [anchors] rerun with script 7's own stream keys, the two anchors reproduce script 7's numbers exactly
+          48 cells (paired t-test, N [10, 15, 20]); largest |diff| 0.0e+00
+  PASS  [common draws] 150 trials, planning: identical responders in all eight conditions
+  PASS  [common draws] 150 trials, half shift: identical responders in all eight conditions
+  PASS  [common draws] 180 trials, planning: identical responders in all eight conditions
+  PASS  [common draws] 180 trials, half shift: identical responders in all eight conditions
+  PASS  [common draws] exclusions identical to all defaults wherever the lapse rate is unchanged (all but block order and no nuisances)
+          largest share differing 0.0000
+  PASS  [common draws] studies sample the same people as with all defaults wherever exclusions are unchanged
+          block order / no nuisances: 2.5% of people excluded differently, 66.6% of studies with the same people
+  PASS  [anchors] the matched family's anchors agree with script 7 within Monte Carlo error (scene off as SD x1e-9 in no nuisances)
+          48 cells; largest |z| 2.02; 2% beyond 1.96
+  PASS  [results] nuisances cost power: total drop positive for both effects
+          planning 0.095, half shift 0.106
+  PASS  [figure] figure text uses plain labels
+
+  Anchors against script 7 (paired t-test):
+      effect                   anchor  size  N    feature  this_script  script7      z
+    planning all nuisances (defaults)   150 10 saturation        0.535    0.516  0.895
+    planning all nuisances (defaults)   150 10   contrast        0.463    0.467 -0.157
+    planning all nuisances (defaults)   150 15 saturation        0.706    0.682  1.202
+    planning all nuisances (defaults)   150 15   contrast        0.626    0.630 -0.187
+    planning all nuisances (defaults)   150 20 saturation        0.825    0.809  1.148
+    planning all nuisances (defaults)   150 20   contrast        0.760    0.750  0.734
+    planning all nuisances (defaults)   180 10 saturation        0.545    0.528  0.832
+    planning all nuisances (defaults)   180 10   contrast        0.519    0.536 -0.848
+    planning all nuisances (defaults)   180 15 saturation        0.740    0.710  1.591
+    planning all nuisances (defaults)   180 15   contrast        0.699    0.701 -0.140
+    planning all nuisances (defaults)   180 20 saturation        0.848    0.822  2.022
+    planning all nuisances (defaults)   180 20   contrast        0.811    0.820 -0.569
+    planning             no nuisances   150 10 saturation        0.614    0.641 -1.240
+    planning             no nuisances   150 10   contrast        0.561    0.562 -0.020
+    planning             no nuisances   150 15 saturation        0.799    0.817 -1.017
+    planning             no nuisances   150 15   contrast        0.741    0.739  0.152
+    planning             no nuisances   150 20 saturation        0.894    0.913 -1.919
+    planning             no nuisances   150 20   contrast        0.859    0.856  0.223
+    planning             no nuisances   180 10 saturation        0.636    0.663 -1.460
+    planning             no nuisances   180 10   contrast        0.633    0.624  0.477
+    planning             no nuisances   180 15 saturation        0.840    0.845 -0.388
+    planning             no nuisances   180 15   contrast        0.808    0.804  0.331
+    planning             no nuisances   180 20 saturation        0.922    0.928 -0.790
+    planning             no nuisances   180 20   contrast        0.909    0.900  1.102
+  half shift all nuisances (defaults)   150 10 saturation        0.240    0.258 -1.065
+  half shift all nuisances (defaults)   150 10   contrast        0.235    0.242 -0.339
+  half shift all nuisances (defaults)   150 15 saturation        0.340    0.350 -0.466
+  half shift all nuisances (defaults)   150 15   contrast        0.308    0.316 -0.383
+  half shift all nuisances (defaults)   150 20 saturation        0.417    0.435 -0.671
+  half shift all nuisances (defaults)   150 20   contrast        0.388    0.382  0.291
+  half shift all nuisances (defaults)   180 10 saturation        0.267    0.254  0.780
+  half shift all nuisances (defaults)   180 10   contrast        0.259    0.245  0.892
+  half shift all nuisances (defaults)   180 15 saturation        0.385    0.360  1.190
+  half shift all nuisances (defaults)   180 15   contrast        0.339    0.317  1.247
+  half shift all nuisances (defaults)   180 20 saturation        0.472    0.454  0.822
+  half shift all nuisances (defaults)   180 20   contrast        0.397    0.399 -0.098
+  half shift             no nuisances   150 10 saturation        0.322    0.329 -0.414
+  half shift             no nuisances   150 10   contrast        0.297    0.285  0.633
+  half shift             no nuisances   150 15 saturation        0.456    0.448  0.398
+  half shift             no nuisances   150 15   contrast        0.410    0.409  0.029
+  half shift             no nuisances   150 20 saturation        0.546    0.570 -1.236
+  half shift             no nuisances   150 20   contrast        0.517    0.518 -0.058
+  half shift             no nuisances   180 10 saturation        0.330    0.362 -1.606
+  half shift             no nuisances   180 10   contrast        0.344    0.316  1.697
+  half shift             no nuisances   180 15 saturation        0.490    0.527 -1.591
+  half shift             no nuisances   180 15   contrast        0.451    0.440  0.460
+  half shift             no nuisances   180 20 saturation        0.604    0.623 -0.821
+  half shift             no nuisances   180 20   contrast        0.551    0.541  0.477
+
+7. RUN TIME
+------------------------------------------------------------------------------
+  This run: 1.7 min on 32 cores (36 pools of 50,000 people, each
+  fitted on both blocks, plus the studies). Expect about 5 minutes on a similar
+  machine; time scales with the number of pools.
+
+8. FILES
+------------------------------------------------------------------------------
+  anchors.csv
+  checks.csv
+  figure_nuisances.png
+  ranking.csv
+  recoveries.csv
+  report.txt
+  run_meta.json
+  settings.json

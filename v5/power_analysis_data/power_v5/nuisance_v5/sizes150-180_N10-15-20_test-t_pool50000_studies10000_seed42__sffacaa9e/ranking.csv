@@ -1,0 +1,13 @@
+effect,nuisance,label,recovery,recovery_se,rank
+half shift,order,"fatigue in the second block (more lapses, weaker preferences)",0.03975833333333334,0.0021903054274454684,1
+half shift,dull,a shared preference for the duller image,0.034325,0.00316716235732569,2
+half shift,taste,taste that differs between the two episodes,0.02424166666666667,0.002182113459938961,3
+half shift,scene,scene-specific preferences,0.004108333333333334,0.0022480425208253056,4
+half shift,side,a preference for one side of the screen,0.0009083333333333336,0.0022186567705476832,5
+half shift,odd,a quarter of people avoiding the more edited image,-0.013358333333333333,0.0025202186795955732,6
+planning,order,"fatigue in the second block (more lapses, weaker preferences)",0.03393333333333333,0.0019612250020770005,1
+planning,taste,taste that differs between the two episodes,0.030366666666666663,0.002014842585234602,2
+planning,dull,a shared preference for the duller image,0.015983333333333336,0.0023004544427731783,3
+planning,scene,scene-specific preferences,0.00024166666666666623,0.002645847320034864,4
+planning,side,a preference for one side of the screen,9.999999999999958e-05,0.0017777211248283064,5
+planning,odd,a quarter of people avoiding the more edited image,-0.011099999999999999,0.0019285633837512828,6
