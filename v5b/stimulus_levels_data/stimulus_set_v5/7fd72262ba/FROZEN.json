@@ -1,0 +1,55 @@
+{
+  "frozen": "2026-11-11 13:33:49",
+  "set": "drl2drv v5 stimulus set",
+  "settings_hash": "7fd72262ba",
+  "method": {
+    "approach": "A4_haze_cc_rgb",
+    "definition": "b (equal SD steps, per scene)",
+    "span_sd": 1.0,
+    "level_fractions": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ]
+  },
+  "n_scenes": 47,
+  "n_images": 2303,
+  "files_hashed": 2322,
+  "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075",
+  "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+  "stimuli_sha256_definition": "SHA-256 of the checksums.sha256 lines of the files in stimuli/, sorted by path: one number for the images",
+  "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+  "script": {
+    "name": "build_stimulus_set_v5.py",
+    "copy": "provenance/build_stimulus_set_v5.py",
+    "sha256": "0a582e9f9d53e7f2d433c01b159dbe0edb7b5b35bbba33f374a739f51ecc451b"
+  },
+  "test_run": {
+    "id": "4aa278d54d",
+    "byte_identical_images": 2303,
+    "compared": 2303
+  },
+  "sources": {
+    "dataset": "Places365",
+    "file": "sources.csv",
+    "included": false,
+    "licence": "to be confirmed"
+  },
+  "checks": {
+    "pass": 16,
+    "note": 4,
+    "skip": 0,
+    "warn": 1,
+    "fail": 0,
+    "not_passed": [
+      "T3 WARN"
+    ]
+  },
+  "checksums_verified": true,
+  "paths": "every path is relative to this folder",
+  "unhashed": [
+    "checksums.sha256",
+    "FROZEN.json"
+  ],
+  "use": "copy this folder whole; verify with `sha256sum -c checksums.sha256` before use"
+}

@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this stimulus set, please cite it as below."
+type: dataset
+title: "drl2drv v5 stimulus set"
+version: "7fd72262ba"
+date-released: "2026-11-11"
+authors:
+  - family-names: "TO BE COMPLETED"
+    given-names: "TO BE COMPLETED"
+# doi: "10.5281/zenodo.TO-BE-ASSIGNED"
+# license: TO BE CONFIRMED (derived from Places365 photographs; see README.md)
+abstract: >-
+  2303 images (47 scenes x 49 versions, 512 x 512 px) in which
+  contrast and colour are each moved in three equal corpus-SD steps below
+  and above the unedited photograph, for the v5 image-choice experiment.
+keywords:
+  - stimulus set
+  - image contrast
+  - colour saturation
+references:
+  - type: article
+    title: "Places: A 10 million image database for scene recognition"
+    authors:
+      - family-names: Zhou
+        given-names: Bolei
+      - family-names: Lapedriza
+        given-names: Agata
+      - family-names: Khosla
+        given-names: Aditya
+      - family-names: Oliva
+        given-names: Aude
+      - family-names: Torralba
+        given-names: Antonio
+    journal: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    volume: 40
+    issue: 6
+    start: 1452
+    end: 1464
+    year: 2018

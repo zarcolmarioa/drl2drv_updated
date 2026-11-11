@@ -1,0 +1,22 @@
+code,status,detail
+T0,PASS,69 copied settings and the approach vs data/edit_levels_v5/4aa278d54d/settings.json: all equal
+F1,PASS,copied feature code vs data/features on 8 images: max relative difference 1.1e-09 (tol 0.0001)
+R1,PASS,"re-measured stimulus-path reference vs data/levels_v4_ext/corpus_feature_stats_v4.csv, 18 percentiles + mean + sd of 18 features: worst relative difference 4.6e-06 (val_mean p20: 106.055 vs 106.055)"
+R2,PASS,"stimulus-path SD: sat_mean 39.1819 (v5 39.182), contrast_local 9.3480 (v5 9.348)"
+S1,PASS,"47 scenes in SCENES, 47 in the v4 manifest, 47 in both; one source photograph each, 47 on disk"
+V1,NOTE,"envelope (as v4, reported): 109 images in 4 scenes have a feature outside the corpus 1-99% range (val_mean 77, lum_p95 57, lum_mean 49, lum_p50 49, lum_skew 49, lum_p05 16)"
+E1,PASS,"2,303 images listed (expected 2,303), names unique, 2,303 files in stimuli/, 2,303 listed and present"
+Z1,PASS,"2,303 of 2,303 PNGs are 512 x 512 RGB"
+M2,PASS,"every PNG read back equals the image measured and saved (2,303 of 2,303); every measurement in the manifest is taken from the saved file"
+T1,PASS,"2,303 of 2,303 images byte-identical to test run 4aa278d54d (2,303 compared)"
+T2,PASS,"level parameters and colour-correction factors vs data/edit_levels_v5/4aa278d54d/ladders.csv: 658 of 658 levels matched, worst relative difference 4.2e-06 (the test run stored 6 significant digits)"
+I1,PASS,"each edit at its no-change setting, without the short cut: max pixel change 1 level, max change of sat_mean / contrast_local 0.0023 SD. The level-0 images use the short cut, so they are the photograph itself (O1)"
+O1,PASS,"the unedited cell (c0, s0) is the scene's 512 px square, pixel for pixel, in 47 of 47 scenes"
+O2,PASS,"the unedited cell is byte-identical to v4's unedited image (chroma 1, haze 0) in 47 of 47 scenes"
+L0,PASS,"levels reached: 658 of 658 (47 scenes x 2 features x 7 levels), 0 capped"
+M1,PASS,both ladders through the original strictly in order in 47 of 47 scenes
+M1g,NOTE,"across the whole 7 x 7 grid: contrast in order along 329 of 329 colour columns, colour in order along 329 of 329 contrast rows"
+T3,WARN,"487 of 564 levels within 0.01 SD of their target; largest miss: contrast 0.0495 SD, colour 0.0020 SD; 77 misses, all contrast (the colour correction is the last step of a contrast level, and contrast is not re-solved after it; see level_deviations.csv)"
+T4,NOTE,"off the two ladders (both features edited, 1,692 cells) each feature lands away from its level's nominal value, because the colour level is solved on the original and applied after the contrast edit: contrast |dev| median 0.009, max 0.066 SD; colour |dev| median 0.020, max 0.506 SD (cell_deviations.csv). The trial scripts use each image's measured values, not the nominal levels."
+X1,NOTE,"cross-talk on the ladders: |change of sat_mean| at the contrast levels median 0.004, max 0.137 SD; |change of contrast_local| at the colour levels median 0.007, max 0.043 SD"
+A0,PASS,no absolute path of this machine in any text file of the folder

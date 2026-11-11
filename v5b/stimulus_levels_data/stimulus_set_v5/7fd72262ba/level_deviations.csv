@@ -1,0 +1,659 @@
+scene_id,feature,level,index,name,family,param,comp_k,target_sd,capped,comp_capped,comp_residual_sd,status,steps,achieved_sd,abs_dev_sd
+alley_00001206,contrast,c-3,-3,-1.00SD,haze_eq,0.19204102,2.0170898,-1,False,False,-0.00018069764,ok,"[[""haze_eq"", 0.19049479166666664], [""chroma"", 2.01708984375]]",-0.99364239,0.006357606
+alley_00001206,contrast,c-2,-2,-0.67SD,haze_eq,0.1159668,1.6196289,-0.66666667,False,False,0.00068462599,ok,"[[""haze_eq"", 0.1150390625], [""chroma"", 1.61962890625]]",-0.66150785,0.0051588179
+alley_00001206,contrast,c-1,-1,-0.33SD,haze_eq,0.052880859,1.2919922,-0.33333333,False,False,0.00085753494,ok,"[[""haze_eq"", 0.051953125], [""chroma"", 1.2919921875]]",-0.32662247,0.0067108655
+alley_00001206,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+alley_00001206,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.050010537,0.81262207,0.33333333,False,False,0.00018653916,ok,"[[""dehaze_rgb"", -0.04821999550226545], [""chroma"", 0.8126220703125]]",0.32095226,0.012381072
+alley_00001206,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.098550175,0.7052002,0.66666667,False,False,-3.232307e-05,ok,"[[""dehaze_rgb"", -0.09624130711253857], [""chroma"", 0.7052001953125]]",0.64960572,0.017060947
+alley_00001206,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.14856071,0.66894531,1,False,False,-0.0012765665,ok,"[[""dehaze_rgb"", -0.14593159394161848], [""chroma"", 0.6689453125]]",0.98291756,0.017082438
+alley_00001206,colour,s-3,-3,-1.00SD,chroma,0.32161458,,-1,False,False,,ok,"[[""chroma"", 0.32161458333333337]]",-1.0006825,0.00068252423
+alley_00001206,colour,s-2,-2,-0.67SD,chroma,0.52604167,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5260416666666667]]",-0.66614693,0.0005197386
+alley_00001206,colour,s-1,-1,-0.33SD,chroma,0.75520833,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7552083333333334]]",-0.33204283,0.0012905079
+alley_00001206,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+alley_00001206,colour,s+1,1,+0.33SD,chroma,1.3125,,0.33333333,False,False,,ok,"[[""chroma"", 1.3125]]",0.33361653,0.00028319722
+alley_00001206,colour,s+2,2,+0.67SD,chroma,1.7226562,,0.66666667,False,False,,ok,"[[""chroma"", 1.72265625]]",0.66648963,0.00017703617
+alley_00001206,colour,s+3,3,+1.00SD,chroma,2.2578125,,1,False,False,,ok,"[[""chroma"", 2.2578125]]",0.99803164,0.0019683569
+apartment_building_outdoor_00004677,contrast,c-3,-3,-1.00SD,haze_eq,0.23935547,2.1298828,-1,False,False,0.00035321716,ok,"[[""haze_eq"", 0.23626302083333334], [""chroma"", 2.1298828125]]",-0.99090635,0.0090936491
+apartment_building_outdoor_00004677,contrast,c-2,-2,-0.67SD,haze_eq,0.14658203,1.6142578,-0.66666667,False,False,-0.0011616833,ok,"[[""haze_eq"", 0.1447265625], [""chroma"", 1.6142578125]]",-0.65983698,0.0068296823
+apartment_building_outdoor_00004677,contrast,c-1,-1,-0.33SD,haze_eq,0.067724609,1.2651367,-0.33333333,False,False,-0.0016831362,ok,"[[""haze_eq"", 0.06710611979166667], [""chroma"", 1.26513671875]]",-0.32746494,0.005868394
+apartment_building_outdoor_00004677,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+apartment_building_outdoor_00004677,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.061777722,0.83007812,0.33333333,False,False,0.00036801568,ok,"[[""dehaze_rgb"", -0.05989958188866196], [""chroma"", 0.830078125]]",0.32353395,0.0097993836
+apartment_building_outdoor_00004677,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.12159425,0.73071289,0.66666667,False,False,-0.001321741,ok,"[[""dehaze_rgb"", -0.11752639874469267], [""chroma"", 0.730712890625]]",0.64302918,0.023637489
+apartment_building_outdoor_00004677,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.17552718,0.62731934,1,False,False,-0.0003547749,ok,"[[""dehaze_rgb"", -0.1689626334886759], [""chroma"", 0.6273193359375]]",0.95636594,0.043634063
+apartment_building_outdoor_00004677,colour,s-3,-3,-1.00SD,chroma,0.36067708,,-1,False,False,,ok,"[[""chroma"", 0.36067708333333337]]",-1.0005334,0.00053337078
+apartment_building_outdoor_00004677,colour,s-2,-2,-0.67SD,chroma,0.55078125,,-0.66666667,False,False,,ok,"[[""chroma"", 0.55078125]]",-0.66664229,2.4377816e-05
+apartment_building_outdoor_00004677,colour,s-1,-1,-0.33SD,chroma,0.76302083,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7630208333333334]]",-0.33400324,0.00066990576
+apartment_building_outdoor_00004677,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+apartment_building_outdoor_00004677,colour,s+1,1,+0.33SD,chroma,1.2734375,,0.33333333,False,False,,ok,"[[""chroma"", 1.2734375]]",0.33404919,0.00071585904
+apartment_building_outdoor_00004677,colour,s+2,2,+0.67SD,chroma,1.6132812,,0.66666667,False,False,,ok,"[[""chroma"", 1.61328125]]",0.66769493,0.0010282638
+apartment_building_outdoor_00004677,colour,s+3,3,+1.00SD,chroma,2.0390625,,1,False,False,,ok,"[[""chroma"", 2.0390625]]",1.0015829,0.001582897
+auditorium_00001394,contrast,c-3,-3,-1.00SD,haze_eq,0.21616211,2.1835938,-1,False,False,4.16695e-05,ok,"[[""haze_eq"", 0.21276041666666667], [""chroma"", 2.18359375]]",-0.98603352,0.013966476
+auditorium_00001394,contrast,c-2,-2,-0.67SD,haze_eq,0.13359375,1.7807617,-0.66666667,False,False,0.00084935681,ok,"[[""haze_eq"", 0.13050130208333333], [""chroma"", 1.78076171875]]",-0.65217272,0.014493949
+auditorium_00001394,contrast,c-1,-1,-0.33SD,haze_eq,0.062158203,1.4182129,-0.33333333,False,False,-0.00053741972,ok,"[[""haze_eq"", 0.05999348958333333], [""chroma"", 1.418212890625]]",-0.32243929,0.010894046
+auditorium_00001394,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+auditorium_00001394,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.064586184,0.87573242,0.33333333,False,False,0.0016418562,ok,"[[""dehaze_rgb"", -0.0623357492398455], [""chroma"", 0.875732421875]]",0.32360557,0.0097277664
+auditorium_00001394,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13846886,0.85424805,0.66666667,False,False,0.00021029467,ok,"[[""dehaze_rgb"", -0.13521826852024538], [""chroma"", 0.854248046875]]",0.65305783,0.013608834
+auditorium_00001394,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21626586,0.82470703,1,False,False,-0.00087895384,ok,"[[""dehaze_rgb"", -0.21192457460981182], [""chroma"", 0.82470703125]]",0.97867256,0.021327441
+auditorium_00001394,colour,s-3,-3,-1.00SD,chroma,0.43229167,,-1,False,False,,ok,"[[""chroma"", 0.43229166666666674]]",-0.99953019,0.00046981269
+auditorium_00001394,colour,s-2,-2,-0.67SD,chroma,0.6015625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6015625]]",-0.6663358,0.00033086283
+auditorium_00001394,colour,s-1,-1,-0.33SD,chroma,0.78385417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7838541666666667]]",-0.33525527,0.0019219379
+auditorium_00001394,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+auditorium_00001394,colour,s+1,1,+0.33SD,chroma,1.2734375,,0.33333333,False,False,,ok,"[[""chroma"", 1.2734375]]",0.33340507,7.1734244e-05
+auditorium_00001394,colour,s+2,2,+0.67SD,chroma,1.6171875,,0.66666667,False,False,,ok,"[[""chroma"", 1.6171875]]",0.66805983,0.001393164
+auditorium_00001394,colour,s+3,3,+1.00SD,chroma,2.046875,,1,False,False,,ok,"[[""chroma"", 2.046875]]",0.99854102,0.0014589765
+balcony_interior_00004440,contrast,c-3,-3,-1.00SD,haze_eq,0.31542969,1.7163086,-1,False,False,-0.00065580783,ok,"[[""haze_eq"", 0.31419270833333335], [""chroma"", 1.71630859375]]",-0.997266,0.0027339992
+balcony_interior_00004440,contrast,c-2,-2,-0.67SD,haze_eq,0.20224609,1.3833008,-0.66666667,False,False,-0.001714291,ok,"[[""haze_eq"", 0.20162760416666667], [""chroma"", 1.38330078125]]",-0.66632783,0.00033883625
+balcony_interior_00004440,contrast,c-1,-1,-0.33SD,haze_eq,0.096484375,1.1577148,-0.33333333,False,False,0.0012820186,ok,"[[""haze_eq"", 0.09648437499999998], [""chroma"", 1.15771484375]]",-0.33431938,0.00098604715
+balcony_interior_00004440,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+balcony_interior_00004440,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.092300111,0.90393066,0.33333333,False,False,-0.00029986463,ok,"[[""dehaze_rgb"", -0.0910921585755814], [""chroma"", 0.9039306640625]]",0.32811541,0.005217922
+balcony_interior_00004440,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.20631789,0.82873535,0.66666667,False,False,0.00023833396,ok,"[[""dehaze_rgb"", -0.2046461552188914], [""chroma"", 0.8287353515625]]",0.66196775,0.004698917
+balcony_interior_00004440,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.37540549,0.75085449,1,False,False,-0.00036100585,ok,"[[""dehaze_rgb"", -0.37568873479492326], [""chroma"", 0.7508544921875]]",0.99966599,0.00033400621
+balcony_interior_00004440,colour,s-3,-3,-1.00SD,chroma,0.45442708,,-1,False,False,,ok,"[[""chroma"", 0.45442708333333337]]",-0.99991261,8.7387936e-05
+balcony_interior_00004440,colour,s-2,-2,-0.67SD,chroma,0.63020833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6302083333333334]]",-0.66830634,0.0016396761
+balcony_interior_00004440,colour,s-1,-1,-0.33SD,chroma,0.81510417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8151041666666667]]",-0.33148282,0.0018505148
+balcony_interior_00004440,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+balcony_interior_00004440,colour,s+1,1,+0.33SD,chroma,1.234375,,0.33333333,False,False,,ok,"[[""chroma"", 1.234375]]",0.33273329,0.0006000404
+balcony_interior_00004440,colour,s+2,2,+0.67SD,chroma,1.5625,,0.66666667,False,False,,ok,"[[""chroma"", 1.5625]]",0.66591054,0.00075612539
+balcony_interior_00004440,colour,s+3,3,+1.00SD,chroma,2.03125,,1,False,False,,ok,"[[""chroma"", 2.03125]]",1.0009812,0.00098122055
+bathroom_00001909,contrast,c-3,-3,-1.00SD,haze_eq,0.18647461,2.3017578,-1,False,False,0.0011246871,ok,"[[""haze_eq"", 0.18616536458333333], [""chroma"", 2.3017578125]]",-1.0009555,0.00095551181
+bathroom_00001909,contrast,c-2,-2,-0.67SD,haze_eq,0.11040039,1.7753906,-0.66666667,False,False,-0.0019876741,ok,"[[""haze_eq"", 0.11070963541666667], [""chroma"", 1.775390625]]",-0.66565573,0.0010109363
+bathroom_00001909,contrast,c-1,-1,-0.33SD,haze_eq,0.050097656,1.3671875,-0.33333333,False,False,0.0012644941,ok,"[[""haze_eq"", 0.05009765625], [""chroma"", 1.3671875]]",-0.33366687,0.00033353471
+bathroom_00001909,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+bathroom_00001909,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.049066729,0.8515625,0.33333333,False,False,-0.0010016257,ok,"[[""dehaze_rgb"", -0.04821999550226545], [""chroma"", 0.8515625]]",0.3277661,0.0055672345
+bathroom_00001909,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.096575784,0.72265625,0.66666667,False,False,-0.0016983242,ok,"[[""dehaze_rgb"", -0.09559766354541893], [""chroma"", 0.72265625]]",0.6573163,0.0093503636
+bathroom_00001909,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.14252717,0.70302606,1,False,False,-0.0030336954,ok,"[[""dehaze_rgb"", -0.14134016876103], [""chroma"", 0.7030260562896729]]",0.99160385,0.0083961463
+bathroom_00001909,colour,s-3,-3,-1.00SD,chroma,0.44791667,,-1,False,False,,ok,"[[""chroma"", 0.44791666666666674]]",-0.99980396,0.00019604018
+bathroom_00001909,colour,s-2,-2,-0.67SD,chroma,0.61328125,,-0.66666667,False,False,,ok,"[[""chroma"", 0.61328125]]",-0.6668518,0.00018513799
+bathroom_00001909,colour,s-1,-1,-0.33SD,chroma,0.796875,,-0.33333333,False,False,,ok,"[[""chroma"", 0.796875]]",-0.33179592,0.0015374094
+bathroom_00001909,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+bathroom_00001909,colour,s+1,1,+0.33SD,chroma,1.2578125,,0.33333333,False,False,,ok,"[[""chroma"", 1.2578125]]",0.33443668,0.0011033464
+bathroom_00001909,colour,s+2,2,+0.67SD,chroma,1.5898438,,0.66666667,False,False,,ok,"[[""chroma"", 1.58984375]]",0.66597285,0.00069381586
+bathroom_00001909,colour,s+3,3,+1.00SD,chroma,2.015625,,1,False,False,,ok,"[[""chroma"", 2.015625]]",1.001438,0.0014380273
+bedroom_00001289,contrast,c-3,-3,-1.00SD,haze_eq,0.23007812,2.3876953,-1,False,False,-0.0014673895,ok,"[[""haze_eq"", 0.22760416666666666], [""chroma"", 2.3876953125]]",-0.99295683,0.0070431726
+bedroom_00001289,contrast,c-2,-2,-0.67SD,haze_eq,0.13823242,1.7861328,-0.66666667,False,False,-0.0014007962,ok,"[[""haze_eq"", 0.13730468750000002], [""chroma"", 1.7861328125]]",-0.66115854,0.0055081304
+bedroom_00001289,contrast,c-1,-1,-0.33SD,haze_eq,0.063549805,1.3483887,-0.33333333,False,False,0.00088167988,ok,"[[""haze_eq"", 0.06308593750000001], [""chroma"", 1.348388671875]]",-0.33066751,0.0026658189
+bedroom_00001289,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+bedroom_00001289,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.056349351,0.79248047,0.33333333,False,False,0.0011807656,ok,"[[""dehaze_rgb"", -0.05543327507815879], [""chroma"", 0.79248046875]]",0.32785424,0.0054790902
+bedroom_00001289,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.10842392,0.64477539,0.66666667,False,False,0.00022314601,ok,"[[""dehaze_rgb"", -0.10699142232689404], [""chroma"", 0.644775390625]]",0.65687415,0.0097925132
+bedroom_00001289,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.15933265,0.58569336,1,False,False,0.00010281073,ok,"[[""dehaze_rgb"", -0.1568999985396909], [""chroma"", 0.585693359375]]",0.98626133,0.013738668
+bedroom_00001289,colour,s-3,-3,-1.00SD,chroma,0.46484375,,-1,False,False,,ok,"[[""chroma"", 0.46484375]]",-0.99977125,0.00022875269
+bedroom_00001289,colour,s-2,-2,-0.67SD,chroma,0.63020833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6302083333333334]]",-0.66775179,0.0010851213
+bedroom_00001289,colour,s-1,-1,-0.33SD,chroma,0.80989583,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8098958333333334]]",-0.33340429,7.0955375e-05
+bedroom_00001289,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+bedroom_00001289,colour,s+1,1,+0.33SD,chroma,1.2304688,,0.33333333,False,False,,ok,"[[""chroma"", 1.23046875]]",0.33379956,0.00046623147
+bedroom_00001289,colour,s+2,2,+0.67SD,chroma,1.53125,,0.66666667,False,False,,ok,"[[""chroma"", 1.53125]]",0.66722138,0.0005547114
+bedroom_00001289,colour,s+3,3,+1.00SD,chroma,1.921875,,1,False,False,,ok,"[[""chroma"", 1.921875]]",1.0013621,0.0013620876
+boardwalk_00001503,contrast,c-3,-3,-1.00SD,haze_eq,0.31450195,1.9150391,-1,False,False,0.00088596367,ok,"[[""haze_eq"", 0.3129557291666667], [""chroma"", 1.9150390625]]",-0.99530418,0.0046958213
+boardwalk_00001503,contrast,c-2,-2,-0.67SD,haze_eq,0.20224609,1.4907227,-0.66666667,False,False,0.0013891131,ok,"[[""haze_eq"", 0.200390625], [""chroma"", 1.49072265625]]",-0.66277962,0.0038870512
+boardwalk_00001503,contrast,c-1,-1,-0.33SD,haze_eq,0.097412109,1.2006836,-0.33333333,False,False,-0.00025702682,ok,"[[""haze_eq"", 0.09648437499999998], [""chroma"", 1.20068359375]]",-0.33053081,0.0028025241
+boardwalk_00001503,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+boardwalk_00001503,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.091796875,0.84887695,0.33333333,False,False,-0.00048912983,ok,"[[""dehaze_rgb"", -0.08980487144134211], [""chroma"", 0.848876953125]]",0.32697321,0.0063601248
+boardwalk_00001503,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1796875,0.74414062,0.66666667,False,False,0.0014829669,ok,"[[""dehaze_rgb"", -0.17667044402274307], [""chroma"", 0.744140625]]",0.6535161,0.013150565
+boardwalk_00001503,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.26953125,0.67163086,1,False,False,0.00018848634,ok,"[[""dehaze_rgb"", -0.26478831532564995], [""chroma"", 0.671630859375]]",0.98383471,0.016165288
+boardwalk_00001503,colour,s-3,-3,-1.00SD,chroma,0.546875,,-1,False,False,,ok,"[[""chroma"", 0.546875]]",-1.0019934,0.001993361
+boardwalk_00001503,colour,s-2,-2,-0.67SD,chroma,0.69401042,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6940104166666667]]",-0.6675228,0.00085613377
+boardwalk_00001503,colour,s-1,-1,-0.33SD,chroma,0.84505208,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8450520833333334]]",-0.33379606,0.00046272656
+boardwalk_00001503,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+boardwalk_00001503,colour,s+1,1,+0.33SD,chroma,1.1699219,,0.33333333,False,False,,ok,"[[""chroma"", 1.169921875]]",0.33229362,0.001039712
+boardwalk_00001503,colour,s+2,2,+0.67SD,chroma,1.3789062,,0.66666667,False,False,,ok,"[[""chroma"", 1.37890625]]",0.66547126,0.0011954076
+boardwalk_00001503,colour,s+3,3,+1.00SD,chroma,1.6367188,,1,False,False,,ok,"[[""chroma"", 1.63671875]]",0.99989859,0.00010140758
+cafeteria_00002762,contrast,c-3,-3,-1.00SD,haze_eq,0.22265625,1.6142578,-1,False,False,0.0015795466,ok,"[[""haze_eq"", 0.22265625], [""chroma"", 1.6142578125]]",-1.0002681,0.00026810893
+cafeteria_00002762,contrast,c-2,-2,-0.67SD,haze_eq,0.13916016,1.3779297,-0.66666667,False,False,-0.0013793773,ok,"[[""haze_eq"", 0.13977864583333333], [""chroma"", 1.3779296875]]",-0.66740413,0.00073746241
+cafeteria_00002762,contrast,c-1,-1,-0.33SD,haze_eq,0.065869141,1.1791992,-0.33333333,False,False,-0.00116402,ok,"[[""haze_eq"", 0.06617838541666668], [""chroma"", 1.17919921875]]",-0.33493659,0.0016032611
+cafeteria_00002762,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+cafeteria_00002762,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.064898907,0.8112793,0.33333333,False,False,0.00066087048,ok,"[[""dehaze_rgb"", -0.06417022810756426], [""chroma"", 0.811279296875]]",0.32932209,0.0040112432
+cafeteria_00002762,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13368398,0.75219727,0.66666667,False,False,-0.0012239929,ok,"[[""dehaze_rgb"", -0.13317763510665054], [""chroma"", 0.752197265625]]",0.66421829,0.0024483816
+cafeteria_00002762,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21218445,0.76025391,1,False,False,-0.0014171524,ok,"[[""dehaze_rgb"", -0.211115861344154], [""chroma"", 0.76025390625]]",0.99570644,0.0042935611
+cafeteria_00002762,colour,s-3,-3,-1.00SD,chroma,0.45052083,,-1,False,False,,ok,"[[""chroma"", 0.45052083333333337]]",-0.9999204,7.9599244e-05
+cafeteria_00002762,colour,s-2,-2,-0.67SD,chroma,0.625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.625]]",-0.66832309,0.0016564218
+cafeteria_00002762,colour,s-1,-1,-0.33SD,chroma,0.80989583,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8098958333333334]]",-0.33244433,0.00088900086
+cafeteria_00002762,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+cafeteria_00002762,colour,s+1,1,+0.33SD,chroma,1.2070312,,0.33333333,False,False,,ok,"[[""chroma"", 1.20703125]]",0.33510339,0.0017700584
+cafeteria_00002762,colour,s+2,2,+0.67SD,chroma,1.4453125,,0.66666667,False,False,,ok,"[[""chroma"", 1.4453125]]",0.66640123,0.00026543782
+cafeteria_00002762,colour,s+3,3,+1.00SD,chroma,1.7285156,,1,False,False,,ok,"[[""chroma"", 1.728515625]]",0.99976852,0.00023147873
+campus_00003823,contrast,c-3,-3,-1.00SD,haze_eq,0.23193359,2.1674805,-1,False,False,0.00058220469,ok,"[[""haze_eq"", 0.23131510416666667], [""chroma"", 2.16748046875]]",-0.99890881,0.00109119
+campus_00003823,contrast,c-2,-2,-0.67SD,haze_eq,0.1456543,1.6464844,-0.66666667,False,False,0.00067644786,ok,"[[""haze_eq"", 0.14596354166666667], [""chroma"", 1.646484375]]",-0.66790402,0.0012373547
+campus_00003823,contrast,c-1,-1,-0.33SD,haze_eq,0.068652344,1.2705078,-0.33333333,False,False,-4.7121584e-05,ok,"[[""haze_eq"", 0.06927083333333334], [""chroma"", 1.2705078125]]",-0.3351692,0.001835864
+campus_00003823,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+campus_00003823,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.072225738,0.79785156,0.33333333,False,False,0.00090971917,ok,"[[""dehaze_rgb"", -0.06928234352751876], [""chroma"", 0.7978515625]]",0.31918081,0.014152527
+campus_00003823,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13272251,0.73742676,0.66666667,False,False,-0.00076368121,ok,"[[""dehaze_rgb"", -0.13113700169305564], [""chroma"", 0.7374267578125]]",0.65723754,0.0094291221
+campus_00003823,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.18704614,0.71191406,1,False,False,4.3227238e-05,ok,"[[""dehaze_rgb"", -0.18694752473483256], [""chroma"", 0.7119140625]]",0.99918671,0.00081329068
+campus_00003823,colour,s-3,-3,-1.00SD,chroma,0.47395833,,-1,False,False,,ok,"[[""chroma"", 0.47395833333333337]]",-0.9993012,0.00069880022
+campus_00003823,colour,s-2,-2,-0.67SD,chroma,0.65104167,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6510416666666667]]",-0.66589457,0.00077209221
+campus_00003823,colour,s-1,-1,-0.33SD,chroma,0.828125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.828125]]",-0.33521088,0.0018775424
+campus_00003823,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+campus_00003823,colour,s+1,1,+0.33SD,chroma,1.2070312,,0.33333333,False,False,,ok,"[[""chroma"", 1.20703125]]",0.33235165,0.00098168629
+campus_00003823,colour,s+2,2,+0.67SD,chroma,1.5117188,,0.66666667,False,False,,ok,"[[""chroma"", 1.51171875]]",0.66819574,0.0015290767
+campus_00003823,colour,s+3,3,+1.00SD,chroma,1.9609375,,1,False,False,,ok,"[[""chroma"", 1.9609375]]",0.99811927,0.0018807342
+campus_00004529,contrast,c-3,-3,-1.00SD,haze_eq,0.22915039,1.3161621,-1,False,False,0.00040384366,ok,"[[""haze_eq"", 0.22945963541666664], [""chroma"", 1.316162109375]]",-1.000405,0.0004050182
+campus_00004529,contrast,c-2,-2,-0.67SD,haze_eq,0.14658203,1.192627,-0.66666667,False,False,0.00076484951,ok,"[[""haze_eq"", 0.14596354166666667], [""chroma"", 1.192626953125]]",-0.66685037,0.0001837042
+campus_00004529,contrast,c-1,-1,-0.33SD,haze_eq,0.070507813,1.0878906,-0.33333333,False,False,0.00044317655,ok,"[[""haze_eq"", 0.06988932291666666], [""chroma"", 1.087890625]]",-0.33213108,0.0012022568
+campus_00004529,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+campus_00004529,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.068359375,0.92138672,0.33333333,False,False,0.0002297664,ok,"[[""dehaze_rgb"", -0.06723749735953696], [""chroma"", 0.92138671875]]",0.32776712,0.0055662143
+campus_00004529,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13427734,0.8515625,0.66666667,False,False,-0.0017368782,ok,"[[""dehaze_rgb"", -0.13317763510665054], [""chroma"", 0.8515625]]",0.66171474,0.0049519237
+campus_00004529,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.20117188,0.78979492,1,False,False,0.0012683884,ok,"[[""dehaze_rgb"", -0.19979387562494444], [""chroma"", 0.789794921875]]",0.9945018,0.0054981994
+campus_00004529,colour,s-3,-3,-1.00SD,chroma,0.28645833,,-1,False,False,,ok,"[[""chroma"", 0.28645833333333337]]",-1.0000053,5.2974939e-06
+campus_00004529,colour,s-2,-2,-0.67SD,chroma,0.52083333,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5208333333333334]]",-0.66648535,0.00018131995
+campus_00004529,colour,s-1,-1,-0.33SD,chroma,0.76041667,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7604166666666667]]",-0.33241629,0.00091704015
+campus_00004529,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+campus_00004529,colour,s+1,1,+0.33SD,chroma,1.265625,,0.33333333,False,False,,ok,"[[""chroma"", 1.265625]]",0.33487363,0.001540292
+campus_00004529,colour,s+2,2,+0.67SD,chroma,1.5859375,,0.66666667,False,False,,ok,"[[""chroma"", 1.5859375]]",0.66521657,0.0014500978
+campus_00004529,colour,s+3,3,+1.00SD,chroma,1.984375,,1,False,False,,ok,"[[""chroma"", 1.984375]]",0.99949592,0.00050408293
+computer_room_00001489,contrast,c-3,-3,-1.00SD,haze_eq,0.21801758,1.4262695,-1,False,False,-0.00053313594,ok,"[[""haze_eq"", 0.21770833333333334], [""chroma"", 1.42626953125]]",-0.99792514,0.0020748555
+computer_room_00001489,contrast,c-2,-2,-0.67SD,haze_eq,0.13544922,1.2651367,-0.66666667,False,False,-0.0016589913,ok,"[[""haze_eq"", 0.13483072916666666], [""chroma"", 1.26513671875]]",-0.66554412,0.0011225449
+computer_room_00001489,contrast,c-1,-1,-0.33SD,haze_eq,0.063085937,1.1254883,-0.33333333,False,False,0.000157721,ok,"[[""haze_eq"", 0.06308593750000001], [""chroma"", 1.12548828125]]",-0.33404699,0.00071365687
+computer_room_00001489,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+computer_room_00001489,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.059846897,0.88378906,0.33333333,False,False,0.00061141229,ok,"[[""dehaze_rgb"", -0.059087526104934104], [""chroma"", 0.8837890625]]",0.32944043,0.0038929014
+computer_room_00001489,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.12202549,0.7911377,0.66666667,False,False,-0.00050665439,ok,"[[""dehaze_rgb"", -0.12117312135085373], [""chroma"", 0.7911376953125]]",0.66303834,0.0036283314
+computer_room_00001489,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.19197641,0.7052002,1,False,False,0.00059077225,ok,"[[""dehaze_rgb"", -0.19015911245736056], [""chroma"", 0.7052001953125]]",0.99212374,0.0078762584
+computer_room_00001489,colour,s-3,-3,-1.00SD,chroma,0.4140625,,-1,False,False,,ok,"[[""chroma"", 0.41406250000000006]]",-0.99972529,0.00027470597
+computer_room_00001489,colour,s-2,-2,-0.67SD,chroma,0.6015625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6015625]]",-0.66766339,0.00099671965
+computer_room_00001489,colour,s-1,-1,-0.33SD,chroma,0.79427083,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7942708333333334]]",-0.33486506,0.0015317245
+computer_room_00001489,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+computer_room_00001489,colour,s+1,1,+0.33SD,chroma,1.2226562,,0.33333333,False,False,,ok,"[[""chroma"", 1.22265625]]",0.33285363,0.00047970512
+computer_room_00001489,colour,s+2,2,+0.67SD,chroma,1.484375,,0.66666667,False,False,,ok,"[[""chroma"", 1.484375]]",0.66603204,0.0006346218
+computer_room_00001489,colour,s+3,3,+1.00SD,chroma,1.7851562,,1,False,False,,ok,"[[""chroma"", 1.78515625]]",0.99826998,0.001730023
+conference_room_00002730,contrast,c-3,-3,-1.00SD,haze_eq,0.25791016,1.8774414,-1,False,False,0.00055494427,ok,"[[""haze_eq"", 0.25605468750000004], [""chroma"", 1.87744140625]]",-0.99350773,0.0064922709
+conference_room_00002730,contrast,c-2,-2,-0.67SD,haze_eq,0.16513672,1.512207,-0.66666667,False,False,-0.00057558431,ok,"[[""haze_eq"", 0.16389973958333331], [""chroma"", 1.51220703125]]",-0.66366555,0.0030011197
+conference_room_00002730,contrast,c-1,-1,-0.33SD,haze_eq,0.079785156,1.2382812,-0.33333333,False,False,-0.00029986463,ok,"[[""haze_eq"", 0.0779296875], [""chroma"", 1.23828125]]",-0.32932944,0.0040038979
+conference_room_00002730,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+conference_room_00002730,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.090029227,0.86230469,0.33333333,False,False,0.0010767866,ok,"[[""dehaze_rgb"", -0.08980487144134211], [""chroma"", 0.8623046875]]",0.33173218,0.0016011504
+conference_room_00002730,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.19375855,0.76025391,0.66666667,False,False,-0.00019744333,ok,"[[""dehaze_rgb"", -0.19208606509087733], [""chroma"", 0.76025390625]]",0.65964294,0.0070237221
+conference_room_00002730,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.30335935,0.65283203,1,False,False,0.00028662385,ok,"[[""dehaze_rgb"", -0.2988985067412852], [""chroma"", 0.65283203125]]",0.98623623,0.013763765
+conference_room_00002730,colour,s-3,-3,-1.00SD,chroma,0.34375,,-1,False,False,,ok,"[[""chroma"", 0.34375]]",-1.0003577,0.00035773579
+conference_room_00002730,colour,s-2,-2,-0.67SD,chroma,0.54947917,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5494791666666667]]",-0.6650826,0.0015840633
+conference_room_00002730,colour,s-1,-1,-0.33SD,chroma,0.765625,,-0.33333333,False,False,,ok,"[[""chroma"", 0.765625]]",-0.33140259,0.0019307384
+conference_room_00002730,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+conference_room_00002730,colour,s+1,1,+0.33SD,chroma,1.2695312,,0.33333333,False,False,,ok,"[[""chroma"", 1.26953125]]",0.33326565,6.7683335e-05
+conference_room_00002730,colour,s+2,2,+0.67SD,chroma,1.6171875,,0.66666667,False,False,,ok,"[[""chroma"", 1.6171875]]",0.66543076,0.0012359088
+conference_room_00002730,colour,s+3,3,+1.00SD,chroma,2.0859375,,1,False,False,,ok,"[[""chroma"", 2.0859375]]",1.0006638,0.00066383137
+courtyard_00004070,contrast,c-3,-3,-1.00SD,haze_eq,0.25791016,1.0556641,-1,False,False,-0.0014007962,ok,"[[""haze_eq"", 0.25605468750000004], [""chroma"", 1.0556640625]]",-0.99542109,0.0045789077
+courtyard_00004070,contrast,c-2,-2,-0.67SD,haze_eq,0.15957031,1.0449219,-0.66666667,False,False,0.0014724521,ok,"[[""haze_eq"", 0.15895182291666665], [""chroma"", 1.044921875]]",-0.66387326,0.0027934093
+courtyard_00004070,contrast,c-1,-1,-0.33SD,haze_eq,0.075146484,1.0328369,-0.33333333,False,False,-5.6468014e-05,ok,"[[""haze_eq"", 0.07483723958333333], [""chroma"", 1.0328369140625]]",-0.33351221,0.00017887416
+courtyard_00004070,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+courtyard_00004070,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.070582438,0.91870117,0.33333333,False,False,0.00029363367,ok,"[[""dehaze_rgb"", -0.06928234352751876], [""chroma"", 0.918701171875]]",0.32787301,0.0054603187
+courtyard_00004070,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13883798,0.83276367,0.66666667,False,False,-0.0012672201,ok,"[[""dehaze_rgb"", -0.13725890193384027], [""chroma"", 0.832763671875]]",0.65635855,0.010308116
+courtyard_00004070,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.20864479,0.76831055,1,False,False,0.0013435493,ok,"[[""dehaze_rgb"", -0.2046461552188914], [""chroma"", 0.768310546875]]",0.98207693,0.017923073
+courtyard_00004070,colour,s-3,-3,-1.00SD,chroma,0.48697917,,-1,False,False,,ok,"[[""chroma"", 0.4869791666666667]]",-0.99904846,0.00095154326
+courtyard_00004070,colour,s-2,-2,-0.67SD,chroma,0.6484375,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6484375]]",-0.66734288,0.00067621499
+courtyard_00004070,colour,s-1,-1,-0.33SD,chroma,0.8203125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8203125]]",-0.33182513,0.0015082018
+courtyard_00004070,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+courtyard_00004070,colour,s+1,1,+0.33SD,chroma,1.2109375,,0.33333333,False,False,,ok,"[[""chroma"", 1.2109375]]",0.33484169,0.0015083584
+courtyard_00004070,colour,s+2,2,+0.67SD,chroma,1.4882812,,0.66666667,False,False,,ok,"[[""chroma"", 1.48828125]]",0.66536339,0.001303281
+courtyard_00004070,colour,s+3,3,+1.00SD,chroma,1.8515625,,1,False,False,,ok,"[[""chroma"", 1.8515625]]",0.99863332,0.0013666805
+crosswalk_00001791,contrast,c-3,-3,-1.00SD,haze_eq,0.12756348,1.8720703,-1,False,False,-0.00089531009,ok,"[[""haze_eq"", 0.1274088541666667], [""chroma"", 1.8720703125]]",-0.99631855,0.0036814481
+crosswalk_00001791,contrast,c-2,-2,-0.67SD,haze_eq,0.07097168,1.5283203,-0.66666667,False,False,-0.0003851508,ok,"[[""haze_eq"", 0.07081705729166668], [""chroma"", 1.5283203125]]",-0.66543955,0.0012271142
+crosswalk_00001791,contrast,c-1,-1,-0.33SD,haze_eq,0.030267334,1.2624512,-0.33333333,False,False,0.00075277704,ok,"[[""haze_eq"", 0.03030598958333333], [""chroma"", 1.262451171875]]",-0.33346487,0.00013153743
+crosswalk_00001791,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+crosswalk_00001791,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.027267792,0.70117188,0.33333333,False,False,-0.001369252,ok,"[[""dehaze_rgb"", -0.02614639228711222], [""chroma"", 0.701171875]]",0.31793883,0.015394504
+crosswalk_00001791,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.053798617,0.63780975,0.66666667,False,False,0.0052546408,ok,"[[""dehaze_rgb"", -0.05259107983511131], [""chroma"", 0.6378097534179688]]",0.64783304,0.018833626
+crosswalk_00001791,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.081066409,0.70385742,1,False,False,0.00069591959,ok,"[[""dehaze_rgb"", -0.07909121498955646], [""chroma"", 0.703857421875]]",0.97841384,0.021586161
+crosswalk_00001791,colour,s-3,-3,-1.00SD,chroma,0.359375,,-1,False,False,,ok,"[[""chroma"", 0.359375]]",-1.0008036,0.00080363838
+crosswalk_00001791,colour,s-2,-2,-0.67SD,chroma,0.55208333,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5520833333333334]]",-0.66703873,0.00037206658
+crosswalk_00001791,colour,s-1,-1,-0.33SD,chroma,0.76041667,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7604166666666667]]",-0.33423456,0.0009012299
+crosswalk_00001791,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+crosswalk_00001791,colour,s+1,1,+0.33SD,chroma,1.3242188,,0.33333333,False,False,,ok,"[[""chroma"", 1.32421875]]",0.33485104,0.0015177048
+crosswalk_00001791,colour,s+2,2,+0.67SD,chroma,1.7402344,,0.66666667,False,False,,ok,"[[""chroma"", 1.740234375]]",0.66721398,0.00054731215
+crosswalk_00001791,colour,s+3,3,+1.00SD,chroma,2.2421875,,1,False,False,,ok,"[[""chroma"", 2.2421875]]",0.99912673,0.00087326691
+dining_hall_00001273,contrast,c-3,-3,-1.00SD,haze_eq,0.12338867,2.2480469,-1,False,False,0.00065853387,ok,"[[""haze_eq"", 0.12369791666666667], [""chroma"", 2.248046875]]",-1.0001267,0.00012671083
+dining_hall_00001273,contrast,c-2,-2,-0.67SD,haze_eq,0.075610352,1.7646484,-0.66666667,False,False,-0.0011056048,ok,"[[""haze_eq"", 0.07576497395833334], [""chroma"", 1.7646484375]]",-0.6674329,0.00076623172
+dining_hall_00001273,contrast,c-1,-1,-0.33SD,haze_eq,0.034790039,1.3806152,-0.33333333,False,False,0.00042720973,ok,"[[""haze_eq"", 0.03494466145833333], [""chroma"", 1.380615234375]]",-0.33710143,0.0037681007
+dining_hall_00001273,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+dining_hall_00001273,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.03076406,0.71325684,0.33333333,False,False,0.00047394188,ok,"[[""dehaze_rgb"", -0.03001162033139673], [""chroma"", 0.7132568359375]]",0.32707992,0.0062534131
+dining_hall_00001273,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.060359865,0.71141052,0.66666667,False,False,-0.0018856422,ok,"[[""dehaze_rgb"", -0.05949355399679803], [""chroma"", 0.7114105224609375]]",0.6589839,0.0076827638
+dining_hall_00001273,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.091902762,0.8112793,1,False,False,-0.00013863871,ok,"[[""dehaze_rgb"", -0.0910921585755814], [""chroma"", 0.811279296875]]",0.99565992,0.0043400816
+dining_hall_00001273,colour,s-3,-3,-1.00SD,chroma,0.36979167,,-1,False,False,,ok,"[[""chroma"", 0.3697916666666667]]",-1.0002234,0.00022338086
+dining_hall_00001273,colour,s-2,-2,-0.67SD,chroma,0.56770833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5677083333333334]]",-0.66712713,0.00046046823
+dining_hall_00001273,colour,s-1,-1,-0.33SD,chroma,0.77604167,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7760416666666667]]",-0.3329615,0.00037183174
+dining_hall_00001273,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+dining_hall_00001273,colour,s+1,1,+0.33SD,chroma,1.265625,,0.33333333,False,False,,ok,"[[""chroma"", 1.265625]]",0.33323488,9.8448667e-05
+dining_hall_00001273,colour,s+2,2,+0.67SD,chroma,1.5664062,,0.66666667,False,False,,ok,"[[""chroma"", 1.56640625]]",0.66610837,0.00055829262
+dining_hall_00001273,colour,s+3,3,+1.00SD,chroma,1.9765625,,1,False,False,,ok,"[[""chroma"", 1.9765625]]",0.99988263,0.0001173744
+dining_hall_00001301,contrast,c-3,-3,-1.00SD,haze_eq,0.24724121,1.9365234,-1,False,False,-0.00045135468,ok,"[[""haze_eq"", 0.24615885416666666], [""chroma"", 1.9365234375]]",-0.99535213,0.0046478725
+dining_hall_00001301,contrast,c-2,-2,-0.67SD,haze_eq,0.15214844,1.5068359,-0.66666667,False,False,7.3603135e-05,ok,"[[""haze_eq"", 0.14967447916666665], [""chroma"", 1.5068359375]]",-0.6598784,0.0067882627
+dining_hall_00001301,contrast,c-1,-1,-0.33SD,haze_eq,0.070507813,1.2114258,-0.33333333,False,False,-0.0012983749,ok,"[[""haze_eq"", 0.06927083333333334], [""chroma"", 1.21142578125]]",-0.33037839,0.0029549403
+dining_hall_00001301,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+dining_hall_00001301,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.073460366,0.80859375,0.33333333,False,False,-0.0016987136,ok,"[[""dehaze_rgb"", -0.07081597815350511], [""chroma"", 0.80859375]]",0.32155478,0.011778549
+dining_hall_00001301,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1543285,0.71191406,0.66666667,False,False,-0.00011994585,ok,"[[""dehaze_rgb"", -0.14848238570861208], [""chroma"", 0.7119140625]]",0.64287982,0.023786844
+dining_hall_00001301,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.25186411,0.60717773,1,False,False,0.0019604137,ok,"[[""dehaze_rgb"", -0.2369946858452044], [""chroma"", 0.607177734375]]",0.95052658,0.049473416
+dining_hall_00001301,colour,s-3,-3,-1.00SD,chroma,0.41145833,,-1,False,False,,ok,"[[""chroma"", 0.41145833333333337]]",-0.99800166,0.0019983434
+dining_hall_00001301,colour,s-2,-2,-0.67SD,chroma,0.58854167,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5885416666666667]]",-0.66570219,0.00096447289
+dining_hall_00001301,colour,s-1,-1,-0.33SD,chroma,0.78385417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7838541666666667]]",-0.33225935,0.0010739823
+dining_hall_00001301,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+dining_hall_00001301,colour,s+1,1,+0.33SD,chroma,1.265625,,0.33333333,False,False,,ok,"[[""chroma"", 1.265625]]",0.33300356,0.00032977281
+dining_hall_00001301,colour,s+2,2,+0.67SD,chroma,1.6328125,,0.66666667,False,False,,ok,"[[""chroma"", 1.6328125]]",0.66521073,0.0014559393
+dining_hall_00001301,colour,s+3,3,+1.00SD,chroma,2.15625,,1,False,False,,ok,"[[""chroma"", 2.15625]]",1.0017071,0.0017071266
+dining_room_00003076,contrast,c-3,-3,-1.00SD,haze_eq,0.23007812,2.5595703,-1,False,False,-0.0013930075,ok,"[[""haze_eq"", 0.22760416666666666], [""chroma"", 2.5595703125]]",-0.98960082,0.010399184
+dining_room_00003076,contrast,c-2,-2,-0.67SD,haze_eq,0.14287109,1.8828125,-0.66666667,False,False,-0.0017972406,ok,"[[""haze_eq"", 0.14039713541666665], [""chroma"", 1.8828125]]",-0.65960744,0.0070592247
+dining_room_00003076,contrast,c-1,-1,-0.33SD,haze_eq,0.065869141,1.3779297,-0.33333333,False,False,-4.595328e-05,ok,"[[""haze_eq"", 0.06555989583333334], [""chroma"", 1.3779296875]]",-0.33105682,0.0022765151
+dining_room_00003076,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+dining_room_00003076,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.07109341,0.73339844,0.33333333,False,False,0.0015659164,ok,"[[""dehaze_rgb"", -0.06825992044352786], [""chroma"", 0.7333984375]]",0.32009857,0.013234766
+dining_room_00003076,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.14316742,0.765625,0.66666667,False,False,-0.00079444654,ok,"[[""dehaze_rgb"", -0.13929953534743514], [""chroma"", 0.765625]]",0.64863715,0.018029514
+dining_room_00003076,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21720263,0.81396484,1,False,False,-0.00054326124,ok,"[[""dehaze_rgb"", -0.21192457460981182], [""chroma"", 0.81396484375]]",0.97656424,0.023435762
+dining_room_00003076,colour,s-3,-3,-1.00SD,chroma,0.49739583,,-1,False,False,,ok,"[[""chroma"", 0.49739583333333337]]",-0.99935299,0.00064700542
+dining_room_00003076,colour,s-2,-2,-0.67SD,chroma,0.65885417,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6588541666666667]]",-0.66776308,0.0010964149
+dining_room_00003076,colour,s-1,-1,-0.33SD,chroma,0.82942708,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8294270833333334]]",-0.33341286,7.9522935e-05
+dining_room_00003076,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+dining_room_00003076,colour,s+1,1,+0.33SD,chroma,1.2148438,,0.33333333,False,False,,ok,"[[""chroma"", 1.21484375]]",0.33399818,0.00066484311
+dining_room_00003076,colour,s+2,2,+0.67SD,chroma,1.4960938,,0.66666667,False,False,,ok,"[[""chroma"", 1.49609375]]",0.66613096,0.00053570542
+dining_room_00003076,colour,s+3,3,+1.00SD,chroma,1.890625,,1,False,False,,ok,"[[""chroma"", 1.890625]]",1.0004333,0.0004332861
+downtown_00001598,contrast,c-3,-3,-1.00SD,haze_eq,0.2050293,2.1083984,-1,False,False,-0.0011324758,ok,"[[""haze_eq"", 0.2041015625], [""chroma"", 2.1083984375]]",-0.99722499,0.0027750108
+downtown_00001598,contrast,c-2,-2,-0.67SD,haze_eq,0.12338867,1.6733398,-0.66666667,False,False,0.0011020999,ok,"[[""haze_eq"", 0.12307942708333333], [""chroma"", 1.67333984375]]",-0.66479755,0.0018691187
+downtown_00001598,contrast,c-1,-1,-0.33SD,haze_eq,0.05612793,1.3161621,-0.33333333,False,False,0.00030336954,ok,"[[""haze_eq"", 0.05628255208333333], [""chroma"", 1.316162109375]]",-0.3338403,0.00050696672
+downtown_00001598,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00001598,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.054940946,0.73205566,0.33333333,False,False,-0.0015600749,ok,"[[""dehaze_rgb"", -0.05421519140256702], [""chroma"", 0.7320556640625]]",0.32829578,0.0050375527
+downtown_00001598,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.11358578,0.69177246,0.66666667,False,False,-0.0011632411,ok,"[[""dehaze_rgb"", -0.11266410193647791], [""chroma"", 0.6917724609375]]",0.66076944,0.0058972302
+downtown_00001598,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.18149032,0.9375,1,False,False,-0.00078510011,ok,"[[""dehaze_rgb"", -0.1811666668342822], [""chroma"", 0.9375]]",0.99791025,0.0020897503
+downtown_00001598,colour,s-3,-3,-1.00SD,chroma,0.375,,-1,False,False,,ok,"[[""chroma"", 0.375]]",-1.001799,0.0017990332
+downtown_00001598,colour,s-2,-2,-0.67SD,chroma,0.58072917,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5807291666666667]]",-0.66832153,0.0016548641
+downtown_00001598,colour,s-1,-1,-0.33SD,chroma,0.7890625,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7890625]]",-0.33402583,0.00069249296
+downtown_00001598,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00001598,colour,s+1,1,+0.33SD,chroma,1.2460938,,0.33333333,False,False,,ok,"[[""chroma"", 1.24609375]]",0.3327477,0.00058563132
+downtown_00001598,colour,s+2,2,+0.67SD,chroma,1.5195312,,0.66666667,False,False,,ok,"[[""chroma"", 1.51953125]]",0.66649041,0.0001762573
+downtown_00001598,colour,s+3,3,+1.00SD,chroma,1.8554688,,1,False,False,,ok,"[[""chroma"", 1.85546875]]",1.0008714,0.0008714
+downtown_00001745,contrast,c-3,-3,-1.00SD,haze_eq,0.12941895,1.4101562,-1,False,False,-0.0018825268,ok,"[[""haze_eq"", 0.12926432291666667], [""chroma"", 1.41015625]]",-1.0001857,0.00018567771
+downtown_00001745,contrast,c-2,-2,-0.67SD,haze_eq,0.077001953,1.2651367,-0.66666667,False,False,-0.00058960395,ok,"[[""haze_eq"", 0.077001953125], [""chroma"", 1.26513671875]]",-0.6648406,0.0018260668
+downtown_00001745,contrast,c-1,-1,-0.33SD,haze_eq,0.035021973,1.1416016,-0.33333333,False,False,0.0018727909,ok,"[[""haze_eq"", 0.03494466145833333], [""chroma"", 1.1416015625]]",-0.33280358,0.00052974863
+downtown_00001745,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00001745,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.036605338,0.84619141,0.33333333,False,False,0.00031894692,ok,"[[""dehaze_rgb"", -0.03624948691457669], [""chroma"", 0.84619140625]]",0.32921599,0.0041173428
+downtown_00001745,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.072821257,0.58569336,0.66666667,False,False,0.00069981394,ok,"[[""dehaze_rgb"", -0.07132718969550056], [""chroma"", 0.585693359375]]",0.65346836,0.01319831
+downtown_00001745,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.10825834,0.56420898,1,False,False,-0.00036645794,ok,"[[""dehaze_rgb"", -0.10537065672415577], [""chroma"", 0.564208984375]]",0.97731489,0.022685108
+downtown_00001745,colour,s-3,-3,-1.00SD,chroma,0.328125,,-1,False,False,,ok,"[[""chroma"", 0.32812500000000006]]",-1.0014392,0.0014391956
+downtown_00001745,colour,s-2,-2,-0.67SD,chroma,0.54166667,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5416666666666667]]",-0.66567844,0.0009882284
+downtown_00001745,colour,s-1,-1,-0.33SD,chroma,0.77083333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7708333333333334]]",-0.33301797,0.00031536373
+downtown_00001745,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00001745,colour,s+1,1,+0.33SD,chroma,1.2695312,,0.33333333,False,False,,ok,"[[""chroma"", 1.26953125]]",0.33417926,0.00084593018
+downtown_00001745,colour,s+2,2,+0.67SD,chroma,1.5390625,,0.66666667,False,False,,ok,"[[""chroma"", 1.5390625]]",0.66617691,0.00048975214
+downtown_00001745,colour,s+3,3,+1.00SD,chroma,1.8535156,,1,False,False,,ok,"[[""chroma"", 1.853515625]]",0.9992607,0.00073930142
+downtown_00004891,contrast,c-3,-3,-1.00SD,haze_eq,0.13591309,1.565918,-1,False,False,-0.0015503391,ok,"[[""haze_eq"", 0.13606770833333334], [""chroma"", 1.56591796875]]",-1.0010508,0.0010507974
+downtown_00004891,contrast,c-2,-2,-0.67SD,haze_eq,0.084423828,1.3349609,-0.66666667,False,False,-0.00082676961,ok,"[[""haze_eq"", 0.08411458333333333], [""chroma"", 1.3349609375]]",-0.6657706,0.0008960631
+downtown_00004891,contrast,c-1,-1,-0.33SD,haze_eq,0.038964844,1.1469727,-0.33333333,False,False,0.00038826627,ok,"[[""haze_eq"", 0.03927408854166667], [""chroma"", 1.14697265625]]",-0.33421246,0.00087913142
+downtown_00004891,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00004891,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.040204549,0.83276367,0.33333333,False,False,0.0019304272,ok,"[[""dehaze_rgb"", -0.03932308834356418], [""chroma"", 0.832763671875]]",0.32760348,0.0057298525
+downtown_00004891,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.082370296,0.72265625,0.66666667,False,False,0.001779716,ok,"[[""dehaze_rgb"", -0.08143750506878672], [""chroma"", 0.72265625]]",0.66110181,0.0055648529
+downtown_00004891,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.12747784,0.60046387,1,False,False,-0.0013400444,ok,"[[""dehaze_rgb"", -0.1265455765124672], [""chroma"", 0.6004638671875]]",0.99363872,0.0063612787
+downtown_00004891,colour,s-3,-3,-1.00SD,chroma,0.34244792,,-1,False,False,,ok,"[[""chroma"", 0.3424479166666667]]",-0.999795,0.00020499718
+downtown_00004891,colour,s-2,-2,-0.67SD,chroma,0.54427083,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5442708333333334]]",-0.66668318,1.6512815e-05
+downtown_00004891,colour,s-1,-1,-0.33SD,chroma,0.76041667,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7604166666666667]]",-0.33344985,0.00011651922
+downtown_00004891,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+downtown_00004891,colour,s+1,1,+0.33SD,chroma,1.2734375,,0.33333333,False,False,,ok,"[[""chroma"", 1.2734375]]",0.33355344,0.00022010882
+downtown_00004891,colour,s+2,2,+0.67SD,chroma,1.59375,,0.66666667,False,False,,ok,"[[""chroma"", 1.59375]]",0.66606359,0.0006030776
+downtown_00004891,colour,s+3,3,+1.00SD,chroma,1.984375,,1,False,False,,ok,"[[""chroma"", 1.984375]]",1.0009575,0.00095746504
+driveway_00001180,contrast,c-3,-3,-1.00SD,haze_eq,0.28945312,1.96875,-1,False,False,0.0012446329,ok,"[[""haze_eq"", 0.289453125], [""chroma"", 1.96875]]",-1.000454,0.00045398724
+driveway_00001180,contrast,c-2,-2,-0.67SD,haze_eq,0.17998047,1.5095215,-0.66666667,False,False,-6.6203878e-06,ok,"[[""haze_eq"", 0.17936197916666663], [""chroma"", 1.509521484375]]",-0.66343907,0.0032276015
+driveway_00001180,contrast,c-1,-1,-0.33SD,haze_eq,0.084887695,1.2114258,-0.33333333,False,False,0.001035896,ok,"[[""haze_eq"", 0.08411458333333333], [""chroma"", 1.21142578125]]",-0.33093378,0.0023995498
+driveway_00001180,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+driveway_00001180,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.077313299,0.84619141,0.33333333,False,False,-0.0018739592,ok,"[[""dehaze_rgb"", -0.07541688203146417], [""chroma"", 0.84619140625]]",0.32426951,0.0090638278
+driveway_00001180,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.14723409,0.73071289,0.66666667,False,False,0.0016586019,ok,"[[""dehaze_rgb"", -0.1433808021746249], [""chroma"", 0.730712890625]]",0.64575798,0.020908689
+driveway_00001180,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21376665,0.64208984,1,False,False,-0.0019424997,ok,"[[""dehaze_rgb"", -0.20788100828152267], [""chroma"", 0.64208984375]]",0.97034803,0.029651974
+driveway_00001180,colour,s-3,-3,-1.00SD,chroma,0.34635417,,-1,False,False,,ok,"[[""chroma"", 0.3463541666666667]]",-1.0003453,0.00034527388
+driveway_00001180,colour,s-2,-2,-0.67SD,chroma,0.5625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5625]]",-0.66537818,0.0012884825
+driveway_00001180,colour,s-1,-1,-0.33SD,chroma,0.78125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.78125]]",-0.33335249,1.9160576e-05
+driveway_00001180,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+driveway_00001180,colour,s+1,1,+0.33SD,chroma,1.2421875,,0.33333333,False,False,,ok,"[[""chroma"", 1.2421875]]",0.33247276,0.00086057214
+driveway_00001180,colour,s+2,2,+0.67SD,chroma,1.53125,,0.66666667,False,False,,ok,"[[""chroma"", 1.53125]]",0.66622715,0.00043951508
+driveway_00001180,colour,s+3,3,+1.00SD,chroma,1.8789062,,1,False,False,,ok,"[[""chroma"", 1.87890625]]",1.0005968,0.00059684862
+driveway_00003009,contrast,c-3,-3,-1.00SD,haze_eq,0.1215332,1.482666,-1,False,False,-1.6745687e-05,ok,"[[""haze_eq"", 0.11998697916666666], [""chroma"", 1.482666015625]]",-0.9902921,0.0097079044
+driveway_00003009,contrast,c-2,-2,-0.67SD,haze_eq,0.075610352,1.2785645,-0.66666667,False,False,-0.0016539287,ok,"[[""haze_eq"", 0.07514648437499999], [""chroma"", 1.278564453125]]",-0.66377287,0.0028937958
+driveway_00003009,contrast,c-1,-1,-0.33SD,haze_eq,0.035717773,1.1308594,-0.33333333,False,False,-0.00071344415,ok,"[[""haze_eq"", 0.03525390625], [""chroma"", 1.130859375]]",-0.32882179,0.0045115436
+driveway_00003009,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+driveway_00003009,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.041667778,0.87976074,0.33333333,False,False,-0.00038398249,ok,"[[""dehaze_rgb"", -0.040157841412005804], [""chroma"", 0.8797607421875]]",0.32184493,0.011488407
+driveway_00003009,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.086840322,0.75488281,0.66666667,False,False,-0.0018790218,ok,"[[""dehaze_rgb"", -0.08304661398658583], [""chroma"", 0.7548828125]]",0.6371484,0.029518262
+driveway_00003009,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.13084461,0.66491699,1,False,False,6.8540486e-05,ok,"[[""dehaze_rgb"", -0.12522503535769935], [""chroma"", 0.6649169921875]]",0.95143169,0.048568305
+driveway_00003009,colour,s-3,-3,-1.00SD,chroma,0.51171875,,-1,False,False,,ok,"[[""chroma"", 0.51171875]]",-0.99965675,0.00034324645
+driveway_00003009,colour,s-2,-2,-0.67SD,chroma,0.67708333,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6770833333333334]]",-0.66692969,0.0002630249
+driveway_00003009,colour,s-1,-1,-0.33SD,chroma,0.84375,,-0.33333333,False,False,,ok,"[[""chroma"", 0.84375]]",-0.33207476,0.0012585743
+driveway_00003009,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+driveway_00003009,colour,s+1,1,+0.33SD,chroma,1.1796875,,0.33333333,False,False,,ok,"[[""chroma"", 1.1796875]]",0.33387862,0.00054528669
+driveway_00003009,colour,s+2,2,+0.67SD,chroma,1.3808594,,0.66666667,False,False,,ok,"[[""chroma"", 1.380859375]]",0.66705626,0.00038959114
+driveway_00003009,colour,s+3,3,+1.00SD,chroma,1.6171875,,1,False,False,,ok,"[[""chroma"", 1.6171875]]",0.99940284,0.0005971578
+elevator_lobby_00003261,contrast,c-3,-3,-1.00SD,haze_eq,0.29130859,2.0869141,-1,False,False,0.00065853387,ok,"[[""haze_eq"", 0.2882161458333333], [""chroma"", 2.0869140625]]",-0.9928646,0.0071353976
+elevator_lobby_00003261,contrast,c-2,-2,-0.67SD,haze_eq,0.17998047,1.565918,-0.66666667,False,False,0.00043850333,ok,"[[""haze_eq"", 0.17812499999999998], [""chroma"", 1.56591796875]]",-0.65917101,0.0074956613
+elevator_lobby_00003261,contrast,c-1,-1,-0.33SD,haze_eq,0.083496094,1.2302246,-0.33333333,False,False,-0.00026676269,ok,"[[""haze_eq"", 0.08287760416666666], [""chroma"", 1.230224609375]]",-0.32985014,0.0034831938
+elevator_lobby_00003261,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+elevator_lobby_00003261,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.080832172,0.83276367,0.33333333,False,False,-0.0016145958,ok,"[[""dehaze_rgb"", -0.07950657436742778], [""chroma"", 0.832763671875]]",0.32846187,0.004871466
+elevator_lobby_00003261,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.16088711,0.71594238,0.66666667,False,False,-0.00067021691,ok,"[[""dehaze_rgb"", -0.1586855527765864], [""chroma"", 0.7159423828125]]",0.65667522,0.0099914499
+elevator_lobby_00003261,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.23627866,0.62597656,1,False,False,-0.0019226385,ok,"[[""dehaze_rgb"", -0.23295111951691524], [""chroma"", 0.6259765625]]",0.98352274,0.016477262
+elevator_lobby_00003261,colour,s-3,-3,-1.00SD,chroma,0.50260417,,-1,False,False,,ok,"[[""chroma"", 0.5026041666666667]]",-1.001646,0.0016459854
+elevator_lobby_00003261,colour,s-2,-2,-0.67SD,chroma,0.66145833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6614583333333334]]",-0.66799635,0.0013296862
+elevator_lobby_00003261,colour,s-1,-1,-0.33SD,chroma,0.828125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.828125]]",-0.33165456,0.0016787742
+elevator_lobby_00003261,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+elevator_lobby_00003261,colour,s+1,1,+0.33SD,chroma,1.1875,,0.33333333,False,False,,ok,"[[""chroma"", 1.1875]]",0.33449821,0.0011648771
+elevator_lobby_00003261,colour,s+2,2,+0.67SD,chroma,1.4140625,,0.66666667,False,False,,ok,"[[""chroma"", 1.4140625]]",0.66711974,0.00045306898
+elevator_lobby_00003261,colour,s+3,3,+1.00SD,chroma,1.6875,,1,False,False,,ok,"[[""chroma"", 1.6875]]",1.0016982,0.0016981696
+elevator_lobby_00003556,contrast,c-3,-3,-1.00SD,haze_eq,0.30800781,2.1835938,-1,False,False,0.0012847447,ok,"[[""haze_eq"", 0.304296875], [""chroma"", 2.18359375]]",-0.98778121,0.012218792
+elevator_lobby_00003556,contrast,c-2,-2,-0.67SD,haze_eq,0.19111328,1.6196289,-0.66666667,False,False,0.0013560112,ok,"[[""haze_eq"", 0.1880208333333333], [""chroma"", 1.61962890625]]",-0.65640956,0.010257107
+elevator_lobby_00003556,contrast,c-1,-1,-0.33SD,haze_eq,0.089990234,1.2543945,-0.33333333,False,False,8.8012215e-05,ok,"[[""haze_eq"", 0.08782552083333332], [""chroma"", 1.25439453125]]",-0.32759103,0.0057422988
+elevator_lobby_00003556,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+elevator_lobby_00003556,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.082386637,0.83544922,0.33333333,False,False,0.0010292756,ok,"[[""dehaze_rgb"", -0.07950657436742778], [""chroma"", 0.83544921875]]",0.32260966,0.010723674
+elevator_lobby_00003556,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.15855541,0.71862793,0.66666667,False,False,2.2587206e-05,ok,"[[""dehaze_rgb"", -0.15460428594939668], [""chroma"", 0.7186279296875]]",0.64639906,0.020267603
+elevator_lobby_00003556,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.23394696,0.62866211,1,False,False,-0.0010214869,ok,"[[""dehaze_rgb"", -0.22648141339165265], [""chroma"", 0.628662109375]]",0.96794385,0.032056149
+elevator_lobby_00003556,colour,s-3,-3,-1.00SD,chroma,0.33333333,,-1,False,False,,ok,"[[""chroma"", 0.33333333333333337]]",-0.9999056,9.4397758e-05
+elevator_lobby_00003556,colour,s-2,-2,-0.67SD,chroma,0.53645833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5364583333333334]]",-0.66575087,0.00091579356
+elevator_lobby_00003556,colour,s-1,-1,-0.33SD,chroma,0.76041667,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7604166666666667]]",-0.3329027,0.00043063636
+elevator_lobby_00003556,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+elevator_lobby_00003556,colour,s+1,1,+0.33SD,chroma,1.28125,,0.33333333,False,False,,ok,"[[""chroma"", 1.28125]]",0.33219081,0.0011425228
+elevator_lobby_00003556,colour,s+2,2,+0.67SD,chroma,1.6523438,,0.66666667,False,False,,ok,"[[""chroma"", 1.65234375]]",0.66655817,0.00010849568
+elevator_lobby_00003556,colour,s+3,3,+1.00SD,chroma,2.125,,1,False,False,,ok,"[[""chroma"", 2.125]]",1.0014766,0.0014765813
+gymnasium_indoor_00003333,contrast,c-3,-3,-1.00SD,haze_eq,0.14890137,1.5444336,-1,False,False,0.0002285981,ok,"[[""haze_eq"", 0.14720052083333335], [""chroma"", 1.54443359375]]",-0.98910725,0.010892751
+gymnasium_indoor_00003333,contrast,c-2,-2,-0.67SD,haze_eq,0.093701172,1.3242188,-0.66666667,False,False,-0.0012395703,ok,"[[""haze_eq"", 0.09277343749999999], [""chroma"", 1.32421875]]",-0.6608182,0.0058484652
+gymnasium_indoor_00003333,contrast,c-1,-1,-0.33SD,haze_eq,0.04453125,1.1496582,-0.33333333,False,False,9.3464299e-06,ok,"[[""haze_eq"", 0.04391276041666666], [""chroma"", 1.149658203125]]",-0.33044042,0.0028929128
+gymnasium_indoor_00003333,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+gymnasium_indoor_00003333,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.046915864,0.87573242,0.33333333,False,False,-4.9068757e-05,ok,"[[""dehaze_rgb"", -0.04596259235699275], [""chroma"", 0.875732421875]]",0.32402854,0.0093047963
+gymnasium_indoor_00003333,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.096918298,0.78710938,0.66666667,False,False,-0.00023288188,ok,"[[""dehaze_rgb"", -0.09366673284405999], [""chroma"", 0.787109375]]",0.64823051,0.018436161
+gymnasium_indoor_00003333,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.14753805,0.72668457,1,False,False,-0.00037969871,ok,"[[""dehaze_rgb"", -0.1438909605280236], [""chroma"", 0.7266845703125]]",0.97478054,0.02521946
+gymnasium_indoor_00003333,colour,s-3,-3,-1.00SD,chroma,0.48046875,,-1,False,False,,ok,"[[""chroma"", 0.48046875]]",-1.0005026,0.00050260545
+gymnasium_indoor_00003333,colour,s-2,-2,-0.67SD,chroma,0.64583333,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6458333333333334]]",-0.66786161,0.0011949418
+gymnasium_indoor_00003333,colour,s-1,-1,-0.33SD,chroma,0.8203125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8203125]]",-0.33439228,0.0010589509
+gymnasium_indoor_00003333,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+gymnasium_indoor_00003333,colour,s+1,1,+0.33SD,chroma,1.2050781,,0.33333333,False,False,,ok,"[[""chroma"", 1.205078125]]",0.33286025,0.00047308473
+gymnasium_indoor_00003333,colour,s+2,2,+0.67SD,chroma,1.453125,,0.66666667,False,False,,ok,"[[""chroma"", 1.453125]]",0.66508105,0.001585621
+gymnasium_indoor_00003333,colour,s+3,3,+1.00SD,chroma,1.7578125,,1,False,False,,ok,"[[""chroma"", 1.7578125]]",0.99921786,0.00078213922
+home_office_00004226,contrast,c-3,-3,-1.00SD,haze_eq,0.28852539,2.1943359,-1,False,False,-0.0013073319,ok,"[[""haze_eq"", 0.2869791666666667], [""chroma"", 2.1943359375]]",-0.99380848,0.0061915194
+home_office_00004226,contrast,c-2,-2,-0.67SD,haze_eq,0.18183594,1.6894531,-0.66666667,False,False,-0.00021535732,ok,"[[""haze_eq"", 0.17936197916666663], [""chroma"", 1.689453125]]",-0.66050704,0.0061596226
+home_office_00004226,contrast,c-1,-1,-0.33SD,haze_eq,0.085351562,1.310791,-0.33333333,False,False,0.0011815445,ok,"[[""haze_eq"", 0.08535156249999999], [""chroma"", 1.310791015625]]",-0.3325263,0.00080703582
+home_office_00004226,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+home_office_00004226,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.11789594,0.81665039,0.33333333,False,False,0.00017290895,ok,"[[""dehaze_rgb"", -0.11306929333716248], [""chroma"", 0.816650390625]]",0.32122322,0.01211011
+home_office_00004226,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.29784237,0.79785156,0.66666667,False,False,-0.00031622088,ok,"[[""dehaze_rgb"", -0.29228011139198284], [""chroma"", 0.7978515625]]",0.65646098,0.010205689
+home_office_00004226,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.53363425,0.75219727,1,False,False,-0.0011877755,ok,"[[""dehaze_rgb"", -0.5264533727133454], [""chroma"", 0.752197265625]]",0.99002889,0.009971113
+home_office_00004226,colour,s-3,-3,-1.00SD,chroma,0.51822917,,-1,False,False,,ok,"[[""chroma"", 0.5182291666666667]]",-1.0006323,0.00063228716
+home_office_00004226,colour,s-2,-2,-0.67SD,chroma,0.67057292,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6705729166666667]]",-0.66669954,3.2869067e-05
+home_office_00004226,colour,s-1,-1,-0.33SD,chroma,0.83333333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8333333333333334]]",-0.33345959,0.00012625508
+home_office_00004226,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+home_office_00004226,colour,s+1,1,+0.33SD,chroma,1.21875,,0.33333333,False,False,,ok,"[[""chroma"", 1.21875]]",0.33150696,0.0018263699
+home_office_00004226,colour,s+2,2,+0.67SD,chroma,1.5234375,,0.66666667,False,False,,ok,"[[""chroma"", 1.5234375]]",0.6669145,0.00024783695
+home_office_00004226,colour,s+3,3,+1.00SD,chroma,1.9179688,,1,False,False,,ok,"[[""chroma"", 1.91796875]]",0.9996439,0.00035609779
+japanese_garden_00000532,contrast,c-3,-3,-1.00SD,haze_eq,0.18554687,1.7539062,-1,False,False,-0.0016523709,ok,"[[""haze_eq"", 0.18616536458333333], [""chroma"", 1.75390625]]",-0.99991961,8.0387398e-05
+japanese_garden_00000532,contrast,c-2,-2,-0.67SD,haze_eq,0.11225586,1.4182129,-0.66666667,False,False,0.00044045051,ok,"[[""haze_eq"", 0.11256510416666667], [""chroma"", 1.418212890625]]",-0.66923373,0.0025670681
+japanese_garden_00000532,contrast,c-1,-1,-0.33SD,haze_eq,0.051025391,1.1818848,-0.33333333,False,False,0.0017458352,ok,"[[""haze_eq"", 0.05133463541666667], [""chroma"", 1.181884765625]]",-0.33410698,0.00077364395
+japanese_garden_00000532,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00000532,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.049066729,0.84753418,0.33333333,False,False,-3.9722327e-05,ok,"[[""dehaze_rgb"", -0.04757502317504468], [""chroma"", 0.8475341796875]]",0.32121567,0.01211766
+japanese_garden_00000532,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.094239273,0.70654297,0.66666667,False,False,0.00086571307,ok,"[[""dehaze_rgb"", -0.09237944570982069], [""chroma"", 0.70654296875]]",0.65053307,0.016133596
+japanese_garden_00000532,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.13785414,0.61657715,1,False,False,0.00050704382,ok,"[[""dehaze_rgb"", -0.134963189343546], [""chroma"", 0.6165771484375]]",0.98103429,0.018965705
+japanese_garden_00000532,colour,s-3,-3,-1.00SD,chroma,0.52083333,,-1,False,False,,ok,"[[""chroma"", 0.5208333333333334]]",-1.0009135,0.00091345893
+japanese_garden_00000532,colour,s-2,-2,-0.67SD,chroma,0.68229167,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6822916666666667]]",-0.66601179,0.0006548724
+japanese_garden_00000532,colour,s-1,-1,-0.33SD,chroma,0.84114583,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8411458333333334]]",-0.3314649,0.0018684288
+japanese_garden_00000532,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00000532,colour,s+1,1,+0.33SD,chroma,1.1796875,,0.33333333,False,False,,ok,"[[""chroma"", 1.1796875]]",0.33326993,6.3399555e-05
+japanese_garden_00000532,colour,s+2,2,+0.67SD,chroma,1.3808594,,0.66666667,False,False,,ok,"[[""chroma"", 1.380859375]]",0.66744803,0.00078136233
+japanese_garden_00000532,colour,s+3,3,+1.00SD,chroma,1.6191406,,1,False,False,,ok,"[[""chroma"", 1.619140625]]",1.0000598,5.9818335e-05
+japanese_garden_00001073,contrast,c-3,-3,-1.00SD,haze_eq,0.24584961,2.1245117,-1,False,False,0.00099461591,ok,"[[""haze_eq"", 0.244921875], [""chroma"", 2.12451171875]]",-0.99783312,0.0021668765
+japanese_garden_00001073,contrast,c-2,-2,-0.67SD,haze_eq,0.15400391,1.6035156,-0.66666667,False,False,-0.00072434832,ok,"[[""haze_eq"", 0.15338541666666666], [""chroma"", 1.603515625]]",-0.66622969,0.00043697836
+japanese_garden_00001073,contrast,c-1,-1,-0.33SD,haze_eq,0.073291016,1.2490234,-0.33333333,False,False,-0.0011344229,ok,"[[""haze_eq"", 0.07236328125], [""chroma"", 1.2490234375]]",-0.33025944,0.0030738942
+japanese_garden_00001073,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00001073,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.053089004,0.86096191,0.33333333,False,False,0.00088051158,ok,"[[""dehaze_rgb"", -0.05259107983511131], [""chroma"", 0.8609619140625]]",0.33148244,0.0018508925
+japanese_garden_00001073,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.10432607,0.74145508,0.66666667,False,False,0.00034114469,ok,"[[""dehaze_rgb"", -0.10293950832004839], [""chroma"", 0.741455078125]]",0.65656851,0.010098162
+japanese_garden_00001073,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.15309387,0.6595459,1,False,False,-0.00091945504,ok,"[[""dehaze_rgb"", -0.15154333582900437], [""chroma"", 0.6595458984375]]",0.9876949,0.0123051
+japanese_garden_00001073,colour,s-3,-3,-1.00SD,chroma,0.45442708,,-1,False,False,,ok,"[[""chroma"", 0.45442708333333337]]",-0.99973542,0.00026458067
+japanese_garden_00001073,colour,s-2,-2,-0.67SD,chroma,0.63802083,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6380208333333334]]",-0.66691022,0.00024355317
+japanese_garden_00001073,colour,s-1,-1,-0.33SD,chroma,0.8203125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8203125]]",-0.33403245,0.00069911335
+japanese_garden_00001073,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00001073,colour,s+1,1,+0.33SD,chroma,1.203125,,0.33333333,False,False,,ok,"[[""chroma"", 1.203125]]",0.33438333,0.0010499939
+japanese_garden_00001073,colour,s+2,2,+0.67SD,chroma,1.4492188,,0.66666667,False,False,,ok,"[[""chroma"", 1.44921875]]",0.66812837,0.0014617045
+japanese_garden_00001073,colour,s+3,3,+1.00SD,chroma,1.765625,,1,False,False,,ok,"[[""chroma"", 1.765625]]",0.99930276,0.00069724248
+japanese_garden_00001226,contrast,c-3,-3,-1.00SD,haze_eq,0.11967773,1.909668,-1,False,False,-1.0904168e-05,ok,"[[""haze_eq"", 0.11998697916666666], [""chroma"", 1.90966796875]]",-1.0009359,0.00093592419
+japanese_garden_00001226,contrast,c-2,-2,-0.67SD,haze_eq,0.073754883,1.512207,-0.66666667,False,False,0.001988453,ok,"[[""haze_eq"", 0.07421875], [""chroma"", 1.51220703125]]",-0.67135511,0.0046884477
+japanese_garden_00001226,contrast,c-1,-1,-0.33SD,haze_eq,0.034326172,1.2275391,-0.33333333,False,False,0.0015421609,ok,"[[""haze_eq"", 0.03463541666666667], [""chroma"", 1.2275390625]]",-0.33722549,0.0038921556
+japanese_garden_00001226,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00001226,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.031932316,0.85559082,0.33333333,False,False,0.0010086356,ok,"[[""dehaze_rgb"", -0.031232218661170784], [""chroma"", 0.8555908203125]]",0.32421544,0.0091178978
+japanese_garden_00001226,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.059970447,0.77099609,0.66666667,False,False,0.00083611604,ok,"[[""dehaze_rgb"", -0.059087526104934104], [""chroma"", 0.77099609375]]",0.65576031,0.010906355
+japanese_garden_00001226,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.087035031,0.72399902,1,False,False,-0.0012703356,ok,"[[""dehaze_rgb"", -0.08658665360574389], [""chroma"", 0.7239990234375]]",0.99330471,0.0066952884
+japanese_garden_00001226,colour,s-3,-3,-1.00SD,chroma,0.58203125,,-1,False,False,,ok,"[[""chroma"", 0.58203125]]",-0.99881752,0.001182478
+japanese_garden_00001226,colour,s-2,-2,-0.67SD,chroma,0.72395833,,-0.66666667,False,False,,ok,"[[""chroma"", 0.7239583333333334]]",-0.66660919,5.7479755e-05
+japanese_garden_00001226,colour,s-1,-1,-0.33SD,chroma,0.86458333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8645833333333334]]",-0.33513727,0.0018039392
+japanese_garden_00001226,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+japanese_garden_00001226,colour,s+1,1,+0.33SD,chroma,1.1679688,,0.33333333,False,False,,ok,"[[""chroma"", 1.16796875]]",0.33323177,0.00010156414
+japanese_garden_00001226,colour,s+2,2,+0.67SD,chroma,1.3710938,,0.66666667,False,False,,ok,"[[""chroma"", 1.37109375]]",0.66557524,0.0010914286
+japanese_garden_00001226,colour,s+3,3,+1.00SD,chroma,1.6367188,,1,False,False,,ok,"[[""chroma"", 1.63671875]]",0.9985823,0.0014176965
+laundromat_00004208,contrast,c-3,-3,-1.00SD,haze_eq,0.25791016,2.0170898,-1,False,False,1.5187949e-05,ok,"[[""haze_eq"", 0.2548177083333334], [""chroma"", 2.01708984375]]",-0.98853931,0.01146069
+laundromat_00004208,contrast,c-2,-2,-0.67SD,haze_eq,0.15957031,1.5390625,-0.66666667,False,False,0.00070760263,ok,"[[""haze_eq"", 0.15771484375], [""chroma"", 1.5390625]]",-0.6595697,0.0070969717
+laundromat_00004208,contrast,c-1,-1,-0.33SD,haze_eq,0.07421875,1.2141113,-0.33333333,False,False,0.00077108046,ok,"[[""haze_eq"", 0.07360026041666667], [""chroma"", 1.214111328125]]",-0.33052612,0.002807217
+laundromat_00004208,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+laundromat_00004208,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.069950918,0.83544922,0.33333333,False,False,-0.0011137829,ok,"[[""dehaze_rgb"", -0.06877113198552331], [""chroma"", 0.83544921875]]",0.32608728,0.0072460563
+laundromat_00004208,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.14223353,0.69311523,0.66666667,False,False,0.00077809029,ok,"[[""dehaze_rgb"", -0.14031985205423259], [""chroma"", 0.693115234375]]",0.6561843,0.010482365
+laundromat_00004208,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21373892,0.58569336,1,False,False,-0.001651592,ok,"[[""dehaze_rgb"", -0.211115861344154], [""chroma"", 0.585693359375]]",0.98780304,0.01219696
+laundromat_00004208,colour,s-3,-3,-1.00SD,chroma,0.38802083,,-1,False,False,,ok,"[[""chroma"", 0.38802083333333337]]",-0.99932573,0.00067426584
+laundromat_00004208,colour,s-2,-2,-0.67SD,chroma,0.5859375,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5859375]]",-0.66589146,0.00077520768
+laundromat_00004208,colour,s-1,-1,-0.33SD,chroma,0.79166667,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7916666666666667]]",-0.33237112,0.00096221456
+laundromat_00004208,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+laundromat_00004208,colour,s+1,1,+0.33SD,chroma,1.234375,,0.33333333,False,False,,ok,"[[""chroma"", 1.234375]]",0.3335659,0.00023257072
+laundromat_00004208,colour,s+2,2,+0.67SD,chroma,1.5546875,,0.66666667,False,False,,ok,"[[""chroma"", 1.5546875]]",0.66723734,0.00057067822
+laundromat_00004208,colour,s+3,3,+1.00SD,chroma,2,,1,False,False,,ok,"[[""chroma"", 2.0]]",0.99896317,0.0010368294
+living_room_00002633,contrast,c-3,-3,-1.00SD,haze_eq,0.28110352,1.7028809,-1,False,False,0.00054209293,ok,"[[""haze_eq"", 0.27955729166666665], [""chroma"", 1.702880859375]]",-0.99493375,0.0050662517
+living_room_00002633,contrast,c-2,-2,-0.67SD,haze_eq,0.17070312,1.423584,-0.66666667,False,False,-0.0006869626,ok,"[[""haze_eq"", 0.1694661458333333], [""chroma"", 1.423583984375]]",-0.66373217,0.0029345014
+living_room_00002633,contrast,c-1,-1,-0.33SD,haze_eq,0.077929687,1.197998,-0.33333333,False,False,0.00069436185,ok,"[[""haze_eq"", 0.0779296875], [""chroma"", 1.197998046875]]",-0.33273686,0.00059646895
+living_room_00002633,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+living_room_00002633,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.072843052,0.86499023,0.33333333,False,False,0.00079055219,ok,"[[""dehaze_rgb"", -0.07132718969550056], [""chroma"", 0.864990234375]]",0.32798789,0.0053454455
+living_room_00002633,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.14692073,0.74145508,0.66666667,False,False,0.00028934989,ok,"[[""dehaze_rgb"", -0.14491127723482106], [""chroma"", 0.741455078125]]",0.65847932,0.0081873489
+living_room_00002633,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.22346767,0.66357422,1,False,False,-0.0010152559,ok,"[[""dehaze_rgb"", -0.22082042053204787], [""chroma"", 0.66357421875]]",0.9871389,0.012861102
+living_room_00002633,colour,s-3,-3,-1.00SD,chroma,0.47916667,,-1,False,False,,ok,"[[""chroma"", 0.4791666666666667]]",-1.0006261,0.00062605621
+living_room_00002633,colour,s-2,-2,-0.67SD,chroma,0.640625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.640625]]",-0.66564183,0.0010248352
+living_room_00002633,colour,s-1,-1,-0.33SD,chroma,0.8125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8125]]",-0.33339261,5.9272337e-05
+living_room_00002633,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+living_room_00002633,colour,s+1,1,+0.33SD,chroma,1.2070312,,0.33333333,False,False,,ok,"[[""chroma"", 1.20703125]]",0.33451262,0.0011792862
+living_room_00002633,colour,s+2,2,+0.67SD,chroma,1.4609375,,0.66666667,False,False,,ok,"[[""chroma"", 1.4609375]]",0.6662918,0.00037486894
+living_room_00002633,colour,s+3,3,+1.00SD,chroma,1.7695312,,1,False,False,,ok,"[[""chroma"", 1.76953125]]",1.0001202,0.00012018069
+lobby_00001554,contrast,c-3,-3,-1.00SD,haze_eq,0.24724121,1.7807617,-1,False,False,0.00079483597,ok,"[[""haze_eq"", 0.244921875], [""chroma"", 1.78076171875]]",-0.99051286,0.0094871357
+lobby_00001554,contrast,c-2,-2,-0.67SD,haze_eq,0.15585937,1.4746094,-0.66666667,False,False,0.00018459199,ok,"[[""haze_eq"", 0.15462239583333331], [""chroma"", 1.474609375]]",-0.6604191,0.0062475629
+lobby_00001554,contrast,c-1,-1,-0.33SD,haze_eq,0.07421875,1.2248535,-0.33333333,False,False,0.00082793791,ok,"[[""haze_eq"", 0.07298177083333333], [""chroma"", 1.224853515625]]",-0.32803278,0.0053005572
+lobby_00001554,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+lobby_00001554,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.077307705,0.85693359,0.33333333,False,False,0.0012021845,ok,"[[""dehaze_rgb"", -0.07541688203146417], [""chroma"", 0.85693359375]]",0.32587018,0.0074631524
+lobby_00001554,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1644012,0.78845215,0.66666667,False,False,0.00067527956,ok,"[[""dehaze_rgb"", -0.1612548229546088], [""chroma"", 0.7884521484375]]",0.65524573,0.011420938
+lobby_00001554,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.25638758,0.74682617,1,False,False,0.0010070778,ok,"[[""dehaze_rgb"", -0.2535879539652921], [""chroma"", 0.746826171875]]",0.98697465,0.013025353
+lobby_00001554,colour,s-3,-3,-1.00SD,chroma,0.40104167,,-1,False,False,,ok,"[[""chroma"", 0.40104166666666674]]",-0.9999461,5.3896562e-05
+lobby_00001554,colour,s-2,-2,-0.67SD,chroma,0.58854167,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5885416666666667]]",-0.66739234,0.00072567318
+lobby_00001554,colour,s-1,-1,-0.33SD,chroma,0.7890625,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7890625]]",-0.33184928,0.0014840569
+lobby_00001554,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+lobby_00001554,colour,s+1,1,+0.33SD,chroma,1.2539062,,0.33333333,False,False,,ok,"[[""chroma"", 1.25390625]]",0.33473109,0.001397759
+lobby_00001554,colour,s+2,2,+0.67SD,chroma,1.578125,,0.66666667,False,False,,ok,"[[""chroma"", 1.578125]]",0.66694838,0.00028171776
+lobby_00001554,colour,s+3,3,+1.00SD,chroma,1.984375,,1,False,False,,ok,"[[""chroma"", 1.984375]]",0.99910999,0.0008900126
+park_00001014,contrast,c-3,-3,-1.00SD,haze_eq,0.17905273,1.7592773,-1,False,False,-0.00011994585,ok,"[[""haze_eq"", 0.17812499999999998], [""chroma"", 1.75927734375]]",-0.99489559,0.0051044067
+park_00001014,contrast,c-2,-2,-0.67SD,haze_eq,0.11132812,1.4370117,-0.66666667,False,False,0.0009922793,ok,"[[""haze_eq"", 0.111328125], [""chroma"", 1.43701171875]]",-0.66517828,0.0014883844
+park_00001014,contrast,c-1,-1,-0.33SD,haze_eq,0.052880859,1.197998,-0.33333333,False,False,0.00010553677,ok,"[[""haze_eq"", 0.052571614583333336], [""chroma"", 1.197998046875]]",-0.33355914,0.00022580283
+park_00001014,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+park_00001014,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.049076463,0.84350586,0.33333333,False,False,0.00012422963,ok,"[[""dehaze_rgb"", -0.04757502317504468], [""chroma"", 0.843505859375]]",0.32349233,0.0098410073
+park_00001014,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.093523071,0.72802734,0.66666667,False,False,0.0010016257,ok,"[[""dehaze_rgb"", -0.09173580214270105], [""chroma"", 0.72802734375]]",0.65358364,0.013083029
+park_00001014,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.13704371,0.65283203,1,False,False,0.0017719273,ok,"[[""dehaze_rgb"", -0.134963189343546], [""chroma"", 0.65283203125]]",0.98464739,0.015352606
+park_00001014,colour,s-3,-3,-1.00SD,chroma,0.36197917,,-1,False,False,,ok,"[[""chroma"", 0.3619791666666667]]",-1.0008936,0.00089359777
+park_00001014,colour,s-2,-2,-0.67SD,chroma,0.5703125,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5703125]]",-0.66556472,0.0011019433
+park_00001014,colour,s-1,-1,-0.33SD,chroma,0.78645833,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7864583333333334]]",-0.33142713,0.001906204
+park_00001014,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+park_00001014,colour,s+1,1,+0.33SD,chroma,1.25,,0.33333333,False,False,,ok,"[[""chroma"", 1.25]]",0.33182357,0.0015097596
+park_00001014,colour,s+2,2,+0.67SD,chroma,1.5546875,,0.66666667,False,False,,ok,"[[""chroma"", 1.5546875]]",0.66788926,0.0012225917
+park_00001014,colour,s+3,3,+1.00SD,chroma,1.9296875,,1,False,False,,ok,"[[""chroma"", 1.9296875]]",0.99947839,0.00052160749
+parking_garage_outdoor_00003825,contrast,c-3,-3,-1.00SD,haze_eq,0.23007812,1.8613281,-1,False,False,-0.0014681684,ok,"[[""haze_eq"", 0.230078125], [""chroma"", 1.861328125]]",-1.0011491,0.0011491435
+parking_garage_outdoor_00003825,contrast,c-2,-2,-0.67SD,haze_eq,0.14658203,1.512207,-0.66666667,False,False,3.6996285e-05,ok,"[[""haze_eq"", 0.14596354166666667], [""chroma"", 1.51220703125]]",-0.66583794,0.00082873067
+parking_garage_outdoor_00003825,contrast,c-1,-1,-0.33SD,haze_eq,0.068652344,1.2329102,-0.33333333,False,False,0.0002184728,ok,"[[""haze_eq"", 0.06988932291666666], [""chroma"", 1.23291015625]]",-0.33516654,0.0018332115
+parking_garage_outdoor_00003825,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+parking_garage_outdoor_00003825,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.075236225,0.75488281,0.33333333,False,False,0.0014475283,ok,"[[""dehaze_rgb"", -0.07337203586348237], [""chroma"", 0.7548828125]]",0.32617767,0.0071556676
+parking_garage_outdoor_00003825,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1690876,0.62329102,0.66666667,False,False,0.0004583645,ok,"[[""dehaze_rgb"", -0.16639336331065352], [""chroma"", 0.623291015625]]",0.65985065,0.0068160118
+parking_garage_outdoor_00003825,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.30714995,0.61791992,1,False,False,0.00020250598,ok,"[[""dehaze_rgb"", -0.30449868742146413], [""chroma"", 0.617919921875]]",0.99597414,0.0040258637
+parking_garage_outdoor_00003825,colour,s-3,-3,-1.00SD,chroma,0.24739583,,-1,False,False,,ok,"[[""chroma"", 0.24739583333333334]]",-1.0006152,0.00061515204
+parking_garage_outdoor_00003825,colour,s-2,-2,-0.67SD,chroma,0.48177083,,-0.66666667,False,False,,ok,"[[""chroma"", 0.48177083333333337]]",-0.66671979,5.3119666e-05
+parking_garage_outdoor_00003825,colour,s-1,-1,-0.33SD,chroma,0.734375,,-0.33333333,False,False,,ok,"[[""chroma"", 0.734375]]",-0.33167286,0.0016604708
+parking_garage_outdoor_00003825,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+parking_garage_outdoor_00003825,colour,s+1,1,+0.33SD,chroma,1.3164062,,0.33333333,False,False,,ok,"[[""chroma"", 1.31640625]]",0.33216355,0.0011697832
+parking_garage_outdoor_00003825,colour,s+2,2,+0.67SD,chroma,1.7148438,,0.66666667,False,False,,ok,"[[""chroma"", 1.71484375]]",0.66649469,0.00017197352
+parking_garage_outdoor_00003825,colour,s+3,3,+1.00SD,chroma,2.2421875,,1,False,False,,ok,"[[""chroma"", 2.2421875]]",1.0006619,0.00066188419
+picnic_area_00000702,contrast,c-3,-3,-1.00SD,haze_eq,0.18647461,1.5686035,-1,False,False,0.00060907568,ok,"[[""haze_eq"", 0.18554687499999997], [""chroma"", 1.568603515625]]",-0.99555729,0.0044427126
+picnic_area_00000702,contrast,c-2,-2,-0.67SD,haze_eq,0.11782227,1.3081055,-0.66666667,False,False,-0.00058103639,ok,"[[""haze_eq"", 0.11751302083333333], [""chroma"", 1.30810546875]]",-0.66537946,0.0012872033
+picnic_area_00000702,contrast,c-1,-1,-0.33SD,haze_eq,0.05612793,1.1228027,-0.33333333,False,False,0.00026325777,ok,"[[""haze_eq"", 0.0556640625], [""chroma"", 1.122802734375]]",-0.32991482,0.0034185138
+picnic_area_00000702,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+picnic_area_00000702,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.070457656,0.88781738,0.33333333,False,False,0.0009685238,ok,"[[""dehaze_rgb"", -0.06928234352751876], [""chroma"", 0.8878173828125]]",0.32725723,0.0060761044
+picnic_area_00000702,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.15657257,0.77368164,0.66666667,False,False,0.0016539287,ok,"[[""dehaze_rgb"", -0.15460428594939668], [""chroma"", 0.773681640625]]",0.6586046,0.0080620698
+picnic_area_00000702,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.23681601,0.70385742,1,False,False,0.00091478182,ok,"[[""dehaze_rgb"", -0.23618597257954654], [""chroma"", 0.703857421875]]",0.99522879,0.0047712132
+picnic_area_00000702,colour,s-3,-3,-1.00SD,chroma,0.56380208,,-1,False,False,,ok,"[[""chroma"", 0.5638020833333334]]",-0.99947722,0.00052277579
+picnic_area_00000702,colour,s-2,-2,-0.67SD,chroma,0.71484375,,-0.66666667,False,False,,ok,"[[""chroma"", 0.71484375]]",-0.6673752,0.00070853806
+picnic_area_00000702,colour,s-1,-1,-0.33SD,chroma,0.86458333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8645833333333334]]",-0.33221067,0.0011226616
+picnic_area_00000702,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+picnic_area_00000702,colour,s+1,1,+0.33SD,chroma,1.15625,,0.33333333,False,False,,ok,"[[""chroma"", 1.15625]]",0.33392808,0.00059474488
+picnic_area_00000702,colour,s+2,2,+0.67SD,chroma,1.3945312,,0.66666667,False,False,,ok,"[[""chroma"", 1.39453125]]",0.66806373,0.0013970584
+picnic_area_00000702,colour,s+3,3,+1.00SD,chroma,1.7578125,,1,False,False,,ok,"[[""chroma"", 1.7578125]]",1.0011008,0.001100777
+picnic_area_00004871,contrast,c-3,-3,-1.00SD,haze_eq,0.16699219,1.8881836,-1,False,False,0.0017146804,ok,"[[""haze_eq"", 0.16575520833333332], [""chroma"", 1.88818359375]]",-0.99692638,0.0030736199
+picnic_area_00004871,contrast,c-2,-2,-0.67SD,haze_eq,0.10390625,1.5068359,-0.66666667,False,False,-0.0018957675,ok,"[[""haze_eq"", 0.10328776041666668], [""chroma"", 1.5068359375]]",-0.66541293,0.0012537411
+picnic_area_00004871,contrast,c-1,-1,-0.33SD,haze_eq,0.048242187,1.2114258,-0.33333333,False,False,-0.0013408233,ok,"[[""haze_eq"", 0.04824218749999999], [""chroma"", 1.21142578125]]",-0.33438977,0.0010564401
+picnic_area_00004871,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+picnic_area_00004871,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.047068741,0.84887695,0.33333333,False,False,0.0018381312,ok,"[[""dehaze_rgb"", -0.04628507852060314], [""chroma"", 0.848876953125]]",0.32707155,0.0062617786
+picnic_area_00004871,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.093156882,0.7454834,0.66666667,False,False,0.0012146464,ok,"[[""dehaze_rgb"", -0.09237944570982069], [""chroma"", 0.7454833984375]]",0.65942973,0.0072369415
+picnic_area_00004871,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.13875472,0.68237305,1,False,False,0.0015900614,ok,"[[""dehaze_rgb"", -0.13776906028723898], [""chroma"", 0.682373046875]]",0.99100194,0.0089980574
+picnic_area_00004871,colour,s-3,-3,-1.00SD,chroma,0.50520833,,-1,False,False,,ok,"[[""chroma"", 0.5052083333333334]]",-1.0016499,0.0016498797
+picnic_area_00004871,colour,s-2,-2,-0.67SD,chroma,0.66666667,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6666666666666667]]",-0.66808514,0.0014184773
+picnic_area_00004871,colour,s-1,-1,-0.33SD,chroma,0.83333333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8333333333333334]]",-0.33157434,0.0017589977
+picnic_area_00004871,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+picnic_area_00004871,colour,s+1,1,+0.33SD,chroma,1.1992188,,0.33333333,False,False,,ok,"[[""chroma"", 1.19921875]]",0.33199142,0.0013419133
+picnic_area_00004871,colour,s+2,2,+0.67SD,chroma,1.4648438,,0.66666667,False,False,,ok,"[[""chroma"", 1.46484375]]",0.66746361,0.00079693971
+picnic_area_00004871,colour,s+3,3,+1.00SD,chroma,1.8203125,,1,False,False,,ok,"[[""chroma"", 1.8203125]]",1.0004641,0.00046405143
+promenade_00002520,contrast,c-3,-3,-1.00SD,haze_eq,0.27739258,2.0600586,-1,False,False,0.00035983755,ok,"[[""haze_eq"", 0.27460937500000004], [""chroma"", 2.06005859375]]",-0.9907118,0.009288199
+promenade_00002520,contrast,c-2,-2,-0.67SD,haze_eq,0.17348633,1.5712891,-0.66666667,False,False,-0.00060245529,ok,"[[""haze_eq"", 0.17194010416666666], [""chroma"", 1.5712890625]]",-0.66130606,0.0053606112
+promenade_00002520,contrast,c-1,-1,-0.33SD,haze_eq,0.082568359,1.2382812,-0.33333333,False,False,-0.0016169324,ok,"[[""haze_eq"", 0.08040364583333333], [""chroma"", 1.23828125]]",-0.32506709,0.0082662446
+promenade_00002520,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+promenade_00002520,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.079264863,0.84619141,0.33333333,False,False,0.0015184054,ok,"[[""dehaze_rgb"", -0.07746172819944597], [""chroma"", 0.84619140625]]",0.32511851,0.0082148271
+promenade_00002520,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.15999759,0.75756836,0.66666667,False,False,7.3603135e-05,ok,"[[""dehaze_rgb"", -0.1586855527765864], [""chroma"", 0.757568359375]]",0.661293,0.0053736696
+promenade_00002520,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.24562322,0.69848633,1,False,False,0.0011379278,ok,"[[""dehaze_rgb"", -0.24508181850178262], [""chroma"", 0.698486328125]]",0.99605657,0.0039434324
+promenade_00002520,colour,s-3,-3,-1.00SD,chroma,0.39583333,,-1,False,False,,ok,"[[""chroma"", 0.39583333333333337]]",-0.99919956,0.00080044265
+promenade_00002520,colour,s-2,-2,-0.67SD,chroma,0.59375,,-0.66666667,False,False,,ok,"[[""chroma"", 0.59375]]",-0.66829622,0.0016295508
+promenade_00002520,colour,s-1,-1,-0.33SD,chroma,0.80208333,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8020833333333334]]",-0.33205646,0.0012768777
+promenade_00002520,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+promenade_00002520,colour,s+1,1,+0.33SD,chroma,1.2460938,,0.33333333,False,False,,ok,"[[""chroma"", 1.24609375]]",0.33150112,0.0018322114
+promenade_00002520,colour,s+2,2,+0.67SD,chroma,1.5898438,,0.66666667,False,False,,ok,"[[""chroma"", 1.58984375]]",0.66825182,0.0015851553
+promenade_00002520,colour,s+3,3,+1.00SD,chroma,2.046875,,1,False,False,,ok,"[[""chroma"", 2.046875]]",1.0016931,0.001693107
+residential_neighborhood_00001583,contrast,c-3,-3,-1.00SD,haze_eq,0.23657227,1.6948242,-1,False,False,0.00049613965,ok,"[[""haze_eq"", 0.23502604166666666], [""chroma"", 1.69482421875]]",-0.99592292,0.0040770771
+residential_neighborhood_00001583,contrast,c-2,-2,-0.67SD,haze_eq,0.14750977,1.4155273,-0.66666667,False,False,-0.00026870986,ok,"[[""haze_eq"", 0.14720052083333335], [""chroma"", 1.41552734375]]",-0.66403383,0.0026328317
+residential_neighborhood_00001583,contrast,c-1,-1,-0.33SD,haze_eq,0.069580078,1.1953125,-0.33333333,False,False,1.869286e-05,ok,"[[""haze_eq"", 0.06927083333333334], [""chroma"", 1.1953125]]",-0.33263566,0.00069767163
+residential_neighborhood_00001583,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+residential_neighborhood_00001583,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.069950918,0.85961914,0.33333333,False,False,0.00063438893,ok,"[[""dehaze_rgb"", -0.06825992044352786], [""chroma"", 0.859619140625]]",0.32481061,0.00852272
+residential_neighborhood_00001583,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1461197,0.8112793,0.66666667,False,False,0.0012072472,ok,"[[""dehaze_rgb"", -0.14440111888142232], [""chroma"", 0.811279296875]]",0.6587766,0.0078900661
+residential_neighborhood_00001583,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.23938759,0.77770996,1,False,False,0.00053118876,ok,"[[""dehaze_rgb"", -0.2369946858452044], [""chroma"", 0.7777099609375]]",0.99114048,0.0088595158
+residential_neighborhood_00001583,colour,s-3,-3,-1.00SD,chroma,0.55208333,,-1,False,False,,ok,"[[""chroma"", 0.5520833333333334]]",-0.99872795,0.0012720479
+residential_neighborhood_00001583,colour,s-2,-2,-0.67SD,chroma,0.70182292,,-0.66666667,False,False,,ok,"[[""chroma"", 0.7018229166666667]]",-0.66727746,0.00061078998
+residential_neighborhood_00001583,colour,s-1,-1,-0.33SD,chroma,0.85286458,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8528645833333334]]",-0.33254559,0.00078774787
+residential_neighborhood_00001583,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+residential_neighborhood_00001583,colour,s+1,1,+0.33SD,chroma,1.1992188,,0.33333333,False,False,,ok,"[[""chroma"", 1.19921875]]",0.33484753,0.0015141999
+residential_neighborhood_00001583,colour,s+2,2,+0.67SD,chroma,1.5234375,,0.66666667,False,False,,ok,"[[""chroma"", 1.5234375]]",0.66517724,0.0014894307
+residential_neighborhood_00001583,colour,s+3,3,+1.00SD,chroma,2.0625,,1,False,False,,ok,"[[""chroma"", 2.0625]]",0.99939194,0.00060806197
+restaurant_00000867,contrast,c-3,-3,-1.00SD,haze_eq,0.20131836,2.0117188,-1,False,False,-0.00042720973,ok,"[[""haze_eq"", 0.200390625], [""chroma"", 2.01171875]]",-0.99440039,0.0055996061
+restaurant_00000867,contrast,c-2,-2,-0.67SD,haze_eq,0.12570801,1.6035156,-0.66666667,False,False,-0.00052456838,ok,"[[""haze_eq"", 0.12493489583333334], [""chroma"", 1.603515625]]",-0.66454026,0.0021264102
+restaurant_00000867,contrast,c-1,-1,-0.33SD,haze_eq,0.058447266,1.2866211,-0.33333333,False,False,0.00033880808,ok,"[[""haze_eq"", 0.05813802083333333], [""chroma"", 1.28662109375]]",-0.33120169,0.0021316483
+restaurant_00000867,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+restaurant_00000867,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.065564763,0.76831055,0.33333333,False,False,-0.0017621915,ok,"[[""dehaze_rgb"", -0.06417022810756426], [""chroma"", 0.768310546875]]",0.32611401,0.0072193274
+restaurant_00000867,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.1507011,0.65820312,0.66666667,False,False,-0.00068501542,ok,"[[""dehaze_rgb"", -0.1464417522950172], [""chroma"", 0.658203125]]",0.65493233,0.01173434
+restaurant_00000867,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.26030189,0.56958008,1,False,False,-0.00017563499,ok,"[[""dehaze_rgb"", -0.2535879539652921], [""chroma"", 0.569580078125]]",0.9814387,0.018561303
+restaurant_00000867,colour,s-3,-3,-1.00SD,chroma,0.33854167,,-1,False,False,,ok,"[[""chroma"", 0.3385416666666667]]",-0.9983759,0.0016240968
+restaurant_00000867,colour,s-2,-2,-0.67SD,chroma,0.53125,,-0.66666667,False,False,,ok,"[[""chroma"", 0.53125]]",-0.66856687,0.0019002079
+restaurant_00000867,colour,s-1,-1,-0.33SD,chroma,0.75260417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7526041666666667]]",-0.33371194,0.00037860869
+restaurant_00000867,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+restaurant_00000867,colour,s+1,1,+0.33SD,chroma,1.296875,,0.33333333,False,False,,ok,"[[""chroma"", 1.296875]]",0.33357175,0.00023841224
+restaurant_00000867,colour,s+2,2,+0.67SD,chroma,1.6796875,,0.66666667,False,False,,ok,"[[""chroma"", 1.6796875]]",0.66809722,0.0014305498
+restaurant_00000867,colour,s+3,3,+1.00SD,chroma,2.1757812,,1,False,False,,ok,"[[""chroma"", 2.17578125]]",1.0011931,0.001193073
+shopping_mall_indoor_00003139,contrast,c-3,-3,-1.00SD,haze_eq,0.20317383,1.9902344,-1,False,False,0.0015908403,ok,"[[""haze_eq"", 0.20162760416666667], [""chroma"", 1.990234375]]",-0.99388112,0.006118882
+shopping_mall_indoor_00003139,contrast,c-2,-2,-0.67SD,haze_eq,0.12617187,1.5927734,-0.66666667,False,False,0.00091711843,ok,"[[""haze_eq"", 0.12617187500000002], [""chroma"", 1.5927734375]]",-0.66486692,0.0017997459
+shopping_mall_indoor_00003139,contrast,c-1,-1,-0.33SD,haze_eq,0.059375,1.2866211,-0.33333333,False,False,0.0014502544,ok,"[[""haze_eq"", 0.059375], [""chroma"", 1.28662109375]]",-0.33300252,0.00033081191
+shopping_mall_indoor_00003139,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+shopping_mall_indoor_00003139,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.064377388,0.7253418,0.33333333,False,False,0.0013747041,ok,"[[""dehaze_rgb"", -0.06314780502357335], [""chroma"", 0.725341796875]]",0.32641068,0.0069226566
+shopping_mall_indoor_00003139,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.13495983,0.70385742,0.66666667,False,False,-0.00044239768,ok,"[[""dehaze_rgb"", -0.13317763510665054], [""chroma"", 0.703857421875]]",0.65744444,0.0092222279
+shopping_mall_indoor_00003139,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.21097168,0.67565918,1,False,False,-0.00021302071,ok,"[[""dehaze_rgb"", -0.20788100828152267], [""chroma"", 0.6756591796875]]",0.98854941,0.01145059
+shopping_mall_indoor_00003139,colour,s-3,-3,-1.00SD,chroma,0.27604167,,-1,False,False,,ok,"[[""chroma"", 0.27604166666666674]]",-1.0014283,0.0014282914
+shopping_mall_indoor_00003139,colour,s-2,-2,-0.67SD,chroma,0.515625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.515625]]",-0.66489529,0.0017713813
+shopping_mall_indoor_00003139,colour,s-1,-1,-0.33SD,chroma,0.75520833,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7552083333333334]]",-0.33371506,0.00038172417
+shopping_mall_indoor_00003139,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+shopping_mall_indoor_00003139,colour,s+1,1,+0.33SD,chroma,1.28125,,0.33333333,False,False,,ok,"[[""chroma"", 1.28125]]",0.33291711,0.00041622728
+shopping_mall_indoor_00003139,colour,s+2,2,+0.67SD,chroma,1.6054688,,0.66666667,False,False,,ok,"[[""chroma"", 1.60546875]]",0.6661333,0.00053336881
+shopping_mall_indoor_00003139,colour,s+3,3,+1.00SD,chroma,1.9960938,,1,False,False,,ok,"[[""chroma"", 1.99609375]]",1.0007935,0.00079351308
+shower_00000779,contrast,c-3,-3,-1.00SD,haze_eq,0.22358398,2.2265625,-1,False,False,0.001571758,ok,"[[""haze_eq"", 0.22203776041666667], [""chroma"", 2.2265625]]",-0.99438917,0.0056108282
+shower_00000779,contrast,c-2,-2,-0.67SD,haze_eq,0.13730469,1.6411133,-0.66666667,False,False,3.8943458e-05,ok,"[[""haze_eq"", 0.13606770833333334], [""chroma"", 1.64111328125]]",-0.6632083,0.0034583681
+shower_00000779,contrast,c-1,-1,-0.33SD,haze_eq,0.064013672,1.2597656,-0.33333333,False,False,-0.001979496,ok,"[[""haze_eq"", 0.06308593750000001], [""chroma"", 1.259765625]]",-0.33097602,0.002357314
+shower_00000779,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+shower_00000779,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.059879458,0.80859375,0.33333333,False,False,0.0012715039,ok,"[[""dehaze_rgb"", -0.059087526104934104], [""chroma"", 0.80859375]]",0.32881179,0.0045215414
+shower_00000779,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.11852429,0.6796875,0.66666667,False,False,0.0010062989,ok,"[[""dehaze_rgb"", -0.1171212073440081], [""chroma"", 0.6796875]]",0.65821468,0.0084519858
+shower_00000779,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.17531718,0.58569336,1,False,False,-0.00077653255,ok,"[[""dehaze_rgb"", -0.1728165387557095], [""chroma"", 0.585693359375]]",0.98624215,0.013757848
+shower_00000779,colour,s-3,-3,-1.00SD,chroma,0.41666667,,-1,False,False,,ok,"[[""chroma"", 0.41666666666666674]]",-0.99910492,0.00089507525
+shower_00000779,colour,s-2,-2,-0.67SD,chroma,0.59635417,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5963541666666667]]",-0.66582019,0.00084647421
+shower_00000779,colour,s-1,-1,-0.33SD,chroma,0.79427083,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7942708333333334]]",-0.33199064,0.0013426921
+shower_00000779,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+shower_00000779,colour,s+1,1,+0.33SD,chroma,1.2363281,,0.33333333,False,False,,ok,"[[""chroma"", 1.236328125]]",0.33356318,0.00022984468
+shower_00000779,colour,s+2,2,+0.67SD,chroma,1.5351562,,0.66666667,False,False,,ok,"[[""chroma"", 1.53515625]]",0.66739351,0.00072684149
+shower_00000779,colour,s+3,3,+1.00SD,chroma,1.9101562,,1,False,False,,ok,"[[""chroma"", 1.91015625]]",1.0009785,0.0009784945
+subway_station_platform_00003408,contrast,c-3,-3,-1.00SD,haze_eq,0.27089844,2.0842285,-1,False,False,-0.0011379278,ok,"[[""haze_eq"", 0.2684244791666667], [""chroma"", 2.084228515625]]",-0.994916,0.005084003
+subway_station_platform_00003408,contrast,c-2,-2,-0.67SD,haze_eq,0.16513672,1.6357422,-0.66666667,False,False,0.0003649002,ok,"[[""haze_eq"", 0.16328125], [""chroma"", 1.6357421875]]",-0.6606663,0.0060003713
+subway_station_platform_00003408,contrast,c-1,-1,-0.33SD,haze_eq,0.076074219,1.3161621,-0.33333333,False,False,-5.3741972e-05,ok,"[[""haze_eq"", 0.07545572916666667], [""chroma"", 1.316162109375]]",-0.33036533,0.0029679987
+subway_station_platform_00003408,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+subway_station_platform_00003408,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.076329127,0.92407227,0.33333333,False,False,-0.00014409079,ok,"[[""dehaze_rgb"", -0.07541688203146417], [""chroma"", 0.924072265625]]",0.33106355,0.0022697818
+subway_station_platform_00003408,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.16146546,0.77368164,0.66666667,False,False,-0.0012130887,ok,"[[""dehaze_rgb"", -0.1586855527765864], [""chroma"", 0.773681640625]]",0.65693128,0.0097353827
+subway_station_platform_00003408,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.255409,0.72937012,1,False,False,0.00085909268,ok,"[[""dehaze_rgb"", -0.24993409809572958], [""chroma"", 0.7293701171875]]",0.98066437,0.019335626
+subway_station_platform_00003408,colour,s-3,-3,-1.00SD,chroma,0.40885417,,-1,False,False,,ok,"[[""chroma"", 0.40885416666666674]]",-0.99911817,0.00088183447
+subway_station_platform_00003408,colour,s-2,-2,-0.67SD,chroma,0.59114583,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5911458333333334]]",-0.66625714,0.00040952861
+subway_station_platform_00003408,colour,s-1,-1,-0.33SD,chroma,0.7890625,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7890625]]",-0.33368858,0.00035524262
+subway_station_platform_00003408,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+subway_station_platform_00003408,colour,s+1,1,+0.33SD,chroma,1.2304688,,0.33333333,False,False,,ok,"[[""chroma"", 1.23046875]]",0.33247354,0.00085979327
+subway_station_platform_00003408,colour,s+2,2,+0.67SD,chroma,1.5078125,,0.66666667,False,False,,ok,"[[""chroma"", 1.5078125]]",0.66678015,0.00011348203
+subway_station_platform_00003408,colour,s+3,3,+1.00SD,chroma,1.8359375,,1,False,False,,ok,"[[""chroma"", 1.8359375]]",1.0018497,0.0018496597
+subway_station_platform_00004871,contrast,c-3,-3,-1.00SD,haze_eq,0.13916016,1.7539062,-1,False,False,-0.00039177119,ok,"[[""haze_eq"", 0.13854166666666667], [""chroma"", 1.75390625]]",-0.99682559,0.0031744145
+subway_station_platform_00004871,contrast,c-2,-2,-0.67SD,haze_eq,0.085351562,1.4504395,-0.66666667,False,False,0.00030765332,ok,"[[""haze_eq"", 0.08535156249999999], [""chroma"", 1.450439453125]]",-0.66479734,0.0018693227
+subway_station_platform_00004871,contrast,c-1,-1,-0.33SD,haze_eq,0.039428711,1.2006836,-0.33333333,False,False,0.00093035921,ok,"[[""haze_eq"", 0.039892578124999994], [""chroma"", 1.20068359375]]",-0.33772559,0.0043922519
+subway_station_platform_00004871,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+subway_station_platform_00004871,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.038243352,0.79919434,0.33333333,False,False,-0.00094437885,ok,"[[""dehaze_rgb"", -0.03753015417665481], [""chroma"", 0.7991943359375]]",0.32546374,0.0078695954
+subway_station_platform_00004871,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.075996404,0.58972168,0.66666667,False,False,-0.00067177465,ok,"[[""dehaze_rgb"", -0.07439445894747326], [""chroma"", 0.5897216796875]]",0.65376197,0.0129047
+subway_station_platform_00004871,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.11522035,0.53601074,1,False,False,-0.0019498989,ok,"[[""dehaze_rgb"", -0.11327188903750476], [""chroma"", 0.5360107421875]]",0.98693058,0.013069425
+subway_station_platform_00004871,colour,s-3,-3,-1.00SD,chroma,0.47916667,,-1,False,False,,ok,"[[""chroma"", 0.4791666666666667]]",-1.0019599,0.0019598696
+subway_station_platform_00004871,colour,s-2,-2,-0.67SD,chroma,0.6484375,,-0.66666667,False,False,,ok,"[[""chroma"", 0.6484375]]",-0.66557563,0.0010910391
+subway_station_platform_00004871,colour,s-1,-1,-0.33SD,chroma,0.8203125,,-0.33333333,False,False,,ok,"[[""chroma"", 0.8203125]]",-0.33360718,0.00027385079
+subway_station_platform_00004871,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+subway_station_platform_00004871,colour,s+1,1,+0.33SD,chroma,1.2109375,,0.33333333,False,False,,ok,"[[""chroma"", 1.2109375]]",0.33377698,0.00044364427
+subway_station_platform_00004871,colour,s+2,2,+0.67SD,chroma,1.4726562,,0.66666667,False,False,,ok,"[[""chroma"", 1.47265625]]",0.66575477,0.00091189922
+subway_station_platform_00004871,colour,s+3,3,+1.00SD,chroma,1.8125,,1,False,False,,ok,"[[""chroma"", 1.8125]]",0.9989546,0.001045397
+train_interior_00004637,contrast,c-3,-3,-1.00SD,haze_eq,0.18554687,1.8828125,-1,False,False,0.0013318663,ok,"[[""haze_eq"", 0.1818359375], [""chroma"", 1.8828125]]",-0.98381002,0.016189977
+train_interior_00004637,contrast,c-2,-2,-0.67SD,haze_eq,0.11411133,1.4907227,-0.66666667,False,False,0.00094243168,ok,"[[""haze_eq"", 0.111328125], [""chroma"", 1.49072265625]]",-0.65519145,0.011475212
+train_interior_00004637,contrast,c-1,-1,-0.33SD,haze_eq,0.052880859,1.2114258,-0.33333333,False,False,-0.0012368442,ok,"[[""haze_eq"", 0.051953125], [""chroma"", 1.21142578125]]",-0.327923,0.0054103295
+train_interior_00004637,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+train_interior_00004637,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.049354259,0.81665039,0.33333333,False,False,-0.0017960723,ok,"[[""dehaze_rgb"", -0.04789750933865507], [""chroma"", 0.816650390625]]",0.32338439,0.0099489432
+train_interior_00004637,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.097154053,0.66625977,0.66666667,False,False,-0.0012968171,ok,"[[""dehaze_rgb"", -0.09366673284405999], [""chroma"", 0.666259765625]]",0.64137892,0.025287745
+train_interior_00004637,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.14339938,0.57629395,1,False,False,-0.00091010861,ok,"[[""dehaze_rgb"", -0.13878937699403643], [""chroma"", 0.5762939453125]]",0.9639996,0.036000401
+train_interior_00004637,colour,s-3,-3,-1.00SD,chroma,0.3828125,,-1,False,False,,ok,"[[""chroma"", 0.3828125]]",-1.0014517,0.0014516575
+train_interior_00004637,colour,s-2,-2,-0.67SD,chroma,0.57552083,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5755208333333334]]",-0.66816731,0.001500648
+train_interior_00004637,colour,s-1,-1,-0.33SD,chroma,0.78385417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7838541666666667]]",-0.33376452,0.00043118236
+train_interior_00004637,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+train_interior_00004637,colour,s+1,1,+0.33SD,chroma,1.25,,0.33333333,False,False,,ok,"[[""chroma"", 1.25]]",0.33522567,0.0018923409
+train_interior_00004637,colour,s+2,2,+0.67SD,chroma,1.5507812,,0.66666667,False,False,,ok,"[[""chroma"", 1.55078125]]",0.66567182,0.00099484878
+train_interior_00004637,colour,s+3,3,+1.00SD,chroma,1.9179688,,1,False,False,,ok,"[[""chroma"", 1.91796875]]",1.0005069,0.00050688923
+train_station_platform_00003977,contrast,c-3,-3,-1.00SD,haze_eq,0.296875,1.9741211,-1,False,False,-2.4534378e-05,ok,"[[""haze_eq"", 0.29192708333333334], [""chroma"", 1.97412109375]]",-0.98577501,0.014224992
+train_station_platform_00003977,contrast,c-2,-2,-0.67SD,haze_eq,0.18833008,1.5712891,-0.66666667,False,False,-0.0014163736,ok,"[[""haze_eq"", 0.18554687499999997], [""chroma"", 1.5712890625]]",-0.65717715,0.0094895173
+train_station_platform_00003977,contrast,c-1,-1,-0.33SD,haze_eq,0.0890625,1.2302246,-0.33333333,False,False,-0.00011176772,ok,"[[""haze_eq"", 0.08782552083333332], [""chroma"", 1.230224609375]]",-0.32701728,0.0063160527
+train_station_platform_00003977,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+train_station_platform_00003977,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.088421955,0.81530762,0.33333333,False,False,-0.00016589913,ok,"[[""dehaze_rgb"", -0.08594301003862423], [""chroma"", 0.8153076171875]]",0.32215996,0.011173373
+train_station_platform_00003977,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.18537585,0.67297363,0.66666667,False,False,0.00062270589,ok,"[[""dehaze_rgb"", -0.17923971420076543], [""chroma"", 0.6729736328125]]",0.64773918,0.018927483
+train_station_platform_00003977,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.29318859,0.59106445,1,False,False,0.001914071,ok,"[[""dehaze_rgb"", -0.28718903804636564], [""chroma"", 0.591064453125]]",0.97858911,0.021410893
+train_station_platform_00003977,colour,s-3,-3,-1.00SD,chroma,0.29427083,,-1,False,False,,ok,"[[""chroma"", 0.29427083333333337]]",-0.99899277,0.0010072324
+train_station_platform_00003977,colour,s-2,-2,-0.67SD,chroma,0.51041667,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5104166666666667]]",-0.66665942,7.2426941e-06
+train_station_platform_00003977,colour,s-1,-1,-0.33SD,chroma,0.74479167,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7447916666666667]]",-0.33527163,0.0019382942
+train_station_platform_00003977,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+train_station_platform_00003977,colour,s+1,1,+0.33SD,chroma,1.296875,,0.33333333,False,False,,ok,"[[""chroma"", 1.296875]]",0.3332968,3.6528569e-05
+train_station_platform_00003977,colour,s+2,2,+0.67SD,chroma,1.671875,,0.66666667,False,False,,ok,"[[""chroma"", 1.671875]]",0.66679884,0.00013217488
+train_station_platform_00003977,colour,s+3,3,+1.00SD,chroma,2.140625,,1,False,False,,ok,"[[""chroma"", 2.140625]]",0.99949631,0.0005036935
+waiting_room_00002953,contrast,c-3,-3,-1.00SD,haze_eq,0.29873047,2.027832,-1,False,False,-0.00094476829,ok,"[[""haze_eq"", 0.29563802083333335], [""chroma"", 2.02783203125]]",-0.99179922,0.0082007803
+waiting_room_00002953,contrast,c-2,-2,-0.67SD,haze_eq,0.18461914,1.5820312,-0.66666667,False,False,-0.0015141216,ok,"[[""haze_eq"", 0.18307291666666664], [""chroma"", 1.58203125]]",-0.66238501,0.00428166
+waiting_room_00002953,contrast,c-1,-1,-0.33SD,haze_eq,0.086279297,1.2597656,-0.33333333,False,False,0.00022820866,ok,"[[""haze_eq"", 0.08535156249999999], [""chroma"", 1.259765625]]",-0.33073138,0.0026019551
+waiting_room_00002953,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+waiting_room_00002953,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.085625623,0.78845215,0.33333333,False,False,-0.00035243829,ok,"[[""dehaze_rgb"", -0.0840120793372653], [""chroma"", 0.7884521484375]]",0.32650515,0.0068281872
+waiting_room_00002953,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.18005845,0.63537598,0.66666667,False,False,0.00043538786,ok,"[[""dehaze_rgb"", -0.17795507911175423], [""chroma"", 0.6353759765625]]",0.65972007,0.0069465959
+waiting_room_00002953,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.29259499,0.57763672,1,False,False,0.00011566207,ok,"[[""dehaze_rgb"", -0.29024368205373596], [""chroma"", 0.57763671875]]",0.99303436,0.0069656383
+waiting_room_00002953,colour,s-3,-3,-1.00SD,chroma,0.36197917,,-1,False,False,,ok,"[[""chroma"", 0.3619791666666667]]",-1.0006666,0.00066655741
+waiting_room_00002953,colour,s-2,-2,-0.67SD,chroma,0.5625,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5625]]",-0.66734055,0.00067387838
+waiting_room_00002953,colour,s-1,-1,-0.33SD,chroma,0.77604167,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7760416666666667]]",-0.3330721,0.00026123232
+waiting_room_00002953,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+waiting_room_00002953,colour,s+1,1,+0.33SD,chroma,1.2539062,,0.33333333,False,False,,ok,"[[""chroma"", 1.25390625]]",0.33229362,0.001039712
+waiting_room_00002953,colour,s+2,2,+0.67SD,chroma,1.5625,,0.66666667,False,False,,ok,"[[""chroma"", 1.5625]]",0.66707846,0.00041178891
+waiting_room_00002953,colour,s+3,3,+1.00SD,chroma,1.9335938,,1,False,False,,ok,"[[""chroma"", 1.93359375]]",1.0000851,8.5131582e-05
+yard_00000709,contrast,c-3,-3,-1.00SD,haze_eq,0.17163086,1.4316406,-1,False,False,-0.0015752629,ok,"[[""haze_eq"", 0.1694661458333333], [""chroma"", 1.431640625]]",-0.98914826,0.01085174
+yard_00000709,contrast,c-2,-2,-0.67SD,haze_eq,0.10947266,1.2490234,-0.66666667,False,False,0.000916729,ok,"[[""haze_eq"", 0.10823567708333334], [""chroma"", 1.2490234375]]",-0.65835485,0.0083118119
+yard_00000709,contrast,c-1,-1,-0.33SD,haze_eq,0.051953125,1.1040039,-0.33333333,False,False,-0.0012781243,ok,"[[""haze_eq"", 0.05133463541666667], [""chroma"", 1.10400390625]]",-0.32782425,0.0055090837
+yard_00000709,contrast,c0,0,orig,,,,0,False,False,,original,[],0,0
+yard_00000709,contrast,c+1,1,+0.33SD,dehaze_rgb,-0.049742875,0.90527344,0.33333333,False,False,-0.0016184901,ok,"[[""dehaze_rgb"", -0.04918745399309661], [""chroma"", 0.9052734375]]",0.32765061,0.0056827198
+yard_00000709,contrast,c+2,2,+0.67SD,dehaze_rgb,-0.097154053,0.83007812,0.66666667,False,False,0.00047238414,ok,"[[""dehaze_rgb"", -0.09559766354541893], [""chroma"", 0.830078125]]",0.65332696,0.013339708
+yard_00000709,contrast,c+3,3,+1.00SD,dehaze_rgb,-0.14223353,0.76025391,1,False,False,9.3853733e-05,ok,"[[""dehaze_rgb"", -0.13929953534743514], [""chroma"", 0.76025390625]]",0.97548978,0.024510225
+yard_00000709,colour,s-3,-3,-1.00SD,chroma,0.36979167,,-1,False,False,,ok,"[[""chroma"", 0.3697916666666667]]",-1.0003667,0.00036669278
+yard_00000709,colour,s-2,-2,-0.67SD,chroma,0.57291667,,-0.66666667,False,False,,ok,"[[""chroma"", 0.5729166666666667]]",-0.66674627,7.9601217e-05
+yard_00000709,colour,s-1,-1,-0.33SD,chroma,0.78385417,,-0.33333333,False,False,,ok,"[[""chroma"", 0.7838541666666667]]",-0.33217757,0.0011557635
+yard_00000709,colour,s0,0,orig,,,,0,False,False,,original,[],0,0
+yard_00000709,colour,s+1,1,+0.33SD,chroma,1.234375,,0.33333333,False,False,,ok,"[[""chroma"", 1.234375]]",0.33198013,0.0013532069
+yard_00000709,colour,s+2,2,+0.67SD,chroma,1.5195312,,0.66666667,False,False,,ok,"[[""chroma"", 1.51953125]]",0.66615277,0.00051389708
+yard_00000709,colour,s+3,3,+1.00SD,chroma,1.8632812,,1,False,False,,ok,"[[""chroma"", 1.86328125]]",0.99884907,0.0011509338

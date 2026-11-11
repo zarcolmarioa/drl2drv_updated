@@ -1,0 +1,38 @@
+{
+  "script": "build_stimulus_set_v5.py",
+  "status": "finished",
+  "created": "2026-11-11 13:33:49",
+  "elapsed_min": 4.7,
+  "settings_hash": "7fd72262ba",
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "opencv": "4.13.0",
+    "pillow": "12.2.0",
+    "scipy": "1.17.1",
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44"
+  },
+  "timings_min": {
+    "Start-up checks and the reference": 0.04,
+    "Reach of each edit on every scene": 1.02,
+    "Levels, images and measurements": 3.64,
+    "Tables and checks": 0.0
+  },
+  "n_checks": 21,
+  "checks_not_passed": [
+    {
+      "code": "T3",
+      "status": "WARN",
+      "detail": "487 of 564 levels within 0.01 SD of their target; largest miss: contrast 0.0495 SD, colour 0.0020 SD; 77 misses, all contrast (the colour correction is the last step of a contrast level, and contrast is not re-solved after it; see level_deviations.csv)"
+    }
+  ],
+  "warnings": [
+    "T3: 487 of 564 levels within 0.01 SD of their target; largest miss: contrast 0.0495 SD, colour 0.0020 SD; 77 misses, all contrast (the colour correction is the last step of a contrast level, and contrast is not re-solved after it; see level_deviations.csv)"
+  ],
+  "run_folder": "data/stimulus_set_v5/7fd72262ba",
+  "eligible_images": 185480,
+  "cache_reference": "data/edit_levels_v5_cache/reference_050f2d4b0c8aa689.npz",
+  "reference_images": 20000,
+  "places365_root_name": "data_large"
+}

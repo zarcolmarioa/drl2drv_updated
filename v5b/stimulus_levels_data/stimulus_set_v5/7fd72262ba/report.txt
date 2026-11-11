@@ -1,0 +1,122 @@
+DRL2DRV V5 STIMULUS SET: BUILD REPORT
+========================================================================
+run folder      data/stimulus_set_v5/7fd72262ba
+settings hash   7fd72262ba
+created         2026-11-11 13:33
+method          A4_haze_cc_rgb, definition (b) equal SD steps, span +-1 SD
+scenes          47, 7 x 7 cells each, 2,303 images
+test run        4aa278d54d
+
+WHY THIS SET
+  Chosen after test_edit_levels_v5.py, run 4aa278d54d (committed as
+  v5/stimulus_levels_data/4aa278d54d/), and a visual check of its
+  viewer. Method A4_haze_cc_rgb: contrast down with v4's brightness-
+  equated haze (haze_eq), contrast up with the same blend run backwards
+  on RGB (v4's m_contrast_up, 'dehaze_rgb'), and at every contrast level
+  a chroma factor that restores the scene's mean saturation, so the
+  contrast levels leave saturation unchanged. Colour: v4's CIELAB chroma
+  edit in both directions. Levels: definition (b), equal steps in corpus
+  SD solved per scene, at +-1/3, +-2/3 and +-1 SD on both features, so
+  the unedited original sits in the middle of both ladders and 'edited'
+  points both ways. No clipping budget: the upward contrast levels clip
+  (reported, not used to cap or exclude), and the +3 images were judged
+  acceptable. All 47 v4 scenes, none set aside, for variety. No grid
+  block in v5.
+
+1. CHECKS
+------------------------------------------------------------------------
+  T0    PASS  69 copied settings and the approach vs data/edit_levels_v5/4aa278d54d/settings.json: all equal
+  F1    PASS  copied feature code vs data/features on 8 images: max relative difference 1.1e-09 (tol 0.0001)
+  R1    PASS  re-measured stimulus-path reference vs data/levels_v4_ext/corpus_feature_stats_v4.csv, 18 percentiles + mean + sd of 18 features: worst relative difference 4.6e-06 (val_mean p20: 106.055 vs 106.055)
+  R2    PASS  stimulus-path SD: sat_mean 39.1819 (v5 39.182), contrast_local 9.3480 (v5 9.348)
+  S1    PASS  47 scenes in SCENES, 47 in the v4 manifest, 47 in both; one source photograph each, 47 on disk
+  V1    NOTE  envelope (as v4, reported): 109 images in 4 scenes have a feature outside the corpus 1-99% range (val_mean 77, lum_p95 57, lum_mean 49, lum_p50 49, lum_skew 49, lum_p05 16)
+  E1    PASS  2,303 images listed (expected 2,303), names unique, 2,303 files in stimuli/, 2,303 listed and present
+  Z1    PASS  2,303 of 2,303 PNGs are 512 x 512 RGB
+  M2    PASS  every PNG read back equals the image measured and saved (2,303 of 2,303); every measurement in the manifest is taken from the saved file
+  T1    PASS  2,303 of 2,303 images byte-identical to test run 4aa278d54d (2,303 compared)
+  T2    PASS  level parameters and colour-correction factors vs data/edit_levels_v5/4aa278d54d/ladders.csv: 658 of 658 levels matched, worst relative difference 4.2e-06 (the test run stored 6 significant digits)
+  I1    PASS  each edit at its no-change setting, without the short cut: max pixel change 1 level, max change of sat_mean / contrast_local 0.0023 SD. The level-0 images use the short cut, so they are the photograph itself (O1)
+  O1    PASS  the unedited cell (c0, s0) is the scene's 512 px square, pixel for pixel, in 47 of 47 scenes
+  O2    PASS  the unedited cell is byte-identical to v4's unedited image (chroma 1, haze 0) in 47 of 47 scenes
+  L0    PASS  levels reached: 658 of 658 (47 scenes x 2 features x 7 levels), 0 capped
+  M1    PASS  both ladders through the original strictly in order in 47 of 47 scenes
+  M1g   NOTE  across the whole 7 x 7 grid: contrast in order along 329 of 329 colour columns, colour in order along 329 of 329 contrast rows
+  T3    WARN  487 of 564 levels within 0.01 SD of their target; largest miss: contrast 0.0495 SD, colour 0.0020 SD; 77 misses, all contrast (the colour correction is the last step of a contrast level, and contrast is not re-solved after it; see level_deviations.csv)
+  T4    NOTE  off the two ladders (both features edited, 1,692 cells) each feature lands away from its level's nominal value, because the colour level is solved on the original and applied after the contrast edit: contrast |dev| median 0.009, max 0.066 SD; colour |dev| median 0.020, max 0.506 SD (cell_deviations.csv). The trial scripts use each image's measured values, not the nominal levels.
+  X1    NOTE  cross-talk on the ladders: |change of sat_mean| at the contrast levels median 0.004, max 0.137 SD; |change of contrast_local| at the colour levels median 0.007, max 0.043 SD
+  A0 (no absolute paths in any text file) runs after this report is written;
+  FROZEN.json records it.
+
+2. THE REFERENCE (stimulus path: photograph -> 512 px -> 256 px)
+------------------------------------------------------------------------
+  sat_mean        median 66.448  SD 39.182  p01 13.67  p99 199.43
+  contrast_local  median 26.909  SD 9.348  p01 8.66  p99 51.78
+  z_sat, z_con = (feature - corpus median) / corpus SD.
+
+3. THE LADDERS AS RENDERED (median and range over the 47 scenes)
+------------------------------------------------------------------------
+      ladder level own_median_sd own_min_sd own_max_sd cross_median_sd clip_median clip_max halo_max noise_ratio_max dist_orig_median dist_corpus_median
+    contrast   c-3        -0.995     -1.001     -0.984           0.005       0.000    0.000    0.000           0.540            0.995              1.272
+    contrast   c-2        -0.664     -0.671     -0.652           0.003       0.000    0.000    0.000           0.674            0.664              0.947
+    contrast   c-1        -0.331     -0.338     -0.322           0.001       0.000    0.000    0.000           0.833            0.331              0.649
+    contrast    c0         0.000      0.000      0.000           0.000       0.000    0.000    0.000           1.000            0.000              0.489
+    contrast   c+1         0.326      0.318      0.332          -0.005       0.067    0.287    0.000           1.333            0.326              0.438
+    contrast   c+2         0.656      0.637      0.664          -0.006       0.150    0.518    0.002           1.854            0.656              0.613
+    contrast   c+3         0.986      0.951      1.000          -0.005       0.274    0.636    0.010           2.531            0.987              0.919
+      colour   s-3        -1.000     -1.002     -0.998          -0.011       0.000    0.000    0.000           1.013            1.000              0.913
+      colour   s-2        -0.667     -0.669     -0.665          -0.010       0.000    0.000    0.000           1.009            0.667              0.647
+      colour   s-1        -0.333     -0.335     -0.331          -0.006       0.000    0.000    0.000           1.006            0.333              0.479
+      colour    s0         0.000      0.000      0.000           0.000       0.000    0.000    0.000           1.000            0.000              0.489
+      colour   s+1         0.333      0.332      0.335           0.002       0.000    0.000    0.000           1.011            0.333              0.618
+      colour   s+2         0.666      0.665      0.668           0.004       0.000    0.000    0.000           1.011            0.667              0.901
+      colour   s+3         1.000      0.998      1.002           0.005       0.000    0.000    0.000           1.007            1.000              1.224
+  own = the ladder's feature, change from the original in corpus SD; cross =
+  the other feature; clip = share of pixels newly pushed > 4 levels past 0 or 255;
+  halo, noise: see the test script; dist_orig / dist_corpus: distance from the
+  scene's original / the corpus median, sqrt(z_sat^2 + z_con^2).
+
+4. HOW EXACTLY THE LEVELS ARE HIT
+------------------------------------------------------------------------
+  contrast  levels: largest miss 0.0495 SD, median 0.0061 SD, 77 of 282 beyond 0.01 SD
+  colour    levels: largest miss 0.0020 SD, median 0.0008 SD, 0 of 282 beyond 0.01 SD
+  off the ladders (1,692 cells with both features edited): contrast within
+  0.066 SD of its level (median 0.009), colour within 0.506 SD
+  (median 0.020). Per cell: cell_deviations.csv.
+
+5. FILES
+------------------------------------------------------------------------
+  2,303 PNGs in stimuli/ (0.83 GB); every file is listed in checksums.sha256.
+  Start-up checks and the reference             0.0 min
+  Reach of each edit on every scene             1.0 min
+  Levels, images and measurements               3.6 min
+  Tables and checks                             0.0 min
+
+6. PLAIN-LANGUAGE SUMMARY
+------------------------------------------------------------------------
+  This folder is the v5 stimulus set: 47 scenes, each in 49 versions,
+  2,303 images of 512 x 512 px. Every scene's unedited photograph is the
+  middle cell, with three contrast levels below and three above it
+  (about 0.33, 0.67 and 1 corpus SD) crossed with three colour levels
+  below and three above.
+
+  Every image is byte-identical to the image of the same cell in test
+  run 4aa278d54d, so the visual check and the CLIP results of that run
+  apply to this set unchanged.
+
+  On the two ladders through the original, every colour level is within
+  0.002 SD of its target and every contrast level within 0.049 SD (77 of
+  282 contrast levels miss by more than 0.01 SD). Where both features
+  are edited, the colour edit's effect depends on the contrast edit
+  before it, so those cells sit up to 0.51 SD from the nominal colour
+  level. The trial-design scripts use each image's measured values.
+
+  The upward contrast levels clip: in the typical scene c+1 7%, c+2 15%,
+  c+3 27% of pixels (worst scene 64%). This was accepted: it is
+  reported, never used to cap a level or drop an image.
+
+  Checks not passed: T3 (WARN). The source photographs are not included;
+  sources.csv gives each one's Places365 file ID and SHA-256, so the set
+  can be rebuilt from the dataset with the copy of the script in
+  provenance/.
+

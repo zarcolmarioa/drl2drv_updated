@@ -1,0 +1,50 @@
+contrast_level,colour_level,contrast_step,colour_step,is_original,use,kind,contrast_family,colour_correction,colour_family,contrast_target_sd,colour_target_sd,filename_pattern,note
+c-3,s-3,-3,-3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,-1.0,<scene_id>__cn3__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s-2,-3,-2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,-0.6666666666666666,<scene_id>__cn3__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s-1,-3,-1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,-0.3333333333333333,<scene_id>__cn3__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s0,-3,0,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,none,-1.0,0.0,<scene_id>__cn3__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s+1,-3,1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,0.3333333333333333,<scene_id>__cn3__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s+2,-3,2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,0.6666666666666666,<scene_id>__cn3__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c-3,s+3,-3,3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-1.0,1.0,<scene_id>__cn3__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s-3,-2,-3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,-1.0,<scene_id>__cn2__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s-2,-2,-2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,-0.6666666666666666,<scene_id>__cn2__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s-1,-2,-1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,-0.3333333333333333,<scene_id>__cn2__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s0,-2,0,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,none,-0.6666666666666666,0.0,<scene_id>__cn2__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s+1,-2,1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,0.3333333333333333,<scene_id>__cn2__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s+2,-2,2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,0.6666666666666666,<scene_id>__cn2__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c-2,s+3,-2,3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.6666666666666666,1.0,<scene_id>__cn2__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s-3,-1,-3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,-1.0,<scene_id>__cn1__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s-2,-1,-2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,-0.6666666666666666,<scene_id>__cn1__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s-1,-1,-1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,-0.3333333333333333,<scene_id>__cn1__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s0,-1,0,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,none,-0.3333333333333333,0.0,<scene_id>__cn1__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s+1,-1,1,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,0.3333333333333333,<scene_id>__cn1__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s+2,-1,2,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,0.6666666666666666,<scene_id>__cn1__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c-1,s+3,-1,3,False,pair,cell,haze_eq,chroma factor restoring the scene's sat_mean,chroma,-0.3333333333333333,1.0,<scene_id>__cn1__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s-3,0,-3,False,pair,cell,none,none,chroma,0.0,-1.0,<scene_id>__c0__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s-2,0,-2,False,pair,cell,none,none,chroma,0.0,-0.6666666666666666,<scene_id>__c0__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s-1,0,-1,False,pair,cell,none,none,chroma,0.0,-0.3333333333333333,<scene_id>__c0__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s0,0,0,True,pair,cell,none,none,none,0.0,0.0,<scene_id>__c0__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s+1,0,1,False,pair,cell,none,none,chroma,0.0,0.3333333333333333,<scene_id>__c0__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s+2,0,2,False,pair,cell,none,none,chroma,0.0,0.6666666666666666,<scene_id>__c0__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c0,s+3,0,3,False,pair,cell,none,none,chroma,0.0,1.0,<scene_id>__c0__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s-3,1,-3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,-1.0,<scene_id>__cp1__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s-2,1,-2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,-0.6666666666666666,<scene_id>__cp1__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s-1,1,-1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,-0.3333333333333333,<scene_id>__cp1__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s0,1,0,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,none,0.3333333333333333,0.0,<scene_id>__cp1__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s+1,1,1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,0.3333333333333333,<scene_id>__cp1__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s+2,1,2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,0.6666666666666666,<scene_id>__cp1__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c+1,s+3,1,3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.3333333333333333,1.0,<scene_id>__cp1__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s-3,2,-3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,-1.0,<scene_id>__cp2__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s-2,2,-2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,-0.6666666666666666,<scene_id>__cp2__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s-1,2,-1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,-0.3333333333333333,<scene_id>__cp2__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s0,2,0,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,none,0.6666666666666666,0.0,<scene_id>__cp2__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s+1,2,1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,0.3333333333333333,<scene_id>__cp2__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s+2,2,2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,0.6666666666666666,<scene_id>__cp2__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c+2,s+3,2,3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,0.6666666666666666,1.0,<scene_id>__cp2__sp3.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s-3,3,-3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,-1.0,<scene_id>__cp3__sn3.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s-2,3,-2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,-0.6666666666666666,<scene_id>__cp3__sn2.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s-1,3,-1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,-0.3333333333333333,<scene_id>__cp3__sn1.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s0,3,0,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,none,1.0,0.0,<scene_id>__cp3__s0.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s+1,3,1,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,0.3333333333333333,<scene_id>__cp3__sp1.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s+2,3,2,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,0.6666666666666666,<scene_id>__cp3__sp2.png,parameters differ per scene; see stimulus_manifest.csv
+c+3,s+3,3,3,False,pair,cell,dehaze_rgb,chroma factor restoring the scene's sat_mean,chroma,1.0,1.0,<scene_id>__cp3__sp3.png,parameters differ per scene; see stimulus_manifest.csv
