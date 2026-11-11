@@ -1,0 +1,293 @@
+{
+  "script3": {
+    "CAPACITY_SCRIPT": "analyse_pair_capacity_v5b.py",
+    "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+    "CAPACITY_OVERRIDES": {},
+    "STIMULUS_SET_DIR": "data/stimulus_set_v5/7fd72262ba",
+    "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "STIMULI_SRC": "data/stimulus_set_v5/7fd72262ba/stimuli",
+    "CHECKSUMS_FILE": "data/stimulus_set_v5/7fd72262ba/checksums.sha256",
+    "FROZEN_FILE": "data/stimulus_set_v5/7fd72262ba/FROZEN.json",
+    "SCRIPT1_RUN_DIR": "data/pair_capacity_v5b/*__s554900b6",
+    "SCRIPT2_RUN_DIR": "data/block_length_v5b/*",
+    "BLOCK_SIZES": [
+      180,
+      150
+    ],
+    "THRESHOLD_SET": "v5units",
+    "MIX": "balanced_mixed",
+    "MIX_SHARES": {
+      "sat_only": 0.3,
+      "fog_only": 0.3,
+      "together": 0.2,
+      "conflict": 0.2
+    },
+    "N_CANDIDATES": 40,
+    "N_WORKERS": null,
+    "LEAK_LIMIT": 0.05,
+    "REPAIR_TARGET": 0.04,
+    "REPAIR_TIGHTEN": 0.75,
+    "REPAIR_TRIES": 3,
+    "REPAIR_INFO_TOL_TOTAL": 0.03,
+    "REPAIR_INFO_TOL_TYPE": 0.08,
+    "REPAIR_MIP_GAP": 0.02,
+    "REPAIR_TIME_LIMIT": 60,
+    "WIDE_MIN_PASSING": 5,
+    "WIDE_MAX_PER_CELL": 12,
+    "SELECTION_ROUND": 6,
+    "CONSISTENCY_RATE": 0.08333333333333333,
+    "PRACTICE_BY_BLOCK": [
+      6,
+      3
+    ],
+    "PRACTICE_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together"
+    ],
+    "PRACTICE_MAG_QUANTILE": 0.6,
+    "CATCH_PER_BLOCK": 5,
+    "CATCH_MODE": "no_images",
+    "CATCH_POOL_TYPE": "together",
+    "CATCH_EXCLUDE_AT": 3,
+    "IMAGE_PX": 512,
+    "FEATURE_TARGET_SIZE": [
+      256,
+      256
+    ],
+    "REMEASURE_TOL": 0.0001,
+    "N_THRESHOLD_PEOPLE": 20000,
+    "THRESHOLD_ALPHA": 0.025,
+    "V4_CHOICE_PROB": [
+      0.6191,
+      0.6104
+    ],
+    "PLANNING_WEIGHTS": [
+      0.5,
+      0.7
+    ],
+    "INFORMATIVE_SD": 0.2,
+    "SET_THRESHOLD_TOL": 0.05,
+    "OUTPUT_ROOT": "data/trials_v5b",
+    "ON_EXISTING": "new",
+    "RANDOM_SEED": 42,
+    "TYPE_TERMS": {
+      "sat_only": [
+        "sat"
+      ],
+      "fog_only": [
+        "con"
+      ]
+    },
+    "NORM_FIELDS": [
+      "pred_sat",
+      "pred_fog",
+      "a_is_left",
+      "d_sat",
+      "d_fog",
+      "z_sat",
+      "z_fog",
+      "mag_bin",
+      "N_corpus",
+      "N_corpus_sat",
+      "N_corpus_con",
+      "N_orig",
+      "N_orig_sat",
+      "N_orig_con"
+    ],
+    "BLOCK_SIZE": 150
+  },
+  "script1_in_force": {
+    "BALANCED_CONFLICT_ONLY": true,
+    "BALANCE_ASSIGNMENT": true,
+    "BALANCE_HI": 1.7,
+    "BALANCE_LO": 0.6,
+    "BIN_EDGE_DECIMALS": 4,
+    "BIN_QUANTILES": {
+      "sat_only": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "fog_only": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "together": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "conflict": [
+        0.3333333333333333,
+        0.6666666666666666
+      ]
+    },
+    "BLOCK_SIZES": [
+      120,
+      150,
+      180
+    ],
+    "CATCH_TYPE": "together",
+    "CELLS_PER_SCENE": 49,
+    "CON_TOL_SD": 0.07702182284980744,
+    "COS_DIFF_MAX": 0.05,
+    "DISJOINT": "pair",
+    "EPS": 1e-09,
+    "EXPECTED_POOL": null,
+    "FOG_SIGN": -1.0,
+    "ILP_TIME_LIMIT": 60,
+    "INFO_TOL_TOTAL": 0.05,
+    "INFO_TOL_TYPE": 0.1,
+    "KS_MAX_D": 0.1,
+    "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "MAX_CAP_SEARCH": 4,
+    "MAX_PER_SCENE_PER_TYPE": 2,
+    "MIN_PAIRS_PER_BIN": 10,
+    "MIN_SCENE_SHARE": 0.85,
+    "NORMALITY_DEFS": [
+      "corpus",
+      "orig"
+    ],
+    "N_CATCH_PER_BLOCK": 10,
+    "N_DRAWS": 20,
+    "N_PRACTICE_PER_BLOCK": 6,
+    "N_SCENES_EXPECTED": 47,
+    "ON_EXISTING": "new",
+    "OUTPUT_ROOT": "data/pair_capacity_v5b",
+    "PRACTICE_MAG_QUANTILE": 0.6,
+    "PRACTICE_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together"
+    ],
+    "RANDOM_SEED": 42,
+    "REQUIRED_PASS_SHARE": 0.9,
+    "SAT_TOL_SD": 0.07656576999642693,
+    "SCENE_COLS": [
+      "scene_id",
+      "category",
+      "group",
+      "indoor"
+    ],
+    "SCENE_MATCH": "scene_bin",
+    "SD_FOG": 9.348,
+    "SD_SAT": 39.182,
+    "SIDE_COLS": {
+      "filename": "file",
+      "sat_mean": "sat",
+      "contrast_local": "fog",
+      "contrast_level": "contrast_level",
+      "colour_level": "colour_level",
+      "contrast_step": "contrast_step",
+      "colour_step": "colour_step",
+      "is_original": "is_original",
+      "contrast_param": "contrast_param",
+      "comp_k": "comp_k",
+      "colour_k": "colour_k",
+      "d_sat_sd": "change_sat",
+      "d_con_sd": "change_con",
+      "z_sat": "z_sat",
+      "z_con": "z_con",
+      "dist_corpus": "dist_corpus",
+      "dist_corpus_sat": "dist_corpus_sat",
+      "dist_corpus_con": "dist_corpus_con",
+      "dist_orig": "dist_orig",
+      "dist_orig_sat": "dist_orig_sat",
+      "dist_orig_con": "dist_orig_con"
+    },
+    "SPREAD_SCENES": true,
+    "STRADDLE_TOL_SD": 0.02,
+    "SUPPLY_GRID": {
+      "sat_only": [
+        0.2,
+        0.3,
+        0.45,
+        0.6,
+        0.79,
+        1.0,
+        1.3
+      ],
+      "fog_only": [
+        0.2,
+        0.3,
+        0.45,
+        0.6,
+        0.79,
+        1.0,
+        1.3
+      ],
+      "mixed_sat": [
+        0.1,
+        0.2,
+        0.3,
+        0.45
+      ],
+      "mixed_con": [
+        0.2,
+        0.3,
+        0.45,
+        0.6
+      ]
+    },
+    "THRESHOLD_SETS": {
+      "v5units": {
+        "sat_only": 0.7937318156296258,
+        "fog_only": 0.4492939666238768,
+        "mixed_sat": 0.20417538665713847,
+        "mixed_con": 0.32092426187419765
+      },
+      "sd030": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "mixed_sat": 0.2,
+        "mixed_con": 0.3
+      },
+      "sd060": {
+        "sat_only": 0.6,
+        "fog_only": 0.6,
+        "mixed_sat": 0.2,
+        "mixed_con": 0.3
+      }
+    },
+    "TYPES": [
+      "sat_only",
+      "fog_only",
+      "together",
+      "conflict"
+    ],
+    "TYPE_MIXES": {
+      "v4": {
+        "sat_only": 0.3333333333333333,
+        "fog_only": 0.3333333333333333,
+        "together": 0.16666666666666666,
+        "conflict": 0.16666666666666666
+      },
+      "conflict_heavy": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "together": 0.15,
+        "conflict": 0.25
+      },
+      "balanced_mixed": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "together": 0.2,
+        "conflict": 0.2
+      }
+    },
+    "TYPE_ORDER": [
+      "sat_only",
+      "fog_only",
+      "conflict",
+      "together"
+    ],
+    "TYPE_TRIES": 5,
+    "V4_TRIAL_LIST": "data/frozen_trial_list_v4/trial_list.csv",
+    "VIF_MAX": 1.25,
+    "WRITE_EXAMPLE_SETS": true
+  },
+  "run": {
+    "workers": 31
+  }
+}

@@ -1,0 +1,88 @@
+scope,check,status,detail
+input,manifest has the required columns,PASS,81 columns
+input,47 scenes x 49 images,PASS,"47 scenes, 49-49 images each"
+input,image file names are unique,PASS,"2,303 rows"
+input,one unedited image per scene (contrast and colour step 0),PASS,47 unedited images
+input,every image may be used in pairs (use = pair),PASS,0 with another use
+input,the manifest is the frozen stimulus set's (SHA-256 as in its FROZEN.json),PASS,"set 7fd72262ba, stimuli_sha256 78e2c7258d65..."
+input,"every pair of images within a scene, both directions",PASS,"110,544 ordered pairs (55,272 unordered)"
+input,"every pair is listed in both directions, with negated differences and normality terms and the same type",PASS,0 without a reverse
+input,pred_sat = -d_sat/SD_SAT and pred_fog = d_fog/SD_FOG,PASS,"SD_SAT 39.182, SD_FOG 9.348"
+input,the manifest's changes from the original agree with its features (d_sat),PASS,
+input,pair counts match EXPECTED_POOL,SKIPPED,EXPECTED_POOL is None
+v5units,each unordered pair appears once in the pool,PASS,"36,120 pairs, 0 duplicates"
+v5units,bin edges are in order,PASS,"sat_only [0.9993, 1.1245, 1.3429, 1.6662]; fog_only [0.6662, 1.3056]; together [0.6598, 0.9996]; conflict [0.6572, 0.9941]"
+input,"the pairs equal script 1's all_pairs.csv.gz (files, type, differences, normality terms, to its 8 significant digits)",PASS,"data/pair_capacity_v5b/v5b_disjoint-pair_match-scene_bin_cap2_sets-v5units-sd030-sd060_sizes120-150-180_draws20_seed42__s554900b6: 110,544 vs 110,544 rows, 110,544 matched, largest relative difference 5.0e-08 (script 1 saves 8 significant digits)"
+input,the v5units bin edges equal script 1's bin_edges.csv,PASS,"sat_only [0.9993, 1.1245, 1.3429, 1.6662]; fog_only [0.6662, 1.3056]; together [0.6598, 0.9996]; conflict [0.6572, 0.9941]"
+design,the counts are feasible (script 1 stage 1),PASS,feasible
+candidates,at least one repaired candidate passes the limit and every script 1 check,PASS,"40 of 40 (draws built 40, draws passing script 1's checks before repair 40)"
+candidates,wide repair (scenes within a bin free to change),NOT NEEDED,40 passed with the cells kept; it runs when fewer than 5 pass and a failed candidate can be re-repaired
+sets (script 1 checks),type counts equal the target in both sets,PASS,
+sets (script 1 checks),bin counts equal the quotas in both sets,PASS,
+sets (script 1 checks),no pair in both sets,PASS,
+sets (script 1 checks),no pair twice within a set,PASS,
+sets (script 1 checks),no image in both sets,SKIPPED,not applicable
+sets (script 1 checks),no scene in both sets,SKIPPED,not applicable
+sets (script 1 checks),sat_only: |d_sat| >= its minimum,PASS,
+sets (script 1 checks),sat_only: |d_con| <= CON_TOL_SD,PASS,
+sets (script 1 checks),fog_only: |d_con| >= its minimum,PASS,
+sets (script 1 checks),fog_only: |d_sat| <= SAT_TOL_SD,PASS,
+sets (script 1 checks),"together, conflict: both differences >= their minimums",PASS,
+sets (script 1 checks),conflict: all balanced,PASS,
+sets (script 1 checks),information x_sat within 5%,PASS,
+sets (script 1 checks),information x_con within 5%,PASS,
+sets (script 1 checks),information per type within 10%,PASS,
+sets (script 1 checks),KS |x_sat| <= 0.1,PASS,
+sets (script 1 checks),KS |x_con| <= 0.1,PASS,
+sets (script 1 checks),predictor correlation (cos) differs by <= 0.05,PASS,
+sets (script 1 checks),VIF <= 1.25 in both sets,PASS,
+sets (script 1 checks),predicted image on the left in half of each type (+-1 if odd),PASS,
+sets (script 1 checks),each set uses >= 85% of the scenes it may use,PASS,
+sets (script 1 checks),<= 2 per scene per type in each set,PASS,
+sets (script 1 checks),same scenes: each scene x type x bin count equal in both sets,PASS,
+sets (script 1 checks),practice and catch reserved in full for both sets,PASS,
+normality limit,"set A, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0416, b_con -0.0418"
+normality limit,"set B, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0403, b_con -0.0408"
+normality limit,"set A, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0400, b_con +0.0409"
+normality limit,"set B, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0379, b_con +0.0407"
+candidates,the chosen candidate rebuilt in this process (one worker) gives byte-identical sets,PASS,"candidate 3 (cells), 31 worker(s) in the run"
+candidates,candidates are script 2's draws (their leak equals script 2's normality_leak.csv),PASS,"data/block_length_v5b/v5b_sets-v5units-sd060_sizes120-150-180_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__sad6f14a4: 20 draws, 80 rows compared, largest difference 9.7e-17"
+set A,analysed type counts equal the target,PASS,"sat_only 45, fog_only 45, together 30, conflict 30"
+set A,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0434, smallest |d_sat| 0.8621 SD"
+set A,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0639, smallest |d_con| 0.6441 SD"
+set A,"together, conflict: both differences >= their minimums; conflict balanced",PASS,
+set A,12 consistency trials = floor(150 x 0.0833),PASS,"sat_only 4, fog_only 4, together 2, conflict 2"
+set A,every consistency trial repeats an analysed pair of its set with the sides swapped,PASS,
+set A,"5 catch trials, mode 'no_images', distinct scenes",PASS,
+set A,image A (the predicted image) on the left in half of each type's trials (+-1 if odd),PASS,
+set A,catch sides balanced (+-1),PASS,2 of 5
+set B,analysed type counts equal the target,PASS,"sat_only 45, fog_only 45, together 30, conflict 30"
+set B,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0412, smallest |d_sat| 0.8715 SD"
+set B,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0744, smallest |d_con| 0.6511 SD"
+set B,"together, conflict: both differences >= their minimums; conflict balanced",PASS,
+set B,12 consistency trials = floor(150 x 0.0833),PASS,"sat_only 4, fog_only 4, together 2, conflict 2"
+set B,every consistency trial repeats an analysed pair of its set with the sides swapped,PASS,
+set B,"5 catch trials, mode 'no_images', distinct scenes",PASS,
+set B,image A (the predicted image) on the left in half of each type's trials (+-1 if odd),PASS,
+set B,catch sides balanced (+-1),PASS,2 of 5
+consistency,the same couples are repeated in both sets (matched),PASS,
+practice P1,"6 trials of types ['sat_only', 'fog_only', 'together', 'sat_only', 'fog_only', 'together'] in turn, distinct scenes",PASS,"sat_only, fog_only, together, sat_only, fog_only, together"
+practice P1,every difference at or below the 60% quantile of its type,PASS,
+practice P2,"3 trials of types ['sat_only', 'fog_only', 'together'] in turn, distinct scenes",PASS,"sat_only, fog_only, together"
+practice P2,every difference at or below the 60% quantile of its type,PASS,
+all rows,"no pair is used twice anywhere (consistency repeats aside): sets, practice and catch are disjoint",PASS,"319 pairs, 0 duplicates"
+all rows,"every row carries the direction, difference, bin and normality fields",PASS,14 fields in 343 rows
+all rows,"unedited images are allowed (counted, not limited)",NOTE,"analysed pairs with the unedited image: A 4, B 6; all rows 11"
+set A,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6240 (v4 0.6191), contrast 0.6659 (v4 0.6104)"
+set A,every threshold fit converged,PASS,share unconverged 0.00000
+set B,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6275 (v4 0.6191), contrast 0.6654 (v4 0.6104)"
+set B,every threshold fit converged,PASS,share unconverged 0.00000
+thresholds,the two sets' upper thresholds agree within 5%,PASS,largest relative difference 1.8%
+images,the stimulus set's checksums.sha256 is present,PASS,"2,322 files listed"
+images,checksums.sha256 is the frozen one (SHA-256 as in FROZEN.json),PASS,set 7fd72262ba
+images,every referenced image exists in STIMULI_SRC,PASS,"576 needed, 0 missing"
+images,every copy is byte-identical to its source (SHA-256),PASS,0 differ
+images,every copy matches the stimulus set's checksums.sha256,PASS,0 of 576 differ or are not listed
+images,every image is 512 x 512,PASS,0 differ
+images,re-measured sat_mean and contrast_local equal the pair table (|diff| <= 0.0001),PASS,0 of 576 differ
+images,re-measured features equal the stimulus manifest,PASS,0 differ

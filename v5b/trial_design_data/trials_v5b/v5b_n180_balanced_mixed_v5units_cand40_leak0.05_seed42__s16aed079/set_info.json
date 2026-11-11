@@ -1,0 +1,148 @@
+{
+  "version": "v5b",
+  "block_size": 180,
+  "mix": "balanced_mixed",
+  "mix_shares": {
+    "sat_only": 0.3,
+    "fog_only": 0.3,
+    "together": 0.2,
+    "conflict": 0.2
+  },
+  "threshold_set": "v5units",
+  "threshold_set_values_sd": {
+    "sat_only": 0.7937318156296258,
+    "fog_only": 0.4492939666238768,
+    "mixed_sat": 0.20417538665713847,
+    "mixed_con": 0.32092426187419765
+  },
+  "chosen_candidate": 36,
+  "unconstrained_choice": 36,
+  "selection": "max over candidates of min over weights of the weaker set's information / mean weaker-set information of the unrepaired candidates; ties: smaller worst |b|, then lower candidate",
+  "selection_reference": {
+    "sat": 173.95758752450973,
+    "con": 144.07576072580204
+  },
+  "normality_limit": {
+    "limit": 0.05,
+    "fit": "N ~ b_sat x_sat + b_con x_con, no intercept, analysed trials of each set",
+    "definitions": [
+      "corpus",
+      "orig"
+    ],
+    "shipped": {
+      "corpus_A": {
+        "b_sat": 0.039489689286007774,
+        "b_con": -0.036930853908490435,
+        "cos_sat": 0.07052200588138367,
+        "cos_con": -0.0598239637934998
+      },
+      "corpus_B": {
+        "b_sat": 0.03958425565704057,
+        "b_con": -0.034878133603892324,
+        "cos_sat": 0.06434010553955158,
+        "cos_con": -0.052062308784028115
+      },
+      "orig_A": {
+        "b_sat": -0.03544558171182474,
+        "b_con": 0.027901117829753578,
+        "cos_sat": -0.07872995494027782,
+        "cos_con": 0.056495673260714085
+      },
+      "orig_B": {
+        "b_sat": -0.03909522390190162,
+        "b_con": 0.023895195187401873,
+        "cos_sat": -0.07854380216961475,
+        "cos_con": 0.04434325523576955
+      }
+    },
+    "repair": {
+      "mode": "cells",
+      "kept_A": 160,
+      "kept_B": 161,
+      "target": 0.04,
+      "solves": 1
+    }
+  },
+  "counts_per_set": {
+    "analysed": 180,
+    "sat_only": 54,
+    "fog_only": 54,
+    "together": 36,
+    "conflict": 36,
+    "consistency": 15,
+    "consistency_by_type": {
+      "sat_only": 5,
+      "fog_only": 4,
+      "together": 3,
+      "conflict": 3
+    },
+    "catch": 5
+  },
+  "practice_by_block": [
+    6,
+    3
+  ],
+  "catch": {
+    "mode": "no_images",
+    "per_block": 5,
+    "exclude_at_or_above": 3,
+    "exclusion_scope": "session (both blocks)",
+    "record_failures_per_block": true
+  },
+  "thresholds": {
+    "A": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.2849781907116785,
+        "con": 0.3152869499224229
+      },
+      "lower": {
+        "sat": -0.2835985606858066,
+        "con": -0.31732409156075436
+      }
+    },
+    "B": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.2891952722494494,
+        "con": 0.3074436019726338
+      },
+      "lower": {
+        "sat": -0.28721937283160354,
+        "con": -0.3130915950968064
+      }
+    }
+  },
+  "choice_probability_at_planning_weights": {
+    "A": {
+      "sat": 0.6252735610083283,
+      "con": 0.6654582978076652
+    },
+    "B": {
+      "sat": 0.6246063943065959,
+      "con": 0.6659741871975319
+    }
+  },
+  "predictors": "pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice",
+  "normality": "N = dist(B) - dist(A); positive = image A is the more typical; corpus = distance from the corpus median, orig = distance from the scene's unedited photograph",
+  "stimulus_set": {
+    "dir": "data/stimulus_set_v5/7fd72262ba",
+    "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+    "settings_hash": "7fd72262ba",
+    "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+    "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075"
+  },
+  "script1": {
+    "name": "analyse_pair_capacity_v5b.py",
+    "sha256": "f7ab2c91e5a0be23e1d0f08ff96876d785487633c0dadff2781cf16826f45df4"
+  },
+  "script3": {
+    "name": "build_trials_v5b.py",
+    "sha256": "71776ec806993483c83e3cc950f9ab8fd1071660464c89471748a4c1dd254180"
+  },
+  "workers": 31
+}
