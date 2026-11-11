@@ -1,0 +1,330 @@
+scene_id,family,direction,feature,reach_sd,reach_param,limit,grid_points_ok
+alley_00001206,chroma,down,sat_mean,1.64944,0,end of grid,25
+alley_00001206,chroma,up,sat_mean,1.72892,4,end of grid,25
+alley_00001206,dehaze_L,up,contrast_local,2.80658,-0.795886,feature peaks,21
+alley_00001206,dehaze_rgb,up,contrast_local,2.69444,-0.502067,feature peaks,19
+alley_00001206,haze_eq,down,contrast_local,2.49295,0.95,end of grid,25
+alley_00001206,pyramid_L,down,contrast_local,2.36234,0,end of grid,25
+alley_00001206,pyramid_L,up,contrast_local,4.2962,4,end of grid,25
+apartment_building_outdoor_00004677,chroma,down,sat_mean,1.7779,0,end of grid,25
+apartment_building_outdoor_00004677,chroma,up,sat_mean,1.96411,4,end of grid,25
+apartment_building_outdoor_00004677,dehaze_L,up,contrast_local,3.60859,-0.502067,feature peaks,19
+apartment_building_outdoor_00004677,dehaze_rgb,up,contrast_local,3.21484,-0.502067,feature peaks,19
+apartment_building_outdoor_00004677,haze_eq,down,contrast_local,2.4266,0.95,end of grid,25
+apartment_building_outdoor_00004677,pyramid_L,down,contrast_local,2.33897,0,end of grid,25
+apartment_building_outdoor_00004677,pyramid_L,up,contrast_local,4.59665,4,end of grid,25
+auditorium_00001394,chroma,down,sat_mean,2.20574,0,end of grid,25
+auditorium_00001394,chroma,up,sat_mean,1.91064,4,end of grid,25
+auditorium_00001394,dehaze_L,up,contrast_local,3.46208,-1.00206,feature peaks,22
+auditorium_00001394,dehaze_rgb,up,contrast_local,3.22731,-1.00206,feature peaks,22
+auditorium_00001394,haze_eq,down,contrast_local,2.55709,0.95,end of grid,25
+auditorium_00001394,pyramid_L,down,contrast_local,2.43273,0,end of grid,25
+auditorium_00001394,pyramid_L,up,contrast_local,4.24379,4,end of grid,25
+balcony_interior_00004440,chroma,down,sat_mean,1.92947,0,end of grid,25
+balcony_interior_00004440,chroma,up,sat_mean,1.64882,4,end of grid,25
+balcony_interior_00004440,dehaze_L,up,contrast_local,2.34753,-1.58849,feature peaks,24
+balcony_interior_00004440,dehaze_rgb,up,contrast_local,2.2153,-1.58849,feature peaks,24
+balcony_interior_00004440,haze_eq,down,contrast_local,2.43616,0.95,end of grid,25
+balcony_interior_00004440,pyramid_L,down,contrast_local,2.39039,0,end of grid,25
+balcony_interior_00004440,pyramid_L,up,contrast_local,3.12591,4,end of grid,25
+bathroom_00001909,chroma,down,sat_mean,2.13886,0,end of grid,25
+bathroom_00001909,chroma,up,sat_mean,1.94606,4,end of grid,25
+bathroom_00001909,dehaze_L,up,contrast_local,2.57847,-0.502067,feature peaks,19
+bathroom_00001909,dehaze_rgb,up,contrast_local,2.45079,-0.398765,feature peaks,18
+bathroom_00001909,haze_eq,down,contrast_local,2.44239,0.95,end of grid,25
+bathroom_00001909,pyramid_L,down,contrast_local,2.32109,0,end of grid,25
+bathroom_00001909,pyramid_L,up,contrast_local,3.66816,4,end of grid,25
+bedroom_00001289,chroma,down,sat_mean,2.16536,0,end of grid,25
+bedroom_00001289,chroma,up,sat_mean,1.9386,4,end of grid,25
+bedroom_00001289,dehaze_L,up,contrast_local,3.60314,-0.795886,feature peaks,21
+bedroom_00001289,dehaze_rgb,up,contrast_local,3.45212,-0.795886,feature peaks,21
+bedroom_00001289,haze_eq,down,contrast_local,2.30593,0.95,end of grid,25
+bedroom_00001289,pyramid_L,down,contrast_local,2.19645,0,end of grid,25
+bedroom_00001289,pyramid_L,up,contrast_local,4.00755,4,end of grid,25
+boardwalk_00001503,chroma,down,sat_mean,2.3963,0,end of grid,25
+boardwalk_00001503,chroma,up,sat_mean,2.4349,4,end of grid,25
+boardwalk_00001503,dehaze_L,up,contrast_local,5.51635,-2,end of grid,25
+boardwalk_00001503,dehaze_rgb,up,contrast_local,4.28817,-2,end of grid,25
+boardwalk_00001503,haze_eq,down,contrast_local,2.4291,0.95,end of grid,25
+boardwalk_00001503,pyramid_L,down,contrast_local,2.37611,0,end of grid,25
+boardwalk_00001503,pyramid_L,up,contrast_local,5.57683,4,end of grid,25
+cafeteria_00002762,chroma,down,sat_mean,1.91904,0,end of grid,25
+cafeteria_00002762,chroma,up,sat_mean,2.56469,4,end of grid,25
+cafeteria_00002762,dehaze_L,up,contrast_local,3.20239,-1.00206,feature peaks,22
+cafeteria_00002762,dehaze_rgb,up,contrast_local,3.05363,-0.795886,feature peaks,21
+cafeteria_00002762,haze_eq,down,contrast_local,2.81228,0.95,end of grid,25
+cafeteria_00002762,pyramid_L,down,contrast_local,2.70858,0,end of grid,25
+cafeteria_00002762,pyramid_L,up,contrast_local,4.01054,4,end of grid,25
+campus_00003823,chroma,down,sat_mean,1.95146,0,end of grid,25
+campus_00003823,chroma,up,sat_mean,1.67816,4,end of grid,25
+campus_00003823,dehaze_L,up,contrast_local,3.40445,-0.63213,feature peaks,20
+campus_00003823,dehaze_rgb,up,contrast_local,3.04415,-0.63213,feature peaks,20
+campus_00003823,haze_eq,down,contrast_local,2.76179,0.95,end of grid,25
+campus_00003823,pyramid_L,down,contrast_local,2.68668,0,end of grid,25
+campus_00003823,pyramid_L,up,contrast_local,5.17903,4,end of grid,25
+campus_00004529,chroma,down,sat_mean,1.41898,0,end of grid,25
+campus_00004529,chroma,up,sat_mean,2.02828,4,end of grid,25
+campus_00004529,dehaze_L,up,contrast_local,6.48122,-2,end of grid,25
+campus_00004529,dehaze_rgb,up,contrast_local,6.46744,-2,end of grid,25
+campus_00004529,haze_eq,down,contrast_local,2.98314,0.95,end of grid,25
+campus_00004529,pyramid_L,down,contrast_local,2.95575,0,end of grid,25
+campus_00004529,pyramid_L,up,contrast_local,6.39086,4,end of grid,25
+computer_room_00001489,chroma,down,sat_mean,1.84259,0,end of grid,25
+computer_room_00001489,chroma,up,sat_mean,2.47334,4,end of grid,25
+computer_room_00001489,dehaze_L,up,contrast_local,2.72579,-0.795886,feature peaks,21
+computer_room_00001489,dehaze_rgb,up,contrast_local,2.56692,-0.795886,feature peaks,21
+computer_room_00001489,haze_eq,down,contrast_local,2.65488,0.95,end of grid,25
+computer_room_00001489,pyramid_L,down,contrast_local,2.57239,0,end of grid,25
+computer_room_00001489,pyramid_L,up,contrast_local,3.85737,4,end of grid,25
+conference_room_00002730,chroma,down,sat_mean,1.64212,0,end of grid,25
+conference_room_00002730,chroma,up,sat_mean,1.76605,4,end of grid,25
+conference_room_00002730,dehaze_L,up,contrast_local,3.48599,-1.26165,feature peaks,23
+conference_room_00002730,dehaze_rgb,up,contrast_local,3.02148,-1.00206,feature peaks,22
+conference_room_00002730,haze_eq,down,contrast_local,2.774,0.95,end of grid,25
+conference_room_00002730,pyramid_L,down,contrast_local,2.69784,0,end of grid,25
+conference_room_00002730,pyramid_L,up,contrast_local,3.88695,4,end of grid,25
+courtyard_00004070,chroma,down,sat_mean,2.17257,0,end of grid,25
+courtyard_00004070,chroma,up,sat_mean,1.95821,4,end of grid,25
+courtyard_00004070,dehaze_L,up,contrast_local,3.66126,-2,end of grid,25
+courtyard_00004070,dehaze_rgb,up,contrast_local,3.41935,-1.58849,feature peaks,24
+courtyard_00004070,haze_eq,down,contrast_local,2.46593,0.95,end of grid,25
+courtyard_00004070,pyramid_L,down,contrast_local,2.39145,0,end of grid,25
+courtyard_00004070,pyramid_L,up,contrast_local,4.1379,4,end of grid,25
+crosswalk_00001791,chroma,down,sat_mean,1.7703,0,end of grid,25
+crosswalk_00001791,chroma,up,sat_mean,1.73006,4,end of grid,25
+crosswalk_00001791,dehaze_L,up,contrast_local,2.42595,-0.316717,feature peaks,17
+crosswalk_00001791,dehaze_rgb,up,contrast_local,2.34936,-0.251552,feature peaks,16
+crosswalk_00001791,haze_eq,down,contrast_local,2.15658,0.95,end of grid,25
+crosswalk_00001791,pyramid_L,down,contrast_local,2.02616,0,end of grid,25
+crosswalk_00001791,pyramid_L,up,contrast_local,3.28048,4,end of grid,25
+dining_hall_00001273,chroma,down,sat_mean,1.68331,0,end of grid,25
+dining_hall_00001273,chroma,up,sat_mean,2.00373,4,end of grid,25
+dining_hall_00001273,dehaze_L,up,contrast_local,3.4977,-0.502067,feature peaks,19
+dining_hall_00001273,dehaze_rgb,up,contrast_local,3.49797,-0.398765,feature peaks,18
+dining_hall_00001273,haze_eq,down,contrast_local,3.15133,0.95,end of grid,25
+dining_hall_00001273,pyramid_L,down,contrast_local,3.01723,0,end of grid,25
+dining_hall_00001273,pyramid_L,up,contrast_local,5.14546,4,end of grid,25
+dining_hall_00001301,chroma,down,sat_mean,1.96771,0,end of grid,25
+dining_hall_00001301,chroma,up,sat_mean,1.66701,4,end of grid,25
+dining_hall_00001301,dehaze_L,up,contrast_local,2.73628,-0.795886,feature peaks,21
+dining_hall_00001301,dehaze_rgb,up,contrast_local,2.13935,-0.63213,feature peaks,20
+dining_hall_00001301,haze_eq,down,contrast_local,2.37294,0.95,end of grid,25
+dining_hall_00001301,pyramid_L,down,contrast_local,2.26488,0,end of grid,25
+dining_hall_00001301,pyramid_L,up,contrast_local,3.99379,4,end of grid,25
+dining_room_00003076,chroma,down,sat_mean,2.26474,0,end of grid,25
+dining_room_00003076,chroma,up,sat_mean,1.85408,4,end of grid,25
+dining_room_00003076,dehaze_L,up,contrast_local,2.49709,-0.63213,feature peaks,20
+dining_room_00003076,dehaze_rgb,up,contrast_local,2.18041,-0.502067,feature peaks,19
+dining_room_00003076,haze_eq,down,contrast_local,2.55331,0.95,end of grid,25
+dining_room_00003076,pyramid_L,down,contrast_local,2.42792,0,end of grid,25
+dining_room_00003076,pyramid_L,up,contrast_local,3.66395,4,end of grid,25
+downtown_00001598,chroma,down,sat_mean,1.63594,0,end of grid,25
+downtown_00001598,chroma,up,sat_mean,2.26026,4,end of grid,25
+downtown_00001598,dehaze_L,up,contrast_local,2.40889,-0.63213,feature peaks,20
+downtown_00001598,dehaze_rgb,up,contrast_local,2.31419,-0.63213,feature peaks,20
+downtown_00001598,haze_eq,down,contrast_local,2.45134,0.95,end of grid,25
+downtown_00001598,pyramid_L,down,contrast_local,2.35273,0,end of grid,25
+downtown_00001598,pyramid_L,up,contrast_local,3.9412,4,end of grid,25
+downtown_00001745,chroma,down,sat_mean,1.54838,0,end of grid,25
+downtown_00001745,chroma,up,sat_mean,2.4529,4,end of grid,25
+downtown_00001745,dehaze_L,up,contrast_local,2.66539,-0.398765,feature peaks,18
+downtown_00001745,dehaze_rgb,up,contrast_local,2.4273,-0.398765,feature peaks,18
+downtown_00001745,haze_eq,down,contrast_local,2.73522,0.95,end of grid,25
+downtown_00001745,pyramid_L,down,contrast_local,2.64059,0,end of grid,25
+downtown_00001745,pyramid_L,up,contrast_local,3.57073,4,end of grid,25
+downtown_00004891,chroma,down,sat_mean,1.67469,0,end of grid,25
+downtown_00004891,chroma,up,sat_mean,2.09615,4,end of grid,25
+downtown_00004891,dehaze_L,up,contrast_local,3.0337,-0.63213,feature peaks,20
+downtown_00004891,dehaze_rgb,up,contrast_local,2.92879,-0.502067,feature peaks,19
+downtown_00004891,haze_eq,down,contrast_local,3.30313,0.95,end of grid,25
+downtown_00004891,pyramid_L,down,contrast_local,3.21039,0,end of grid,25
+downtown_00004891,pyramid_L,up,contrast_local,3.81409,4,end of grid,25
+driveway_00001180,chroma,down,sat_mean,1.55601,0,end of grid,25
+driveway_00001180,chroma,up,sat_mean,2.24714,4,end of grid,25
+driveway_00001180,dehaze_L,up,contrast_local,5.73314,-1.26165,feature peaks,23
+driveway_00001180,dehaze_rgb,up,contrast_local,4.79517,-1.26165,feature peaks,23
+driveway_00001180,haze_eq,down,contrast_local,2.29591,0.95,end of grid,25
+driveway_00001180,pyramid_L,down,contrast_local,2.24446,0,end of grid,25
+driveway_00001180,pyramid_L,up,contrast_local,6.23445,4,end of grid,25
+driveway_00003009,chroma,down,sat_mean,2.04734,0,end of grid,25
+driveway_00003009,chroma,up,sat_mean,2.66725,4,end of grid,25
+driveway_00003009,dehaze_L,up,contrast_local,3.39137,-0.502067,feature peaks,19
+driveway_00003009,dehaze_rgb,up,contrast_local,3.10452,-0.398765,feature peaks,18
+driveway_00003009,haze_eq,down,contrast_local,3.6155,0.95,end of grid,25
+driveway_00003009,pyramid_L,down,contrast_local,3.52973,0,end of grid,25
+driveway_00003009,pyramid_L,up,contrast_local,6.15375,4,end of grid,25
+elevator_lobby_00003261,chroma,down,sat_mean,2.19658,0,end of grid,25
+elevator_lobby_00003261,chroma,up,sat_mean,2.48925,4,end of grid,25
+elevator_lobby_00003261,dehaze_L,up,contrast_local,4.57618,-1.00206,feature peaks,22
+elevator_lobby_00003261,dehaze_rgb,up,contrast_local,3.82774,-0.795886,feature peaks,21
+elevator_lobby_00003261,haze_eq,down,contrast_local,2.22395,0.95,end of grid,25
+elevator_lobby_00003261,pyramid_L,down,contrast_local,2.14715,0,end of grid,25
+elevator_lobby_00003261,pyramid_L,up,contrast_local,5.07803,4,end of grid,25
+elevator_lobby_00003556,chroma,down,sat_mean,1.64358,0,end of grid,25
+elevator_lobby_00003556,chroma,up,sat_mean,1.85812,4,end of grid,25
+elevator_lobby_00003556,dehaze_L,up,contrast_local,3.50229,-1.00206,feature peaks,22
+elevator_lobby_00003556,dehaze_rgb,up,contrast_local,3.23203,-0.795886,feature peaks,21
+elevator_lobby_00003556,haze_eq,down,contrast_local,2.21347,0.95,end of grid,25
+elevator_lobby_00003556,pyramid_L,down,contrast_local,2.11645,0,end of grid,25
+elevator_lobby_00003556,pyramid_L,up,contrast_local,4.03442,4,end of grid,25
+gymnasium_indoor_00003333,chroma,down,sat_mean,2.11872,0,end of grid,25
+gymnasium_indoor_00003333,chroma,up,sat_mean,2.28765,4,end of grid,25
+gymnasium_indoor_00003333,dehaze_L,up,contrast_local,4.33879,-0.63213,feature peaks,20
+gymnasium_indoor_00003333,dehaze_rgb,up,contrast_local,3.80772,-0.63213,feature peaks,20
+gymnasium_indoor_00003333,haze_eq,down,contrast_local,3.46569,0.95,end of grid,25
+gymnasium_indoor_00003333,pyramid_L,down,contrast_local,3.37113,0,end of grid,25
+gymnasium_indoor_00003333,pyramid_L,up,contrast_local,4.72637,4,end of grid,25
+home_office_00004226,chroma,down,sat_mean,2.44052,0,end of grid,25
+home_office_00004226,chroma,up,sat_mean,1.98857,4,end of grid,25
+home_office_00004226,dehaze_L,up,contrast_local,2.52115,-1.58849,feature peaks,24
+home_office_00004226,dehaze_rgb,up,contrast_local,2.03511,-1.58849,feature peaks,24
+home_office_00004226,haze_eq,down,contrast_local,2.38671,0.95,end of grid,25
+home_office_00004226,pyramid_L,down,contrast_local,2.30692,0,end of grid,25
+home_office_00004226,pyramid_L,up,contrast_local,3.74975,4,end of grid,25
+japanese_garden_00000532,chroma,down,sat_mean,2.13247,0,end of grid,25
+japanese_garden_00000532,chroma,up,sat_mean,2.64785,4,end of grid,25
+japanese_garden_00000532,dehaze_L,up,contrast_local,3.32265,-0.502067,feature peaks,19
+japanese_garden_00000532,dehaze_rgb,up,contrast_local,3.02951,-0.398765,feature peaks,18
+japanese_garden_00000532,haze_eq,down,contrast_local,2.54435,0.95,end of grid,25
+japanese_garden_00000532,pyramid_L,down,contrast_local,2.45203,0,end of grid,25
+japanese_garden_00000532,pyramid_L,up,contrast_local,5.09357,4,end of grid,25
+japanese_garden_00001073,chroma,down,sat_mean,1.85236,0,end of grid,25
+japanese_garden_00001073,chroma,up,sat_mean,2.02572,4,end of grid,25
+japanese_garden_00001073,dehaze_L,up,contrast_local,3.80859,-0.63213,feature peaks,20
+japanese_garden_00001073,dehaze_rgb,up,contrast_local,3.56903,-0.63213,feature peaks,20
+japanese_garden_00001073,haze_eq,down,contrast_local,2.61843,0.95,end of grid,25
+japanese_garden_00001073,pyramid_L,down,contrast_local,2.55695,0,end of grid,25
+japanese_garden_00001073,pyramid_L,up,contrast_local,5.20684,4,end of grid,25
+japanese_garden_00001226,chroma,down,sat_mean,2.42203,0,end of grid,25
+japanese_garden_00001226,chroma,up,sat_mean,2.27706,4,end of grid,25
+japanese_garden_00001226,dehaze_L,up,contrast_local,4.31794,-0.398765,feature peaks,18
+japanese_garden_00001226,dehaze_rgb,up,contrast_local,3.95627,-0.398765,feature peaks,18
+japanese_garden_00001226,haze_eq,down,contrast_local,3.33512,0.95,end of grid,25
+japanese_garden_00001226,pyramid_L,down,contrast_local,3.23757,0,end of grid,25
+japanese_garden_00001226,pyramid_L,up,contrast_local,5.91845,4,end of grid,25
+laundromat_00004208,chroma,down,sat_mean,1.75575,0,end of grid,25
+laundromat_00004208,chroma,up,sat_mean,1.83389,4,end of grid,25
+laundromat_00004208,dehaze_L,up,contrast_local,3.26783,-1.00206,feature peaks,22
+laundromat_00004208,dehaze_rgb,up,contrast_local,3.16043,-0.795886,feature peaks,21
+laundromat_00004208,haze_eq,down,contrast_local,2.41605,0.95,end of grid,25
+laundromat_00004208,pyramid_L,down,contrast_local,2.29783,0,end of grid,25
+laundromat_00004208,pyramid_L,up,contrast_local,4.03921,4,end of grid,25
+living_room_00002633,chroma,down,sat_mean,2.19222,0,end of grid,25
+living_room_00002633,chroma,up,sat_mean,2.32208,4,end of grid,25
+living_room_00002633,dehaze_L,up,contrast_local,2.85579,-0.795886,feature peaks,21
+living_room_00002633,dehaze_rgb,up,contrast_local,2.50301,-0.63213,feature peaks,20
+living_room_00002633,haze_eq,down,contrast_local,2.16659,0.95,end of grid,25
+living_room_00002633,pyramid_L,down,contrast_local,2.05513,0,end of grid,25
+living_room_00002633,pyramid_L,up,contrast_local,3.58219,4,end of grid,25
+lobby_00001554,chroma,down,sat_mean,1.81606,0,end of grid,25
+lobby_00001554,chroma,up,sat_mean,2.01116,4,end of grid,25
+lobby_00001554,dehaze_L,up,contrast_local,3.24707,-1.00206,feature peaks,22
+lobby_00001554,dehaze_rgb,up,contrast_local,2.95414,-1.00206,feature peaks,22
+lobby_00001554,haze_eq,down,contrast_local,2.68729,0.95,end of grid,25
+lobby_00001554,pyramid_L,down,contrast_local,2.60537,0,end of grid,25
+lobby_00001554,pyramid_L,up,contrast_local,4.27743,4,end of grid,25
+park_00001014,chroma,down,sat_mean,1.62503,0,end of grid,25
+park_00001014,chroma,up,sat_mean,2.0755,4,end of grid,25
+park_00001014,dehaze_L,up,contrast_local,3.89176,-0.63213,feature peaks,20
+park_00001014,dehaze_rgb,up,contrast_local,3.6061,-0.63213,feature peaks,20
+park_00001014,haze_eq,down,contrast_local,3.10789,0.95,end of grid,25
+park_00001014,pyramid_L,down,contrast_local,3.01616,0,end of grid,25
+park_00001014,pyramid_L,up,contrast_local,5.95979,4,end of grid,25
+parking_garage_outdoor_00003825,chroma,down,sat_mean,1.38987,0,end of grid,25
+parking_garage_outdoor_00003825,chroma,up,sat_mean,1.66328,4,end of grid,25
+parking_garage_outdoor_00003825,dehaze_L,up,contrast_local,2.2439,-1.58849,feature peaks,24
+parking_garage_outdoor_00003825,dehaze_rgb,up,contrast_local,2.04303,-1.58849,feature peaks,24
+parking_garage_outdoor_00003825,haze_eq,down,contrast_local,2.93479,0.95,end of grid,25
+parking_garage_outdoor_00003825,pyramid_L,down,contrast_local,2.88198,0,end of grid,25
+parking_garage_outdoor_00003825,pyramid_L,up,contrast_local,3.59235,4,end of grid,25
+picnic_area_00000702,chroma,down,sat_mean,2.26286,0,end of grid,25
+picnic_area_00000702,chroma,up,sat_mean,1.9686,4,end of grid,25
+picnic_area_00000702,dehaze_L,up,contrast_local,4.20695,-1.00206,feature peaks,22
+picnic_area_00000702,dehaze_rgb,up,contrast_local,3.87561,-1.00206,feature peaks,22
+picnic_area_00000702,haze_eq,down,contrast_local,3.15526,0.95,end of grid,25
+picnic_area_00000702,pyramid_L,down,contrast_local,3.09007,0,end of grid,25
+picnic_area_00000702,pyramid_L,up,contrast_local,5.49003,4,end of grid,25
+picnic_area_00004871,chroma,down,sat_mean,2.20529,0,end of grid,25
+picnic_area_00004871,chroma,up,sat_mean,1.95666,4,end of grid,25
+picnic_area_00004871,dehaze_L,up,contrast_local,2.87713,-0.63213,feature peaks,20
+picnic_area_00004871,dehaze_rgb,up,contrast_local,2.56367,-0.502067,feature peaks,19
+picnic_area_00004871,haze_eq,down,contrast_local,3.09174,0.95,end of grid,25
+picnic_area_00004871,pyramid_L,down,contrast_local,3.00478,0,end of grid,25
+picnic_area_00004871,pyramid_L,up,contrast_local,4.68912,4,end of grid,25
+promenade_00002520,chroma,down,sat_mean,1.71773,0,end of grid,25
+promenade_00002520,chroma,up,sat_mean,1.84828,4,end of grid,25
+promenade_00002520,dehaze_L,up,contrast_local,3.57474,-1.26165,feature peaks,23
+promenade_00002520,dehaze_rgb,up,contrast_local,3.35506,-1.00206,feature peaks,22
+promenade_00002520,haze_eq,down,contrast_local,2.42015,0.95,end of grid,25
+promenade_00002520,pyramid_L,down,contrast_local,2.36049,0,end of grid,25
+promenade_00002520,pyramid_L,up,contrast_local,5.19377,4,end of grid,25
+residential_neighborhood_00001583,chroma,down,sat_mean,2.3138,0,end of grid,25
+residential_neighborhood_00001583,chroma,up,sat_mean,1.60723,4,end of grid,25
+residential_neighborhood_00001583,dehaze_L,up,contrast_local,3.09217,-1.00206,feature peaks,22
+residential_neighborhood_00001583,dehaze_rgb,up,contrast_local,2.81597,-0.795886,feature peaks,21
+residential_neighborhood_00001583,haze_eq,down,contrast_local,2.65435,0.95,end of grid,25
+residential_neighborhood_00001583,pyramid_L,down,contrast_local,2.57795,0,end of grid,25
+residential_neighborhood_00001583,pyramid_L,up,contrast_local,4.82861,4,end of grid,25
+restaurant_00000867,chroma,down,sat_mean,1.69554,0,end of grid,25
+restaurant_00000867,chroma,up,sat_mean,1.75366,4,end of grid,25
+restaurant_00000867,dehaze_L,up,contrast_local,2.4054,-1.00206,feature peaks,22
+restaurant_00000867,dehaze_rgb,up,contrast_local,2.07776,-1.00206,feature peaks,22
+restaurant_00000867,haze_eq,down,contrast_local,2.79609,0.95,end of grid,25
+restaurant_00000867,pyramid_L,down,contrast_local,2.68844,0,end of grid,25
+restaurant_00000867,pyramid_L,up,contrast_local,3.59052,4,end of grid,25
+shopping_mall_indoor_00003139,chroma,down,sat_mean,1.41455,0,end of grid,25
+shopping_mall_indoor_00003139,chroma,up,sat_mean,2.10943,4,end of grid,25
+shopping_mall_indoor_00003139,dehaze_L,up,contrast_local,4.05958,-2,end of grid,25
+shopping_mall_indoor_00003139,dehaze_rgb,up,contrast_local,3.6142,-1.58849,feature peaks,24
+shopping_mall_indoor_00003139,haze_eq,down,contrast_local,2.85949,0.95,end of grid,25
+shopping_mall_indoor_00003139,pyramid_L,down,contrast_local,2.75521,0,end of grid,25
+shopping_mall_indoor_00003139,pyramid_L,up,contrast_local,5.19485,4,end of grid,25
+shower_00000779,chroma,down,sat_mean,1.89149,0,end of grid,25
+shower_00000779,chroma,up,sat_mean,2.06448,4,end of grid,25
+shower_00000779,dehaze_L,up,contrast_local,3.76941,-0.63213,feature peaks,20
+shower_00000779,dehaze_rgb,up,contrast_local,3.46544,-0.63213,feature peaks,20
+shower_00000779,haze_eq,down,contrast_local,2.50781,0.95,end of grid,25
+shower_00000779,pyramid_L,down,contrast_local,2.4085,0,end of grid,25
+shower_00000779,pyramid_L,up,contrast_local,4.42857,4,end of grid,25
+subway_station_platform_00003408,chroma,down,sat_mean,1.9298,0,end of grid,25
+subway_station_platform_00003408,chroma,up,sat_mean,2.33832,4,end of grid,25
+subway_station_platform_00003408,dehaze_L,up,contrast_local,3.33409,-1.26165,feature peaks,23
+subway_station_platform_00003408,dehaze_rgb,up,contrast_local,2.98066,-1.00206,feature peaks,22
+subway_station_platform_00003408,haze_eq,down,contrast_local,2.24835,0.95,end of grid,25
+subway_station_platform_00003408,pyramid_L,down,contrast_local,2.15279,0,end of grid,25
+subway_station_platform_00003408,pyramid_L,up,contrast_local,3.79175,4,end of grid,25
+subway_station_platform_00004871,chroma,down,sat_mean,2.11432,0,end of grid,25
+subway_station_platform_00004871,chroma,up,sat_mean,2.09713,4,end of grid,25
+subway_station_platform_00004871,dehaze_L,up,contrast_local,2.71568,-0.502067,feature peaks,19
+subway_station_platform_00004871,dehaze_rgb,up,contrast_local,2.57652,-0.502067,feature peaks,19
+subway_station_platform_00004871,haze_eq,down,contrast_local,3.16085,0.95,end of grid,25
+subway_station_platform_00004871,pyramid_L,down,contrast_local,3.03126,0,end of grid,25
+subway_station_platform_00004871,pyramid_L,up,contrast_local,4.40557,4,end of grid,25
+train_interior_00004637,chroma,down,sat_mean,1.77984,0,end of grid,25
+train_interior_00004637,chroma,up,sat_mean,2.14461,4,end of grid,25
+train_interior_00004637,dehaze_L,up,contrast_local,4.41793,-0.795886,feature peaks,21
+train_interior_00004637,dehaze_rgb,up,contrast_local,4.19468,-0.795886,feature peaks,21
+train_interior_00004637,haze_eq,down,contrast_local,2.73858,0.95,end of grid,25
+train_interior_00004637,pyramid_L,down,contrast_local,2.64677,0,end of grid,25
+train_interior_00004637,pyramid_L,up,contrast_local,5.31654,4,end of grid,25
+train_station_platform_00003977,chroma,down,sat_mean,1.53558,0,end of grid,25
+train_station_platform_00003977,chroma,up,sat_mean,1.86656,4,end of grid,25
+train_station_platform_00003977,dehaze_L,up,contrast_local,3.42137,-1.58849,feature peaks,24
+train_station_platform_00003977,dehaze_rgb,up,contrast_local,2.91254,-1.58849,feature peaks,24
+train_station_platform_00003977,haze_eq,down,contrast_local,2.4569,0.95,end of grid,25
+train_station_platform_00003977,pyramid_L,down,contrast_local,2.37525,0,end of grid,25
+train_station_platform_00003977,pyramid_L,up,contrast_local,3.93385,4,end of grid,25
+waiting_room_00002953,chroma,down,sat_mean,1.69346,0,end of grid,25
+waiting_room_00002953,chroma,up,sat_mean,2.1619,4,end of grid,25
+waiting_room_00002953,dehaze_L,up,contrast_local,2.77605,-1.26165,feature peaks,23
+waiting_room_00002953,dehaze_rgb,up,contrast_local,2.60946,-1.00206,feature peaks,22
+waiting_room_00002953,haze_eq,down,contrast_local,2.2344,0.95,end of grid,25
+waiting_room_00002953,pyramid_L,down,contrast_local,2.13521,0,end of grid,25
+waiting_room_00002953,pyramid_L,up,contrast_local,3.78279,4,end of grid,25
+yard_00000709,chroma,down,sat_mean,1.64991,0,end of grid,25
+yard_00000709,chroma,up,sat_mean,2.2099,4,end of grid,25
+yard_00000709,dehaze_L,up,contrast_local,5.45738,-1.00206,feature peaks,22
+yard_00000709,dehaze_rgb,up,contrast_local,5.18237,-0.795886,feature peaks,21
+yard_00000709,haze_eq,down,contrast_local,3.54873,0.95,end of grid,25
+yard_00000709,pyramid_L,down,contrast_local,3.49741,0,end of grid,25
+yard_00000709,pyramid_L,up,contrast_local,6.73039,4,end of grid,25

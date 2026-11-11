@@ -1,0 +1,80 @@
+{
+  "script": "test_edit_levels_v5.py",
+  "status": "finished",
+  "created": "2026-11-10 18:17:03",
+  "elapsed_min": 22.52,
+  "settings_hash": "4aa278d54d",
+  "versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.4",
+    "pandas": "3.0.3",
+    "opencv": "4.13.0",
+    "pillow": "12.2.0",
+    "scipy": "1.17.1",
+    "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44"
+  },
+  "timings_min": {
+    "Start-up checks and the reference": 0.02,
+    "Definition (a): calibration on the median image": 0.51,
+    "Definition (b): reach on every scene": 1.95,
+    "Rendering, measuring and saving every cell": 17.72,
+    "Measurements, normality, scene fit": 0.21,
+    "Viewer": 0.03,
+    "CLIP": 2.07
+  },
+  "n_checks": 30,
+  "checks_not_passed": [
+    {
+      "code": "L1",
+      "status": "WARN",
+      "detail": "definitions (b), (r): 3,145 of 3,383 uncapped levels within 0.01 SD of their target on the rendered image; worst by approach: A4_haze_cc_rgb 0.088, A4_haze_cc 0.032, B1_pyramid 0.002; 1 levels capped"
+    }
+  ],
+  "warnings": [
+    "L1: definitions (b), (r): 3,145 of 3,383 uncapped levels within 0.01 SD of their target on the rendered image; worst by approach: A4_haze_cc_rgb 0.088, A4_haze_cc 0.032, B1_pyramid 0.002; 1 levels capped"
+  ],
+  "eligible_images": 185480,
+  "reference_images": 20000,
+  "axis_vectors_sha256": "3508c86599218f52fccbfd161ffb53fad98b5d794636b2bb32d8c34a015d1794",
+  "encoder": {
+    "weights_loaded": 391,
+    "proj_applied": true,
+    "proj_max_diff_vs_standard": 0.0002648383378982544,
+    "device": "cuda",
+    "torch": "2.12.0+cu130",
+    "transformers": "5.8.1",
+    "preprocessing": {
+      "mode": "openai",
+      "size": 336,
+      "mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ]
+    },
+    "dims": {
+      "pooled": 1024,
+      "embedding": 768
+    },
+    "official_check": "run",
+    "same_pixels_min_cos": 1.0,
+    "own_preproc_min_cos": 1.0,
+    "un2clip_ckpt_sha256": "ed43c5057e3779107cad6bc0d3d3c623028515ba964f7c8716185e5eeadc41d4"
+  },
+  "corpus_check": {
+    "n": 79,
+    "min_cos_emb": 0.999999905899513,
+    "min_cos_pooled": 0.9999998925300283,
+    "max_dz_stored": 4.857559060766903e-06,
+    "max_dz_reencoded": 4.859314608474108e-06
+  },
+  "direction_sd_sample": {
+    "n": 200000,
+    "A07_ratio": 0.998733355369095
+  }
+}

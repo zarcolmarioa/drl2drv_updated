@@ -1,0 +1,36 @@
+approach,definition,type,n_unordered_pairs,straddle_contrast_by_level,straddle_colour_by_level,straddle_contrast_measured,straddle_colour_measured,pairs_with_the_original
+A4_haze_cc,b_sd,all typed,36290,15181,15517,15449,15545,1548
+A4_haze_cc,b_sd,sat_only,3279,0,2625,1,2627,94
+A4_haze_cc,b_sd,fog_only,4093,2332,0,2359,0,188
+A4_haze_cc,b_sd,together,20136,8577,8830,8803,8848,827
+A4_haze_cc,b_sd,conflict,8782,4272,4062,4286,4070,439
+A4_haze_cc,r_ratio,all typed,34818,14309,15220,14586,15282,1533
+A4_haze_cc,r_ratio,sat_only,3239,0,2604,1,2608,94
+A4_haze_cc,r_ratio,fog_only,4669,2298,13,2327,2,205
+A4_haze_cc,r_ratio,together,18544,8417,8289,8643,8301,814
+A4_haze_cc,r_ratio,conflict,8366,3594,4314,3615,4371,420
+A4_haze_cc_rgb,b_sd,all typed,36120,15081,15529,15349,15676,1537
+A4_haze_cc_rgb,b_sd,sat_only,3290,0,2626,1,2638,94
+A4_haze_cc_rgb,b_sd,fog_only,3976,2230,0,2256,0,187
+A4_haze_cc_rgb,b_sd,together,20283,8651,8844,8878,8930,831
+A4_haze_cc_rgb,b_sd,conflict,8571,4200,4059,4214,4108,425
+A4_haze_cc_rgb,r_ratio,all typed,34643,14131,15162,14410,15353,1540
+A4_haze_cc_rgb,r_ratio,sat_only,3258,0,2605,1,2621,94
+A4_haze_cc_rgb,r_ratio,fog_only,4402,2094,0,2122,2,206
+A4_haze_cc_rgb,r_ratio,together,18804,8553,8307,8781,8412,823
+A4_haze_cc_rgb,r_ratio,conflict,8179,3484,4250,3506,4318,417
+B1_pyramid,b_sd,all typed,36140,14852,15506,15125,19149,1524
+B1_pyramid,b_sd,sat_only,3290,0,2632,1,2837,94
+B1_pyramid,b_sd,fog_only,3793,2071,0,2100,69,147
+B1_pyramid,b_sd,together,20784,9019,8855,9246,11976,843
+B1_pyramid,b_sd,conflict,8273,3762,4019,3778,4267,440
+B1_pyramid,r_ratio,all typed,34914,14168,15115,14451,18786,1491
+B1_pyramid,r_ratio,sat_only,3287,0,2629,1,2849,94
+B1_pyramid,r_ratio,fog_only,4398,2069,0,2103,75,154
+B1_pyramid,r_ratio,together,19498,9050,8324,9278,11410,830
+B1_pyramid,r_ratio,conflict,7731,3049,4162,3069,4452,413
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed,9866,0,2867,0,1968,0
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,1246,0,865,0,438,0
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,943,0,5,0,0,0
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,6198,0,1366,0,1479,0
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,1479,0,631,0,51,0

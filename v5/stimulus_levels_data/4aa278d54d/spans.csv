@@ -1,0 +1,283 @@
+scene_id,approach,feature,family_down,family_up,reach_down_sd,limit_down,reach_up_sd,limit_up,span_sd,set_aside
+alley_00001206,A4_haze_cc,contrast,haze_eq,dehaze_L,2.493,end of grid,2.8066,feature peaks,2.493,False
+apartment_building_outdoor_00004677,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4266,end of grid,3.6086,feature peaks,2.4266,False
+auditorium_00001394,A4_haze_cc,contrast,haze_eq,dehaze_L,2.5571,end of grid,3.4621,feature peaks,2.5571,False
+balcony_interior_00004440,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4362,end of grid,2.3475,feature peaks,2.3475,False
+bathroom_00001909,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4424,end of grid,2.5785,feature peaks,2.4424,False
+bedroom_00001289,A4_haze_cc,contrast,haze_eq,dehaze_L,2.3059,end of grid,3.6031,feature peaks,2.3059,False
+boardwalk_00001503,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4291,end of grid,5.5163,end of grid,2.4291,False
+cafeteria_00002762,A4_haze_cc,contrast,haze_eq,dehaze_L,2.8123,end of grid,3.2024,feature peaks,2.8123,False
+campus_00003823,A4_haze_cc,contrast,haze_eq,dehaze_L,2.7618,end of grid,3.4045,feature peaks,2.7618,False
+campus_00004529,A4_haze_cc,contrast,haze_eq,dehaze_L,2.9831,end of grid,6.4812,end of grid,2.9831,False
+computer_room_00001489,A4_haze_cc,contrast,haze_eq,dehaze_L,2.6549,end of grid,2.7258,feature peaks,2.6549,False
+conference_room_00002730,A4_haze_cc,contrast,haze_eq,dehaze_L,2.774,end of grid,3.486,feature peaks,2.774,False
+courtyard_00004070,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4659,end of grid,3.6613,end of grid,2.4659,False
+crosswalk_00001791,A4_haze_cc,contrast,haze_eq,dehaze_L,2.1566,end of grid,2.426,feature peaks,2.1566,False
+dining_hall_00001273,A4_haze_cc,contrast,haze_eq,dehaze_L,3.1513,end of grid,3.4977,feature peaks,3.1513,False
+dining_hall_00001301,A4_haze_cc,contrast,haze_eq,dehaze_L,2.3729,end of grid,2.7363,feature peaks,2.3729,False
+dining_room_00003076,A4_haze_cc,contrast,haze_eq,dehaze_L,2.5533,end of grid,2.4971,feature peaks,2.4971,False
+downtown_00001598,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4513,end of grid,2.4089,feature peaks,2.4089,False
+downtown_00001745,A4_haze_cc,contrast,haze_eq,dehaze_L,2.7352,end of grid,2.6654,feature peaks,2.6654,False
+downtown_00004891,A4_haze_cc,contrast,haze_eq,dehaze_L,3.3031,end of grid,3.0337,feature peaks,3.0337,False
+driveway_00001180,A4_haze_cc,contrast,haze_eq,dehaze_L,2.2959,end of grid,5.7331,feature peaks,2.2959,False
+driveway_00003009,A4_haze_cc,contrast,haze_eq,dehaze_L,3.6155,end of grid,3.3914,feature peaks,3.3914,False
+elevator_lobby_00003261,A4_haze_cc,contrast,haze_eq,dehaze_L,2.2239,end of grid,4.5762,feature peaks,2.2239,False
+elevator_lobby_00003556,A4_haze_cc,contrast,haze_eq,dehaze_L,2.2135,end of grid,3.5023,feature peaks,2.2135,False
+gymnasium_indoor_00003333,A4_haze_cc,contrast,haze_eq,dehaze_L,3.4657,end of grid,4.3388,feature peaks,3.4657,False
+home_office_00004226,A4_haze_cc,contrast,haze_eq,dehaze_L,2.3867,end of grid,2.5211,feature peaks,2.3867,False
+japanese_garden_00000532,A4_haze_cc,contrast,haze_eq,dehaze_L,2.5443,end of grid,3.3227,feature peaks,2.5443,False
+japanese_garden_00001073,A4_haze_cc,contrast,haze_eq,dehaze_L,2.6184,end of grid,3.8086,feature peaks,2.6184,False
+japanese_garden_00001226,A4_haze_cc,contrast,haze_eq,dehaze_L,3.3351,end of grid,4.3179,feature peaks,3.3351,False
+laundromat_00004208,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4161,end of grid,3.2678,feature peaks,2.4161,False
+living_room_00002633,A4_haze_cc,contrast,haze_eq,dehaze_L,2.1666,end of grid,2.8558,feature peaks,2.1666,False
+lobby_00001554,A4_haze_cc,contrast,haze_eq,dehaze_L,2.6873,end of grid,3.2471,feature peaks,2.6873,False
+park_00001014,A4_haze_cc,contrast,haze_eq,dehaze_L,3.1079,end of grid,3.8918,feature peaks,3.1079,False
+parking_garage_outdoor_00003825,A4_haze_cc,contrast,haze_eq,dehaze_L,2.9348,end of grid,2.2439,feature peaks,2.2439,False
+picnic_area_00000702,A4_haze_cc,contrast,haze_eq,dehaze_L,3.1553,end of grid,4.207,feature peaks,3.1553,False
+picnic_area_00004871,A4_haze_cc,contrast,haze_eq,dehaze_L,3.0917,end of grid,2.8771,feature peaks,2.8771,False
+promenade_00002520,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4201,end of grid,3.5747,feature peaks,2.4201,False
+residential_neighborhood_00001583,A4_haze_cc,contrast,haze_eq,dehaze_L,2.6543,end of grid,3.0922,feature peaks,2.6543,False
+restaurant_00000867,A4_haze_cc,contrast,haze_eq,dehaze_L,2.7961,end of grid,2.4054,feature peaks,2.4054,False
+shopping_mall_indoor_00003139,A4_haze_cc,contrast,haze_eq,dehaze_L,2.8595,end of grid,4.0596,end of grid,2.8595,False
+shower_00000779,A4_haze_cc,contrast,haze_eq,dehaze_L,2.5078,end of grid,3.7694,feature peaks,2.5078,False
+subway_station_platform_00003408,A4_haze_cc,contrast,haze_eq,dehaze_L,2.2484,end of grid,3.3341,feature peaks,2.2484,False
+subway_station_platform_00004871,A4_haze_cc,contrast,haze_eq,dehaze_L,3.1609,end of grid,2.7157,feature peaks,2.7157,False
+train_interior_00004637,A4_haze_cc,contrast,haze_eq,dehaze_L,2.7386,end of grid,4.4179,feature peaks,2.7386,False
+train_station_platform_00003977,A4_haze_cc,contrast,haze_eq,dehaze_L,2.4569,end of grid,3.4214,feature peaks,2.4569,False
+waiting_room_00002953,A4_haze_cc,contrast,haze_eq,dehaze_L,2.2344,end of grid,2.776,feature peaks,2.2344,False
+yard_00000709,A4_haze_cc,contrast,haze_eq,dehaze_L,3.5487,end of grid,5.4574,feature peaks,3.5487,False
+alley_00001206,A4_haze_cc,colour,chroma,chroma,1.6494,end of grid,1.7289,end of grid,1.6494,False
+apartment_building_outdoor_00004677,A4_haze_cc,colour,chroma,chroma,1.7779,end of grid,1.9641,end of grid,1.7779,False
+auditorium_00001394,A4_haze_cc,colour,chroma,chroma,2.2057,end of grid,1.9106,end of grid,1.9106,False
+balcony_interior_00004440,A4_haze_cc,colour,chroma,chroma,1.9295,end of grid,1.6488,end of grid,1.6488,False
+bathroom_00001909,A4_haze_cc,colour,chroma,chroma,2.1389,end of grid,1.9461,end of grid,1.9461,False
+bedroom_00001289,A4_haze_cc,colour,chroma,chroma,2.1654,end of grid,1.9386,end of grid,1.9386,False
+boardwalk_00001503,A4_haze_cc,colour,chroma,chroma,2.3963,end of grid,2.4349,end of grid,2.3963,False
+cafeteria_00002762,A4_haze_cc,colour,chroma,chroma,1.919,end of grid,2.5647,end of grid,1.919,False
+campus_00003823,A4_haze_cc,colour,chroma,chroma,1.9515,end of grid,1.6782,end of grid,1.6782,False
+campus_00004529,A4_haze_cc,colour,chroma,chroma,1.419,end of grid,2.0283,end of grid,1.419,False
+computer_room_00001489,A4_haze_cc,colour,chroma,chroma,1.8426,end of grid,2.4733,end of grid,1.8426,False
+conference_room_00002730,A4_haze_cc,colour,chroma,chroma,1.6421,end of grid,1.7661,end of grid,1.6421,False
+courtyard_00004070,A4_haze_cc,colour,chroma,chroma,2.1726,end of grid,1.9582,end of grid,1.9582,False
+crosswalk_00001791,A4_haze_cc,colour,chroma,chroma,1.7703,end of grid,1.7301,end of grid,1.7301,False
+dining_hall_00001273,A4_haze_cc,colour,chroma,chroma,1.6833,end of grid,2.0037,end of grid,1.6833,False
+dining_hall_00001301,A4_haze_cc,colour,chroma,chroma,1.9677,end of grid,1.667,end of grid,1.667,False
+dining_room_00003076,A4_haze_cc,colour,chroma,chroma,2.2647,end of grid,1.8541,end of grid,1.8541,False
+downtown_00001598,A4_haze_cc,colour,chroma,chroma,1.6359,end of grid,2.2603,end of grid,1.6359,False
+downtown_00001745,A4_haze_cc,colour,chroma,chroma,1.5484,end of grid,2.4529,end of grid,1.5484,False
+downtown_00004891,A4_haze_cc,colour,chroma,chroma,1.6747,end of grid,2.0962,end of grid,1.6747,False
+driveway_00001180,A4_haze_cc,colour,chroma,chroma,1.556,end of grid,2.2471,end of grid,1.556,False
+driveway_00003009,A4_haze_cc,colour,chroma,chroma,2.0473,end of grid,2.6672,end of grid,2.0473,False
+elevator_lobby_00003261,A4_haze_cc,colour,chroma,chroma,2.1966,end of grid,2.4892,end of grid,2.1966,False
+elevator_lobby_00003556,A4_haze_cc,colour,chroma,chroma,1.6436,end of grid,1.8581,end of grid,1.6436,False
+gymnasium_indoor_00003333,A4_haze_cc,colour,chroma,chroma,2.1187,end of grid,2.2876,end of grid,2.1187,False
+home_office_00004226,A4_haze_cc,colour,chroma,chroma,2.4405,end of grid,1.9886,end of grid,1.9886,False
+japanese_garden_00000532,A4_haze_cc,colour,chroma,chroma,2.1325,end of grid,2.6478,end of grid,2.1325,False
+japanese_garden_00001073,A4_haze_cc,colour,chroma,chroma,1.8524,end of grid,2.0257,end of grid,1.8524,False
+japanese_garden_00001226,A4_haze_cc,colour,chroma,chroma,2.422,end of grid,2.2771,end of grid,2.2771,False
+laundromat_00004208,A4_haze_cc,colour,chroma,chroma,1.7558,end of grid,1.8339,end of grid,1.7558,False
+living_room_00002633,A4_haze_cc,colour,chroma,chroma,2.1922,end of grid,2.3221,end of grid,2.1922,False
+lobby_00001554,A4_haze_cc,colour,chroma,chroma,1.8161,end of grid,2.0112,end of grid,1.8161,False
+park_00001014,A4_haze_cc,colour,chroma,chroma,1.625,end of grid,2.0755,end of grid,1.625,False
+parking_garage_outdoor_00003825,A4_haze_cc,colour,chroma,chroma,1.3899,end of grid,1.6633,end of grid,1.3899,False
+picnic_area_00000702,A4_haze_cc,colour,chroma,chroma,2.2629,end of grid,1.9686,end of grid,1.9686,False
+picnic_area_00004871,A4_haze_cc,colour,chroma,chroma,2.2053,end of grid,1.9567,end of grid,1.9567,False
+promenade_00002520,A4_haze_cc,colour,chroma,chroma,1.7177,end of grid,1.8483,end of grid,1.7177,False
+residential_neighborhood_00001583,A4_haze_cc,colour,chroma,chroma,2.3138,end of grid,1.6072,end of grid,1.6072,False
+restaurant_00000867,A4_haze_cc,colour,chroma,chroma,1.6955,end of grid,1.7537,end of grid,1.6955,False
+shopping_mall_indoor_00003139,A4_haze_cc,colour,chroma,chroma,1.4146,end of grid,2.1094,end of grid,1.4146,False
+shower_00000779,A4_haze_cc,colour,chroma,chroma,1.8915,end of grid,2.0645,end of grid,1.8915,False
+subway_station_platform_00003408,A4_haze_cc,colour,chroma,chroma,1.9298,end of grid,2.3383,end of grid,1.9298,False
+subway_station_platform_00004871,A4_haze_cc,colour,chroma,chroma,2.1143,end of grid,2.0971,end of grid,2.0971,False
+train_interior_00004637,A4_haze_cc,colour,chroma,chroma,1.7798,end of grid,2.1446,end of grid,1.7798,False
+train_station_platform_00003977,A4_haze_cc,colour,chroma,chroma,1.5356,end of grid,1.8666,end of grid,1.5356,False
+waiting_room_00002953,A4_haze_cc,colour,chroma,chroma,1.6935,end of grid,2.1619,end of grid,1.6935,False
+yard_00000709,A4_haze_cc,colour,chroma,chroma,1.6499,end of grid,2.2099,end of grid,1.6499,False
+alley_00001206,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.493,end of grid,2.6944,feature peaks,2.493,False
+apartment_building_outdoor_00004677,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4266,end of grid,3.2148,feature peaks,2.4266,False
+auditorium_00001394,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.5571,end of grid,3.2273,feature peaks,2.5571,False
+balcony_interior_00004440,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4362,end of grid,2.2153,feature peaks,2.2153,False
+bathroom_00001909,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4424,end of grid,2.4508,feature peaks,2.4424,False
+bedroom_00001289,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.3059,end of grid,3.4521,feature peaks,2.3059,False
+boardwalk_00001503,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4291,end of grid,4.2882,end of grid,2.4291,False
+cafeteria_00002762,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.8123,end of grid,3.0536,feature peaks,2.8123,False
+campus_00003823,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.7618,end of grid,3.0441,feature peaks,2.7618,False
+campus_00004529,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.9831,end of grid,6.4674,end of grid,2.9831,False
+computer_room_00001489,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.6549,end of grid,2.5669,feature peaks,2.5669,False
+conference_room_00002730,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.774,end of grid,3.0215,feature peaks,2.774,False
+courtyard_00004070,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4659,end of grid,3.4193,feature peaks,2.4659,False
+crosswalk_00001791,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.1566,end of grid,2.3494,feature peaks,2.1566,False
+dining_hall_00001273,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.1513,end of grid,3.498,feature peaks,3.1513,False
+dining_hall_00001301,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.3729,end of grid,2.1394,feature peaks,2.1394,False
+dining_room_00003076,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.5533,end of grid,2.1804,feature peaks,2.1804,False
+downtown_00001598,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4513,end of grid,2.3142,feature peaks,2.3142,False
+downtown_00001745,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.7352,end of grid,2.4273,feature peaks,2.4273,False
+downtown_00004891,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.3031,end of grid,2.9288,feature peaks,2.9288,False
+driveway_00001180,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.2959,end of grid,4.7952,feature peaks,2.2959,False
+driveway_00003009,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.6155,end of grid,3.1045,feature peaks,3.1045,False
+elevator_lobby_00003261,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.2239,end of grid,3.8277,feature peaks,2.2239,False
+elevator_lobby_00003556,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.2135,end of grid,3.232,feature peaks,2.2135,False
+gymnasium_indoor_00003333,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.4657,end of grid,3.8077,feature peaks,3.4657,False
+home_office_00004226,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.3867,end of grid,2.0351,feature peaks,2.0351,False
+japanese_garden_00000532,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.5443,end of grid,3.0295,feature peaks,2.5443,False
+japanese_garden_00001073,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.6184,end of grid,3.569,feature peaks,2.6184,False
+japanese_garden_00001226,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.3351,end of grid,3.9563,feature peaks,3.3351,False
+laundromat_00004208,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4161,end of grid,3.1604,feature peaks,2.4161,False
+living_room_00002633,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.1666,end of grid,2.503,feature peaks,2.1666,False
+lobby_00001554,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.6873,end of grid,2.9541,feature peaks,2.6873,False
+park_00001014,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.1079,end of grid,3.6061,feature peaks,3.1079,False
+parking_garage_outdoor_00003825,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.9348,end of grid,2.043,feature peaks,2.043,False
+picnic_area_00000702,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.1553,end of grid,3.8756,feature peaks,3.1553,False
+picnic_area_00004871,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.0917,end of grid,2.5637,feature peaks,2.5637,False
+promenade_00002520,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4201,end of grid,3.3551,feature peaks,2.4201,False
+residential_neighborhood_00001583,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.6543,end of grid,2.816,feature peaks,2.6543,False
+restaurant_00000867,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.7961,end of grid,2.0778,feature peaks,2.0778,False
+shopping_mall_indoor_00003139,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.8595,end of grid,3.6142,feature peaks,2.8595,False
+shower_00000779,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.5078,end of grid,3.4654,feature peaks,2.5078,False
+subway_station_platform_00003408,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.2484,end of grid,2.9807,feature peaks,2.2484,False
+subway_station_platform_00004871,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.1609,end of grid,2.5765,feature peaks,2.5765,False
+train_interior_00004637,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.7386,end of grid,4.1947,feature peaks,2.7386,False
+train_station_platform_00003977,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.4569,end of grid,2.9125,feature peaks,2.4569,False
+waiting_room_00002953,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,2.2344,end of grid,2.6095,feature peaks,2.2344,False
+yard_00000709,A4_haze_cc_rgb,contrast,haze_eq,dehaze_rgb,3.5487,end of grid,5.1824,feature peaks,3.5487,False
+alley_00001206,A4_haze_cc_rgb,colour,chroma,chroma,1.6494,end of grid,1.7289,end of grid,1.6494,False
+apartment_building_outdoor_00004677,A4_haze_cc_rgb,colour,chroma,chroma,1.7779,end of grid,1.9641,end of grid,1.7779,False
+auditorium_00001394,A4_haze_cc_rgb,colour,chroma,chroma,2.2057,end of grid,1.9106,end of grid,1.9106,False
+balcony_interior_00004440,A4_haze_cc_rgb,colour,chroma,chroma,1.9295,end of grid,1.6488,end of grid,1.6488,False
+bathroom_00001909,A4_haze_cc_rgb,colour,chroma,chroma,2.1389,end of grid,1.9461,end of grid,1.9461,False
+bedroom_00001289,A4_haze_cc_rgb,colour,chroma,chroma,2.1654,end of grid,1.9386,end of grid,1.9386,False
+boardwalk_00001503,A4_haze_cc_rgb,colour,chroma,chroma,2.3963,end of grid,2.4349,end of grid,2.3963,False
+cafeteria_00002762,A4_haze_cc_rgb,colour,chroma,chroma,1.919,end of grid,2.5647,end of grid,1.919,False
+campus_00003823,A4_haze_cc_rgb,colour,chroma,chroma,1.9515,end of grid,1.6782,end of grid,1.6782,False
+campus_00004529,A4_haze_cc_rgb,colour,chroma,chroma,1.419,end of grid,2.0283,end of grid,1.419,False
+computer_room_00001489,A4_haze_cc_rgb,colour,chroma,chroma,1.8426,end of grid,2.4733,end of grid,1.8426,False
+conference_room_00002730,A4_haze_cc_rgb,colour,chroma,chroma,1.6421,end of grid,1.7661,end of grid,1.6421,False
+courtyard_00004070,A4_haze_cc_rgb,colour,chroma,chroma,2.1726,end of grid,1.9582,end of grid,1.9582,False
+crosswalk_00001791,A4_haze_cc_rgb,colour,chroma,chroma,1.7703,end of grid,1.7301,end of grid,1.7301,False
+dining_hall_00001273,A4_haze_cc_rgb,colour,chroma,chroma,1.6833,end of grid,2.0037,end of grid,1.6833,False
+dining_hall_00001301,A4_haze_cc_rgb,colour,chroma,chroma,1.9677,end of grid,1.667,end of grid,1.667,False
+dining_room_00003076,A4_haze_cc_rgb,colour,chroma,chroma,2.2647,end of grid,1.8541,end of grid,1.8541,False
+downtown_00001598,A4_haze_cc_rgb,colour,chroma,chroma,1.6359,end of grid,2.2603,end of grid,1.6359,False
+downtown_00001745,A4_haze_cc_rgb,colour,chroma,chroma,1.5484,end of grid,2.4529,end of grid,1.5484,False
+downtown_00004891,A4_haze_cc_rgb,colour,chroma,chroma,1.6747,end of grid,2.0962,end of grid,1.6747,False
+driveway_00001180,A4_haze_cc_rgb,colour,chroma,chroma,1.556,end of grid,2.2471,end of grid,1.556,False
+driveway_00003009,A4_haze_cc_rgb,colour,chroma,chroma,2.0473,end of grid,2.6672,end of grid,2.0473,False
+elevator_lobby_00003261,A4_haze_cc_rgb,colour,chroma,chroma,2.1966,end of grid,2.4892,end of grid,2.1966,False
+elevator_lobby_00003556,A4_haze_cc_rgb,colour,chroma,chroma,1.6436,end of grid,1.8581,end of grid,1.6436,False
+gymnasium_indoor_00003333,A4_haze_cc_rgb,colour,chroma,chroma,2.1187,end of grid,2.2876,end of grid,2.1187,False
+home_office_00004226,A4_haze_cc_rgb,colour,chroma,chroma,2.4405,end of grid,1.9886,end of grid,1.9886,False
+japanese_garden_00000532,A4_haze_cc_rgb,colour,chroma,chroma,2.1325,end of grid,2.6478,end of grid,2.1325,False
+japanese_garden_00001073,A4_haze_cc_rgb,colour,chroma,chroma,1.8524,end of grid,2.0257,end of grid,1.8524,False
+japanese_garden_00001226,A4_haze_cc_rgb,colour,chroma,chroma,2.422,end of grid,2.2771,end of grid,2.2771,False
+laundromat_00004208,A4_haze_cc_rgb,colour,chroma,chroma,1.7558,end of grid,1.8339,end of grid,1.7558,False
+living_room_00002633,A4_haze_cc_rgb,colour,chroma,chroma,2.1922,end of grid,2.3221,end of grid,2.1922,False
+lobby_00001554,A4_haze_cc_rgb,colour,chroma,chroma,1.8161,end of grid,2.0112,end of grid,1.8161,False
+park_00001014,A4_haze_cc_rgb,colour,chroma,chroma,1.625,end of grid,2.0755,end of grid,1.625,False
+parking_garage_outdoor_00003825,A4_haze_cc_rgb,colour,chroma,chroma,1.3899,end of grid,1.6633,end of grid,1.3899,False
+picnic_area_00000702,A4_haze_cc_rgb,colour,chroma,chroma,2.2629,end of grid,1.9686,end of grid,1.9686,False
+picnic_area_00004871,A4_haze_cc_rgb,colour,chroma,chroma,2.2053,end of grid,1.9567,end of grid,1.9567,False
+promenade_00002520,A4_haze_cc_rgb,colour,chroma,chroma,1.7177,end of grid,1.8483,end of grid,1.7177,False
+residential_neighborhood_00001583,A4_haze_cc_rgb,colour,chroma,chroma,2.3138,end of grid,1.6072,end of grid,1.6072,False
+restaurant_00000867,A4_haze_cc_rgb,colour,chroma,chroma,1.6955,end of grid,1.7537,end of grid,1.6955,False
+shopping_mall_indoor_00003139,A4_haze_cc_rgb,colour,chroma,chroma,1.4146,end of grid,2.1094,end of grid,1.4146,False
+shower_00000779,A4_haze_cc_rgb,colour,chroma,chroma,1.8915,end of grid,2.0645,end of grid,1.8915,False
+subway_station_platform_00003408,A4_haze_cc_rgb,colour,chroma,chroma,1.9298,end of grid,2.3383,end of grid,1.9298,False
+subway_station_platform_00004871,A4_haze_cc_rgb,colour,chroma,chroma,2.1143,end of grid,2.0971,end of grid,2.0971,False
+train_interior_00004637,A4_haze_cc_rgb,colour,chroma,chroma,1.7798,end of grid,2.1446,end of grid,1.7798,False
+train_station_platform_00003977,A4_haze_cc_rgb,colour,chroma,chroma,1.5356,end of grid,1.8666,end of grid,1.5356,False
+waiting_room_00002953,A4_haze_cc_rgb,colour,chroma,chroma,1.6935,end of grid,2.1619,end of grid,1.6935,False
+yard_00000709,A4_haze_cc_rgb,colour,chroma,chroma,1.6499,end of grid,2.2099,end of grid,1.6499,False
+alley_00001206,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3623,end of grid,4.2962,end of grid,2.3623,False
+apartment_building_outdoor_00004677,B1_pyramid,contrast,pyramid_L,pyramid_L,2.339,end of grid,4.5967,end of grid,2.339,False
+auditorium_00001394,B1_pyramid,contrast,pyramid_L,pyramid_L,2.4327,end of grid,4.2438,end of grid,2.4327,False
+balcony_interior_00004440,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3904,end of grid,3.1259,end of grid,2.3904,False
+bathroom_00001909,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3211,end of grid,3.6682,end of grid,2.3211,False
+bedroom_00001289,B1_pyramid,contrast,pyramid_L,pyramid_L,2.1965,end of grid,4.0075,end of grid,2.1965,False
+boardwalk_00001503,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3761,end of grid,5.5768,end of grid,2.3761,False
+cafeteria_00002762,B1_pyramid,contrast,pyramid_L,pyramid_L,2.7086,end of grid,4.0105,end of grid,2.7086,False
+campus_00003823,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6867,end of grid,5.179,end of grid,2.6867,False
+campus_00004529,B1_pyramid,contrast,pyramid_L,pyramid_L,2.9557,end of grid,6.3909,end of grid,2.9557,False
+computer_room_00001489,B1_pyramid,contrast,pyramid_L,pyramid_L,2.5724,end of grid,3.8574,end of grid,2.5724,False
+conference_room_00002730,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6978,end of grid,3.8869,end of grid,2.6978,False
+courtyard_00004070,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3914,end of grid,4.1379,end of grid,2.3914,False
+crosswalk_00001791,B1_pyramid,contrast,pyramid_L,pyramid_L,2.0262,end of grid,3.2805,end of grid,2.0262,False
+dining_hall_00001273,B1_pyramid,contrast,pyramid_L,pyramid_L,3.0172,end of grid,5.1455,end of grid,3.0172,False
+dining_hall_00001301,B1_pyramid,contrast,pyramid_L,pyramid_L,2.2649,end of grid,3.9938,end of grid,2.2649,False
+dining_room_00003076,B1_pyramid,contrast,pyramid_L,pyramid_L,2.4279,end of grid,3.6639,end of grid,2.4279,False
+downtown_00001598,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3527,end of grid,3.9412,end of grid,2.3527,False
+downtown_00001745,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6406,end of grid,3.5707,end of grid,2.6406,False
+downtown_00004891,B1_pyramid,contrast,pyramid_L,pyramid_L,3.2104,end of grid,3.8141,end of grid,3.2104,False
+driveway_00001180,B1_pyramid,contrast,pyramid_L,pyramid_L,2.2445,end of grid,6.2344,end of grid,2.2445,False
+driveway_00003009,B1_pyramid,contrast,pyramid_L,pyramid_L,3.5297,end of grid,6.1538,end of grid,3.5297,False
+elevator_lobby_00003261,B1_pyramid,contrast,pyramid_L,pyramid_L,2.1471,end of grid,5.078,end of grid,2.1471,False
+elevator_lobby_00003556,B1_pyramid,contrast,pyramid_L,pyramid_L,2.1165,end of grid,4.0344,end of grid,2.1165,False
+gymnasium_indoor_00003333,B1_pyramid,contrast,pyramid_L,pyramid_L,3.3711,end of grid,4.7264,end of grid,3.3711,False
+home_office_00004226,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3069,end of grid,3.7497,end of grid,2.3069,False
+japanese_garden_00000532,B1_pyramid,contrast,pyramid_L,pyramid_L,2.452,end of grid,5.0936,end of grid,2.452,False
+japanese_garden_00001073,B1_pyramid,contrast,pyramid_L,pyramid_L,2.5569,end of grid,5.2068,end of grid,2.5569,False
+japanese_garden_00001226,B1_pyramid,contrast,pyramid_L,pyramid_L,3.2376,end of grid,5.9184,end of grid,3.2376,False
+laundromat_00004208,B1_pyramid,contrast,pyramid_L,pyramid_L,2.2978,end of grid,4.0392,end of grid,2.2978,False
+living_room_00002633,B1_pyramid,contrast,pyramid_L,pyramid_L,2.0551,end of grid,3.5822,end of grid,2.0551,False
+lobby_00001554,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6054,end of grid,4.2774,end of grid,2.6054,False
+park_00001014,B1_pyramid,contrast,pyramid_L,pyramid_L,3.0162,end of grid,5.9598,end of grid,3.0162,False
+parking_garage_outdoor_00003825,B1_pyramid,contrast,pyramid_L,pyramid_L,2.882,end of grid,3.5923,end of grid,2.882,False
+picnic_area_00000702,B1_pyramid,contrast,pyramid_L,pyramid_L,3.0901,end of grid,5.49,end of grid,3.0901,False
+picnic_area_00004871,B1_pyramid,contrast,pyramid_L,pyramid_L,3.0048,end of grid,4.6891,end of grid,3.0048,False
+promenade_00002520,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3605,end of grid,5.1938,end of grid,2.3605,False
+residential_neighborhood_00001583,B1_pyramid,contrast,pyramid_L,pyramid_L,2.578,end of grid,4.8286,end of grid,2.578,False
+restaurant_00000867,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6884,end of grid,3.5905,end of grid,2.6884,False
+shopping_mall_indoor_00003139,B1_pyramid,contrast,pyramid_L,pyramid_L,2.7552,end of grid,5.1948,end of grid,2.7552,False
+shower_00000779,B1_pyramid,contrast,pyramid_L,pyramid_L,2.4085,end of grid,4.4286,end of grid,2.4085,False
+subway_station_platform_00003408,B1_pyramid,contrast,pyramid_L,pyramid_L,2.1528,end of grid,3.7917,end of grid,2.1528,False
+subway_station_platform_00004871,B1_pyramid,contrast,pyramid_L,pyramid_L,3.0313,end of grid,4.4056,end of grid,3.0313,False
+train_interior_00004637,B1_pyramid,contrast,pyramid_L,pyramid_L,2.6468,end of grid,5.3165,end of grid,2.6468,False
+train_station_platform_00003977,B1_pyramid,contrast,pyramid_L,pyramid_L,2.3753,end of grid,3.9338,end of grid,2.3753,False
+waiting_room_00002953,B1_pyramid,contrast,pyramid_L,pyramid_L,2.1352,end of grid,3.7828,end of grid,2.1352,False
+yard_00000709,B1_pyramid,contrast,pyramid_L,pyramid_L,3.4974,end of grid,6.7304,end of grid,3.4974,False
+alley_00001206,B1_pyramid,colour,chroma,chroma,1.6494,end of grid,1.7289,end of grid,1.6494,False
+apartment_building_outdoor_00004677,B1_pyramid,colour,chroma,chroma,1.7779,end of grid,1.9641,end of grid,1.7779,False
+auditorium_00001394,B1_pyramid,colour,chroma,chroma,2.2057,end of grid,1.9106,end of grid,1.9106,False
+balcony_interior_00004440,B1_pyramid,colour,chroma,chroma,1.9295,end of grid,1.6488,end of grid,1.6488,False
+bathroom_00001909,B1_pyramid,colour,chroma,chroma,2.1389,end of grid,1.9461,end of grid,1.9461,False
+bedroom_00001289,B1_pyramid,colour,chroma,chroma,2.1654,end of grid,1.9386,end of grid,1.9386,False
+boardwalk_00001503,B1_pyramid,colour,chroma,chroma,2.3963,end of grid,2.4349,end of grid,2.3963,False
+cafeteria_00002762,B1_pyramid,colour,chroma,chroma,1.919,end of grid,2.5647,end of grid,1.919,False
+campus_00003823,B1_pyramid,colour,chroma,chroma,1.9515,end of grid,1.6782,end of grid,1.6782,False
+campus_00004529,B1_pyramid,colour,chroma,chroma,1.419,end of grid,2.0283,end of grid,1.419,False
+computer_room_00001489,B1_pyramid,colour,chroma,chroma,1.8426,end of grid,2.4733,end of grid,1.8426,False
+conference_room_00002730,B1_pyramid,colour,chroma,chroma,1.6421,end of grid,1.7661,end of grid,1.6421,False
+courtyard_00004070,B1_pyramid,colour,chroma,chroma,2.1726,end of grid,1.9582,end of grid,1.9582,False
+crosswalk_00001791,B1_pyramid,colour,chroma,chroma,1.7703,end of grid,1.7301,end of grid,1.7301,False
+dining_hall_00001273,B1_pyramid,colour,chroma,chroma,1.6833,end of grid,2.0037,end of grid,1.6833,False
+dining_hall_00001301,B1_pyramid,colour,chroma,chroma,1.9677,end of grid,1.667,end of grid,1.667,False
+dining_room_00003076,B1_pyramid,colour,chroma,chroma,2.2647,end of grid,1.8541,end of grid,1.8541,False
+downtown_00001598,B1_pyramid,colour,chroma,chroma,1.6359,end of grid,2.2603,end of grid,1.6359,False
+downtown_00001745,B1_pyramid,colour,chroma,chroma,1.5484,end of grid,2.4529,end of grid,1.5484,False
+downtown_00004891,B1_pyramid,colour,chroma,chroma,1.6747,end of grid,2.0962,end of grid,1.6747,False
+driveway_00001180,B1_pyramid,colour,chroma,chroma,1.556,end of grid,2.2471,end of grid,1.556,False
+driveway_00003009,B1_pyramid,colour,chroma,chroma,2.0473,end of grid,2.6672,end of grid,2.0473,False
+elevator_lobby_00003261,B1_pyramid,colour,chroma,chroma,2.1966,end of grid,2.4892,end of grid,2.1966,False
+elevator_lobby_00003556,B1_pyramid,colour,chroma,chroma,1.6436,end of grid,1.8581,end of grid,1.6436,False
+gymnasium_indoor_00003333,B1_pyramid,colour,chroma,chroma,2.1187,end of grid,2.2876,end of grid,2.1187,False
+home_office_00004226,B1_pyramid,colour,chroma,chroma,2.4405,end of grid,1.9886,end of grid,1.9886,False
+japanese_garden_00000532,B1_pyramid,colour,chroma,chroma,2.1325,end of grid,2.6478,end of grid,2.1325,False
+japanese_garden_00001073,B1_pyramid,colour,chroma,chroma,1.8524,end of grid,2.0257,end of grid,1.8524,False
+japanese_garden_00001226,B1_pyramid,colour,chroma,chroma,2.422,end of grid,2.2771,end of grid,2.2771,False
+laundromat_00004208,B1_pyramid,colour,chroma,chroma,1.7558,end of grid,1.8339,end of grid,1.7558,False
+living_room_00002633,B1_pyramid,colour,chroma,chroma,2.1922,end of grid,2.3221,end of grid,2.1922,False
+lobby_00001554,B1_pyramid,colour,chroma,chroma,1.8161,end of grid,2.0112,end of grid,1.8161,False
+park_00001014,B1_pyramid,colour,chroma,chroma,1.625,end of grid,2.0755,end of grid,1.625,False
+parking_garage_outdoor_00003825,B1_pyramid,colour,chroma,chroma,1.3899,end of grid,1.6633,end of grid,1.3899,False
+picnic_area_00000702,B1_pyramid,colour,chroma,chroma,2.2629,end of grid,1.9686,end of grid,1.9686,False
+picnic_area_00004871,B1_pyramid,colour,chroma,chroma,2.2053,end of grid,1.9567,end of grid,1.9567,False
+promenade_00002520,B1_pyramid,colour,chroma,chroma,1.7177,end of grid,1.8483,end of grid,1.7177,False
+residential_neighborhood_00001583,B1_pyramid,colour,chroma,chroma,2.3138,end of grid,1.6072,end of grid,1.6072,False
+restaurant_00000867,B1_pyramid,colour,chroma,chroma,1.6955,end of grid,1.7537,end of grid,1.6955,False
+shopping_mall_indoor_00003139,B1_pyramid,colour,chroma,chroma,1.4146,end of grid,2.1094,end of grid,1.4146,False
+shower_00000779,B1_pyramid,colour,chroma,chroma,1.8915,end of grid,2.0645,end of grid,1.8915,False
+subway_station_platform_00003408,B1_pyramid,colour,chroma,chroma,1.9298,end of grid,2.3383,end of grid,1.9298,False
+subway_station_platform_00004871,B1_pyramid,colour,chroma,chroma,2.1143,end of grid,2.0971,end of grid,2.0971,False
+train_interior_00004637,B1_pyramid,colour,chroma,chroma,1.7798,end of grid,2.1446,end of grid,1.7798,False
+train_station_platform_00003977,B1_pyramid,colour,chroma,chroma,1.5356,end of grid,1.8666,end of grid,1.5356,False
+waiting_room_00002953,B1_pyramid,colour,chroma,chroma,1.6935,end of grid,2.1619,end of grid,1.6935,False
+yard_00000709,B1_pyramid,colour,chroma,chroma,1.6499,end of grid,2.2099,end of grid,1.6499,False

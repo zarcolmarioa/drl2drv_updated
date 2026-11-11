@@ -1,0 +1,31 @@
+code,status,detail
+F1,PASS,copied feature code vs data/features on 8 images: max relative difference 1.1e-09 (tol 0.0001)
+R1,PASS,"re-measured stimulus-path reference vs data/levels_v4_ext/corpus_feature_stats_v4.csv, 18 percentiles + mean + sd of 18 features: worst relative difference 4.6e-06 (val_mean p20: 106.055 vs 106.055)"
+R2,PASS,"stimulus-path SD: sat_mean 39.1819 (v5 39.182), contrast_local 9.3480 (v5 9.348)"
+S1,PASS,"47 scenes in the v4 manifest (expected 47), one source photograph each, 47 on disk"
+C1,PASS,"calibration sample: 150 images, 150 shared with v4's per_image_levels.csv (150)"
+C0,NOTE,calibration sample median vs reference median: sat_mean 68.03 vs reference 66.45 (+0.4 SE); contrast_local 25.56 vs reference 26.91 (-1.4 SE)
+C2,PASS,"8 levels shared with data/levels_v4_ext/levels.csv (colour p35=0.7880, colour p25=0.6516, colour p15=0.5065, colour_up p65=1.3302, colour_up p75=1.7295, fog_eq p35=0.0771, fog_eq p25=0.1403, fog_eq p15=0.2245): worst relative difference 2.8e-06"
+R0,NOTE,definition (r): ratio per full step contrast_local q = 0.6526 (up: x1.5323); the corpus-median image moves contrast_local -1.00 / +1.53 SD
+RG,PASS,"this script's renderer equals v4's render_cell on all 1,974 v4 grid cells"
+RP1,PASS,v4 haze_eq x chroma cells re-rendered at v4's parameters: 1974/1974 pixel-identical to the v4 PNGs
+RP2,PASS,1974/1974 PNG files byte-identical as well
+I1,PASS,"every edit at its no-change setting, without the short cut (max pixel change; max |change| of sat_mean, contrast_local in SD): chroma 1.0 lv, 0.002, 0.000; clarity_L 1.0 lv, 0.002, 0.000; dehaze_L 1.0 lv, 0.004, 0.002; dehaze_rgb 1.0 lv, 0.000, 0.000; haze_eq 1.0 lv, 0.000, 0.000; pil_color 0.0 lv, 0.000, 0.000; pil_contrast 0.0 lv, 0.000, 0.000; pyramid_L 1.0 lv, 0.002, 0.000; sharpen_L 1.0 lv, 0.002, 0.000; tone_L 1.0 lv, 0.002, 0.000; tone_Y 0.0 lv, 0.000, 0.000. Rendered images use the short cut, so the original is exact."
+P1,PASS,Pillow output vs its float model (used to count clipping): max difference 1 level(s)
+P2,NOTE,"Pillow's blend truncates instead of rounding: at a factor within 1e-6 of 1 the output already shifts by -0.39 levels on average (every pixel, both directions), so a Pillow edit jumps at the original and levels very close to it cannot be hit exactly"
+L1,WARN,"definitions (b), (r): 3,145 of 3,383 uncapped levels within 0.01 SD of their target on the rendered image; worst by approach: A4_haze_cc_rgb 0.088, A4_haze_cc 0.032, B1_pyramid 0.002; 1 levels capped"
+M1,NOTE,"ladders with a collapsed or reversed step are listed in scene_fit.csv (contrast_monotone, colour_monotone)"
+M3,PASS,47 scenes each matching one corpus row
+A1,PASS,"264 vectors, unit length (max error 9.9e-08); 9 v4 axes, 9 nocontrol, 6 controls; corpus mean and SD for each"
+A2,PASS,"enclosure and darkness directions rebuilt from the caption embeddings; nocontrol vectors reproduced, min cos 1.000000"
+E1,PASS,"weights: 391 tensors loaded; missing 0, unexpected 0, unused checkpoint keys 0"
+E2,PASS,un2CLIP projection applied (differs from the standard one by up to 2.65e-04)
+T1,PASS,"text encoder: 19 stored captions re-encoded, min cos with caption_embeddings.npy 1.0000000"
+E3,PASS,"official loader, same pixels: min cos 1.000000 (16 stimuli)"
+E3b,PASS,official vs 'openai' preprocessing: min cos 1.000000
+C1,PASS,"image_index.csv is the index step 03 encoded (fingerprint 8cf642efe046...; 1,111,881 rows aligned with the embeddings)"
+C2,PASS,"79 corpus images re-encoded (47 scene sources + 32 random), opened as 03 opens them: min cos with stored embeddings 0.9999999, with stored pooled vectors 1.000000"
+C3,PASS,"z-scores on 24 axes vs scores_z.npy: max |diff| 4.9e-06 from the stored embeddings (tol 0.0001), 4.9e-06 from the re-encoded ones (tol 0.001)"
+S2c,PASS,"4230 embeddings finite, norm 1.000000 - 1.000000"
+S3c,PASS,8 images re-encoded one at a time: min cos 1.0000000
+CL1,PASS,"v4 cross cells re-scored here vs data/stimulus_axes_v4/cell_effects.csv: 33 cell x axis means, worst difference 4.7e-05 SD (tol 0.001)"

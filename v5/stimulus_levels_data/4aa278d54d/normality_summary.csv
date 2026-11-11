@@ -1,0 +1,337 @@
+approach,definition,subset,n_pairs,reference,normality_term,predictor,pearson,spearman
+A4_haze_cc,b_sd,all typed pairs,72580,corpus,combined,pred_sat,0.23927,0.21976
+A4_haze_cc,b_sd,all typed pairs,72580,corpus,combined,pred_fog,-0.11632,-0.10588
+A4_haze_cc,b_sd,all typed pairs,72580,corpus,sat,pred_sat,0.37848,0.34398
+A4_haze_cc,b_sd,all typed pairs,72580,corpus,con,pred_fog,-0.16572,-0.15621
+A4_haze_cc,b_sd,all typed pairs,72580,orig,combined,pred_sat,-0.039448,-0.045008
+A4_haze_cc,b_sd,all typed pairs,72580,orig,combined,pred_fog,-0.066434,-0.069898
+A4_haze_cc,b_sd,all typed pairs,72580,orig,sat,pred_sat,-0.040481,-0.05476
+A4_haze_cc,b_sd,all typed pairs,72580,orig,con,pred_fog,-0.01131,-0.052127
+A4_haze_cc,b_sd,all ordered pairs,110544,corpus,combined,pred_sat,0.27897,0.26271
+A4_haze_cc,b_sd,all ordered pairs,110544,corpus,combined,pred_fog,-0.16276,-0.14838
+A4_haze_cc,b_sd,all ordered pairs,110544,corpus,sat,pred_sat,0.39147,0.35732
+A4_haze_cc,b_sd,all ordered pairs,110544,corpus,con,pred_fog,-0.16595,-0.15345
+A4_haze_cc,b_sd,all ordered pairs,110544,orig,combined,pred_sat,-0.012467,-0.013855
+A4_haze_cc,b_sd,all ordered pairs,110544,orig,combined,pred_fog,-0.054308,-0.055405
+A4_haze_cc,b_sd,all ordered pairs,110544,orig,sat,pred_sat,-0.014111,-0.011922
+A4_haze_cc,b_sd,all ordered pairs,110544,orig,con,pred_fog,-0.0047743,-0.040064
+A4_haze_cc,b_sd,sat_only,6558,corpus,combined,pred_sat,0.43142,0.39488
+A4_haze_cc,b_sd,sat_only,6558,corpus,combined,pred_fog,0.18974,0.18975
+A4_haze_cc,b_sd,sat_only,6558,corpus,sat,pred_sat,0.43219,0.40139
+A4_haze_cc,b_sd,sat_only,6558,corpus,con,pred_fog,0.083657,-0.053113
+A4_haze_cc,b_sd,sat_only,6558,orig,combined,pred_sat,-0.01689,-0.021016
+A4_haze_cc,b_sd,sat_only,6558,orig,combined,pred_fog,-0.031473,-0.084937
+A4_haze_cc,b_sd,sat_only,6558,orig,sat,pred_sat,-0.019142,-0.01241
+A4_haze_cc,b_sd,sat_only,6558,orig,con,pred_fog,0.050371,-0.044013
+A4_haze_cc,b_sd,fog_only,8186,corpus,combined,pred_sat,0.075456,0.087603
+A4_haze_cc,b_sd,fog_only,8186,corpus,combined,pred_fog,-0.16228,-0.14367
+A4_haze_cc,b_sd,fog_only,8186,corpus,sat,pred_sat,0.58035,0.34177
+A4_haze_cc,b_sd,fog_only,8186,corpus,con,pred_fog,-0.14795,-0.11601
+A4_haze_cc,b_sd,fog_only,8186,orig,combined,pred_sat,0.038827,0.037181
+A4_haze_cc,b_sd,fog_only,8186,orig,combined,pred_fog,-0.027432,-0.024164
+A4_haze_cc,b_sd,fog_only,8186,orig,sat,pred_sat,0.52654,0.2172
+A4_haze_cc,b_sd,fog_only,8186,orig,con,pred_fog,-0.019385,-0.048195
+A4_haze_cc,b_sd,together,40272,corpus,combined,pred_sat,0.1282,0.09621
+A4_haze_cc,b_sd,together,40272,corpus,combined,pred_fog,0.034523,0.01904
+A4_haze_cc,b_sd,together,40272,corpus,sat,pred_sat,0.32866,0.28744
+A4_haze_cc,b_sd,together,40272,corpus,con,pred_fog,-0.16807,-0.15925
+A4_haze_cc,b_sd,together,40272,orig,combined,pred_sat,-0.10345,-0.12512
+A4_haze_cc,b_sd,together,40272,orig,combined,pred_fog,-0.083394,-0.085889
+A4_haze_cc,b_sd,together,40272,orig,sat,pred_sat,-0.11227,-0.16382
+A4_haze_cc,b_sd,together,40272,orig,con,pred_fog,-0.016013,-0.059669
+A4_haze_cc,b_sd,conflict,17564,corpus,combined,pred_sat,0.41874,0.42712
+A4_haze_cc,b_sd,conflict,17564,corpus,combined,pred_fog,-0.40374,-0.38066
+A4_haze_cc,b_sd,conflict,17564,corpus,sat,pred_sat,0.44481,0.44754
+A4_haze_cc,b_sd,conflict,17564,corpus,con,pred_fog,-0.1706,-0.1524
+A4_haze_cc,b_sd,conflict,17564,orig,combined,pred_sat,0.06504,0.099718
+A4_haze_cc,b_sd,conflict,17564,orig,combined,pred_fog,-0.057269,-0.056211
+A4_haze_cc,b_sd,conflict,17564,orig,sat,pred_sat,0.082283,0.14779
+A4_haze_cc,b_sd,conflict,17564,orig,con,pred_fog,0.0028863,-0.018396
+A4_haze_cc,r_ratio,all typed pairs,69636,corpus,combined,pred_sat,0.24877,0.24225
+A4_haze_cc,r_ratio,all typed pairs,69636,corpus,combined,pred_fog,0.28048,0.19849
+A4_haze_cc,r_ratio,all typed pairs,69636,corpus,sat,pred_sat,0.36987,0.33345
+A4_haze_cc,r_ratio,all typed pairs,69636,corpus,con,pred_fog,0.3022,0.18927
+A4_haze_cc,r_ratio,all typed pairs,69636,orig,combined,pred_sat,0.013422,0.014719
+A4_haze_cc,r_ratio,all typed pairs,69636,orig,combined,pred_fog,0.34577,0.3203
+A4_haze_cc,r_ratio,all typed pairs,69636,orig,sat,pred_sat,-0.063134,-0.077645
+A4_haze_cc,r_ratio,all typed pairs,69636,orig,con,pred_fog,0.41636,0.37474
+A4_haze_cc,r_ratio,all ordered pairs,110544,corpus,combined,pred_sat,0.21444,0.21717
+A4_haze_cc,r_ratio,all ordered pairs,110544,corpus,combined,pred_fog,0.26744,0.16344
+A4_haze_cc,r_ratio,all ordered pairs,110544,corpus,sat,pred_sat,0.38342,0.35035
+A4_haze_cc,r_ratio,all ordered pairs,110544,corpus,con,pred_fog,0.33343,0.18487
+A4_haze_cc,r_ratio,all ordered pairs,110544,orig,combined,pred_sat,-0.034557,-0.033048
+A4_haze_cc,r_ratio,all ordered pairs,110544,orig,combined,pred_fog,0.37149,0.3275
+A4_haze_cc,r_ratio,all ordered pairs,110544,orig,sat,pred_sat,-0.027512,-0.020318
+A4_haze_cc,r_ratio,all ordered pairs,110544,orig,con,pred_fog,0.43631,0.37141
+A4_haze_cc,r_ratio,sat_only,6478,corpus,combined,pred_sat,0.42894,0.39612
+A4_haze_cc,r_ratio,sat_only,6478,corpus,combined,pred_fog,0.17683,0.18442
+A4_haze_cc,r_ratio,sat_only,6478,corpus,sat,pred_sat,0.42453,0.39815
+A4_haze_cc,r_ratio,sat_only,6478,corpus,con,pred_fog,0.089564,-0.084105
+A4_haze_cc,r_ratio,sat_only,6478,orig,combined,pred_sat,-0.02132,-0.020975
+A4_haze_cc,r_ratio,sat_only,6478,orig,combined,pred_fog,-0.016892,-0.063074
+A4_haze_cc,r_ratio,sat_only,6478,orig,sat,pred_sat,-0.038969,-0.019783
+A4_haze_cc,r_ratio,sat_only,6478,orig,con,pred_fog,0.09978,-0.045448
+A4_haze_cc,r_ratio,fog_only,9338,corpus,combined,pred_sat,-0.030336,-0.034468
+A4_haze_cc,r_ratio,fog_only,9338,corpus,combined,pred_fog,0.38115,0.28162
+A4_haze_cc,r_ratio,fog_only,9338,corpus,sat,pred_sat,0.50874,0.28863
+A4_haze_cc,r_ratio,fog_only,9338,corpus,con,pred_fog,0.36016,0.27785
+A4_haze_cc,r_ratio,fog_only,9338,orig,combined,pred_sat,-0.074979,-0.10197
+A4_haze_cc,r_ratio,fog_only,9338,orig,combined,pred_fog,0.4751,0.45508
+A4_haze_cc,r_ratio,fog_only,9338,orig,sat,pred_sat,0.46107,0.1692
+A4_haze_cc,r_ratio,fog_only,9338,orig,con,pred_fog,0.43488,0.41694
+A4_haze_cc,r_ratio,together,37088,corpus,combined,pred_sat,0.30179,0.26725
+A4_haze_cc,r_ratio,together,37088,corpus,combined,pred_fog,0.42293,0.34147
+A4_haze_cc,r_ratio,together,37088,corpus,sat,pred_sat,0.30762,0.2688
+A4_haze_cc,r_ratio,together,37088,corpus,con,pred_fog,0.32325,0.22362
+A4_haze_cc,r_ratio,together,37088,orig,combined,pred_sat,0.16626,0.14471
+A4_haze_cc,r_ratio,together,37088,orig,combined,pred_fog,0.35463,0.33827
+A4_haze_cc,r_ratio,together,37088,orig,sat,pred_sat,-0.15255,-0.20005
+A4_haze_cc,r_ratio,together,37088,orig,con,pred_fog,0.4241,0.40062
+A4_haze_cc,r_ratio,conflict,16732,corpus,combined,pred_sat,0.15617,0.18109
+A4_haze_cc,r_ratio,conflict,16732,corpus,combined,pred_fog,-0.10737,-0.12406
+A4_haze_cc,r_ratio,conflict,16732,corpus,sat,pred_sat,0.44502,0.43988
+A4_haze_cc,r_ratio,conflict,16732,corpus,con,pred_fog,0.20557,0.14638
+A4_haze_cc,r_ratio,conflict,16732,orig,combined,pred_sat,-0.24944,-0.22269
+A4_haze_cc,r_ratio,conflict,16732,orig,combined,pred_fog,0.28127,0.27269
+A4_haze_cc,r_ratio,conflict,16732,orig,sat,pred_sat,0.077672,0.12704
+A4_haze_cc,r_ratio,conflict,16732,orig,con,pred_fog,0.38701,0.36635
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,corpus,combined,pred_sat,0.25373,0.23303
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,corpus,combined,pred_fog,-0.11729,-0.10919
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,corpus,sat,pred_sat,0.39621,0.36
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,corpus,con,pred_fog,-0.17381,-0.16944
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,orig,combined,pred_sat,-0.015111,-0.019199
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,orig,combined,pred_fog,-0.077399,-0.088177
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,orig,sat,pred_sat,-0.010516,-0.02531
+A4_haze_cc_rgb,b_sd,all typed pairs,72240,orig,con,pred_fog,-0.022814,-0.10653
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,corpus,combined,pred_sat,0.29187,0.27372
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,corpus,combined,pred_fog,-0.16534,-0.1521
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,corpus,sat,pred_sat,0.40729,0.37106
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,corpus,con,pred_fog,-0.17277,-0.16468
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,orig,combined,pred_sat,0.011208,0.011406
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,orig,combined,pred_fog,-0.065098,-0.070901
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,orig,sat,pred_sat,0.012552,0.017286
+A4_haze_cc_rgb,b_sd,all ordered pairs,110544,orig,con,pred_fog,-0.014519,-0.090892
+A4_haze_cc_rgb,b_sd,sat_only,6580,corpus,combined,pred_sat,0.44739,0.41259
+A4_haze_cc_rgb,b_sd,sat_only,6580,corpus,combined,pred_fog,0.24585,0.24554
+A4_haze_cc_rgb,b_sd,sat_only,6580,corpus,sat,pred_sat,0.44899,0.41955
+A4_haze_cc_rgb,b_sd,sat_only,6580,corpus,con,pred_fog,0.067224,-0.057164
+A4_haze_cc_rgb,b_sd,sat_only,6580,orig,combined,pred_sat,0.014845,0.01866
+A4_haze_cc_rgb,b_sd,sat_only,6580,orig,combined,pred_fog,-0.010276,-0.052656
+A4_haze_cc_rgb,b_sd,sat_only,6580,orig,sat,pred_sat,0.014042,0.02782
+A4_haze_cc_rgb,b_sd,sat_only,6580,orig,con,pred_fog,0.041509,-0.040023
+A4_haze_cc_rgb,b_sd,fog_only,7952,corpus,combined,pred_sat,0.061324,0.070688
+A4_haze_cc_rgb,b_sd,fog_only,7952,corpus,combined,pred_fog,-0.1856,-0.18626
+A4_haze_cc_rgb,b_sd,fog_only,7952,corpus,sat,pred_sat,0.34813,0.26866
+A4_haze_cc_rgb,b_sd,fog_only,7952,corpus,con,pred_fog,-0.16499,-0.15327
+A4_haze_cc_rgb,b_sd,fog_only,7952,orig,combined,pred_sat,0.085266,0.10406
+A4_haze_cc_rgb,b_sd,fog_only,7952,orig,combined,pred_fog,-0.07136,-0.11671
+A4_haze_cc_rgb,b_sd,fog_only,7952,orig,sat,pred_sat,0.22747,0.10203
+A4_haze_cc_rgb,b_sd,fog_only,7952,orig,con,pred_fog,-0.051497,-0.14538
+A4_haze_cc_rgb,b_sd,together,40566,corpus,combined,pred_sat,0.14276,0.10739
+A4_haze_cc_rgb,b_sd,together,40566,corpus,combined,pred_fog,0.043751,0.02368
+A4_haze_cc_rgb,b_sd,together,40566,corpus,sat,pred_sat,0.34541,0.2993
+A4_haze_cc_rgb,b_sd,together,40566,corpus,con,pred_fog,-0.17249,-0.17379
+A4_haze_cc_rgb,b_sd,together,40566,orig,combined,pred_sat,-0.083522,-0.1084
+A4_haze_cc_rgb,b_sd,together,40566,orig,combined,pred_fog,-0.073119,-0.086752
+A4_haze_cc_rgb,b_sd,together,40566,orig,sat,pred_sat,-0.08544,-0.14197
+A4_haze_cc_rgb,b_sd,together,40566,orig,con,pred_fog,-0.020324,-0.11207
+A4_haze_cc_rgb,b_sd,conflict,17142,corpus,combined,pred_sat,0.43991,0.44699
+A4_haze_cc_rgb,b_sd,conflict,17142,corpus,combined,pred_fog,-0.42675,-0.40565
+A4_haze_cc_rgb,b_sd,conflict,17142,corpus,sat,pred_sat,0.46859,0.47281
+A4_haze_cc_rgb,b_sd,conflict,17142,corpus,con,pred_fog,-0.18153,-0.17137
+A4_haze_cc_rgb,b_sd,conflict,17142,orig,combined,pred_sat,0.10643,0.14789
+A4_haze_cc_rgb,b_sd,conflict,17142,orig,combined,pred_fog,-0.098668,-0.1075
+A4_haze_cc_rgb,b_sd,conflict,17142,orig,sat,pred_sat,0.12451,0.19276
+A4_haze_cc_rgb,b_sd,conflict,17142,orig,con,pred_fog,-0.012931,-0.085974
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,corpus,combined,pred_sat,0.27539,0.26829
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,corpus,combined,pred_fog,0.27352,0.19351
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,corpus,sat,pred_sat,0.39055,0.35322
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,corpus,con,pred_fog,0.29115,0.1793
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,orig,combined,pred_sat,0.049056,0.051312
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,orig,combined,pred_fog,0.33292,0.3073
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,orig,sat,pred_sat,-0.025047,-0.039913
+A4_haze_cc_rgb,r_ratio,all typed pairs,69286,orig,con,pred_fog,0.40472,0.36274
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,corpus,combined,pred_sat,0.23892,0.24129
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,corpus,combined,pred_fog,0.2605,0.15922
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,corpus,sat,pred_sat,0.40476,0.36934
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,corpus,con,pred_fog,0.3264,0.17851
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,orig,combined,pred_sat,-0.0015391,0.002626
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,orig,combined,pred_fog,0.36067,0.31857
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,orig,sat,pred_sat,0.0073568,0.014858
+A4_haze_cc_rgb,r_ratio,all ordered pairs,110544,orig,con,pred_fog,0.42884,0.36487
+A4_haze_cc_rgb,r_ratio,sat_only,6516,corpus,combined,pred_sat,0.44769,0.41602
+A4_haze_cc_rgb,r_ratio,sat_only,6516,corpus,combined,pred_fog,0.2326,0.23353
+A4_haze_cc_rgb,r_ratio,sat_only,6516,corpus,sat,pred_sat,0.44568,0.41946
+A4_haze_cc_rgb,r_ratio,sat_only,6516,corpus,con,pred_fog,0.051975,-0.088523
+A4_haze_cc_rgb,r_ratio,sat_only,6516,orig,combined,pred_sat,0.015356,0.022209
+A4_haze_cc_rgb,r_ratio,sat_only,6516,orig,combined,pred_fog,-0.0044519,-0.038708
+A4_haze_cc_rgb,r_ratio,sat_only,6516,orig,sat,pred_sat,0.0050152,0.027433
+A4_haze_cc_rgb,r_ratio,sat_only,6516,orig,con,pred_fog,0.072129,-0.039363
+A4_haze_cc_rgb,r_ratio,fog_only,8804,corpus,combined,pred_sat,0.067845,0.083415
+A4_haze_cc_rgb,r_ratio,fog_only,8804,corpus,combined,pred_fog,0.3434,0.23819
+A4_haze_cc_rgb,r_ratio,fog_only,8804,corpus,sat,pred_sat,0.26455,0.20913
+A4_haze_cc_rgb,r_ratio,fog_only,8804,corpus,con,pred_fog,0.32377,0.23895
+A4_haze_cc_rgb,r_ratio,fog_only,8804,orig,combined,pred_sat,0.065492,0.087548
+A4_haze_cc_rgb,r_ratio,fog_only,8804,orig,combined,pred_fog,0.42776,0.39855
+A4_haze_cc_rgb,r_ratio,fog_only,8804,orig,sat,pred_sat,0.12065,0.029393
+A4_haze_cc_rgb,r_ratio,fog_only,8804,orig,con,pred_fog,0.38943,0.36656
+A4_haze_cc_rgb,r_ratio,together,37608,corpus,combined,pred_sat,0.31605,0.2805
+A4_haze_cc_rgb,r_ratio,together,37608,corpus,combined,pred_fog,0.43027,0.3531
+A4_haze_cc_rgb,r_ratio,together,37608,corpus,sat,pred_sat,0.32432,0.28135
+A4_haze_cc_rgb,r_ratio,together,37608,corpus,con,pred_fog,0.32418,0.228
+A4_haze_cc_rgb,r_ratio,together,37608,orig,combined,pred_sat,0.18546,0.16261
+A4_haze_cc_rgb,r_ratio,together,37608,orig,combined,pred_fog,0.36314,0.34815
+A4_haze_cc_rgb,r_ratio,together,37608,orig,sat,pred_sat,-0.11938,-0.17177
+A4_haze_cc_rgb,r_ratio,together,37608,orig,con,pred_fog,0.42528,0.40288
+A4_haze_cc_rgb,r_ratio,conflict,16358,corpus,combined,pred_sat,0.20331,0.22219
+A4_haze_cc_rgb,r_ratio,conflict,16358,corpus,combined,pred_fog,-0.15547,-0.16731
+A4_haze_cc_rgb,r_ratio,conflict,16358,corpus,sat,pred_sat,0.47868,0.47385
+A4_haze_cc_rgb,r_ratio,conflict,16358,corpus,con,pred_fog,0.17747,0.11989
+A4_haze_cc_rgb,r_ratio,conflict,16358,orig,combined,pred_sat,-0.20079,-0.1705
+A4_haze_cc_rgb,r_ratio,conflict,16358,orig,combined,pred_fog,0.23471,0.22845
+A4_haze_cc_rgb,r_ratio,conflict,16358,orig,sat,pred_sat,0.13306,0.18678
+A4_haze_cc_rgb,r_ratio,conflict,16358,orig,con,pred_fog,0.36343,0.34073
+B1_pyramid,b_sd,all typed pairs,72280,corpus,combined,pred_sat,0.24598,0.22166
+B1_pyramid,b_sd,all typed pairs,72280,corpus,combined,pred_fog,-0.049573,-0.049863
+B1_pyramid,b_sd,all typed pairs,72280,corpus,sat,pred_sat,0.38966,0.36439
+B1_pyramid,b_sd,all typed pairs,72280,corpus,con,pred_fog,-0.16379,-0.16026
+B1_pyramid,b_sd,all typed pairs,72280,orig,combined,pred_sat,-0.025699,-0.028868
+B1_pyramid,b_sd,all typed pairs,72280,orig,combined,pred_fog,-0.0016185,-0.006393
+B1_pyramid,b_sd,all typed pairs,72280,orig,sat,pred_sat,-0.029052,-0.042
+B1_pyramid,b_sd,all typed pairs,72280,orig,con,pred_fog,0.002651,-0.030425
+B1_pyramid,b_sd,all ordered pairs,110544,corpus,combined,pred_sat,0.26603,0.24231
+B1_pyramid,b_sd,all ordered pairs,110544,corpus,combined,pred_fog,-0.1081,-0.10511
+B1_pyramid,b_sd,all ordered pairs,110544,corpus,sat,pred_sat,0.38613,0.35396
+B1_pyramid,b_sd,all ordered pairs,110544,corpus,con,pred_fog,-0.16515,-0.15954
+B1_pyramid,b_sd,all ordered pairs,110544,orig,combined,pred_sat,-0.021519,-0.024468
+B1_pyramid,b_sd,all ordered pairs,110544,orig,combined,pred_fog,-0.0032156,-0.011554
+B1_pyramid,b_sd,all ordered pairs,110544,orig,sat,pred_sat,-0.024679,-0.034807
+B1_pyramid,b_sd,all ordered pairs,110544,orig,con,pred_fog,-0.0045382,-0.041333
+B1_pyramid,b_sd,sat_only,6580,corpus,combined,pred_sat,0.43055,0.38815
+B1_pyramid,b_sd,sat_only,6580,corpus,combined,pred_fog,0.20404,0.21447
+B1_pyramid,b_sd,sat_only,6580,corpus,sat,pred_sat,0.42708,0.38833
+B1_pyramid,b_sd,sat_only,6580,corpus,con,pred_fog,0.27436,0.098116
+B1_pyramid,b_sd,sat_only,6580,orig,combined,pred_sat,-0.026302,-0.029719
+B1_pyramid,b_sd,sat_only,6580,orig,combined,pred_fog,-0.057788,-0.10806
+B1_pyramid,b_sd,sat_only,6580,orig,sat,pred_sat,-0.03034,-0.033588
+B1_pyramid,b_sd,sat_only,6580,orig,con,pred_fog,0.28732,0.12825
+B1_pyramid,b_sd,fog_only,7586,corpus,combined,pred_sat,-0.25073,-0.27291
+B1_pyramid,b_sd,fog_only,7586,corpus,combined,pred_fog,-0.1709,-0.17186
+B1_pyramid,b_sd,fog_only,7586,corpus,sat,pred_sat,0.19888,0.18823
+B1_pyramid,b_sd,fog_only,7586,corpus,con,pred_fog,-0.17639,-0.16675
+B1_pyramid,b_sd,fog_only,7586,orig,combined,pred_sat,-0.067606,-0.072795
+B1_pyramid,b_sd,fog_only,7586,orig,combined,pred_fog,0.033502,0.035687
+B1_pyramid,b_sd,fog_only,7586,orig,sat,pred_sat,0.012508,0.0038399
+B1_pyramid,b_sd,fog_only,7586,orig,con,pred_fog,0.037493,0.015887
+B1_pyramid,b_sd,together,41568,corpus,combined,pred_sat,0.18606,0.16117
+B1_pyramid,b_sd,together,41568,corpus,combined,pred_fog,0.093129,0.074876
+B1_pyramid,b_sd,together,41568,corpus,sat,pred_sat,0.38683,0.369
+B1_pyramid,b_sd,together,41568,corpus,con,pred_fog,-0.16014,-0.15403
+B1_pyramid,b_sd,together,41568,orig,combined,pred_sat,-0.026284,-0.030613
+B1_pyramid,b_sd,together,41568,orig,combined,pred_fog,-0.018191,-0.016408
+B1_pyramid,b_sd,together,41568,orig,sat,pred_sat,-0.02745,-0.036675
+B1_pyramid,b_sd,together,41568,orig,con,pred_fog,-0.005973,-0.026869
+B1_pyramid,b_sd,conflict,16546,corpus,combined,pred_sat,0.36599,0.33921
+B1_pyramid,b_sd,conflict,16546,corpus,combined,pred_fog,-0.35834,-0.35348
+B1_pyramid,b_sd,conflict,16546,corpus,sat,pred_sat,0.37467,0.35188
+B1_pyramid,b_sd,conflict,16546,corpus,con,pred_fog,-0.16609,-0.16374
+B1_pyramid,b_sd,conflict,16546,orig,combined,pred_sat,-0.028198,-0.042126
+B1_pyramid,b_sd,conflict,16546,orig,combined,pred_fog,0.026471,0.011555
+B1_pyramid,b_sd,conflict,16546,orig,sat,pred_sat,-0.032786,-0.056848
+B1_pyramid,b_sd,conflict,16546,orig,con,pred_fog,0.0043787,-0.059082
+B1_pyramid,r_ratio,all typed pairs,69828,corpus,combined,pred_sat,0.28823,0.27649
+B1_pyramid,r_ratio,all typed pairs,69828,corpus,combined,pred_fog,0.34107,0.2585
+B1_pyramid,r_ratio,all typed pairs,69828,corpus,sat,pred_sat,0.39321,0.36636
+B1_pyramid,r_ratio,all typed pairs,69828,corpus,con,pred_fog,0.31343,0.20008
+B1_pyramid,r_ratio,all typed pairs,69828,orig,combined,pred_sat,0.070168,0.071332
+B1_pyramid,r_ratio,all typed pairs,69828,orig,combined,pred_fog,0.3949,0.37165
+B1_pyramid,r_ratio,all typed pairs,69828,orig,sat,pred_sat,-0.026066,-0.037306
+B1_pyramid,r_ratio,all typed pairs,69828,orig,con,pred_fog,0.43025,0.39143
+B1_pyramid,r_ratio,all ordered pairs,110544,corpus,combined,pred_sat,0.23083,0.22843
+B1_pyramid,r_ratio,all ordered pairs,110544,corpus,combined,pred_fog,0.31391,0.20499
+B1_pyramid,r_ratio,all ordered pairs,110544,corpus,sat,pred_sat,0.38404,0.3527
+B1_pyramid,r_ratio,all ordered pairs,110544,corpus,con,pred_fog,0.33224,0.18444
+B1_pyramid,r_ratio,all ordered pairs,110544,orig,combined,pred_sat,-0.0083335,-0.0077136
+B1_pyramid,r_ratio,all ordered pairs,110544,orig,combined,pred_fog,0.40709,0.36314
+B1_pyramid,r_ratio,all ordered pairs,110544,orig,sat,pred_sat,-0.028634,-0.037894
+B1_pyramid,r_ratio,all ordered pairs,110544,orig,con,pred_fog,0.43477,0.37107
+B1_pyramid,r_ratio,sat_only,6574,corpus,combined,pred_sat,0.42783,0.39083
+B1_pyramid,r_ratio,sat_only,6574,corpus,combined,pred_fog,0.19555,0.20863
+B1_pyramid,r_ratio,sat_only,6574,corpus,sat,pred_sat,0.42612,0.3877
+B1_pyramid,r_ratio,sat_only,6574,corpus,con,pred_fog,0.27123,0.073403
+B1_pyramid,r_ratio,sat_only,6574,orig,combined,pred_sat,-0.033097,-0.033088
+B1_pyramid,r_ratio,sat_only,6574,orig,combined,pred_fog,-0.060595,-0.1089
+B1_pyramid,r_ratio,sat_only,6574,orig,sat,pred_sat,-0.035099,-0.041798
+B1_pyramid,r_ratio,sat_only,6574,orig,con,pred_fog,0.3162,0.13229
+B1_pyramid,r_ratio,fog_only,8796,corpus,combined,pred_sat,-0.015178,-0.083243
+B1_pyramid,r_ratio,fog_only,8796,corpus,combined,pred_fog,0.37784,0.26723
+B1_pyramid,r_ratio,fog_only,8796,corpus,sat,pred_sat,0.19811,0.19217
+B1_pyramid,r_ratio,fog_only,8796,corpus,con,pred_fog,0.34606,0.25475
+B1_pyramid,r_ratio,fog_only,8796,orig,combined,pred_sat,0.11842,0.10497
+B1_pyramid,r_ratio,fog_only,8796,orig,combined,pred_fog,0.50951,0.49262
+B1_pyramid,r_ratio,fog_only,8796,orig,sat,pred_sat,0.013711,0.0080667
+B1_pyramid,r_ratio,fog_only,8796,orig,con,pred_fog,0.47308,0.45815
+B1_pyramid,r_ratio,together,38996,corpus,combined,pred_sat,0.3618,0.33526
+B1_pyramid,r_ratio,together,38996,corpus,combined,pred_fog,0.47084,0.40202
+B1_pyramid,r_ratio,together,38996,corpus,sat,pred_sat,0.38557,0.36569
+B1_pyramid,r_ratio,together,38996,corpus,con,pred_fog,0.34363,0.24951
+B1_pyramid,r_ratio,together,38996,orig,combined,pred_sat,0.24144,0.22835
+B1_pyramid,r_ratio,together,38996,orig,combined,pred_fog,0.40269,0.39086
+B1_pyramid,r_ratio,together,38996,orig,sat,pred_sat,-0.026717,-0.036535
+B1_pyramid,r_ratio,together,38996,orig,con,pred_fog,0.44188,0.42273
+B1_pyramid,r_ratio,conflict,15462,corpus,combined,pred_sat,0.12175,0.11034
+B1_pyramid,r_ratio,conflict,15462,corpus,combined,pred_fog,-0.073584,-0.093005
+B1_pyramid,r_ratio,conflict,15462,corpus,sat,pred_sat,0.39201,0.36926
+B1_pyramid,r_ratio,conflict,15462,corpus,con,pred_fog,0.1906,0.13606
+B1_pyramid,r_ratio,conflict,15462,orig,combined,pred_sat,-0.30916,-0.3218
+B1_pyramid,r_ratio,conflict,15462,orig,combined,pred_fog,0.34103,0.33225
+B1_pyramid,r_ratio,conflict,15462,orig,sat,pred_sat,-0.019727,-0.036168
+B1_pyramid,r_ratio,conflict,15462,orig,con,pred_fog,0.36972,0.34853
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,corpus,combined,pred_sat,-0.74724,-0.77615
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,corpus,combined,pred_fog,-0.85423,-0.84744
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,corpus,sat,pred_sat,-0.79739,-0.84855
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,corpus,con,pred_fog,-0.99279,-0.99437
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,orig,combined,pred_sat,-0.85565,-0.86423
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,orig,combined,pred_fog,-0.83058,-0.82407
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,orig,sat,pred_sat,-0.93732,-0.95766
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all typed pairs,19732,orig,con,pred_fog,-1,-1
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,corpus,combined,pred_sat,-0.68041,-0.71019
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,corpus,combined,pred_fog,-0.78885,-0.79629
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,corpus,sat,pred_sat,-0.80542,-0.87847
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,corpus,con,pred_fog,-0.99286,-0.99507
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,orig,combined,pred_sat,-0.81549,-0.81648
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,orig,combined,pred_fog,-0.73963,-0.74387
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,orig,sat,pred_sat,-0.93939,-0.96731
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",all ordered pairs,40890,orig,con,pred_fog,-1,-1
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,corpus,combined,pred_sat,-0.75269,-0.67023
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,corpus,combined,pred_fog,-0.5028,-0.57952
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,corpus,sat,pred_sat,-0.7668,-0.68504
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,corpus,con,pred_fog,-0.73912,-0.90273
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,orig,combined,pred_sat,-0.9334,-0.86472
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,orig,combined,pred_fog,-0.63814,-0.69388
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,orig,sat,pred_sat,-0.9314,-0.86863
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",sat_only,2492,orig,con,pred_fog,-1,-1
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,corpus,combined,pred_sat,-0.076916,-0.1061
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,corpus,combined,pred_fog,-0.96678,-0.92668
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,corpus,sat,pred_sat,-0.96685,-0.968
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,corpus,con,pred_fog,-0.9953,-0.99128
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,orig,combined,pred_sat,-0.0876,-0.11713
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,orig,combined,pred_fog,-0.97775,-0.95335
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,orig,sat,pred_sat,-0.99275,-0.99328
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",fog_only,1886,orig,con,pred_fog,-1,-1
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,corpus,combined,pred_sat,-0.8475,-0.8627
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,corpus,combined,pred_fog,-0.94429,-0.89713
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,corpus,sat,pred_sat,-0.79012,-0.83581
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,corpus,con,pred_fog,-0.99263,-0.99257
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,orig,combined,pred_sat,-0.9214,-0.93065
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,orig,combined,pred_fog,-0.94841,-0.89266
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,orig,sat,pred_sat,-0.93561,-0.95327
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",together,12396,orig,con,pred_fog,-1,-1
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,corpus,combined,pred_sat,0.32098,0.29854
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,corpus,combined,pred_fog,-0.42245,-0.4488
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,corpus,sat,pred_sat,-0.9553,-0.95841
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,corpus,con,pred_fog,-0.99143,-0.99112
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,orig,combined,pred_sat,-0.051174,-0.10427
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,orig,combined,pred_fog,-0.10575,-0.094611
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,orig,sat,pred_sat,-0.9855,-0.98483
+V4_ref,"v4 (v5 pair rules, no h=0, no p65)",conflict,2958,orig,con,pred_fog,-1,-1

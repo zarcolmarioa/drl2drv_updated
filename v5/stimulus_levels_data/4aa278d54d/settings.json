@@ -1,0 +1,462 @@
+{
+  "settings_hash": "4aa278d54d",
+  "hashed_settings_exclude": [
+    "CACHE_DIR",
+    "CHUNK",
+    "CLIP_ONLY_FROM",
+    "HASH_CHECKPOINT",
+    "N_WORKERS",
+    "RUN_CLIP",
+    "USE_CACHE",
+    "VIEWER_PACK",
+    "VIEWER_PACK_CELLS",
+    "VIEWER_PACK_N",
+    "VIEWER_PACK_SCENES",
+    "VIEWER_PACK_ZIP"
+  ],
+  "settings": {
+    "ALLOW_TF32": false,
+    "APPROACHES": {
+      "A4_haze_cc": {
+        "contrast_down": "haze_eq",
+        "contrast_up": "dehaze_L",
+        "colour": "chroma",
+        "compensate": true,
+        "definitions": [
+          "b",
+          "r"
+        ]
+      },
+      "A4_haze_cc_rgb": {
+        "contrast_down": "haze_eq",
+        "contrast_up": "dehaze_rgb",
+        "colour": "chroma",
+        "compensate": true,
+        "definitions": [
+          "b",
+          "r"
+        ]
+      },
+      "B1_pyramid": {
+        "contrast_down": "pyramid_L",
+        "contrast_up": "pyramid_L",
+        "colour": "chroma",
+        "compensate": false,
+        "definitions": [
+          "b",
+          "r"
+        ]
+      }
+    },
+    "AXES_DIR": "data/axes_v4",
+    "AXIS_NORM_TOL": 0.0001,
+    "BALANCED_CONFLICT_ONLY": true,
+    "BAND_RANGE_PCT": [
+      1,
+      99
+    ],
+    "BATCH_SIZE": 32,
+    "B_SPAN_SD": 1.0,
+    "B_USE_CLIP_BUDGET": false,
+    "CACHE_DIR": "data/edit_levels_v5_cache",
+    "CATEGORY_CSV": "everyday_categories.csv",
+    "CHROMA_MAX": 2.0,
+    "CHROMA_MAX_REACH": 4.0,
+    "CHROMA_MIN": 0.0,
+    "CHUNK": 1,
+    "CI_LEVEL": 0.95,
+    "CLARITY_MAX": 4.0,
+    "CLARITY_SIGMA_FRAC": 0.03,
+    "CLIP_CELLS": "cross",
+    "CLIP_DEPTH": 4.0,
+    "CLIP_MAX_NEW": 0.05,
+    "CLIP_MODEL_NAME": "openai/clip-vit-large-patch14-336",
+    "CLIP_ONLY_FROM": null,
+    "CLIP_PX": 336,
+    "CLIP_REPORT_DEPTHS": [
+      0.5,
+      2.0,
+      4.0,
+      8.0
+    ],
+    "COMP_ITERS": 20,
+    "COMP_K_RANGE": [
+      0.25,
+      3.0
+    ],
+    "COMP_ROUNDS": 2,
+    "CONTROLS": {
+      "enclosure": [
+        [
+          "enclosed",
+          "open"
+        ],
+        [
+          "cramped",
+          "spacious"
+        ],
+        [
+          "like a closed room",
+          "like a wide open landscape"
+        ],
+        [
+          "like an indoor room",
+          "like the outdoors"
+        ]
+      ],
+      "darkness": [
+        [
+          "dark",
+          "bright"
+        ],
+        [
+          "dimly lit",
+          "brightly lit"
+        ],
+        [
+          "like nighttime",
+          "like daytime"
+        ],
+        [
+          "shadowy",
+          "sunlit"
+        ]
+      ]
+    },
+    "CONTROLS_SET": "controls",
+    "CORPUS_EMB_MIN_COS": 0.99999,
+    "CORPUS_POOLED_MIN_COS": 0.9999,
+    "CORPUS_RANDOM_N": 32,
+    "CTRL_TEMPLATE": "a scene that looks {}",
+    "DEFINITION_NAMES": {
+      "a": "a_pct",
+      "b": "b_sd",
+      "c": "c_kusztor",
+      "r": "r_ratio"
+    },
+    "DEHAZE_MIN": -2.0,
+    "DESCRIPTIVE": [
+      "lum_std",
+      "spectral_slope",
+      "lum_mean",
+      "lum_p05",
+      "lum_p95",
+      "fine_texture",
+      "noise_sigma",
+      "edge_overshoot"
+    ],
+    "DUP_CSV": "data/checks_v4/duplicate_groups.csv",
+    "EDITEDNESS_KEYS": [
+      "ctrl_quality",
+      "A03",
+      "A04",
+      "new_edited"
+    ],
+    "EMB_DIR": "data/embeddings",
+    "ENVELOPE_FEATURES": [
+      "lum_mean",
+      "lum_p05",
+      "lum_p50",
+      "lum_p95",
+      "val_mean",
+      "lum_skew",
+      "spectral_slope"
+    ],
+    "ENVELOPE_HI": "p99",
+    "ENVELOPE_LO": "p01",
+    "EQUIV_MARGIN_SD": 0.2,
+    "EXCLUDE_DUPLICATES": true,
+    "EXCLUDE_GREYSCALE": true,
+    "EXCLUDE_SCENES": [],
+    "EXCLUDE_TONED": true,
+    "EXTRA_TEXTURE": [
+      "fine_texture",
+      "noise_sigma",
+      "edge_overshoot"
+    ],
+    "FEATURES_NPY": "data/features/features_crop.npy",
+    "FEATURE_CHECK_N": 8,
+    "FEATURE_CHECK_RTOL": 0.0001,
+    "FEATURE_DEFS": "data/features/feature_definitions.json",
+    "FEATURE_SIZE": 256,
+    "FEAT_CON": "contrast_local",
+    "FEAT_SAT": "sat_mean",
+    "FIXED_STEPS_SD": [
+      0.3,
+      0.6,
+      0.9
+    ],
+    "FLAGS_CSV": "data/monochrome/image_flags.csv",
+    "FOG_ONLY_SAT_TOL": 3.0,
+    "FOG_SIGN": -1.0,
+    "GAMUT_CMAX_SEARCH": 160.0,
+    "GAMUT_ITERS": 16,
+    "GAMUT_MAP_MIN_DC": 3.0,
+    "GAMUT_MARGIN": 0.995,
+    "GRID_N": 24,
+    "HALO_BAND_PX": 8,
+    "HALO_CANNY": [
+      100,
+      200
+    ],
+    "HALO_TOL_L": 3.0,
+    "HALO_WINDOW_PX": 9,
+    "HASH_CHECKPOINT": true,
+    "HAZE_AIRLIGHT_TOP": 1.0,
+    "HAZE_MAX": 0.95,
+    "IDENTITY_SHORT_CIRCUIT": true,
+    "IMAGE_SIZE": 512,
+    "INDEX_CSV": "data/selection/image_index.csv",
+    "KUSZTOR_FACTORS": [
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6
+    ],
+    "LEVEL_CHECK_TOL_SD": 0.01,
+    "LEVEL_FRACTIONS": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "MANIP_ORDER": [
+      "haze",
+      "chroma"
+    ],
+    "MIN_POPULATION": 1000,
+    "MIN_SIDE": 512,
+    "MIN_STEP_SD": 0.02552192333214231,
+    "NEW_CAPTION_PAIR": [
+      "an edited photo",
+      "an unedited photo"
+    ],
+    "NOCONTROL_MIN_COS": 0.9999,
+    "NOCONTROL_SET": "v4@nocontrol",
+    "NOISE_FLAT_PERCENTILE": 40,
+    "NOISE_HP_SIGMA": 1.0,
+    "NOISE_SMOOTH_SIGMA": 2.0,
+    "N_BOOT": 2000,
+    "N_CALIB_IMAGES": 150,
+    "N_CHECK_IMAGES": 16,
+    "N_REFERENCE_IMAGES": 20000,
+    "N_SCENES_EXPECTED": 47,
+    "N_WORKERS": 20,
+    "OPENAI_MODEL_NAME": "ViT-L/14@336px",
+    "OUTPUT_ROOT": "data/edit_levels_v5",
+    "OWN_PREPROC_MIN_COS": 0.99999,
+    "PCT_DOWN": [
+      35,
+      25,
+      15
+    ],
+    "PCT_UP": [
+      65,
+      75,
+      85
+    ],
+    "PIL_COLOR_MAX": 3.0,
+    "PIL_CONTRAST_MAX": 2.5,
+    "PLATEAU_REL": 0.05,
+    "PYR_GAIN_MAX": 4.0,
+    "PYR_LEVELS": 3,
+    "QUALITY_KEY": "controls::quality",
+    "RANDOM_SEED": 42,
+    "REACH_ARTEFACT_LIMITS": {
+      "halo_share": null,
+      "noise_ratio": null,
+      "band_new_empty": null
+    },
+    "REACH_BISECT_ITERS": 12,
+    "REFERENCE_SEED": 20250101,
+    "REF_CHECK_RTOL": 2e-05,
+    "REF_PERCENTILES": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "REPORT_CONTROLS": [
+      "controls::quality",
+      "controls::weather",
+      "controls::greyscale"
+    ],
+    "RESTRICT_TO_KEEP_CATEGORIES": true,
+    "RUN_APPROACHES": [
+      "A4_haze_cc",
+      "A4_haze_cc_rgb",
+      "B1_pyramid"
+    ],
+    "RUN_CLIP": true,
+    "RUN_DEFINITIONS": [
+      "b",
+      "r"
+    ],
+    "R_FEATURES": [
+      "contrast"
+    ],
+    "R_SPAN_SD": 1.0,
+    "SAME_PIXELS_MIN_COS": 0.9999,
+    "SAT_ONLY_CON_TOL": 0.72,
+    "SAT_ONLY_MIN_DSAT": 31.1,
+    "SCORES_DIR": "data/scores_v4",
+    "SD_CHECK_TOL": 0.0006,
+    "SD_FOG_V5": 9.348,
+    "SD_SAMPLE": 200000,
+    "SD_SAT_V5": 39.182,
+    "SHARPEN_MAX": 6.0,
+    "SHARPEN_SIGMA": 3.0,
+    "SHEET_TILE_PX": 200,
+    "SOLVE_ITERS": 24,
+    "SOLVE_TOL_SD": 0.002,
+    "SPAN_QUANTILE": 0.1,
+    "STATS_POPULATION": "everyday",
+    "STIM_RECHECK_MIN_COS": 0.99999,
+    "STIM_RECHECK_N": 8,
+    "STRADDLE_TOL_SD": 0.02,
+    "TEXT_CHECK_N": 16,
+    "TEXT_MIN_COS": 0.9999,
+    "TONE_MAX": 4.0,
+    "UN2CLIP_CKPT_PATH": "./pretrained_models/openai_vit_l_14_336.ckpt",
+    "USE_CACHE": true,
+    "V4_AXES_EFFECTS_CSV": "data/stimulus_axes_v4/cell_effects.csv",
+    "V4_BALANCE_HI": 1.7,
+    "V4_BALANCE_LO": 0.6,
+    "V4_CLIP_TOL": 0.001,
+    "V4_DROP_COLOUR": [
+      "p65"
+    ],
+    "V4_DROP_FOG": [
+      "h=0"
+    ],
+    "V4_IDS": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A07",
+      "A11",
+      "A13",
+      "A14"
+    ],
+    "V4_LEVELS_CSV": "data/levels_v4_ext/levels.csv",
+    "V4_MANIFEST_CSV": "data/stimulus_set_v4_ext_haze_eq/stimulus_manifest.csv",
+    "V4_MIN_DFOG_FOG_ONLY": 4.2,
+    "V4_MIN_DFOG_MIXED": 3.0,
+    "V4_MIN_DSAT_MIXED": 8.0,
+    "V4_MIN_DSAT_SAT_ONLY": 17.0,
+    "V4_PAIR_SAT_TOL": 3.0,
+    "V4_PER_IMAGE_CSV": "data/levels_v4_ext/per_image_levels.csv",
+    "V4_SET": "v4",
+    "V4_STATS_CSV": "data/levels_v4_ext/corpus_feature_stats_v4.csv",
+    "V4_STIMULI_DIR": "data/stimulus_set_v4_ext_haze_eq/stimuli",
+    "VIEWER_BG": "#7f7f7f",
+    "VIEWER_GAP_PX": 32,
+    "VIEWER_GRID_PX": 200,
+    "VIEWER_PACK": true,
+    "VIEWER_PACK_CELLS": "cross",
+    "VIEWER_PACK_N": 10,
+    "VIEWER_PACK_SCENES": null,
+    "VIEWER_PACK_ZIP": true,
+    "Z_REENCODED_TOL": 0.001,
+    "Z_STORED_TOL": 0.0001
+  }
+}

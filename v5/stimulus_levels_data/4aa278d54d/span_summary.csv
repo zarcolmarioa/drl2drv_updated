@@ -1,0 +1,7 @@
+approach,feature,n_scenes,span_median_scene,span_rendered_q,span_rendered,share_reach_rendered,span_min,span_max,reach_up_median,reach_down_median,binding_side,limit_up_most_common,limit_down_most_common,share_reach_pm0.3,share_reach_pm0.6,share_reach_pm0.9
+A4_haze_cc,contrast,47,2.5078,2.2401,1,1,2.1566,3.5487,3.3914,2.5571,down,feature peaks,end of grid,1,1,1
+A4_haze_cc,colour,47,1.7779,1.553,1,1,1.3899,2.3963,2.0112,1.8524,down,end of grid,end of grid,1,1,1
+A4_haze_cc_rgb,contrast,47,2.493,2.1626,1,1,2.0351,3.5487,3.0441,2.5571,down,feature peaks,end of grid,1,1,1
+A4_haze_cc_rgb,colour,47,1.7779,1.553,1,1,1.3899,2.3963,2.0112,1.8524,down,end of grid,end of grid,1,1,1
+B1_pyramid,contrast,47,2.452,2.1505,1,1,2.0262,3.5297,4.2774,2.452,down,end of grid,end of grid,1,1,1
+B1_pyramid,colour,47,1.7779,1.553,1,1,1.3899,2.3963,2.0112,1.8524,down,end of grid,end of grid,1,1,1

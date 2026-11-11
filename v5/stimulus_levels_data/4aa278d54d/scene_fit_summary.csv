@@ -1,0 +1,7 @@
+approach,definition,n_scenes,fit,fit_and_inside_envelope,contrast_all7,colour_all7,contrast_monotone,colour_monotone,any_cell_over_clip_budget,any_cell_outside_envelope,halo_above_v4_max,noise_above_v4_max,banding_above_v4_max
+A4_haze_cc,b_sd,47,47,43,47,47,47,47,46,4,4,47,0
+A4_haze_cc,r_ratio,47,46,42,46,47,47,47,47,4,7,47,0
+A4_haze_cc_rgb,b_sd,47,47,43,47,47,47,47,46,4,14,47,0
+A4_haze_cc_rgb,r_ratio,47,47,43,47,47,47,47,47,4,29,47,6
+B1_pyramid,b_sd,47,47,38,47,47,47,47,14,9,47,47,0
+B1_pyramid,r_ratio,47,47,41,47,47,47,47,28,6,47,47,0

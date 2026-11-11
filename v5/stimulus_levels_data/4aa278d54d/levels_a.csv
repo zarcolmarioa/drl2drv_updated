@@ -1,0 +1,10 @@
+family,direction,feature,level,percentile,target_change,target_sd,param,status,achieved_change,achieved_sd,achieved_q25_sd,achieved_q75_sd,share_reaching_target,cross_change_sd,mean_clipped_new,capped
+chroma,down,sat_mean,p35,35,-12.7943,-0.326536,0.788026,ok,-12.7969,-0.326602,-0.464932,-0.227293,0.5,-0.00756929,0,False
+chroma,down,sat_mean,p25,25,-21.0328,-0.536798,0.651585,ok,-21.05,-0.537237,-0.770936,-0.371679,0.5,-0.0090757,0,False
+chroma,down,sat_mean,p15,15,-29.9789,-0.765121,0.506493,ok,-29.9753,-0.76503,-1.12151,-0.533278,0.5,-0.0103007,0,False
+chroma,up,sat_mean,p65,65,15.0647,0.384482,1.33024,ok,15.0553,0.384241,0.284798,0.507315,0.5,0.00127187,0,False
+chroma,up,sat_mean,p75,75,27.9353,0.712964,1.72953,ok,27.9139,0.712418,0.541113,0.914573,0.493333,0.00214076,0,False
+chroma,up,sat_mean,p85,85,46.1459,1.17773,2,capped (out of range),34.7903,0.887918,0.69637,1.10978,0.213333,0.00192795,0,True
+haze_eq,down,contrast_local,p35,35,-3.5643,-0.381289,0.0770954,ok,-3.55768,-0.380581,-0.533285,-0.288436,0.493333,-0.276984,0,False
+haze_eq,down,contrast_local,p25,25,-6.10585,-0.653171,0.140348,ok,-6.11936,-0.654616,-0.905374,-0.499112,0.5,-0.427248,0,False
+haze_eq,down,contrast_local,p15,15,-9.13567,-0.977284,0.224495,ok,-9.14286,-0.978053,-1.34398,-0.748951,0.5,-0.601043,0,False

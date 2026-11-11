@@ -1,0 +1,371 @@
+TEST OF EDIT LEVELS ABOVE AND BELOW THE ORIGINAL (v5)
+========================================================================
+run folder      data/edit_levels_v5/4aa278d54d
+settings hash   4aa278d54d
+created         2026-11-10 18:17
+scenes          47 pooled
+approaches      A4_haze_cc, A4_haze_cc_rgb, B1_pyramid
+definitions     b = equal SD steps, per scene; r = equal RATIO steps on contrast, equal SD steps otherwise
+
+CLIP is not a human observer, and none of these numbers is a threshold: the
+visual check of the grids and pairs decides. Artefact numbers are reported,
+not judged.
+
+1. CHECKS
+------------------------------------------------------------------------
+  F1    PASS  copied feature code vs data/features on 8 images: max relative difference 1.1e-09 (tol 0.0001)
+  R1    PASS  re-measured stimulus-path reference vs data/levels_v4_ext/corpus_feature_stats_v4.csv, 18 percentiles + mean + sd of 18 features: worst relative difference 4.6e-06 (val_mean p20: 106.055 vs 106.055)
+  R2    PASS  stimulus-path SD: sat_mean 39.1819 (v5 39.182), contrast_local 9.3480 (v5 9.348)
+  S1    PASS  47 scenes in the v4 manifest (expected 47), one source photograph each, 47 on disk
+  C1    PASS  calibration sample: 150 images, 150 shared with v4's per_image_levels.csv (150)
+  C0    NOTE  calibration sample median vs reference median: sat_mean 68.03 vs reference 66.45 (+0.4 SE); contrast_local 25.56 vs reference 26.91 (-1.4 SE)
+  C2    PASS  8 levels shared with data/levels_v4_ext/levels.csv (colour p35=0.7880, colour p25=0.6516, colour p15=0.5065, colour_up p65=1.3302, colour_up p75=1.7295, fog_eq p35=0.0771, fog_eq p25=0.1403, fog_eq p15=0.2245): worst relative difference 2.8e-06
+  R0    NOTE  definition (r): ratio per full step contrast_local q = 0.6526 (up: x1.5323); the corpus-median image moves contrast_local -1.00 / +1.53 SD
+  RG    PASS  this script's renderer equals v4's render_cell on all 1,974 v4 grid cells
+  RP1   PASS  v4 haze_eq x chroma cells re-rendered at v4's parameters: 1974/1974 pixel-identical to the v4 PNGs
+  RP2   PASS  1974/1974 PNG files byte-identical as well
+  I1    PASS  every edit at its no-change setting, without the short cut (max pixel change; max |change| of sat_mean, contrast_local in SD): chroma 1.0 lv, 0.002, 0.000; clarity_L 1.0 lv, 0.002, 0.000; dehaze_L 1.0 lv, 0.004, 0.002; dehaze_rgb 1.0 lv, 0.000, 0.000; haze_eq 1.0 lv, 0.000, 0.000; pil_color 0.0 lv, 0.000, 0.000; pil_contrast 0.0 lv, 0.000, 0.000; pyramid_L 1.0 lv, 0.002, 0.000; sharpen_L 1.0 lv, 0.002, 0.000; tone_L 1.0 lv, 0.002, 0.000; tone_Y 0.0 lv, 0.000, 0.000. Rendered images use the short cut, so the original is exact.
+  P1    PASS  Pillow output vs its float model (used to count clipping): max difference 1 level(s)
+  P2    NOTE  Pillow's blend truncates instead of rounding: at a factor within 1e-6 of 1 the output already shifts by -0.39 levels on average (every pixel, both directions), so a Pillow edit jumps at the original and levels very close to it cannot be hit exactly
+  L1    WARN  definitions (b), (r): 3,145 of 3,383 uncapped levels within 0.01 SD of their target on the rendered image; worst by approach: A4_haze_cc_rgb 0.088, A4_haze_cc 0.032, B1_pyramid 0.002; 1 levels capped
+  M1    NOTE  ladders with a collapsed or reversed step are listed in scene_fit.csv (contrast_monotone, colour_monotone)
+  M3    PASS  47 scenes each matching one corpus row
+  A1    PASS  264 vectors, unit length (max error 9.9e-08); 9 v4 axes, 9 nocontrol, 6 controls; corpus mean and SD for each
+  A2    PASS  enclosure and darkness directions rebuilt from the caption embeddings; nocontrol vectors reproduced, min cos 1.000000
+  E1    PASS  weights: 391 tensors loaded; missing 0, unexpected 0, unused checkpoint keys 0
+  E2    PASS  un2CLIP projection applied (differs from the standard one by up to 2.65e-04)
+  T1    PASS  text encoder: 19 stored captions re-encoded, min cos with caption_embeddings.npy 1.0000000
+  E3    PASS  official loader, same pixels: min cos 1.000000 (16 stimuli)
+  E3b   PASS  official vs 'openai' preprocessing: min cos 1.000000
+  C1    PASS  image_index.csv is the index step 03 encoded (fingerprint 8cf642efe046...; 1,111,881 rows aligned with the embeddings)
+  C2    PASS  79 corpus images re-encoded (47 scene sources + 32 random), opened as 03 opens them: min cos with stored embeddings 0.9999999, with stored pooled vectors 1.000000
+  C3    PASS  z-scores on 24 axes vs scores_z.npy: max |diff| 4.9e-06 from the stored embeddings (tol 0.0001), 4.9e-06 from the re-encoded ones (tol 0.001)
+  S2c   PASS  4230 embeddings finite, norm 1.000000 - 1.000000
+  S3c   PASS  8 images re-encoded one at a time: min cos 1.0000000
+  CL1   PASS  v4 cross cells re-scored here vs data/stimulus_axes_v4/cell_effects.csv: 33 cell x axis means, worst difference 4.7e-05 SD (tol 0.001)
+
+2. REFERENCE
+------------------------------------------------------------------------
+  stimulus-path reference: 20,000 images
+  sat_mean        median 66.448  SD 39.182  p15 36.47  p85 112.59
+  contrast_local  median 26.909  SD 9.348  p15 17.77  p85 36.82
+  In SD the percentile targets are not symmetric about the median: the corpus
+  distributions are skewed (see target_sd in levels_a.csv).
+
+3. DEFINITION (a): CORPUS PERCENTILES (median image, one parameter for all scenes)
+------------------------------------------------------------------------
+     family direction level  target_sd  param  achieved_sd  share_reaching_target  cross_change_sd  mean_clipped_new                capped
+     chroma      down   p35     -0.327  0.788       -0.327                  0.500           -0.008             0.000                      
+     chroma      down   p25     -0.537  0.652       -0.537                  0.500           -0.009             0.000                      
+     chroma      down   p15     -0.765  0.506       -0.765                  0.500           -0.010             0.000                      
+     chroma        up   p65      0.384  1.330        0.384                  0.500            0.001             0.000                      
+     chroma        up   p75      0.713  1.730        0.712                  0.493            0.002             0.000                      
+     chroma        up   p85      1.178  2.000        0.888                  0.213            0.002             0.000 capped (out of range)
+    haze_eq      down   p35     -0.381  0.077       -0.381                  0.493           -0.277             0.000                      
+    haze_eq      down   p25     -0.653  0.140       -0.655                  0.500           -0.427             0.000                      
+    haze_eq      down   p15     -0.977  0.224       -0.978                  0.500           -0.601             0.000                      
+
+4. DEFINITION (b): REACH AND SPANS (per scene)
+------------------------------------------------------------------------
+  Reach = how far each scene's feature moves before the end of the parameter grid,
+  a reversal, or (colour going up) the gamut plateau. NO CLIPPING BUDGET: clipping
+  is measured and reported (sections 6 and 8), it does not stop the reach.
+  Span = min(up, down). Rendered span = 1 SD for every approach and feature
+  (B_SPAN_SD); levels at 1/3, 2/3, 3/3 of it, solved per scene. share_reach_rendered =
+  share of scenes reaching it (the rest are CAPPED at their reach).
+  Fixed steps: share of scenes whose span reaches +-0.3 / 0.6 / 0.9 SD.
+  Definition (r) uses the same reach: contrast steps by equal ratios (check R0 gives
+  the ratio), so its targets in SD differ per scene and its level names are the ratios
+  (x0.653 = 65.3% of the original's value).
+          approach  feature  span_median_scene  span_rendered_q  span_rendered  share_reach_rendered  span_min  reach_up_median  reach_down_median binding_side limit_up_most_common  share_reach_pm0.3  share_reach_pm0.6  share_reach_pm0.9
+        A4_haze_cc contrast               2.51             2.24           1.00                  1.00      2.16             3.39               2.56         down        feature peaks               1.00               1.00               1.00
+        A4_haze_cc   colour               1.78             1.55           1.00                  1.00      1.39             2.01               1.85         down          end of grid               1.00               1.00               1.00
+    A4_haze_cc_rgb contrast               2.49             2.16           1.00                  1.00      2.04             3.04               2.56         down        feature peaks               1.00               1.00               1.00
+    A4_haze_cc_rgb   colour               1.78             1.55           1.00                  1.00      1.39             2.01               1.85         down          end of grid               1.00               1.00               1.00
+        B1_pyramid contrast               2.45             2.15           1.00                  1.00      2.03             4.28               2.45         down          end of grid               1.00               1.00               1.00
+        B1_pyramid   colour               1.78             1.55           1.00                  1.00      1.39             2.01               1.85         down          end of grid               1.00               1.00               1.00
+
+  What stops each family:
+        family direction         limit  scenes
+        chroma      down   end of grid      47
+        chroma        up   end of grid      47
+      dehaze_L        up   end of grid       4
+      dehaze_L        up feature peaks      43
+    dehaze_rgb        up   end of grid       2
+    dehaze_rgb        up feature peaks      45
+       haze_eq      down   end of grid      47
+     pyramid_L      down   end of grid      47
+     pyramid_L        up   end of grid      47
+
+5. LADDERS AS RENDERED (own feature, measured; median over scenes)
+------------------------------------------------------------------------
+          approach definition  feature   level  own_median_sd  own_min_sd  own_max_sd  cross_median_sd  ratio_of_medians  ratio_worst_scene  n_capped
+        A4_haze_cc       b_sd contrast -1.00SD          -0.99       -1.00       -0.98            +0.00             +0.00              +0.02         0
+        A4_haze_cc       b_sd contrast -0.67SD          -0.66       -0.67       -0.65            +0.00             +0.00              +0.02         0
+        A4_haze_cc       b_sd contrast -0.33SD          -0.33       -0.34       -0.32            +0.00             +0.00              +0.03         0
+        A4_haze_cc       b_sd contrast +0.33SD          +0.33       +0.32       +0.34            -0.00             +0.00              +0.03         0
+        A4_haze_cc       b_sd contrast +0.67SD          +0.66       +0.64       +0.67            -0.00             +0.00              +0.07         0
+        A4_haze_cc       b_sd contrast +1.00SD          +0.99       +0.97       +1.00            -0.00             +0.00              +0.01         0
+        A4_haze_cc       b_sd   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+        A4_haze_cc       b_sd   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+        A4_haze_cc       b_sd   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+        A4_haze_cc       b_sd   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+        A4_haze_cc       b_sd   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+        A4_haze_cc       b_sd   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+        A4_haze_cc    r_ratio contrast  x0.653          -0.92       -1.30       -0.77            +0.00             +0.00              +0.02         0
+        A4_haze_cc    r_ratio contrast  x0.752          -0.66       -0.92       -0.55            +0.00             +0.00              +0.05         0
+        A4_haze_cc    r_ratio contrast  x0.867          -0.35       -0.49       -0.29            +0.00             +0.01              +0.07         0
+        A4_haze_cc    r_ratio contrast  x1.153          +0.41       +0.33       +0.56            -0.00             +0.00              +0.11         0
+        A4_haze_cc    r_ratio contrast  x1.329          +0.88       +0.72       +1.21            -0.00             +0.00              +0.09         0
+        A4_haze_cc    r_ratio contrast  x1.532          +1.42       +1.18       +1.97            -0.00             +0.00              +0.24         1
+        A4_haze_cc    r_ratio   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+        A4_haze_cc    r_ratio   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+        A4_haze_cc    r_ratio   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+        A4_haze_cc    r_ratio   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+        A4_haze_cc    r_ratio   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+        A4_haze_cc    r_ratio   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+    A4_haze_cc_rgb       b_sd contrast -1.00SD          -0.99       -1.00       -0.98            +0.00             +0.00              +0.02         0
+    A4_haze_cc_rgb       b_sd contrast -0.67SD          -0.66       -0.67       -0.65            +0.00             +0.00              +0.02         0
+    A4_haze_cc_rgb       b_sd contrast -0.33SD          -0.33       -0.34       -0.32            +0.00             +0.00              +0.03         0
+    A4_haze_cc_rgb       b_sd contrast +0.33SD          +0.33       +0.32       +0.33            -0.01             +0.02              +0.07         0
+    A4_haze_cc_rgb       b_sd contrast +0.67SD          +0.66       +0.64       +0.66            -0.01             +0.01              +0.05         0
+    A4_haze_cc_rgb       b_sd contrast +1.00SD          +0.99       +0.95       +1.00            -0.01             +0.01              +0.14         0
+    A4_haze_cc_rgb       b_sd   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+    A4_haze_cc_rgb       b_sd   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+    A4_haze_cc_rgb       b_sd   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+    A4_haze_cc_rgb       b_sd   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+    A4_haze_cc_rgb       b_sd   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+    A4_haze_cc_rgb       b_sd   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+    A4_haze_cc_rgb    r_ratio contrast  x0.653          -0.92       -1.30       -0.77            +0.00             +0.00              +0.02         0
+    A4_haze_cc_rgb    r_ratio contrast  x0.752          -0.66       -0.92       -0.55            +0.00             +0.00              +0.05         0
+    A4_haze_cc_rgb    r_ratio contrast  x0.867          -0.35       -0.49       -0.29            +0.00             +0.01              +0.07         0
+    A4_haze_cc_rgb    r_ratio contrast  x1.153          +0.40       +0.33       +0.56            -0.01             +0.01              +0.24         0
+    A4_haze_cc_rgb    r_ratio contrast  x1.329          +0.86       +0.72       +1.19            -0.00             +0.00              +0.05         0
+    A4_haze_cc_rgb    r_ratio contrast  x1.532          +1.40       +1.17       +1.94            -0.00             +0.00              +0.05         0
+    A4_haze_cc_rgb    r_ratio   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+    A4_haze_cc_rgb    r_ratio   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+    A4_haze_cc_rgb    r_ratio   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+    A4_haze_cc_rgb    r_ratio   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+    A4_haze_cc_rgb    r_ratio   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+    A4_haze_cc_rgb    r_ratio   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+        B1_pyramid       b_sd contrast -1.00SD          -1.00       -1.00       -1.00            -0.06             +0.06              +0.25         0
+        B1_pyramid       b_sd contrast -0.67SD          -0.67       -0.67       -0.66            -0.04             +0.07              +0.30         0
+        B1_pyramid       b_sd contrast -0.33SD          -0.33       -0.34       -0.33            -0.03             +0.08              +0.38         0
+        B1_pyramid       b_sd contrast +0.33SD          +0.33       +0.33       +0.34            +0.02             +0.06              +0.28         0
+        B1_pyramid       b_sd contrast +0.67SD          +0.67       +0.66       +0.67            +0.03             +0.05              +0.21         0
+        B1_pyramid       b_sd contrast +1.00SD          +1.00       +1.00       +1.00            +0.04             +0.04              +0.18         0
+        B1_pyramid       b_sd   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+        B1_pyramid       b_sd   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+        B1_pyramid       b_sd   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+        B1_pyramid       b_sd   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+        B1_pyramid       b_sd   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+        B1_pyramid       b_sd   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+        B1_pyramid    r_ratio contrast  x0.653          -0.93       -1.31       -0.78            -0.05             +0.06              +0.28         0
+        B1_pyramid    r_ratio contrast  x0.752          -0.66       -0.93       -0.55            -0.04             +0.06              +0.31         0
+        B1_pyramid    r_ratio contrast  x0.867          -0.35       -0.50       -0.30            -0.02             +0.07              +0.37         0
+        B1_pyramid    r_ratio contrast  x1.153          +0.41       +0.34       +0.57            +0.02             +0.06              +0.28         0
+        B1_pyramid    r_ratio contrast  x1.329          +0.88       +0.74       +1.24            +0.04             +0.05              +0.18         0
+        B1_pyramid    r_ratio contrast  x1.532          +1.42       +1.19       +2.00            +0.05             +0.03              +0.12         0
+        B1_pyramid    r_ratio   colour -1.00SD          -1.00       -1.00       -1.00            -0.01             +0.01              +0.02         0
+        B1_pyramid    r_ratio   colour -0.67SD          -0.67       -0.67       -0.66            -0.01             +0.01              +0.03         0
+        B1_pyramid    r_ratio   colour -0.33SD          -0.33       -0.34       -0.33            -0.01             +0.02              +0.04         0
+        B1_pyramid    r_ratio   colour +0.33SD          +0.33       +0.33       +0.34            +0.00             +0.01              +0.04         0
+        B1_pyramid    r_ratio   colour +0.67SD          +0.67       +0.67       +0.67            +0.00             +0.01              +0.04         0
+        B1_pyramid    r_ratio   colour +1.00SD          +1.00       +1.00       +1.00            +0.00             +0.00              +0.04         0
+
+  cross_median_sd is the cross-talk: how far the OTHER feature moves (corpus SD);
+  ratio_of_medians is v4's |cross / own|.
+
+6. CLIPPING AND ARTEFACTS (numbers only)
+------------------------------------------------------------------------
+          approach definition        group  halo_share_max  noise_ratio_max  band_new_empty_max  clip_4lv_max  gamut_mapped_max
+        A4_haze_cc       b_sd all 49 cells           0.000            2.551               0.000         0.601             0.584
+        A4_haze_cc    r_ratio all 49 cells           0.001            4.562               0.000         0.898             0.644
+    A4_haze_cc_rgb       b_sd all 49 cells           0.010            2.543               0.000         0.636             0.000
+    A4_haze_cc_rgb    r_ratio all 49 cells           0.016            4.436               1.000         0.934             0.000
+        B1_pyramid       b_sd all 49 cells           0.124            2.284               0.000         0.126             0.126
+        B1_pyramid    r_ratio all 49 cells           0.203            2.986               0.000         0.158             0.158
+            V4_ref         v4 all 42 cells           0.000            1.014               0.000         0.000             0.000
+
+  Per level: artefacts.csv. Halo = share of near-edge pixels beyond the original's
+  local range after the global tone curve; noise = flat-region high-pass energy,
+  edited / original; banding = new empty grey levels. V4_ref is the v4 grid,
+  measured by the same code.
+
+7. ENVELOPE (features outside the corpus 1-99% range)
+------------------------------------------------------------------------
+          approach definition        feature  cells
+        A4_haze_cc       b_sd       lum_mean     49
+        A4_haze_cc       b_sd        lum_p05     16
+        A4_haze_cc       b_sd        lum_p50     49
+        A4_haze_cc       b_sd        lum_p95     57
+        A4_haze_cc       b_sd       lum_skew     48
+        A4_haze_cc       b_sd       val_mean     76
+        A4_haze_cc    r_ratio       lum_mean     49
+        A4_haze_cc    r_ratio        lum_p05     19
+        A4_haze_cc    r_ratio        lum_p50     56
+        A4_haze_cc    r_ratio        lum_p95     57
+        A4_haze_cc    r_ratio       lum_skew     44
+        A4_haze_cc    r_ratio       val_mean     75
+    A4_haze_cc_rgb       b_sd       lum_mean     49
+    A4_haze_cc_rgb       b_sd        lum_p05     16
+    A4_haze_cc_rgb       b_sd        lum_p50     49
+    A4_haze_cc_rgb       b_sd        lum_p95     57
+    A4_haze_cc_rgb       b_sd       lum_skew     49
+    A4_haze_cc_rgb       b_sd       val_mean     77
+    A4_haze_cc_rgb    r_ratio       lum_mean     49
+    A4_haze_cc_rgb    r_ratio        lum_p05     19
+    A4_haze_cc_rgb    r_ratio        lum_p50     56
+    A4_haze_cc_rgb    r_ratio        lum_p95     57
+    A4_haze_cc_rgb    r_ratio       lum_skew     49
+    A4_haze_cc_rgb    r_ratio       val_mean     78
+        B1_pyramid       b_sd       lum_mean     49
+        B1_pyramid       b_sd        lum_p50     49
+        B1_pyramid       b_sd        lum_p95     66
+        B1_pyramid       b_sd       lum_skew     49
+        B1_pyramid       b_sd spectral_slope     37
+        B1_pyramid       b_sd       val_mean     77
+        B1_pyramid    r_ratio       lum_mean     49
+        B1_pyramid    r_ratio        lum_p50     49
+        B1_pyramid    r_ratio        lum_p95     66
+        B1_pyramid    r_ratio       lum_skew     49
+        B1_pyramid    r_ratio spectral_slope     17
+        B1_pyramid    r_ratio       val_mean     77
+
+8. SCENE FIT
+------------------------------------------------------------------------
+  fit = all seven levels reached on both features, own feature monotone with no
+  collapsed step (definition (b) has no clipping budget this run:
+  cells_over_clip_budget is reported, not counted). The envelope and the artefacts
+  (compared with the v4 grid's maxima) are reported beside it, not counted.
+          approach definition  n_scenes  fit  fit_and_inside_envelope  contrast_all7  colour_all7  contrast_monotone  colour_monotone  any_cell_over_clip_budget  any_cell_outside_envelope  halo_above_v4_max  noise_above_v4_max  banding_above_v4_max
+        A4_haze_cc       b_sd        47   47                       43             47           47                 47               47                         46                          4                  4                  47                     0
+        A4_haze_cc    r_ratio        47   46                       42             46           47                 47               47                         47                          4                  7                  47                     0
+    A4_haze_cc_rgb       b_sd        47   47                       43             47           47                 47               47                         46                          4                 14                  47                     0
+    A4_haze_cc_rgb    r_ratio        47   47                       43             47           47                 47               47                         47                          4                 29                  47                     6
+        B1_pyramid       b_sd        47   47                       38             47           47                 47               47                         14                          9                 47                  47                     0
+        B1_pyramid    r_ratio        47   47                       41             47           47                 47               47                         28                          6                 47                  47                     0
+
+9. NORMALITY CHECK
+------------------------------------------------------------------------
+  Distance from typical: sqrt(z_sat^2 + z_con^2), z from the corpus median (corpus SD),
+  or from the scene's own original. Pair term = distance(B) - distance(A): positive
+  = A is the more typical image. Direction terms as v5 (positive = A is the predicted,
+  less saturated or lower-contrast image). A correlation far from 0 means 'pick the
+  more (or less) normal-looking image' would mimic the predicted weights.
+          approach                         definition  r(corpus,pred_sat)  r(corpus,pred_fog)  r(orig,pred_sat)  r(orig,pred_fog)
+        A4_haze_cc                               b_sd               +0.24               -0.12             -0.04             -0.07
+        A4_haze_cc                            r_ratio               +0.25               +0.28             +0.01             +0.35
+    A4_haze_cc_rgb                               b_sd               +0.25               -0.12             -0.02             -0.08
+    A4_haze_cc_rgb                            r_ratio               +0.28               +0.27             +0.05             +0.33
+        B1_pyramid                               b_sd               +0.25               -0.05             -0.03             -0.00
+        B1_pyramid                            r_ratio               +0.29               +0.34             +0.07             +0.39
+            V4_ref v4 (v5 pair rules, no h=0, no p65)               -0.75               -0.85             -0.86             -0.83
+
+  Straddling pairs (unordered, typed by v5's rules):
+          approach                         definition  n_unordered_pairs  straddle_contrast_by_level  straddle_colour_by_level  straddle_contrast_measured  straddle_colour_measured  pairs_with_the_original
+        A4_haze_cc                               b_sd              36290                       15181                     15517                       15449                     15545                     1548
+        A4_haze_cc                            r_ratio              34818                       14309                     15220                       14586                     15282                     1533
+    A4_haze_cc_rgb                               b_sd              36120                       15081                     15529                       15349                     15676                     1537
+    A4_haze_cc_rgb                            r_ratio              34643                       14131                     15162                       14410                     15353                     1540
+        B1_pyramid                               b_sd              36140                       14852                     15506                       15125                     19149                     1524
+        B1_pyramid                            r_ratio              34914                       14168                     15115                       14451                     18786                     1491
+            V4_ref v4 (v5 pair rules, no h=0, no p65)               9866                           0                      2867                           0                      1968                        0
+
+10. CLIP (un2CLIP, v4 axes; CLIP is not a human observer)
+------------------------------------------------------------------------
+  Q1 contrast down raises fog (A07), up lowers it; Q2 colour down raises dull (A13),
+  up lowers it; Q1o/Q2o every adjacent step in order; Q3 contrast edits move A07
+  more than A13, colour edits A13 more than A07 (both directions).
+  [v4]
+                       set Q1 con dir Q1o con order Q3 con spec Q2 col dir Q2o col order Q3 col spec
+           A4_haze_cc|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+        A4_haze_cc|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+       A4_haze_cc_rgb|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+    A4_haze_cc_rgb|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+           B1_pyramid|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+        B1_pyramid|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+
+  [v4@nocontrol]
+                       set Q1 con dir Q1o con order Q3 con spec Q2 col dir Q2o col order Q3 col spec
+           A4_haze_cc|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+        A4_haze_cc|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+       A4_haze_cc_rgb|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+    A4_haze_cc_rgb|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+           B1_pyramid|b_sd       PASS          PASS        PASS       PASS          PASS        PASS
+        B1_pyramid|r_ratio       PASS          PASS        PASS       PASS          PASS        PASS
+
+  shown / not shown / reversed per level: question_levels.csv. PASS = every level
+  shown; PARTIAL = none reversed; FAIL = any reversed.
+
+  Editedness: levels at the same distance below and above the original, one letter
+  per feature x distance (contrast 1, 2, 3, then colour 1, 2, 3): S = the same within
+  +-0.2 SD, D = the level below moves it more, U = the level above moves it more,
+  I = inconclusive, - = no difference shown (emb_dist, 1 - cos, has no margin).
+  new_edited is NEW and EXPLORATORY, not a v4 direction. Details: clip/editedness.csv.
+                       set ctrl_quality |ctrl_quality|    A03  |A03|    A04  |A04| new_edited |new_edited| emb_dist
+           A4_haze_cc|b_sd       SSIDDD         SSSSSS SDDSDD SDDSDD DDDSSS SDDSSS     UUUUUU       UUUSUU   UUUDDD
+        A4_haze_cc|r_ratio       SSUDDD         SSUSSS SDDSDD SDDSDD DDDSSS SDDSSS     UUUUUU       UUUSUU   UUUDDD
+       A4_haze_cc_rgb|b_sd       SDDDDD         SSDSSS SDDSDD SDDSDD DDDSSS SDDSSS     UUUUUU       UUUSUU   UUUDDD
+    A4_haze_cc_rgb|r_ratio       SSIDDD         SSUSSS SDDSDD SDDSDD DDDSSS SDDSSS     UUUUUU       UUUSUU   UUUDDD
+           B1_pyramid|b_sd       DDDDDD         SSDSSS SDDSDD SSDSDD DDDSSS SSDSSS     UUUUUU       SUUSUU   UUDDDD
+        B1_pyramid|r_ratio       DDDDDD         SSDSSS SDDSDD SSDSDD DDDSSS SSDSSS     UUUUUU       UUUSUU   UUUDDD
+
+11. FILES AND TIMES
+------------------------------------------------------------------------
+  images: 13,818 PNGs under images/ (5.8 GB), contact sheets under images/sheets/
+  viewer pack: 10 scenes, 780 images, 269 MB, zipped as viewer_pack.zip
+  Start-up checks and the reference           0.0 min
+  Definition (a): calibration on the median image    0.5 min
+  Definition (b): reach on every scene        1.9 min
+  Rendering, measuring and saving every cell   17.7 min
+  Measurements, normality, scene fit          0.2 min
+  Viewer                                      0.0 min
+  CLIP                                        2.1 min
+
+12. PLAIN-LANGUAGE SUMMARY
+------------------------------------------------------------------------
+  Checks: 1 check(s) did not pass: L1 (WARN). Read section 1 before
+  anything else.
+
+  Definition (b) is rendered at the same +-1 SD for every approach and
+  feature, with no clipping budget (clipping is reported, not limited).
+  Share of scenes reaching it on contrast: A4_haze_cc 100%,
+  A4_haze_cc_rgb 100%, B1_pyramid 100%; on colour: A4_haze_cc 100%,
+  A4_haze_cc_rgb 100%, B1_pyramid 100%. Scenes below 100% are CAPPED at
+  their reach on those levels. For comparison, the contrast span 90% of
+  scenes reach is A4_haze_cc 2.24, A4_haze_cc_rgb 2.16, B1_pyramid 2.15
+  SD.
+
+  Scene fit (all seven levels reached on both features, monotone), out
+  of 47: A4_haze_cc b_sd 47; A4_haze_cc r_ratio 46; A4_haze_cc_rgb b_sd
+  47; A4_haze_cc_rgb r_ratio 47; B1_pyramid b_sd 47; B1_pyramid r_ratio
+  47.
+
+  Cross-talk: the largest median change of sat_mean caused by a contrast
+  level is A4_haze_cc b_sd 0.00, A4_haze_cc r_ratio 0.00, A4_haze_cc_rgb
+  b_sd 0.01, A4_haze_cc_rgb r_ratio 0.01, B1_pyramid b_sd 0.06,
+  B1_pyramid r_ratio 0.05 SD. A4 restores sat_mean by construction; what
+  is left is in ladders.csv (comp_residual_sd).
+
+  Normality: in the v4 design the 'closer to the original' term
+  correlates -0.86 with pred_sat, -0.83 with pred_fog over its typed
+  pairs. In the candidate sets the largest absolute correlation is
+  A4_haze_cc b_sd 0.07, A4_haze_cc r_ratio 0.35, A4_haze_cc_rgb b_sd
+  0.08, A4_haze_cc_rgb r_ratio 0.33, B1_pyramid b_sd 0.03, B1_pyramid
+  r_ratio 0.39. Near zero means the strategy is no longer confounded
+  with the predictors.
+
+  CLIP (pre-stated questions on the v4 axes, both directions; PASS =
+  every level shown): A4_haze_cc_rgb|b_sd 6/6, A4_haze_cc_rgb|r_ratio
+  6/6, A4_haze_cc|b_sd 6/6, A4_haze_cc|r_ratio 6/6, B1_pyramid|b_sd 6/6,
+  B1_pyramid|r_ratio 6/6. Editedness by level distance is in
+  clip/editedness.csv; the 'edited photo' direction is new and
+  exploratory. CLIP is not a human observer.
+
+  Next step: open viewer.html (or viewer_pack/viewer.html on other
+  devices) and judge, at 512 px, whether each step is visible, whether
+  the levels above the original look as edited as those below, and
+  whether any method leaves visible artefacts. The numbers here say
+  which candidates are worth that look.
+

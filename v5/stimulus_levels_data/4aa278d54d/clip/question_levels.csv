@@ -1,0 +1,433 @@
+set,key_set,question,level,tested,mean,lo,hi,same_sign,class
+A4_haze_cc|b_sd,v4,Q1 contrast direction,-3,+d(A07),0.34462,0.2852,0.40834,0.97872,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.45309,0.35423,0.54923,0.93617,shown
+A4_haze_cc|b_sd,v4,Q1 contrast direction,-2,+d(A07),0.20888,0.16887,0.25031,0.91489,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.30995,0.24225,0.37753,0.93617,shown
+A4_haze_cc|b_sd,v4,Q1 contrast direction,-1,+d(A07),0.10302,0.077065,0.13093,0.82979,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.18144,0.13884,0.22455,0.89362,shown
+A4_haze_cc|b_sd,v4,Q1 contrast direction,+1,-d(A07),0.10548,0.070685,0.13999,0.80851,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.25931,0.21985,0.3005,1,shown
+A4_haze_cc|b_sd,v4,Q1 contrast direction,+2,-d(A07),0.15911,0.11544,0.20403,0.85106,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.3306,0.27967,0.37894,0.97872,shown
+A4_haze_cc|b_sd,v4,Q1 contrast direction,+3,-d(A07),0.21362,0.16581,0.26234,0.91489,shown
+A4_haze_cc|b_sd,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.32043,0.2597,0.37994,0.95745,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.13574,0.10919,0.16606,0.93617,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.10586,0.083246,0.12889,0.91489,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.10302,0.077065,0.13093,0.82979,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.10548,0.070685,0.13999,0.80851,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.05363,0.025854,0.080421,0.68085,shown
+A4_haze_cc|b_sd,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.05451,0.025226,0.087988,0.70213,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+A4_haze_cc|b_sd,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+A4_haze_cc|b_sd,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+A4_haze_cc|b_sd,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.48307,0.42332,0.55114,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.52665,0.4103,0.63836,0.93617,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.31697,0.27825,0.36053,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.36484,0.28523,0.44325,0.93617,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.1664,0.14035,0.194,0.95745,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.21385,0.16458,0.26342,0.89362,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.15398,0.12667,0.18198,0.93617,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.30246,0.25876,0.3499,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.2552,0.21407,0.29444,0.95745,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.38992,0.33179,0.44522,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.33416,0.28401,0.38233,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.37955,0.31175,0.44726,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.16609,0.13979,0.1961,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.15058,0.12598,0.17671,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.1664,0.14035,0.194,0.95745,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.15398,0.12667,0.18198,0.93617,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.10122,0.071742,0.12875,0.82979,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.078956,0.052578,0.1044,0.80851,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+A4_haze_cc|b_sd,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,-3,+d(A07),0.32502,0.26701,0.38546,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.45015,0.35684,0.54176,0.93617,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,-2,+d(A07),0.21735,0.17581,0.2598,0.93617,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.32913,0.25945,0.39634,0.93617,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,-1,+d(A07),0.11222,0.086537,0.13906,0.91489,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.1942,0.15131,0.23648,0.89362,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,+1,-d(A07),0.11746,0.083396,0.15161,0.78723,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.28753,0.24419,0.33052,1,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,+2,-d(A07),0.20016,0.15152,0.24788,0.89362,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.33096,0.26981,0.38813,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q1 contrast direction,+3,-d(A07),0.25938,0.19178,0.32605,0.93617,shown
+A4_haze_cc|r_ratio,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.22921,0.14428,0.31613,0.78723,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.10767,0.084136,0.132,0.95745,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.10513,0.080717,0.1291,0.91489,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.11222,0.086537,0.13906,0.91489,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.11746,0.083396,0.15161,0.78723,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.082701,0.04547,0.11848,0.7234,shown
+A4_haze_cc|r_ratio,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.059218,0.0078484,0.11316,0.68085,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+A4_haze_cc|r_ratio,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+A4_haze_cc|r_ratio,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+A4_haze_cc|r_ratio,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.46311,0.40576,0.52608,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.52493,0.4165,0.63398,0.93617,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.32892,0.28887,0.37075,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.38727,0.30519,0.46609,0.93617,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.18135,0.15605,0.20751,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.22945,0.1793,0.27895,0.89362,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.17766,0.15069,0.20281,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.33619,0.28661,0.38495,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.31286,0.26436,0.3593,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.39112,0.32095,0.45692,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.41494,0.35106,0.47691,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.28041,0.18179,0.38249,0.80851,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.13419,0.1095,0.16117,0.93617,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.14757,0.12474,0.17173,0.95745,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.18135,0.15605,0.20751,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.17766,0.15069,0.20281,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.1352,0.094541,0.1717,0.85106,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.10208,0.057804,0.14848,0.80851,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+A4_haze_cc|r_ratio,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,-3,+d(A07),0.34462,0.2852,0.40834,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.45309,0.35423,0.54923,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,-2,+d(A07),0.20888,0.16887,0.25031,0.91489,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.30995,0.24225,0.37753,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,-1,+d(A07),0.10302,0.077065,0.13093,0.82979,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.18144,0.13884,0.22455,0.89362,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,+1,-d(A07),0.079167,0.047922,0.10989,0.74468,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.20668,0.16242,0.25147,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,+2,-d(A07),0.13742,0.092128,0.18403,0.76596,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.28764,0.23815,0.33688,0.95745,shown
+A4_haze_cc_rgb|b_sd,v4,Q1 contrast direction,+3,-d(A07),0.2001,0.14679,0.25028,0.82979,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.28424,0.22153,0.34621,0.91489,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.13574,0.10919,0.16606,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.10586,0.083246,0.12889,0.91489,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.10302,0.077065,0.13093,0.82979,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.079167,0.047922,0.10989,0.74468,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.058251,0.034165,0.081356,0.7234,shown
+A4_haze_cc_rgb|b_sd,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.062677,0.034897,0.091188,0.74468,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+A4_haze_cc_rgb|b_sd,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.48307,0.42332,0.55114,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.52665,0.4103,0.63836,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.31697,0.27825,0.36053,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.36484,0.28523,0.44325,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.1664,0.14035,0.194,0.95745,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.21385,0.16458,0.26342,0.89362,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.12171,0.093849,0.14763,0.91489,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.24241,0.1911,0.29326,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.20953,0.16957,0.24618,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.33608,0.27852,0.39001,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.27777,0.22608,0.3267,0.95745,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.32899,0.2569,0.40054,0.93617,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.16609,0.13979,0.1961,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.15058,0.12598,0.17671,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.1664,0.14035,0.194,0.95745,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.12171,0.093849,0.14763,0.91489,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.087815,0.063818,0.11076,0.82979,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.068241,0.041499,0.093351,0.82979,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+A4_haze_cc_rgb|b_sd,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,-3,+d(A07),0.32502,0.26701,0.38546,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.45015,0.35684,0.54176,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,-2,+d(A07),0.21735,0.17581,0.2598,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.32913,0.25945,0.39634,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,-1,+d(A07),0.11222,0.086537,0.13906,0.91489,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.1942,0.15131,0.23648,0.89362,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,+1,-d(A07),0.10216,0.068727,0.13641,0.78723,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.25119,0.20953,0.29386,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,+2,-d(A07),0.1787,0.12777,0.22801,0.87234,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.28929,0.22996,0.34592,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1 contrast direction,+3,-d(A07),0.25821,0.18722,0.32752,0.85106,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.2019,0.111,0.28846,0.78723,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.10767,0.084136,0.132,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.10513,0.080717,0.1291,0.91489,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.11222,0.086537,0.13906,0.91489,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.10216,0.068727,0.13641,0.78723,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.076542,0.044063,0.10996,0.74468,shown
+A4_haze_cc_rgb|r_ratio,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.079504,0.033944,0.12985,0.65957,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+A4_haze_cc_rgb|r_ratio,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.46311,0.40576,0.52608,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.52493,0.4165,0.63398,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.32892,0.28887,0.37075,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.38727,0.30519,0.46609,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.18135,0.15605,0.20751,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.22945,0.1793,0.27895,0.89362,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.15588,0.12759,0.18196,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.29401,0.24567,0.34265,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.25465,0.20701,0.29934,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.33605,0.268,0.39984,0.91489,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.33776,0.26858,0.40172,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.23184,0.1276,0.33178,0.78723,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.13419,0.1095,0.16117,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.14757,0.12474,0.17173,0.95745,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.18135,0.15605,0.20751,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.15588,0.12759,0.18196,0.93617,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.098766,0.06421,0.12895,0.82979,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.083113,0.040772,0.12734,0.74468,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+A4_haze_cc_rgb|r_ratio,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,-3,+d(A07),0.57595,0.5154,0.64096,1,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.72282,0.64314,0.81172,1,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,-2,+d(A07),0.32023,0.28433,0.35804,1,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.39058,0.33824,0.44463,0.97872,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,-1,+d(A07),0.13923,0.12063,0.15751,0.97872,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.16097,0.13302,0.18741,0.95745,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,+1,-d(A07),0.090336,0.069671,0.11102,0.91489,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.1077,0.081471,0.13299,0.89362,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,+2,-d(A07),0.14069,0.1091,0.1715,0.93617,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.13267,0.089463,0.17171,0.80851,shown
+B1_pyramid|b_sd,v4,Q1 contrast direction,+3,-d(A07),0.17458,0.13471,0.2124,0.95745,shown
+B1_pyramid|b_sd,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.1299,0.078342,0.17764,0.80851,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.25572,0.22653,0.28762,1,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.181,0.15834,0.2055,1,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.13923,0.12063,0.15751,0.97872,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.090336,0.069671,0.11102,0.91489,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.050354,0.035262,0.065587,0.87234,shown
+B1_pyramid|b_sd,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.033892,0.022776,0.044425,0.82979,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+B1_pyramid|b_sd,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+B1_pyramid|b_sd,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+B1_pyramid|b_sd,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+B1_pyramid|b_sd,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+B1_pyramid|b_sd,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+B1_pyramid|b_sd,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+B1_pyramid|b_sd,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+B1_pyramid|b_sd,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.64797,0.58877,0.71679,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.80616,0.71661,0.90585,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.3566,0.31812,0.39743,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.43362,0.3743,0.49487,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.14811,0.12906,0.16701,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.17622,0.14475,0.20669,0.95745,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.093545,0.071792,0.11376,0.87234,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.11843,0.088758,0.1474,0.87234,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.14655,0.11481,0.17746,0.91489,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.1441,0.094818,0.18917,0.78723,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.18484,0.14545,0.22108,0.91489,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.13914,0.080189,0.19325,0.78723,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.29137,0.26242,0.32283,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.20849,0.18479,0.23448,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.14811,0.12906,0.16701,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.093545,0.071792,0.11376,0.87234,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.05301,0.038671,0.067274,0.87234,shown
+B1_pyramid|b_sd,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.038288,0.027555,0.048866,0.80851,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+B1_pyramid|b_sd,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,-3,+d(A07),0.53245,0.4778,0.5882,1,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.67452,0.60014,0.75302,1,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,-2,+d(A07),0.32784,0.29168,0.36428,1,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.40378,0.35103,0.45681,1,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,-1,+d(A07),0.15418,0.13425,0.17507,0.97872,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.17894,0.14926,0.20946,0.95745,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,+1,-d(A07),0.1016,0.07691,0.12565,0.89362,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.11056,0.078073,0.14119,0.87234,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,+2,-d(A07),0.16371,0.12634,0.19952,0.95745,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.12661,0.07597,0.17188,0.80851,shown
+B1_pyramid|r_ratio,v4,Q1 contrast direction,+3,-d(A07),0.20537,0.15317,0.25339,0.93617,shown
+B1_pyramid|r_ratio,v4,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.11651,0.057279,0.17467,0.74468,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.20461,0.18154,0.22787,1,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.17367,0.15357,0.19381,1,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.15418,0.13425,0.17507,0.97872,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.1016,0.07691,0.12565,0.89362,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.062106,0.044297,0.079216,0.87234,shown
+B1_pyramid|r_ratio,v4,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.041662,0.021101,0.062735,0.76596,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,-3,+d(A13),0.98523,0.90911,1.06,1,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.71357,0.63824,0.78688,1,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,-2,+d(A13),0.63934,0.59226,0.68767,1,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.55028,0.50173,0.59855,1,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,-1,+d(A13),0.31029,0.28649,0.33484,1,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.2578,0.23047,0.2844,1,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,+1,-d(A13),0.24568,0.21617,0.27411,0.97872,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.20914,0.17856,0.24156,0.97872,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,+2,-d(A13),0.44175,0.39419,0.4868,0.97872,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.36986,0.3243,0.41634,1,shown
+B1_pyramid|r_ratio,v4,Q2 colour direction,+3,-d(A13),0.63504,0.56818,0.69669,1,shown
+B1_pyramid|r_ratio,v4,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.53321,0.47324,0.59713,1,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.34589,0.31528,0.3785,1,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.32905,0.30308,0.35482,1,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.31029,0.28649,0.33484,1,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.24568,0.21617,0.27411,0.97872,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.19608,0.17457,0.21746,1,shown
+B1_pyramid|r_ratio,v4,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.19329,0.16931,0.21628,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,-3,+d(A07),0.59887,0.54422,0.65482,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,-3,+(d(A07) - d(A13)),0.75241,0.66803,0.84053,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,-2,+d(A07),0.36469,0.32775,0.40067,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,-2,+(d(A07) - d(A13)),0.44829,0.38884,0.50849,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,-1,+d(A07),0.16338,0.14265,0.1846,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,-1,+(d(A07) - d(A13)),0.19609,0.1619,0.23033,0.95745,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,+1,-d(A07),0.1059,0.080845,0.12901,0.89362,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,+1,-(d(A07) - d(A13)),0.12099,0.084455,0.15587,0.87234,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,+2,-d(A07),0.17476,0.13792,0.20905,0.93617,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,+2,-(d(A07) - d(A13)),0.1361,0.079764,0.18791,0.78723,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1 contrast direction,+3,-d(A07),0.23138,0.18262,0.27777,0.91489,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 contrast specificity,+3,-(d(A07) - d(A13)),0.12483,0.060186,0.18994,0.7234,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,-3 -> -2,d(A07)[-3] - d(A07)[-2],0.23419,0.21215,0.25721,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,-2 -> -1,d(A07)[-2] - d(A07)[-1],0.20131,0.1811,0.22222,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,-1 -> +0,d(A07)[-1] - d(A07)[+0],0.16338,0.14265,0.1846,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,+0 -> +1,d(A07)[+0] - d(A07)[+1],0.1059,0.080845,0.12901,0.89362,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,+1 -> +2,d(A07)[+1] - d(A07)[+2],0.06886,0.053006,0.085744,0.93617,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q1o contrast order,+2 -> +3,d(A07)[+2] - d(A07)[+3],0.056621,0.034346,0.078545,0.82979,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,-3,+d(A13),0.85619,0.7964,0.91586,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,-3,+(d(A13) - d(A07)),0.91249,0.82595,0.99524,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,-2,+d(A13),0.56572,0.52599,0.60583,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,-2,+(d(A13) - d(A07)),0.6884,0.63138,0.74425,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,-1,+d(A13),0.27248,0.25168,0.29291,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,-1,+(d(A13) - d(A07)),0.32409,0.29246,0.35498,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,+1,-d(A13),0.2056,0.17855,0.23201,0.97872,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,+1,-(d(A13) - d(A07)),0.26343,0.22748,0.30129,0.97872,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,+2,-d(A13),0.37012,0.32707,0.41199,0.97872,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,+2,-(d(A13) - d(A07)),0.4671,0.41409,0.5235,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2 colour direction,+3,-d(A13),0.53773,0.47509,0.59596,0.97872,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q3 colour specificity,+3,-(d(A13) - d(A07)),0.67187,0.59951,0.74783,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,-3 -> -2,d(A13)[-3] - d(A13)[-2],0.29047,0.26584,0.31549,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,-2 -> -1,d(A13)[-2] - d(A13)[-1],0.29324,0.27005,0.3161,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,-1 -> +0,d(A13)[-1] - d(A13)[+0],0.27248,0.25168,0.29291,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,+0 -> +1,d(A13)[+0] - d(A13)[+1],0.2056,0.17855,0.23201,0.97872,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,+1 -> +2,d(A13)[+1] - d(A13)[+2],0.16452,0.14386,0.18606,1,shown
+B1_pyramid|r_ratio,v4@nocontrol,Q2o colour order,+2 -> +3,d(A13)[+2] - d(A13)[+3],0.16761,0.14421,0.18983,1,shown
