@@ -1,0 +1,40 @@
+threshold_set,type,step,unordered_pairs
+v5units,sat_only,1 typed by measured differences,6909
+v5units,sat_only,2 |d_sat| >= 0.794 SD,3290
+v5units,sat_only,9 scenes,47
+v5units,fog_only,1 typed by measured differences,5889
+v5units,fog_only,2 |d_con| >= 0.449 SD,3976
+v5units,fog_only,9 scenes,47
+v5units,together,1 typed by measured differences,20894
+v5units,together,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,20283
+v5units,together,9 scenes,47
+v5units,conflict,1 typed by measured differences,21580
+v5units,conflict,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,18715
+v5units,conflict,3 balanced,8571
+v5units,conflict,9 scenes,47
+sd030,sat_only,1 typed by measured differences,6909
+sd030,sat_only,2 |d_sat| >= 0.300 SD,6739
+sd030,sat_only,9 scenes,47
+sd030,fog_only,1 typed by measured differences,5889
+sd030,fog_only,2 |d_con| >= 0.300 SD,5889
+sd030,fog_only,9 scenes,47
+sd030,together,1 typed by measured differences,20894
+sd030,together,2 |d_sat| >= 0.200 and |d_con| >= 0.300 SD,20436
+sd030,together,9 scenes,47
+sd030,conflict,1 typed by measured differences,21580
+sd030,conflict,2 |d_sat| >= 0.200 and |d_con| >= 0.300 SD,20504
+sd030,conflict,3 balanced,8852
+sd030,conflict,9 scenes,47
+sd060,sat_only,1 typed by measured differences,6909
+sd060,sat_only,2 |d_sat| >= 0.600 SD,4806
+sd060,sat_only,9 scenes,47
+sd060,fog_only,1 typed by measured differences,5889
+sd060,fog_only,2 |d_con| >= 0.600 SD,3976
+sd060,fog_only,9 scenes,47
+sd060,together,1 typed by measured differences,20894
+sd060,together,2 |d_sat| >= 0.200 and |d_con| >= 0.300 SD,20436
+sd060,together,9 scenes,47
+sd060,conflict,1 typed by measured differences,21580
+sd060,conflict,2 |d_sat| >= 0.200 and |d_con| >= 0.300 SD,20504
+sd060,conflict,3 balanced,8852
+sd060,conflict,9 scenes,47

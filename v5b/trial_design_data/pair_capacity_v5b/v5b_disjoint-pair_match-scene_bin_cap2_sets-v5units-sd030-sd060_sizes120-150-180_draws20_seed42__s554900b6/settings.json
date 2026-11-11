@@ -1,0 +1,149 @@
+{
+  "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+  "V4_TRIAL_LIST": "data/frozen_trial_list_v4/trial_list.csv",
+  "OUTPUT_ROOT": "data/pair_capacity_v5b",
+  "BLOCK_SIZES": [
+    120,
+    150,
+    180
+  ],
+  "TYPE_MIXES": {
+    "v4": {
+      "sat_only": 0.3333333333333333,
+      "fog_only": 0.3333333333333333,
+      "together": 0.16666666666666666,
+      "conflict": 0.16666666666666666
+    },
+    "conflict_heavy": {
+      "sat_only": 0.3,
+      "fog_only": 0.3,
+      "together": 0.15,
+      "conflict": 0.25
+    }
+  },
+  "SD_SAT": 39.182,
+  "SD_FOG": 9.348,
+  "FOG_SIGN": -1.0,
+  "SAT_TOL_SD": 0.07656576999642693,
+  "CON_TOL_SD": 0.07702182284980744,
+  "BALANCE_LO": 0.6,
+  "BALANCE_HI": 1.7,
+  "BALANCED_CONFLICT_ONLY": true,
+  "THRESHOLD_SETS": {
+    "v5units": {
+      "sat_only": 0.7937318156296258,
+      "fog_only": 0.4492939666238768,
+      "mixed_sat": 0.20417538665713847,
+      "mixed_con": 0.32092426187419765
+    },
+    "sd030": {
+      "sat_only": 0.3,
+      "fog_only": 0.3,
+      "mixed_sat": 0.2,
+      "mixed_con": 0.3
+    },
+    "sd060": {
+      "sat_only": 0.6,
+      "fog_only": 0.6,
+      "mixed_sat": 0.2,
+      "mixed_con": 0.3
+    }
+  },
+  "SUPPLY_GRID": {
+    "sat_only": [
+      0.2,
+      0.3,
+      0.45,
+      0.6,
+      0.79,
+      1.0,
+      1.3
+    ],
+    "fog_only": [
+      0.2,
+      0.3,
+      0.45,
+      0.6,
+      0.79,
+      1.0,
+      1.3
+    ],
+    "mixed_sat": [
+      0.1,
+      0.2,
+      0.3,
+      0.45
+    ],
+    "mixed_con": [
+      0.2,
+      0.3,
+      0.45,
+      0.6
+    ]
+  },
+  "STRADDLE_TOL_SD": 0.02,
+  "BIN_QUANTILES": {
+    "sat_only": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ],
+    "fog_only": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "together": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "conflict": [
+      0.3333333333333333,
+      0.6666666666666666
+    ]
+  },
+  "BIN_EDGE_DECIMALS": 4,
+  "DISJOINT": "pair",
+  "SCENE_MATCH": "scene_bin",
+  "MAX_PER_SCENE_PER_TYPE": 2,
+  "MAX_CAP_SEARCH": 4,
+  "MIN_PAIRS_PER_BIN": 10,
+  "N_PRACTICE_PER_BLOCK": 6,
+  "N_CATCH_PER_BLOCK": 10,
+  "PRACTICE_TYPES": [
+    "sat_only",
+    "fog_only",
+    "together"
+  ],
+  "PRACTICE_MAG_QUANTILE": 0.6,
+  "CATCH_TYPE": "together",
+  "N_DRAWS": 20,
+  "RANDOM_SEED": 42,
+  "REQUIRED_PASS_SHARE": 0.9,
+  "INFO_TOL_TOTAL": 0.05,
+  "INFO_TOL_TYPE": 0.1,
+  "KS_MAX_D": 0.1,
+  "COS_DIFF_MAX": 0.05,
+  "VIF_MAX": 1.25,
+  "MIN_SCENE_SHARE": 0.85,
+  "TYPE_ORDER": [
+    "sat_only",
+    "fog_only",
+    "conflict",
+    "together"
+  ],
+  "EXPECTED_POOL": null,
+  "N_SCENES_EXPECTED": 47,
+  "CELLS_PER_SCENE": 49,
+  "SPREAD_SCENES": true,
+  "BALANCE_ASSIGNMENT": true,
+  "TYPE_TRIES": 5,
+  "ILP_TIME_LIMIT": 60,
+  "stimulus_set": {
+    "manifest": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+    "settings_hash": "7fd72262ba",
+    "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+    "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075"
+  }
+}

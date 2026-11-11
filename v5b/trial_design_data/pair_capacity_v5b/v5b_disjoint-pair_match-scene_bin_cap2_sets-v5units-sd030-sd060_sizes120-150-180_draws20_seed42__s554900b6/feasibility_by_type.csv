@@ -1,0 +1,73 @@
+threshold_set,block_size,mix,type,trials_per_block,pool_pairs,pool_scenes,usable_bins,bins_dropped_thin,bins_dropped_scenes,quotas,status,placed_per_block,shortfall_per_block,shortfall_exact,feasible_without_bin_quotas,min_cap_combination
+v5units,120,v4,sat_only,40,3290,47,1 2 3 4 5,,,1:8 2:8 3:8 4:8 5:8,feasible,40,0,True,feasible,2
+v5units,120,v4,fog_only,40,3976,47,1 2 3,,,1:14 2:13 3:13,feasible,40,0,True,feasible,2
+v5units,120,v4,together,20,20283,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+v5units,120,v4,conflict,20,8571,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+v5units,120,conflict_heavy,sat_only,36,3290,47,1 2 3 4 5,,,1:8 2:7 3:7 4:7 5:7,feasible,36,0,True,feasible,2
+v5units,120,conflict_heavy,fog_only,36,3976,47,1 2 3,,,1:12 2:12 3:12,feasible,36,0,True,feasible,2
+v5units,120,conflict_heavy,together,18,20283,47,1 2 3,,,1:6 2:6 3:6,feasible,18,0,True,feasible,2
+v5units,120,conflict_heavy,conflict,30,8571,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+v5units,150,v4,sat_only,50,3290,47,1 2 3 4 5,,,1:10 2:10 3:10 4:10 5:10,feasible,50,0,True,feasible,2
+v5units,150,v4,fog_only,50,3976,47,1 2 3,,,1:17 2:17 3:16,feasible,50,0,True,feasible,2
+v5units,150,v4,together,25,20283,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+v5units,150,v4,conflict,25,8571,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+v5units,150,conflict_heavy,sat_only,45,3290,47,1 2 3 4 5,,,1:9 2:9 3:9 4:9 5:9,feasible,45,0,True,feasible,2
+v5units,150,conflict_heavy,fog_only,45,3976,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
+v5units,150,conflict_heavy,together,23,20283,47,1 2 3,,,1:8 2:8 3:7,feasible,23,0,True,feasible,2
+v5units,150,conflict_heavy,conflict,37,8571,47,1 2 3,,,1:13 2:12 3:12,feasible,37,0,True,feasible,2
+v5units,180,v4,sat_only,60,3290,47,1 2 3 4 5,,,1:12 2:12 3:12 4:12 5:12,feasible,60,0,True,feasible,2
+v5units,180,v4,fog_only,60,3976,47,1 2 3,,,1:20 2:20 3:20,feasible,60,0,True,feasible,2
+v5units,180,v4,together,30,20283,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+v5units,180,v4,conflict,30,8571,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+v5units,180,conflict_heavy,sat_only,54,3290,47,1 2 3 4 5,,,1:11 2:11 3:11 4:11 5:10,feasible,54,0,True,feasible,2
+v5units,180,conflict_heavy,fog_only,54,3976,47,1 2 3,,,1:18 2:18 3:18,feasible,54,0,True,feasible,2
+v5units,180,conflict_heavy,together,27,20283,47,1 2 3,,,1:9 2:9 3:9,feasible,27,0,True,feasible,2
+v5units,180,conflict_heavy,conflict,45,8571,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
+sd030,120,v4,sat_only,40,6739,47,1 2 3 4 5,,,1:8 2:8 3:8 4:8 5:8,feasible,40,0,True,feasible,2
+sd030,120,v4,fog_only,40,5889,47,1 2 3,,,1:14 2:13 3:13,feasible,40,0,True,feasible,2
+sd030,120,v4,together,20,20436,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+sd030,120,v4,conflict,20,8852,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+sd030,120,conflict_heavy,sat_only,36,6739,47,1 2 3 4 5,,,1:8 2:7 3:7 4:7 5:7,feasible,36,0,True,feasible,2
+sd030,120,conflict_heavy,fog_only,36,5889,47,1 2 3,,,1:12 2:12 3:12,feasible,36,0,True,feasible,2
+sd030,120,conflict_heavy,together,18,20436,47,1 2 3,,,1:6 2:6 3:6,feasible,18,0,True,feasible,2
+sd030,120,conflict_heavy,conflict,30,8852,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd030,150,v4,sat_only,50,6739,47,1 2 3 4 5,,,1:10 2:10 3:10 4:10 5:10,feasible,50,0,True,feasible,2
+sd030,150,v4,fog_only,50,5889,47,1 2 3,,,1:17 2:17 3:16,feasible,50,0,True,feasible,2
+sd030,150,v4,together,25,20436,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+sd030,150,v4,conflict,25,8852,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+sd030,150,conflict_heavy,sat_only,45,6739,47,1 2 3 4 5,,,1:9 2:9 3:9 4:9 5:9,feasible,45,0,True,feasible,2
+sd030,150,conflict_heavy,fog_only,45,5889,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
+sd030,150,conflict_heavy,together,23,20436,47,1 2 3,,,1:8 2:8 3:7,feasible,23,0,True,feasible,2
+sd030,150,conflict_heavy,conflict,37,8852,47,1 2 3,,,1:13 2:12 3:12,feasible,37,0,True,feasible,2
+sd030,180,v4,sat_only,60,6739,47,1 2 3 4 5,,,1:12 2:12 3:12 4:12 5:12,feasible,60,0,True,feasible,2
+sd030,180,v4,fog_only,60,5889,47,1 2 3,,,1:20 2:20 3:20,feasible,60,0,True,feasible,2
+sd030,180,v4,together,30,20436,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd030,180,v4,conflict,30,8852,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd030,180,conflict_heavy,sat_only,54,6739,47,1 2 3 4 5,,,1:11 2:11 3:11 4:11 5:10,feasible,54,0,True,feasible,2
+sd030,180,conflict_heavy,fog_only,54,5889,47,1 2 3,,,1:18 2:18 3:18,feasible,54,0,True,feasible,2
+sd030,180,conflict_heavy,together,27,20436,47,1 2 3,,,1:9 2:9 3:9,feasible,27,0,True,feasible,2
+sd030,180,conflict_heavy,conflict,45,8852,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
+sd060,120,v4,sat_only,40,4806,47,1 2 3 4 5,,,1:8 2:8 3:8 4:8 5:8,feasible,40,0,True,feasible,2
+sd060,120,v4,fog_only,40,3976,47,1 2 3,,,1:14 2:13 3:13,feasible,40,0,True,feasible,2
+sd060,120,v4,together,20,20436,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+sd060,120,v4,conflict,20,8852,47,1 2 3,,,1:7 2:7 3:6,feasible,20,0,True,feasible,2
+sd060,120,conflict_heavy,sat_only,36,4806,47,1 2 3 4 5,,,1:8 2:7 3:7 4:7 5:7,feasible,36,0,True,feasible,2
+sd060,120,conflict_heavy,fog_only,36,3976,47,1 2 3,,,1:12 2:12 3:12,feasible,36,0,True,feasible,2
+sd060,120,conflict_heavy,together,18,20436,47,1 2 3,,,1:6 2:6 3:6,feasible,18,0,True,feasible,2
+sd060,120,conflict_heavy,conflict,30,8852,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd060,150,v4,sat_only,50,4806,47,1 2 3 4 5,,,1:10 2:10 3:10 4:10 5:10,feasible,50,0,True,feasible,2
+sd060,150,v4,fog_only,50,3976,47,1 2 3,,,1:17 2:17 3:16,feasible,50,0,True,feasible,2
+sd060,150,v4,together,25,20436,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+sd060,150,v4,conflict,25,8852,47,1 2 3,,,1:9 2:8 3:8,feasible,25,0,True,feasible,2
+sd060,150,conflict_heavy,sat_only,45,4806,47,1 2 3 4 5,,,1:9 2:9 3:9 4:9 5:9,feasible,45,0,True,feasible,2
+sd060,150,conflict_heavy,fog_only,45,3976,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
+sd060,150,conflict_heavy,together,23,20436,47,1 2 3,,,1:8 2:8 3:7,feasible,23,0,True,feasible,2
+sd060,150,conflict_heavy,conflict,37,8852,47,1 2 3,,,1:13 2:12 3:12,feasible,37,0,True,feasible,2
+sd060,180,v4,sat_only,60,4806,47,1 2 3 4 5,,,1:12 2:12 3:12 4:12 5:12,feasible,60,0,True,feasible,2
+sd060,180,v4,fog_only,60,3976,47,1 2 3,,,1:20 2:20 3:20,feasible,60,0,True,feasible,2
+sd060,180,v4,together,30,20436,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd060,180,v4,conflict,30,8852,47,1 2 3,,,1:10 2:10 3:10,feasible,30,0,True,feasible,2
+sd060,180,conflict_heavy,sat_only,54,4806,47,1 2 3 4 5,,,1:11 2:11 3:11 4:11 5:10,feasible,54,0,True,feasible,2
+sd060,180,conflict_heavy,fog_only,54,3976,47,1 2 3,,,1:18 2:18 3:18,feasible,54,0,True,feasible,2
+sd060,180,conflict_heavy,together,27,20436,47,1 2 3,,,1:9 2:9 3:9,feasible,27,0,True,feasible,2
+sd060,180,conflict_heavy,conflict,45,8852,47,1 2 3,,,1:15 2:15 3:15,feasible,45,0,True,feasible,2
