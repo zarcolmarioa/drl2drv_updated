@@ -1,0 +1,112 @@
+scope,check,status,detail
+script 3,folder has no BUILD_FAILED.txt and no failing check,PASS,99 checks
+script 3,"set files agree with set_info.json (version, size, counts per type, consistency, catch, practice)",PASS,"180 analysed (sat_only 54, fog_only 54, together 36, conflict 36), 15 consistency, 5 catch per set; practice [6, 3]"
+breaks,"a break every 40 main trials (= ceil(200 / 5)) gives exactly 5 stretches, which are the segments",PASS,"breaks after trials [40, 80, 120, 160]; stretches [40, 40, 40, 40, 40]"
+breaks,no short final stretch: every stretch has at least 40 - 4 = 36 trials,PASS,shortest 40
+scene gap,all 4 orders of both sets can be built with a scene gap of at least 30,PASS,"largest achievable 37 (searched 30-40, 20000 attempts per set per gap)"
+orders A,40 valid candidate orders built,PASS,"40 in 790 attempts; failures {'dead end': 723, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 27}"
+orders A,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [16, 15, 24, 38]"
+A_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o1,scene gap >= 30,PASS,smallest 30
+A_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o1,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 36, last 29 from the end"
+A_o1,same type at most 4 in a row,PASS,longest 2
+A_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.015
+A_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.005, x_con -0.002"
+A_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o2,scene gap >= 30,PASS,smallest 30
+A_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o2,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 38, last 31 from the end"
+A_o2,same type at most 4 in a row,PASS,longest 2
+A_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.016
+A_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.002, x_con -0.006"
+A_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o3,scene gap >= 30,PASS,smallest 30
+A_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o3,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 27, last 29 from the end"
+A_o3,same type at most 4 in a row,PASS,longest 2
+A_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.013
+A_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.011, x_con -0.011"
+A_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o4,scene gap >= 30,PASS,smallest 30
+A_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o4,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 27, last 18 from the end"
+A_o4,same type at most 4 in a row,PASS,longest 2
+A_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+A_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.021
+A_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.003, x_con +0.003"
+orders A,every order is a permutation of the set,PASS,
+orders A,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.169
+orders B,40 valid candidate orders built,PASS,"40 in 762 attempts; failures {'dead end': 694, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 28}"
+orders B,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [14, 30, 6, 24]"
+B_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o1,scene gap >= 30,PASS,smallest 30
+B_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o1,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 32, last 18 from the end"
+B_o1,same type at most 4 in a row,PASS,longest 2
+B_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+B_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.015
+B_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.001, x_con +0.001"
+B_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o2,scene gap >= 30,PASS,smallest 30
+B_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o2,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 20, last 27 from the end"
+B_o2,same type at most 4 in a row,PASS,longest 2
+B_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+B_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.018
+B_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.007, x_con -0.007"
+B_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o3,scene gap >= 30,PASS,smallest 30
+B_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o3,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 11, last 31 from the end"
+B_o3,same type at most 4 in a row,PASS,longest 2
+B_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+B_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.015
+B_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.011, x_con -0.005"
+B_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o4,scene gap >= 30,PASS,smallest 30
+B_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o4,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 35, last 20 from the end"
+B_o4,same type at most 4 in a row,PASS,longest 2
+B_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.009
+B_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.018
+B_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.008, x_con +0.002"
+orders B,every order is a permutation of the set,PASS,
+orders B,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.230
+assignment,every one of the 16 cells (block order x set mapping x order) appears 4 times in 64 slots,PASS,counts [4]
+assignment,"first 10 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 15 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.75, block order x set mapping 0.75"
+assignment,"first 20 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+assignment,"first 30 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 64 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+assignment,"slots beyond 64 (row ((n - 1) mod 64) + 1): after every 64 slots, up to 256, every factor and every pair of factors is exactly balanced",PASS,"checked at [64, 128, 192, 256]"
+assignment,"slots beyond 64: the balance after n slots equals the balance after (n mod 64) slots for every n up to 256, so it is never worse than within the first 64",PASS,"worst over every prefix up to 256: block_order 0.5, set_mapping 0.5, order 0.75, block order x set mapping 0.75"
+package,every shipped image matches script 3's manifest (SHA-256),PASS,"656 images, 0 differ"
+stimulus set,checksums.sha256 is the frozen one (FROZEN.json) and the one script 3 recorded (set_info.json),PASS,data/stimulus_set_v5/7fd72262ba: SHA-256 10d969db80459817...
+stimulus set,every packaged image matches the stimulus set's checksums.sha256,PASS,"656 images, 0 differ or are not listed"
+items,items.csv has one row per item_id,PASS,409 items
+lists,"A_o1: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o2: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o3: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o4: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o1: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o2: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o3: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o4: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"practice block 1: script 3's practice rows, in its order, every carried field equal",PASS,6 rows
+lists,"practice block 2: script 3's practice rows, in its order, every carried field equal",PASS,3 rows
+items,"every list and practice row's item_id is in items.csv, and the fields they share agree",PASS,"1609 rows, 20 shared fields"
+normality,every order of a set gives the same leak and information (the orders only rearrange the set),PASS,largest difference between orders 2.8e-14
+normality,"the leak (overall and per limited type, both definitions) and the information recomputed from the packaged lists equal script 3's",PASS,"128 values compared, largest difference 2.8e-14"
+package,every preloaded image ships in stimuli/,PASS,"638 preloaded, 656 shipped"

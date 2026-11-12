@@ -1,0 +1,357 @@
+{
+ "version": "v5b",
+ "package": "v5b_150",
+ "block_size": 150,
+ "main_trials_per_block": 167,
+ "counts_per_block": {
+  "analysed": 150,
+  "sat_only": 45,
+  "fog_only": 45,
+  "together": 30,
+  "conflict": 30,
+  "consistency": 12,
+  "consistency_by_type": {
+   "sat_only": 4,
+   "fog_only": 4,
+   "together": 2,
+   "conflict": 2
+  },
+  "catch": 5
+ },
+ "practice_by_block": [
+  6,
+  3
+ ],
+ "groups": {
+  "participant": {
+   "episodes": [
+    "derealization",
+    "ordinary"
+   ]
+  },
+  "control": {
+   "episodes": [
+    "ordinary",
+    "expectation"
+   ]
+  }
+ },
+ "lists": {
+  "A_o1": {
+   "set": "A",
+   "order": 1,
+   "file": "lists/A_o1.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "A_o2": {
+   "set": "A",
+   "order": 2,
+   "file": "lists/A_o2.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "A_o3": {
+   "set": "A",
+   "order": 3,
+   "file": "lists/A_o3.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "A_o4": {
+   "set": "A",
+   "order": 4,
+   "file": "lists/A_o4.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "B_o1": {
+   "set": "B",
+   "order": 1,
+   "file": "lists/B_o1.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "B_o2": {
+   "set": "B",
+   "order": 2,
+   "file": "lists/B_o2.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "B_o3": {
+   "set": "B",
+   "order": 3,
+   "file": "lists/B_o3.json",
+   "n": 167,
+   "scene_gap_min": 30
+  },
+  "B_o4": {
+   "set": "B",
+   "order": 4,
+   "file": "lists/B_o4.json",
+   "n": 167,
+   "scene_gap_min": 30
+  }
+ },
+ "practice": {
+  "1": "practice/block1.json",
+  "2": "practice/block2.json"
+ },
+ "practice_feedback_by_block_position": {
+  "1": true,
+  "2": false
+ },
+ "items": {
+  "file": "items.csv",
+  "key": "item_id",
+  "rows": 343,
+  "content": "every column of script 3's rows, one row per item (sets A and B, practice)"
+ },
+ "assignment": {
+  "file": "assignment.json",
+  "slot_param": "slot",
+  "slots_per_group": 64,
+  "allocation": "in sequence per group, never reused",
+  "slot_rule": "slot n uses row ((n - 1) mod 64) + 1 of the table: slots 1-64 use rows 1-64, slot 65 uses row 1, slot 130 uses row 2, and so on"
+ },
+ "timing": {
+  "break_every": 34,
+  "break_rule": "ceil(main trials per block / segments) = ceil(167 / 5)",
+  "break_counts": "main trials of the block (analysed, consistency, catch); practice not counted",
+  "breaks_after_trial": [
+   34,
+   68,
+   102,
+   136
+  ],
+  "stretch_lengths": [
+   34,
+   34,
+   34,
+   34,
+   31
+  ],
+  "rest_between_blocks": true
+ },
+ "catch": {
+  "mode": "no_images",
+  "per_block": 5,
+  "exclude_at_or_above": 3,
+  "exclusion_scope": "session (both blocks)",
+  "record_failures_per_block": true,
+  "targets_by_block_position": {
+   "1": [
+    "ArrowDown",
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowUp"
+   ],
+   "2": [
+    "ArrowDown",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowUp"
+   ]
+  }
+ },
+ "thresholds_by_set": {
+  "A": {
+   "n_random_choosers": 20000,
+   "tail": 0.025,
+   "estimator": "Firth (v4 fit_firth_batch)",
+   "upper": {
+    "sat": 0.32079707938074803,
+    "con": 0.3515555365519117
+   },
+   "lower": {
+    "sat": -0.32074450798262466,
+    "con": -0.3545266597817933
+   }
+  },
+  "B": {
+   "n_random_choosers": 20000,
+   "tail": 0.025,
+   "estimator": "Firth (v4 fit_firth_batch)",
+   "upper": {
+    "sat": 0.3219837713896053,
+    "con": 0.35113809696833964
+   },
+   "lower": {
+    "sat": -0.32481928771381746,
+    "con": -0.35282718938656954
+   }
+  }
+ },
+ "choice_probability_at_planning_weights": {
+  "A": {
+   "sat": 0.6238709371192394,
+   "con": 0.6649824183587653
+  },
+  "B": {
+   "sat": 0.6228195931152131,
+   "con": 0.6658864949802372
+  }
+ },
+ "predictors": "pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice",
+ "normality": {
+  "definition": "N = dist(B) - dist(A); positive = image A is the more typical; corpus = distance from the corpus median, orig = distance from the scene's unedited photograph",
+  "limit": 0.05,
+  "fit": "N ~ b_sat x_sat + b_con x_con, no intercept, analysed trials of each set",
+  "definitions": [
+   "corpus",
+   "orig"
+  ],
+  "shipped": {
+   "corpus_A": {
+    "b_sat": 0.03974649341317299,
+    "b_con": -0.040204298161152716,
+    "cos_sat": 0.06436168726477522,
+    "cos_con": -0.05904165057325133
+   },
+   "corpus_B": {
+    "b_sat": 0.03734092218812313,
+    "b_con": -0.0391742923558954,
+    "cos_sat": 0.06029264363879174,
+    "cos_con": -0.057536881326571386
+   },
+   "orig_A": {
+    "b_sat": -0.03987512425043604,
+    "b_con": 0.03719894537937251,
+    "cos_sat": -0.07989186332028514,
+    "cos_con": 0.06752621489042379
+   },
+   "orig_B": {
+    "b_sat": -0.037538684873125214,
+    "b_con": 0.03462358131753616,
+    "cos_sat": -0.06897223254325223,
+    "cos_con": 0.05760139354018283
+   }
+  },
+  "type_limits": {
+   "sat_only": {
+    "term": "sat",
+    "limit": 0.05,
+    "fit": "N ~ b x_sat, no intercept, the type's analysed trials of each set",
+    "shipped": {
+     "corpus_A": 0.0469262915252283,
+     "corpus_B": 0.04728195528093918,
+     "orig_A": -0.042611073815169265,
+     "orig_B": -0.04507204183891679
+    }
+   },
+   "fog_only": {
+    "term": "con",
+    "limit": 0.05,
+    "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+    "shipped": {
+     "corpus_A": -0.04562185222713327,
+     "corpus_B": -0.047464262878475286,
+     "orig_A": 0.04372908968254501,
+     "orig_B": 0.01706731467149903
+    }
+   },
+   "conflict": {
+    "term": "con",
+    "limit": 0.1,
+    "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+    "shipped": {
+     "corpus_A": -0.09207991795856243,
+     "corpus_B": -0.08372166611139271,
+     "orig_A": 0.06076962638113126,
+     "orig_B": 0.09176734462939534
+    }
+   }
+  },
+  "repair": {
+   "mode": "cells",
+   "kept_A": 115,
+   "kept_B": 110,
+   "target": 0.04,
+   "solves": 1
+  },
+  "recomputed_from_lists": {
+   "A": {
+    "n": 150,
+    "info_sat": 152.34778611551894,
+    "info_con": 125.55145478856089,
+    "corpus_b_sat": 0.03974649341317299,
+    "corpus_b_con": -0.04020429816115273,
+    "corpus_cos_sat": 0.06436168726477517,
+    "corpus_cos_con": -0.05904165057325133,
+    "sat_only_corpus_b_sat": 0.04692629152522829,
+    "fog_only_corpus_b_con": -0.04562185222713328,
+    "conflict_corpus_b_con": -0.09207991795856242,
+    "orig_b_sat": -0.03987512425043604,
+    "orig_b_con": 0.037198945379372524,
+    "orig_cos_sat": -0.07989186332028511,
+    "orig_cos_con": 0.06752621489042382,
+    "sat_only_orig_b_sat": -0.042611073815169244,
+    "fog_only_orig_b_con": 0.043729089682545026,
+    "conflict_orig_b_con": 0.060769626381131175
+   },
+   "B": {
+    "n": 150,
+    "info_sat": 151.38890301162897,
+    "info_con": 125.66661691361534,
+    "corpus_b_sat": 0.037340922188123106,
+    "corpus_b_con": -0.039174292355895354,
+    "corpus_cos_sat": 0.060292643638791735,
+    "corpus_cos_con": -0.057536881326571365,
+    "sat_only_corpus_b_sat": 0.047281955280939154,
+    "fog_only_corpus_b_con": -0.047464262878475265,
+    "conflict_corpus_b_con": -0.08372166611139262,
+    "orig_b_sat": -0.03753868487312519,
+    "orig_b_con": 0.03462358131753616,
+    "orig_cos_sat": -0.06897223254325226,
+    "orig_cos_con": 0.057601393540182864,
+    "sat_only_orig_b_sat": -0.045072041838916777,
+    "fog_only_orig_b_con": 0.017067314671499044,
+    "conflict_orig_b_con": 0.0917673446293953
+   }
+  }
+ },
+ "stimulus_set": {
+  "dir": "data/stimulus_set_v5/7fd72262ba",
+  "run": "7fd72262ba",
+  "checksums_file": "data/stimulus_set_v5/7fd72262ba/checksums.sha256",
+  "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075",
+  "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+  "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+  "settings_hash": "7fd72262ba"
+ },
+ "order_constraints": {
+  "segments": 5,
+  "segment_edges": [
+   0,
+   34,
+   68,
+   102,
+   136,
+   167
+  ],
+  "segments_end_at_breaks": true,
+  "type_spread_tol": 1,
+  "scene_gap_used": 30,
+  "scene_gap_policy": "fixed",
+  "scene_gap_largest_achievable": 31,
+  "consistency_min_distance": 40,
+  "catch_edge": 10,
+  "max_type_run": 4,
+  "max_side_run": 4
+ },
+ "source": {
+  "script3_dir": "data/trials_v5b/v5b_n150_balanced_mixed_v5units_cand40_leak0.05_seed42__sa95086c2",
+  "script3_run": "v5b_n150_balanced_mixed_v5units_cand40_leak0.05_seed42__sa95086c2",
+  "script3_set_A_sha256": "17efa35ea515e467b7890af6f3151501711467ce6e0b980dbd0191b35b2566d0",
+  "script3_set_B_sha256": "c0539bd33c82d83e3d88867fcf1a456e4afae1a73d5cae25610b953915e7e12d",
+  "script3_set_info_sha256": "2f3f4acffffd60f606adab78d9803366105d51d6f32b89cd211be01d6a5fe0a9",
+  "script3_sha256": "b6d597006d540ace5dd86a191d860263966aec1d26350847b6ca51de752c45a8",
+  "script1_sha256": "f7ab2c91e5a0be23e1d0f08ff96876d785487633c0dadff2781cf16826f45df4",
+  "script4": "make_trial_orders_v5b.py",
+  "script4_sha256": "ecf4877835738b8aca8134fb36ae4647362d6568e1a753726d7bb531cf1e135e",
+  "chosen_candidate": 27
+ }
+}
