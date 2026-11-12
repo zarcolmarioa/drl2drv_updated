@@ -41,48 +41,60 @@ sets (script 1 checks),each set uses >= 85% of the scenes it may use,PASS,
 sets (script 1 checks),<= 2 per scene per type in each set,PASS,
 sets (script 1 checks),same scenes: each scene x type x bin count equal in both sets,PASS,
 sets (script 1 checks),practice and catch reserved in full for both sets,PASS,
-normality limit,"set A, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0416, b_con -0.0418"
-normality limit,"set B, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0403, b_con -0.0408"
-normality limit,"set A, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0400, b_con +0.0409"
-normality limit,"set B, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0379, b_con +0.0407"
-candidates,the chosen candidate rebuilt in this process (one worker) gives byte-identical sets,PASS,"candidate 3 (cells), 31 worker(s) in the run"
-candidates,candidates are script 2's draws (their leak equals script 2's normality_leak.csv),PASS,"data/block_length_v5b/v5b_sets-v5units-sd060_sizes120-150-180_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__sad6f14a4: 20 draws, 80 rows compared, largest difference 9.7e-17"
-set A,analysed type counts equal the target,PASS,"sat_only 45, fog_only 45, together 30, conflict 30"
-set A,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0434, smallest |d_sat| 0.8621 SD"
-set A,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0639, smallest |d_con| 0.6441 SD"
+normality limit,"set A, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0373, b_con -0.0370"
+normality limit,"set B, corpus definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat +0.0372, b_con -0.0375"
+normality limit,"set A, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0337, b_con +0.0292"
+normality limit,"set B, orig definition: |b_sat| and |b_con| <= 0.05",PASS,"b_sat -0.0365, b_con +0.0334"
+normality limit,"set A, corpus definition, sat_only (N on x_sat alone): |b| <= 0.05",PASS,b_sat +0.0475
+normality limit,"set B, corpus definition, sat_only (N on x_sat alone): |b| <= 0.05",PASS,b_sat +0.0470
+normality limit,"set A, orig definition, sat_only (N on x_sat alone): |b| <= 0.05",PASS,b_sat -0.0473
+normality limit,"set B, orig definition, sat_only (N on x_sat alone): |b| <= 0.05",PASS,b_sat -0.0430
+normality limit,"set A, corpus definition, fog_only (N on x_con alone): |b| <= 0.05",PASS,b_con -0.0381
+normality limit,"set B, corpus definition, fog_only (N on x_con alone): |b| <= 0.05",PASS,b_con -0.0457
+normality limit,"set A, orig definition, fog_only (N on x_con alone): |b| <= 0.05",PASS,b_con +0.0437
+normality limit,"set B, orig definition, fog_only (N on x_con alone): |b| <= 0.05",PASS,b_con +0.0432
+normality limit,"set A, corpus definition, conflict (N on x_con alone): |b| <= 0.1",PASS,b_con -0.0675
+normality limit,"set B, corpus definition, conflict (N on x_con alone): |b| <= 0.1",PASS,b_con +0.0033
+normality limit,"set A, orig definition, conflict (N on x_con alone): |b| <= 0.1",PASS,b_con +0.0386
+normality limit,"set B, orig definition, conflict (N on x_con alone): |b| <= 0.1",PASS,b_con +0.0906
+candidates,the chosen candidate rebuilt in this process (one worker) gives byte-identical sets,PASS,"candidate 22 (cells), 31 worker(s) in the run"
+candidates,candidates are script 2's draws (their leak equals script 2's normality_leak.csv),PASS,"data/block_length_v5b/v5b_sets-v5units-sd060_sizes120-150-180_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__sad6f14a4: 20 draws, 80 rows compared, largest difference 9.5e-17"
+set A,analysed type counts equal the target,PASS,"sat_only 54, fog_only 54, together 36, conflict 36"
+set A,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0505, smallest |d_sat| 0.8346 SD"
+set A,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0756, smallest |d_con| 0.6447 SD"
 set A,"together, conflict: both differences >= their minimums; conflict balanced",PASS,
-set A,12 consistency trials = floor(150 x 0.0833),PASS,"sat_only 4, fog_only 4, together 2, conflict 2"
+set A,15 consistency trials = floor(180 x 0.0833),PASS,"sat_only 5, fog_only 4, together 3, conflict 3"
 set A,every consistency trial repeats an analysed pair of its set with the sides swapped,PASS,
 set A,"5 catch trials, mode 'no_images', distinct scenes",PASS,
 set A,image A (the predicted image) on the left in half of each type's trials (+-1 if odd),PASS,
-set A,catch sides balanced (+-1),PASS,2 of 5
-set B,analysed type counts equal the target,PASS,"sat_only 45, fog_only 45, together 30, conflict 30"
-set B,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0412, smallest |d_sat| 0.8715 SD"
-set B,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0744, smallest |d_con| 0.6511 SD"
+set A,catch sides balanced (+-1),PASS,3 of 5
+set B,analysed type counts equal the target,PASS,"sat_only 54, fog_only 54, together 36, conflict 36"
+set B,sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.7937 SD,PASS,"largest |d_con| 0.0418, smallest |d_sat| 0.8202 SD"
+set B,fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4493 SD,PASS,"largest |d_sat| 0.0754, smallest |d_con| 0.6454 SD"
 set B,"together, conflict: both differences >= their minimums; conflict balanced",PASS,
-set B,12 consistency trials = floor(150 x 0.0833),PASS,"sat_only 4, fog_only 4, together 2, conflict 2"
+set B,15 consistency trials = floor(180 x 0.0833),PASS,"sat_only 5, fog_only 4, together 3, conflict 3"
 set B,every consistency trial repeats an analysed pair of its set with the sides swapped,PASS,
 set B,"5 catch trials, mode 'no_images', distinct scenes",PASS,
 set B,image A (the predicted image) on the left in half of each type's trials (+-1 if odd),PASS,
-set B,catch sides balanced (+-1),PASS,2 of 5
+set B,catch sides balanced (+-1),PASS,3 of 5
 consistency,the same couples are repeated in both sets (matched),PASS,
 practice P1,"6 trials of types ['sat_only', 'fog_only', 'together', 'sat_only', 'fog_only', 'together'] in turn, distinct scenes",PASS,"sat_only, fog_only, together, sat_only, fog_only, together"
 practice P1,every difference at or below the 60% quantile of its type,PASS,
 practice P2,"3 trials of types ['sat_only', 'fog_only', 'together'] in turn, distinct scenes",PASS,"sat_only, fog_only, together"
 practice P2,every difference at or below the 60% quantile of its type,PASS,
-all rows,"no pair is used twice anywhere (consistency repeats aside): sets, practice and catch are disjoint",PASS,"319 pairs, 0 duplicates"
-all rows,"every row carries the direction, difference, bin and normality fields",PASS,14 fields in 343 rows
-all rows,"unedited images are allowed (counted, not limited)",NOTE,"analysed pairs with the unedited image: A 4, B 6; all rows 11"
-set A,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6240 (v4 0.6191), contrast 0.6659 (v4 0.6104)"
+all rows,"no pair is used twice anywhere (consistency repeats aside): sets, practice and catch are disjoint",PASS,"379 pairs, 0 duplicates"
+all rows,"every row carries the direction, difference, bin and normality fields",PASS,14 fields in 409 rows
+all rows,"unedited images are allowed (counted, not limited)",NOTE,"analysed pairs with the unedited image: A 7, B 11; all rows 19"
+set A,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6232 (v4 0.6191), contrast 0.6656 (v4 0.6104)"
 set A,every threshold fit converged,PASS,share unconverged 0.00000
-set B,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6275 (v4 0.6191), contrast 0.6654 (v4 0.6104)"
+set B,choice probability at the planning weights (reported; v4's for reference),NOTE,"saturation 0.6238 (v4 0.6191), contrast 0.6646 (v4 0.6104)"
 set B,every threshold fit converged,PASS,share unconverged 0.00000
-thresholds,the two sets' upper thresholds agree within 5%,PASS,largest relative difference 1.8%
+thresholds,the two sets' upper thresholds agree within 5%,PASS,largest relative difference 0.9%
 images,the stimulus set's checksums.sha256 is present,PASS,"2,322 files listed"
 images,checksums.sha256 is the frozen one (SHA-256 as in FROZEN.json),PASS,set 7fd72262ba
-images,every referenced image exists in STIMULI_SRC,PASS,"576 needed, 0 missing"
+images,every referenced image exists in STIMULI_SRC,PASS,"656 needed, 0 missing"
 images,every copy is byte-identical to its source (SHA-256),PASS,0 differ
-images,every copy matches the stimulus set's checksums.sha256,PASS,0 of 576 differ or are not listed
+images,every copy matches the stimulus set's checksums.sha256,PASS,0 of 656 differ or are not listed
 images,every image is 512 x 512,PASS,0 differ
-images,re-measured sat_mean and contrast_local equal the pair table (|diff| <= 0.0001),PASS,0 of 576 differ
+images,re-measured sat_mean and contrast_local equal the pair table (|diff| <= 0.0001),PASS,0 of 656 differ
 images,re-measured features equal the stimulus manifest,PASS,0 differ

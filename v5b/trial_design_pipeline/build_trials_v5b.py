@@ -162,6 +162,43 @@ N_WORKERS = None
 #   under each definition (corpus median and the scene's original).
 LEAK_LIMIT = 0.05
 
+# TYPE_LIMITS
+#   Further limits, per trial type, on top of the overall one: type ->
+#   (term, limit). N of that type's analysed trials is regressed on the ONE
+#   direction term named, no intercept, and |b| <= limit is required in each
+#   set under each definition. One term suits sat_only (x_con ~ 0), fog_only
+#   (x_sat ~ 0) and conflict (x_sat moves in lockstep with x_con, cos about
+#   -0.96, so one term describes it). Together trials are not limited (only
+#   reported). {} = the overall limit alone (the first v5b build).
+TYPE_LIMITS = {"sat_only": ("sat", 0.05),
+               "fog_only": ("con", 0.05),
+               "conflict": ("con", 0.10)}
+
+# TYPE_TARGET_SHARE
+#   The repair holds each type's single-term b within this share of its
+#   limit (a one-term fit is exact, so a small margin is enough).
+TYPE_TARGET_SHARE = 0.95
+
+# LIMIT_STEPS / COMPARE_LIMIT_STEPS
+#   With COMPARE_LIMIT_STEPS, every candidate is also repaired under each
+#   step below (each a list of TYPE_LIMITS keys added to the overall limit)
+#   and the report gives, per step: the candidates passing, the information
+#   of the set each step would ship and of every candidate against the first
+#   step (the overall limit alone, i.e. the first v5b build), and where the
+#   images sit. The shipped sets use all of TYPE_LIMITS. Each step adds
+#   about one more candidate run's time.
+COMPARE_LIMIT_STEPS = True
+LIMIT_STEPS = [("overall only", []),
+               ("+ single-feature", ["sat_only", "fog_only"]),
+               ("+ conflict", ["sat_only", "fog_only", "conflict"])]
+
+# COST_RULE
+#   (largest information cost, fewest passing candidates) at which a step is
+#   judged acceptable in the report: its cost against the step before, for
+#   each weight, on the shipped sets and on the mean over candidates. The
+#   report states the verdict; it does not change what is shipped.
+COST_RULE = (0.05, 5)
+
 # REPAIR_TARGET / REPAIR_TIGHTEN / REPAIR_TRIES
 #   The repair holds |sum(x*N)| <= target * sum(x^2) per term, definition
 #   and set. If the exact fit then misses LEAK_LIMIT, the target is
@@ -379,6 +416,15 @@ def check_settings(cap):
     if not 0 < REPAIR_TIGHTEN < 1 or REPAIR_TRIES < 1:
         raise ValueError("REPAIR_TIGHTEN must be in (0, 1) and REPAIR_TRIES "
                          ">= 1")
+    for t, v in TYPE_LIMITS.items():
+        if (t not in MAIN_TYPES or len(v) != 2 or v[0] not in W_NAMES
+                or not v[1] > 0):
+            raise ValueError(f"TYPE_LIMITS[{t!r}] must be (term 'sat' or "
+                             "'con', limit > 0) for a trial type")
+    for name, ts in LIMIT_STEPS:
+        if not set(ts) <= set(TYPE_LIMITS):
+            raise ValueError(f"LIMIT_STEPS {name!r} names types not in "
+                             "TYPE_LIMITS")
     for k in CAPACITY_OVERRIDES:
         if not hasattr(cap, k):
             raise ValueError(f"CAPACITY_OVERRIDES names {k!r}, which script "
@@ -448,16 +494,40 @@ def position_metrics(cap, m):
 TYPE_TERMS = {"sat_only": ("sat",), "fog_only": ("con",)}
 
 
+def type_b(cap, sets, types=None):
+    """The single-term leak of each limited type: N of the type's analysed
+    trials on its TYPE_LIMITS term, no intercept, per definition and set."""
+    out = {}
+    for t in (types if types is not None else TYPE_LIMITS):
+        term = TYPE_LIMITS[t][0]
+        for blk in ("A", "B"):
+            m = analysed(sets[blk])
+            m = m[m.trial_type == t]
+            for dfn in cap.NORMALITY_DEFS:
+                lk = cap.leak(m[f"N_{dfn}"], m.x_sat, m.x_con, (term,))
+                out[f"type_b_{t}_{dfn}_{blk}"] = lk[f"b_{term}"]
+    return out
+
+
+def type_worst(out, t):
+    return max(abs(v) for k, v in out.items()
+               if k.startswith(f"type_b_{t}_"))
+
+
 def leak_rows_of(cap, m, base, label):
     """The leak of the trials in m, by trial type and overall, under each
     definition. One term for sat_only (x_sat) and fog_only (x_con), where
     the other term is ~0; both for the mixed types and overall (script 1's
     convention)."""
     rows = []
-    groups = ([(t, m[m.trial_type == t]) for t in MAIN_TYPES
-               if (m.trial_type == t).any()] + [("all", m)])
-    for t, s in groups:
-        terms = TYPE_TERMS.get(t, ("sat", "con"))
+    groups = ([(t, m[m.trial_type == t], TYPE_TERMS.get(t, ("sat", "con")))
+               for t in MAIN_TYPES if (m.trial_type == t).any()]
+              + [("all", m, ("sat", "con"))])
+    # the single-term fits of limited types not already fitted that way
+    groups += [(t, m[m.trial_type == t], (TYPE_LIMITS[t][0],))
+               for t in TYPE_LIMITS if (m.trial_type == t).any()
+               and TYPE_TERMS.get(t) != (TYPE_LIMITS[t][0],)]
+    for t, s, terms in groups:
         for dfn in cap.NORMALITY_DEFS:
             r = {**base, "set": label, "type": t, "definition": dfn,
                  "n": len(s), "terms": "+".join(terms)}
@@ -488,6 +558,10 @@ def summarise(cap, met, chk, sets):
                 out[f"leak_{d}_{k}_{blk}"] = met[f"leak_{d}_{k}_{blk}"]
         out[f"worst_abs_b_{d}"] = worst_b(cap, met, (d,))
     out["worst_abs_b"] = worst_b(cap, met)
+    tb = type_b(cap, sets)
+    out.update(tb)
+    for t in TYPE_LIMITS:
+        out[f"type_worst_{t}"] = type_worst(tb, t)
     out["ks_sat"], out["ks_con"] = met["ks_sat"], met["ks_con"]
     out["cos_diff"] = met["cos_diff"]
     out["vif_max"] = max(met["vif_A"], met["vif_B"])
@@ -533,7 +607,8 @@ class _Rows:
                                 np.array(self.hi, float))
 
 
-def solve_repair(cap, Q, codes, need, inA, inB, target, mode):
+def solve_repair(cap, Q, codes, need, inA, inB, target, mode, types=(),
+                 shrink=1.0):
     """The integer program. Variables yA, yB (one per usable pair): is the
     pair in set A / set B. Maximise the draw's pairs kept, subject to
       cells  each scene x type x bin cell holds the draw's count in each set
@@ -541,6 +616,9 @@ def solve_repair(cap, Q, codes, need, inA, inB, target, mode):
              same count in A and B, and <= MAX_PER_SCENE_PER_TYPE per scene
              and type (mode 'wide');
       leak   |sum y x N| <= target * sum y x^2, per term, definition, set;
+             and for each type in `types`, over that type's trials and its
+             one TYPE_LIMITS term, |sum y x N| <= limit * TYPE_TARGET_SHARE
+             * shrink * sum y x^2 (exact for a one-term fit);
       info   A-B relative difference <= REPAIR_INFO_TOL_TOTAL per weight,
              and <= REPAIR_INFO_TOL_TYPE per type and weight;
       disjoint  yA + yB <= 1."""
@@ -573,6 +651,19 @@ def solve_repair(cap, Q, codes, need, inA, inB, target, mode):
             for off in (0, n):
                 R.add(off + idx_all, g - target * m2, -np.inf, 0)
                 R.add(off + idx_all, g + target * m2, 0, np.inf)
+
+    tt_ = Q.trial_type.to_numpy()
+    for t in types:
+        term, lim = TYPE_LIMITS[t]
+        tgt = lim * TYPE_TARGET_SHARE * shrink
+        mt = (tt_ == t).astype(float)
+        x = (xs if term == "sat" else xc) * mt
+        for dfn in cap.NORMALITY_DEFS:
+            N = Q[f"N_{dfn}"].to_numpy(float)
+            g, m2 = x * N, x * x
+            for off in (0, n):
+                R.add(off + idx_all, g - tgt * m2, -np.inf, 0)
+                R.add(off + idx_all, g + tgt * m2, 0, np.inf)
 
     def info_rows(q, tol):
         cols = np.r_[idx_all, n + idx_all]
@@ -646,7 +737,7 @@ def _kid(df):
     return (df.file_a.astype(str) + "|" + df.file_b.astype(str)).to_numpy()
 
 
-def repair(cap, sets, counts, s1, n_allowed, st, mode):
+def repair(cap, sets, counts, s1, n_allowed, st, mode, types=()):
     W = _W
     P = W["P_all"]
     mA, mB = analysed(sets["A"]), analysed(sets["B"])
@@ -696,11 +787,12 @@ def repair(cap, sets, counts, s1, n_allowed, st, mode):
             "repair_solves": 0, "repair_seconds": 0.0,
             "repair_time_limit_hits": 0, "repair_target": np.nan,
             "repair_status": "", "kept_A": np.nan, "kept_B": np.nan}
-    target = REPAIR_TARGET
+    target, shrink = REPAIR_TARGET, 1.0
     new, met, chk, ok = None, None, None, False
     for k in range(REPAIR_TRIES):
         t1 = time.time()
-        res = solve_repair(cap, Q, codes, need, inA, inB, target, mode)
+        res = solve_repair(cap, Q, codes, need, inA, inB, target, mode,
+                           types, shrink)
         info["repair_solves"] += 1
         info["repair_seconds"] += time.time() - t1
         info["repair_time_limit_hits"] += int(res.status == 1)
@@ -717,16 +809,24 @@ def repair(cap, sets, counts, s1, n_allowed, st, mode):
         info["kept_B"] = int((yB & (inB > 0)).sum())
         failed = [c for c, v in chk.items() if v is False]
         wb = worst_b(cap, met)
-        if wb <= LEAK_LIMIT + cap.EPS and not failed:
+        tb = type_b(cap, new, types)
+        t_bad = [t for t in types
+                 if type_worst(tb, t) > TYPE_LIMITS[t][1] + cap.EPS]
+        lim_ok = wb <= LEAK_LIMIT + cap.EPS and not t_bad
+        if lim_ok and not failed:
             ok = True
             info["repair_status"] = "ok"
             break
-        if wb > LEAK_LIMIT + cap.EPS and k + 1 < REPAIR_TRIES:
-            target *= REPAIR_TIGHTEN
+        if not lim_ok and k + 1 < REPAIR_TRIES:
+            if wb > LEAK_LIMIT + cap.EPS:
+                target *= REPAIR_TIGHTEN
+            if t_bad:
+                shrink *= REPAIR_TIGHTEN
             continue
         info["repair_status"] = (
-            f"limit missed (worst |b| {wb:.3f})" if wb > LEAK_LIMIT
-            + cap.EPS else "script 1 checks fail: " + "; ".join(failed))
+            (f"limit missed (worst |b| {wb:.3f}"
+             + (f"; types {t_bad}" if t_bad else "") + ")")
+            if not lim_ok else "script 1 checks fail: " + "; ".join(failed))
         break
     return {"sets": new, "met": met, "chk": chk, "pass": ok, "info": info}
 
@@ -791,12 +891,12 @@ def _worker_init(payload):
 def _task(args):
     """Draw candidate d at one size with script 1's one_draw, check it, and
     repair it. Returns a dict of values and both versions of the sets."""
-    size, d, mode = args
+    size, d, mode, types = args
     cap = _W["cap"]
     t0 = time.time()
     counts, s1 = _W["counts"][size], _W["s1"][size]
     combo = f"{THRESHOLD_SET}|{size}|{MIX}"     # script 1's and 2's seeds
-    out = {"size": size, "candidate": d}
+    out = {"size": size, "candidate": d, "step": "+".join(types) or "overall"}
     sets, how, n_allowed = cap.one_draw(_W["pools_t"], counts, s1,
                                         _W["scenes"], combo, d)
     out["built"] = how
@@ -814,7 +914,7 @@ def _task(args):
         rows += leak_rows_of(cap, analysed(sets[blk]),
                              {**base, "stage": "before"}, blk)
     st = cap.Streams(cap.RANDOM_SEED, "build_trials_v5b", combo, d, mode)
-    rep = repair(cap, sets, counts, s1, n_allowed, st, mode)
+    rep = repair(cap, sets, counts, s1, n_allowed, st, mode, types)
     out.update(rep["info"])
     if rep["sets"] is not None:
         out.update(prefixed("rep_", summarise(cap, rep["met"], rep["chk"],
@@ -837,7 +937,8 @@ def run_tasks(tasks, payload, cap, nw, label):
     t0 = time.time()
 
     def note(k, t, r):
-        print(f"    {label} {k}/{len(tasks)}  n={t[0]} candidate {t[1]:2d}: "
+        print(f"    {label} {k}/{len(tasks)}  n={t[0]} candidate {t[1]:2d} "
+              f"[{'+'.join(t[3]) or 'overall'}]: "
               f"{r.get('repair_status', '')}  ({time.time() - t0:.0f} s)",
               flush=True)
 
@@ -1246,6 +1347,67 @@ def cand_table(results):
     return pd.DataFrame(rows)
 
 
+def step_table(cap, R):
+    """One row per LIMIT_STEPS step: candidates passing, the set it would
+    ship (by the same selection), its information, leaks and positions, the
+    mean information over its passing candidates, and the cost against the
+    first step and the step before (on the shipped sets, and paired by
+    candidate over candidates passing both). None without the steps."""
+    if not R.get("steps"):
+        return None
+    rows, cands = [], []
+    for name, types, cand in R["steps"]:
+        chosen, c2, _ = select(cand)
+        ok = c2[c2.rep_pass.fillna(False).astype(bool)]
+        r = {"step": name, "types": "+".join(types) or "-",
+             "passing": len(ok), "chosen": chosen["rep"]}
+        if chosen["rep"] is not None:
+            cr = c2[c2.candidate == chosen["rep"]].iloc[0]
+            for w_ in W_NAMES:
+                r[f"weaker_{w_}"] = cr[f"rep_weaker_set_info_{w_}"]
+                r[f"total_{w_}"] = cr[f"rep_total_info_{w_}"]
+            r["worst_abs_b"] = cr.rep_worst_abs_b
+            for t in TYPE_LIMITS:
+                r[f"type_worst_{t}"] = cr[f"rep_type_worst_{t}"]
+            for k in cr.index:
+                if k.startswith("rep_pos_") or k in (
+                        "rep_straddle_sat", "rep_straddle_con",
+                        "rep_with_original"):
+                    r[k[4:]] = cr[k]
+        for w_ in W_NAMES:
+            r[f"mean_weaker_{w_}"] = ok[f"rep_weaker_set_info_{w_}"].mean()
+        for k in ok.columns:
+            if k.startswith("rep_pos_") or k in (
+                    "rep_straddle_sat", "rep_straddle_con",
+                    "rep_with_original"):
+                r[f"mean_{k[4:]}"] = ok[k].mean()
+        rows.append(r)
+        cands.append(c2.set_index("candidate"))
+    T = pd.DataFrame(rows)
+    for i in range(len(T)):
+        for ref_i, tag in ((0, "vs_first"), (max(i - 1, 0), "vs_prev")):
+            for w_ in W_NAMES:
+                a, b = T.loc[i].get(f"weaker_{w_}"), T.loc[ref_i].get(
+                    f"weaker_{w_}")
+                T.loc[i, f"shipped_{tag}_{w_}"] = (a / b - 1 if pd.notna(a)
+                                                   and pd.notna(b) else np.nan)
+                c, c0 = cands[i], cands[ref_i]
+                both = c.index[c.rep_pass.fillna(False).astype(bool)
+                               & c0.rep_pass.fillna(False).astype(bool)]
+                T.loc[i, f"paired_{tag}_{w_}"] = float(
+                    (c.loc[both, f"rep_weaker_set_info_{w_}"]
+                     / c0.loc[both, f"rep_weaker_set_info_{w_}"] - 1).mean()
+                ) if len(both) else np.nan
+        worst = min(T.loc[i, f"{k}_vs_prev_{w_}"] for k in ("shipped",
+                                                             "paired")
+                    for w_ in W_NAMES)
+        T.loc[i, "largest_cost_vs_prev"] = -worst
+        T.loc[i, "meets_cost_rule"] = bool(
+            (i == 0 or -worst <= COST_RULE[0] + 1e-12)
+            and T.loc[i, "passing"] >= COST_RULE[1])
+    return T
+
+
 def write_failed(out_dir, size, cand, ck, why, t0):
     cand.to_csv(f"{out_dir}/candidates.csv", index=False)
     ck.frame().to_csv(f"{out_dir}/checks.csv", index=False)
@@ -1272,6 +1434,8 @@ def build_one(cap, v4, size, R, pools_t, scenes, p_log, pre_checks, run,
 
     # --- candidates and the selection ---
     chosen, cand, ref = select(R["cand"])
+    print(f"    shipped with the overall limit and per-type limits "
+          f"{dict(TYPE_LIMITS) or 'none'}")
     n_built = int(cand.built.isin(["greedy", "fallback"]).sum())
     n_draw = int(cand.draw_pass.fillna(False).astype(bool).sum())
     n_rep = int(cand.rep_pass.fillna(False).astype(bool).sum())
@@ -1313,6 +1477,14 @@ def build_one(cap, v4, size, R, pools_t, scenes, p_log, pre_checks, run,
                    f"and |b_con| <= {LEAK_LIMIT}",
                    max(abs(bs), abs(bc)) <= LEAK_LIMIT + cap.EPS,
                    f"b_sat {bs:+.4f}, b_con {bc:+.4f}")
+    tb = type_b(cap, sets)
+    for t, (term, lim) in TYPE_LIMITS.items():
+        for dfn in cap.NORMALITY_DEFS:
+            for blk in ("A", "B"):
+                v = tb[f"type_b_{t}_{dfn}_{blk}"]
+                ck.add("normality limit", f"set {blk}, {dfn} definition, {t}"
+                       f" (N on x_{term} alone): |b| <= {lim:g}",
+                       abs(v) <= lim + cap.EPS, f"b_{term} {v:+.4f}")
     ok_rep, det = R["repro"]
     ck.add("candidates", "the chosen candidate rebuilt in this process (one "
            "worker) gives byte-identical sets", ok_rep, det)
@@ -1481,6 +1653,9 @@ def build_one(cap, v4, size, R, pools_t, scenes, p_log, pre_checks, run,
     lk = pd.DataFrame([r for c_ in R["results"].values()
                        for r in c_["leak_rows"]] + extra_leak)
     lk.to_csv(f"{out_dir}/leak_by_type.csv", index=False)
+    steps = step_table(cap, R)
+    if steps is not None:
+        steps.to_csv(f"{out_dir}/limit_steps.csv", index=False)
     with open(f"{out_dir}/settings.json", "w") as f:
         json.dump({**settings_dict(cap, size),
                    "run": {"workers": run["workers"]}}, f, indent=2,
@@ -1513,6 +1688,13 @@ def build_one(cap, v4, size, R, pools_t, scenes, p_log, pre_checks, run,
                                        ("b_sat", "b_con", "cos_sat",
                                         "cos_con")}
                         for dfn in cap.NORMALITY_DEFS for b in ("A", "B")},
+            "type_limits": {
+                t: {"term": term, "limit": lim, "fit": f"N ~ b x_{term}, no "
+                    "intercept, the type's analysed trials of each set",
+                    "shipped": {f"{dfn}_{b}": tb[f"type_b_{t}_{dfn}_{b}"]
+                                for dfn in cap.NORMALITY_DEFS
+                                for b in ("A", "B")}}
+                for t, (term, lim) in TYPE_LIMITS.items()},
             "repair": {"mode": crow.repair_mode,
                        "kept_A": int(crow.kept_A),
                        "kept_B": int(crow.kept_B),
@@ -1557,7 +1739,7 @@ def build_one(cap, v4, size, R, pools_t, scenes, p_log, pre_checks, run,
     # --- report ---
     write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
                  sets, sets0, main, cons, catch, prac, info, counts, n_cons,
-                 alloc, met, man, fails, extra_leak, run, t0)
+                 alloc, met, man, fails, extra_leak, run, t0, steps)
     ck.frame().to_csv(f"{out_dir}/checks.csv", index=False)
     cf = ck.frame()
     n_fail = int((cf.status == "FAIL").sum())
@@ -1606,9 +1788,72 @@ def position_lines(w, before, after, label_b="before", label_a="after"):
       f"{after['with_original']}")
 
 
+def step_lines(w, T):
+    w("5b. THE LIMIT STEPS: WHAT EACH ADDED LIMIT COSTS")
+    w("-" * 78)
+    w("Every candidate repaired under each step; each step's set chosen by "
+      "the same rule. The first")
+    w("step is the overall limit alone (the first v5b build). Cost = change "
+      "in the weaker set's")
+    w("information: on the set each step would ship, and the mean over "
+      "candidates passing both steps.")
+    w(f"{'step':18s} {'pass':>4s} {'cand':>4s} {'weaker sat':>10s} "
+      f"{'weaker con':>10s}   {'vs first: shipped':>19s} {'paired':>14s}   "
+      f"{'vs previous: shipped':>20s} {'paired':>14s}")
+    for r in T.itertuples():
+        def pc(tag, kind):
+            return (f"{100 * getattr(r, f'{kind}_{tag}_sat'):+5.1f}/"
+                    f"{100 * getattr(r, f'{kind}_{tag}_con'):+5.1f}%")
+        w(f"{r.step:18s} {r.passing:4d} {('-' if pd.isna(r.chosen) else int(r.chosen))!s:>4s} "
+          f"{r.weaker_sat:10.2f} {r.weaker_con:10.2f}   "
+          f"{pc('vs_first', 'shipped'):>19s} {pc('vs_first', 'paired'):>14s}"
+          f"   {pc('vs_prev', 'shipped'):>20s} {pc('vs_prev', 'paired'):>14s}")
+    w("  (percentages: saturation / contrast; negative = information lost)")
+    w("Leak of each step's shipped set: worst overall |b|, and the worst "
+      "single-term |b| per limited type:")
+    for r in T.itertuples():
+        w(f"  {r.step:18s} overall {r.worst_abs_b:.3f}   " + "   ".join(
+            f"{t} {getattr(r, f'type_worst_{t}'):.3f}" for t in TYPE_LIMITS))
+    w(f"Cost rule: a step is acceptable when it costs at most "
+      f"{COST_RULE[0]:.0%} of either weight's information against the")
+    w(f"step before (shipped and paired) and at least {COST_RULE[1]} "
+      "candidates pass:")
+    for r in T.itertuples():
+        w(f"  {r.step:18s} largest cost vs previous "
+          f"{100 * r.largest_cost_vs_prev:+.1f}%, {r.passing} passing -> "
+          + ("ACCEPTABLE" if r.meets_cost_rule else "NOT ACCEPTABLE"))
+    w("Where the images sit, each step's shipped set (both sets), share above"
+      " / at / below the original:")
+    w(f"  {'':18s} {'':4s} {'image A':>17s}   {'image B':>17s}   "
+      f"{'all':>17s}   straddle s/c  with orig")
+    for r in T.itertuples():
+        for feat, lab in (("sat", "sat"), ("con", "con")):
+            cells = "   ".join(" ".join(
+                f"{getattr(r, f'pos_{feat}_{side}_{k}'):4.0%}"
+                for k in ("above", "at", "below"))
+                for side in ("A", "B", "all"))
+            extra = (f"   {int(r.straddle_sat):4d}/{int(r.straddle_con):<4d}"
+                     f"   {int(r.with_original):5d}") if feat == "sat" else ""
+            w(f"  {r.step if feat == 'sat' else '':18s} {lab:4s} {cells}"
+              + extra)
+    w("Mean over each step's passing candidates:")
+    for r in T.itertuples():
+        for feat in ("sat", "con"):
+            cells = "   ".join(" ".join(
+                f"{getattr(r, f'mean_pos_{feat}_{side}_{k}'):4.0%}"
+                for k in ("above", "at", "below"))
+                for side in ("A", "B", "all"))
+            extra = (f"   {r.mean_straddle_sat:5.1f}/{r.mean_straddle_con:<5.1f}"
+                     f" {r.mean_with_original:5.1f}") if feat == "sat" else ""
+            w(f"  {r.step if feat == 'sat' else '':18s} {feat:4s} {cells}"
+              + extra)
+    w("  limit_steps.csv holds these figures.")
+    w("")
+
+
 def write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
                  sets, sets0, main, cons, catch, prac, info, counts, n_cons,
-                 alloc, met, man, fails, extra_leak, run, t0):
+                 alloc, met, man, fails, extra_leak, run, t0, steps=None):
     L = []
     w = L.append
     d = chosen["rep"]
@@ -1652,6 +1897,13 @@ def write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
       f"set's analysed trials gives |b| <= {LEAK_LIMIT:g}")
     w(f"under both definitions ({', '.join(defs)}), and every script 1 "
       "check passes.")
+    if TYPE_LIMITS:
+        w("PER-TYPE LIMITS (one term, no intercept, each set, both "
+          "definitions): " + "; ".join(
+              f"{t} N on x_{term} |b| <= {lim:g}"
+              for t, (term, lim) in TYPE_LIMITS.items()) + ".")
+    else:
+        w("No per-type limits (TYPE_LIMITS is empty).")
     w("SELECTION: the weaker set's information per weight relative to the "
       "mean of the unrepaired")
     w(f"candidates (saturation {ref['sat']:.2f}, contrast {ref['con']:.2f}); "
@@ -1741,11 +1993,32 @@ def write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
         for dfn in defs))
     w("")
 
-    w("4. THE LEAK BY TRIAL TYPE (REPORTED, NOT LIMITED)")
+    w("4. THE LEAK BY TRIAL TYPE")
     w("-" * 78)
-    w("One term for sat_only (x_sat) and fog_only (x_con), both for the "
-      "mixed types (script 1's convention).")
+    if TYPE_LIMITS:
+        w("LIMITED types, the fit that is limited (N on one term, no "
+          "intercept), before -> after repair:")
+        for t, (term, lim) in TYPE_LIMITS.items():
+            for dfn in defs:
+                w(f"  {t:9s} {dfn:6s} N on x_{term} (limit {lim:g})  " + "   "
+                  .join(f"{blk}: {crow[f'draw_type_b_{t}_{dfn}_{blk}']:+.3f}"
+                        f" -> {crow[f'rep_type_b_{t}_{dfn}_{blk}']:+.3f}"
+                        for blk in ("A", "B")))
+        if len(passing):
+            w("  over passing candidates, largest |b| per candidate (both "
+              "sets, both definitions), mean [min to max]:")
+            for t in TYPE_LIMITS:
+                w(f"    {t:9s} before {_mmm(passing[f'draw_type_worst_{t}'])}"
+                  f"   after {_mmm(passing[f'rep_type_worst_{t}'])}")
+        w("")
+    w("Every type, script 1's convention (one term for sat_only and "
+      "fog_only, both for the mixed types;")
+    w("together " + ("is" if "together" not in TYPE_LIMITS else "is also")
+      + " reported only):")
     lr = pd.DataFrame(res["leak_rows"])
+    lr = lr[lr.terms == [("+".join(TYPE_TERMS.get(t, ("sat", "con")))
+                          if t in MAIN_TYPES else "sat+con")
+                         for t in lr.type]]
     w(f"Shipped candidate {d}, b before -> after:")
     for t in MAIN_TYPES:
         for dfn in defs:
@@ -1788,8 +2061,9 @@ def write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
         w("Over passing candidates, mean b (both sets), before -> after:")
         for t in MAIN_TYPES:
             for dfn in defs:
-                g = sub[(sub.type == t) & (sub.definition == dfn)]
                 terms = TYPE_TERMS.get(t, ("sat", "con"))
+                g = sub[(sub.type == t) & (sub.definition == dfn)
+                        & (sub.terms == "+".join(terms))]
                 w(f"  {t:9s} {dfn:6s} " + ", ".join(
                     f"b_{tt} {g[g.stage == 'before'][f'b_{tt}'].mean():+.3f}"
                     f"->{g[g.stage == 'after'][f'b_{tt}'].mean():+.3f}"
@@ -1837,6 +2111,8 @@ def write_report(cap, out_dir, size, ck, p_log, cand, ref, chosen, R, res,
         for wn, lab in (("sat", "saturation"), ("con", "contrast"))))
     w("")
 
+    if steps is not None and len(steps):
+        step_lines(w, steps)
     w("6. WHERE THE IMAGES SIT RELATIVE TO THE ORIGINAL")
     w("-" * 78)
     w(f"Share of images above / at (within {cap.STRADDLE_TOL_SD} SD) / below "
@@ -2130,27 +2406,39 @@ def main():
                "s1": s1s}
 
     # --- candidates: draw and repair, in parallel ---
+    # the shipped limits (all of TYPE_LIMITS) and, with COMPARE_LIMIT_STEPS,
+    # each step of LIMIT_STEPS; a type tuple keeps TYPE_LIMITS' order
+    full = tuple(TYPE_LIMITS)
+    steps = []
+    if COMPARE_LIMIT_STEPS:
+        for name, ts in LIMIT_STEPS:
+            steps.append((name, tuple(t for t in TYPE_LIMITS if t in ts)))
+    if full not in [ts for _, ts in steps]:
+        steps.append(("shipped", full))
     tc = time.time()
-    tasks = [(s, d, "cells") for s in BLOCK_SIZES for d in range(N_CANDIDATES)]
-    print(f"  {len(tasks)} candidates to draw and repair")
+    tasks = [(s, d, "cells", ts) for _, ts in steps for s in BLOCK_SIZES
+             for d in range(N_CANDIDATES)]
+    print(f"  {len(tasks)} repairs: {N_CANDIDATES} candidates x "
+          f"{len(BLOCK_SIZES)} sizes x {len(steps)} limit step(s)")
     res = run_tasks(tasks, payload, cap, nw, "repair")
-    by = {(r["size"], r["candidate"]): r for r in res}
+    by = {(r["size"], r["candidate"], t[3]): r for r, t in zip(res, tasks)}
     wide = {}
     for size in BLOCK_SIZES:
-        n_ok = sum(by[(size, d)]["rep_pass"] for d in range(N_CANDIDATES))
+        n_ok = sum(by[(size, d, full)]["rep_pass"]
+                   for d in range(N_CANDIDATES))
         if n_ok < WIDE_MIN_PASSING:
             lst = [d for d in range(N_CANDIDATES)
-                   if not by[(size, d)]["rep_pass"]
-                   and by[(size, d)]["built"] in ("greedy", "fallback")]
+                   if not by[(size, d, full)]["rep_pass"]
+                   and by[(size, d, full)]["built"] in ("greedy", "fallback")]
             if lst:
                 wide[size] = lst
-    wtasks = [(s, d, "wide") for s in wide for d in wide[s]]
+    wtasks = [(s, d, "wide", full) for s in wide for d in wide[s]]
     if wtasks:
         print(f"  WIDE REPAIR for {len(wtasks)} candidates (fewer than "
               f"{WIDE_MIN_PASSING} passed at "
               f"{', '.join(f'n={s}' for s in wide)})")
         for r in run_tasks(wtasks, payload, cap, nw, "wide"):
-            k = (r["size"], r["candidate"])
+            k = (r["size"], r["candidate"], full)
             r["cells_status"] = by[k].get("repair_status")
             by[k] = r
     cand_seconds = time.time() - tc
@@ -2166,18 +2454,21 @@ def main():
         _setup_worker(cap, payload)
     out = []
     for size in BLOCK_SIZES:
-        results = {d: by[(size, d)] for d in range(N_CANDIDATES)}
+        results = {d: by[(size, d, full)] for d in range(N_CANDIDATES)}
         cand = cand_table([results[d] for d in range(N_CANDIDATES)])
         if "cells_status" not in cand:
             cand["cells_status"] = None
         R = {"cand": cand, "results": results, "counts": counts[size],
              "s1": s1s[size], "wide_used": size in wide,
-             "wide_candidates": wide.get(size, [])}
+             "wide_candidates": wide.get(size, []),
+             "steps": ([(name, ts, cand if ts == full else cand_table(
+                 [by[(size, d, ts)] for d in range(N_CANDIDATES)]))
+                 for name, ts in steps] if COMPARE_LIMIT_STEPS else [])}
         chosen, _, _ = select(cand)
         if chosen["rep"] is not None:
             d = chosen["rep"]
             mode = results[d]["repair_mode"]
-            again = _task((size, d, mode))
+            again = _task((size, d, mode, full))
             if again["sets_rep"] is None:
                 R["repro"] = (False, f"candidate {d} ({mode}): the rebuild "
                               f"gave no sets ({again['repair_status']})")

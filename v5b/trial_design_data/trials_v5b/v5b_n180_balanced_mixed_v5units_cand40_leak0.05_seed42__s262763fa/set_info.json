@@ -1,6 +1,6 @@
 {
   "version": "v5b",
-  "block_size": 150,
+  "block_size": 180,
   "mix": "balanced_mixed",
   "mix_shares": {
     "sat_only": 0.3,
@@ -15,12 +15,12 @@
     "mixed_sat": 0.20417538665713847,
     "mixed_con": 0.32092426187419765
   },
-  "chosen_candidate": 3,
-  "unconstrained_choice": 27,
+  "chosen_candidate": 22,
+  "unconstrained_choice": 36,
   "selection": "max over candidates of min over weights of the weaker set's information / mean weaker-set information of the unrepaired candidates; ties: smaller worst |b|, then lower candidate",
   "selection_reference": {
-    "sat": 147.71264619419267,
-    "con": 119.05702145221103
+    "sat": 173.95758752450973,
+    "con": 144.07576072580204
   },
   "normality_limit": {
     "limit": 0.05,
@@ -31,50 +31,85 @@
     ],
     "shipped": {
       "corpus_A": {
-        "b_sat": 0.041607421748141464,
-        "b_con": -0.041803240884043635,
-        "cos_sat": 0.07004036666566,
-        "cos_con": -0.06249732130250741
+        "b_sat": 0.03728477444335049,
+        "b_con": -0.03699859014250819,
+        "cos_sat": 0.07309155973936608,
+        "cos_con": -0.06681932750539855
       },
       "corpus_B": {
-        "b_sat": 0.04032102543353433,
-        "b_con": -0.0408186918621556,
-        "cos_sat": 0.0655710649076204,
-        "cos_con": -0.059074401617576024
+        "b_sat": 0.03723749894414225,
+        "b_con": -0.03748330387190308,
+        "cos_sat": 0.06287127563748782,
+        "cos_con": -0.057706730408244075
       },
       "orig_A": {
-        "b_sat": -0.040000622183545234,
-        "b_con": 0.040943011703436165,
-        "cos_sat": -0.08188375734559906,
-        "cos_con": 0.07456302064172698
+        "b_sat": -0.03373008569210628,
+        "b_con": 0.0291915627299992,
+        "cos_sat": -0.07723088240851231,
+        "cos_con": 0.06252865899259794
       },
       "orig_B": {
-        "b_sat": -0.03792953803516834,
-        "b_con": 0.04071869582941571,
-        "cos_sat": -0.07841623579600386,
-        "cos_con": 0.07520250467607886
+        "b_sat": -0.03647072142247828,
+        "b_con": 0.0334073843326406,
+        "cos_sat": -0.07569965934119724,
+        "cos_con": 0.06381125814976953
+      }
+    },
+    "type_limits": {
+      "sat_only": {
+        "term": "sat",
+        "limit": 0.05,
+        "fit": "N ~ b x_sat, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": 0.04745464927190136,
+          "corpus_B": 0.04700591136271443,
+          "orig_A": -0.047323147541089516,
+          "orig_B": -0.043023168619245815
+        }
+      },
+      "fog_only": {
+        "term": "con",
+        "limit": 0.05,
+        "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": -0.038124680378178,
+          "corpus_B": -0.045741396838375345,
+          "orig_A": 0.0436557814273346,
+          "orig_B": 0.04318804411203429
+        }
+      },
+      "conflict": {
+        "term": "con",
+        "limit": 0.1,
+        "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": -0.06752396119342388,
+          "corpus_B": 0.0032927181839931914,
+          "orig_A": 0.03864441539088228,
+          "orig_B": 0.09058024808491637
+        }
       }
     },
     "repair": {
       "mode": "cells",
-      "kept_A": 128,
-      "kept_B": 125,
+      "kept_A": 137,
+      "kept_B": 132,
       "target": 0.04,
       "solves": 1
     }
   },
   "counts_per_set": {
-    "analysed": 150,
-    "sat_only": 45,
-    "fog_only": 45,
-    "together": 30,
-    "conflict": 30,
-    "consistency": 12,
+    "analysed": 180,
+    "sat_only": 54,
+    "fog_only": 54,
+    "together": 36,
+    "conflict": 36,
+    "consistency": 15,
     "consistency_by_type": {
-      "sat_only": 4,
+      "sat_only": 5,
       "fog_only": 4,
-      "together": 2,
-      "conflict": 2
+      "together": 3,
+      "conflict": 3
     },
     "catch": 5
   },
@@ -95,12 +130,12 @@
       "tail": 0.025,
       "estimator": "Firth (v4 fit_firth_batch)",
       "upper": {
-        "sat": 0.3169391593706102,
-        "con": 0.3541006055568071
+        "sat": 0.2932291052048833,
+        "con": 0.3183849456212837
       },
       "lower": {
-        "sat": -0.3196209996953772,
-        "con": -0.35036151093941215
+        "sat": -0.29418443280543,
+        "con": -0.32865740640724733
       }
     },
     "B": {
@@ -108,23 +143,23 @@
       "tail": 0.025,
       "estimator": "Firth (v4 fit_firth_batch)",
       "upper": {
-        "sat": 0.31731971396262754,
-        "con": 0.3479268174373914
+        "sat": 0.2959413903616849,
+        "con": 0.3185816443477319
       },
       "lower": {
-        "sat": -0.3147802283843335,
-        "con": -0.3526532594101989
+        "sat": -0.288197631058798,
+        "con": -0.3245740692116808
       }
     }
   },
   "choice_probability_at_planning_weights": {
     "A": {
-      "sat": 0.6239678919964554,
-      "con": 0.6659169986464125
+      "sat": 0.6232210747558865,
+      "con": 0.6656417074070672
     },
     "B": {
-      "sat": 0.6275115886730184,
-      "con": 0.6654112184715563
+      "sat": 0.6238338832421884,
+      "con": 0.6645854788740014
     }
   },
   "predictors": "pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice",
@@ -142,7 +177,7 @@
   },
   "script3": {
     "name": "build_trials_v5b.py",
-    "sha256": "71776ec806993483c83e3cc950f9ab8fd1071660464c89471748a4c1dd254180"
+    "sha256": "b6d597006d540ace5dd86a191d860263966aec1d26350847b6ca51de752c45a8"
   },
   "workers": 31
 }

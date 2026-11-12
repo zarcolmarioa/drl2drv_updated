@@ -25,6 +25,47 @@
     "N_CANDIDATES": 40,
     "N_WORKERS": null,
     "LEAK_LIMIT": 0.05,
+    "TYPE_LIMITS": {
+      "sat_only": [
+        "sat",
+        0.05
+      ],
+      "fog_only": [
+        "con",
+        0.05
+      ],
+      "conflict": [
+        "con",
+        0.1
+      ]
+    },
+    "TYPE_TARGET_SHARE": 0.95,
+    "COMPARE_LIMIT_STEPS": true,
+    "LIMIT_STEPS": [
+      [
+        "overall only",
+        []
+      ],
+      [
+        "+ single-feature",
+        [
+          "sat_only",
+          "fog_only"
+        ]
+      ],
+      [
+        "+ conflict",
+        [
+          "sat_only",
+          "fog_only",
+          "conflict"
+        ]
+      ]
+    ],
+    "COST_RULE": [
+      0.05,
+      5
+    ],
     "REPAIR_TARGET": 0.04,
     "REPAIR_TIGHTEN": 0.75,
     "REPAIR_TRIES": 3,
