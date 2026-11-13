@@ -1,0 +1,227 @@
+==============================================================================
+v5b STEP 5: FREEZE, 150 PER BLOCK
+freeze_trial_lists_v5b.py
+==============================================================================
+run finished  2026-11-12 17:09:33   elapsed 952 s
+script 3      data/trials_v5b/v5b_n150_balanced_mixed_v5units_cand40_leak0.05_seed42__sa95086c2
+script 4      data/trial_orders_v5b/v5b_n150_orders4_gap30-fixed_break34_slots64_seed42__s0506d7c8
+frozen        data/frozen_trial_lists_v5b/v5b_150
+
+RESULT: 156 PASS, 0 FAIL, 0 SKIPPED, 1 NOTE -- frozen
+
+REBUILD
+------------------------------------------------------------------------------
+Workspace data/frozen_trial_lists_v5b_rebuild/rebuild_2/work: the four build scripts copied byte for byte; every entry of data/ linked
+(read only) except the builds' output roots (frozen_trial_lists_v5b, frozen_trial_lists_v5b_rebuild, trial_orders_v5b, trials_v5b), so script 3 writes there and
+script 4 reads the REBUILT script 3 folders. Each step a separate process, one thread each:
+  cd data/frozen_trial_lists_v5b_rebuild/rebuild_2/work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python build_trials_v5b.py
+      exit 0, 268 s, log logs/script3.log
+  cd data/frozen_trial_lists_v5b_rebuild/rebuild_2/work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python make_trial_orders_v5b.py
+      exit 0, 674 s, log logs/script4.log
+  rebuild: script 3    CSV minus seconds, repair_seconds      1 of 1 identical
+  rebuild: script 3    JSON minus workers                     2 of 2 identical
+  rebuild: script 3    bytes                                  570 of 570 identical
+  rebuild: script 3    checks minus worker count              1 of 1 identical
+  rebuild: script 3    report minus run time and workers      1 of 1 identical
+  rebuild: script 3    steps: exact, but averages over candidates loose 1 of 1 identical
+  rebuild: script 4    JSON minus workers                     1 of 1 identical
+  rebuild: script 4    bytes                                  598 of 598 identical
+  rebuild: script 4    checks minus worker count              1 of 1 identical
+  rebuild: script 4    report minus run time and workers      1 of 1 identical
+What legitimately differs between two runs, and is removed before comparing:
+  reports: the lines starting 'run finished', 'workers', 'Repair time per candidate'; the seconds in
+    'random choosers, N s)' and the count in 'N worker(s) in the run' (also in script 3's checks.csv);
+  candidates.csv: the columns seconds, repair_seconds; settings.json: the key(s) workers; set_info.json: the key(s) workers.
+  limit_steps.csv: the averages over candidates in script 3's comparison steps (mean_*, paired_*, largest_cost_vs_prev)
+    are compared loosely, with the largest difference stated in the checks; every other column,
+    meets_cost_rule included, must be identical. Report section 5b (the same numbers) is left
+    out of the line comparison. (A solve in those steps that reaches script 3's time limit can end
+    differently on a busier computer; those candidates never ship.)
+  Everything else, including every list, set, image and design file, is compared byte for byte.
+
+NORMALITY (recomputed here from the re-measured shipped images)
+------------------------------------------------------------------------------
+Corpus reference (stimulus set): sat_mean median 66.448242, SD 39.181906; contrast_local median 26.908877, SD 9.348022
+Scene originals: re-measured from data/stimulus_set_v5/7fd72262ba/stimuli.
+  set definition fit                        term          b     cos  limit  margin    n
+  A   corpus     overall (both terms)       b_sat   +0.0397  +0.064   0.05  0.0103  150
+  A   corpus     overall (both terms)       b_con   -0.0402  -0.059   0.05  0.0098  150
+  A   corpus     sat_only on x_sat alone    b_sat   +0.0469  +0.109   0.05  0.0031   45
+  A   corpus     fog_only on x_con alone    b_con   -0.0456  -0.100   0.05  0.0044   45
+  A   corpus     conflict on x_con alone    b_con   -0.0921  -0.119   0.10  0.0079   30
+  A   orig       overall (both terms)       b_sat   -0.0399  -0.080   0.05  0.0101  150
+  A   orig       overall (both terms)       b_con   +0.0372  +0.068   0.05  0.0128  150
+  A   orig       sat_only on x_sat alone    b_sat   -0.0426  -0.130   0.05  0.0074   45
+  A   orig       fog_only on x_con alone    b_con   +0.0437  +0.119   0.05  0.0063   45
+  A   orig       conflict on x_con alone    b_con   +0.0608  +0.090   0.10  0.0392   30
+  B   corpus     overall (both terms)       b_sat   +0.0373  +0.060   0.05  0.0127  150
+  B   corpus     overall (both terms)       b_con   -0.0392  -0.058   0.05  0.0108  150
+  B   corpus     sat_only on x_sat alone    b_sat   +0.0473  +0.112   0.05  0.0027   45
+  B   corpus     fog_only on x_con alone    b_con   -0.0475  -0.105   0.05  0.0025   45
+  B   corpus     conflict on x_con alone    b_con   -0.0837  -0.107   0.10  0.0163   30
+  B   orig       overall (both terms)       b_sat   -0.0375  -0.069   0.05  0.0125  150
+  B   orig       overall (both terms)       b_con   +0.0346  +0.058   0.05  0.0154  150
+  B   orig       sat_only on x_sat alone    b_sat   -0.0451  -0.128   0.05  0.0049   45
+  B   orig       fog_only on x_con alone    b_con   +0.0171  +0.045   0.05  0.0329   45
+  B   orig       conflict on x_con alone    b_con   +0.0918  +0.133   0.10  0.0082   30
+  margin = limit - |b|; the limits are judged on these values exactly.
+
+CHECKS
+------------------------------------------------------------------------------
+  PASS    [v4 check 6: builds] script 3's checks all PASS (no BUILD_FAILED.txt)  (0 FAIL)
+  PASS    [v4 check 6: builds] script 4's checks all PASS  (0 FAIL)
+  PASS    [provenance] script 1 on disk is the one that built the folder (analyse_pair_capacity_v5b.py)  (recorded f7ab2c91e5a0be23, on disk f7ab2c91e5a0be23)
+  PASS    [provenance] script 3 (the per-type build that made this folder) on disk is the one that built the folder (build_trials_v5b.py)  (recorded b6d597006d540ace, on disk b6d597006d540ace)
+  PASS    [provenance] script 4 on disk is the one that built the folder (make_trial_orders_v5b.py)  (recorded ecf4877835738b8a, on disk ecf4877835738b8a)
+  PASS    [provenance] the v4 simulation script on disk is the one script 3 used (simulate_power_v4_n10_20.py; its report records 16 characters)  (recorded 852f3b33eb349153, on disk 852f3b33eb349153)
+  PASS    [provenance] design.json names this script 3 folder and the SHA-256 of its set_A.csv, set_B.csv and set_info.json
+  PASS    [provenance] script 3's settings (and script 1's, in force) equal the build's settings.json (its 'run' record aside)
+  PASS    [provenance] script 4's settings equal the build's settings.json
+  PASS    [rebuild] the four build scripts are copied byte for byte into the rebuild workspace  (analyse_pair_capacity_v5b.py, build_trials_v5b.py, make_trial_orders_v5b.py, simulate_power_v4_n10_20.py)
+  PASS    [rebuild] script3 (build_trials_v5b.py) ran to the end in the workspace (exit code 0)  (exit code 0, 268 s; log data/frozen_trial_lists_v5b_rebuild/rebuild_2/logs/script3.log)
+  PASS    [rebuild] script4 (make_trial_orders_v5b.py) ran to the end in the workspace (exit code 0)  (exit code 0, 674 s; log data/frozen_trial_lists_v5b_rebuild/rebuild_2/logs/script4.log)
+  PASS    [rebuild] nothing was written outside data/frozen_trial_lists_v5b_rebuild during the rebuild  (5285 files and folders watched (the project's top level, data/'s top level, data/trials_v5b, data/trial_orders_v5b, data/pair_capacity_v5b, data/block_length_v5b, data/stimulus_set_v5/7fd72262ba, data/frozen_trial_lists_v5b); changed [])
+  PASS    [rebuild: script 3] the rebuild writes exactly the same files  (576 files; only in original [], only in rebuild [])
+  NOTE    [rebuild: script 3] limit_steps.csv: the averages over candidates in the comparison steps (mean_*, paired_*, largest_cost_vs_prev) are compared loosely: they can depend on the computer's speed and never ship  (largest difference 0.07576 (in mean_weaker_con); everything else in the file identical: yes)
+  PASS    [rebuild: script 3] every file is byte-identical (the files named in the REBUILD section after removing run time and worker count)  (576 compared, 0 differ [])
+  PASS    [rebuild: script 4] the rebuild writes exactly the same files  (601 files; only in original [], only in rebuild [])
+  PASS    [rebuild: script 4] every file is byte-identical (the files named in the REBUILD section after removing run time and worker count)  (601 compared, 0 differ [])
+  PASS    [v4 check 1: complete] every file the design names exists, and stimuli/  (28 files; missing [])
+  PASS    [v4 check 2: copies agree] every JSON equals its CSV copy (lists, practice, assignment, preload, design)  (differ: [])
+  PASS    [v4 check 3: images close] every referenced image ships, and every shipped image is referenced  (564 referenced, 564 shipped; missing [], unreferenced [])
+  PASS    [v4 check 3: images close] manifest.csv names exactly the shipped files
+  PASS    [v4 check 3: images close] preload.json is exactly the images shown; the catch-only images ship but are not preloaded  (551 preloaded, 13 catch-only)
+  PASS    [v4 check 3: images close] left_path / right_path follow a_is_left, file_a and file_b on every row
+  PASS    [v4 check 4: re-measure] every shipped image's SHA-256 matches the manifest  (0 differ)
+  PASS    [v4 check 4: re-measure] re-measured features equal the manifest (<= 0.0001)  (largest difference 1.42e-14)
+  PASS    [v4 check 4: re-measure] the shipped images rebuild every row's d_sat and d_fog (<= 0.0001) and pred_sat and pred_fog (<= 1e-05)  (largest: d 8.40e-06, pred 2.14e-07)
+  PASS    [breaks] break_every = ceil(167 / 5) = 34  (design.json: 34 (ceil(main trials per block / segments) = ceil(167 / 5)))
+  PASS    [breaks] the breaks fall on the segment boundaries: segment edges = 0, B, 2B, ..., N, and breaks_after_trial and stretch_lengths agree  (edges [0, 34, 68, 102, 136, 167], breaks [34, 68, 102, 136])
+  PASS    [breaks] no short final stretch: every stretch >= 34 - 4  (stretches [34, 34, 34, 34, 31])
+  PASS    [breaks] the README states the break interval and positions
+  PASS    [v4 check 5: A_o1] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: A_o1] the list is a permutation of its set's items (set A)
+  PASS    [v4 check 5: A_o1] catch rows: no_images, not analysed, no repeat
+  PASS    [order A_o1] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order A_o1] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order A_o1] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [17, 57, 85, 109, 143])
+  PASS    [order A_o1] type spread within 1 per segment  (worst 0.96)
+  PASS    [order A_o1] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: A_o1] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: A_o2] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: A_o2] the list is a permutation of its set's items (set A)
+  PASS    [v4 check 5: A_o2] catch rows: no_images, not analysed, no repeat
+  PASS    [order A_o2] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order A_o2] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order A_o2] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [14, 51, 101, 112, 143])
+  PASS    [order A_o2] type spread within 1 per segment  (worst 0.60)
+  PASS    [order A_o2] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: A_o2] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: A_o3] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: A_o3] the list is a permutation of its set's items (set A)
+  PASS    [v4 check 5: A_o3] catch rows: no_images, not analysed, no repeat
+  PASS    [order A_o3] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order A_o3] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order A_o3] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [13, 42, 89, 114, 153])
+  PASS    [order A_o3] type spread within 1 per segment  (worst 0.96)
+  PASS    [order A_o3] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: A_o3] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: A_o4] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: A_o4] the list is a permutation of its set's items (set A)
+  PASS    [v4 check 5: A_o4] catch rows: no_images, not analysed, no repeat
+  PASS    [order A_o4] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order A_o4] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order A_o4] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [22, 46, 93, 105, 154])
+  PASS    [order A_o4] type spread within 1 per segment  (worst 0.96)
+  PASS    [order A_o4] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: A_o4] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: B_o1] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: B_o1] the list is a permutation of its set's items (set B)
+  PASS    [v4 check 5: B_o1] catch rows: no_images, not analysed, no repeat
+  PASS    [order B_o1] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order B_o1] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order B_o1] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [11, 56, 70, 117, 143])
+  PASS    [order B_o1] type spread within 1 per segment  (worst 0.96)
+  PASS    [order B_o1] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: B_o1] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: B_o2] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: B_o2] the list is a permutation of its set's items (set B)
+  PASS    [v4 check 5: B_o2] catch rows: no_images, not analysed, no repeat
+  PASS    [order B_o2] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order B_o2] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order B_o2] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [17, 42, 94, 107, 150])
+  PASS    [order B_o2] type spread within 1 per segment  (worst 0.96)
+  PASS    [order B_o2] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: B_o2] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: B_o3] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: B_o3] the list is a permutation of its set's items (set B)
+  PASS    [v4 check 5: B_o3] catch rows: no_images, not analysed, no repeat
+  PASS    [order B_o3] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order B_o3] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order B_o3] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [30, 40, 71, 121, 146])
+  PASS    [order B_o3] type spread within 1 per segment  (worst 0.96)
+  PASS    [order B_o3] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: B_o3] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [v4 check 5: B_o4] counts, trial numbers 1..N, analysed flags  (catch 5, conflict 30, consistency 12, fog_only 45, sat_only 45, together 30)
+  PASS    [v4 check 5: B_o4] the list is a permutation of its set's items (set B)
+  PASS    [v4 check 5: B_o4] catch rows: no_images, not analysed, no repeat
+  PASS    [order B_o4] every repeat follows its original (same pair, sides swapped), >= 40 apart  (smallest distance 40)
+  PASS    [order B_o4] scene gap >= 30, and the realised gap equals design.json's scene_gap_min  (smallest 30, recorded 30)
+  PASS    [order B_o4] one catch per segment, none in the first or last 10  (per segment [1, 1, 1, 1, 1], at [31, 61, 80, 104, 142])
+  PASS    [order B_o4] type spread within 1 per segment  (worst 0.96)
+  PASS    [order B_o4] type runs <= 4, side runs <= 4  (type 2, side 4)
+  PASS    [v4 check 5: B_o4] image A on the left in half of each analysed type (+-1 if odd)  ([])
+  PASS    [sets] no pair in both sets  (0 shared)
+  PASS    [sets] every order of set A holds the same items  (4 orders)
+  PASS    [sets] every order of set B holds the same items  (4 orders)
+  PASS    [practice block 1] 6 trials, distinct scenes, no pair from either set or the other practice block  (sat_only, fog_only, together, sat_only, fog_only, together)
+  PASS    [practice block 2] 3 trials, distinct scenes, no pair from either set or the other practice block  (sat_only, fog_only, together)
+  PASS    [assignment] participant: slots 1..64; each slot has both episodes, both sets, existing lists, the same order index, and agrees with its block order and set mapping
+  PASS    [assignment] control: slots 1..64; each slot has both episodes, both sets, existing lists, the same order index, and agrees with its block order and set mapping
+  PASS    [assignment] both groups use the same table
+  PASS    [assignment] no grid: block order x set mapping x order = 16 cells, each 4 times in 64 slots, and no other factor in a slot  (16 cells, counts [4], 64 slots)
+  PASS    [assignment] all 16 cells appear equally often in 64 slots  (16 cells, counts [4])
+  PASS    [assignment] first 10 slots: every factor and block order x set mapping within 1 of an even split  (factors [np.float64(0.0), np.float64(0.0), np.float64(0.5)], block order x set mapping 0.5)
+  PASS    [assignment] first 15 slots: every factor and block order x set mapping within 1 of an even split  (factors [np.float64(0.5), np.float64(0.5), np.float64(0.75)], block order x set mapping 0.75)
+  PASS    [assignment] first 20 slots: every factor and block order x set mapping within 1 of an even split  (factors [np.float64(0.0), np.float64(0.0), np.float64(0.0)], block order x set mapping 0.0)
+  PASS    [assignment] first 30 slots: every factor and block order x set mapping within 1 of an even split  (factors [np.float64(0.0), np.float64(0.0), np.float64(0.5)], block order x set mapping 0.5)
+  PASS    [assignment] design.json, assignment.json and the README state that slot n uses row ((n - 1) mod 64) + 1
+  PASS    [assignment] with that rule, up to 256 slots: exact balance after every 64, and the balance after n slots equals the balance after n mod 64 (every factor and pair of factors)  (largest deviation over all prefixes 0.875, within the first 64 0.875)
+  PASS    [catch] targets per block position: one per catch row, Up/Down only, balanced within 1, at most 2 identical in a row  ({"1": ["ArrowDown", "ArrowUp", "ArrowUp", "ArrowDown", "ArrowUp"], "2": ["ArrowDown", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowUp"]})
+  PASS    [thresholds] design.json's per-set thresholds equal set_info.json
+  PASS    [stimulus set] design.json names the stimulus set data/stimulus_set_v5/7fd72262ba  (design.json: data/stimulus_set_v5/7fd72262ba)
+  PASS    [stimulus set] the checksums.sha256 hash in design.json equals the frozen stimulus set's (its FROZEN.json, and the file itself)  (design.json 10d969db80459817, FROZEN.json 10d969db80459817, file 10d969db80459817)
+  PASS    [stimulus set] every shipped image matches the stimulus set's checksums.sha256  (564 images, 0 differ or are not listed)
+  PASS    [normality] the stimulus set's corpus reference rounds to median 66.448 / 26.909 and SD 39.182 / 9.348 (sat_mean / contrast_local); the exact values are used  (sat_mean median 66.448242, SD 39.181906; contrast_local median 26.908877, SD 9.348022)
+  PASS    [normality] those values reproduce the stimulus set's z_sat and z_con (<= 0.0001)  (largest difference 1.7e-07)
+  PASS    [normality] the stimulus set's table has one original per scene  (47 originals, 47 scenes)
+  PASS    [normality] the scene originals re-measured from data/stimulus_set_v5/7fd72262ba/stimuli equal the table (<= 0.0001); the re-measured values are used  (47 originals, largest difference 4.99e-07)
+  PASS    [items] items.csv has one row per item_id  (343 items)
+  PASS    [items] every list and practice row's item_id is in items.csv, and the fields they share are equal  (1345 rows, 20 shared fields)
+  PASS    [items] items.csv's image features equal the re-measured shipped images (<= 0.0001)  (largest difference 4.95e-06)
+  PASS    [normality] N_corpus and N_orig, combined and per feature, recomputed from the re-measured images equal items.csv (<= 0.0001)  (343 items x 6 terms, largest difference 1.6e-07)
+  PASS    [normality] ...and equal N_corpus and N_orig in every list and practice row (<= 0.0001)  (1345 rows, largest difference 1.6e-07)
+  PASS    [normality] design.json records the agreed limits (overall 0.05; sat_only on x_sat 0.05; fog_only on x_con 0.05; conflict on x_con 0.1)
+  PASS    [normality limit] set A, corpus definition, overall (both terms): |b| <= 0.05 (recomputed, judged exactly)  (b_sat +0.0397 (margin 0.0103), b_con -0.0402 (margin 0.0098))
+  PASS    [normality limit] set A, corpus definition, sat_only on x_sat alone: |b| <= 0.05 (recomputed, judged exactly)  (b_sat +0.0469 (margin 0.0031))
+  PASS    [normality limit] set A, corpus definition, fog_only on x_con alone: |b| <= 0.05 (recomputed, judged exactly)  (b_con -0.0456 (margin 0.0044))
+  PASS    [normality limit] set A, corpus definition, conflict on x_con alone: |b| <= 0.1 (recomputed, judged exactly)  (b_con -0.0921 (margin 0.0079))
+  PASS    [normality limit] set A, orig definition, overall (both terms): |b| <= 0.05 (recomputed, judged exactly)  (b_sat -0.0399 (margin 0.0101), b_con +0.0372 (margin 0.0128))
+  PASS    [normality limit] set A, orig definition, sat_only on x_sat alone: |b| <= 0.05 (recomputed, judged exactly)  (b_sat -0.0426 (margin 0.0074))
+  PASS    [normality limit] set A, orig definition, fog_only on x_con alone: |b| <= 0.05 (recomputed, judged exactly)  (b_con +0.0437 (margin 0.0063))
+  PASS    [normality limit] set A, orig definition, conflict on x_con alone: |b| <= 0.1 (recomputed, judged exactly)  (b_con +0.0608 (margin 0.0392))
+  PASS    [normality limit] set B, corpus definition, overall (both terms): |b| <= 0.05 (recomputed, judged exactly)  (b_sat +0.0373 (margin 0.0127), b_con -0.0392 (margin 0.0108))
+  PASS    [normality limit] set B, corpus definition, sat_only on x_sat alone: |b| <= 0.05 (recomputed, judged exactly)  (b_sat +0.0473 (margin 0.0027))
+  PASS    [normality limit] set B, corpus definition, fog_only on x_con alone: |b| <= 0.05 (recomputed, judged exactly)  (b_con -0.0475 (margin 0.0025))
+  PASS    [normality limit] set B, corpus definition, conflict on x_con alone: |b| <= 0.1 (recomputed, judged exactly)  (b_con -0.0837 (margin 0.0163))
+  PASS    [normality limit] set B, orig definition, overall (both terms): |b| <= 0.05 (recomputed, judged exactly)  (b_sat -0.0375 (margin 0.0125), b_con +0.0346 (margin 0.0154))
+  PASS    [normality limit] set B, orig definition, sat_only on x_sat alone: |b| <= 0.05 (recomputed, judged exactly)  (b_sat -0.0451 (margin 0.0049))
+  PASS    [normality limit] set B, orig definition, fog_only on x_con alone: |b| <= 0.05 (recomputed, judged exactly)  (b_con +0.0171 (margin 0.0329))
+  PASS    [normality limit] set B, orig definition, conflict on x_con alone: |b| <= 0.1 (recomputed, judged exactly)  (b_con +0.0918 (margin 0.0082))
+  PASS    [normality] the recomputed leak equals the values design.json records (overall b and cos, per-type b; <= 0.0001)  (28 values, largest difference 5.8e-08)
+  PASS    [practice] block 1: 6 rows with feedback; block 2: 3 rows without (as design.json records)  (rows [6, 3], feedback {'1': True, '2': False})
+  PASS    [no grid] no grid file, and no grid field in any JSON or CSV header of the package  (files [], fields [])
+  PASS    [README] the README lists the experiment changes needed: the grid code, and saving item_id in record.js
+  PASS    [relative paths] no file to be frozen contains an absolute path  (0 files)
+  PASS    [freeze] every frozen file matches checksums.sha256, and every file is listed  (618 files, 0 differ)
+  PASS    [relative paths] no frozen file contains an absolute path (checked after writing; not in provenance/freeze_checks.csv)  (0 files)

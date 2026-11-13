@@ -1,0 +1,309 @@
+{
+  "frozen": "2026-11-12 17:09:33",
+  "package": "v5b_150",
+  "block_size": 150,
+  "files_hashed": 618,
+  "checksums_sha256": "5ed6cf759b97429d4d3083787c46cb19e62f23ba4d7351fd1f4c8a8cc8fb9b58",
+  "design_json_sha256": "87e73b5e06601cd7a629972ea67f90e56b921fc5e9fe40d49f0e681579b7bf37",
+  "assignment_json_sha256": "63bc1d9e1fc5f9e99462753b397d1b7eb3ea7fb6d0e17999c169b81b22c283dd",
+  "items_csv_sha256": "a5111f0a3ad9b3ef2d2849db2c3bf09f7f32f012a692ebd6089db5fb345fb9ff",
+  "script3_dir": "data/trials_v5b/v5b_n150_balanced_mixed_v5units_cand40_leak0.05_seed42__sa95086c2",
+  "script4_dir": "data/trial_orders_v5b/v5b_n150_orders4_gap30-fixed_break34_slots64_seed42__s0506d7c8",
+  "scripts_sha256": {
+    "analyse_pair_capacity_v5b.py": "f7ab2c91e5a0be23e1d0f08ff96876d785487633c0dadff2781cf16826f45df4",
+    "build_trials_v5b.py": "b6d597006d540ace5dd86a191d860263966aec1d26350847b6ca51de752c45a8",
+    "make_trial_orders_v5b.py": "ecf4877835738b8aca8134fb36ae4647362d6568e1a753726d7bb531cf1e135e",
+    "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+    "freeze_trial_lists_v5b.py": "1b2f4a4775b1da65e18c4e3b36a6265d4a90c528d21de85454f093a053b147fc"
+  },
+  "stimulus_set": {
+    "run": "stimulus_set_v5/7fd72262ba",
+    "dir": "data/stimulus_set_v5/7fd72262ba",
+    "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075",
+    "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+    "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+    "settings_hash": "7fd72262ba"
+  },
+  "normality": {
+    "overall_limit": 0.05,
+    "type_limits": {
+      "sat_only": {
+        "term": "sat",
+        "limit": 0.05
+      },
+      "fog_only": {
+        "term": "con",
+        "limit": 0.05
+      },
+      "conflict": {
+        "term": "con",
+        "limit": 0.1
+      }
+    },
+    "recomputed": [
+      {
+        "set": "A",
+        "definition": "corpus",
+        "fit": "overall (both terms)",
+        "term": "b_sat",
+        "b": 0.039747,
+        "cos": 0.064362,
+        "limit": 0.05,
+        "margin": 0.010253,
+        "n": 150
+      },
+      {
+        "set": "A",
+        "definition": "corpus",
+        "fit": "overall (both terms)",
+        "term": "b_con",
+        "b": -0.040204,
+        "cos": -0.059042,
+        "limit": 0.05,
+        "margin": 0.009796,
+        "n": 150
+      },
+      {
+        "set": "A",
+        "definition": "corpus",
+        "fit": "sat_only on x_sat alone",
+        "term": "b_sat",
+        "b": 0.046926,
+        "cos": 0.10947,
+        "limit": 0.05,
+        "margin": 0.003074,
+        "n": 45
+      },
+      {
+        "set": "A",
+        "definition": "corpus",
+        "fit": "fog_only on x_con alone",
+        "term": "b_con",
+        "b": -0.045622,
+        "cos": -0.100103,
+        "limit": 0.05,
+        "margin": 0.004378,
+        "n": 45
+      },
+      {
+        "set": "A",
+        "definition": "corpus",
+        "fit": "conflict on x_con alone",
+        "term": "b_con",
+        "b": -0.09208,
+        "cos": -0.119201,
+        "limit": 0.1,
+        "margin": 0.00792,
+        "n": 30
+      },
+      {
+        "set": "A",
+        "definition": "orig",
+        "fit": "overall (both terms)",
+        "term": "b_sat",
+        "b": -0.039875,
+        "cos": -0.079892,
+        "limit": 0.05,
+        "margin": 0.010125,
+        "n": 150
+      },
+      {
+        "set": "A",
+        "definition": "orig",
+        "fit": "overall (both terms)",
+        "term": "b_con",
+        "b": 0.037199,
+        "cos": 0.067526,
+        "limit": 0.05,
+        "margin": 0.012801,
+        "n": 150
+      },
+      {
+        "set": "A",
+        "definition": "orig",
+        "fit": "sat_only on x_sat alone",
+        "term": "b_sat",
+        "b": -0.042611,
+        "cos": -0.129828,
+        "limit": 0.05,
+        "margin": 0.007389,
+        "n": 45
+      },
+      {
+        "set": "A",
+        "definition": "orig",
+        "fit": "fog_only on x_con alone",
+        "term": "b_con",
+        "b": 0.043729,
+        "cos": 0.118805,
+        "limit": 0.05,
+        "margin": 0.006271,
+        "n": 45
+      },
+      {
+        "set": "A",
+        "definition": "orig",
+        "fit": "conflict on x_con alone",
+        "term": "b_con",
+        "b": 0.06077,
+        "cos": 0.0898,
+        "limit": 0.1,
+        "margin": 0.03923,
+        "n": 30
+      },
+      {
+        "set": "B",
+        "definition": "corpus",
+        "fit": "overall (both terms)",
+        "term": "b_sat",
+        "b": 0.037341,
+        "cos": 0.060293,
+        "limit": 0.05,
+        "margin": 0.012659,
+        "n": 150
+      },
+      {
+        "set": "B",
+        "definition": "corpus",
+        "fit": "overall (both terms)",
+        "term": "b_con",
+        "b": -0.039174,
+        "cos": -0.057537,
+        "limit": 0.05,
+        "margin": 0.010826,
+        "n": 150
+      },
+      {
+        "set": "B",
+        "definition": "corpus",
+        "fit": "sat_only on x_sat alone",
+        "term": "b_sat",
+        "b": 0.047282,
+        "cos": 0.111567,
+        "limit": 0.05,
+        "margin": 0.002718,
+        "n": 45
+      },
+      {
+        "set": "B",
+        "definition": "corpus",
+        "fit": "fog_only on x_con alone",
+        "term": "b_con",
+        "b": -0.047464,
+        "cos": -0.105447,
+        "limit": 0.05,
+        "margin": 0.002536,
+        "n": 45
+      },
+      {
+        "set": "B",
+        "definition": "corpus",
+        "fit": "conflict on x_con alone",
+        "term": "b_con",
+        "b": -0.083722,
+        "cos": -0.107185,
+        "limit": 0.1,
+        "margin": 0.016278,
+        "n": 30
+      },
+      {
+        "set": "B",
+        "definition": "orig",
+        "fit": "overall (both terms)",
+        "term": "b_sat",
+        "b": -0.037539,
+        "cos": -0.068972,
+        "limit": 0.05,
+        "margin": 0.012461,
+        "n": 150
+      },
+      {
+        "set": "B",
+        "definition": "orig",
+        "fit": "overall (both terms)",
+        "term": "b_con",
+        "b": 0.034624,
+        "cos": 0.057601,
+        "limit": 0.05,
+        "margin": 0.015376,
+        "n": 150
+      },
+      {
+        "set": "B",
+        "definition": "orig",
+        "fit": "sat_only on x_sat alone",
+        "term": "b_sat",
+        "b": -0.045072,
+        "cos": -0.127899,
+        "limit": 0.05,
+        "margin": 0.004928,
+        "n": 45
+      },
+      {
+        "set": "B",
+        "definition": "orig",
+        "fit": "fog_only on x_con alone",
+        "term": "b_con",
+        "b": 0.017067,
+        "cos": 0.045286,
+        "limit": 0.05,
+        "margin": 0.032933,
+        "n": 45
+      },
+      {
+        "set": "B",
+        "definition": "orig",
+        "fit": "conflict on x_con alone",
+        "term": "b_con",
+        "b": 0.091767,
+        "cos": 0.133309,
+        "limit": 0.1,
+        "margin": 0.008233,
+        "n": 30
+      }
+    ],
+    "reference": {
+      "sat_mean": [
+        66.448242,
+        39.181906
+      ],
+      "contrast_local": [
+        26.908877,
+        9.3480224
+      ]
+    },
+    "originals": "re-measured from data/stimulus_set_v5/7fd72262ba/stimuli"
+  },
+  "rebuild": {
+    "folder": "data/frozen_trial_lists_v5b_rebuild/rebuild_2",
+    "commands": [
+      {
+        "step": "script3",
+        "cwd": "data/frozen_trial_lists_v5b_rebuild/rebuild_2/work",
+        "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python build_trials_v5b.py",
+        "exit_code": 0,
+        "seconds": 268.3,
+        "log": "logs/script3.log"
+      },
+      {
+        "step": "script4",
+        "cwd": "data/frozen_trial_lists_v5b_rebuild/rebuild_2/work",
+        "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python make_trial_orders_v5b.py",
+        "exit_code": 0,
+        "seconds": 673.6,
+        "log": "logs/script4.log"
+      }
+    ]
+  },
+  "checks": {
+    "pass": 155,
+    "fail": 0
+  },
+  "unhashed": [
+    "checksums.sha256",
+    "FROZEN.json",
+    "freeze_report.txt"
+  ],
+  "use": "copy package/ to the experiment as data/sets/v5b_150/; verify checksums.sha256 before any analysis",
+  "images": "Places365 photographs, copyright of their owners: archive and cite, but do not redistribute the images publicly until the licence is confirmed (README.txt)"
+}

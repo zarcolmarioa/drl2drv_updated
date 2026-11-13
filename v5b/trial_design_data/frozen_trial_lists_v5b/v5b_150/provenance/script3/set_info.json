@@ -1,0 +1,183 @@
+{
+  "version": "v5b",
+  "block_size": 150,
+  "mix": "balanced_mixed",
+  "mix_shares": {
+    "sat_only": 0.3,
+    "fog_only": 0.3,
+    "together": 0.2,
+    "conflict": 0.2
+  },
+  "threshold_set": "v5units",
+  "threshold_set_values_sd": {
+    "sat_only": 0.7937318156296258,
+    "fog_only": 0.4492939666238768,
+    "mixed_sat": 0.20417538665713847,
+    "mixed_con": 0.32092426187419765
+  },
+  "chosen_candidate": 27,
+  "unconstrained_choice": 27,
+  "selection": "max over candidates of min over weights of the weaker set's information / mean weaker-set information of the unrepaired candidates; ties: smaller worst |b|, then lower candidate",
+  "selection_reference": {
+    "sat": 147.71264619419267,
+    "con": 119.05702145221103
+  },
+  "normality_limit": {
+    "limit": 0.05,
+    "fit": "N ~ b_sat x_sat + b_con x_con, no intercept, analysed trials of each set",
+    "definitions": [
+      "corpus",
+      "orig"
+    ],
+    "shipped": {
+      "corpus_A": {
+        "b_sat": 0.03974649341317299,
+        "b_con": -0.040204298161152716,
+        "cos_sat": 0.06436168726477522,
+        "cos_con": -0.05904165057325133
+      },
+      "corpus_B": {
+        "b_sat": 0.03734092218812313,
+        "b_con": -0.0391742923558954,
+        "cos_sat": 0.06029264363879174,
+        "cos_con": -0.057536881326571386
+      },
+      "orig_A": {
+        "b_sat": -0.03987512425043604,
+        "b_con": 0.03719894537937251,
+        "cos_sat": -0.07989186332028514,
+        "cos_con": 0.06752621489042379
+      },
+      "orig_B": {
+        "b_sat": -0.037538684873125214,
+        "b_con": 0.03462358131753616,
+        "cos_sat": -0.06897223254325223,
+        "cos_con": 0.05760139354018283
+      }
+    },
+    "type_limits": {
+      "sat_only": {
+        "term": "sat",
+        "limit": 0.05,
+        "fit": "N ~ b x_sat, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": 0.0469262915252283,
+          "corpus_B": 0.04728195528093918,
+          "orig_A": -0.042611073815169265,
+          "orig_B": -0.04507204183891679
+        }
+      },
+      "fog_only": {
+        "term": "con",
+        "limit": 0.05,
+        "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": -0.04562185222713327,
+          "corpus_B": -0.047464262878475286,
+          "orig_A": 0.04372908968254501,
+          "orig_B": 0.01706731467149903
+        }
+      },
+      "conflict": {
+        "term": "con",
+        "limit": 0.1,
+        "fit": "N ~ b x_con, no intercept, the type's analysed trials of each set",
+        "shipped": {
+          "corpus_A": -0.09207991795856243,
+          "corpus_B": -0.08372166611139271,
+          "orig_A": 0.06076962638113126,
+          "orig_B": 0.09176734462939534
+        }
+      }
+    },
+    "repair": {
+      "mode": "cells",
+      "kept_A": 115,
+      "kept_B": 110,
+      "target": 0.04,
+      "solves": 1
+    }
+  },
+  "counts_per_set": {
+    "analysed": 150,
+    "sat_only": 45,
+    "fog_only": 45,
+    "together": 30,
+    "conflict": 30,
+    "consistency": 12,
+    "consistency_by_type": {
+      "sat_only": 4,
+      "fog_only": 4,
+      "together": 2,
+      "conflict": 2
+    },
+    "catch": 5
+  },
+  "practice_by_block": [
+    6,
+    3
+  ],
+  "catch": {
+    "mode": "no_images",
+    "per_block": 5,
+    "exclude_at_or_above": 3,
+    "exclusion_scope": "session (both blocks)",
+    "record_failures_per_block": true
+  },
+  "thresholds": {
+    "A": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.32079707938074803,
+        "con": 0.3515555365519117
+      },
+      "lower": {
+        "sat": -0.32074450798262466,
+        "con": -0.3545266597817933
+      }
+    },
+    "B": {
+      "n_random_choosers": 20000,
+      "tail": 0.025,
+      "estimator": "Firth (v4 fit_firth_batch)",
+      "upper": {
+        "sat": 0.3219837713896053,
+        "con": 0.35113809696833964
+      },
+      "lower": {
+        "sat": -0.32481928771381746,
+        "con": -0.35282718938656954
+      }
+    }
+  },
+  "choice_probability_at_planning_weights": {
+    "A": {
+      "sat": 0.6238709371192394,
+      "con": 0.6649824183587653
+    },
+    "B": {
+      "sat": 0.6228195931152131,
+      "con": 0.6658864949802372
+    }
+  },
+  "predictors": "pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice",
+  "normality": "N = dist(B) - dist(A); positive = image A is the more typical; corpus = distance from the corpus median, orig = distance from the scene's unedited photograph",
+  "stimulus_set": {
+    "dir": "data/stimulus_set_v5/7fd72262ba",
+    "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+    "settings_hash": "7fd72262ba",
+    "stimuli_sha256": "78e2c7258d65d1886ed34cf29e82d4f996860ba54c6ef0e797a802ab3f820d26",
+    "checksums_sha256": "10d969db80459817b14c3dfb2b2da4d5aeb680e1f505b18df4b15f7865a7e075"
+  },
+  "script1": {
+    "name": "analyse_pair_capacity_v5b.py",
+    "sha256": "f7ab2c91e5a0be23e1d0f08ff96876d785487633c0dadff2781cf16826f45df4"
+  },
+  "script3": {
+    "name": "build_trials_v5b.py",
+    "sha256": "b6d597006d540ace5dd86a191d860263966aec1d26350847b6ca51de752c45a8"
+  },
+  "workers": 31
+}
