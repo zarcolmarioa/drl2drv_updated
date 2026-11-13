@@ -1,0 +1,16 @@
+quantity,where,value
+"detection loss (side - adjusted), planning weights","150 A, contrast",0.0040999999999999925
+"detection loss (side - adjusted), planning weights","150 A, saturation",0.016199999999999992
+"detection loss (side - adjusted), planning weights","150 B, contrast",0.0030999999999999917
+"detection loss (side - adjusted), planning weights","150 B, saturation",0.013800000000000034
+"detection loss (side - adjusted), planning weights","180 A, contrast",0.007099999999999995
+"detection loss (side - adjusted), planning weights","180 A, saturation",0.0121
+"detection loss (side - adjusted), planning weights","180 B, contrast",0.0040000000000000036
+"detection loss (side - adjusted), planning weights","180 B, saturation",0.010199999999999987
+"largest false-positive rate, episode-dependent strategy, k 0.25, N 20, paired t",adjusted,0.0591
+"largest false-positive rate, episode-dependent strategy, k 0.25, N 20, paired t",side,0.1022
+"largest false-positive rate, episode-dependent strategy, k 0.5, N 20, paired t",adjusted,0.0607
+"largest false-positive rate, episode-dependent strategy, k 0.5, N 20, paired t",side,0.1755
+"largest false-positive rate, episode-dependent strategy, k 1, N 20, paired t",adjusted,0.0621
+"largest false-positive rate, episode-dependent strategy, k 1, N 20, paired t",side,0.391
+"largest power loss (side - adjusted), N 20, paired t, headline cells",,0.01100000000000001

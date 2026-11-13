@@ -1,0 +1,17 @@
+THE PRIMARY PAIRED TEST, ADJUSTED MODEL (simulate_power_paired_v5b_adj.py): IN PLAIN WORDS
+
+* Checks: 113 of 113 pass.
+* Registered per-person model: the strategy-adjusted model (side model + N_corpus + N_orig per block, Firth, no intercept); side and N terms are nuisance terms, never results; the side model is a sensitivity analysis.
+* Chosen after the simulations and before any data: the episode-dependent strategy inflated the side model's false-positive rate to 0.102 / 0.175 / 0.391 (k = 0.25 / 0.5 / 1) and the adjusted model's to at most 0.062; the cost was at most 0.016 in detection and 0.011 in power at N = 20 (script 7b). The N terms only remove strategies that act linearly on N_corpus or N_orig.
+* Script 6 had chosen the side model (over the two-weight model) by a margin of 0.0001.
+* adjusted model thresholds (2.5% per tail, script 6's 20,000 random choosers; sign test only): 150 A: sat +0.327/-0.325, con +0.356/-0.364; 150 B: sat +0.329/-0.327, con +0.352/-0.356; 180 A: sat +0.298/-0.303, con +0.327/-0.331; 180 B: sat +0.300/-0.296, con +0.323/-0.329.
+* Primary test (v5's amended rule, at most 5 of 108 cells over the limit): t. Cells over the limit: t 0, wilcoxon 0. Under the original rule (no cell): t.
+* Power at N = 20, planning, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 150 contrast 0.86 (rescaled 0.67; side 0.87); 150 saturation 0.80 (rescaled 0.81; side 0.81); 180 contrast 0.88 (rescaled 0.68; side 0.89); 180 saturation 0.83 (rescaled 0.83; side 0.83).
+* Power at N = 20, half shift, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 150 contrast 0.47 (rescaled 0.27; side 0.48); 150 saturation 0.38 (rescaled 0.38; side 0.39); 180 contrast 0.48 (rescaled 0.28; side 0.48); 180 saturation 0.41 (rescaled 0.44; side 0.42).
+* False positives with no effect over the rule rows (model 'adjusted', t test): mean 0.050, largest 0.063.
+* False positives with no effect over the rule rows (model 'side (script 7)', t test): mean 0.050, largest 0.061.
+* Episode-dependent strategy, v5b lists, model 'adjusted' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.059 at k 0.25, 0.061 at k 0.5, 0.062 at k 1.
+* Episode-dependent strategy, v5b lists, model 'side (script 7)' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.102 at k 0.25, 0.175 at k 0.5, 0.391 at k 1.
+* Episode-dependent strategy, v5 lists, model 'side' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.999 at k 0.25, 1.000 at k 0.5, 1.000 at k 1.
+* Mixed model: not rerun; assessed with the side model in script 7's run: VERDICT: the mixed model is NOT worth registering by this criterion.
+* Rescale factors (script 2's rescale_factors on the lists): 150: saturation x0.964, contrast x0.653; 180: saturation x0.963, contrast x0.654.
