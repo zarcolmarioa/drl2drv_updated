@@ -1,0 +1,709 @@
+C1 WITH A SHARED PREFERENCE AND UNEQUAL ATTENTION  (simulate_c1_attention_v5b.py, script 8b)
+==============================================================================
+run       2026-11-13 15:37:49  (1.8 min, 31 worker process(es), one thread each)
+output    data/power_v5b/c1_attention_v5b/shared-preference_unequal-attention__s8e477098
+python    3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+script 8  data/power_v5b/c1_v5b/sizes150-180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sed9376ba
+
+0. IN PLAIN WORDS
+------------------------------------------------------------------------------
+* Checks: 64 of 64 pass.
+* Situation: both groups share a preference towards the predicted image; the comparison group lapses more (report group 0.1). Registered check = both parts, Holm. Rates at report N = 20, comparison N 20 and 30, both sizes (ASSUMPTIONS).
+* no effect, shared +0.25/+0.35, comparison lapse 0.1 (false claims, either feature): before the check 0.041-0.049; after 0.038-0.046; catch-only check 0.038-0.046; the check fires in 0.045-0.048 (catch part 0.026-0.027, under-300-ms part 0.024-0.028).
+* no effect, shared +0.25/+0.35, comparison lapse 0.15 (false claims, either feature): before the check 0.069-0.074; after 0.025-0.030; catch-only check 0.054-0.057; the check fires in 0.515-0.600 (catch part 0.159-0.196, under-300-ms part 0.488-0.582).
+* no effect, shared +0.25/+0.35, comparison lapse 0.2 (false claims, either feature): before the check 0.091-0.110; after 0.004-0.007; catch-only check 0.054-0.063; the check fires in 0.907-0.955 (catch part 0.376-0.433, under-300-ms part 0.900-0.952).
+* no effect, shared +0.5/+0.7, comparison lapse 0.1 (false claims, either feature): before the check 0.043-0.047; after 0.041-0.044; catch-only check 0.042-0.044; the check fires in 0.041-0.049 (catch part 0.022-0.025, under-300-ms part 0.023-0.029).
+* no effect, shared +0.5/+0.7, comparison lapse 0.15 (false claims, either feature): before the check 0.110-0.113; after 0.032-0.043; catch-only check 0.083-0.085; the check fires in 0.498-0.612 (catch part 0.158-0.191, under-300-ms part 0.470-0.592).
+* no effect, shared +0.5/+0.7, comparison lapse 0.2 (false claims, either feature): before the check 0.169-0.195; after 0.004-0.011; catch-only check 0.095-0.109; the check fires in 0.902-0.960 (catch part 0.388-0.468, under-300-ms part 0.895-0.958).
+* planning, shared +0.25/+0.35, comparison lapse 0.1 (power, either feature): before the check 0.823-0.875; after 0.788-0.834; catch-only check 0.787-0.833; the check fires in 0.041-0.045 (catch part 0.020-0.028, under-300-ms part 0.023-0.025).
+* planning, shared +0.25/+0.35, comparison lapse 0.15 (power, either feature): before the check 0.856-0.912; after 0.360-0.411; catch-only check 0.681-0.721; the check fires in 0.521-0.603 (catch part 0.168-0.197, under-300-ms part 0.495-0.583).
+* planning, shared +0.25/+0.35, comparison lapse 0.2 (power, either feature): before the check 0.895-0.941; after 0.042-0.079; catch-only check 0.508-0.541; the check fires in 0.910-0.955 (catch part 0.379-0.454, under-300-ms part 0.904-0.953).
+* planning, shared +0.5/+0.7, comparison lapse 0.1 (power, either feature): before the check 0.769-0.839; after 0.725-0.802; catch-only check 0.726-0.800; the check fires in 0.041-0.052 (catch part 0.022-0.031, under-300-ms part 0.023-0.029).
+* planning, shared +0.5/+0.7, comparison lapse 0.15 (power, either feature): before the check 0.874-0.932; after 0.349-0.420; catch-only check 0.690-0.723; the check fires in 0.508-0.619 (catch part 0.167-0.202, under-300-ms part 0.480-0.600).
+* planning, shared +0.5/+0.7, comparison lapse 0.2 (power, either feature): before the check 0.926-0.961; after 0.041-0.079; catch-only check 0.505-0.581; the check fires in 0.909-0.956 (catch part 0.374-0.461, under-300-ms part 0.903-0.954).
+* As a sensitivity analysis (no gate), C1 is the 'before' rate; the gate's verdict beside it flags the share 'claim_flagged_by_gate' of studies (report section 5).
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES: the shared preference, the lapse
+rates, the response-time model and the effect are chosen for planning.
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+Script 8's pools, recruitment, C1 test and registered attention check (imported).
+Every person in both groups has a preference towards the predicted image in every
+block (shared, +0.25/+0.35 or +0.5/+0.7 per SD); script 8's strategy quarters as in its
+main rows; report group mean lapse 0.1, comparison group 0.1, 0.15, 0.2.
+Columns: raw_* = C1 before the check (per feature after Holm; either = at least one);
+gated_* = after the registered check (C1 counts only if the check does not fire);
+gate_fires (any part), gate_fires_catch / gate_fires_rt = the parts as Holm'd in the
+check; catch_alone_fires / rt_alone_fires = each part on its own at 0.05;
+catchonly_* = C1 under the catch-only check (information only); claim_flagged_by_gate
+= share of studies with a C1 claim that the gate would flag (the check as a
+sensitivity analysis; C1 is then the raw rate). shared 'none' rows are script 8's.
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [inputs] simulate_c1_v5b.py exists
+          simulate_c1_v5b.py
+  PASS  [inputs] simulate_c1_v5b.py is the version run for script 8 (SHA-256)
+          89f3478a5429d16d...
+  PASS  [inputs] simulate_power_paired_v5b_adj.py exists
+          simulate_power_paired_v5b_adj.py
+  PASS  [inputs] simulate_power_paired_v5b_adj.py is the expected version (SHA-256)
+          e7c7aa79c033e711...
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py exists
+          simulate_c1_post_exclusion_v4.py
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py is the expected version (SHA-256)
+          4d6c6fcee68d29c6...
+  PASS  [stimulus set] stimulus_manifest.csv and reference_stimulus_path.csv exist
+          data/stimulus_set_v5/7fd72262ba
+  PASS  [stimulus set] stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json)
+          69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2...
+  PASS  [stimulus set] corpus SDs equal the predictors' (39.182, 9.348)
+          median [66.448242, 26.908877], SD [39.181906, 9.348022]
+  PASS  [stimulus set] one original per scene (47 scenes)
+          47
+  PASS  [package v5b 150] every non-image file matches checksums.sha256
+          54 of 54 match
+  PASS  [package v5b 150] every image present matches checksums.sha256 (images are not needed here)
+          564 of 564 present, 0 differ
+  PASS  [package v5b 150] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5b 150] FROZEN.json records the hash of this checksums.sha256
+          package v5b_150
+  PASS  [package v5b 150] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 6.8e-06
+  PASS  [package v5b 150] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.6e-07 (corpus SD)
+  PASS  [package v5b 150] set A: the analysed rows' N equal items.csv's
+          150 items
+  PASS  [package v5b 150] set B: the analysed rows' N equal items.csv's
+          150 items
+  PASS  [package v5b 150] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 5.1e-07
+  PASS  [package v5b 150] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [package v5b 180] every non-image file matches checksums.sha256
+          54 of 54 match
+  PASS  [package v5b 180] every image present matches checksums.sha256 (images are not needed here)
+          656 of 656 present, 0 differ
+  PASS  [package v5b 180] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5b 180] FROZEN.json records the hash of this checksums.sha256
+          package v5b_180
+  PASS  [package v5b 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 9.1e-06
+  PASS  [package v5b 180] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.4e-07 (corpus SD)
+  PASS  [package v5b 180] set A: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] set B: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 5.0e-07
+  PASS  [package v5b 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)
+          on disk 852f3b33eb349153..., expected 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5b.py exists
+          analyse_pair_capacity_v5b.py
+  PASS  [inputs] analyse_pair_capacity_v5b.py is the expected version (SHA-256, FROZEN.json)
+          on disk f7ab2c91e5a0be23..., expected f7ab2c91e5a0be23...
+  PASS  [inputs] explore_block_length_v5b.py exists
+          explore_block_length_v5b.py
+  PASS  [inputs] explore_block_length_v5b.py is the expected version (SHA-256)
+          on disk dc38cc67b547eaa3..., expected dc38cc67b547eaa3...
+  PASS  [inputs] thresholds_v5b.py exists
+          thresholds_v5b.py
+  PASS  [inputs] thresholds_v5b.py is the expected version (SHA-256)
+          on disk 07b2423e480df29a..., expected 07b2423e480df29a...
+  PASS  [package 150] assignment table: 64 slots for the comparison group
+          64 rows
+  PASS  [package 180] assignment table: 64 slots for the comparison group
+          64 rows
+  PASS  [inputs] script 8's run exists (c1.csv, checks.csv, run_meta.json)
+          data/power_v5b/c1_v5b/sizes150-180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sed9376ba
+  PASS  [inputs] script 8's run passed every check
+          75 PASS, 0 FAIL
+  PASS  [inputs] script 8's run used the adjusted model
+          adjusted
+  PASS  [workers] one worker gives the same result as 31
+          150 trials, 'no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15'
+  PASS  [check] the gate recomputed from its two p-values (Holm) equals v4's _c1_gate in every study
+          792 cells
+  PASS  [reproduction] script 8's scenarios rerun here equal its c1.csv (every column, every N)
+          352 of 352 cells, 26 columns; max |difference| 0.0e+00
+  PASS  [results] no shared preference, equal attention: the catch-only check fires at about 0.05 (within 3 SE)
+          largest 0.0516
+  PASS  [results] the gate fires at least as often when the comparison group lapses more (0.2 against 0.15, every cell)
+
+  64 PASS, 0 FAIL
+
+3. NO EFFECT: FALSE CLAIMS BEFORE AND AFTER THE CHECK
+------------------------------------------------------------------------------
+   size      shared  lapse_comparison  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  catchonly_either  claim_flagged_by_gate
+    150 +0.25/+0.35             0.100            20        10         0.020           0.024       0.043         0.040             0.040                  0.002
+    150 +0.25/+0.35             0.100            20        15         0.020           0.023       0.042         0.040             0.039                  0.002
+    150 +0.25/+0.35             0.100            20        20         0.021           0.025       0.044         0.042             0.042                  0.002
+    150 +0.25/+0.35             0.100            30        10         0.020           0.024       0.043         0.041             0.041                  0.002
+    150 +0.25/+0.35             0.100            30        15         0.021           0.026       0.045         0.042             0.043                  0.003
+    150 +0.25/+0.35             0.100            30        20         0.019           0.023       0.041         0.038             0.038                  0.002
+    150 +0.25/+0.35             0.150            20        10         0.034           0.029       0.060         0.037             0.051                  0.024
+    150 +0.25/+0.35             0.150            20        15         0.038           0.031       0.065         0.033             0.053                  0.032
+    150 +0.25/+0.35             0.150            20        20         0.039           0.033       0.069         0.029             0.054                  0.040
+    150 +0.25/+0.35             0.150            30        10         0.036           0.030       0.064         0.035             0.051                  0.029
+    150 +0.25/+0.35             0.150            30        15         0.040           0.033       0.069         0.029             0.054                  0.040
+    150 +0.25/+0.35             0.150            30        20         0.041           0.038       0.074         0.026             0.055                  0.048
+    150 +0.25/+0.35             0.200            20        10         0.041           0.037       0.073         0.015             0.051                  0.058
+    150 +0.25/+0.35             0.200            20        15         0.049           0.048       0.092         0.011             0.060                  0.081
+    150 +0.25/+0.35             0.200            20        20         0.050           0.047       0.091         0.007             0.054                  0.084
+    150 +0.25/+0.35             0.200            30        10         0.047           0.043       0.085         0.015             0.058                  0.070
+    150 +0.25/+0.35             0.200            30        15         0.057           0.047       0.098         0.007             0.060                  0.090
+    150 +0.25/+0.35             0.200            30        20         0.061           0.058       0.110         0.004             0.061                  0.105
+    150   +0.5/+0.7             0.100            20        10         0.018           0.021       0.038         0.036             0.035                  0.002
+    150   +0.5/+0.7             0.100            20        15         0.019           0.024       0.041         0.038             0.038                  0.003
+    150   +0.5/+0.7             0.100            20        20         0.021           0.023       0.044         0.041             0.042                  0.003
+    150   +0.5/+0.7             0.100            30        10         0.020           0.022       0.041         0.038             0.038                  0.003
+    150   +0.5/+0.7             0.100            30        15         0.022           0.023       0.043         0.040             0.041                  0.003
+    150   +0.5/+0.7             0.100            30        20         0.024           0.023       0.045         0.042             0.043                  0.003
+    150   +0.5/+0.7             0.150            20        10         0.055           0.044       0.090         0.049             0.076                  0.041
+    150   +0.5/+0.7             0.150            20        15         0.061           0.049       0.101         0.048             0.080                  0.053
+    150   +0.5/+0.7             0.150            20        20         0.062           0.057       0.110         0.043             0.083                  0.067
+    150   +0.5/+0.7             0.150            30        10         0.055           0.050       0.098         0.050             0.082                  0.048
+    150   +0.5/+0.7             0.150            30        15         0.067           0.055       0.112         0.042             0.088                  0.070
+    150   +0.5/+0.7             0.150            30        20         0.068           0.054       0.113         0.039             0.083                  0.074
+    150   +0.5/+0.7             0.200            20        10         0.081           0.070       0.135         0.027             0.089                  0.108
+    150   +0.5/+0.7             0.200            20        15         0.107           0.082       0.167         0.016             0.100                  0.151
+    150   +0.5/+0.7             0.200            20        20         0.106           0.085       0.169         0.011             0.095                  0.159
+    150   +0.5/+0.7             0.200            30        10         0.090           0.070       0.145         0.017             0.088                  0.128
+    150   +0.5/+0.7             0.200            30        15         0.120           0.096       0.189         0.011             0.104                  0.178
+    150   +0.5/+0.7             0.200            30        20         0.124           0.097       0.195         0.006             0.095                  0.189
+    150        none             0.100            20        10         0.025           0.025       0.048         0.046             0.045                  0.002
+    150        none             0.100            20        15         0.022           0.024       0.043         0.041             0.041                  0.003
+    150        none             0.100            20        20         0.025           0.026       0.050         0.047             0.047                  0.003
+    150        none             0.100            30        10         0.026           0.024       0.049         0.047             0.047                  0.002
+    150        none             0.100            30        15         0.027           0.028       0.052         0.050             0.049                  0.002
+    150        none             0.100            30        20         0.023           0.025       0.046         0.043             0.044                  0.002
+    150        none             0.150            20        10         0.019           0.022       0.040         0.026             0.034                  0.014
+    150        none             0.150            20        15         0.022           0.025       0.046         0.024             0.037                  0.022
+    150        none             0.150            20        20         0.023           0.025       0.047         0.024             0.038                  0.023
+    150        none             0.150            30        10         0.021           0.025       0.043         0.026             0.036                  0.017
+    150        none             0.150            30        15         0.021           0.023       0.042         0.023             0.035                  0.019
+    150        none             0.150            30        20         0.023           0.026       0.048         0.022             0.038                  0.026
+    150        none             0.200            20        10         0.027           0.019       0.044         0.011             0.030                  0.033
+    150        none             0.200            20        15         0.030           0.019       0.048         0.006             0.031                  0.042
+    150        none             0.200            20        20         0.025           0.022       0.045         0.004             0.026                  0.042
+    150        none             0.200            30        10         0.029           0.021       0.049         0.009             0.034                  0.039
+    150        none             0.200            30        15         0.026           0.024       0.048         0.004             0.030                  0.045
+    150        none             0.200            30        20         0.027           0.024       0.048         0.002             0.025                  0.046
+    180 +0.25/+0.35             0.100            20        10         0.024           0.018       0.041         0.037             0.038                  0.004
+    180 +0.25/+0.35             0.100            20        15         0.022           0.021       0.042         0.039             0.039                  0.003
+    180 +0.25/+0.35             0.100            20        20         0.022           0.022       0.043         0.041             0.042                  0.003
+    180 +0.25/+0.35             0.100            30        10         0.022           0.022       0.042         0.041             0.041                  0.002
+    180 +0.25/+0.35             0.100            30        15         0.021           0.023       0.043         0.040             0.040                  0.003
+    180 +0.25/+0.35             0.100            30        20         0.027           0.024       0.049         0.046             0.046                  0.003
+    180 +0.25/+0.35             0.150            20        10         0.034           0.037       0.066         0.040             0.054                  0.026
+    180 +0.25/+0.35             0.150            20        15         0.035           0.036       0.067         0.032             0.056                  0.035
+    180 +0.25/+0.35             0.150            20        20         0.037           0.037       0.070         0.030             0.057                  0.040
+    180 +0.25/+0.35             0.150            30        10         0.041           0.041       0.077         0.041             0.063                  0.035
+    180 +0.25/+0.35             0.150            30        15         0.038           0.037       0.072         0.029             0.058                  0.043
+    180 +0.25/+0.35             0.150            30        20         0.036           0.040       0.072         0.025             0.056                  0.046
+    180 +0.25/+0.35             0.200            20        10         0.047           0.042       0.082         0.016             0.058                  0.066
+    180 +0.25/+0.35             0.200            20        15         0.050           0.049       0.094         0.011             0.058                  0.083
+    180 +0.25/+0.35             0.200            20        20         0.062           0.054       0.108         0.006             0.062                  0.102
+    180 +0.25/+0.35             0.200            30        10         0.053           0.049       0.095         0.016             0.064                  0.080
+    180 +0.25/+0.35             0.200            30        15         0.063           0.055       0.110         0.007             0.064                  0.103
+    180 +0.25/+0.35             0.200            30        20         0.060           0.060       0.110         0.004             0.063                  0.106
+    180   +0.5/+0.7             0.100            20        10         0.022           0.018       0.038         0.035             0.036                  0.002
+    180   +0.5/+0.7             0.100            20        15         0.022           0.020       0.041         0.037             0.038                  0.003
+    180   +0.5/+0.7             0.100            20        20         0.024           0.021       0.043         0.042             0.042                  0.002
+    180   +0.5/+0.7             0.100            30        10         0.023           0.023       0.044         0.040             0.041                  0.004
+    180   +0.5/+0.7             0.100            30        15         0.026           0.021       0.045         0.042             0.042                  0.004
+    180   +0.5/+0.7             0.100            30        20         0.026           0.023       0.047         0.044             0.044                  0.004
+    180   +0.5/+0.7             0.150            20        10         0.045           0.045       0.083         0.046             0.068                  0.036
+    180   +0.5/+0.7             0.150            20        15         0.054           0.053       0.099         0.046             0.079                  0.053
+    180   +0.5/+0.7             0.150            20        20         0.062           0.061       0.112         0.042             0.085                  0.071
+    180   +0.5/+0.7             0.150            30        10         0.053           0.054       0.100         0.049             0.081                  0.051
+    180   +0.5/+0.7             0.150            30        15         0.059           0.057       0.106         0.040             0.082                  0.066
+    180   +0.5/+0.7             0.150            30        20         0.060           0.061       0.110         0.032             0.083                  0.078
+    180   +0.5/+0.7             0.200            20        10         0.083           0.077       0.142         0.020             0.092                  0.122
+    180   +0.5/+0.7             0.200            20        15         0.102           0.093       0.170         0.012             0.101                  0.159
+    180   +0.5/+0.7             0.200            20        20         0.110           0.108       0.192         0.009             0.109                  0.184
+    180   +0.5/+0.7             0.200            30        10         0.088           0.084       0.153         0.017             0.096                  0.136
+    180   +0.5/+0.7             0.200            30        15         0.116           0.105       0.189         0.007             0.109                  0.182
+    180   +0.5/+0.7             0.200            30        20         0.118           0.105       0.191         0.004             0.103                  0.187
+    180        none             0.100            20        10         0.023           0.023       0.044         0.043             0.042                  0.001
+    180        none             0.100            20        15         0.024           0.023       0.044         0.043             0.043                  0.002
+    180        none             0.100            20        20         0.027           0.024       0.050         0.048             0.048                  0.002
+    180        none             0.100            30        10         0.022           0.024       0.044         0.043             0.043                  0.002
+    180        none             0.100            30        15         0.024           0.028       0.049         0.046             0.047                  0.002
+    180        none             0.100            30        20         0.023           0.025       0.046         0.045             0.045                  0.002
+    180        none             0.150            20        10         0.021           0.023       0.042         0.025             0.036                  0.017
+    180        none             0.150            20        15         0.024           0.023       0.045         0.024             0.037                  0.021
+    180        none             0.150            20        20         0.024           0.023       0.045         0.018             0.036                  0.026
+    180        none             0.150            30        10         0.023           0.022       0.043         0.025             0.035                  0.018
+    180        none             0.150            30        15         0.025           0.027       0.050         0.021             0.038                  0.028
+    180        none             0.150            30        20         0.022           0.025       0.046         0.015             0.036                  0.031
+    180        none             0.200            20        10         0.025           0.026       0.049         0.013             0.034                  0.036
+    180        none             0.200            20        15         0.026           0.028       0.051         0.009             0.033                  0.042
+    180        none             0.200            20        20         0.022           0.028       0.048         0.006             0.030                  0.042
+    180        none             0.200            30        10         0.025           0.024       0.046         0.008             0.030                  0.038
+    180        none             0.200            30        15         0.026           0.029       0.053         0.005             0.032                  0.048
+    180        none             0.200            30        20         0.022           0.028       0.048         0.002             0.027                  0.045
+
+4. PLANNING: POWER BEFORE AND AFTER THE CHECK
+------------------------------------------------------------------------------
+   size      shared  lapse_comparison  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_contrast  gated_saturation  gated_either  catchonly_either  claim_flagged_by_gate
+    150 +0.25/+0.35             0.100            20        10         0.514           0.494       0.630           0.491             0.473         0.604             0.604                  0.027
+    150 +0.25/+0.35             0.100            20        15         0.631           0.618       0.751           0.603             0.593         0.720             0.716                  0.032
+    150 +0.25/+0.35             0.100            20        20         0.709           0.684       0.823           0.679             0.654         0.788             0.787                  0.035
+    150 +0.25/+0.35             0.100            30        10         0.564           0.560       0.693           0.539             0.537         0.663             0.659                  0.029
+    150 +0.25/+0.35             0.100            30        15         0.691           0.671       0.803           0.657             0.639         0.765             0.764                  0.038
+    150 +0.25/+0.35             0.100            30        20         0.779           0.757       0.870           0.748             0.726         0.834             0.833                  0.036
+    150 +0.25/+0.35             0.150            20        10         0.538           0.540       0.667           0.329             0.334         0.413             0.565                  0.254
+    150 +0.25/+0.35             0.150            20        15         0.674           0.664       0.788           0.359             0.359         0.425             0.638                  0.363
+    150 +0.25/+0.35             0.150            20        20         0.755           0.732       0.856           0.352             0.341         0.403             0.681                  0.453
+    150 +0.25/+0.35             0.150            30        10         0.589           0.597       0.721           0.345             0.350         0.425             0.601                  0.296
+    150 +0.25/+0.35             0.150            30        15         0.742           0.731       0.844           0.357             0.352         0.407             0.681                  0.436
+    150 +0.25/+0.35             0.150            30        20         0.824           0.812       0.904           0.333             0.328         0.368             0.701                  0.536
+    150 +0.25/+0.35             0.200            20        10         0.617           0.588       0.721           0.143             0.139         0.171             0.513                  0.550
+    150 +0.25/+0.35             0.200            20        15         0.744           0.721       0.840           0.102             0.096         0.116             0.544                  0.724
+    150 +0.25/+0.35             0.200            20        20         0.817           0.784       0.895           0.071             0.069         0.079             0.541                  0.816
+    150 +0.25/+0.35             0.200            30        10         0.674           0.647       0.777           0.113             0.111         0.135             0.530                  0.642
+    150 +0.25/+0.35             0.200            30        15         0.806           0.775       0.885           0.070             0.066         0.077             0.540                  0.808
+    150 +0.25/+0.35             0.200            30        20         0.870           0.846       0.930           0.039             0.039         0.043             0.522                  0.887
+    150   +0.5/+0.7             0.100            20        10         0.473           0.449       0.592           0.447             0.423         0.560             0.558                  0.032
+    150   +0.5/+0.7             0.100            20        15         0.573           0.556       0.700           0.538             0.523         0.660             0.659                  0.040
+    150   +0.5/+0.7             0.100            20        20         0.647           0.619       0.769           0.608             0.583         0.725             0.726                  0.044
+    150   +0.5/+0.7             0.100            30        10         0.531           0.495       0.648           0.503             0.469         0.615             0.614                  0.033
+    150   +0.5/+0.7             0.100            30        15         0.657           0.625       0.766           0.622             0.590         0.726             0.726                  0.041
+    150   +0.5/+0.7             0.100            30        20         0.732           0.698       0.835           0.693             0.660         0.791             0.785                  0.044
+    150   +0.5/+0.7             0.150            20        10         0.578           0.565       0.694           0.348             0.339         0.422             0.576                  0.272
+    150   +0.5/+0.7             0.150            20        15         0.699           0.678       0.804           0.364             0.358         0.430             0.653                  0.374
+    150   +0.5/+0.7             0.150            20        20         0.775           0.765       0.874           0.369             0.364         0.420             0.690                  0.453
+    150   +0.5/+0.7             0.150            30        10         0.621           0.611       0.742           0.351             0.346         0.427             0.613                  0.315
+    150   +0.5/+0.7             0.150            30        15         0.760           0.752       0.861           0.347             0.348         0.402             0.677                  0.460
+    150   +0.5/+0.7             0.150            30        20         0.837           0.825       0.913           0.327             0.320         0.360             0.699                  0.553
+    150   +0.5/+0.7             0.200            20        10         0.665           0.629       0.771           0.132             0.127         0.157             0.534                  0.614
+    150   +0.5/+0.7             0.200            20        15         0.783           0.756       0.873           0.097             0.095         0.112             0.533                  0.761
+    150   +0.5/+0.7             0.200            20        20         0.854           0.824       0.926           0.072             0.069         0.079             0.532                  0.847
+    150   +0.5/+0.7             0.200            30        10         0.719           0.681       0.817           0.111             0.107         0.131             0.531                  0.686
+    150   +0.5/+0.7             0.200            30        15         0.842           0.810       0.913           0.066             0.062         0.072             0.535                  0.841
+    150   +0.5/+0.7             0.200            30        20         0.902           0.878       0.952           0.040             0.038         0.043             0.505                  0.909
+    150        none             0.100            20        10         0.562           0.544       0.675           0.540             0.524         0.650             0.648                  0.025
+    150        none             0.100            20        15         0.676           0.666       0.789           0.648             0.638         0.756             0.753                  0.034
+    150        none             0.100            20        20         0.753           0.736       0.853           0.719             0.702         0.814             0.813                  0.038
+    150        none             0.100            30        10         0.607           0.585       0.715           0.581             0.560         0.685             0.684                  0.030
+    150        none             0.100            30        15         0.739           0.723       0.838           0.706             0.690         0.799             0.800                  0.038
+    150        none             0.100            30        20         0.811           0.805       0.895           0.776             0.771         0.857             0.853                  0.038
+    150        none             0.150            20        10         0.541           0.544       0.665           0.354             0.350         0.431             0.557                  0.234
+    150        none             0.150            20        15         0.640           0.644       0.761           0.350             0.351         0.413             0.611                  0.348
+    150        none             0.150            20        20         0.737           0.737       0.851           0.364             0.365         0.421             0.674                  0.429
+    150        none             0.150            30        10         0.600           0.604       0.721           0.362             0.367         0.438             0.596                  0.283
+    150        none             0.150            30        15         0.718           0.712       0.824           0.358             0.356         0.411             0.649                  0.413
+    150        none             0.150            30        20         0.799           0.800       0.889           0.324             0.324         0.359             0.681                  0.530
+    150        none             0.200            20        10         0.546           0.545       0.667           0.134             0.135         0.164             0.470                  0.503
+    150        none             0.200            20        15         0.691           0.673       0.797           0.099             0.099         0.117             0.514                  0.680
+    150        none             0.200            20        20         0.769           0.761       0.870           0.074             0.076         0.084             0.526                  0.785
+    150        none             0.200            30        10         0.590           0.586       0.713           0.116             0.113         0.138             0.473                  0.575
+    150        none             0.200            30        15         0.734           0.725       0.836           0.062             0.061         0.071             0.504                  0.765
+    150        none             0.200            30        20         0.823           0.820       0.906           0.040             0.042         0.046             0.492                  0.861
+    180 +0.25/+0.35             0.100            20        10         0.512           0.510       0.633           0.488             0.489         0.605             0.602                  0.027
+    180 +0.25/+0.35             0.100            20        15         0.644           0.648       0.760           0.612             0.615         0.723             0.718                  0.038
+    180 +0.25/+0.35             0.100            20        20         0.722           0.724       0.832           0.689             0.691         0.795             0.793                  0.037
+    180 +0.25/+0.35             0.100            30        10         0.568           0.576       0.696           0.544             0.553         0.668             0.663                  0.028
+    180 +0.25/+0.35             0.100            30        15         0.706           0.712       0.817           0.668             0.675         0.774             0.770                  0.042
+    180 +0.25/+0.35             0.100            30        20         0.781           0.784       0.875           0.744             0.746         0.834             0.831                  0.041
+    180 +0.25/+0.35             0.150            20        10         0.562           0.559       0.683           0.350             0.345         0.428             0.583                  0.255
+    180 +0.25/+0.35             0.150            20        15         0.693           0.691       0.802           0.365             0.359         0.421             0.664                  0.380
+    180 +0.25/+0.35             0.150            20        20         0.768           0.766       0.871           0.359             0.358         0.411             0.696                  0.460
+    180 +0.25/+0.35             0.150            30        10         0.628           0.614       0.741           0.362             0.350         0.428             0.619                  0.313
+    180 +0.25/+0.35             0.150            30        15         0.760           0.750       0.857           0.356             0.351         0.405             0.688                  0.453
+    180 +0.25/+0.35             0.150            30        20         0.840           0.826       0.912           0.331             0.325         0.360             0.721                  0.552
+    180 +0.25/+0.35             0.200            20        10         0.645           0.621       0.750           0.140             0.133         0.164             0.528                  0.586
+    180 +0.25/+0.35             0.200            20        15         0.753           0.735       0.845           0.100             0.093         0.112             0.543                  0.733
+    180 +0.25/+0.35             0.200            20        20         0.822           0.801       0.904           0.067             0.063         0.074             0.538                  0.831
+    180 +0.25/+0.35             0.200            30        10         0.687           0.665       0.789           0.116             0.111         0.136             0.533                  0.653
+    180 +0.25/+0.35             0.200            30        15         0.810           0.788       0.888           0.058             0.055         0.065             0.534                  0.823
+    180 +0.25/+0.35             0.200            30        20         0.876           0.868       0.941           0.039             0.038         0.042             0.508                  0.899
+    180   +0.5/+0.7             0.100            20        10         0.481           0.484       0.603           0.458             0.461         0.575             0.577                  0.028
+    180   +0.5/+0.7             0.100            20        15         0.602           0.594       0.723           0.576             0.567         0.691             0.690                  0.032
+    180   +0.5/+0.7             0.100            20        20         0.665           0.656       0.787           0.636             0.627         0.753             0.755                  0.034
+    180   +0.5/+0.7             0.100            30        10         0.534           0.535       0.657           0.509             0.509         0.627             0.626                  0.030
+    180   +0.5/+0.7             0.100            30        15         0.667           0.662       0.779           0.633             0.629         0.741             0.742                  0.038
+    180   +0.5/+0.7             0.100            30        20         0.743           0.734       0.839           0.709             0.700         0.802             0.800                  0.037
+    180   +0.5/+0.7             0.150            20        10         0.590           0.586       0.710           0.346             0.351         0.423             0.597                  0.286
+    180   +0.5/+0.7             0.150            20        15         0.745           0.726       0.834           0.363             0.351         0.411             0.673                  0.423
+    180   +0.5/+0.7             0.150            20        20         0.805           0.793       0.892           0.361             0.358         0.407             0.716                  0.485
+    180   +0.5/+0.7             0.150            30        10         0.645           0.633       0.756           0.347             0.341         0.409             0.620                  0.347
+    180   +0.5/+0.7             0.150            30        15         0.793           0.786       0.879           0.350             0.350         0.394             0.699                  0.485
+    180   +0.5/+0.7             0.150            30        20         0.864           0.855       0.932           0.318             0.314         0.349             0.723                  0.583
+    180   +0.5/+0.7             0.200            20        10         0.683           0.662       0.785           0.142             0.139         0.169             0.554                  0.616
+    180   +0.5/+0.7             0.200            20        15         0.809           0.797       0.892           0.104             0.101         0.115             0.575                  0.777
+    180   +0.5/+0.7             0.200            20        20         0.875           0.860       0.940           0.068             0.068         0.076             0.581                  0.864
+    180   +0.5/+0.7             0.200            30        10         0.726           0.703       0.825           0.120             0.116         0.141             0.564                  0.684
+    180   +0.5/+0.7             0.200            30        15         0.857           0.846       0.927           0.062             0.061         0.069             0.560                  0.859
+    180   +0.5/+0.7             0.200            30        20         0.910           0.902       0.961           0.038             0.037         0.041             0.544                  0.919
+    180        none             0.100            20        10         0.545           0.565       0.673           0.521             0.540         0.644             0.646                  0.029
+    180        none             0.100            20        15         0.664           0.672       0.782           0.639             0.645         0.752             0.753                  0.030
+    180        none             0.100            20        20         0.747           0.746       0.852           0.717             0.717         0.818             0.821                  0.034
+    180        none             0.100            30        10         0.588           0.610       0.716           0.565             0.585         0.687             0.686                  0.029
+    180        none             0.100            30        15         0.732           0.749       0.841           0.703             0.718         0.807             0.803                  0.034
+    180        none             0.100            30        20         0.802           0.818       0.893           0.765             0.780         0.853             0.854                  0.040
+    180        none             0.150            20        10         0.552           0.546       0.664           0.343             0.342         0.413             0.570                  0.250
+    180        none             0.150            20        15         0.668           0.666       0.779           0.358             0.363         0.422             0.663                  0.357
+    180        none             0.150            20        20         0.747           0.744       0.850           0.351             0.348         0.401             0.703                  0.449
+    180        none             0.150            30        10         0.608           0.604       0.721           0.358             0.358         0.427             0.615                  0.294
+    180        none             0.150            30        15         0.731           0.719       0.830           0.349             0.340         0.394             0.685                  0.435
+    180        none             0.150            30        20         0.803           0.802       0.889           0.319             0.319         0.353             0.712                  0.536
+    180        none             0.200            20        10         0.558           0.570       0.679           0.129             0.134         0.158             0.487                  0.521
+    180        none             0.200            20        15         0.672           0.687       0.788           0.095             0.094         0.110             0.519                  0.678
+    180        none             0.200            20        20         0.769           0.776       0.871           0.073             0.073         0.083             0.546                  0.788
+    180        none             0.200            30        10         0.602           0.607       0.719           0.101             0.100         0.120             0.494                  0.599
+    180        none             0.200            30        15         0.745           0.749       0.849           0.060             0.059         0.068             0.528                  0.781
+    180        none             0.200            30        20         0.815           0.829       0.903           0.035             0.036         0.039             0.514                  0.864
+
+5. HOW OFTEN THE CHECK AND ITS PARTS FIRE
+------------------------------------------------------------------------------
+
+  no effect
+   size      shared  lapse_comparison  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  catch_alone_fires  rt_alone_fires
+    150 +0.25/+0.35             0.100            20        10       0.042             0.021          0.024              0.042           0.048
+    150 +0.25/+0.35             0.100            20        15       0.041             0.022          0.023              0.048           0.046
+    150 +0.25/+0.35             0.100            20        20       0.045             0.026          0.024              0.047           0.047
+    150 +0.25/+0.35             0.100            30        10       0.043             0.022          0.025              0.043           0.045
+    150 +0.25/+0.35             0.100            30        15       0.045             0.026          0.024              0.049           0.049
+    150 +0.25/+0.35             0.100            30        20       0.047             0.026          0.028              0.050           0.049
+    150 +0.25/+0.35             0.150            20        10       0.370             0.110          0.342              0.148           0.468
+    150 +0.25/+0.35             0.150            20        15       0.449             0.144          0.421              0.177           0.548
+    150 +0.25/+0.35             0.150            20        20       0.515             0.162          0.488              0.193           0.607
+    150 +0.25/+0.35             0.150            30        10       0.414             0.135          0.385              0.172           0.504
+    150 +0.25/+0.35             0.150            30        15       0.525             0.170          0.499              0.199           0.615
+    150 +0.25/+0.35             0.150            30        20       0.593             0.196          0.571              0.224           0.685
+    150 +0.25/+0.35             0.200            20        10       0.742             0.245          0.728              0.265           0.824
+    150 +0.25/+0.35             0.200            20        15       0.847             0.319          0.838              0.332           0.902
+    150 +0.25/+0.35             0.200            20        20       0.907             0.377          0.900              0.387           0.941
+    150 +0.25/+0.35             0.200            30        10       0.795             0.278          0.784              0.295           0.870
+    150 +0.25/+0.35             0.200            30        15       0.904             0.348          0.899              0.355           0.942
+    150 +0.25/+0.35             0.200            30        20       0.947             0.433          0.943              0.439           0.972
+    150   +0.5/+0.7             0.100            20        10       0.051             0.025          0.034              0.048           0.062
+    150   +0.5/+0.7             0.100            20        15       0.046             0.024          0.027              0.049           0.052
+    150   +0.5/+0.7             0.100            20        20       0.049             0.024          0.029              0.047           0.056
+    150   +0.5/+0.7             0.100            30        10       0.050             0.023          0.032              0.047           0.057
+    150   +0.5/+0.7             0.100            30        15       0.049             0.024          0.030              0.045           0.054
+    150   +0.5/+0.7             0.100            30        20       0.042             0.023          0.024              0.047           0.051
+    150   +0.5/+0.7             0.150            20        10       0.369             0.112          0.341              0.145           0.462
+    150   +0.5/+0.7             0.150            20        15       0.432             0.138          0.406              0.171           0.534
+    150   +0.5/+0.7             0.150            20        20       0.498             0.158          0.470              0.191           0.591
+    150   +0.5/+0.7             0.150            30        10       0.395             0.123          0.365              0.159           0.495
+    150   +0.5/+0.7             0.150            30        15       0.503             0.163          0.477              0.196           0.593
+    150   +0.5/+0.7             0.150            30        20       0.571             0.185          0.548              0.214           0.665
+    150   +0.5/+0.7             0.200            20        10       0.756             0.292          0.739              0.316           0.830
+    150   +0.5/+0.7             0.200            20        15       0.852             0.360          0.842              0.374           0.906
+    150   +0.5/+0.7             0.200            20        20       0.902             0.398          0.895              0.408           0.938
+    150   +0.5/+0.7             0.200            30        10       0.810             0.338          0.796              0.357           0.877
+    150   +0.5/+0.7             0.200            30        15       0.907             0.407          0.901              0.416           0.945
+    150   +0.5/+0.7             0.200            30        20       0.950             0.468          0.947              0.474           0.974
+    150        none             0.100            20        10       0.038             0.020          0.021              0.045           0.044
+    150        none             0.100            20        15       0.043             0.022          0.025              0.043           0.048
+    150        none             0.100            20        20       0.042             0.025          0.022              0.048           0.044
+    150        none             0.100            30        10       0.041             0.022          0.025              0.044           0.050
+    150        none             0.100            30        15       0.047             0.026          0.026              0.051           0.052
+    150        none             0.100            30        20       0.048             0.028          0.026              0.049           0.050
+    150        none             0.150            20        10       0.362             0.121          0.329              0.162           0.442
+    150        none             0.150            20        15       0.456             0.158          0.427              0.191           0.546
+    150        none             0.150            20        20       0.517             0.172          0.489              0.202           0.606
+    150        none             0.150            30        10       0.405             0.138          0.372              0.179           0.494
+    150        none             0.150            30        15       0.498             0.164          0.471              0.198           0.593
+    150        none             0.150            30        20       0.574             0.184          0.554              0.216           0.675
+    150        none             0.200            20        10       0.742             0.261          0.726              0.283           0.820
+    150        none             0.200            20        15       0.843             0.332          0.835              0.346           0.897
+    150        none             0.200            20        20       0.899             0.388          0.892              0.397           0.935
+    150        none             0.200            30        10       0.811             0.312          0.797              0.329           0.874
+    150        none             0.200            30        15       0.907             0.388          0.903              0.396           0.946
+    150        none             0.200            30        20       0.950             0.456          0.947              0.461           0.970
+    180 +0.25/+0.35             0.100            20        10       0.047             0.024          0.028              0.050           0.053
+    180 +0.25/+0.35             0.100            20        15       0.049             0.029          0.027              0.052           0.049
+    180 +0.25/+0.35             0.100            20        20       0.048             0.027          0.027              0.049           0.053
+    180 +0.25/+0.35             0.100            30        10       0.048             0.025          0.028              0.049           0.056
+    180 +0.25/+0.35             0.100            30        15       0.047             0.027          0.024              0.053           0.049
+    180 +0.25/+0.35             0.100            30        20       0.045             0.026          0.025              0.050           0.048
+    180 +0.25/+0.35             0.150            20        10       0.371             0.108          0.345              0.143           0.469
+    180 +0.25/+0.35             0.150            20        15       0.457             0.137          0.429              0.169           0.559
+    180 +0.25/+0.35             0.150            20        20       0.526             0.159          0.501              0.189           0.615
+    180 +0.25/+0.35             0.150            30        10       0.409             0.124          0.382              0.162           0.505
+    180 +0.25/+0.35             0.150            30        15       0.513             0.157          0.490              0.187           0.615
+    180 +0.25/+0.35             0.150            30        20       0.600             0.183          0.582              0.208           0.695
+    180 +0.25/+0.35             0.200            20        10       0.758             0.263          0.745              0.285           0.839
+    180 +0.25/+0.35             0.200            20        15       0.860             0.333          0.852              0.346           0.913
+    180 +0.25/+0.35             0.200            20        20       0.908             0.376          0.903              0.386           0.946
+    180 +0.25/+0.35             0.200            30        10       0.814             0.305          0.805              0.320           0.882
+    180 +0.25/+0.35             0.200            30        15       0.914             0.379          0.909              0.386           0.951
+    180 +0.25/+0.35             0.200            30        20       0.955             0.422          0.952              0.426           0.974
+    180   +0.5/+0.7             0.100            20        10       0.046             0.024          0.026              0.049           0.050
+    180   +0.5/+0.7             0.100            20        15       0.042             0.024          0.024              0.047           0.045
+    180   +0.5/+0.7             0.100            20        20       0.041             0.022          0.023              0.045           0.046
+    180   +0.5/+0.7             0.100            30        10       0.048             0.026          0.027              0.050           0.052
+    180   +0.5/+0.7             0.100            30        15       0.047             0.026          0.026              0.050           0.050
+    180   +0.5/+0.7             0.100            30        20       0.049             0.025          0.029              0.048           0.049
+    180   +0.5/+0.7             0.150            20        10       0.374             0.115          0.345              0.154           0.467
+    180   +0.5/+0.7             0.150            20        15       0.465             0.159          0.438              0.193           0.558
+    180   +0.5/+0.7             0.150            20        20       0.532             0.172          0.507              0.201           0.625
+    180   +0.5/+0.7             0.150            30        10       0.413             0.129          0.388              0.166           0.517
+    180   +0.5/+0.7             0.150            30        15       0.529             0.171          0.506              0.200           0.629
+    180   +0.5/+0.7             0.150            30        20       0.612             0.191          0.592              0.217           0.705
+    180   +0.5/+0.7             0.200            20        10       0.783             0.289          0.772              0.306           0.857
+    180   +0.5/+0.7             0.200            20        15       0.883             0.354          0.877              0.365           0.929
+    180   +0.5/+0.7             0.200            20        20       0.918             0.388          0.913              0.395           0.954
+    180   +0.5/+0.7             0.200            30        10       0.829             0.311          0.821              0.327           0.892
+    180   +0.5/+0.7             0.200            30        15       0.934             0.393          0.929              0.399           0.962
+    180   +0.5/+0.7             0.200            30        20       0.960             0.435          0.958              0.439           0.980
+    180        none             0.100            20        10       0.036             0.018          0.023              0.039           0.044
+    180        none             0.100            20        15       0.039             0.020          0.024              0.043           0.044
+    180        none             0.100            20        20       0.042             0.023          0.022              0.044           0.045
+    180        none             0.100            30        10       0.042             0.021          0.025              0.043           0.049
+    180        none             0.100            30        15       0.044             0.024          0.024              0.049           0.048
+    180        none             0.100            30        20       0.043             0.025          0.024              0.047           0.045
+    180        none             0.150            20        10       0.373             0.113          0.345              0.145           0.473
+    180        none             0.150            20        15       0.466             0.143          0.442              0.172           0.558
+    180        none             0.150            20        20       0.534             0.158          0.514              0.183           0.631
+    180        none             0.150            30        10       0.417             0.128          0.391              0.165           0.512
+    180        none             0.150            30        15       0.540             0.167          0.520              0.195           0.641
+    180        none             0.150            30        20       0.626             0.198          0.608              0.224           0.716
+    180        none             0.200            20        10       0.733             0.267          0.719              0.287           0.818
+    180        none             0.200            20        15       0.842             0.338          0.832              0.352           0.897
+    180        none             0.200            20        20       0.905             0.381          0.899              0.390           0.941
+    180        none             0.200            30        10       0.796             0.299          0.785              0.316           0.864
+    180        none             0.200            30        15       0.898             0.371          0.893              0.381           0.940
+    180        none             0.200            30        20       0.950             0.439          0.947              0.444           0.973
+
+  planning
+   size      shared  lapse_comparison  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  catch_alone_fires  rt_alone_fires
+    150 +0.25/+0.35             0.100            20        10       0.038             0.020          0.023              0.041           0.043
+    150 +0.25/+0.35             0.100            20        15       0.043             0.022          0.024              0.045           0.049
+    150 +0.25/+0.35             0.100            20        20       0.042             0.023          0.023              0.043           0.047
+    150 +0.25/+0.35             0.100            30        10       0.040             0.022          0.022              0.046           0.044
+    150 +0.25/+0.35             0.100            30        15       0.046             0.025          0.026              0.048           0.049
+    150 +0.25/+0.35             0.100            30        20       0.041             0.020          0.024              0.041           0.049
+    150 +0.25/+0.35             0.150            20        10       0.370             0.117          0.344              0.151           0.464
+    150 +0.25/+0.35             0.150            20        15       0.447             0.150          0.420              0.183           0.541
+    150 +0.25/+0.35             0.150            20        20       0.522             0.174          0.495              0.202           0.617
+    150 +0.25/+0.35             0.150            30        10       0.403             0.125          0.377              0.164           0.506
+    150 +0.25/+0.35             0.150            30        15       0.512             0.162          0.488              0.192           0.609
+    150 +0.25/+0.35             0.150            30        20       0.587             0.197          0.564              0.224           0.679
+    150 +0.25/+0.35             0.200            20        10       0.758             0.265          0.745              0.288           0.836
+    150 +0.25/+0.35             0.200            20        15       0.858             0.337          0.850              0.348           0.912
+    150 +0.25/+0.35             0.200            20        20       0.910             0.379          0.904              0.388           0.946
+    150 +0.25/+0.35             0.200            30        10       0.820             0.297          0.810              0.314           0.884
+    150 +0.25/+0.35             0.200            30        15       0.910             0.377          0.904              0.386           0.947
+    150 +0.25/+0.35             0.200            30        20       0.953             0.433          0.949              0.437           0.974
+    150   +0.5/+0.7             0.100            20        10       0.049             0.024          0.029              0.052           0.058
+    150   +0.5/+0.7             0.100            20        15       0.052             0.030          0.028              0.054           0.054
+    150   +0.5/+0.7             0.100            20        20       0.052             0.029          0.029              0.053           0.052
+    150   +0.5/+0.7             0.100            30        10       0.050             0.025          0.030              0.051           0.056
+    150   +0.5/+0.7             0.100            30        15       0.049             0.026          0.028              0.051           0.051
+    150   +0.5/+0.7             0.100            30        20       0.051             0.031          0.027              0.059           0.050
+    150   +0.5/+0.7             0.150            20        10       0.370             0.124          0.335              0.162           0.458
+    150   +0.5/+0.7             0.150            20        15       0.447             0.148          0.419              0.181           0.542
+    150   +0.5/+0.7             0.150            20        20       0.508             0.176          0.480              0.206           0.595
+    150   +0.5/+0.7             0.150            30        10       0.403             0.130          0.374              0.171           0.495
+    150   +0.5/+0.7             0.150            30        15       0.518             0.174          0.491              0.210           0.605
+    150   +0.5/+0.7             0.150            30        20       0.595             0.202          0.570              0.232           0.684
+    150   +0.5/+0.7             0.200            20        10       0.778             0.283          0.765              0.303           0.854
+    150   +0.5/+0.7             0.200            20        15       0.865             0.369          0.855              0.384           0.916
+    150   +0.5/+0.7             0.200            20        20       0.909             0.412          0.903              0.421           0.948
+    150   +0.5/+0.7             0.200            30        10       0.829             0.324          0.819              0.342           0.890
+    150   +0.5/+0.7             0.200            30        15       0.915             0.401          0.910              0.408           0.950
+    150   +0.5/+0.7             0.200            30        20       0.953             0.461          0.951              0.466           0.974
+    150        none             0.100            20        10       0.039             0.020          0.024              0.041           0.047
+    150        none             0.100            20        15       0.043             0.023          0.023              0.047           0.048
+    150        none             0.100            20        20       0.045             0.026          0.024              0.046           0.046
+    150        none             0.100            30        10       0.040             0.020          0.024              0.043           0.046
+    150        none             0.100            30        15       0.045             0.023          0.025              0.043           0.048
+    150        none             0.100            30        20       0.043             0.022          0.025              0.046           0.049
+    150        none             0.150            20        10       0.350             0.122          0.318              0.163           0.437
+    150        none             0.150            20        15       0.454             0.160          0.424              0.196           0.544
+    150        none             0.150            20        20       0.505             0.176          0.476              0.208           0.595
+    150        none             0.150            30        10       0.385             0.127          0.356              0.172           0.484
+    150        none             0.150            30        15       0.506             0.178          0.479              0.214           0.598
+    150        none             0.150            30        20       0.593             0.204          0.566              0.233           0.681
+    150        none             0.200            20        10       0.755             0.284          0.741              0.306           0.833
+    150        none             0.200            20        15       0.850             0.344          0.841              0.357           0.903
+    150        none             0.200            20        20       0.904             0.390          0.896              0.397           0.938
+    150        none             0.200            30        10       0.807             0.318          0.793              0.337           0.877
+    150        none             0.200            30        15       0.913             0.393          0.909              0.400           0.953
+    150        none             0.200            30        20       0.949             0.454          0.945              0.459           0.971
+    180 +0.25/+0.35             0.100            20        10       0.040             0.022          0.020              0.047           0.041
+    180 +0.25/+0.35             0.100            20        15       0.048             0.028          0.026              0.054           0.046
+    180 +0.25/+0.35             0.100            20        20       0.045             0.026          0.025              0.047           0.050
+    180 +0.25/+0.35             0.100            30        10       0.039             0.022          0.021              0.047           0.040
+    180 +0.25/+0.35             0.100            30        15       0.050             0.030          0.026              0.056           0.045
+    180 +0.25/+0.35             0.100            30        20       0.045             0.028          0.023              0.049           0.042
+    180 +0.25/+0.35             0.150            20        10       0.361             0.108          0.335              0.143           0.460
+    180 +0.25/+0.35             0.150            20        15       0.462             0.138          0.438              0.170           0.562
+    180 +0.25/+0.35             0.150            20        20       0.521             0.168          0.495              0.197           0.614
+    180 +0.25/+0.35             0.150            30        10       0.415             0.128          0.384              0.165           0.507
+    180 +0.25/+0.35             0.150            30        15       0.523             0.163          0.499              0.194           0.619
+    180 +0.25/+0.35             0.150            30        20       0.603             0.182          0.583              0.209           0.694
+    180 +0.25/+0.35             0.200            20        10       0.767             0.271          0.756              0.291           0.847
+    180 +0.25/+0.35             0.200            20        15       0.862             0.343          0.854              0.355           0.918
+    180 +0.25/+0.35             0.200            20        20       0.917             0.395          0.912              0.401           0.954
+    180 +0.25/+0.35             0.200            30        10       0.823             0.306          0.813              0.323           0.894
+    180 +0.25/+0.35             0.200            30        15       0.923             0.393          0.918              0.400           0.957
+    180 +0.25/+0.35             0.200            30        20       0.955             0.454          0.953              0.459           0.975
+    180   +0.5/+0.7             0.100            20        10       0.040             0.020          0.025              0.042           0.049
+    180   +0.5/+0.7             0.100            20        15       0.042             0.023          0.024              0.045           0.047
+    180   +0.5/+0.7             0.100            20        20       0.041             0.022          0.023              0.041           0.045
+    180   +0.5/+0.7             0.100            30        10       0.040             0.020          0.025              0.043           0.049
+    180   +0.5/+0.7             0.100            30        15       0.048             0.025          0.026              0.047           0.049
+    180   +0.5/+0.7             0.100            30        20       0.043             0.024          0.024              0.047           0.051
+    180   +0.5/+0.7             0.150            20        10       0.384             0.119          0.358              0.157           0.484
+    180   +0.5/+0.7             0.150            20        15       0.492             0.161          0.466              0.188           0.587
+    180   +0.5/+0.7             0.150            20        20       0.536             0.167          0.512              0.195           0.630
+    180   +0.5/+0.7             0.150            30        10       0.436             0.137          0.412              0.177           0.537
+    180   +0.5/+0.7             0.150            30        15       0.541             0.170          0.516              0.201           0.638
+    180   +0.5/+0.7             0.150            30        20       0.619             0.197          0.600              0.223           0.716
+    180   +0.5/+0.7             0.200            20        10       0.767             0.269          0.754              0.287           0.845
+    180   +0.5/+0.7             0.200            20        15       0.866             0.340          0.859              0.350           0.919
+    180   +0.5/+0.7             0.200            20        20       0.915             0.374          0.911              0.382           0.952
+    180   +0.5/+0.7             0.200            30        10       0.815             0.292          0.806              0.311           0.885
+    180   +0.5/+0.7             0.200            30        15       0.922             0.382          0.916              0.389           0.956
+    180   +0.5/+0.7             0.200            30        20       0.956             0.428          0.954              0.432           0.977
+    180        none             0.100            20        10       0.043             0.021          0.027              0.042           0.051
+    180        none             0.100            20        15       0.040             0.020          0.025              0.038           0.048
+    180        none             0.100            20        20       0.040             0.020          0.025              0.036           0.047
+    180        none             0.100            30        10       0.040             0.018          0.026              0.043           0.052
+    180        none             0.100            30        15       0.042             0.021          0.024              0.046           0.052
+    180        none             0.100            30        20       0.045             0.024          0.026              0.044           0.049
+    180        none             0.150            20        10       0.370             0.103          0.348              0.133           0.470
+    180        none             0.150            20        15       0.457             0.122          0.436              0.150           0.561
+    180        none             0.150            20        20       0.525             0.146          0.504              0.173           0.625
+    180        none             0.150            30        10       0.402             0.114          0.381              0.148           0.508
+    180        none             0.150            30        15       0.524             0.145          0.508              0.172           0.632
+    180        none             0.150            30        20       0.602             0.175          0.586              0.199           0.700
+    180        none             0.200            20        10       0.767             0.263          0.755              0.283           0.847
+    180        none             0.200            20        15       0.862             0.329          0.856              0.339           0.919
+    180        none             0.200            20        20       0.905             0.369          0.900              0.375           0.945
+    180        none             0.200            30        10       0.830             0.301          0.821              0.318           0.896
+    180        none             0.200            30        15       0.920             0.373          0.916              0.381           0.957
+    180        none             0.200            30        20       0.957             0.425          0.954              0.430           0.978
+
+6. POOL MEANS PER GROUP (lapse, catch failures of 10, share of responses under 300 ms,
+   exclusions, mean ordinary-block weights: the comparison group's shrink with its lapses)
+------------------------------------------------------------------------------
+   size                                                                     scenario      group  lapse_mean  catch_mean  fast_share  excluded_share  mean_weight_sat  mean_weight_con
+    150                                                                    no effect     report       0.097       0.617       0.043           0.048            0.000           -0.002
+    150                                                                    no effect comparison       0.097       0.620       0.043           0.049            0.000           -0.001
+    150                                                                     planning     report       0.097       0.624       0.043           0.051            0.000            0.000
+    150                                                                     planning comparison       0.097       0.620       0.043           0.049            0.000           -0.001
+    150                                     no effect, both groups share +0.25/+0.35     report       0.097       0.618       0.043           0.048            0.223            0.312
+    150                                     no effect, both groups share +0.25/+0.35 comparison       0.097       0.623       0.043           0.048            0.223            0.313
+    150                                       no effect, both groups share +0.5/+0.7     report       0.097       0.624       0.043           0.048            0.441            0.615
+    150                                       no effect, both groups share +0.5/+0.7 comparison       0.097       0.620       0.043           0.049            0.440            0.615
+    150                                no effect, lapse report 0.1 / comparison 0.15     report       0.097       0.620       0.043           0.047            0.000            0.000
+    150                                no effect, lapse report 0.1 / comparison 0.15 comparison       0.140       0.817       0.060           0.120           -0.000           -0.000
+    150                                 no effect, lapse report 0.1 / comparison 0.2     report       0.097       0.620       0.043           0.049           -0.001            0.002
+    150                                 no effect, lapse report 0.1 / comparison 0.2 comparison       0.178       0.959       0.075           0.205            0.002            0.002
+    150                                 planning, lapse report 0.1 / comparison 0.15     report       0.097       0.617       0.043           0.050            0.001            0.001
+    150                                 planning, lapse report 0.1 / comparison 0.15 comparison       0.140       0.817       0.060           0.120           -0.000           -0.000
+    150                                  planning, lapse report 0.1 / comparison 0.2     report       0.097       0.615       0.043           0.047            0.000            0.001
+    150                                  planning, lapse report 0.1 / comparison 0.2 comparison       0.178       0.959       0.075           0.205            0.002            0.002
+    150 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.626       0.043           0.047            0.226            0.311
+    150 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.819       0.060           0.115            0.212            0.294
+    150  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.621       0.043           0.048            0.223            0.313
+    150  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.204            0.202            0.281
+    150   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.624       0.043           0.049            0.439            0.614
+    150   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.816       0.060           0.119            0.416            0.581
+    150    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.621       0.043           0.048            0.440            0.614
+    150    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.176       0.963       0.075           0.204            0.396            0.550
+    150   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1     report       0.097       0.626       0.043           0.048            0.223            0.311
+    150   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1 comparison       0.097       0.623       0.043           0.048            0.223            0.313
+    150  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.621       0.043           0.048            0.223            0.310
+    150  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.819       0.060           0.115            0.212            0.294
+    150   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.620       0.043           0.048            0.223            0.313
+    150   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.204            0.202            0.281
+    150     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1     report       0.097       0.616       0.043           0.049            0.442            0.617
+    150     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1 comparison       0.097       0.620       0.043           0.049            0.440            0.615
+    150    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.615       0.043           0.050            0.441            0.616
+    150    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.816       0.060           0.119            0.416            0.581
+    150     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.620       0.043           0.047            0.439            0.614
+    150     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.176       0.963       0.075           0.204            0.396            0.550
+    180                                                                    no effect     report       0.097       0.612       0.043           0.047            0.001           -0.001
+    180                                                                    no effect comparison       0.097       0.621       0.043           0.048           -0.001           -0.000
+    180                                                                     planning     report       0.097       0.624       0.043           0.049            0.001            0.001
+    180                                                                     planning comparison       0.097       0.621       0.043           0.048           -0.001           -0.000
+    180                                     no effect, both groups share +0.25/+0.35     report       0.097       0.621       0.043           0.048            0.224            0.312
+    180                                     no effect, both groups share +0.25/+0.35 comparison       0.097       0.620       0.043           0.049            0.224            0.315
+    180                                       no effect, both groups share +0.5/+0.7     report       0.097       0.622       0.043           0.050            0.441            0.615
+    180                                       no effect, both groups share +0.5/+0.7 comparison       0.097       0.623       0.043           0.048            0.442            0.616
+    180                                no effect, lapse report 0.1 / comparison 0.15     report       0.097       0.625       0.043           0.048           -0.002           -0.001
+    180                                no effect, lapse report 0.1 / comparison 0.15 comparison       0.140       0.814       0.060           0.117            0.001            0.000
+    180                                 no effect, lapse report 0.1 / comparison 0.2     report       0.097       0.620       0.043           0.048            0.000           -0.001
+    180                                 no effect, lapse report 0.1 / comparison 0.2 comparison       0.177       0.965       0.075           0.206           -0.001           -0.002
+    180                                 planning, lapse report 0.1 / comparison 0.15     report       0.097       0.622       0.043           0.047            0.000           -0.000
+    180                                 planning, lapse report 0.1 / comparison 0.15 comparison       0.140       0.814       0.060           0.117            0.001            0.000
+    180                                  planning, lapse report 0.1 / comparison 0.2     report       0.097       0.630       0.043           0.047           -0.000           -0.001
+    180                                  planning, lapse report 0.1 / comparison 0.2 comparison       0.177       0.965       0.075           0.206           -0.001           -0.002
+    180 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.619       0.043           0.050            0.223            0.314
+    180 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.816       0.060           0.120            0.211            0.296
+    180  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.628       0.043           0.048            0.223            0.312
+    180  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.957       0.075           0.205            0.203            0.283
+    180   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.618       0.043           0.049            0.441            0.616
+    180   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.818       0.060           0.118            0.416            0.582
+    180    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.623       0.043           0.048            0.442            0.616
+    180    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.205            0.397            0.552
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1     report       0.097       0.620       0.043           0.048            0.224            0.312
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1 comparison       0.097       0.620       0.043           0.049            0.224            0.315
+    180  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.621       0.043           0.049            0.224            0.311
+    180  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.816       0.060           0.120            0.211            0.296
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.621       0.043           0.048            0.224            0.312
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.957       0.075           0.205            0.203            0.283
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1     report       0.097       0.626       0.043           0.048            0.442            0.617
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1 comparison       0.097       0.623       0.043           0.048            0.442            0.616
+    180    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.625       0.043           0.047            0.442            0.616
+    180    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.818       0.060           0.118            0.416            0.582
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.627       0.043           0.047            0.442            0.615
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.205            0.397            0.552
+
+7. FILES
+------------------------------------------------------------------------------
+  c1_attention_shared.csv
+  c1_attention_shared.png
+  checks.csv
+  report.txt
+  run_meta.json
+  settings.json
+  summary.txt

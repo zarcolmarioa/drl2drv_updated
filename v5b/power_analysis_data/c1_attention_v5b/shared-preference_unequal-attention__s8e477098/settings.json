@@ -1,0 +1,50 @@
+{
+  "PROJECT_ROOT": null,
+  "SCRIPT8": "simulate_c1_v5b.py",
+  "EXPECTED_SHA256": {
+    "simulate_c1_v5b.py": "89f3478a5429d16de8e2dc833be458125fafd8961e6b2fd9ad375ef5e42af042"
+  },
+  "C1_RUN_DIR": "data/power_v5b/c1_v5b/sizes150-180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sed9376ba",
+  "OUTPUT_ROOT": "data/power_v5b/c1_attention_v5b",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "N_WORKERS": null,
+  "CHECK_ONE_WORKER": true,
+  "SHARED": [
+    [
+      0.25,
+      0.35
+    ],
+    [
+      0.5,
+      0.7
+    ]
+  ],
+  "LAPSE_REPORT": 0.1,
+  "LAPSE_COMPARISON": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "EFFECTS_RUN": [
+    "no effect",
+    "planning"
+  ],
+  "CONTEXT_ROWS": [
+    "no effect",
+    "planning",
+    "no effect, both groups share +0.25/+0.35",
+    "no effect, both groups share +0.5/+0.7",
+    "no effect, lapse report 0.1 / comparison 0.15",
+    "no effect, lapse report 0.1 / comparison 0.2",
+    "planning, lapse report 0.1 / comparison 0.15",
+    "planning, lapse report 0.1 / comparison 0.2"
+  ],
+  "CATCH_ONLY_ALPHA": 0.05,
+  "TABLE_REPORT_N": [
+    10,
+    15,
+    20
+  ],
+  "RATE_TOL": 0.0
+}
