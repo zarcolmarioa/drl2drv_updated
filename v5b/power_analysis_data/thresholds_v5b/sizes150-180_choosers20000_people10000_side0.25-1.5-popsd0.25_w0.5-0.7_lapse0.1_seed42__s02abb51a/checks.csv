@@ -1,0 +1,96 @@
+section,check,status,detail
+package 150,every non-image file matches checksums.sha256,PASS,54 of 54 match
+package 150,every image present matches checksums.sha256 (images are not needed here),PASS,"564 of 564 images present, 0 differ"
+package 150,FROZEN.json records the hash of this checksums.sha256,PASS,package v5b_150
+package 150,every file read here is listed in checksums.sha256,PASS,10 files
+package 150,design.json is for this block size,PASS,"block_size 150, analysed 150"
+package 150,the predictors' definition is the expected one,PASS,"pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice"
+lists 150,"A_o1: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'sat_only': 45, 'fog_only': 45, 'together': 30, 'conflict': 30}"
+lists 150,"A_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 150,"A_o2: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'fog_only': 45, 'sat_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"A_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 150,"A_o3: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'fog_only': 45, 'sat_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"A_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 150,"A_o4: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'fog_only': 45, 'sat_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"A_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 150,set A: the 4 orders hold the same items with identical predictors and sides,PASS,"150 items, 47 scenes"
+lists 150,"set A: the analysed rows equal items.csv's (item_id, predictors, sides)",PASS,150 items in items.csv
+lists 150,"B_o1: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'sat_only': 45, 'fog_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"B_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 6.7e-16
+lists 150,"B_o2: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'sat_only': 45, 'fog_only': 45, 'together': 30, 'conflict': 30}"
+lists 150,"B_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 6.7e-16
+lists 150,"B_o3: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'sat_only': 45, 'fog_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"B_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 6.7e-16
+lists 150,"B_o4: 167 rows, analysed counts by type equal design.json",PASS,"150 analysed {'sat_only': 45, 'fog_only': 45, 'conflict': 30, 'together': 30}"
+lists 150,"B_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 6.7e-16
+lists 150,set B: the 4 orders hold the same items with identical predictors and sides,PASS,"150 items, 47 scenes"
+lists 150,"set B: the analysed rows equal items.csv's (item_id, predictors, sides)",PASS,150 items in items.csv
+package 180,every non-image file matches checksums.sha256,PASS,54 of 54 match
+package 180,every image present matches checksums.sha256 (images are not needed here),PASS,"656 of 656 images present, 0 differ"
+package 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5b_180
+package 180,every file read here is listed in checksums.sha256,PASS,10 files
+package 180,design.json is for this block size,PASS,"block_size 180, analysed 180"
+package 180,the predictors' definition is the expected one,PASS,"pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice"
+lists 180,"A_o1: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'conflict': 36, 'together': 36}"
+lists 180,"A_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o2: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"A_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o3: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'conflict': 36, 'together': 36}"
+lists 180,"A_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o4: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"A_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,set A: the 4 orders hold the same items with identical predictors and sides,PASS,"180 items, 47 scenes"
+lists 180,"set A: the analysed rows equal items.csv's (item_id, predictors, sides)",PASS,180 items in items.csv
+lists 180,"B_o1: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'conflict': 36, 'together': 36}"
+lists 180,"B_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"B_o2: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"B_o3: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"B_o4: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,set B: the 4 orders hold the same items with identical predictors and sides,PASS,"180 items, 47 scenes"
+lists 180,"set B: the analysed rows equal items.csv's (item_id, predictors, sides)",PASS,180 items in items.csv
+inputs,the packages record the same imported scripts (scripts_sha256),PASS,"simulate_power_v4_n10_20.py 852f3b33eb34..., analyse_pair_capacity_v5b.py f7ab2c91e5a0..."
+inputs,simulate_power_v4_n10_20.py exists,PASS,simulate_power_v4_n10_20.py
+inputs,simulate_power_v4_n10_20.py is the version that built the frozen packages (SHA-256 in their FROZEN.json),PASS,"on disk 852f3b33eb349153..., recorded 852f3b33eb349153..."
+inputs,analyse_pair_capacity_v5b.py exists,PASS,analyse_pair_capacity_v5b.py
+inputs,analyse_pair_capacity_v5b.py is the version that built the frozen packages (SHA-256 in their FROZEN.json),PASS,"on disk f7ab2c91e5a0be23..., recorded f7ab2c91e5a0be23..."
+estimator,fit_firth_batch_k with two predictors equals v4's fit_firth_batch,PASS,max |difference| 4.4e-16 over 200 people
+estimator,fit_firth_batch_k with three predictors (side model) equals v4's single-person fit_firth,PASS,max |difference| 1.5e-12 over 60 people
+estimator,respond() with no side bias equals v4's simulate_lapsing on the same random numbers,PASS,"50 people, identical responses"
+workers,"one worker gives the same result as 31 (task 150 trials, set A)",PASS,"thresholds, order checks, side sweep and checks identical"
+thresholds 150,"set A: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 0.0e+00
+thresholds 150,set A: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 150,set A: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0051, largest |z| 1.09 (SE of a difference 0.0043-0.0060)"
+thresholds 150,set A: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 150,"set B: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 5.6e-17
+thresholds 150,set B: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 150,set B: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0060, largest |z| 1.21 (SE of a difference 0.0041-0.0050)"
+thresholds 150,set B: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 150,two-weight model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 0.4%
+thresholds 150,side model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 0.9%
+order 150,two-weight model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 2.8e-16 over 20,000 people x 8 lists"
+order 150,side model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 4.4e-16 over 20,000 people x 8 lists"
+order 150,independent random choosers on each order give thresholds within 4 SE of the registered ones,PASS,"max |difference| 0.0079, largest |z| 1.57"
+side sweep 150,every fit converged,PASS,largest unconverged share 0.00000
+side sweep 150,the side model's side estimate rises with the simulated side bias and is near 0 without one (estimator check; never a result),PASS,mean side estimate -1.26 at -1.5 to +1.26 at +1.5
+side sweep 150,"without side bias, random choosers fall beyond each threshold 2.5% of the time (within 3 SE + threshold error)",PASS,largest |rate - 0.025| 0.0048 (SE 0.0016)
+thresholds 180,"set A: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 5.6e-17
+thresholds 180,set A: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 180,set A: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0037, largest |z| 0.73 (SE of a difference 0.0037-0.0050)"
+thresholds 180,set A: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 180,"set B: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 1.1e-16
+thresholds 180,set B: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 180,set B: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0105, largest |z| 2.55 (SE of a difference 0.0041-0.0046)"
+thresholds 180,set B: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 180,two-weight model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 0.9%
+thresholds 180,side model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 0.9%
+order 180,two-weight model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 2.8e-16 over 20,000 people x 8 lists"
+order 180,side model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 4.4e-16 over 20,000 people x 8 lists"
+order 180,independent random choosers on each order give thresholds within 4 SE of the registered ones,PASS,"max |difference| 0.0116, largest |z| 2.40"
+side sweep 180,every fit converged,PASS,largest unconverged share 0.00000
+side sweep 180,the side model's side estimate rises with the simulated side bias and is near 0 without one (estimator check; never a result),PASS,mean side estimate -1.26 at -1.5 to +1.26 at +1.5
+side sweep 180,"without side bias, random choosers fall beyond each threshold 2.5% of the time (within 3 SE + threshold error)",PASS,largest |rate - 0.025| 0.0042 (SE 0.0016)
+detection curve,at true weight 0 the share beyond each threshold is 0.025 within 3 SE + threshold error,PASS,largest |rate - 0.025| 0.0055 (SE 0.0016)
+detection curve,detection rises with the true weight (within Monte Carlo error),PASS,

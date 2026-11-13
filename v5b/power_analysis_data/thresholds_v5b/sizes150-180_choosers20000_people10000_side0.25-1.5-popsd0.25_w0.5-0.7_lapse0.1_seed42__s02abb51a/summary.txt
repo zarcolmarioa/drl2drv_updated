@@ -1,0 +1,18 @@
+THRESHOLDS AND THE PER-PERSON MODEL (thresholds_v5b.py): IN PLAIN WORDS
+
+* Checks: 95 of 95 pass.
+* The frozen thresholds in design.json were reproduced exactly for 4 of 4 block size x set lists (same rows, same random stream as build_trials_v5b.py).
+* Thresholds (two-weight model; a person counts as using a feature when the weight is above the upper one; 2.5% of random choosers are):
+    150 trials, set A: saturation +0.321/-0.321, contrast +0.352/-0.355
+    150 trials, set B: saturation +0.322/-0.325, contrast +0.351/-0.353
+    180 trials, set A: saturation +0.293/-0.294, contrast +0.318/-0.329
+    180 trials, set B: saturation +0.296/-0.288, contrast +0.319/-0.325
+* Rule (fixed before the run, unchanged from v5): the side model is recommended.
+    (a) side bias 0.5 logit, two-weight model: worst false-detection rate 0.0308 (limit 0.035; 150 A, contrast, right 0.5), worst weight shift 0.0501 (limit 0.05; 150 A, contrast, planning weights, left 0.5) -> holds.
+    (b) the side model's largest detection loss +0.0016 (limit 0.01; 150 A, contrast) -> holds.
+    NOTE: (a) is decided by a margin of 0.0001 (close to the limit).
+    For information, 150 trials alone: worst tail 0.0308, worst shift 0.0501 (150 A, contrast, planning weights, left 0.5) -> the rule would choose the side model.
+    For information, 180 trials alone: worst tail 0.0292, worst shift 0.0398 (180 B, contrast, planning weights, right 0.5) -> the rule would choose the two-weight model.
+* 150 trials, planning weights 0.5/0.7 and lapse 0.1: detected for saturation 74%, contrast 91% of people (mean of the two sets).
+* 180 trials, planning weights 0.5/0.7 and lapse 0.1: detected for saturation 83%, contrast 96% of people (mean of the two sets).
+* Run with 31 worker process(es); the result does not depend on that number (checked by rerunning one task in one process).
