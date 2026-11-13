@@ -1,0 +1,97 @@
+scenario,effect,role,lists,taste_corr,scene_sd_mult,scene_corr,common_scene_sd,side_mean,side_sd,side_corr,dull,typical_share,typical_k,less_edited_share,less_edited_k,fatigue_lapse,fatigue_scale,fatigue_recovery,episode_lapse,differential_bias,episode_strategy,lapse_drift,pair_sd
+no nuisances,no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+taste stability 0.7,no effect,null (rule),v5b,0.7,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"scene dependence (SD x1, stability 0.7)",no effect,null (rule),v5b,1.0,1.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+side bias (SD 0.25),no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.25,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: more typical (a quarter, k 0.5)",no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: less edited (a quarter, k 0.5)",no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.25,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"fatigue (per 100 trials: lapse +0.030, preferences x0.939)",no effect,null (rule),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),no effect,null (rule),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+taste stability 0.5,no effect,null (sensitivity),v5b,0.5,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+taste stability 0.3,no effect,null (sensitivity),v5b,0.3,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+taste stability 0,no effect,null (sensitivity),v5b,0.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+scene dependence SD x0.5,no effect,null (sensitivity),v5b,1.0,0.5,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+scene dependence SD x2,no effect,null (sensitivity),v5b,1.0,2.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"scene dependence, stability 0",no effect,null (sensitivity),v5b,1.0,1.0,0.0,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"scene dependence, stability 1",no effect,null (sensitivity),v5b,1.0,1.0,1.0,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+common scene effect SD 0.1,no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.1,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+side bias SD 0.5,no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.5,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"side bias SD 0.25, mean 0.2",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.2,0.25,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+memory makes it duller +0.5/+0.7,no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.5, 0.7)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: more typical, half (k 0.5)",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.5,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: more typical, a quarter, k 0.25",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.25,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: more typical, a quarter, k 1.0",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,1.0,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: less edited, half (k 0.5)",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.5,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: less edited, a quarter, k 0.25",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.25,0.25,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"strategy: less edited, a quarter, k 1.0",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.25,1.0,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"fatigue doubled (per 100 trials: lapse +0.060, preferences x0.882)",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.06,0.8817209999999999,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"fatigue, 50% recovery at the rest",no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.03,0.939,0.5,0.0,"(0.0, 0.0)",None,0.0,0.0
+lapse rising across the block (+0.10),no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.1,0.0
+pair-specific preferences SD 1.0,no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,1.0
+pair-specific preferences SD 2.0,no effect,null (sensitivity),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,2.0
+all nuisances (high ends),no effect,null (sensitivity),v5b,0.0,2.0,0.0,0.0,0.2,0.5,0.8,"(0.5, 0.7)",0.5,1.0,0.5,1.0,0.06,0.8817209999999999,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), no fatigue",no effect,null (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue doubled",no effect,null (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.06,0.8817209999999999,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue, 50% recovery at the rest",no effect,null (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.5,0.0,"(0.0, 0.0)",None,0.0,0.0
+derealization lapse +0.05,no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.05,"(0.0, 0.0)",None,0.0,0.0
+derealization lapse +0.1,no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.1,"(0.0, 0.0)",None,0.0,0.0
+derealization lapse +0.15,no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.15,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.05, with both strategies (defaults)",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.05,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.1, with both strategies (defaults)",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.1,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.15, with both strategies (defaults)",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.15,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.05, with memory makes it duller",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.05,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.1, with memory makes it duller",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.1,"(0.0, 0.0)",None,0.0,0.0
+"derealization lapse +0.15, with memory makes it duller",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.25, 0.35)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.15,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), derealization lapse +0.1",no effect,threat,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.1,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)",no effect,threat,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.1, 0.14)",None,0.0,0.0
+"derealization lapse +0.05, with pair-specific preferences SD 1.5",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.05,"(0.0, 0.0)",None,0.0,1.5
+"derealization lapse +0.1, with pair-specific preferences SD 1.5",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.1,"(0.0, 0.0)",None,0.0,1.5
+"derealization lapse +0.15, with pair-specific preferences SD 1.5",no effect,threat,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.15,"(0.0, 0.0)",None,0.0,1.5
+"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -0.25, 0.25)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -0.5, 0.5)",0.0,0.0
+"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -1.0, 1.0)",0.0,0.0
+"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -0.25, 0.25)",0.0,0.0
+"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -0.5, 0.5)",0.0,0.0
+"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -1.0, 1.0)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 0.25, -0.25)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 0.5, -0.5)",0.0,0.0
+"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 1.0, -1.0)",0.0,0.0
+"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 0.25, -0.25)",0.0,0.0
+"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 0.5, -0.5)",0.0,0.0
+"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 1.0, -1.0)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -0.25, 0.25)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -0.5, 0.5)",0.0,0.0
+"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', -1.0, 1.0)",0.0,0.0
+"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -0.25, 0.25)",0.0,0.0
+"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -0.5, 0.5)",0.0,0.0
+"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited [v5 lists]",no effect,episode strategy [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', -1.0, 1.0)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 0.25, -0.25)",0.0,0.0
+"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 0.5, -0.5)",0.0,0.0
+"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('corpus', 1.0, -1.0)",0.0,0.0
+"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 0.25, -0.25)",0.0,0.0
+"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 0.5, -0.5)",0.0,0.0
+"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited [v5 lists]",no effect,episode strategy (reverse) [v5 lists],v5,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)","('orig', 1.0, -1.0)",0.0,0.0
+all nuisances (defaults) + pair-specific preferences SD 1.5,no effect,null (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,1.5
+all nuisances (defaults),planning,power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,planning,power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),half shift,power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,half shift,power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),a quarter respond,power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,a quarter respond,power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),"a quarter respond, half shift",power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,"a quarter respond, half shift",power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),all respond,power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,all respond,power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),"all respond, half shift",power,v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+no nuisances,"all respond, half shift",power (no nuisances),v5b,1.0,0.0,0.7,0.0,0.0,0.0,0.8,"(0.0, 0.0)",0.0,0.5,0.0,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),planning (rescaled weights),power (rescaled),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults),half shift (rescaled weights),power (rescaled),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults) + pair-specific preferences SD 1.5,planning,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,1.5
+"all nuisances (defaults), no fatigue",planning,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue doubled",planning,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.06,0.8817209999999999,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue, 50% recovery at the rest",planning,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.5,0.0,"(0.0, 0.0)",None,0.0,0.0
+all nuisances (defaults) + pair-specific preferences SD 1.5,half shift,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.0,0.0,"(0.0, 0.0)",None,0.0,1.5
+"all nuisances (defaults), no fatigue",half shift,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.0,1.0,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue doubled",half shift,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.06,0.8817209999999999,0.0,0.0,"(0.0, 0.0)",None,0.0,0.0
+"all nuisances (defaults), fatigue, 50% recovery at the rest",half shift,power (sensitivity),v5b,0.7,1.0,0.7,0.0,0.0,0.25,0.8,"(0.25, 0.35)",0.25,0.5,0.25,0.5,0.03,0.939,0.5,0.0,"(0.0, 0.0)",None,0.0,0.0

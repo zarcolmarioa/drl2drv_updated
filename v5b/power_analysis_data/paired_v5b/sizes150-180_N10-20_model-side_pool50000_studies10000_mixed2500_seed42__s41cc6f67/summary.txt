@@ -1,0 +1,14 @@
+THE PRIMARY PAIRED TEST (simulate_power_paired_v5b.py): IN PLAIN WORDS
+
+* Checks: 99 of 99 pass.
+* Per-person model: the side model registered from script 6; its thresholds replace the frozen ones (the lists are not re-frozen). They are used only by the secondary sign test.
+* Primary test (v5's amended rule, at most 5 of 108 cells over the limit): t. Cells over the limit: t 3, wilcoxon 0. Under the original rule (no cell): wilcoxon.
+* Power at N = 20, planning, all nuisances at defaults (t test; ASSUMPTIONS): 150 contrast 0.87 (rescaled 0.68); 150 saturation 0.81 (rescaled 0.82); 180 contrast 0.89 (rescaled 0.69); 180 saturation 0.83 (rescaled 0.84).
+* Power at N = 20, half shift, all nuisances at defaults (t test; ASSUMPTIONS): 150 contrast 0.48 (rescaled 0.28); 150 saturation 0.39 (rescaled 0.38); 180 contrast 0.48 (rescaled 0.29); 180 saturation 0.42 (rescaled 0.45).
+* False positives with no effect over the rule rows (t test): mean 0.050, largest 0.061.
+* The two strategies (used alike in both blocks), every strategy row and N: false positives 0.039-0.059 (t test).
+* Episode-dependent strategy (k 0.5; derealization -kN, ordinary +kN) on the v5b lists: largest false-positive rate 0.175 (180 trials, orig, saturation, paired t, N = 20).
+* Episode-dependent strategy (k 0.5; derealization -kN, ordinary +kN) on the v5 lists: largest false-positive rate 1.000 (150 trials, corpus, contrast, paired t, N = 20).
+* Mixed model: VERDICT: the mixed model is NOT worth registering by this criterion.
+* Rescale factors (script 2's rescale_factors on the lists): 150: saturation x0.964, contrast x0.653; 180: saturation x0.963, contrast x0.654.
+* Script 6's rule chose the side model by a margin of 0.0001 (150 A, contrast, planning weights, left 0.5); see script 6's report.

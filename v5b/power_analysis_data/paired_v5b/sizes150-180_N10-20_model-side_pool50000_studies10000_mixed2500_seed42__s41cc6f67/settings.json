@@ -1,0 +1,590 @@
+{
+  "PROJECT_ROOT": null,
+  "PACKAGES": {
+    "150": "data/frozen_trial_lists_v5b/v5b_150",
+    "180": "data/frozen_trial_lists_v5b/v5b_180"
+  },
+  "V5_PACKAGES": {
+    "150": "data/frozen_trial_lists_v5/v5_150",
+    "180": "data/frozen_trial_lists_v5/v5_180"
+  },
+  "STIMULUS_SET_DIR": "data/stimulus_set_v5/7fd72262ba",
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "SETS": [
+    "A",
+    "B"
+  ],
+  "ORDERS": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "GROUP": "participant",
+  "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+  "CAPACITY_SCRIPT": "analyse_pair_capacity_v5b.py",
+  "EXPLORE_SCRIPT": "explore_block_length_v5b.py",
+  "THRESHOLDS_SCRIPT": "thresholds_v5b.py",
+  "EXPECTED_SHA256": {
+    "explore_block_length_v5b.py": "dc38cc67b547eaa39cf0743143838fb0eeee84b4585ee5172613e3996024c526",
+    "thresholds_v5b.py": "07b2423e480df29a36975e9072d2f5e81c9c71b908dfc281119111b30d4c4115"
+  },
+  "THRESHOLDS_RUN_DIR": "data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a",
+  "PERSON_MODEL": "side",
+  "THRESHOLD_SOURCE": {
+    "side": "same choosers as design.json",
+    "two-weight": "design.json (registered)"
+  },
+  "EXPLORE_RESULTS_CSV": "data/block_length_v5b/v5b_sets-v5units-sd060_sizes120-150-180_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__sad6f14a4/paired_power.csv",
+  "EXPLORE_MIX": "balanced_mixed",
+  "EXPLORE_TSET": "v5units",
+  "OUTPUT_ROOT": "data/power_v5b/paired_v5b",
+  "N_WORKERS": null,
+  "CHECK_ONE_WORKER": true,
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "TASTE_SD": [
+    0.143,
+    0.244
+  ],
+  "LAPSE_MEAN": 0.1,
+  "LAPSE_BETWEEN_SD": 0.5,
+  "LAPSE_MAX": 0.9,
+  "CATCH_PER_BLOCK": 5,
+  "CATCH_P_FAIL_PER_LAPSE": 0.75,
+  "CATCH_FAIL_EXCLUDE": 3,
+  "EXCLUSION": true,
+  "EFFECTS": {
+    "no effect": {
+      "share": 0.0,
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "planning": {
+      "share": 0.5,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "half shift": {
+      "share": 0.5,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    },
+    "a quarter respond": {
+      "share": 0.25,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "a quarter respond, half shift": {
+      "share": 0.25,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    },
+    "all respond": {
+      "share": 1.0,
+      "shift": [
+        0.5,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "all respond, half shift": {
+      "share": 1.0,
+      "shift": [
+        0.25,
+        0.35
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.25,
+        0.35
+      ]
+    }
+  },
+  "RESCALE_EFFECTS": [
+    "planning",
+    "half shift"
+  ],
+  "RESCALED_SUFFIX": " (rescaled weights)",
+  "STRATEGY_SHARE": 0.25,
+  "STRATEGY_K": 0.5,
+  "FATIGUE_LAPSE_PER_100": 0.03,
+  "FATIGUE_SCALE_PER_100": 0.939,
+  "FATIGUE_RECOVERY_ROW": 0.5,
+  "NUISANCE_OFF": {
+    "taste_corr": 1.0,
+    "scene_sd_mult": 0.0,
+    "scene_corr": 0.7,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.0,
+    "side_sd": 0.0,
+    "side_corr": 0.8,
+    "dull": [
+      0.0,
+      0.0
+    ],
+    "typical_share": 0.0,
+    "typical_k": 0.5,
+    "less_edited_share": 0.0,
+    "less_edited_k": 0.5,
+    "fatigue_lapse": 0.0,
+    "fatigue_scale": 1.0,
+    "fatigue_recovery": 0.0,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "episode_strategy": null,
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "NUISANCE_DEFAULT": {
+    "taste_corr": 0.7,
+    "scene_sd_mult": 1.0,
+    "scene_corr": 0.7,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.0,
+    "side_sd": 0.25,
+    "side_corr": 0.8,
+    "dull": [
+      0.25,
+      0.35
+    ],
+    "typical_share": 0.25,
+    "typical_k": 0.5,
+    "less_edited_share": 0.25,
+    "less_edited_k": 0.5,
+    "fatigue_lapse": 0.03,
+    "fatigue_scale": 0.939,
+    "fatigue_recovery": 0.0,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "episode_strategy": null,
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "NUISANCE_HIGH": {
+    "taste_corr": 0.0,
+    "scene_sd_mult": 2.0,
+    "scene_corr": 0.0,
+    "common_scene_sd": 0.0,
+    "side_mean": 0.2,
+    "side_sd": 0.5,
+    "side_corr": 0.8,
+    "dull": [
+      0.5,
+      0.7
+    ],
+    "typical_share": 0.5,
+    "typical_k": 1.0,
+    "less_edited_share": 0.5,
+    "less_edited_k": 1.0,
+    "fatigue_lapse": 0.06,
+    "fatigue_scale": 0.8817209999999999,
+    "fatigue_recovery": 0.0,
+    "episode_lapse": 0.0,
+    "differential_bias": [
+      0.0,
+      0.0
+    ],
+    "episode_strategy": null,
+    "lapse_drift": 0.0,
+    "pair_sd": 0.0
+  },
+  "DEFAULT_ROWS": [
+    [
+      "taste stability 0.7",
+      {
+        "taste_corr": 0.7
+      }
+    ],
+    [
+      "scene dependence (SD x1, stability 0.7)",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 0.7
+      }
+    ],
+    [
+      "side bias (SD 0.25)",
+      {
+        "side_sd": 0.25
+      }
+    ],
+    [
+      "memory makes it duller (+0.25/+0.35, everyone)",
+      {
+        "dull": [
+          0.25,
+          0.35
+        ]
+      }
+    ],
+    [
+      "strategy: more typical (a quarter, k 0.5)",
+      {
+        "typical_share": 0.25
+      }
+    ],
+    [
+      "strategy: less edited (a quarter, k 0.5)",
+      {
+        "less_edited_share": 0.25
+      }
+    ],
+    [
+      "fatigue (per 100 trials: lapse +0.030, preferences x0.939)",
+      {
+        "fatigue_lapse": 0.03,
+        "fatigue_scale": 0.939
+      }
+    ]
+  ],
+  "SENSITIVITY_ROWS": [
+    [
+      "taste stability 0.5",
+      {
+        "taste_corr": 0.5
+      }
+    ],
+    [
+      "taste stability 0.3",
+      {
+        "taste_corr": 0.3
+      }
+    ],
+    [
+      "taste stability 0",
+      {
+        "taste_corr": 0.0
+      }
+    ],
+    [
+      "scene dependence SD x0.5",
+      {
+        "scene_sd_mult": 0.5
+      }
+    ],
+    [
+      "scene dependence SD x2",
+      {
+        "scene_sd_mult": 2.0
+      }
+    ],
+    [
+      "scene dependence, stability 0",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 0.0
+      }
+    ],
+    [
+      "scene dependence, stability 1",
+      {
+        "scene_sd_mult": 1.0,
+        "scene_corr": 1.0
+      }
+    ],
+    [
+      "common scene effect SD 0.1",
+      {
+        "common_scene_sd": 0.1
+      }
+    ],
+    [
+      "side bias SD 0.5",
+      {
+        "side_sd": 0.5
+      }
+    ],
+    [
+      "side bias SD 0.25, mean 0.2",
+      {
+        "side_sd": 0.25,
+        "side_mean": 0.2
+      }
+    ],
+    [
+      "memory makes it duller +0.5/+0.7",
+      {
+        "dull": [
+          0.5,
+          0.7
+        ]
+      }
+    ],
+    [
+      "strategy: more typical, half (k 0.5)",
+      {
+        "typical_share": 0.5
+      }
+    ],
+    [
+      "strategy: more typical, a quarter, k 0.25",
+      {
+        "typical_share": 0.25,
+        "typical_k": 0.25
+      }
+    ],
+    [
+      "strategy: more typical, a quarter, k 1.0",
+      {
+        "typical_share": 0.25,
+        "typical_k": 1.0
+      }
+    ],
+    [
+      "strategy: less edited, half (k 0.5)",
+      {
+        "less_edited_share": 0.5
+      }
+    ],
+    [
+      "strategy: less edited, a quarter, k 0.25",
+      {
+        "less_edited_share": 0.25,
+        "less_edited_k": 0.25
+      }
+    ],
+    [
+      "strategy: less edited, a quarter, k 1.0",
+      {
+        "less_edited_share": 0.25,
+        "less_edited_k": 1.0
+      }
+    ],
+    [
+      "fatigue doubled (per 100 trials: lapse +0.060, preferences x0.882)",
+      {
+        "fatigue_lapse": 0.06,
+        "fatigue_scale": 0.8817209999999999
+      }
+    ],
+    [
+      "fatigue, 50% recovery at the rest",
+      {
+        "fatigue_lapse": 0.03,
+        "fatigue_scale": 0.939,
+        "fatigue_recovery": 0.5
+      }
+    ],
+    [
+      "lapse rising across the block (+0.10)",
+      {
+        "lapse_drift": 0.1
+      }
+    ],
+    [
+      "pair-specific preferences SD 1.0",
+      {
+        "pair_sd": 1.0
+      }
+    ],
+    [
+      "pair-specific preferences SD 2.0",
+      {
+        "pair_sd": 2.0
+      }
+    ]
+  ],
+  "FATIGUE_VARIANTS": [
+    [
+      "no fatigue",
+      {
+        "fatigue_lapse": 0.0,
+        "fatigue_scale": 1.0
+      }
+    ],
+    [
+      "fatigue doubled",
+      {
+        "fatigue_lapse": 0.06,
+        "fatigue_scale": 0.8817209999999999
+      }
+    ],
+    [
+      "fatigue, 50% recovery at the rest",
+      {
+        "fatigue_lapse": 0.03,
+        "fatigue_scale": 0.939,
+        "fatigue_recovery": 0.5
+      }
+    ]
+  ],
+  "EPISODE_LAPSES": [
+    0.05,
+    0.1,
+    0.15
+  ],
+  "THREAT_INTERACTION_LAPSE": 0.1,
+  "DIFFERENTIAL_BIAS": [
+    0.1,
+    0.14
+  ],
+  "EPISODE_STRATEGY_K": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "EPISODE_STRATEGY_DEFS": [
+    "corpus",
+    "orig"
+  ],
+  "PAIR_SD_FOR_ROWS": 1.5,
+  "N_GRID": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "TABLE_N": [
+    10,
+    15,
+    20
+  ],
+  "POOL_PEOPLE": 50000,
+  "N_STUDIES": 10000,
+  "N_BATCHES": 20,
+  "TESTS": [
+    "t",
+    "wilcoxon"
+  ],
+  "ALPHA": 0.05,
+  "RULE_N": [
+    10,
+    15,
+    20
+  ],
+  "RULE_SE_MULT": 2.0,
+  "RULE_AMENDED": true,
+  "RULE_CHANCE_QUANTILE": 0.95,
+  "RULE_TIE": 0.02,
+  "RULE_PREFER": "wilcoxon",
+  "SANITY_SCENARIOS": [
+    "no effect",
+    "planning",
+    "half shift"
+  ],
+  "SANITY_N": [
+    10,
+    15,
+    20
+  ],
+  "SANITY_MAX_Z": 3.5,
+  "SANITY_SHARE_BEYOND": 0.1,
+  "SANITY_RANGE_SE": 3.0,
+  "REPLICATE_EFFECTS": [
+    "no effect",
+    "planning",
+    "half shift"
+  ],
+  "N_TOL": 1e-05,
+  "LEAK_TOL": 2e-06,
+  "FATIGUE_TOL": 1e-09,
+  "RUN_MIXED_MODEL": true,
+  "MIXED_STUDIES": 2500,
+  "MIXED_N": [
+    10,
+    15,
+    20
+  ],
+  "MIXED_CELLS": [
+    [
+      "no effect",
+      "no nuisances"
+    ],
+    [
+      "no effect",
+      "all nuisances (defaults)"
+    ],
+    [
+      "planning",
+      "all nuisances (defaults)"
+    ],
+    [
+      "half shift",
+      "all nuisances (defaults)"
+    ]
+  ],
+  "MIXED_MAX_ITER": 300,
+  "MIXED_TOL": 1e-05,
+  "MIXED_CHUNK": 250,
+  "MIXED_GAIN": 0.05,
+  "MIXED_GAIN_N": 15,
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "paired_v5b"
+}
