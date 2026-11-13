@@ -1,0 +1,43 @@
+{
+  "PROJECT_ROOT": null,
+  "PAIRED_SCRIPT": "simulate_power_paired_v5b.py",
+  "THRESHOLDS_SCRIPT": "thresholds_v5b.py",
+  "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+  "CAPACITY_SCRIPT": "analyse_pair_capacity_v5b.py",
+  "EXPLORE_SCRIPT": "explore_block_length_v5b.py",
+  "EXPECTED_SHA256": {
+    "simulate_power_paired_v5b.py": "21ebba17c7fd7dc8c216fd4f72321755ef6b5a31ef39abeecc526f75ec17ad0d",
+    "thresholds_v5b.py": "07b2423e480df29a36975e9072d2f5e81c9c71b908dfc281119111b30d4c4115"
+  },
+  "PAIRED_RUN_DIR": "data/power_v5b/paired_v5b/sizes150-180_N10-20_model-side_pool50000_studies10000_mixed2500_seed42__s41cc6f67",
+  "OUTPUT_ROOT": "data/power_v5b/adjusted_model_v5b",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "N_WORKERS": null,
+  "CHECK_ONE_WORKER": true,
+  "RULE_ROLE": "null (rule)",
+  "POWER_ROLES": [
+    "power",
+    "power (rescaled)"
+  ],
+  "POWER_EFFECTS": [
+    "planning",
+    "half shift"
+  ],
+  "EPISODE_ROLES": [
+    "episode strategy",
+    "episode strategy (reverse)"
+  ],
+  "TABLE_N": [
+    10,
+    15,
+    20
+  ],
+  "RULE_SE_MULT": 2.0,
+  "REFIT_CHECK_PEOPLE": 2000,
+  "REFIT_TOL": 1e-09,
+  "RATE_TOL": 1e-12,
+  "THRESHOLD_TOL": 1e-12,
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "adjusted_model_v5b"
+}

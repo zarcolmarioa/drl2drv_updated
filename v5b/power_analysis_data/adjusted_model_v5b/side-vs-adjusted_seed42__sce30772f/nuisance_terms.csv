@@ -1,0 +1,101 @@
+size,scenario,effect,role,block,mean_N_corpus_term,mean_N_orig_term,unconverged
+150,no nuisances,no effect,null (rule),D,-0.00249545800206252,0.00419011412807873,0.0
+150,no nuisances,no effect,null (rule),O,-0.00042068214581532273,-0.0008017443613920842,0.0
+150,taste stability 0.7,no effect,null (rule),D,0.00024042334268148104,0.001644341218926598,0.0
+150,taste stability 0.7,no effect,null (rule),O,0.00048699600331109544,-7.696911886426967e-05,0.0
+150,"scene dependence (SD x1, stability 0.7)",no effect,null (rule),D,-0.00040289117966419574,-0.0007276148342041172,0.0
+150,"scene dependence (SD x1, stability 0.7)",no effect,null (rule),O,-0.00021063970035459397,0.00034775785786594514,0.0
+150,side bias (SD 0.25),no effect,null (rule),D,0.002042239629930294,-0.0025017638006468363,0.0
+150,side bias (SD 0.25),no effect,null (rule),O,-0.0012794732256546986,0.0008933178180925318,0.0
+150,"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),D,0.001832959666091249,-0.0023791598018084183,0.0
+150,"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),O,0.0022268066085755277,-0.0023741594584317034,0.0
+150,"strategy: more typical (a quarter, k 0.5)",no effect,null (rule),D,0.10932907128248556,0.004682135982700768,0.0
+150,"strategy: more typical (a quarter, k 0.5)",no effect,null (rule),O,0.1141840313691478,-0.00047191035145368503,0.0
+150,"strategy: less edited (a quarter, k 0.5)",no effect,null (rule),D,-0.0006572342434541477,0.11034733723276556,0.0
+150,"strategy: less edited (a quarter, k 0.5)",no effect,null (rule),O,-0.0035860900479255434,0.11277430915253389,0.0
+150,"fatigue (per 100 trials: lapse +0.030, preferences x0.939)",no effect,null (rule),D,0.0016459554183940624,-0.0006922594771312678,0.0
+150,"fatigue (per 100 trials: lapse +0.030, preferences x0.939)",no effect,null (rule),O,-0.001433742080154006,0.0017873229944327614,0.0
+150,all nuisances (defaults),no effect,null (rule),D,0.0975862734525133,0.1061195289074838,0.0
+150,all nuisances (defaults),no effect,null (rule),O,0.09897996532147625,0.10294398611713237,0.0
+150,"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.2204462737546609,-0.006062008733428122,0.0
+150,"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.2223769694204186,0.003254767466710571,0.0
+150,"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.4496780895362674,0.0005156590729019849,0.0
+150,"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.4480367538987554,0.0009011685830802036,0.0
+150,"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.8919891683351217,-0.0011827527202927601,0.0
+150,"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.8886709724798175,0.0020097641403288378,0.0
+150,"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,-0.001165726001794364,-0.22443470285806963,0.0
+150,"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,0.0007855274340908492,0.22561629270875924,0.0
+150,"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,-0.0004663460329462689,-0.4502995489665552,0.0
+150,"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,0.0011540451333423502,0.4478760313915229,0.0
+150,"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,0.00222107170675903,-0.8937976365259981,0.0
+150,"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,-0.001669435506438857,0.8948607384830192,0.0
+150,"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.22497295883879634,0.0021258130654731367,0.0
+150,"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.22347780531055994,-0.003168923261453017,0.0
+150,"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.44968081328029286,-0.0036209004174558375,0.0
+150,"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.45041813079081633,0.0015679815376140023,0.0
+150,"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.8908403439528045,-0.0048460624497239455,0.0
+150,"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.890079103911914,-0.0015208723757027445,0.0
+150,"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,-0.004891143111795411,0.2300694073577692,0.0
+150,"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,0.0008688609088794675,-0.22975339484111704,0.0
+150,"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,0.00014546599936976238,0.4482556292455671,0.0
+150,"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,-0.0017063442004094525,-0.44737395094859694,0.0
+150,"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,-0.0029967665418211688,0.8978170868269327,0.0
+150,"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,0.0010204231799263027,-0.8946979400500041,0.0
+150,all nuisances (defaults),planning,power,D,0.09736365104531762,0.10305820610028898,0.0
+150,all nuisances (defaults),planning,power,O,0.09862061246145601,0.10399649744080001,0.0
+150,all nuisances (defaults),half shift,power,D,0.0996913870272927,0.09841392439229052,0.0
+150,all nuisances (defaults),half shift,power,O,0.09757682518344793,0.1016813739533376,0.0
+150,all nuisances (defaults),planning (rescaled weights),power (rescaled),D,0.0967941321943533,0.10405176117040979,0.0
+150,all nuisances (defaults),planning (rescaled weights),power (rescaled),O,0.09863028158347695,0.10475931861384469,0.0
+150,all nuisances (defaults),half shift (rescaled weights),power (rescaled),D,0.09556571532721078,0.10441563929997018,0.0
+150,all nuisances (defaults),half shift (rescaled weights),power (rescaled),O,0.09595804090338253,0.10390538455370416,0.0
+180,no nuisances,no effect,null (rule),D,-9.978112770274883e-05,-0.0010529982430595006,0.0
+180,no nuisances,no effect,null (rule),O,0.0032658779638779756,-0.005939311668000954,0.0
+180,taste stability 0.7,no effect,null (rule),D,0.0019735655919456384,-0.004442537430967506,0.0
+180,taste stability 0.7,no effect,null (rule),O,-0.001085099161790517,0.00021259247509844211,0.0
+180,"scene dependence (SD x1, stability 0.7)",no effect,null (rule),D,-0.0006118127161592144,0.0014328197038910846,0.0
+180,"scene dependence (SD x1, stability 0.7)",no effect,null (rule),O,-0.000524000495833696,-0.001444338216250109,0.0
+180,side bias (SD 0.25),no effect,null (rule),D,0.0015750697598475383,-0.0006846006223379414,0.0
+180,side bias (SD 0.25),no effect,null (rule),O,0.0032519744364749854,-0.0031612922148398096,0.0
+180,"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),D,-0.0009198166205235994,-0.00016078530370219408,0.0
+180,"memory makes it duller (+0.25/+0.35, everyone)",no effect,null (rule),O,0.001403589570336459,-0.0013758326553190445,0.0
+180,"strategy: more typical (a quarter, k 0.5)",no effect,null (rule),D,0.10944037307926062,-0.0011297818737219247,0.0
+180,"strategy: more typical (a quarter, k 0.5)",no effect,null (rule),O,0.11224289274024087,-0.00039440627082438416,0.0
+180,"strategy: less edited (a quarter, k 0.5)",no effect,null (rule),D,-0.0005601172813153691,0.10937558755756646,0.0
+180,"strategy: less edited (a quarter, k 0.5)",no effect,null (rule),O,-0.0004663316112523161,0.1126261840667273,0.0
+180,"fatigue (per 100 trials: lapse +0.030, preferences x0.939)",no effect,null (rule),D,-0.0013098806739790445,0.0003640857989323452,0.0
+180,"fatigue (per 100 trials: lapse +0.030, preferences x0.939)",no effect,null (rule),O,-0.003269494137934636,0.0022965497226245008,0.0
+180,all nuisances (defaults),no effect,null (rule),D,0.1013620661320351,0.10171609538816698,0.0
+180,all nuisances (defaults),no effect,null (rule),O,0.10048065547252809,0.10297985690696466,0.0
+180,"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.22398263857133954,-0.0013961991895425762,0.0
+180,"episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.228478722064496,-0.0005255958754181476,0.0
+180,"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.44909018731497,-0.0012504349970852851,0.0
+180,"episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.44940436515320215,0.00123583994317231,0.0
+180,"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,D,-0.889011909928148,-0.001663156422220096,0.0
+180,"episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical",no effect,episode strategy,O,0.8889174728300044,0.0036482539451252265,0.0
+180,"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,-0.0003574545768579858,-0.22271469149592568,0.0
+180,"episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,-0.0009991217184574896,0.22684045909225367,0.0
+180,"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,-0.0009377475551093161,-0.4478166043208278,0.0
+180,"episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,-0.00013326113458622427,0.450818054878302,0.0
+180,"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,D,0.002241972111447635,-0.8934702333744396,0.0
+180,"episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited",no effect,episode strategy,O,0.00017628024295042905,0.8934817682413752,0.0
+180,"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.22343535372040477,-0.0009236234651398398,0.0
+180,"episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.2233354522130796,-0.00011918150001818744,0.0
+180,"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.44734476268184115,0.0004931050416916295,0.0
+180,"episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.45215591011021133,0.0010779944047478941,0.0
+180,"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),D,0.8870825750831547,0.0026655794518714395,0.0
+180,"episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical",no effect,episode strategy (reverse),O,-0.8918039229150988,-0.0010317322636386622,0.0
+180,"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,0.0005929224417948782,0.22718947655510588,0.0
+180,"episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,0.00043672044155428736,-0.22412216880579539,0.0
+180,"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,0.0014240030025404592,0.4478775669482178,0.0
+180,"episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,0.0013583931103077274,-0.45285610126513537,0.0
+180,"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),D,0.001472852596142759,0.894785497336028,0.0
+180,"episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited",no effect,episode strategy (reverse),O,0.00021966694146351666,-0.8911249497812455,0.0
+180,all nuisances (defaults),planning,power,D,0.09940342413745042,0.10097105900988408,0.0
+180,all nuisances (defaults),planning,power,O,0.09783087003930328,0.10497397972101022,0.0
+180,all nuisances (defaults),half shift,power,D,0.09698938415497538,0.10392602861703915,0.0
+180,all nuisances (defaults),half shift,power,O,0.09741763620399076,0.10176939186100731,0.0
+180,all nuisances (defaults),planning (rescaled weights),power (rescaled),D,0.09595646828751966,0.10541735320690851,0.0
+180,all nuisances (defaults),planning (rescaled weights),power (rescaled),O,0.0979600930480731,0.10635504656278562,0.0
+180,all nuisances (defaults),half shift (rescaled weights),power (rescaled),D,0.09792064790778807,0.10565464627303545,0.0
+180,all nuisances (defaults),half shift (rescaled weights),power (rescaled),O,0.10034340315375846,0.10521565880422853,0.0

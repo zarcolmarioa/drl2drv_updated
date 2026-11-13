@@ -1,0 +1,14 @@
+THE STRATEGY-ADJUSTED PER-PERSON MODEL (strategy_adjusted_model_v5b.py): IN PLAIN WORDS
+
+* Checks: 67 of 67 pass.
+* The adjusted model is the side model plus two nuisance terms per block (N_corpus, N_orig). Their estimates are never results. Nothing here decides the registered model.
+* Part 1: largest detection loss of the adjusted model against the side model at the planning weights: +0.0162 (150 A, saturation); script 6's rule (b) allowed 0.01.
+* Part 2, rule rows with no effect (adjusted model, paired t): mean 0.0499, largest 0.0598, 0 of 108 cells over 0.05 + 2 SE.
+* Part 2, rule rows with no effect (side model, paired t): mean 0.0500, largest 0.0615, 3 of 108 cells over 0.05 + 2 SE.
+* Part 2, power at N = 20, planning, fixed weights (side -> adjusted): 150 contrast 0.87 -> 0.86; 150 saturation 0.81 -> 0.80; 180 contrast 0.89 -> 0.88; 180 saturation 0.83 -> 0.83.
+* Part 2, power at N = 20, planning, rescaled weights (side -> adjusted): 150 contrast 0.68 -> 0.67; 150 saturation 0.82 -> 0.81; 180 contrast 0.69 -> 0.68; 180 saturation 0.84 -> 0.83.
+* Part 2, power at N = 20, half shift, fixed weights (side -> adjusted): 150 contrast 0.48 -> 0.47; 150 saturation 0.39 -> 0.38; 180 contrast 0.48 -> 0.48; 180 saturation 0.42 -> 0.41.
+* Part 2, power at N = 20, half shift, rescaled weights (side -> adjusted): 150 contrast 0.28 -> 0.27; 150 saturation 0.38 -> 0.38; 180 contrast 0.29 -> 0.28; 180 saturation 0.45 -> 0.44.
+* Part 3, episode-dependent strategy k 0.25 (both definitions and directions, paired t, N = 20): largest false-positive rate, side 0.102, adjusted 0.059.
+* Part 3, episode-dependent strategy k 0.5 (both definitions and directions, paired t, N = 20): largest false-positive rate, side 0.175, adjusted 0.061.
+* Part 3, episode-dependent strategy k 1 (both definitions and directions, paired t, N = 20): largest false-positive rate, side 0.391, adjusted 0.062.
