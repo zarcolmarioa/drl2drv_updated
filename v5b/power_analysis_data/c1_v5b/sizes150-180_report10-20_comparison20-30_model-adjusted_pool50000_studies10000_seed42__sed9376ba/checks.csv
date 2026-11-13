@@ -1,0 +1,76 @@
+section,check,status,detail
+inputs,simulate_power_paired_v5b_adj.py exists,PASS,simulate_power_paired_v5b_adj.py
+inputs,simulate_power_paired_v5b_adj.py is the expected version (SHA-256),PASS,e7c7aa79c033e711...
+inputs,simulate_c1_post_exclusion_v4.py exists,PASS,simulate_c1_post_exclusion_v4.py
+inputs,simulate_c1_post_exclusion_v4.py is the expected version (SHA-256),PASS,4d6c6fcee68d29c6...
+stimulus set,stimulus_manifest.csv and reference_stimulus_path.csv exist,PASS,data/stimulus_set_v5/7fd72262ba
+stimulus set,stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json),PASS,"69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2..."
+stimulus set,"corpus SDs equal the predictors' (39.182, 9.348)",PASS,"median [66.448242, 26.908877], SD [39.181906, 9.348022]"
+stimulus set,one original per scene (47 scenes),PASS,47
+package v5b 150,every non-image file matches checksums.sha256,PASS,54 of 54 match
+package v5b 150,every image present matches checksums.sha256 (images are not needed here),PASS,"564 of 564 present, 0 differ"
+package v5b 150,every file read here is listed in checksums.sha256,PASS,12 files
+package v5b 150,FROZEN.json records the hash of this checksums.sha256,PASS,package v5b_150
+package v5b 150,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"150 analysed, 12 repeats, 5 catch, 167 main trials"
+package v5b 150,"the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)",PASS,max |difference| 6.8e-06
+package v5b 150,N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists),PASS,max |difference| 1.6e-07 (corpus SD)
+package v5b 150,set A: the analysed rows' N equal items.csv's,PASS,150 items
+package v5b 150,set B: the analysed rows' N equal items.csv's,PASS,150 items
+package v5b 150,"the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)",PASS,max |difference| 5.1e-07
+package v5b 150,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+package v5b 180,every non-image file matches checksums.sha256,PASS,54 of 54 match
+package v5b 180,every image present matches checksums.sha256 (images are not needed here),PASS,"656 of 656 present, 0 differ"
+package v5b 180,every file read here is listed in checksums.sha256,PASS,12 files
+package v5b 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5b_180
+package v5b 180,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5b 180,"the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)",PASS,max |difference| 9.1e-06
+package v5b 180,N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists),PASS,max |difference| 1.4e-07 (corpus SD)
+package v5b 180,set A: the analysed rows' N equal items.csv's,PASS,180 items
+package v5b 180,set B: the analysed rows' N equal items.csv's,PASS,180 items
+package v5b 180,"the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)",PASS,max |difference| 5.0e-07
+package v5b 180,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs,simulate_power_v4_n10_20.py exists,PASS,simulate_power_v4_n10_20.py
+inputs,"simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk 852f3b33eb349153..., expected 852f3b33eb349153..."
+inputs,analyse_pair_capacity_v5b.py exists,PASS,analyse_pair_capacity_v5b.py
+inputs,"analyse_pair_capacity_v5b.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk f7ab2c91e5a0be23..., expected f7ab2c91e5a0be23..."
+inputs,explore_block_length_v5b.py exists,PASS,explore_block_length_v5b.py
+inputs,explore_block_length_v5b.py is the expected version (SHA-256),PASS,"on disk dc38cc67b547eaa3..., expected dc38cc67b547eaa3..."
+inputs,thresholds_v5b.py exists,PASS,thresholds_v5b.py
+inputs,thresholds_v5b.py is the expected version (SHA-256),PASS,"on disk 07b2423e480df29a..., expected 07b2423e480df29a..."
+inputs,script 7's person model is the registered adjusted model,PASS,adjusted
+inputs,"script 7's adjusted run exists (thresholds_adjusted.csv, paired_power.csv, block_measures.csv, checks.csv, run_meta.json)",PASS,data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b
+inputs,script 7's adjusted run passed every check,PASS,"113 PASS, 0 FAIL"
+inputs,script 7's run used the adjusted model,PASS,"person model adjusted, primary test t"
+inputs,script 7's run read the same frozen package files,PASS,28 files compared
+inputs,the adjusted model's thresholds found for every size and set,PASS,"150 A: sat +0.327, con +0.356; 150 B: sat +0.329, con +0.352; 180 A: sat +0.298, con +0.327; 180 B: sat +0.300, con +0.323"
+package 150,"assignment table: 64 slots for the control group, each with one ordinary and one expectation block",PASS,64 rows
+package 180,"assignment table: 64 slots for the control group, each with one ordinary and one expectation block",PASS,64 rows
+tools,v4's exact Mann-Whitney equals SciPy's exact test,PASS,max |difference| in p 1.1e-16
+tools,"v4's normal-approximation Mann-Whitney (groups of 45, above its exact limit) equals SciPy's",PASS,max |difference| in p 0.0e+00
+workers,one worker gives the same result as 31,PASS,"150 trials, 'no effect'"
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 10 vs 20, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 20 vs 30, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 10 vs 20, 300 studies)",PASS,0 differing decisions
+tools,"C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 20 vs 30, 300 studies)",PASS,0 differing decisions
+Monte Carlo,headline cells agree between independent pools,PASS,72 comparisons; largest |z| 2.36; 1.4% beyond 1.96
+results,"no effect, equal attention: the chance of a C1 claim on either feature stays at or below 0.05 + 3 SE (Holm controls it)",PASS,"largest 0.0555, mean 0.0485"
+results,equal attention: the attention check fires at or below 0.05 + 3 SE,PASS,"largest 0.0505, mean 0.0432"
+results,C1 power rises with the report group's N (within Monte Carlo noise),PASS,8 of 8 series
+results,share excluded matches the lapse model in both groups (about 5% at mean lapse 0.1),PASS,"[0.048, 0.049, 0.047, 0.048]"
+results,"the secondary check sees the shared preference under half shift, not under planning (higher rate under half shift in every cell)",PASS,mean 0.501 vs 0.051
+Part B,script 7's SD 1.5 rows found for both sizes and both effects,PASS,176 rows
+Part B,power falls (or stays level) as pair-specific preferences strengthen (N = 20),PASS,"SD 1, 1.5, 2"

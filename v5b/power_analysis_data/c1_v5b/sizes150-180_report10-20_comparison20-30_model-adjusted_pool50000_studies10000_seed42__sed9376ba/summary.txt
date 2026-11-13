@@ -1,0 +1,10 @@
+C1 UNDER THE v5b DESIGN (simulate_c1_v5b.py): IN PLAIN WORDS
+
+* Checks: 75 of 75 pass.
+* Per-person model: the registered adjusted model (side model + N_corpus + N_orig per block; side and N terms are nuisance terms, never results), from script 7's adjusted run (primary test there: t).
+* C1 power after the attention check, planning, report N = 20 (ASSUMPTIONS): 150, 20 comparison: contrast 0.72, saturation 0.70; 150, 30 comparison: contrast 0.78, saturation 0.77; 180, 20 comparison: contrast 0.72, saturation 0.72; 180, 30 comparison: contrast 0.77, saturation 0.78.
+* C1 power after the attention check, half shift, report N = 20 (ASSUMPTIONS): 150, 20 comparison: contrast 0.72, saturation 0.70; 150, 30 comparison: contrast 0.77, saturation 0.77; 180, 20 comparison: contrast 0.72, saturation 0.72; 180, 30 comparison: contrast 0.79, saturation 0.78.
+* No effect, equal attention: a C1 claim on either feature in 0.043-0.056 of studies; the attention check fires in 0.036-0.051.
+* Episode-dependent strategy across the groups (report D -kN, comparison O +kN; no effect; every N): largest false-claim rate on either feature 0.052 at k 0.25 (after the check 0.049), 0.053 at k 0.5 (after the check 0.052), 0.057 at k 1 (after the check 0.054).
+* Unequal attention, no effect: C1 claim before the check up to 0.054, after it up to 0.054; the check fires in up to 0.950 of studies.
+* Part B, paired t-test at N = 20, planning, all defaults + pair-specific preferences: SD 1: 0.73-0.84; SD 1.5: 0.69-0.81; SD 2: 0.61-0.76.

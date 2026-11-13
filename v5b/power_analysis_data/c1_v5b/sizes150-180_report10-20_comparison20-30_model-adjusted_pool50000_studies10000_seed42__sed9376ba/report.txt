@@ -1,0 +1,902 @@
+C1 UNDER THE v5b DESIGN  (simulate_c1_v5b.py, v5b script 8)
+==============================================================================
+run       2026-11-13 15:04:24  (2.8 min, 31 worker process(es), one thread each)
+output    data/power_v5b/c1_v5b/sizes150-180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sed9376ba
+python    3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+script 7  data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b
+
+0. IN PLAIN WORDS
+------------------------------------------------------------------------------
+* Checks: 75 of 75 pass.
+* Per-person model: the registered adjusted model (side model + N_corpus + N_orig per block; side and N terms are nuisance terms, never results), from script 7's adjusted run (primary test there: t).
+* C1 power after the attention check, planning, report N = 20 (ASSUMPTIONS): 150, 20 comparison: contrast 0.72, saturation 0.70; 150, 30 comparison: contrast 0.78, saturation 0.77; 180, 20 comparison: contrast 0.72, saturation 0.72; 180, 30 comparison: contrast 0.77, saturation 0.78.
+* C1 power after the attention check, half shift, report N = 20 (ASSUMPTIONS): 150, 20 comparison: contrast 0.72, saturation 0.70; 150, 30 comparison: contrast 0.77, saturation 0.77; 180, 20 comparison: contrast 0.72, saturation 0.72; 180, 30 comparison: contrast 0.79, saturation 0.78.
+* No effect, equal attention: a C1 claim on either feature in 0.043-0.056 of studies; the attention check fires in 0.036-0.051.
+* Episode-dependent strategy across the groups (report D -kN, comparison O +kN; no effect; every N): largest false-claim rate on either feature 0.052 at k 0.25 (after the check 0.049), 0.053 at k 0.5 (after the check 0.052), 0.057 at k 1 (after the check 0.054).
+* Unequal attention, no effect: C1 claim before the check up to 0.054, after it up to 0.054; the check fires in up to 0.950 of studies.
+* Part B, paired t-test at N = 20, planning, all defaults + pair-specific preferences: SD 1: 0.73-0.84; SD 1.5: 0.69-0.81; SD 2: 0.61-0.76.
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. No image-choice data exist.
+The responder share and shift, the strategy quarters, taste spread, lapse rates, the
+response-time model and the nuisance values were chosen for planning; every rate here
+depends on them.
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+C1: one-sided Mann-Whitney per feature, report group's derealization-block weights
+higher than the comparison group's ordinary-block weights, Holm across the two
+features. Attention check first (catch failures over the session; share of
+responses under 300 ms over the analysed trials of both blocks; comparison group
+higher; Holm across the two): if it fires, C1 is inconclusive. Secondary check:
+report group's ordinary-block weights against the comparison group's, same test.
+Per-person model: script 7's registered adjusted model (side model + N_corpus +
+N_orig per block, Firth, no intercept; side and N terms are nuisance terms, never results).
+Pools of 50,000 people per group and scenario, each fitted on both blocks; 10,000 studies
+per cell; SE from 20 sub-pools. Recruitment by slot with exclusion (3+ catch failures
+of 10), as in script 7.
+Main rows: half the report group respond (0.5 / 0.7 per SD, both features); in each
+group a quarter pick the less typical image (-0.5 x N_corpus) and a separate quarter
+the more edited image (-0.5 x N_orig), every block; mean lapse 0.1 in both groups.
+These strategies replace v5's quarter with +0.5 on both features towards the more
+edited-looking image; they act through N, and the adjusted model's N terms take up
+a strategy that is linear in N. [ASSUMPTIONS]
+Response-time model (v4): P(fast | lapse) = 0.4, P(fast | engaged) = 0.005.
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [inputs] simulate_power_paired_v5b_adj.py exists
+          simulate_power_paired_v5b_adj.py
+  PASS  [inputs] simulate_power_paired_v5b_adj.py is the expected version (SHA-256)
+          e7c7aa79c033e711...
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py exists
+          simulate_c1_post_exclusion_v4.py
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py is the expected version (SHA-256)
+          4d6c6fcee68d29c6...
+  PASS  [stimulus set] stimulus_manifest.csv and reference_stimulus_path.csv exist
+          data/stimulus_set_v5/7fd72262ba
+  PASS  [stimulus set] stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json)
+          69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2...
+  PASS  [stimulus set] corpus SDs equal the predictors' (39.182, 9.348)
+          median [66.448242, 26.908877], SD [39.181906, 9.348022]
+  PASS  [stimulus set] one original per scene (47 scenes)
+          47
+  PASS  [package v5b 150] every non-image file matches checksums.sha256
+          54 of 54 match
+  PASS  [package v5b 150] every image present matches checksums.sha256 (images are not needed here)
+          564 of 564 present, 0 differ
+  PASS  [package v5b 150] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5b 150] FROZEN.json records the hash of this checksums.sha256
+          package v5b_150
+  PASS  [package v5b 150] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          150 analysed, 12 repeats, 5 catch, 167 main trials
+  PASS  [package v5b 150] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 6.8e-06
+  PASS  [package v5b 150] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.6e-07 (corpus SD)
+  PASS  [package v5b 150] set A: the analysed rows' N equal items.csv's
+          150 items
+  PASS  [package v5b 150] set B: the analysed rows' N equal items.csv's
+          150 items
+  PASS  [package v5b 150] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 5.1e-07
+  PASS  [package v5b 150] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [package v5b 180] every non-image file matches checksums.sha256
+          54 of 54 match
+  PASS  [package v5b 180] every image present matches checksums.sha256 (images are not needed here)
+          656 of 656 present, 0 differ
+  PASS  [package v5b 180] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5b 180] FROZEN.json records the hash of this checksums.sha256
+          package v5b_180
+  PASS  [package v5b 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 9.1e-06
+  PASS  [package v5b 180] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.4e-07 (corpus SD)
+  PASS  [package v5b 180] set A: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] set B: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 5.0e-07
+  PASS  [package v5b 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)
+          on disk 852f3b33eb349153..., expected 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5b.py exists
+          analyse_pair_capacity_v5b.py
+  PASS  [inputs] analyse_pair_capacity_v5b.py is the expected version (SHA-256, FROZEN.json)
+          on disk f7ab2c91e5a0be23..., expected f7ab2c91e5a0be23...
+  PASS  [inputs] explore_block_length_v5b.py exists
+          explore_block_length_v5b.py
+  PASS  [inputs] explore_block_length_v5b.py is the expected version (SHA-256)
+          on disk dc38cc67b547eaa3..., expected dc38cc67b547eaa3...
+  PASS  [inputs] thresholds_v5b.py exists
+          thresholds_v5b.py
+  PASS  [inputs] thresholds_v5b.py is the expected version (SHA-256)
+          on disk 07b2423e480df29a..., expected 07b2423e480df29a...
+  PASS  [inputs] script 7's person model is the registered adjusted model
+          adjusted
+  PASS  [inputs] script 7's adjusted run exists (thresholds_adjusted.csv, paired_power.csv, block_measures.csv, checks.csv, run_meta.json)
+          data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b
+  PASS  [inputs] script 7's adjusted run passed every check
+          113 PASS, 0 FAIL
+  PASS  [inputs] script 7's run used the adjusted model
+          person model adjusted, primary test t
+  PASS  [inputs] script 7's run read the same frozen package files
+          28 files compared
+  PASS  [inputs] the adjusted model's thresholds found for every size and set
+          150 A: sat +0.327, con +0.356; 150 B: sat +0.329, con +0.352; 180 A: sat +0.298, con +0.327; 180 B: sat +0.300, con +0.323
+  PASS  [package 150] assignment table: 64 slots for the control group, each with one ordinary and one expectation block
+          64 rows
+  PASS  [package 180] assignment table: 64 slots for the control group, each with one ordinary and one expectation block
+          64 rows
+  PASS  [tools] v4's exact Mann-Whitney equals SciPy's exact test
+          max |difference| in p 1.1e-16
+  PASS  [tools] v4's normal-approximation Mann-Whitney (groups of 45, above its exact limit) equals SciPy's
+          max |difference| in p 0.0e+00
+  PASS  [workers] one worker gives the same result as 31
+          150 trials, 'no effect'
+  PASS  [tools] C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 10 vs 20, 300 studies)
+          0 differing decisions
+  PASS  [tools] C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (planning, 20 vs 30, 300 studies)
+          0 differing decisions
+  PASS  [tools] C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 10 vs 20, 300 studies)
+          0 differing decisions
+  PASS  [tools] C1 test and gate decisions equal SciPy's Mann-Whitney with Holm (no effect, lapse report 0.1 / comparison 0.2, 20 vs 30, 300 studies)
+          0 differing decisions
+  PASS  [Monte Carlo] headline cells agree between independent pools
+          72 comparisons; largest |z| 2.36; 1.4% beyond 1.96
+  PASS  [results] no effect, equal attention: the chance of a C1 claim on either feature stays at or below 0.05 + 3 SE (Holm controls it)
+          largest 0.0555, mean 0.0485
+  PASS  [results] equal attention: the attention check fires at or below 0.05 + 3 SE
+          largest 0.0505, mean 0.0432
+  PASS  [results] C1 power rises with the report group's N (within Monte Carlo noise)
+          8 of 8 series
+  PASS  [results] share excluded matches the lapse model in both groups (about 5% at mean lapse 0.1)
+          [0.048, 0.049, 0.047, 0.048]
+  PASS  [results] the secondary check sees the shared preference under half shift, not under planning (higher rate under half shift in every cell)
+          mean 0.501 vs 0.051
+  PASS  [Part B] script 7's SD 1.5 rows found for both sizes and both effects
+          176 rows
+  PASS  [Part B] power falls (or stays level) as pair-specific preferences strengthen (N = 20)
+          SD 1, 1.5, 2
+
+  75 PASS, 0 FAIL
+
+3. C1 POWER (planning and half shift)
+------------------------------------------------------------------------------
+raw: C1 supported before the attention check; gated: supported and the check did
+not fire (the registered verdict). Per feature after Holm; either = at least one.
+
+  planning
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.540             0.524         0.650       0.675       0.039
+    150            20        15           0.648             0.638         0.756       0.789       0.043
+    150            20        20           0.719             0.702         0.814       0.853       0.045
+    150            30        10           0.581             0.560         0.685       0.715       0.040
+    150            30        15           0.706             0.690         0.799       0.838       0.045
+    150            30        20           0.776             0.771         0.857       0.895       0.043
+    180            20        10           0.521             0.540         0.644       0.673       0.043
+    180            20        15           0.639             0.645         0.752       0.782       0.040
+    180            20        20           0.717             0.717         0.818       0.852       0.040
+    180            30        10           0.565             0.585         0.687       0.716       0.040
+    180            30        15           0.703             0.718         0.807       0.841       0.042
+    180            30        20           0.765             0.780         0.853       0.893       0.045
+
+  half shift
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.526             0.521         0.640       0.666       0.038
+    150            20        15           0.634             0.623         0.743       0.775       0.040
+    150            20        20           0.719             0.698         0.818       0.856       0.043
+    150            30        10           0.572             0.559         0.685       0.717       0.042
+    150            30        15           0.691             0.680         0.792       0.827       0.042
+    150            30        20           0.773             0.771         0.859       0.895       0.040
+    180            20        10           0.528             0.522         0.635       0.661       0.038
+    180            20        15           0.652             0.641         0.751       0.785       0.043
+    180            20        20           0.724             0.717         0.821       0.858       0.042
+    180            30        10           0.589             0.591         0.699       0.728       0.040
+    180            30        15           0.698             0.698         0.794       0.834       0.047
+    180            30        20           0.789             0.781         0.864       0.905       0.045
+
+  v4-style: saturation only (0.5)
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.038             0.475         0.485       0.507       0.041
+    150            20        15           0.040             0.585         0.592       0.616       0.040
+    150            20        20           0.039             0.659         0.664       0.692       0.040
+    150            30        10           0.035             0.525         0.532       0.556       0.041
+    150            30        15           0.041             0.647         0.651       0.679       0.040
+    150            30        20           0.042             0.719         0.723       0.753       0.039
+    180            20        10           0.034             0.470         0.478       0.496       0.036
+    180            20        15           0.042             0.582         0.588       0.617       0.044
+    180            20        20           0.042             0.643         0.649       0.677       0.039
+    180            30        10           0.035             0.519         0.527       0.549       0.038
+    180            30        15           0.047             0.649         0.656       0.688       0.043
+    180            30        20           0.045             0.724         0.730       0.762       0.043
+
+  v4-style: contrast only (0.7)
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.491             0.034         0.499       0.519       0.042
+    150            20        15           0.593             0.038         0.598       0.626       0.043
+    150            20        20           0.673             0.043         0.678       0.709       0.045
+    150            30        10           0.546             0.035         0.552       0.576       0.040
+    150            30        15           0.659             0.039         0.663       0.694       0.044
+    150            30        20           0.735             0.044         0.739       0.776       0.047
+    180            20        10           0.497             0.033         0.503       0.525       0.042
+    180            20        15           0.598             0.036         0.603       0.630       0.041
+    180            20        20           0.671             0.040         0.676       0.708       0.045
+    180            30        10           0.547             0.032         0.554       0.582       0.044
+    180            30        15           0.667             0.037         0.671       0.704       0.049
+    180            30        20           0.739             0.043         0.741       0.777       0.046
+
+4. NO EFFECT: FALSE CLAIMS
+------------------------------------------------------------------------------
+
+  no effect
+   size  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  gate_fires
+    150            20        10         0.025           0.025       0.048         0.046       0.038
+    150            20        15         0.022           0.024       0.043         0.041       0.043
+    150            20        20         0.025           0.026       0.050         0.047       0.042
+    150            30        10         0.026           0.024       0.049         0.047       0.041
+    150            30        15         0.027           0.028       0.052         0.050       0.047
+    150            30        20         0.023           0.025       0.046         0.043       0.048
+    180            20        10         0.023           0.023       0.044         0.043       0.036
+    180            20        15         0.024           0.023       0.044         0.043       0.039
+    180            20        20         0.027           0.024       0.050         0.048       0.042
+    180            30        10         0.022           0.024       0.044         0.043       0.042
+    180            30        15         0.024           0.028       0.049         0.046       0.044
+    180            30        20         0.023           0.025       0.046         0.045       0.043
+
+  no effect, both groups share +0.25/+0.35
+   size  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  gate_fires
+    150            20        10         0.020           0.024       0.043         0.040       0.042
+    150            20        15         0.020           0.023       0.042         0.040       0.041
+    150            20        20         0.021           0.025       0.044         0.042       0.045
+    150            30        10         0.020           0.024       0.043         0.041       0.043
+    150            30        15         0.021           0.026       0.045         0.042       0.045
+    150            30        20         0.019           0.023       0.041         0.038       0.047
+    180            20        10         0.024           0.018       0.041         0.037       0.047
+    180            20        15         0.022           0.021       0.042         0.039       0.049
+    180            20        20         0.022           0.022       0.043         0.041       0.048
+    180            30        10         0.022           0.022       0.042         0.041       0.048
+    180            30        15         0.021           0.023       0.043         0.040       0.047
+    180            30        20         0.027           0.024       0.049         0.046       0.045
+
+  no effect, both groups share +0.5/+0.7
+   size  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  gate_fires
+    150            20        10         0.018           0.021       0.038         0.036       0.051
+    150            20        15         0.019           0.024       0.041         0.038       0.046
+    150            20        20         0.021           0.023       0.044         0.041       0.049
+    150            30        10         0.020           0.022       0.041         0.038       0.050
+    150            30        15         0.022           0.023       0.043         0.040       0.049
+    150            30        20         0.024           0.023       0.045         0.042       0.042
+    180            20        10         0.022           0.018       0.038         0.035       0.046
+    180            20        15         0.022           0.020       0.041         0.037       0.042
+    180            20        20         0.024           0.021       0.043         0.042       0.041
+    180            30        10         0.023           0.023       0.044         0.040       0.048
+    180            30        15         0.026           0.021       0.045         0.042       0.047
+    180            30        20         0.026           0.023       0.047         0.044       0.049
+
+5. THE EPISODE-DEPENDENT STRATEGY ACROSS THE GROUPS (a threat; no effect)
+------------------------------------------------------------------------------
+The report group picks the less typical / more edited image in its derealization
+block (-k x N) and the comparison group the more typical / less edited image in its
+ordinary block (+k x N); their other blocks have no strategy. C1 compares exactly
+these two blocks. False-claim rate per feature (raw, after Holm) and for either
+feature, before (raw) and after (gated) the attention check. [k values: ASSUMPTIONS]
+   size definition     k  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  gate_fires
+    150     corpus 0.250            20        10         0.020           0.024       0.043         0.040       0.043
+    150     corpus 0.250            20        15         0.023           0.023       0.044         0.042       0.047
+    150     corpus 0.250            20        20         0.027           0.026       0.051         0.048       0.049
+    150     corpus 0.250            30        10         0.022           0.022       0.044         0.041       0.041
+    150     corpus 0.250            30        15         0.021           0.022       0.043         0.041       0.044
+    150     corpus 0.250            30        20         0.022           0.021       0.042         0.041       0.043
+    150     corpus 0.500            20        10         0.022           0.024       0.045         0.044       0.039
+    150     corpus 0.500            20        15         0.024           0.025       0.047         0.045       0.037
+    150     corpus 0.500            20        20         0.025           0.027       0.050         0.047       0.040
+    150     corpus 0.500            30        10         0.024           0.025       0.047         0.045       0.036
+    150     corpus 0.500            30        15         0.028           0.027       0.053         0.051       0.040
+    150     corpus 0.500            30        20         0.024           0.025       0.047         0.045       0.045
+    150     corpus 1.000            20        10         0.025           0.019       0.043         0.041       0.045
+    150     corpus 1.000            20        15         0.025           0.020       0.044         0.042       0.043
+    150     corpus 1.000            20        20         0.029           0.022       0.049         0.047       0.048
+    150     corpus 1.000            30        10         0.023           0.019       0.041         0.039       0.045
+    150     corpus 1.000            30        15         0.024           0.020       0.042         0.040       0.047
+    150     corpus 1.000            30        20         0.025           0.018       0.043         0.040       0.049
+    150       orig 0.250            20        10         0.021           0.022       0.042         0.040       0.039
+    150       orig 0.250            20        15         0.026           0.021       0.046         0.044       0.039
+    150       orig 0.250            20        20         0.025           0.023       0.046         0.044       0.044
+    150       orig 0.250            30        10         0.023           0.026       0.048         0.047       0.042
+    150       orig 0.250            30        15         0.021           0.025       0.045         0.042       0.047
+    150       orig 0.250            30        20         0.020           0.024       0.043         0.042       0.046
+    150       orig 0.500            20        10         0.026           0.024       0.048         0.046       0.044
+    150       orig 0.500            20        15         0.025           0.024       0.048         0.045       0.044
+    150       orig 0.500            20        20         0.025           0.025       0.049         0.047       0.044
+    150       orig 0.500            30        10         0.025           0.026       0.049         0.047       0.041
+    150       orig 0.500            30        15         0.024           0.025       0.048         0.046       0.044
+    150       orig 0.500            30        20         0.024           0.026       0.049         0.046       0.045
+    150       orig 1.000            20        10         0.025           0.021       0.044         0.042       0.036
+    150       orig 1.000            20        15         0.027           0.022       0.047         0.045       0.039
+    150       orig 1.000            20        20         0.029           0.023       0.051         0.049       0.043
+    150       orig 1.000            30        10         0.028           0.024       0.050         0.048       0.038
+    150       orig 1.000            30        15         0.032           0.027       0.057         0.054       0.041
+    150       orig 1.000            30        20         0.031           0.024       0.052         0.049       0.042
+    180     corpus 0.250            20        10         0.025           0.016       0.039         0.037       0.042
+    180     corpus 0.250            20        15         0.023           0.020       0.042         0.040       0.045
+    180     corpus 0.250            20        20         0.027           0.024       0.048         0.046       0.046
+    180     corpus 0.250            30        10         0.023           0.023       0.045         0.042       0.045
+    180     corpus 0.250            30        15         0.026           0.023       0.048         0.047       0.049
+    180     corpus 0.250            30        20         0.025           0.022       0.045         0.043       0.053
+    180     corpus 0.500            20        10         0.022           0.022       0.043         0.040       0.044
+    180     corpus 0.500            20        15         0.025           0.023       0.046         0.044       0.045
+    180     corpus 0.500            20        20         0.025           0.022       0.045         0.043       0.054
+    180     corpus 0.500            30        10         0.022           0.023       0.043         0.041       0.049
+    180     corpus 0.500            30        15         0.027           0.024       0.049         0.046       0.052
+    180     corpus 0.500            30        20         0.026           0.023       0.047         0.046       0.049
+    180     corpus 1.000            20        10         0.024           0.023       0.046         0.044       0.043
+    180     corpus 1.000            20        15         0.024           0.024       0.045         0.043       0.054
+    180     corpus 1.000            20        20         0.028           0.027       0.053         0.051       0.049
+    180     corpus 1.000            30        10         0.025           0.025       0.049         0.045       0.045
+    180     corpus 1.000            30        15         0.025           0.024       0.048         0.047       0.048
+    180     corpus 1.000            30        20         0.027           0.025       0.051         0.048       0.047
+    180       orig 0.250            20        10         0.024           0.022       0.044         0.043       0.048
+    180       orig 0.250            20        15         0.020           0.021       0.040         0.038       0.053
+    180       orig 0.250            20        20         0.023           0.023       0.045         0.042       0.055
+    180       orig 0.250            30        10         0.026           0.025       0.050         0.048       0.045
+    180       orig 0.250            30        15         0.025           0.028       0.052         0.049       0.054
+    180       orig 0.250            30        20         0.024           0.027       0.049         0.046       0.055
+    180       orig 0.500            20        10         0.020           0.022       0.041         0.040       0.042
+    180       orig 0.500            20        15         0.025           0.024       0.046         0.044       0.044
+    180       orig 0.500            20        20         0.025           0.027       0.050         0.048       0.042
+    180       orig 0.500            30        10         0.021           0.024       0.043         0.041       0.045
+    180       orig 0.500            30        15         0.026           0.027       0.051         0.048       0.043
+    180       orig 0.500            30        20         0.025           0.021       0.044         0.042       0.043
+    180       orig 1.000            20        10         0.024           0.022       0.043         0.042       0.039
+    180       orig 1.000            20        15         0.024           0.023       0.044         0.042       0.043
+    180       orig 1.000            20        20         0.025           0.023       0.046         0.044       0.043
+    180       orig 1.000            30        10         0.024           0.026       0.048         0.046       0.042
+    180       orig 1.000            30        15         0.029           0.026       0.052         0.051       0.044
+    180       orig 1.000            30        20         0.023           0.023       0.044         0.042       0.043
+
+6. THE ATTENTION CHECK
+------------------------------------------------------------------------------
+Mean lapse per group (report / comparison). With the comparison group guessing more
+often, its weights shrink towards zero, so a preference both groups share can make
+the report group look higher (the shared-preference rows in section 4 show that
+preference with equal attention). raw_either shows how often unequal attention alone
+produces a C1 claim with no effect before the check; gated_either after it. When the
+check fires, C1 is inconclusive, so with an effect (planning rows) a less attentive
+comparison group also costs power.
+
+  no effect, lapse report 0.1 / comparison 0.15
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.362             0.121          0.329       0.040         0.026
+    150            20        15       0.456             0.158          0.427       0.046         0.024
+    150            20        20       0.517             0.172          0.489       0.047         0.024
+    150            30        10       0.405             0.138          0.372       0.043         0.026
+    150            30        15       0.498             0.164          0.471       0.042         0.023
+    150            30        20       0.574             0.184          0.554       0.048         0.022
+    180            20        10       0.373             0.113          0.345       0.042         0.025
+    180            20        15       0.466             0.143          0.442       0.045         0.024
+    180            20        20       0.534             0.158          0.514       0.045         0.018
+    180            30        10       0.417             0.128          0.391       0.043         0.025
+    180            30        15       0.540             0.167          0.520       0.050         0.021
+    180            30        20       0.626             0.198          0.608       0.046         0.015
+
+  planning, lapse report 0.1 / comparison 0.15
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.350             0.122          0.318       0.665         0.431
+    150            20        15       0.454             0.160          0.424       0.761         0.413
+    150            20        20       0.505             0.176          0.476       0.851         0.421
+    150            30        10       0.385             0.127          0.356       0.721         0.438
+    150            30        15       0.506             0.178          0.479       0.824         0.411
+    150            30        20       0.593             0.204          0.566       0.889         0.359
+    180            20        10       0.370             0.103          0.348       0.664         0.413
+    180            20        15       0.457             0.122          0.436       0.779         0.422
+    180            20        20       0.525             0.146          0.504       0.850         0.401
+    180            30        10       0.402             0.114          0.381       0.721         0.427
+    180            30        15       0.524             0.145          0.508       0.830         0.394
+    180            30        20       0.602             0.175          0.586       0.889         0.353
+
+  no effect, lapse report 0.1 / comparison 0.2
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.742             0.261          0.726       0.044         0.011
+    150            20        15       0.843             0.332          0.835       0.048         0.006
+    150            20        20       0.899             0.388          0.892       0.045         0.004
+    150            30        10       0.811             0.312          0.797       0.049         0.009
+    150            30        15       0.907             0.388          0.903       0.048         0.004
+    150            30        20       0.950             0.456          0.947       0.048         0.002
+    180            20        10       0.733             0.267          0.719       0.049         0.013
+    180            20        15       0.842             0.338          0.832       0.051         0.009
+    180            20        20       0.905             0.381          0.899       0.048         0.006
+    180            30        10       0.796             0.299          0.785       0.046         0.008
+    180            30        15       0.898             0.371          0.893       0.053         0.005
+    180            30        20       0.950             0.439          0.947       0.048         0.002
+
+  planning, lapse report 0.1 / comparison 0.2
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.755             0.284          0.741       0.667         0.164
+    150            20        15       0.850             0.344          0.841       0.797         0.117
+    150            20        20       0.904             0.390          0.896       0.870         0.084
+    150            30        10       0.807             0.318          0.793       0.713         0.138
+    150            30        15       0.913             0.393          0.909       0.836         0.071
+    150            30        20       0.949             0.454          0.945       0.906         0.046
+    180            20        10       0.767             0.263          0.755       0.679         0.158
+    180            20        15       0.862             0.329          0.856       0.788         0.110
+    180            20        20       0.905             0.369          0.900       0.871         0.083
+    180            30        10       0.830             0.301          0.821       0.719         0.120
+    180            30        15       0.920             0.373          0.916       0.849         0.068
+    180            30        20       0.957             0.425          0.954       0.903         0.039
+
+  no effect, lapse report 0.15 / comparison 0.1
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.004             0.004          0.001       0.049         0.049
+    150            20        15       0.003             0.003          0.000       0.048         0.048
+    150            20        20       0.003             0.003          0.000       0.054         0.053
+    150            30        10       0.003             0.003          0.000       0.039         0.039
+    150            30        15       0.003             0.003          0.000       0.049         0.049
+    150            30        20       0.002             0.002          0.000       0.050         0.050
+    180            20        10       0.004             0.004          0.000       0.039         0.038
+    180            20        15       0.002             0.002          0.000       0.044         0.044
+    180            20        20       0.002             0.002          0.000       0.052         0.051
+    180            30        10       0.004             0.003          0.000       0.046         0.046
+    180            30        15       0.003             0.003          0.000       0.051         0.051
+    180            30        20       0.002             0.002          0.000       0.046         0.046
+
+  planning, lapse report 0.15 / comparison 0.1
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.004             0.004          0.000       0.665         0.662
+    150            20        15       0.004             0.004          0.000       0.775         0.772
+    150            20        20       0.003             0.003          0.000       0.841         0.839
+    150            30        10       0.003             0.003          0.000       0.701         0.699
+    150            30        15       0.002             0.002          0.000       0.821         0.819
+    150            30        20       0.002             0.002          0.000       0.886         0.884
+    180            20        10       0.005             0.004          0.000       0.649         0.646
+    180            20        15       0.003             0.003          0.000       0.776         0.774
+    180            20        20       0.002             0.002          0.000       0.852         0.850
+    180            30        10       0.003             0.003          0.000       0.705         0.703
+    180            30        15       0.003             0.003          0.000       0.829         0.827
+    180            30        20       0.003             0.003          0.000       0.884         0.881
+
+  no effect, lapse report 0.2 / comparison 0.1
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.001             0.001          0.000       0.042         0.042
+    150            20        15       0.001             0.001          0.000       0.047         0.047
+    150            20        20       0.000             0.000          0.000       0.049         0.049
+    150            30        10       0.001             0.001          0.000       0.043         0.043
+    150            30        15       0.000             0.000          0.000       0.043         0.043
+    150            30        20       0.000             0.000          0.000       0.047         0.047
+    180            20        10       0.001             0.001          0.000       0.041         0.041
+    180            20        15       0.000             0.000          0.000       0.049         0.049
+    180            20        20       0.000             0.000          0.000       0.054         0.054
+    180            30        10       0.001             0.001          0.000       0.042         0.042
+    180            30        15       0.000             0.000          0.000       0.051         0.051
+    180            30        20       0.000             0.000          0.000       0.052         0.052
+
+  planning, lapse report 0.2 / comparison 0.1
+   size  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  raw_either  gated_either
+    150            20        10       0.001             0.001          0.000       0.662         0.662
+    150            20        15       0.001             0.001          0.000       0.773         0.773
+    150            20        20       0.001             0.001          0.000       0.840         0.839
+    150            30        10       0.001             0.001          0.000       0.700         0.699
+    150            30        15       0.000             0.000          0.000       0.820         0.819
+    150            30        20       0.000             0.000          0.000       0.882         0.881
+    180            20        10       0.001             0.001          0.000       0.657         0.657
+    180            20        15       0.000             0.000          0.000       0.773         0.773
+    180            20        20       0.000             0.000          0.000       0.842         0.842
+    180            30        10       0.001             0.001          0.000       0.699         0.699
+    180            30        15       0.001             0.001          0.000       0.831         0.830
+    180            30        20       0.000             0.000          0.000       0.885         0.884
+
+7. SCRIPT 7'S DEFAULT NUISANCES ADDED, AND THE STRATEGY QUARTERS REVERSED
+------------------------------------------------------------------------------
+
+  no effect, script 7's default nuisances
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.022             0.023         0.043       0.046       0.038
+    150            20        15           0.025             0.024         0.047       0.049       0.038
+    150            20        20           0.024             0.024         0.046       0.048       0.039
+    150            30        10           0.022             0.025         0.044       0.047       0.039
+    150            30        15           0.024             0.027         0.049       0.051       0.037
+    150            30        20           0.022             0.021         0.042       0.044       0.036
+    180            20        10           0.020             0.022         0.042       0.044       0.043
+    180            20        15           0.021             0.023         0.041       0.044       0.049
+    180            20        20           0.021             0.023         0.043       0.046       0.048
+    180            30        10           0.024             0.024         0.047       0.050       0.050
+    180            30        15           0.020             0.025         0.043       0.046       0.050
+    180            30        20           0.023             0.024         0.046       0.048       0.047
+
+  planning, script 7's default nuisances
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.460             0.425         0.563       0.590       0.043
+    150            20        15           0.578             0.526         0.683       0.715       0.042
+    150            20        20           0.660             0.613         0.762       0.797       0.042
+    150            30        10           0.509             0.471         0.620       0.648       0.044
+    150            30        15           0.639             0.596         0.743       0.777       0.044
+    150            30        20           0.720             0.686         0.814       0.851       0.042
+    180            20        10           0.490             0.485         0.601       0.632       0.046
+    180            20        15           0.577             0.575         0.697       0.734       0.052
+    180            20        20           0.666             0.655         0.779       0.815       0.042
+    180            30        10           0.528             0.532         0.645       0.680       0.050
+    180            30        15           0.636             0.640         0.748       0.786       0.047
+    180            30        20           0.729             0.731         0.825       0.862       0.044
+
+  half shift, script 7's default nuisances
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.489             0.461         0.594       0.620       0.038
+    150            20        15           0.585             0.554         0.692       0.722       0.040
+    150            20        20           0.655             0.621         0.762       0.795       0.041
+    150            30        10           0.546             0.518         0.654       0.681       0.038
+    150            30        15           0.644             0.609         0.743       0.775       0.041
+    150            30        20           0.721             0.687         0.813       0.849       0.040
+    180            20        10           0.501             0.482         0.609       0.641       0.048
+    180            20        15           0.601             0.583         0.709       0.743       0.044
+    180            20        20           0.678             0.663         0.782       0.823       0.049
+    180            30        10           0.538             0.536         0.656       0.687       0.043
+    180            30        15           0.661             0.644         0.762       0.801       0.049
+    180            30        20           0.739             0.728         0.825       0.863       0.043
+
+  no effect, strategy quarters in the opposite direction (more typical / less edited)
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.025             0.022         0.044       0.047       0.043
+    150            20        15           0.026             0.023         0.048       0.049       0.046
+    150            20        20           0.025             0.023         0.047       0.049       0.053
+    150            30        10           0.026             0.023         0.046       0.048       0.043
+    150            30        15           0.026             0.024         0.049       0.052       0.052
+    150            30        20           0.024             0.023         0.045       0.048       0.050
+    180            20        10           0.025             0.021         0.044       0.046       0.044
+    180            20        15           0.021             0.022         0.042       0.044       0.045
+    180            20        20           0.024             0.025         0.047       0.049       0.045
+    180            30        10           0.026             0.025         0.049       0.051       0.040
+    180            30        15           0.025             0.028         0.051       0.053       0.043
+    180            30        20           0.021             0.026         0.046       0.049       0.043
+
+  planning, strategy quarters in the opposite direction (more typical / less edited)
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.541             0.506         0.644       0.677       0.048
+    150            20        15           0.645             0.621         0.745       0.781       0.046
+    150            20        20           0.721             0.690         0.813       0.855       0.048
+    150            30        10           0.594             0.566         0.695       0.725       0.041
+    150            30        15           0.707             0.682         0.796       0.832       0.043
+    150            30        20           0.789             0.765         0.860       0.904       0.048
+    180            20        10           0.539             0.536         0.648       0.677       0.042
+    180            20        15           0.649             0.649         0.753       0.789       0.046
+    180            20        20           0.718             0.719         0.817       0.853       0.042
+    180            30        10           0.574             0.581         0.688       0.719       0.043
+    180            30        15           0.716             0.714         0.810       0.844       0.039
+    180            30        20           0.789             0.787         0.863       0.902       0.044
+
+  half shift, strategy quarters in the opposite direction (more typical / less edited)
+   size  comparison_n  report_n  gated_contrast  gated_saturation  gated_either  raw_either  gate_fires
+    150            20        10           0.541             0.520         0.642       0.670       0.042
+    150            20        15           0.669             0.650         0.767       0.803       0.044
+    150            20        20           0.731             0.705         0.824       0.862       0.045
+    150            30        10           0.584             0.571         0.699       0.726       0.039
+    150            30        15           0.729             0.708         0.816       0.853       0.043
+    150            30        20           0.788             0.763         0.863       0.902       0.044
+    180            20        10           0.545             0.542         0.647       0.674       0.040
+    180            20        15           0.648             0.647         0.748       0.782       0.044
+    180            20        20           0.711             0.711         0.809       0.849       0.048
+    180            30        10           0.587             0.579         0.695       0.724       0.042
+    180            30        15           0.714             0.712         0.806       0.845       0.046
+    180            30        20           0.778             0.779         0.854       0.893       0.044
+
+8. SECONDARY CHECK: report group's ordinary block against the comparison group's
+------------------------------------------------------------------------------
+Under half shift the report group's shared preference shows here; under planning
+it should not (raw rates, before the attention check).
+
+  no effect
+   size  comparison_n  report_n  secondary_contrast  secondary_saturation  secondary_either
+    150            20        10               0.024                 0.021             0.043
+    150            20        15               0.023                 0.026             0.048
+    150            20        20               0.023                 0.029             0.051
+    150            30        10               0.023                 0.021             0.043
+    150            30        15               0.025                 0.028             0.051
+    150            30        20               0.021                 0.026             0.046
+    180            20        10               0.021                 0.019             0.039
+    180            20        15               0.025                 0.024             0.047
+    180            20        20               0.029                 0.023             0.051
+    180            30        10               0.021                 0.025             0.045
+    180            30        15               0.028                 0.028             0.053
+    180            30        20               0.025                 0.028             0.051
+
+  planning
+   size  comparison_n  report_n  secondary_contrast  secondary_saturation  secondary_either
+    150            20        10               0.022                 0.024             0.045
+    150            20        15               0.025                 0.027             0.051
+    150            20        20               0.027                 0.029             0.054
+    150            30        10               0.024                 0.026             0.049
+    150            30        15               0.024                 0.025             0.047
+    150            30        20               0.026                 0.029             0.052
+    180            20        10               0.024                 0.022             0.045
+    180            20        15               0.029                 0.028             0.054
+    180            20        20               0.027                 0.024             0.050
+    180            30        10               0.025                 0.025             0.049
+    180            30        15               0.027                 0.029             0.053
+    180            30        20               0.029                 0.025             0.052
+
+  half shift
+   size  comparison_n  report_n  secondary_contrast  secondary_saturation  secondary_either
+    150            20        10               0.251                 0.242             0.379
+    150            20        15               0.328                 0.308             0.469
+    150            20        20               0.384                 0.356             0.537
+    150            30        10               0.291                 0.271             0.421
+    150            30        15               0.375                 0.350             0.525
+    150            30        20               0.429                 0.415             0.588
+    180            20        10               0.260                 0.260             0.385
+    180            20        15               0.334                 0.331             0.484
+    180            20        20               0.395                 0.385             0.547
+    180            30        10               0.315                 0.321             0.461
+    180            30        15               0.387                 0.388             0.543
+    180            30        20               0.465                 0.452             0.619
+
+9. ATTENTION MEASURES AND EXCLUSIONS BY GROUP (pool means)
+------------------------------------------------------------------------------
+   size                                                                                                                                                              scenario      group  excluded_share  lapse_mean  catch_mean  fast_share  agreement_O
+    150                                                                                                                                                             no effect     report           0.048       0.097       0.617       0.043        0.512
+    150                                                                                                                                                             no effect comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                                                              planning     report           0.051       0.097       0.624       0.043        0.513
+    150                                                                                                                                                              planning comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                                                            half shift     report           0.049       0.097       0.621       0.043        0.524
+    150                                                                                                                                                            half shift comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                                       v4-style: saturation only (0.5)     report           0.046       0.097       0.624       0.043        0.513
+    150                                                                                                                                       v4-style: saturation only (0.5) comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                                         v4-style: contrast only (0.7)     report           0.048       0.097       0.625       0.043        0.513
+    150                                                                                                                                         v4-style: contrast only (0.7) comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                              no effect, both groups share +0.25/+0.35     report           0.048       0.097       0.618       0.043        0.535
+    150                                                                                                                              no effect, both groups share +0.25/+0.35 comparison           0.048       0.097       0.623       0.043        0.535
+    150                                                                                                                                no effect, both groups share +0.5/+0.7     report           0.048       0.097       0.624       0.043        0.583
+    150                                                                                                                                no effect, both groups share +0.5/+0.7 comparison           0.049       0.097       0.620       0.043        0.584
+    150                                                                                                                         no effect, lapse report 0.1 / comparison 0.15     report           0.047       0.097       0.620       0.043        0.512
+    150                                                                                                                         no effect, lapse report 0.1 / comparison 0.15 comparison           0.120       0.140       0.817       0.060        0.511
+    150                                                                                                                          planning, lapse report 0.1 / comparison 0.15     report           0.050       0.097       0.617       0.043        0.513
+    150                                                                                                                          planning, lapse report 0.1 / comparison 0.15 comparison           0.120       0.140       0.817       0.060        0.511
+    150                                                                                                                          no effect, lapse report 0.1 / comparison 0.2     report           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                          no effect, lapse report 0.1 / comparison 0.2 comparison           0.205       0.178       0.959       0.075        0.510
+    150                                                                                                                           planning, lapse report 0.1 / comparison 0.2     report           0.047       0.097       0.615       0.043        0.513
+    150                                                                                                                           planning, lapse report 0.1 / comparison 0.2 comparison           0.205       0.178       0.959       0.075        0.510
+    150                                                                                                                         no effect, lapse report 0.15 / comparison 0.1     report           0.118       0.139       0.814       0.060        0.512
+    150                                                                                                                         no effect, lapse report 0.15 / comparison 0.1 comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                          planning, lapse report 0.15 / comparison 0.1     report           0.118       0.140       0.817       0.060        0.510
+    150                                                                                                                          planning, lapse report 0.15 / comparison 0.1 comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                          no effect, lapse report 0.2 / comparison 0.1     report           0.207       0.178       0.958       0.075        0.510
+    150                                                                                                                          no effect, lapse report 0.2 / comparison 0.1 comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                           planning, lapse report 0.2 / comparison 0.1     report           0.205       0.177       0.957       0.075        0.511
+    150                                                                                                                           planning, lapse report 0.2 / comparison 0.1 comparison           0.049       0.097       0.620       0.043        0.512
+    150                                                                                                                               no effect, script 7's default nuisances     report           0.072       0.121       0.754       0.053        0.531
+    150                                                                                                                               no effect, script 7's default nuisances comparison           0.073       0.121       0.750       0.053        0.531
+    150                                                                                                                                planning, script 7's default nuisances     report           0.073       0.121       0.746       0.053        0.532
+    150                                                                                                                                planning, script 7's default nuisances comparison           0.073       0.121       0.750       0.053        0.531
+    150                                                                                                                              half shift, script 7's default nuisances     report           0.074       0.121       0.750       0.053        0.552
+    150                                                                                                                              half shift, script 7's default nuisances comparison           0.073       0.121       0.750       0.053        0.531
+    150                                                                                   no effect, strategy quarters in the opposite direction (more typical / less edited)     report           0.049       0.097       0.621       0.043        0.512
+    150                                                                                   no effect, strategy quarters in the opposite direction (more typical / less edited) comparison           0.050       0.097       0.619       0.043        0.513
+    150                                                                                    planning, strategy quarters in the opposite direction (more typical / less edited)     report           0.049       0.097       0.622       0.043        0.512
+    150                                                                                    planning, strategy quarters in the opposite direction (more typical / less edited) comparison           0.050       0.097       0.619       0.043        0.513
+    150                                                                                  half shift, strategy quarters in the opposite direction (more typical / less edited)     report           0.048       0.097       0.622       0.043        0.522
+    150                                                                                  half shift, strategy quarters in the opposite direction (more typical / less edited) comparison           0.050       0.097       0.619       0.043        0.513
+    150 no effect, episode-dependent strategy (corpus, k 0.25): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.048       0.097       0.621       0.043        0.512
+    150 no effect, episode-dependent strategy (corpus, k 0.25): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.047       0.097       0.629       0.043        0.512
+    150  no effect, episode-dependent strategy (corpus, k 0.5): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.049       0.097       0.624       0.043        0.512
+    150  no effect, episode-dependent strategy (corpus, k 0.5): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.049       0.097       0.623       0.043        0.515
+    150    no effect, episode-dependent strategy (corpus, k 1): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.047       0.097       0.618       0.043        0.513
+    150    no effect, episode-dependent strategy (corpus, k 1): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.048       0.097       0.623       0.043        0.529
+    150     no effect, episode-dependent strategy (orig, k 0.25): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.047       0.097       0.629       0.043        0.513
+    150     no effect, episode-dependent strategy (orig, k 0.25): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.049       0.097       0.618       0.043        0.511
+    150      no effect, episode-dependent strategy (orig, k 0.5): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.048       0.097       0.623       0.043        0.514
+    150      no effect, episode-dependent strategy (orig, k 0.5): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.048       0.097       0.622       0.043        0.513
+    150        no effect, episode-dependent strategy (orig, k 1): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.049       0.097       0.624       0.043        0.513
+    150        no effect, episode-dependent strategy (orig, k 1): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.049       0.097       0.620       0.043        0.518
+    180                                                                                                                                                             no effect     report           0.047       0.097       0.612       0.043        0.511
+    180                                                                                                                                                             no effect comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                                                              planning     report           0.049       0.097       0.624       0.043        0.511
+    180                                                                                                                                                              planning comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                                                            half shift     report           0.047       0.097       0.623       0.043        0.517
+    180                                                                                                                                                            half shift comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                                       v4-style: saturation only (0.5)     report           0.048       0.097       0.631       0.043        0.511
+    180                                                                                                                                       v4-style: saturation only (0.5) comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                                         v4-style: contrast only (0.7)     report           0.050       0.097       0.624       0.043        0.510
+    180                                                                                                                                         v4-style: contrast only (0.7) comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                              no effect, both groups share +0.25/+0.35     report           0.048       0.097       0.621       0.043        0.520
+    180                                                                                                                              no effect, both groups share +0.25/+0.35 comparison           0.049       0.097       0.620       0.043        0.521
+    180                                                                                                                                no effect, both groups share +0.5/+0.7     report           0.050       0.097       0.622       0.043        0.550
+    180                                                                                                                                no effect, both groups share +0.5/+0.7 comparison           0.048       0.097       0.623       0.043        0.548
+    180                                                                                                                         no effect, lapse report 0.1 / comparison 0.15     report           0.048       0.097       0.625       0.043        0.511
+    180                                                                                                                         no effect, lapse report 0.1 / comparison 0.15 comparison           0.117       0.140       0.814       0.060        0.509
+    180                                                                                                                          planning, lapse report 0.1 / comparison 0.15     report           0.047       0.097       0.622       0.043        0.511
+    180                                                                                                                          planning, lapse report 0.1 / comparison 0.15 comparison           0.117       0.140       0.814       0.060        0.509
+    180                                                                                                                          no effect, lapse report 0.1 / comparison 0.2     report           0.048       0.097       0.620       0.043        0.511
+    180                                                                                                                          no effect, lapse report 0.1 / comparison 0.2 comparison           0.206       0.177       0.965       0.075        0.508
+    180                                                                                                                           planning, lapse report 0.1 / comparison 0.2     report           0.047       0.097       0.630       0.043        0.510
+    180                                                                                                                           planning, lapse report 0.1 / comparison 0.2 comparison           0.206       0.177       0.965       0.075        0.508
+    180                                                                                                                         no effect, lapse report 0.15 / comparison 0.1     report           0.120       0.139       0.819       0.060        0.510
+    180                                                                                                                         no effect, lapse report 0.15 / comparison 0.1 comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                          planning, lapse report 0.15 / comparison 0.1     report           0.115       0.140       0.812       0.060        0.511
+    180                                                                                                                          planning, lapse report 0.15 / comparison 0.1 comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                          no effect, lapse report 0.2 / comparison 0.1     report           0.204       0.177       0.960       0.075        0.509
+    180                                                                                                                          no effect, lapse report 0.2 / comparison 0.1 comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                           planning, lapse report 0.2 / comparison 0.1     report           0.204       0.177       0.959       0.075        0.509
+    180                                                                                                                           planning, lapse report 0.2 / comparison 0.1 comparison           0.048       0.097       0.621       0.043        0.511
+    180                                                                                                                               no effect, script 7's default nuisances     report           0.080       0.126       0.777       0.055        0.517
+    180                                                                                                                               no effect, script 7's default nuisances comparison           0.079       0.126       0.772       0.055        0.517
+    180                                                                                                                                planning, script 7's default nuisances     report           0.079       0.126       0.773       0.055        0.517
+    180                                                                                                                                planning, script 7's default nuisances comparison           0.079       0.126       0.772       0.055        0.517
+    180                                                                                                                              half shift, script 7's default nuisances     report           0.079       0.126       0.779       0.055        0.528
+    180                                                                                                                              half shift, script 7's default nuisances comparison           0.079       0.126       0.772       0.055        0.517
+    180                                                                                   no effect, strategy quarters in the opposite direction (more typical / less edited)     report           0.048       0.097       0.625       0.043        0.512
+    180                                                                                   no effect, strategy quarters in the opposite direction (more typical / less edited) comparison           0.049       0.097       0.617       0.043        0.511
+    180                                                                                    planning, strategy quarters in the opposite direction (more typical / less edited)     report           0.047       0.097       0.620       0.043        0.511
+    180                                                                                    planning, strategy quarters in the opposite direction (more typical / less edited) comparison           0.049       0.097       0.617       0.043        0.511
+    180                                                                                  half shift, strategy quarters in the opposite direction (more typical / less edited)     report           0.049       0.097       0.624       0.043        0.518
+    180                                                                                  half shift, strategy quarters in the opposite direction (more typical / less edited) comparison           0.049       0.097       0.617       0.043        0.511
+    180 no effect, episode-dependent strategy (corpus, k 0.25): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.048       0.097       0.618       0.043        0.511
+    180 no effect, episode-dependent strategy (corpus, k 0.25): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.048       0.097       0.623       0.043        0.509
+    180  no effect, episode-dependent strategy (corpus, k 0.5): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.050       0.097       0.619       0.043        0.511
+    180  no effect, episode-dependent strategy (corpus, k 0.5): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.047       0.097       0.627       0.043        0.513
+    180    no effect, episode-dependent strategy (corpus, k 1): report group's derealization block picks the less typical, comparison group's ordinary block the more typical     report           0.048       0.097       0.625       0.043        0.510
+    180    no effect, episode-dependent strategy (corpus, k 1): report group's derealization block picks the less typical, comparison group's ordinary block the more typical comparison           0.049       0.097       0.624       0.043        0.533
+    180     no effect, episode-dependent strategy (orig, k 0.25): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.049       0.097       0.623       0.043        0.511
+    180     no effect, episode-dependent strategy (orig, k 0.25): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.048       0.097       0.626       0.043        0.509
+    180      no effect, episode-dependent strategy (orig, k 0.5): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.050       0.097       0.623       0.043        0.511
+    180      no effect, episode-dependent strategy (orig, k 0.5): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.048       0.097       0.619       0.043        0.510
+    180        no effect, episode-dependent strategy (orig, k 1): report group's derealization block picks the more edited, comparison group's ordinary block the less edited     report           0.048       0.097       0.627       0.043        0.512
+    180        no effect, episode-dependent strategy (orig, k 1): report group's derealization block picks the more edited, comparison group's ordinary block the less edited comparison           0.049       0.097       0.623       0.043        0.525
+
+10. MONTE CARLO CHECK: headline cells on independent pools
+------------------------------------------------------------------------------
+   size  scenario  report_n  comparison_n          measure  rate_1  rate_2       z
+    150 no effect        10            20   gated_contrast  0.0238  0.0217 -0.7327
+    150 no effect        10            20 gated_saturation  0.0236  0.0199 -1.1590
+    150 no effect        10            20       gate_fires  0.0376  0.0368 -0.1898
+    150 no effect        15            20   gated_contrast  0.0208  0.0207 -0.0385
+    150 no effect        15            20 gated_saturation  0.0224  0.0207 -0.5066
+    150 no effect        15            20       gate_fires  0.0435  0.0377 -1.3214
+    150 no effect        20            20   gated_contrast  0.0240  0.0181 -2.3576
+    150 no effect        20            20 gated_saturation  0.0241  0.0214 -0.7494
+    150 no effect        20            20       gate_fires  0.0422  0.0434  0.3022
+    150 no effect        10            30   gated_contrast  0.0251  0.0201 -1.6756
+    150 no effect        10            30 gated_saturation  0.0226  0.0216 -0.3418
+    150 no effect        10            30       gate_fires  0.0414  0.0435  0.3705
+    150 no effect        15            30   gated_contrast  0.0260  0.0206 -1.7904
+    150 no effect        15            30 gated_saturation  0.0270  0.0241 -0.8641
+    150 no effect        15            30       gate_fires  0.0470  0.0424 -0.8425
+    150 no effect        20            30   gated_contrast  0.0218  0.0205 -0.4147
+    150 no effect        20            30 gated_saturation  0.0234  0.0196 -1.2738
+    150 no effect        20            30       gate_fires  0.0478  0.0463 -0.2581
+    150  planning        10            20   gated_contrast  0.5405  0.5309 -0.4600
+    150  planning        10            20 gated_saturation  0.5245  0.5192 -0.2828
+    150  planning        10            20       gate_fires  0.0388  0.0404  0.3414
+    150  planning        15            20   gated_contrast  0.6485  0.6346 -0.7845
+    150  planning        15            20 gated_saturation  0.6380  0.6170 -1.1380
+    150  planning        15            20       gate_fires  0.0428  0.0438  0.2386
+    150  planning        20            20   gated_contrast  0.7189  0.7102 -0.5308
+    150  planning        20            20 gated_saturation  0.7024  0.7056  0.2011
+    150  planning        20            20       gate_fires  0.0447  0.0461  0.3203
+    150  planning        10            30   gated_contrast  0.5806  0.5851  0.2255
+    150  planning        10            30 gated_saturation  0.5601  0.5782  1.0123
+    150  planning        10            30       gate_fires  0.0402  0.0408  0.1228
+    150  planning        15            30   gated_contrast  0.7055  0.6919 -0.7552
+    150  planning        15            30 gated_saturation  0.6904  0.6898 -0.0432
+    150  planning        15            30       gate_fires  0.0446  0.0457  0.2090
+    150  planning        20            30   gated_contrast  0.7764  0.7675 -0.5607
+    150  planning        20            30 gated_saturation  0.7711  0.7626 -0.5635
+    150  planning        20            30       gate_fires  0.0433  0.0445  0.2429
+    180 no effect        10            20   gated_contrast  0.0218  0.0224  0.1569
+    180 no effect        10            20 gated_saturation  0.0225  0.0231  0.1556
+    180 no effect        10            20       gate_fires  0.0363  0.0434  1.4846
+    180 no effect        15            20   gated_contrast  0.0224  0.0258  0.9684
+    180 no effect        15            20 gated_saturation  0.0221  0.0261  0.9846
+    180 no effect        15            20       gate_fires  0.0387  0.0419  0.7440
+    180 no effect        20            20   gated_contrast  0.0266  0.0238 -0.5766
+    180 no effect        20            20 gated_saturation  0.0229  0.0285  1.4071
+    180 no effect        20            20       gate_fires  0.0417  0.0461  0.9054
+    180 no effect        10            30   gated_contrast  0.0213  0.0225  0.3063
+    180 no effect        10            30 gated_saturation  0.0234  0.0241  0.2296
+    180 no effect        10            30       gate_fires  0.0418  0.0377 -0.8913
+    180 no effect        15            30   gated_contrast  0.0223  0.0227  0.0917
+    180 no effect        15            30 gated_saturation  0.0268  0.0227 -1.1288
+    180 no effect        15            30       gate_fires  0.0439  0.0428 -0.2203
+    180 no effect        20            30   gated_contrast  0.0221  0.0220 -0.0274
+    180 no effect        20            30 gated_saturation  0.0244  0.0217 -0.6642
+    180 no effect        20            30       gate_fires  0.0432  0.0395 -0.8067
+    180  planning        10            20   gated_contrast  0.5210  0.5602  1.9174
+    180  planning        10            20 gated_saturation  0.5399  0.5390 -0.0454
+    180  planning        10            20       gate_fires  0.0435  0.0401 -0.7272
+    180  planning        15            20   gated_contrast  0.6390  0.6589  0.9179
+    180  planning        15            20 gated_saturation  0.6454  0.6413 -0.2229
+    180  planning        15            20       gate_fires  0.0402  0.0409  0.1691
+    180  planning        20            20   gated_contrast  0.7169  0.7380  1.1634
+    180  planning        20            20 gated_saturation  0.7167  0.7203  0.2217
+    180  planning        20            20       gate_fires  0.0403  0.0395 -0.1655
+    180  planning        10            30   gated_contrast  0.5648  0.5895  1.1902
+    180  planning        10            30 gated_saturation  0.5853  0.5755 -0.4876
+    180  planning        10            30       gate_fires  0.0395  0.0419  0.6437
+    180  planning        15            30   gated_contrast  0.7031  0.7232  1.0767
+    180  planning        15            30 gated_saturation  0.7177  0.7059 -0.7411
+    180  planning        15            30       gate_fires  0.0418  0.0421  0.0612
+    180  planning        20            30   gated_contrast  0.7652  0.7921  1.8048
+    180  planning        20            30 gated_saturation  0.7804  0.7802 -0.0165
+    180  planning        20            30       gate_fires  0.0449  0.0424 -0.5587
+
+11. PART B: THE PRIMARY PAIRED TEST WITH PAIR-SPECIFIC PREFERENCES
+------------------------------------------------------------------------------
+All nuisances at script 7's defaults plus a person x pair preference (logit SD; the
+same on a pair's repeat); adjusted model. Paired t-test = primary; Wilcoxon = robustness
+check. SD 1.5 rows are script 7's (read from its adjusted run); the others are
+new here. Strengths to be calibrated from agreement on repeated trials in the pilot
+[ASSUMPTIONS].
+  test                           t                                    wilcoxon                                   
+  feature                 contrast             saturation             contrast             saturation            
+  N                             10    15    20         10    15    20       10    15    20         10    15    20
+  size effect     pair_sd                                                                                        
+  150  half shift 1.0        0.260 0.326 0.406      0.201 0.268 0.326    0.223 0.302 0.376      0.175 0.246 0.307
+                  1.5        0.222 0.287 0.373      0.210 0.256 0.311    0.192 0.270 0.351      0.182 0.237 0.296
+                  2.0        0.218 0.262 0.323      0.178 0.218 0.251    0.186 0.248 0.307      0.154 0.202 0.241
+       planning   1.0        0.548 0.711 0.842      0.457 0.605 0.732    0.486 0.670 0.805      0.404 0.561 0.693
+                  1.5        0.495 0.645 0.768      0.414 0.562 0.692    0.443 0.614 0.742      0.370 0.529 0.666
+                  2.0        0.455 0.615 0.725      0.365 0.493 0.611    0.401 0.576 0.690      0.318 0.464 0.581
+  180  half shift 1.0        0.253 0.331 0.429      0.236 0.294 0.372    0.215 0.300 0.402      0.205 0.277 0.352
+                  1.5        0.254 0.331 0.405      0.219 0.279 0.348    0.215 0.301 0.375      0.187 0.258 0.331
+                  2.0        0.209 0.281 0.362      0.170 0.209 0.261    0.179 0.263 0.341      0.146 0.194 0.251
+       planning   1.0        0.564 0.720 0.835      0.492 0.641 0.778    0.497 0.677 0.792      0.436 0.604 0.742
+                  1.5        0.519 0.682 0.805      0.455 0.595 0.747    0.464 0.644 0.768      0.401 0.556 0.714
+                  2.0        0.475 0.642 0.757      0.423 0.551 0.672    0.425 0.609 0.726      0.371 0.517 0.636
+
+  Agreement on repeated trials (ordinary block, analysable people, planning pools):
+   size  pair_sd  agreement_O
+    150    1.000        0.594
+    150    1.500        0.621
+    150    2.000        0.663
+    180    1.000        0.583
+    180    1.500        0.617
+    180    2.000        0.658
+
+12. FILES
+------------------------------------------------------------------------------
+  c1.csv
+  c1_attention.csv
+  c1_gate.png
+  c1_power.png
+  c1_replicates.csv
+  c1_strategy_threat.png
+  checks.csv
+  paired_pair_sd.csv
+  paired_pair_sd.png
+  report.txt
+  run_meta.json
+  settings.json
+  summary.txt

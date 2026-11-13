@@ -1,0 +1,351 @@
+{
+  "PROJECT_ROOT": null,
+  "BLOCK_SIZES": [
+    150,
+    180
+  ],
+  "SCRIPT7": "simulate_power_paired_v5b_adj.py",
+  "C1_V4_SCRIPT": "simulate_c1_post_exclusion_v4.py",
+  "EXPECTED_SHA256": {
+    "simulate_power_paired_v5b_adj.py": "e7c7aa79c033e711d6f13c2aaf8dc75e66a558a152767c41e9696fc20afd1fd7",
+    "simulate_c1_post_exclusion_v4.py": "4d6c6fcee68d29c6e824b4ed99da3cd1edf6f372d6e9c06c49d30b0d137a0b13"
+  },
+  "PAIRED_RUN_DIR": "data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b",
+  "OUTPUT_ROOT": "data/power_v5b/c1_v5b",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "N_WORKERS": null,
+  "CHECK_ONE_WORKER": true,
+  "REPORT_GROUP": "participant",
+  "COMPARISON_GROUP": "control",
+  "REPORT_N": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "COMPARISON_N": [
+    20,
+    30
+  ],
+  "TABLE_N": [
+    10,
+    15,
+    20
+  ],
+  "V4_STYLE_EFFECTS": {
+    "v4-style: saturation only (0.5)": {
+      "share": 0.5,
+      "shift": [
+        0.5,
+        0.0
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    },
+    "v4-style: contrast only (0.7)": {
+      "share": 0.5,
+      "shift": [
+        0.0,
+        0.7
+      ],
+      "shift_sd": [
+        0.0,
+        0.0
+      ],
+      "shared": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "STRATEGY_SHARE": 0.25,
+  "STRATEGY_K": 0.5,
+  "LAPSE_EQUAL": [
+    0.1,
+    0.1
+  ],
+  "LAPSE_PAIRS": [
+    [
+      0.1,
+      0.15
+    ],
+    [
+      0.1,
+      0.2
+    ],
+    [
+      0.15,
+      0.1
+    ],
+    [
+      0.2,
+      0.1
+    ]
+  ],
+  "SHARED_PREFERENCES": [
+    [
+      0.25,
+      0.35
+    ],
+    [
+      0.5,
+      0.7
+    ]
+  ],
+  "THREAT_K": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "THREAT_DEFS": [
+    "corpus",
+    "orig"
+  ],
+  "PAIR_SDS": [
+    1.0,
+    2.0
+  ],
+  "PAIR_EFFECTS": [
+    "planning",
+    "half shift"
+  ],
+  "PAIR_SD_IN_SCRIPT7": 1.5,
+  "N_STUDIES": 10000,
+  "REPLICATE_ROWS": [
+    "no effect",
+    "planning"
+  ],
+  "CHECK_STUDIES": 300,
+  "MAX_Z": 3.5,
+  "SHARE_BEYOND": 0.1,
+  "SCIPY_CHECK_CELLS": [
+    [
+      "planning",
+      10,
+      20
+    ],
+    [
+      "planning",
+      20,
+      30
+    ],
+    [
+      "no effect, lapse report 0.1 / comparison 0.2",
+      10,
+      20
+    ],
+    [
+      "no effect, lapse report 0.1 / comparison 0.2",
+      20,
+      30
+    ]
+  ],
+  "RANDOM_SEED": 42,
+  "STREAM_KEY": "c1_v5b",
+  "script7_settings_used": {
+    "TASTE_SD": [
+      0.143,
+      0.244
+    ],
+    "LAPSE_MEAN": 0.1,
+    "LAPSE_BETWEEN_SD": 0.5,
+    "LAPSE_MAX": 0.9,
+    "CATCH_PER_BLOCK": 5,
+    "CATCH_P_FAIL_PER_LAPSE": 0.75,
+    "CATCH_FAIL_EXCLUDE": 3,
+    "EXCLUSION": true,
+    "POOL_PEOPLE": 50000,
+    "N_BATCHES": 20,
+    "PERSON_MODEL": "adjusted",
+    "NUISANCE_OFF": {
+      "taste_corr": 1.0,
+      "scene_sd_mult": 0.0,
+      "scene_corr": 0.7,
+      "common_scene_sd": 0.0,
+      "side_mean": 0.0,
+      "side_sd": 0.0,
+      "side_corr": 0.8,
+      "dull": [
+        0.0,
+        0.0
+      ],
+      "typical_share": 0.0,
+      "typical_k": 0.5,
+      "less_edited_share": 0.0,
+      "less_edited_k": 0.5,
+      "fatigue_lapse": 0.0,
+      "fatigue_scale": 1.0,
+      "fatigue_recovery": 0.0,
+      "episode_lapse": 0.0,
+      "differential_bias": [
+        0.0,
+        0.0
+      ],
+      "episode_strategy": null,
+      "lapse_drift": 0.0,
+      "pair_sd": 0.0
+    },
+    "NUISANCE_DEFAULT": {
+      "taste_corr": 0.7,
+      "scene_sd_mult": 1.0,
+      "scene_corr": 0.7,
+      "common_scene_sd": 0.0,
+      "side_mean": 0.0,
+      "side_sd": 0.25,
+      "side_corr": 0.8,
+      "dull": [
+        0.25,
+        0.35
+      ],
+      "typical_share": 0.25,
+      "typical_k": 0.5,
+      "less_edited_share": 0.25,
+      "less_edited_k": 0.5,
+      "fatigue_lapse": 0.03,
+      "fatigue_scale": 0.939,
+      "fatigue_recovery": 0.0,
+      "episode_lapse": 0.0,
+      "differential_bias": [
+        0.0,
+        0.0
+      ],
+      "episode_strategy": null,
+      "lapse_drift": 0.0,
+      "pair_sd": 0.0
+    },
+    "EFFECTS": {
+      "no effect": {
+        "share": 0.0,
+        "shift": [
+          0.0,
+          0.0
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "planning": {
+        "share": 0.5,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "half shift": {
+        "share": 0.5,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      },
+      "a quarter respond": {
+        "share": 0.25,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "a quarter respond, half shift": {
+        "share": 0.25,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      },
+      "all respond": {
+        "share": 1.0,
+        "shift": [
+          0.5,
+          0.7
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.0,
+          0.0
+        ]
+      },
+      "all respond, half shift": {
+        "share": 1.0,
+        "shift": [
+          0.25,
+          0.35
+        ],
+        "shift_sd": [
+          0.0,
+          0.0
+        ],
+        "shared": [
+          0.25,
+          0.35
+        ]
+      }
+    },
+    "N_GRID": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  }
+}
