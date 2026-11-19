@@ -1,0 +1,3 @@
+# run from the project folder; 'python' is the interpreter that ran the freeze
+cd data/frozen_trial_lists_v5c_rebuild/rebuild/work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python build_trials_v5c.py   # exit 0, 208.9 s, logs/script3.log
+cd data/frozen_trial_lists_v5c_rebuild/rebuild/work && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python make_trial_orders_v5c.py   # exit 0, 861.3 s, logs/script4.log

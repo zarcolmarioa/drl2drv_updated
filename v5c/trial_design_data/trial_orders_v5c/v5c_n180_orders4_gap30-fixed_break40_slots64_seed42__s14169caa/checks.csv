@@ -1,0 +1,176 @@
+scope,check,status,detail
+preflight,script 3 run (n=180) found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2
+preflight,set_A.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/set_A.csv
+preflight,set_B.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/set_B.csv
+preflight,practice_block1.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/practice_block1.csv
+preflight,practice_block2.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/practice_block2.csv
+preflight,set_info.json found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/set_info.json
+preflight,checks.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/checks.csv
+preflight,manifest.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/manifest.csv
+preflight,candidates.csv found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/candidates.csv
+preflight,settings.json found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/settings.json
+preflight,stimuli/ found,PASS,data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/stimuli
+preflight,stimulus set (from set_info) found,PASS,data/stimulus_set_v5/7fd72262ba
+preflight,checksums.sha256 found,PASS,data/stimulus_set_v5/7fd72262ba/checksums.sha256
+preflight,FROZEN.json found,PASS,data/stimulus_set_v5/7fd72262ba/FROZEN.json
+preflight,"v5b_180 run (fields, balance) found",PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1
+preflight,checks.csv found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/checks.csv
+preflight,scene_gap_search.csv found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/scene_gap_search.csv
+preflight,package/design.json found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/design.json
+preflight,package/assignment.json found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/assignment.json
+preflight,package/assignment.csv found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/assignment.csv
+preflight,package/items.csv found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/items.csv
+preflight,package/preload.json found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/preload.json
+preflight,package/lists/A_o1.json found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/lists/A_o1.json
+preflight,package/practice/block1.json found,PASS,data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1/package/practice/block1.json
+preflight,v5b 180 build (regression) found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa
+preflight,set_A.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/set_A.csv
+preflight,set_B.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/set_B.csv
+preflight,practice_block1.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/practice_block1.csv
+preflight,practice_block2.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/practice_block2.csv
+preflight,set_info.json found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/set_info.json
+preflight,checks.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/checks.csv
+preflight,manifest.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/manifest.csv
+preflight,candidates.csv found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/candidates.csv
+preflight,settings.json found,PASS,data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/settings.json
+script 3,folder has no BUILD_FAILED.txt and no failing check,PASS,109 checks
+script 3,"set files agree with set_info.json (version, size, counts per type, consistency, catch, practice)",PASS,"180 analysed (sat_only 54, fog_only 54, together 36, conflict 36), 15 consistency, 5 catch per set; practice [3, 3]"
+breaks,"a break every 40 main trials (= ceil(200 / 5)) gives exactly 5 stretches, which are the segments",PASS,"breaks after trials [40, 80, 120, 160]; stretches [40, 40, 40, 40, 40]"
+breaks,no short final stretch: every stretch has at least 40 - 4 = 36 trials,PASS,shortest 40
+scene gap,all 4 orders of both sets can be built with a scene gap of at least 30,PASS,"largest achievable 31 (searched 30-40, 20000 attempts per set per gap)"
+orders A,40 valid candidate orders built,PASS,"40 in 12847 attempts; failures {'dead end': 12768, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 39}"
+orders A,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [17, 36, 20, 31]"
+A_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o1,scene gap >= 30,PASS,smallest 30
+A_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o1,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 31, last 17 from the end"
+A_o1,same type at most 4 in a row,PASS,longest 2
+A_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.008
+A_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.001, x_con -0.001"
+A_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o2,scene gap >= 30,PASS,smallest 30
+A_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o2,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 24, last 39 from the end"
+A_o2,same type at most 4 in a row,PASS,longest 2
+A_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.009
+A_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.003, x_con -0.001"
+A_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o3,scene gap >= 30,PASS,smallest 30
+A_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o3,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 21, last 16 from the end"
+A_o3,same type at most 4 in a row,PASS,longest 2
+A_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+A_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.010
+A_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.003, x_con +0.001"
+A_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+A_o4,scene gap >= 30,PASS,smallest 30
+A_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+A_o4,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 28, last 29 from the end"
+A_o4,same type at most 4 in a row,PASS,longest 2
+A_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+A_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+A_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.011
+A_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat -0.003, x_con +0.001"
+orders A,every order is a permutation of the set,PASS,
+orders A,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.141
+orders B,40 valid candidate orders built,PASS,"40 in 13500 attempts; failures {'dead end': 13422, 'built, but fails: type spread: every type within 1 of its share in each of 5 segments': 38}"
+orders B,"4 orders kept, pairwise |rank correlation| <= 0.3",PASS,"candidates [4, 3, 5, 16]"
+B_o1,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o1,scene gap >= 30,PASS,smallest 30
+B_o1,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o1,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 37, last 23 from the end"
+B_o1,same type at most 4 in a row,PASS,longest 2
+B_o1,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o1,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+B_o1,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.010
+B_o1,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.001, x_con +0.001"
+B_o2,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o2,scene gap >= 30,PASS,smallest 30
+B_o2,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o2,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 11, last 12 from the end"
+B_o2,same type at most 4 in a row,PASS,longest 2
+B_o2,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o2,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+B_o2,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.009
+B_o2,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.001, x_con -0.001"
+B_o3,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o3,scene gap >= 30,PASS,smallest 30
+B_o3,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o3,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 12, last 37 from the end"
+B_o3,same type at most 4 in a row,PASS,longest 2
+B_o3,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o3,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.007
+B_o3,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.009
+B_o3,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.002, x_con +0.001"
+B_o4,type spread: every type within 1 of its share in each of 5 segments,PASS,worst 0.75
+B_o4,scene gap >= 30,PASS,smallest 30
+B_o4,"consistency repeats after their originals, >= 40 apart",PASS,smallest 40
+B_o4,"one catch per segment (= per stretch between breaks), none in the first or last 10",PASS,"per segment 1/1/1/1/1, first at 16, last 19 from the end"
+B_o4,same type at most 4 in a row,PASS,longest 2
+B_o4,predicted image on the same side at most 4 in a row,PASS,longest 4
+B_o4,mean position of each analysed type within 0.05 of the centre,PASS,worst 0.008
+B_o4,mean position of each type x magnitude bin within 0.1 of the centre,PASS,worst 0.009
+B_o4,"|corr(position, size of difference)| <= 0.1",PASS,"x_sat +0.000, x_con -0.000"
+orders B,every order is a permutation of the set,PASS,
+orders B,the kept orders differ (largest pairwise |rank correlation| <= 0.3),PASS,0.138
+assignment,every one of the 16 cells (block order x set mapping x order) appears 4 times in 64 slots,PASS,counts [4]
+assignment,"first 10 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 15 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.75, block order x set mapping 0.75"
+assignment,"first 20 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+assignment,"first 30 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0.5, block order x set mapping 0.5"
+assignment,"first 64 slots: every factor within 1 of an even split, and block order x set mapping too",PASS,"worst factor 0, block order x set mapping 0"
+assignment,"slots beyond 64 (row ((n - 1) mod 64) + 1): after every 64 slots, up to 256, every factor and every pair of factors is exactly balanced",PASS,"checked at [64, 128, 192, 256]"
+assignment,"slots beyond 64: the balance after n slots equals the balance after (n mod 64) slots for every n up to 256, so it is never worse than within the first 64",PASS,"worst over every prefix up to 256: block_order 0.5, set_mapping 0.5, order 0.75, block order x set mapping 0.75"
+items,items.csv has one row per item_id,PASS,406 items
+lists,"A_o1: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o2: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o3: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"A_o4: exactly set A's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o1: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o2: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o3: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"B_o4: exactly set B's rows of script 3, apart from order (every item once, every carried field equal)",PASS,200 rows
+lists,"practice block 1: script 3's practice rows, in its order, every carried field equal",PASS,3 rows
+lists,"practice block 2: script 3's practice rows, in its order, every carried field equal",PASS,3 rows
+items,"every list and practice row's item_id is in items.csv, and the fields they share agree",PASS,"1606 rows, 20 shared fields"
+normality,every order of a set gives the same leak and information (the orders only rearrange the set),PASS,largest difference between orders 2.8e-14
+normality,"the leak (overall and per limited type, both definitions) and the information recomputed from the packaged lists equal script 3's",PASS,"128 values compared, largest difference 2.8e-14"
+package,every preloaded image ships in stimuli/,PASS,"617 preloaded, 632 shipped"
+stimulus set,checksums.sha256 is the frozen one (FROZEN.json) and the one script 3 recorded (set_info.json),PASS,data/stimulus_set_v5/7fd72262ba: SHA-256 10d969db80459817...
+rule set,"the rules in words (final_r3) match script 3's set_info.json: the rule set, its levers and its minimum differences",PASS,"levers {'COLOUR_ONLY_ALLOW_HIGH_3': False, 'COLOUR_ONLY_ALLOW_LOW_2': True, 'CONTRAST_ONLY_ALLOW_LOW_2': True}; minimums (SD) sat_only 0.300, fog_only 0.450, mixed_sat 0.204, mixed_con 0.321"
+practice,"design.json, script 3's set_info.json and the practice files agree (trials per block, feedback per block)",PASS,"design.json [3, 3] feedback {'1': True, '2': True}; set_info.json [3, 3] feedback {'1': True, '2': True}; files [3, 3]; feedback on 3 trials (the setting PRACTICE_FEEDBACK_TRIALS (set_info.json does not record it))"
+fields,"the list and practice rows keep v5b_180's fields (JSON keys and CSV headers, in order)",PASS,lists json: same (8 v5b files); lists csv: same (8 v5b files); practice json: same (2 v5b files); practice csv: same (2 v5b files)
+regression,with v5b's settings on v5b's 180 build: lists/A_o1.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o1.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o2.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o2.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o3.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o3.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o4.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/A_o4.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o1.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o1.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o2.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o2.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o3.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o3.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o4.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/B_o4.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: practice/block1.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: practice/block1.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: practice/block2.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: practice/block2.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: lists/ (the same list files) equals v5b_180's (names apart),PASS,8 lists
+regression,with v5b's settings on v5b's 180 build: assignment.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: assignment.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: preload.json equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: items.csv equals v5b_180's (names apart),PASS,
+regression,with v5b's settings on v5b's 180 build: design.json equals v5b_180's (names apart),PASS,"exact; names left out: ['version', 'package', 'source.script4', 'source.script4_sha256']; v5c-only keys not compared: bin_quotas, excluded_scenes, images_note, practice_feedback_trials, rule_set, source.script3_files_sha256"
+regression,with v5b's settings on v5b's 180 build: the regression's own checks equals v5b_180's (names apart),PASS,0 FAIL of 109
+package,every shipped image matches script 3's manifest (SHA-256),PASS,"632 images, 0 differ"
+stimulus set,every packaged image matches the stimulus set's checksums.sha256,PASS,"632 images, 0 differ or are not listed"

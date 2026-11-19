@@ -1,0 +1,7 @@
+gap,set,attempts,valid,reasons
+30,A,1132,4,"{""dead end"": 1125, ""built, but fails: type spread: every type within 1 of its share in each of 5 segments"": 3}"
+30,B,1709,4,"{""dead end"": 1701, ""built, but fails: type spread: every type within 1 of its share in each of 5 segments"": 4}"
+31,A,7211,4,"{""dead end"": 7202, ""built, but fails: type spread: every type within 1 of its share in each of 5 segments"": 5}"
+31,B,10347,4,"{""dead end"": 10341, ""built, but fails: type spread: every type within 1 of its share in each of 5 segments"": 2}"
+32,A,20000,0,"{""dead end"": 19998, ""built, but fails: type spread: every type within 1 of its share in each of 5 segments"": 2}"
+32,B,20000,0,"{""dead end"": 20000}"

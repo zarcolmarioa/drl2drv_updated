@@ -1,0 +1,111 @@
+{
+  "SCRIPT3_DIRS": {
+    "180": "data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2"
+  },
+  "SCRIPT3_VERSION": "v5c",
+  "PACKAGE_NAME": "v5c_{size}",
+  "VERSION": "v5c",
+  "N_ORDERS": 4,
+  "N_ORDER_CANDIDATES": 40,
+  "MAX_ATTEMPTS": 100000,
+  "SEGMENTS": 5,
+  "BREAK_EVERY": "per_segment",
+  "TYPE_SPREAD_TOL": 1,
+  "SCENE_GAP": 30,
+  "SCENE_GAP_SEARCH_MAX": 40,
+  "SCENE_GAP_POLICY": "fixed",
+  "GAP_SEARCH_ATTEMPTS": 20000,
+  "CONSISTENCY_MIN_DISTANCE": 40,
+  "CATCH_EDGE": 10,
+  "MAX_TYPE_RUN": 4,
+  "MAX_SIDE_RUN": 4,
+  "ORIGINAL_WEIGHT": 3.0,
+  "SCENE_WEIGHT_POWER": 1.0,
+  "POS_TOL_TYPE": 0.05,
+  "POS_TOL_BIN": 0.1,
+  "POS_CORR_TOL": 0.1,
+  "ORDER_CORR_MAX": 0.3,
+  "GROUPS": {
+    "participant": [
+      "derealization",
+      "ordinary"
+    ],
+    "control": [
+      "ordinary",
+      "expectation"
+    ]
+  },
+  "N_SLOTS": 64,
+  "SLOT_PARAM": "slot",
+  "BALANCE_PREFIXES": [
+    10,
+    15,
+    20,
+    30,
+    64
+  ],
+  "ASSIGN_RESTARTS": 60,
+  "BALANCE_TOL": 1.0,
+  "SLOT_WRAP_CYCLES": 4,
+  "REST_BETWEEN_BLOCKS": true,
+  "PRACTICE_FEEDBACK": "from_script3",
+  "PRACTICE_FEEDBACK_TRIALS": 3,
+  "CATCH_KEYS": [
+    "ArrowUp",
+    "ArrowDown"
+  ],
+  "CATCH_MAX_RUN": 2,
+  "OUTPUT_ROOT": "data/trial_orders_v5c",
+  "ON_EXISTING": "new",
+  "RANDOM_SEED": 42,
+  "V5B_PACKAGE_DIR": "data/trial_orders_v5b/v5b_n180_orders4_gap30-fixed_break40_slots64_seed42__s20227fe1",
+  "REGRESSION_CHECK": true,
+  "REGRESSION_SCRIPT3_DIR": "data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa",
+  "REGRESSION_SETTINGS": {
+    "PRACTICE_FEEDBACK": [
+      true,
+      false
+    ],
+    "PACKAGE_NAME": "v5b_{size}",
+    "VERSION": "v5b",
+    "SCRIPT3_VERSION": "v5b",
+    "BLOCK_SIZE": 180
+  },
+  "REGRESSION_NAME_KEYS": [
+    "version",
+    "package",
+    "source.script4",
+    "source.script4_sha256"
+  ],
+  "REGRESSION_RTOL": 1e-09,
+  "GAP_REPORT_BELOW": true,
+  "EXPERIMENT_REPO": "zarcolmarioa/dpdr_experiment_v5",
+  "V5B_PACKAGE_NAME": "v5b_180",
+  "RULES_IN_WORDS": {
+    "final_r3": [
+      "colour only: the two images 3 or 4 colour levels apart with the lower image at or below -1, or 2 levels apart with both at or below 0; at least 0.30 SD apart in measured saturation; the same contrast level, within +-2 of the original",
+      "contrast only: 3 or 4 contrast levels apart, or 2 levels apart with the higher image at or below -1; at least 0.45 SD apart in measured contrast; the same colour level, within +-2 of the original",
+      "together and conflict: exactly 2 levels apart on both features; at least 0.20 SD (saturation) and 0.32 SD (contrast) apart, at most 1.2 SD on each; at most one of the two features at +-3; conflict pairs balanced",
+      "pair types come from the measured differences; magnitude bins are the levels apart (2 / 3 / 4) for colour only and contrast only, one bin for together and conflict, with quotas in proportion to the pool"
+    ]
+  },
+  "RULES_LEVERS": {
+    "final_r3": {
+      "COLOUR_ONLY_ALLOW_HIGH_3": false,
+      "COLOUR_ONLY_ALLOW_LOW_2": true,
+      "CONTRAST_ONLY_ALLOW_LOW_2": true
+    }
+  },
+  "RULES_MIN_SD": {
+    "final_r3": {
+      "sat_only": 0.3,
+      "fog_only": 0.45,
+      "mixed_sat": 0.2,
+      "mixed_con": 0.32
+    }
+  },
+  "PLACES365_NOTE": "The images are edited versions of photographs from Places365, whose copyright belongs to the images' owners. This package can be archived and cited, but the images should not be redistributed publicly until their licence is confirmed. The stimulus set's sources.csv (the Places365 file of every scene) and its checksums allow anyone with Places365 to rebuild the images and verify them.",
+  "STOP_BEFORE_IMAGES": false,
+  "BLOCK_SIZE": 180,
+  "SCRIPT3_DIR": "data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2"
+}

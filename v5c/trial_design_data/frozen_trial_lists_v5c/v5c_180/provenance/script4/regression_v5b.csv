@@ -1,0 +1,28 @@
+file,equal,note
+lists/A_o1.json,True,
+lists/A_o1.csv,True,
+lists/A_o2.json,True,
+lists/A_o2.csv,True,
+lists/A_o3.json,True,
+lists/A_o3.csv,True,
+lists/A_o4.json,True,
+lists/A_o4.csv,True,
+lists/B_o1.json,True,
+lists/B_o1.csv,True,
+lists/B_o2.json,True,
+lists/B_o2.csv,True,
+lists/B_o3.json,True,
+lists/B_o3.csv,True,
+lists/B_o4.json,True,
+lists/B_o4.csv,True,
+practice/block1.json,True,
+practice/block1.csv,True,
+practice/block2.json,True,
+practice/block2.csv,True,
+lists/ (the same list files),True,8 lists
+assignment.json,True,
+assignment.csv,True,
+preload.json,True,
+items.csv,True,
+design.json,True,"exact; names left out: ['version', 'package', 'source.script4', 'source.script4_sha256']; v5c-only keys not compared: bin_quotas, excluded_scenes, images_note, practice_feedback_trials, rule_set, source.script3_files_sha256"
+the regression's own checks,True,0 FAIL of 109

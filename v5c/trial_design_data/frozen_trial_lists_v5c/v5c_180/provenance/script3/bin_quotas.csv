@@ -1,0 +1,9 @@
+type,bin,levels_apart,quota,quota_script1_run,shipped_A,shipped_B,pool_pairs
+sat_only,1,2,14,14,14,14,420
+sat_only,2,3,20,20,20,20,630
+sat_only,3,4,20,20,20,20,630
+fog_only,1,2,8,8,8,8,208
+fog_only,2,3,27,27,27,27,754
+fog_only,3,4,19,19,19,19,536
+together,1,2,36,36,36,36,882
+conflict,1,2,36,36,36,36,882
