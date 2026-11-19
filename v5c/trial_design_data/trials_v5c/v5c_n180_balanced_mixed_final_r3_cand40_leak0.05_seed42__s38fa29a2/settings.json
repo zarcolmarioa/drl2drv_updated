@@ -1,0 +1,469 @@
+{
+  "script3": {
+    "CAPACITY_SCRIPT": "analyse_pair_capacity_v5c.py",
+    "V4_SIM_SCRIPT": "simulate_power_v4_n10_20.py",
+    "CAPACITY_OVERRIDES": {},
+    "STIMULUS_SET_DIR": "data/stimulus_set_v5/7fd72262ba",
+    "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "STIMULI_SRC": "data/stimulus_set_v5/7fd72262ba/stimuli",
+    "CHECKSUMS_FILE": "data/stimulus_set_v5/7fd72262ba/checksums.sha256",
+    "FROZEN_FILE": "data/stimulus_set_v5/7fd72262ba/FROZEN.json",
+    "SCRIPT1_RUN_DIR": "data/pair_capacity_v5c/*__sd5d75fc0",
+    "SCRIPT2_RUN_DIR": "data/block_length_v5c/*__s90dac6dc",
+    "BLOCK_SIZES": [
+      180
+    ],
+    "THRESHOLD_SET": "final_r3",
+    "MIX": "balanced_mixed",
+    "MIX_SHARES": {
+      "sat_only": 0.3,
+      "fog_only": 0.3,
+      "together": 0.2,
+      "conflict": 0.2
+    },
+    "N_CANDIDATES": 40,
+    "N_WORKERS": 4,
+    "LEAK_LIMIT": 0.05,
+    "TYPE_LIMITS": {
+      "sat_only": [
+        "sat",
+        0.05
+      ],
+      "fog_only": [
+        "con",
+        0.05
+      ],
+      "conflict": [
+        "con",
+        0.1
+      ]
+    },
+    "TYPE_TARGET_SHARE": 0.95,
+    "COMPARE_LIMIT_STEPS": true,
+    "LIMIT_STEPS": [
+      [
+        "overall only",
+        []
+      ],
+      [
+        "+ single-feature",
+        [
+          "sat_only",
+          "fog_only"
+        ]
+      ],
+      [
+        "+ conflict",
+        [
+          "sat_only",
+          "fog_only",
+          "conflict"
+        ]
+      ]
+    ],
+    "COST_RULE": [
+      0.05,
+      5
+    ],
+    "REPAIR_TARGET": 0.04,
+    "REPAIR_TIGHTEN": 0.75,
+    "REPAIR_TRIES": 3,
+    "REPAIR_INFO_TOL_TOTAL": 0.03,
+    "REPAIR_INFO_TOL_TYPE": 0.08,
+    "REPAIR_MIP_GAP": 0.02,
+    "REPAIR_TIME_LIMIT": 60,
+    "WIDE_MIN_PASSING": 5,
+    "WIDE_MAX_PER_CELL": 12,
+    "SELECTION_ROUND": 6,
+    "CONSISTENCY_RATE": 0.08333333333333333,
+    "PRACTICE_BY_BLOCK": [
+      3,
+      3
+    ],
+    "PRACTICE_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together"
+    ],
+    "PRACTICE_MAG_QUANTILE": 0.6,
+    "PRACTICE_FEEDBACK_BY_BLOCK": [
+      true,
+      true
+    ],
+    "CATCH_PER_BLOCK": 5,
+    "CATCH_MODE": "no_images",
+    "CATCH_POOL_TYPE": "together",
+    "CATCH_EXCLUDE_AT": 3,
+    "IMAGE_PX": 512,
+    "FEATURE_TARGET_SIZE": [
+      256,
+      256
+    ],
+    "REMEASURE_TOL": 0.0001,
+    "N_THRESHOLD_PEOPLE": 20000,
+    "THRESHOLD_ALPHA": 0.025,
+    "V4_CHOICE_PROB": [
+      0.6191,
+      0.6104
+    ],
+    "PLANNING_WEIGHTS": [
+      0.5,
+      0.7
+    ],
+    "INFORMATIVE_SD": 0.2,
+    "SET_THRESHOLD_TOL": 0.05,
+    "OUTPUT_ROOT": "data/trials_v5c",
+    "ON_EXISTING": "new",
+    "RANDOM_SEED": 42,
+    "STREAM_LABEL": "build_trials_v5b",
+    "REGRESSION_CHECK": true,
+    "REGRESSION_RUN_DIR": "data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa",
+    "REGRESSION_SETTINGS": {
+      "THRESHOLD_SET": "v5units",
+      "PRACTICE_BY_BLOCK": [
+        6,
+        3
+      ],
+      "BLOCK_SIZE": 180
+    },
+    "REGRESSION_RTOL": 1e-09,
+    "MAKE_PAIR_SHEETS": true,
+    "PAIR_SHEETS_ROOT": "data/pair_sheets_v5c",
+    "SHEET_GAP_PX": 32,
+    "SHEET_MARGIN_PX": 24,
+    "SHEET_BACKGROUND": "#7f7f7f",
+    "SHEET_JPEG_QUALITY": 92,
+    "SHEET_FONT_SIZE": 17,
+    "SHEET_FONTS": [
+      "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+      "/usr/share/fonts/TTF/DejaVuSans.ttf",
+      "/usr/share/fonts/dejavu/DejaVuSans.ttf",
+      "/Library/Fonts/Arial.ttf",
+      "C:/Windows/Fonts/arial.ttf"
+    ],
+    "SHEET_RATINGS": [
+      "Fine",
+      "Too similar",
+      "Too different",
+      "Looks odd"
+    ],
+    "SHEET_DEFAULT_ORDER": "shuffled",
+    "STOP_BEFORE_IMAGES": false,
+    "WHERE": [
+      "at or below",
+      "straddling",
+      "at or above"
+    ],
+    "TYPE_FEATURES": {
+      "sat_only": [
+        "colour"
+      ],
+      "fog_only": [
+        "contrast"
+      ],
+      "together": [
+        "colour",
+        "contrast"
+      ],
+      "conflict": [
+        "colour",
+        "contrast"
+      ]
+    },
+    "LEAK_TERM": {
+      "sat_only": "sat",
+      "fog_only": "con",
+      "conflict": "con",
+      "together": "sat"
+    },
+    "SHEET_JS": "\nconst KEY = \"pair_sheets_v5c_\" + DATA.hash;\nlet R = {};\ntry { R = JSON.parse(localStorage.getItem(KEY) || \"{}\") || {}; } catch (e) { R = {}; }\nfunction save() { try { localStorage.setItem(KEY, JSON.stringify(R)); } catch (e) {} }\nconst list = document.getElementById(\"list\");\nconst cards = {};\nfunction el(tag, attrs, text) {\n  const e = document.createElement(tag);\n  for (const k in (attrs || {})) e.setAttribute(k, attrs[k]);\n  if (text !== undefined) e.textContent = text;\n  return e;\n}\nfunction rated(p) { return !!(R[p.id] && R[p.id].rating); }\nDATA.pairs.forEach(p => {\n  const c = el(\"div\", {\"class\": \"card\", \"id\": \"p\" + p.n});\n  c.appendChild(el(\"div\", {\"class\": \"num\"}, \"Pair \" + p.n));\n  const sh = el(\"div\", {\"class\": \"sheet\", \"style\": \"--hs: \" + p.hs + \"px; width: \" + p.w + \"px\"});\n  sh.appendChild(el(\"img\", {\"src\": p.img, \"alt\": \"pair \" + p.n, \"loading\": \"lazy\",\n                            \"width\": p.w, \"height\": p.h}));\n  c.appendChild(sh);\n  const rt = el(\"div\", {\"class\": \"rate\"});\n  DATA.ratings.forEach(r => {\n    const l = el(\"label\");\n    const i = el(\"input\", {\"type\": \"radio\", \"name\": \"r\" + p.n, \"value\": r});\n    if (R[p.id] && R[p.id].rating === r) i.checked = true;\n    i.addEventListener(\"change\", () => {\n      R[p.id] = Object.assign(R[p.id] || {}, {rating: r, t: new Date().toISOString()});\n      save(); c.classList.add(\"rated\"); count();\n    });\n    l.appendChild(i); l.appendChild(document.createTextNode(\" \" + r));\n    rt.appendChild(l);\n  });\n  const note = el(\"input\", {\"type\": \"text\", \"class\": \"note\", \"placeholder\": \"note (optional)\"});\n  note.value = (R[p.id] && R[p.id].note) || \"\";\n  note.addEventListener(\"input\", () => {\n    R[p.id] = Object.assign(R[p.id] || {}, {note: note.value});\n    save();\n  });\n  rt.appendChild(note);\n  c.appendChild(rt);\n  if (rated(p)) c.classList.add(\"rated\");\n  cards[p.n] = c;\n});\nfunction count() {\n  const n = DATA.pairs.filter(rated).length;\n  document.getElementById(\"count\").textContent = n + \" of \" + DATA.pairs.length + \" rated\";\n}\nfunction render() {\n  const f = {};\n  [\"fset\", \"ftype\", \"fbin\", \"fwc\", \"fwf\"].forEach(id => f[id] = document.getElementById(id).value);\n  const un = document.getElementById(\"unrated\").checked;\n  const ord = document.getElementById(\"order\").value;\n  const idx = ord === \"grouped\" ? DATA.order_grouped : DATA.order_shuffled;\n  list.innerHTML = \"\";\n  idx.forEach(i => {\n    const p = DATA.pairs[i];\n    if (f.fset && p.set !== f.fset) return;\n    if (f.ftype && p.type !== f.ftype) return;\n    if (f.fbin && p.bin !== f.fbin) return;\n    if (f.fwc && p.where_colour !== f.fwc) return;\n    if (f.fwf && p.where_contrast !== f.fwf) return;\n    if (un && rated(p)) return;\n    list.appendChild(cards[p.n]);\n  });\n}\nfunction csvCell(v) {\n  v = (v === undefined || v === null) ? \"\" : String(v);\n  return /[\",\\n\\r]/.test(v) ? '\"' + v.replace(/\"/g, '\"\"') + '\"' : v;\n}\nfunction download() {\n  const cols = [\"item_id\", \"pair_number\", \"run\", \"set\", \"type\", \"bin\", \"left_levels\",\n                \"right_levels\", \"levels_apart\", \"where_colour\", \"where_contrast\",\n                \"d_sat_sd\", \"d_con_sd\", \"rating\", \"note\", \"rated_at\"];\n  const lines = [cols.join(\",\")];\n  DATA.pairs.slice().sort((a, b) => a.n - b.n).forEach(p => {\n    const r = R[p.id] || {};\n    lines.push([p.id, p.n, DATA.run, p.set, p.type, p.bin, p.left_levels, p.right_levels,\n                p.levels_apart, p.where_colour, p.where_contrast, p.d_sat_sd.toFixed(4),\n                p.d_con_sd.toFixed(4), r.rating || \"\", r.note || \"\", r.t || \"\"]\n               .map(csvCell).join(\",\"));\n  });\n  const blob = new Blob([lines.join(\"\\n\") + \"\\n\"], {type: \"text/csv\"});\n  const a = document.createElement(\"a\");\n  a.href = URL.createObjectURL(blob);\n  a.download = \"ratings_\" + DATA.hash + \".csv\";\n  document.body.appendChild(a); a.click(); a.remove();\n}\ndocument.getElementById(\"hide\").addEventListener(\"change\", e => {\n  document.body.classList.toggle(\"hide\", e.target.checked);\n});\n[\"fset\", \"ftype\", \"fbin\", \"fwc\", \"fwf\", \"unrated\", \"order\"].forEach(id =>\n  document.getElementById(id).addEventListener(\"change\", render));\ndocument.getElementById(\"dl\").addEventListener(\"click\", download);\ndocument.getElementById(\"order\").value = DATA.default_order;\ncount(); render();\n",
+    "BLOCK_SIZE": 180
+  },
+  "script1_in_force": {
+    "BALANCED_CONFLICT_ONLY": true,
+    "BALANCE_ASSIGNMENT": true,
+    "BALANCE_HI": 1.7,
+    "BALANCE_LO": 0.6,
+    "BIN_EDGE_DECIMALS": 4,
+    "BIN_QUANTILES": {
+      "sat_only": [
+        0.2,
+        0.4,
+        0.6,
+        0.8
+      ],
+      "fog_only": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "together": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "conflict": [
+        0.3333333333333333,
+        0.6666666666666666
+      ]
+    },
+    "BLOCK_SIZES": [
+      150,
+      180,
+      200
+    ],
+    "CATCH_TYPE": "together",
+    "CELLS_PER_SCENE": 49,
+    "COLOUR_ONLY_ALLOW_HIGH_3": false,
+    "COLOUR_ONLY_ALLOW_LOW_2": true,
+    "COLOUR_ONLY_LEVELS": [
+      3,
+      4
+    ],
+    "COLOUR_ONLY_LOWER_MAX": -1,
+    "COLOUR_ONLY_LOW_2_MAX_HIGH": 0,
+    "COLOUR_ONLY_SHARED_CONTRAST_MAX": 2,
+    "CONFLICT_LEVELS": [
+      [
+        2,
+        2
+      ]
+    ],
+    "CONTRAST_ONLY_ALLOW_LOW_2": true,
+    "CONTRAST_ONLY_LEVELS": [
+      3,
+      4
+    ],
+    "CONTRAST_ONLY_LOW_2_MAX_HIGH": -1,
+    "CONTRAST_ONLY_SHARED_COLOUR_MAX": 2,
+    "CON_TOL_SD": 0.07702182284980744,
+    "COS_DIFF_MAX": 0.05,
+    "DISJOINT": "pair",
+    "EPS": 1e-09,
+    "EXCLUDE_IMAGES": [],
+    "EXCLUDE_REASON": "edits look too similar to the unedited photo and to each other in the preview galleries (rounds 1-3)",
+    "EXCLUDE_SCENES": [
+      "bathroom_00001909",
+      "dining_hall_00001273",
+      "gymnasium_indoor_00003333",
+      "shower_00000779",
+      "auditorium_00001394"
+    ],
+    "EXPECTED_POOL": null,
+    "FOG_SIGN": -1.0,
+    "ILP_TIME_LIMIT": 60,
+    "INFO_TOL_TOTAL": 0.05,
+    "INFO_TOL_TYPE": 0.1,
+    "KS_MAX_D": 0.1,
+    "LEVEL_BINS": {
+      "sat_only": [
+        2,
+        3,
+        4
+      ],
+      "fog_only": [
+        2,
+        3,
+        4
+      ]
+    },
+    "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "MAX_CAP_SEARCH": 4,
+    "MAX_LEVEL": 3,
+    "MAX_PER_SCENE_PER_TYPE": 2,
+    "MIN_PAIRS_PER_BIN": 10,
+    "MIN_SCENE_SHARE": 0.85,
+    "MIXED_MAX_SD": 1.2,
+    "NORMALITY_DEFS": [
+      "corpus",
+      "orig"
+    ],
+    "N_CATCH_PER_BLOCK": 10,
+    "N_DRAWS": 20,
+    "N_PRACTICE_PER_BLOCK": 6,
+    "N_SCENES_EXPECTED": 47,
+    "ON_EXISTING": "new",
+    "OUTPUT_ROOT": "data/pair_capacity_v5c",
+    "PRACTICE_MAG_QUANTILE": 0.6,
+    "PRACTICE_TYPES": [
+      "sat_only",
+      "fog_only",
+      "together"
+    ],
+    "PREVIEW_RUN_DIR": "data/pair_preview_v5b/dccee92d95",
+    "RANDOM_SEED": 42,
+    "REPRODUCTION_RTOL": 1e-09,
+    "REQUIRED_PASS_SHARE": 0.9,
+    "RULE_SETS": {
+      "v5units": {
+        "final_rules": false,
+        "exclude": false,
+        "bins": "quantile",
+        "quotas": "even"
+      },
+      "v5units_x": {
+        "final_rules": false,
+        "exclude": true,
+        "bins": "quantile",
+        "quotas": "even"
+      },
+      "final_r3": {
+        "final_rules": true,
+        "exclude": true,
+        "bins": "levels",
+        "quotas": "pool"
+      }
+    },
+    "SAT_TOL_SD": 0.07656576999642693,
+    "SCENE_COLS": [
+      "scene_id",
+      "category",
+      "group",
+      "indoor"
+    ],
+    "SCENE_MATCH": "scene_bin",
+    "SD_FOG": 9.348,
+    "SD_SAT": 39.182,
+    "SIDE_COLS": {
+      "filename": "file",
+      "sat_mean": "sat",
+      "contrast_local": "fog",
+      "contrast_level": "contrast_level",
+      "colour_level": "colour_level",
+      "contrast_step": "contrast_step",
+      "colour_step": "colour_step",
+      "is_original": "is_original",
+      "contrast_param": "contrast_param",
+      "comp_k": "comp_k",
+      "colour_k": "colour_k",
+      "d_sat_sd": "change_sat",
+      "d_con_sd": "change_con",
+      "z_sat": "z_sat",
+      "z_con": "z_con",
+      "dist_corpus": "dist_corpus",
+      "dist_corpus_sat": "dist_corpus_sat",
+      "dist_corpus_con": "dist_corpus_con",
+      "dist_orig": "dist_orig",
+      "dist_orig_sat": "dist_orig_sat",
+      "dist_orig_con": "dist_orig_con"
+    },
+    "SPREAD_SCENES": true,
+    "STRADDLE_TOL_SD": 0.02,
+    "SUPPLY_GRID": {
+      "sat_only": [
+        0.2,
+        0.3,
+        0.45,
+        0.6,
+        0.79,
+        1.0,
+        1.3
+      ],
+      "fog_only": [
+        0.2,
+        0.3,
+        0.45,
+        0.6,
+        0.79,
+        1.0,
+        1.3
+      ],
+      "mixed_sat": [
+        0.1,
+        0.2,
+        0.3,
+        0.45
+      ],
+      "mixed_con": [
+        0.2,
+        0.3,
+        0.45,
+        0.6
+      ]
+    },
+    "THRESHOLD_SETS": {
+      "v5units": {
+        "sat_only": 0.7937318156296258,
+        "fog_only": 0.4492939666238768,
+        "mixed_sat": 0.20417538665713847,
+        "mixed_con": 0.32092426187419765
+      },
+      "v5units_x": {
+        "sat_only": 0.7937318156296258,
+        "fog_only": 0.4492939666238768,
+        "mixed_sat": 0.20417538665713847,
+        "mixed_con": 0.32092426187419765
+      },
+      "final_r3": {
+        "sat_only": 0.3,
+        "fog_only": 0.45,
+        "mixed_sat": 0.20417538665713847,
+        "mixed_con": 0.32092426187419765
+      }
+    },
+    "TOGETHER_LEVELS": [
+      [
+        2,
+        2
+      ]
+    ],
+    "TYPES": [
+      "sat_only",
+      "fog_only",
+      "together",
+      "conflict"
+    ],
+    "TYPE_MIXES": {
+      "v4": {
+        "sat_only": 0.3333333333333333,
+        "fog_only": 0.3333333333333333,
+        "together": 0.16666666666666666,
+        "conflict": 0.16666666666666666
+      },
+      "conflict_heavy": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "together": 0.15,
+        "conflict": 0.25
+      },
+      "balanced_mixed": {
+        "sat_only": 0.3,
+        "fog_only": 0.3,
+        "together": 0.2,
+        "conflict": 0.2
+      },
+      "contrast_weighted": {
+        "sat_only": 0.25,
+        "fog_only": 0.35,
+        "together": 0.2,
+        "conflict": 0.2
+      },
+      "colour_weighted": {
+        "sat_only": 0.35,
+        "fog_only": 0.25,
+        "together": 0.2,
+        "conflict": 0.2
+      }
+    },
+    "TYPE_ORDER": [
+      "sat_only",
+      "fog_only",
+      "conflict",
+      "together"
+    ],
+    "TYPE_TRIES": 5,
+    "V4_TRIAL_LIST": "data/frozen_trial_list_v4/trial_list.csv",
+    "V5B_RUN_DIR": "data/pair_capacity_v5b/v5b_disjoint-pair_match-scene_bin_cap2_sets-v5units-sd030-sd060_sizes120-150-180_draws20_seed42__s554900b6",
+    "V5B_SHARED_MIXES": [
+      "v4",
+      "conflict_heavy"
+    ],
+    "V5B_SHARED_SIZES": [
+      150,
+      180
+    ],
+    "VIF_MAX": 1.25,
+    "WRITE_EXAMPLE_SETS": true
+  },
+  "run": {
+    "workers": 4
+  }
+}

@@ -1,0 +1,572 @@
+==============================================================================
+v5c STEP 3: THE TWO BLOCK LISTS, 180 ANALYSED TRIALS PER BLOCK, FINAL RULES
+build_trials_v5c.py
+==============================================================================
+run finished  2026-11-19 15:51:34   elapsed 208 s in all
+output        data/trials_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2
+workers       4 process(es), one thread each; main build candidates 80 s; regression 111 s
+
+1. WHAT THIS RUN DID
+------------------------------------------------------------------------------
+Threshold set 'final_r3', mix 'balanced_mixed' (sat_only 54, fog_only 54, together 36, conflict 36 per set).
+Script 1's draw rules (cap 2 per scene per type per set, matching 'scene_bin', disjoint 'pair').
+40 candidates (script 1's one_draw; candidate d = script 1's and script 2's draw d), each REPAIRED:
+  an integer program keeps as many of the draw's pairs as it can and replaces the rest
+  with unused pairs from the same scene x type x bin cells, holding the leak moments within 0.04
+  (tightened x0.75 if the exact fit misses, up to 3 solves) and the information matched within 3% / 8% per type.
+LIMIT: the no-intercept fit N ~ b_sat x_sat + b_con x_con on each set's analysed trials gives |b| <= 0.05
+under both definitions (corpus, orig), and every script 1 check passes.
+PER-TYPE LIMITS (one term, no intercept, each set, both definitions): sat_only N on x_sat |b| <= 0.05; fog_only N on x_con |b| <= 0.05; conflict N on x_con |b| <= 0.1.
+SELECTION: the weaker set's information per weight relative to the mean of the unrepaired
+candidates (saturation 92.57, contrast 93.96); the highest smaller value wins, ties on the smaller worst |b|.
+Per set: 15 consistency, 5 catch. Practice: 3 before block 1, 3 before block 2 (feedback: block 1 yes, block 2 yes; recorded in set_info.json).
+
+Inputs and provenance
+  script 1   analyse_pair_capacity_v5c.py  sha256 d12a047011880dc7
+  v4 sim     simulate_power_v4_n10_20.py  sha256 852f3b33eb349153
+  overrides  none (MANIFEST_CSV = data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv)
+  stimuli    data/stimulus_set_v5/7fd72262ba/stimuli
+  stimulus set    data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv: 2,303 images, 47 scenes; manifest SHA-256 69f0529f9f53...; stimuli_sha256 78e2c7258d65...
+  pair table      made here: 110,544 ordered pairs (55,272 unordered), 47 scenes
+  pairs by type   sat_only 6,909, fog_only 5,889, together 20,894, conflict 21,580, balanced_conflict 8,857, none 0, total 55,272 (unordered, before any minimum)
+  script 1's input checks: 13 run, all PASS or SKIPPED
+  rule set   final_r3: final rules yes, exclusion yes, bins levels, quotas pool
+  pool       final_r3: sat_only 1,680, fog_only 1,498, together 882, conflict 882 pairs
+  scenes     42 of 47 usable (excluded: bathroom_00001909, dining_hall_00001273, gymnasium_indoor_00003333, shower_00000779, auditorium_00001394)
+Preflight (every input, found or not):
+  found   script 1                     analyse_pair_capacity_v5c.py
+  found   v4 simulation                simulate_power_v4_n10_20.py
+  found   stimulus set                 data/stimulus_set_v5/7fd72262ba
+  found     manifest                   data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv
+  found     checksums                  data/stimulus_set_v5/7fd72262ba/checksums.sha256
+  found     FROZEN.json                data/stimulus_set_v5/7fd72262ba/FROZEN.json
+  found     images                     data/stimulus_set_v5/7fd72262ba/stimuli  (2,303 .png files)
+  found   script 1 run                 data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0
+  found     all_pairs.csv.gz           data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0/all_pairs.csv.gz
+  found     bin_edges.csv              data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0/bin_edges.csv
+  found     feasibility_by_type.csv    data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0/feasibility_by_type.csv
+  found   script 2 run                 data/block_length_v5c/v5c_sets-v5units-v5units_x-final_r3_sizes150-180-200_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s90dac6dc
+  found     normality_leak.csv         data/block_length_v5c/v5c_sets-v5units-v5units_x-final_r3_sizes150-180-200_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s90dac6dc/normality_leak.csv
+  found   v5b 180 build (regression)   data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa
+  found     set_A.csv                  data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/set_A.csv
+  found     set_B.csv                  data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/set_B.csv
+  found     practice_block1.csv        data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/practice_block1.csv
+  found     practice_block2.csv        data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa/practice_block2.csv
+  found   package numpy                2.4.4
+  found   package pandas               3.0.3
+  found   package scipy >= 1.9         1.17.1
+  found   package opencv-python        4.13.0
+  found   package Pillow               12.2.0
+  found   pair-sheet font              Pillow's own font  (none of SHEET_FONTS found; Pillow's font is used)
+
+V. v5c: THE BUILD UNDER THE FINAL RULES
+------------------------------------------------------------------------------
+Rule set final_r3: final rules on; 5 scenes excluded (bathroom_00001909, dining_hall_00001273, gymnasium_indoor_00003333, shower_00000779, auditorium_00001394; 0 images) because: edits look too similar to the unedited photo and to each other in the preview galleries (rounds 1-3); bins levels, quotas pool; 42 scenes usable.
+
+V1. BIN QUOTAS AND THE SHIPPED COUNTS (per set)
+  type           bin levels apart quota script 1 run set A set B pool pairs
+  colour only      1            2    14           14    14    14        420
+  colour only      2            3    20           20    20    20        630
+  colour only      3            4    20           20    20    20        630
+  contrast only    1            2     8            8     8     8        208
+  contrast only    2            3    27           27    27    27        754
+  contrast only    3            4    19           19    19    19        536
+  together         1            2    36           36    36    36        882
+  conflict         1            2    36           36    36    36        882
+  Quotas used: colour only 14/20/20 (2/3/4 levels apart); contrast only 8/27/19 (2/3/4 levels apart); together 36; conflict 36.
+  Shipped: colour only A 14/20/20 B 14/20/20; contrast only A 8/27/19 B 8/27/19; together A 36 B 36; conflict A 36 B 36  (bin_quotas.csv)
+
+V2. CANDIDATES PASSING, AND THE WIDE REPAIR
+  40 candidates (script 1's and script 2's draws 0-39); drawn 40, passing script 1's checks before repair 40.
+  limit step overall only       passing  40 of 40
+  limit step + single-feature   passing  40 of 40
+  limit step + conflict         passing  40 of 40
+  shipped limits: passing 40 of 40; wide repair NOT NEEDED (it runs when fewer than 5 pass).
+  solves stopped by the 60 s limit: 0; chosen candidate 10, unconstrained choice 39.
+
+V3. THE INFORMATION COST OF THE LEAK LIMITS (weaker set's information)
+  saturation shipped (repaired, all limits)   92.74 against the unrepaired selection   93.28: -0.6%
+  contrast   shipped (repaired, all limits)   94.14 against the unrepaired selection   94.12: +0.0%
+  per limit step, the set each step would ship against the first step (overall limit only), sat / con:
+    overall only        +0.0% /  +0.0%  (paired over candidates  +0.0% /  +0.0%)
+    + single-feature    +0.0% /  +0.1%  (paired over candidates  +0.5% /  -0.0%)
+    + conflict          -0.5% /  +0.0%  (paired over candidates  +0.5% /  -0.0%)
+  (sections 5 and 5b give the details)
+
+V4. WHERE THE SHIPPED PAIRS SIT: type x levels apart x position (design levels;
+    at or below = both images at or below the original, straddling = one each side,
+    at or above = both at or above; for together and conflict each feature separately)
+  type           feature  lv where           A    B shipped %   pool  pool %
+  colour only    colour    2 at or below    14   14     25.9%    420   25.0%
+  colour only    colour    3 at or below     5    4      8.3%    210   12.5%
+  colour only    colour    3 straddling     15   16     28.7%    420   25.0%
+  colour only    colour    4 straddling     20   20     37.0%    630   37.5%
+  contrast only  contrast  2 at or below     8    8     14.8%    208   13.9%
+  contrast only  contrast  3 at or below     8    7     13.9%    198   13.2%
+  contrast only  contrast  3 straddling      9    9     16.7%    375   25.0%
+  contrast only  contrast  3 at or above    10   11     19.4%    181   12.1%
+  contrast only  contrast  4 straddling     19   19     35.2%    536   35.8%
+  together       colour    2 at or below    10   14     33.3%    336   38.1%
+  together       colour    2 straddling     13    9     30.6%    210   23.8%
+  together       colour    2 at or above    13   13     36.1%    336   38.1%
+  together       contrast  2 at or below    15   15     41.7%    336   38.1%
+  together       contrast  2 straddling     10    7     23.6%    210   23.8%
+  together       contrast  2 at or above    11   14     34.7%    336   38.1%
+  conflict       colour    2 at or below    21   16     51.4%    336   38.1%
+  conflict       colour    2 straddling      5    6     15.3%    210   23.8%
+  conflict       colour    2 at or above    10   14     33.3%    336   38.1%
+  conflict       contrast  2 at or below    18   14     44.4%    336   38.1%
+  conflict       contrast  2 straddling      5    8     18.1%    210   23.8%
+  conflict       contrast  2 at or above    13   14     37.5%    336   38.1%
+  (positions.csv)
+
+V5. THE LEAK BY TYPE AND BIN, BEFORE -> AFTER REPAIR (shipped candidate 10)
+  pull = the bin's share of its type's single-term b (the pulls add up to the type's b);
+  term x_sat for colour only and together, x_con for contrast only and conflict.
+  type           bin    lv   n      set A corpus      set A orig      set B corpus      set B orig
+  colour only      1     2  14    -0.047->-0.047  -0.069->-0.069    -0.040->-0.045  -0.062->-0.061
+  colour only      2     3  20    +0.013->+0.008  -0.100->-0.033    +0.054->+0.029  -0.042->-0.021
+  colour only      3     4  20    +0.037->+0.044  -0.005->+0.058    +0.128->+0.023  +0.099->+0.036
+                        type b    +0.002->+0.004  -0.173->-0.045    +0.141->+0.007  -0.006->-0.045
+  contrast only    1     2   8    -0.040->-0.039  -0.048->-0.048    -0.042->-0.042  -0.043->-0.043
+  contrast only    2     3  27    -0.088->+0.024  -0.006->+0.012    -0.096->+0.041  -0.030->+0.019
+  contrast only    3     4  19    -0.107->-0.031  +0.032->+0.078    -0.127->-0.046  +0.030->+0.070
+                        type b    -0.234->-0.046  -0.021->+0.043    -0.265->-0.047  -0.043->+0.045
+  together         1     2  36    +0.049->+0.049  -0.040->-0.040    +0.139->+0.059  -0.011->-0.076
+                        type b    +0.049->+0.049  -0.040->-0.040    +0.139->+0.059  -0.011->-0.076
+  conflict         1     2  36    -0.417->-0.086  -0.150->+0.079    -0.490->-0.073  -0.236->+0.038
+                        type b    -0.417->-0.086  -0.150->+0.079    -0.490->-0.073  -0.236->+0.038
+  (leak_by_bin.csv; limits: overall 0.05; colour only 0.05 on x_sat, contrast only 0.05 on x_con, conflict 0.1 on x_con)
+
+V6. SCENE USE PER TYPE AND SET (analysed pairs; cap 2 per scene per type per set)
+  set  type           pairs scenes scenes with 2 most per scene
+  A    colour only       54     42            12              2
+  A    contrast only     54     38            16              2
+  A    together          36     33             3              2
+  A    conflict          36     30             6              2
+  A    all types        180     42 scenes of 42 usable
+  B    colour only       54     42            12              2
+  B    contrast only     54     38            16              2
+  B    together          36     33             3              2
+  B    conflict          36     30             6              2
+  B    all types        180     42 scenes of 42 usable
+  practice: 5 scenes for 6 pairs; catch: 10 scenes for 10 pairs  (scene_use.csv)
+
+V7. REGRESSION AGAINST v5b's SHIPPED 180 BUILD
+  data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa
+  settings: rule set v5units, no exclusion, practice (6, 3), n=180; repairs at the shipped limits only
+  candidates passing 40 of 40; chosen 22 (v5b: 22); unconstrained 36 (v5b: 36)
+  set_A.csv            all rows      200 rows  exact  (74 columns)
+  set_A.csv            analysed      180 rows  exact  (74 columns)
+  set_A.csv            consistency    15 rows  exact  (74 columns)
+  set_A.csv            catch           5 rows  exact  (74 columns)
+  set_B.csv            all rows      200 rows  exact  (74 columns)
+  set_B.csv            analysed      180 rows  exact  (74 columns)
+  set_B.csv            consistency    15 rows  exact  (74 columns)
+  set_B.csv            catch           5 rows  exact  (74 columns)
+  practice_block1.csv  all rows        6 rows  exact  (73 columns)
+  practice_block2.csv  all rows        3 rows  exact  (73 columns)
+  RESULT: PASS; 111 s (candidates 110 s)  (regression_v5b.csv)
+
+V8. RUN TIMES
+  workers 4; main build candidates 80 s (120 repairs); regression 111 s; images 4 s; pair sheets 10 s; elapsed at this report 208 s
+  the regression adds 138% of the main build's candidate time
+
+V9. PAIR SHEETS FOR INSPECTION
+  data/pair_sheets_v5c/v5c_n180_balanced_mixed_final_r3_cand40_leak0.05_seed42__s38fa29a2/  (outside this folder; in no manifest or checksum list)
+  366 JPEGs (360 analysed pairs of sets A and B, 6 practice), 75.5 MB, quality 92; font: Pillow's own font
+  index.html: the gallery (open it from that folder); sheets.csv: the pairs with their labels.
+
+2. CANDIDATES: REPAIR AND SELECTION
+------------------------------------------------------------------------------
+draws built 40, passing script 1's checks before repair 40; PASSING AFTER REPAIR 40 of 40.
+Wide repair not used (40 passed with the cells kept; it runs when fewer than 5 pass).
+Solves stopped by the 60 s limit: 0 (where a stopped solve ends can depend on the computer's speed).
+Repair time per candidate: 2.7 [1.5 to 5.1] s.
+Chosen: candidate 10. Unconstrained choice (same rule, unrepaired draws): candidate 39.
+
+cand draw  mode  kept A/B solv worst|b| before  after rel sat rel con  score rank
+  10  yes cells   140/135    1           0.231  0.039   1.002   1.002  1.002    1  <- SHIPPED
+  39  yes cells   141/136    1           0.207  0.040   1.001   1.003  1.001    2
+   5  yes cells   147/152    1           0.157  0.040   1.015   1.001  1.001    3
+  22  yes cells   148/150    1           0.164  0.040   1.022   1.001  1.001    4
+  17  yes cells   149/148    1           0.155  0.040   1.010   1.001  1.001    5
+  37  yes cells   142/141    1           0.199  0.040   1.018   1.001  1.001    6
+  29  yes cells   143/138    1           0.181  0.040   1.009   1.001  1.001    7
+  23  yes cells   136/138    1           0.205  0.040   1.003   1.001  1.001    8
+  13  yes cells   145/142    1           0.201  0.040   1.006   1.000  1.000    9
+   3  yes cells   137/146    1           0.149  0.040   1.006   1.000  1.000   10
+  27  yes cells   148/155    1           0.180  0.040   1.009   1.000  1.000   11
+  36  yes cells   132/137    1           0.240  0.040   1.005   1.000  1.000   12
+  28  yes cells   153/147    1           0.145  0.040   1.000   1.002  1.000   13
+   1  yes cells   152/150    1           0.218  0.040   1.001   1.000  1.000   14
+  24  yes cells   157/155    1           0.196  0.040   1.003   1.000  1.000   15
+  25  yes cells   157/164    1           0.217  0.039   1.006   0.999  0.999   16
+  35  yes cells   136/127    1           0.197  0.040   1.003   0.999  0.999   17
+   7  yes cells   153/146    1           0.171  0.040   1.003   0.999  0.999   18
+   6  yes cells   151/152    1           0.202  0.040   0.999   1.001  0.999   19
+  31  yes cells   137/142    1           0.244  0.040   0.998   1.000  0.998   20
+  19  yes cells   145/152    1           0.207  0.040   1.014   0.998  0.998   21
+   2  yes cells   157/154    1           0.121  0.040   1.000   0.998  0.998   22
+   0  yes cells   142/142    1           0.210  0.040   1.008   0.998  0.998   23
+  14  yes cells   145/147    1           0.152  0.040   0.999   0.998  0.998   24
+   8  yes cells   142/138    1           0.151  0.039   0.997   1.000  0.997   25
+  33  yes cells   121/124    1           0.299  0.040   1.010   0.997  0.997   26
+  30  yes cells   145/139    1           0.246  0.040   0.997   0.998  0.997   27
+   4  yes cells   145/141    1           0.178  0.040   0.996   1.001  0.996   28
+  15  yes cells   146/140    1           0.128  0.040   1.016   0.996  0.996   29
+  16  yes cells   142/137    1           0.181  0.040   0.996   0.997  0.996   30
+  20  yes cells   131/139    1           0.256  0.040   0.996   1.000  0.996   31
+  12  yes cells   139/134    1           0.212  0.040   0.996   1.001  0.996   32
+  21  yes cells   133/134    1           0.214  0.040   0.995   1.001  0.995   33
+  18  yes cells   146/143    1           0.183  0.040   0.995   0.998  0.995   34
+   9  yes cells   155/139    1           0.183  0.040   0.994   1.000  0.994   35
+  32  yes cells   131/135    1           0.259  0.040   0.994   1.001  0.994   36
+  34  yes cells   144/142    1           0.184  0.040   0.992   0.997  0.992   37
+  26  yes cells   150/149    1           0.186  0.039   0.991   0.997  0.991   38
+  11  yes cells   141/136    1           0.236  0.040   0.989   1.000  0.989   39
+  38  yes cells   146/150    1           0.147  0.039   0.988   1.001  0.988   40
+  draw = passes script 1's checks before repair; kept = the draw's pairs kept per set;
+  rel = weaker-set information / the reference above; score = the smaller rel.
+
+3. THE NORMALITY LEAK (analysed trials; LIMITED)
+------------------------------------------------------------------------------
+Shipped candidate 10, before -> after repair (b from the no-intercept fit; cos = uncentred correlation):
+  corpus set A  before b_sat +0.091  b_con -0.214  (cos +0.121 / -0.286)
+                after  b_sat +0.039  b_con -0.035  (cos +0.050 / -0.044)
+  corpus set B  before b_sat +0.204  b_con -0.231  (cos +0.260 / -0.295)
+                after  b_sat +0.038  b_con -0.032  (cos +0.048 / -0.040)
+  orig   set A  before b_sat -0.084  b_con -0.043  (cos -0.117 / -0.059)
+                after  b_sat -0.036  b_con +0.039  (cos -0.048 / +0.052)
+  orig   set B  before b_sat +0.040  b_con -0.066  (cos +0.056 / -0.092)
+                after  b_sat -0.038  b_con +0.027  (cos -0.050 / +0.036)
+Over candidates (mean [min to max] of b over both sets):
+  corpus b_sat: unrepaired (passing draws) 0.107 [0.007 to 0.212];  repaired (passing) 0.038 [0.031 to 0.040]
+  corpus b_con: unrepaired (passing draws) -0.163 [-0.299 to -0.026];  repaired (passing) -0.036 [-0.040 to -0.010]
+  orig   b_sat: unrepaired (passing draws) -0.107 [-0.228 to 0.040];  repaired (passing) -0.038 [-0.040 to -0.030]
+  orig   b_con: unrepaired (passing draws) -0.065 [-0.212 to 0.051];  repaired (passing) 0.030 [-0.029 to 0.040]
+The whole pool, for reference: corpus b_sat +0.112 b_con -0.146; orig b_sat -0.099 b_con -0.057
+
+4. THE LEAK BY TRIAL TYPE
+------------------------------------------------------------------------------
+LIMITED types, the fit that is limited (N on one term, no intercept), before -> after repair:
+  sat_only  corpus N on x_sat (limit 0.05)  A: +0.002 -> +0.004   B: +0.141 -> +0.007
+  sat_only  orig   N on x_sat (limit 0.05)  A: -0.173 -> -0.045   B: -0.006 -> -0.045
+  fog_only  corpus N on x_con (limit 0.05)  A: -0.234 -> -0.046   B: -0.265 -> -0.047
+  fog_only  orig   N on x_con (limit 0.05)  A: -0.021 -> +0.043   B: -0.043 -> +0.045
+  conflict  corpus N on x_con (limit 0.1)  A: -0.417 -> -0.086   B: -0.490 -> -0.073
+  conflict  orig   N on x_con (limit 0.1)  A: -0.150 -> +0.079   B: -0.236 -> +0.038
+  over passing candidates, largest |b| per candidate (both sets, both definitions), mean [min to max]:
+    sat_only  before 0.191 [0.129 to 0.270]   after 0.047 [0.045 to 0.047]
+    fog_only  before 0.203 [0.084 to 0.354]   after 0.044 [0.033 to 0.047]
+    conflict  before 0.364 [0.170 to 0.529]   after 0.081 [0.047 to 0.095]
+
+Every type, script 1's convention (one term for sat_only and fog_only, both for the mixed types;
+together is reported only):
+Shipped candidate 10, b before -> after:
+  sat_only  corpus A: b_sat +0.002->+0.004   B: b_sat +0.141->+0.007
+  sat_only  orig   A: b_sat -0.173->-0.045   B: b_sat -0.006->-0.045
+  fog_only  corpus A: b_con -0.234->-0.046   B: b_con -0.265->-0.047
+  fog_only  orig   A: b_con -0.021->+0.043   B: b_con -0.043->+0.045
+  together  corpus A: b_sat -6.817->-6.817, b_con +6.719->+6.719   B: b_sat -5.895->-7.409, b_con +5.906->+7.308
+  together  orig   A: b_sat -11.966->-11.966, b_con +11.672->+11.672   B: b_sat -10.059->-11.295, b_con +9.834->+10.980
+  conflict  corpus A: b_sat +6.355->+7.033, b_con +6.153->+7.113   B: b_sat +4.878->+6.343, b_con +4.554->+6.468
+  conflict  orig   A: b_sat +6.650->+7.190, b_con +6.725->+7.439   B: b_sat +5.123->+6.618, b_con +5.061->+6.863
+Uncentred correlations of N with x_sat / x_con (cos_sat / cos_con), before -> after, and the
+correlation of x_sat with x_con within the type (cos_x):
+  sat_only  corpus A: +0.005/-0.033 -> +0.009/-0.003 (cos_x +0.68)   B: +0.305/+0.126 -> +0.014/-0.128 (cos_x +0.76)
+  sat_only  orig   A: -0.361/-0.232 -> -0.104/+0.087 (cos_x +0.68)   B: -0.015/-0.080 -> -0.123/-0.172 (cos_x +0.76)
+  fog_only  corpus A: +0.246/-0.449 -> +0.369/-0.084 (cos_x +0.08)   B: +0.032/-0.472 -> +0.257/-0.089 (cos_x -0.22)
+  fog_only  orig   A: +0.329/-0.046 -> +0.334/+0.082 (cos_x +0.08)   B: -0.011/-0.094 -> +0.124/+0.088 (cos_x -0.22)
+  together  corpus A: +0.065/+0.083 -> +0.065/+0.083 (cos_x +1.00)   B: +0.170/+0.186 -> +0.072/+0.091 (cos_x +1.00)
+  together  orig   A: -0.052/-0.021 -> -0.052/-0.021 (cos_x +1.00)   B: -0.013/+0.010 -> -0.087/-0.061 (cos_x +1.00)
+  conflict  corpus A: +0.469/-0.425 -> +0.141/-0.085 (cos_x -1.00)   B: +0.528/-0.495 -> +0.121/-0.071 (cos_x -1.00)
+  conflict  orig   A: +0.223/-0.170 -> -0.021/+0.080 (cos_x -1.00)   B: +0.282/-0.246 -> +0.016/+0.037 (cos_x -1.00)
+  In together and conflict trials x_sat and x_con move together (|cos_x| near 1 for conflict),
+  so the two b's of a mixed type are individually unstable: only their sum (together) or
+  difference (conflict) is well determined. The cos values are the steadier guide there.
+Over passing candidates, mean b (both sets), before -> after:
+  sat_only  corpus b_sat +0.068->+0.043
+  sat_only  orig   b_sat -0.154->-0.045
+  fog_only  corpus b_con -0.175->-0.039
+  fog_only  orig   b_con -0.076->+0.031
+  together  corpus b_sat -7.160->-7.357, b_con +7.055->+7.198
+  together  orig   b_sat -8.920->-8.837, b_con +8.685->+8.659
+  conflict  corpus b_sat +7.343->+8.678, b_con +7.245->+8.854
+  conflict  orig   b_sat +8.826->+9.446, b_con +9.079->+9.756
+Trials outside the limit (shipped; both terms; few trials, so noisy):
+  practice P1+P2  corpus n= 6  b_sat -0.455 b_con +0.112  (cos -0.392 / -0.050)
+  practice P1+P2  orig   n= 6  b_sat -0.682 b_con +0.376  (cos -0.495 / +0.197)
+  catch A         corpus n= 5  b_sat -9.470 b_con +9.232  (cos +0.008 / +0.033)
+  catch A         orig   n= 5  b_sat -13.095 b_con +13.126  (cos +0.509 / +0.528)
+  catch B         corpus n= 5  b_sat -13.885 b_con +13.524  (cos +0.339 / +0.368)
+  catch B         orig   n= 5  b_sat -18.131 b_con +17.309  (cos +0.064 / +0.106)
+  Consistency repeats are copies of analysed pairs: their leak is the analysed trials'.
+
+5. THE INFORMATION COST OF THE LIMIT
+------------------------------------------------------------------------------
+Shipped (repaired candidate 10) against the unconstrained selection (unrepaired candidate 39):
+  saturation weaker set    92.74 vs    93.28 (-0.6%);  both sets   185.83 vs   186.56 (-0.4%)
+  contrast   weaker set    94.14 vs    94.12 (+0.0%);  both sets   188.28 vs   188.24 (+0.0%)
+Each candidate against its own draw (40 candidates passing before and after), % change, mean [min to max]:
+  saturation weaker set +0.2 [-1.3 to +1.8]   both sets +0.6 [-0.7 to +2.0]
+  contrast   weaker set -0.0 [-0.3 to +0.2]   both sets +0.0 [-0.1 to +0.2]
+Mean over passing candidates, both sets: saturation unrepaired 185.14, repaired 186.29; contrast unrepaired 187.91, repaired 187.98
+
+5b. THE LIMIT STEPS: WHAT EACH ADDED LIMIT COSTS
+------------------------------------------------------------------------------
+Every candidate repaired under each step; each step's set chosen by the same rule. The first
+step is the overall limit alone (the first v5b build). Cost = change in the weaker set's
+information: on the set each step would ship, and the mean over candidates passing both steps.
+step               pass cand weaker sat weaker con     vs first: shipped         paired   vs previous: shipped         paired
+overall only         40   17      93.20      94.10           +0.0/ +0.0%    +0.0/ +0.0%            +0.0/ +0.0%    +0.0/ +0.0%
++ single-feature     40   39      93.22      94.15           +0.0/ +0.1%    +0.5/ -0.0%            +0.0/ +0.1%    +0.5/ -0.0%
++ conflict           40   10      92.74      94.14           -0.5/ +0.0%    +0.5/ -0.0%            -0.5/ -0.0%    +0.0/ +0.0%
+  (percentages: saturation / contrast; negative = information lost)
+Leak of each step's shipped set: worst overall |b|, and the worst single-term |b| per limited type:
+  overall only       overall 0.040   sat_only 0.108   fog_only 0.111   conflict 0.158
+  + single-feature   overall 0.040   sat_only 0.047   fog_only 0.047   conflict 0.089
+  + conflict         overall 0.039   sat_only 0.045   fog_only 0.047   conflict 0.086
+Cost rule: a step is acceptable when it costs at most 5% of either weight's information against the
+step before (shipped and paired) and at least 5 candidates pass:
+  overall only       largest cost vs previous -0.0%, 40 passing -> ACCEPTABLE
+  + single-feature   largest cost vs previous +0.0%, 40 passing -> ACCEPTABLE
+  + conflict         largest cost vs previous +0.5%, 40 passing -> ACCEPTABLE
+Where the images sit, each step's shipped set (both sets), share above / at / below the original:
+                                    image A             image B                 all   straddle s/c  with orig
+  overall only       sat   23%  18%  59%    43%  20%  37%    33%  19%  48%     95/92        24
+                     con   18%  21%  62%    60%  18%  22%    39%  19%  42%
+  + single-feature   sat   25%  20%  56%    46%  21%  33%    35%  20%  44%     96/87        26
+                     con   23%  14%  62%    60%  15%  25%    41%  15%  44%
+  + conflict         sat   20%  15%  65%    44%  20%  36%    32%  18%  50%    104/87        24
+                     con   19%  20%  62%    58%  19%  22%    38%  20%  42%
+Mean over each step's passing candidates:
+  overall only       sat   24%  18%  58%    45%  21%  34%    35%  19%  46%    97.1/95.0   28.7
+                     con   20%  19%  61%    61%  17%  22%    41%  18%  42%
+  + single-feature   sat   24%  17%  59%    44%  20%  35%    34%  19%  47%   100.5/96.0   24.1
+                     con   20%  18%  62%    61%  17%  23%    40%  17%  43%
+  + conflict         sat   24%  17%  59%    44%  21%  35%    34%  19%  47%   100.2/96.2   24.7
+                     con   20%  18%  63%    61%  17%  23%    40%  17%  43%
+  limit_steps.csv holds these figures.
+
+6. WHERE THE IMAGES SIT RELATIVE TO THE ORIGINAL
+------------------------------------------------------------------------------
+Share of images above / at (within 0.02 SD) / below the scene's unedited photograph, by measurement.
+Shipped candidate 10, both sets, before vs after repair:
+                           image A (predicted)                image B             all images
+                         above    at  below  above    at  below  above    at  below
+  saturation before        24%   15%   61%     44%   22%   34%     34%   18%   48%
+  saturation after         20%   15%   65%     44%   20%   36%     32%   18%   50%
+  contrast   before        16%   17%   67%     54%   22%   24%     35%   20%   45%
+  contrast   after         19%   20%   62%     58%   19%   22%     38%   20%   42%
+  pairs straddling the original (measured): saturation 110 -> 104, contrast 98 -> 87
+  pairs with the unedited image: 23 -> 24
+Shipped set A alone:
+                           image A (predicted)                image B             all images
+                         above    at  below  above    at  below  above    at  below
+  saturation before        22%   17%   62%     43%   19%   38%     32%   18%   50%
+  saturation after         18%   17%   65%     43%   18%   39%     31%   18%   52%
+  contrast   before        14%   17%   69%     53%   24%   23%     34%   20%   46%
+  contrast   after         18%   19%   63%     57%   21%   22%     38%   20%   42%
+  pairs straddling the original (measured): saturation 56 -> 53, contrast 51 -> 43
+  pairs with the unedited image: 11 -> 10
+Shipped set B alone:
+                           image A (predicted)                image B             all images
+                         above    at  below  above    at  below  above    at  below
+  saturation before        26%   14%   61%     46%   24%   29%     36%   19%   45%
+  saturation after         22%   13%   64%     44%   23%   33%     33%   18%   49%
+  contrast   before        17%   18%   66%     54%   21%   24%     36%   19%   45%
+  contrast   after         19%   20%   61%     59%   18%   22%     39%   19%   41%
+  pairs straddling the original (measured): saturation 54 -> 51, contrast 47 -> 44
+  pairs with the unedited image: 12 -> 14
+Mean over the 40 candidates passing before and after (both sets):
+                           image A (predicted)                image B             all images
+                         above    at  below  above    at  below  above    at  below
+  saturation before        25%   16%   59%     45%   21%   34%     35%   19%   46%
+  saturation after         24%   17%   59%     44%   21%   35%     34%   19%   47%
+  contrast   before        18%   18%   64%     58%   19%   22%     38%   19%   43%
+  contrast   after         20%   18%   63%     61%   17%   23%     40%   17%   43%
+  pairs straddling the original (measured): saturation 105.0 -> 100.2, contrast 101.5 -> 96.2
+  pairs with the unedited image: 23.4 -> 24.7
+  The concern: cancelling the corpus leak could pull the sets toward one end of a ladder
+  and re-create v4's 'edited = duller' pattern; compare image A's rows before and after.
+
+7. HOW WELL THE TWO SETS MATCH (shipped)
+------------------------------------------------------------------------------
+  A  sat_only  n= 54  info sat   61.55  con   0.01  scenes 42  A-left  27
+       |x_sat| min/10/50/90/max 0.564 / 0.663 / 1.000 / 1.366 / 1.436
+       |x_con| min/10/50/90/max 0.001 / 0.002 / 0.007 / 0.027 / 0.043
+  A  fog_only  n= 54  info sat    0.06  con  62.81  scenes 38  A-left  27
+       |x_sat| min/10/50/90/max 0.000 / 0.002 / 0.013 / 0.060 / 0.070
+       |x_con| min/10/50/90/max 0.656 / 0.664 / 0.996 / 1.324 / 1.342
+  A  together  n= 36  info sat   15.19  con  15.89  scenes 33  A-left  18
+       |x_sat| min/10/50/90/max 0.555 / 0.609 / 0.660 / 0.675 / 0.684
+       |x_con| min/10/50/90/max 0.642 / 0.659 / 0.665 / 0.671 / 0.677
+  A  conflict  n= 36  info sat   16.29  con  15.43  scenes 30  A-left  18
+       |x_sat| min/10/50/90/max 0.589 / 0.616 / 0.670 / 0.714 / 0.949
+       |x_con| min/10/50/90/max 0.616 / 0.646 / 0.657 / 0.663 / 0.671
+  B  sat_only  n= 54  info sat   60.97  con   0.01  scenes 42  A-left  27
+       |x_sat| min/10/50/90/max 0.536 / 0.661 / 1.000 / 1.350 / 1.427
+       |x_con| min/10/50/90/max 0.000 / 0.003 / 0.008 / 0.020 / 0.034
+  B  fog_only  n= 54  info sat    0.05  con  62.82  scenes 38  A-left  27
+       |x_sat| min/10/50/90/max 0.000 / 0.003 / 0.013 / 0.058 / 0.073
+       |x_con| min/10/50/90/max 0.657 / 0.661 / 0.993 / 1.324 / 1.347
+  B  together  n= 36  info sat   15.19  con  15.89  scenes 33  A-left  18
+       |x_sat| min/10/50/90/max 0.553 / 0.604 / 0.659 / 0.677 / 0.688
+       |x_con| min/10/50/90/max 0.642 / 0.658 / 0.665 / 0.671 / 0.687
+  B  conflict  n= 36  info sat   16.53  con  15.42  scenes 30  A-left  18
+       |x_sat| min/10/50/90/max 0.584 / 0.616 / 0.673 / 0.716 / 0.940
+       |x_con| min/10/50/90/max 0.617 / 0.646 / 0.656 / 0.664 / 0.672
+
+  set A: info sat   93.09, con  94.14, cos +0.005, VIF 1.000, scenes 42, A on the left 90 of 180
+  set B: info sat   92.74, con  94.14, cos -0.003, VIF 1.000, scenes 42, A on the left 90 of 180
+  information A-B: saturation 0.38%, contrast 0.00%; worst per type 1.47%
+  KS distance A-B: |x_sat| 0.048, |x_con| 0.056; cos difference 0.008
+
+8. WHAT THE PLANNING WEIGHTS MEAN, AND THE THRESHOLDS
+------------------------------------------------------------------------------
+  set A: typical informative |x_sat| 0.673 (126 trials) -> P 0.5833;  |x_con| 0.666 (126 trials) -> P 0.6144
+         thresholds (20,000 random choosers, 0 s): saturation +0.410 / -0.412, contrast +0.404 / -0.410
+  set B: typical informative |x_sat| 0.674 (126 trials) -> P 0.5834;  |x_con| 0.666 (126 trials) -> P 0.6144
+         thresholds (20,000 random choosers, 0 s): saturation +0.416 / -0.402, contrast +0.401 / -0.400
+  v4 interpretation: 0.6191 / 0.6104; v4 thresholds +0.286 / +0.488 (180 trials, one list).
+  The choice probabilities are reported, not checked: script 2 showed v5's differences differ from v4's.
+
+9. CONSISTENCY, CATCH AND PRACTICE
+------------------------------------------------------------------------------
+  consistency per set: 15 (sat_only 5, fog_only 4, together 3, conflict 3), the same couples in A and B, sides swapped
+  catch, set A: Ax01 dining_hall, Ax02 driveway, Ax03 living_room, Ax04 restaurant, Ax05 parking_garage_outdoor
+  catch, set B: Bx01 downtown, Bx02 subway_station_platform, Bx03 lobby, Bx04 japanese_garden, Bx05 train_interior
+  practice P1: sat_only apartment_building_outdoor, fog_only campus, together laundromat
+  practice P2: sat_only campus, fog_only alley, together dining_room
+
+10. IMAGES
+------------------------------------------------------------------------------
+  632 images copied from data/stimulus_set_v5/7fd72262ba/stimuli; checked against data/stimulus_set_v5/7fd72262ba/checksums.sha256;
+  largest re-measured difference: sat_mean 4.76e-06, contrast_local 4.99e-07
+
+11. CHECKS
+------------------------------------------------------------------------------
+  PASS       [input] manifest has the required columns  (81 columns)
+  PASS       [input] 47 scenes x 49 images  (47 scenes, 49-49 images each)
+  PASS       [input] image file names are unique  (2,303 rows)
+  PASS       [input] one unedited image per scene (contrast and colour step 0)  (47 unedited images)
+  PASS       [input] every image may be used in pairs (use = pair)  (0 with another use)
+  PASS       [input] the manifest is the frozen stimulus set's (SHA-256 as in its FROZEN.json)  (set 7fd72262ba, stimuli_sha256 78e2c7258d65...)
+  PASS       [input] every pair of images within a scene, both directions  (110,544 ordered pairs (55,272 unordered))
+  PASS       [input] every pair is listed in both directions, with negated differences and normality terms and the same type  (0 without a reverse)
+  PASS       [input] pred_sat = -d_sat/SD_SAT and pred_fog = d_fog/SD_FOG  (SD_SAT 39.182, SD_FOG 9.348)
+  PASS       [input] the manifest's changes from the original agree with its features (d_sat)
+  SKIPPED    [input] pair counts match EXPECTED_POOL  (EXPECTED_POOL is None)
+  PASS       [final_r3] each unordered pair appears once in the pool  (4,942 pairs, 0 duplicates)
+  PASS       [final_r3] bin edges are in order  (sat_only []; fog_only []; together []; conflict [])
+  PASS       [input] the pairs equal script 1's all_pairs.csv.gz (files, type, differences, normality terms, to its 8 significant digits)  (data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0: 110,544 vs 110,544 rows, 110,544 matched, largest relative difference 5.0e-08 (script 1 saves 8 significant digits))
+  PASS       [input] the final_r3 bin edges equal script 1's bin_edges.csv  (sat_only levels apart 2/3/4; fog_only levels apart 2/3/4; together one bin; conflict one bin)
+  PASS       [design] the counts are feasible (script 1 stage 1)  (feasible)
+  PASS       [regression] with v5b's settings (rule set v5units, practice (6, 3), n=180) the analysed, consistency, practice and catch rows equal v5b's shipped build  (data/trials_v5b/v5b_n180_balanced_mixed_v5units_cand40_leak0.05_seed42__s262763fa: set_A.csv exact, set_B.csv exact, practice_block1.csv exact, practice_block2.csv exact; chosen candidate 22 (v5b 22))
+  PASS       [candidates] at least one repaired candidate passes the limit and every script 1 check  (40 of 40 (draws built 40, draws passing script 1's checks before repair 40))
+  NOT NEEDED [candidates] wide repair (scenes within a bin free to change)  (40 passed with the cells kept; it runs when fewer than 5 pass and a failed candidate can be re-repaired)
+  PASS       [sets (script 1 checks)] type counts equal the target in both sets
+  PASS       [sets (script 1 checks)] bin counts equal the quotas in both sets
+  PASS       [sets (script 1 checks)] no pair in both sets
+  PASS       [sets (script 1 checks)] no pair twice within a set
+  SKIPPED    [sets (script 1 checks)] no image in both sets  (not applicable)
+  SKIPPED    [sets (script 1 checks)] no scene in both sets  (not applicable)
+  PASS       [sets (script 1 checks)] sat_only: |d_sat| >= its minimum
+  PASS       [sets (script 1 checks)] sat_only: |d_con| <= CON_TOL_SD
+  PASS       [sets (script 1 checks)] fog_only: |d_con| >= its minimum
+  PASS       [sets (script 1 checks)] fog_only: |d_sat| <= SAT_TOL_SD
+  PASS       [sets (script 1 checks)] together, conflict: both differences >= their minimums
+  PASS       [sets (script 1 checks)] conflict: all balanced
+  PASS       [sets (script 1 checks)] final rules: every pair meets them
+  PASS       [sets (script 1 checks)] no pair of an excluded scene or image
+  PASS       [sets (script 1 checks)] information x_sat within 5%
+  PASS       [sets (script 1 checks)] information x_con within 5%
+  PASS       [sets (script 1 checks)] information per type within 10%
+  PASS       [sets (script 1 checks)] KS |x_sat| <= 0.1
+  PASS       [sets (script 1 checks)] KS |x_con| <= 0.1
+  PASS       [sets (script 1 checks)] predictor correlation (cos) differs by <= 0.05
+  PASS       [sets (script 1 checks)] VIF <= 1.25 in both sets
+  PASS       [sets (script 1 checks)] predicted image on the left in half of each type (+-1 if odd)
+  PASS       [sets (script 1 checks)] each set uses >= 85% of the scenes it may use
+  PASS       [sets (script 1 checks)] <= 2 per scene per type in each set
+  PASS       [sets (script 1 checks)] same scenes: each scene x type x bin count equal in both sets
+  PASS       [sets (script 1 checks)] practice and catch reserved in full for both sets
+  PASS       [normality limit] set A, corpus definition: |b_sat| and |b_con| <= 0.05  (b_sat +0.0395, b_con -0.0349)
+  PASS       [normality limit] set B, corpus definition: |b_sat| and |b_con| <= 0.05  (b_sat +0.0381, b_con -0.0315)
+  PASS       [normality limit] set A, orig definition: |b_sat| and |b_con| <= 0.05  (b_sat -0.0363, b_con +0.0393)
+  PASS       [normality limit] set B, orig definition: |b_sat| and |b_con| <= 0.05  (b_sat -0.0380, b_con +0.0270)
+  PASS       [normality limit] set A, corpus definition, sat_only (N on x_sat alone): |b| <= 0.05  (b_sat +0.0045)
+  PASS       [normality limit] set B, corpus definition, sat_only (N on x_sat alone): |b| <= 0.05  (b_sat +0.0068)
+  PASS       [normality limit] set A, orig definition, sat_only (N on x_sat alone): |b| <= 0.05  (b_sat -0.0446)
+  PASS       [normality limit] set B, orig definition, sat_only (N on x_sat alone): |b| <= 0.05  (b_sat -0.0451)
+  PASS       [normality limit] set A, corpus definition, fog_only (N on x_con alone): |b| <= 0.05  (b_con -0.0464)
+  PASS       [normality limit] set B, corpus definition, fog_only (N on x_con alone): |b| <= 0.05  (b_con -0.0471)
+  PASS       [normality limit] set A, orig definition, fog_only (N on x_con alone): |b| <= 0.05  (b_con +0.0426)
+  PASS       [normality limit] set B, orig definition, fog_only (N on x_con alone): |b| <= 0.05  (b_con +0.0451)
+  PASS       [normality limit] set A, corpus definition, conflict (N on x_con alone): |b| <= 0.1  (b_con -0.0860)
+  PASS       [normality limit] set B, corpus definition, conflict (N on x_con alone): |b| <= 0.1  (b_con -0.0729)
+  PASS       [normality limit] set A, orig definition, conflict (N on x_con alone): |b| <= 0.1  (b_con +0.0795)
+  PASS       [normality limit] set B, orig definition, conflict (N on x_con alone): |b| <= 0.1  (b_con +0.0379)
+  PASS       [candidates] the chosen candidate rebuilt in this process (one worker) gives byte-identical sets  (candidate 10 (cells), 4 worker(s) in the run)
+  PASS       [candidates] candidates are script 2's draws (their leak equals script 2's normality_leak.csv)  (data/block_length_v5c/v5c_sets-v5units-v5units_x-final_r3_sizes150-180-200_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s90dac6dc: 20 draws, 80 rows compared, largest difference 9.7e-17)
+  PASS       [set A] analysed type counts equal the target  (sat_only 54, fog_only 54, together 36, conflict 36)
+  PASS       [set A] sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.3000 SD  (largest |d_con| 0.0429, smallest |d_sat| 0.5635 SD)
+  PASS       [set A] fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4500 SD  (largest |d_sat| 0.0703, smallest |d_con| 0.6558 SD)
+  PASS       [set A] together, conflict: both differences >= their minimums; conflict balanced
+  PASS       [set A] 15 consistency trials = floor(180 x 0.0833)  (sat_only 5, fog_only 4, together 3, conflict 3)
+  PASS       [set A] every consistency trial repeats an analysed pair of its set with the sides swapped
+  PASS       [set A] 5 catch trials, mode 'no_images', distinct scenes
+  PASS       [set A] image A (the predicted image) on the left in half of each type's trials (+-1 if odd)
+  PASS       [set A] catch sides balanced (+-1)  (3 of 5)
+  PASS       [set B] analysed type counts equal the target  (sat_only 54, fog_only 54, together 36, conflict 36)
+  PASS       [set B] sat_only: |d_con| <= 0.0770 SD and |d_sat| >= 0.3000 SD  (largest |d_con| 0.0344, smallest |d_sat| 0.5357 SD)
+  PASS       [set B] fog_only: |d_sat| <= 0.0766 SD and |d_con| >= 0.4500 SD  (largest |d_sat| 0.0728, smallest |d_con| 0.6567 SD)
+  PASS       [set B] together, conflict: both differences >= their minimums; conflict balanced
+  PASS       [set B] 15 consistency trials = floor(180 x 0.0833)  (sat_only 5, fog_only 4, together 3, conflict 3)
+  PASS       [set B] every consistency trial repeats an analysed pair of its set with the sides swapped
+  PASS       [set B] 5 catch trials, mode 'no_images', distinct scenes
+  PASS       [set B] image A (the predicted image) on the left in half of each type's trials (+-1 if odd)
+  PASS       [set B] catch sides balanced (+-1)  (3 of 5)
+  PASS       [consistency] the same couples are repeated in both sets (matched)
+  PASS       [practice P1] 3 trials of types ['sat_only', 'fog_only', 'together'] in turn, distinct scenes  (sat_only, fog_only, together)
+  PASS       [practice P1] every difference at or below the 60% quantile of its type
+  PASS       [practice P2] 3 trials of types ['sat_only', 'fog_only', 'together'] in turn, distinct scenes  (sat_only, fog_only, together)
+  PASS       [practice P2] every difference at or below the 60% quantile of its type
+  PASS       [all rows] no pair is used twice anywhere (consistency repeats aside): sets, practice and catch are disjoint  (376 pairs, 0 duplicates)
+  PASS       [all rows] every row carries the direction, difference, bin and normality fields  (14 fields in 406 rows)
+  NOTE       [all rows] unedited images are allowed (counted, not limited)  (analysed pairs with the unedited image: A 10, B 14; all rows 30)
+  PASS       [final rules] every analysed, consistency, practice and catch pair meets the final rules (script 1's final_rule_mask, the minimums, conflict balanced)  (406 rows, 0 fail)
+  PASS       [exclusion] no row uses an excluded scene (5) or image (0)  (406 rows, 0 excluded)
+  PASS       [exclusion] the pool used for every row holds no excluded scene or image  (4,942 pairs)
+  PASS       [set A] counts per type and bin equal script 1's quotas  (colour only 14/20/20; contrast only 8/27/19; together 36; conflict 36)
+  PASS       [set B] counts per type and bin equal script 1's quotas  (colour only 14/20/20; contrast only 8/27/19; together 36; conflict 36)
+  PASS       [input] the quotas equal script 1's run's (feasibility_by_type.csv)  (data/pair_capacity_v5c/v5c_disjoint-pair_match-scene_bin_cap2_sets-v5units-v5units_x-final_r3_sizes150-180-200_draws20_seed42__sd5d75fc0: colour only 14/20/20; contrast only 8/27/19; together 36; conflict 36)
+  NOTE       [set A] choice probability at the planning weights (reported; v4's for reference)  (saturation 0.5833 (v4 0.6191), contrast 0.6144 (v4 0.6104))
+  PASS       [set A] every threshold fit converged  (share unconverged 0.00000)
+  NOTE       [set B] choice probability at the planning weights (reported; v4's for reference)  (saturation 0.5834 (v4 0.6191), contrast 0.6144 (v4 0.6104))
+  PASS       [set B] every threshold fit converged  (share unconverged 0.00000)
+  PASS       [thresholds] the two sets' upper thresholds agree within 5%  (largest relative difference 1.4%)
+  PASS       [images] the stimulus set's checksums.sha256 is present  (2,322 files listed)
+  PASS       [images] checksums.sha256 is the frozen one (SHA-256 as in FROZEN.json)  (set 7fd72262ba)
+  PASS       [images] every referenced image exists in STIMULI_SRC  (632 needed, 0 missing)
+  PASS       [images] every copy is byte-identical to its source (SHA-256)  (0 differ)
+  PASS       [images] every copy matches the stimulus set's checksums.sha256  (0 of 632 differ or are not listed)
+  PASS       [images] every image is 512 x 512  (0 differ)
+  PASS       [images] re-measured sat_mean and contrast_local equal the pair table (|diff| <= 0.0001)  (0 of 632 differ)
+  PASS       [images] re-measured features equal the stimulus manifest  (0 differ)
+  PASS       [exclusion] no shipped image is from an excluded scene or excluded (scene from the stimulus manifest)  (632 images, 0 excluded or not in the manifest)
+
+  102 PASS, 0 FAIL, 3 SKIPPED, 4 NOTE / USED / NOT NEEDED
+
+12. NOTES
+------------------------------------------------------------------------------
+* Nothing here is ordered. Rows are sorted by type and couple; script 4 makes the orders.
+* item_id is stable within this build: A001..., Ac01... (consistency), Ax01... (catch),
+  P1_01... and P2_01... (practice before block 1 and 2). repeat_of names the original's item_id.
+* 'couple' links each analysed trial to its matched partner in the other set (same scene,
+  type and bin, paired in order of the type's driver).
+* Every row carries pred_sat, pred_fog, a_is_left, N_corpus, N_orig and their parts, for scripts 6-9.
+* candidates.csv: every candidate before (draw_*) and after (rep_*) repair; leak_by_type.csv: the
+  leak by type for every candidate, and for the shipped practice and catch trials.
+* BUILD_FAILED.txt is written when any check fails.

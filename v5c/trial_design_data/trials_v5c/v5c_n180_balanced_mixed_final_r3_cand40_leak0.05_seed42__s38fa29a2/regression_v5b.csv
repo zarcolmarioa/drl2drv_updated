@@ -1,0 +1,11 @@
+file,rows,n,equal,exact,max_abs_diff,note
+set_A.csv,all rows,200,True,True,0.0,74 columns
+set_A.csv,analysed,180,True,True,0.0,74 columns
+set_A.csv,consistency,15,True,True,0.0,74 columns
+set_A.csv,catch,5,True,True,0.0,74 columns
+set_B.csv,all rows,200,True,True,0.0,74 columns
+set_B.csv,analysed,180,True,True,0.0,74 columns
+set_B.csv,consistency,15,True,True,0.0,74 columns
+set_B.csv,catch,5,True,True,0.0,74 columns
+practice_block1.csv,all rows,6,True,True,0.0,73 columns
+practice_block2.csv,all rows,3,True,True,0.0,73 columns
