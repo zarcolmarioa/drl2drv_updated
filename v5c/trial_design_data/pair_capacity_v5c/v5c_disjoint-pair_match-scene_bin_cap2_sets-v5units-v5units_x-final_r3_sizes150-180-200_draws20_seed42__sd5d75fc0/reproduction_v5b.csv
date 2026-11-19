@@ -1,0 +1,14 @@
+file,rows,equal,exact,max_abs_diff,note
+all_pairs.csv.gz (decompressed),all,True,True,0.0,
+supply_grid.csv,46,True,True,0.0,14 shared columns
+pool_funnel.csv,13,True,True,0.0,4 shared columns
+bin_edges.csv,4,True,True,0.0,4 shared columns
+bins_by_steps.csv,39,True,True,0.0,5 shared columns
+pool_by_bin.csv,14,True,True,0.0,6 shared columns
+straddle.csv,5,True,True,0.0,10 shared columns
+normality_pool.csv,10,True,True,0.0,9 shared columns
+summary.csv,4,True,True,0.0,34 shared columns
+feasibility_by_type.csv,16,True,True,0.0,17 shared columns
+shortfall_by_bin.csv,56,True,True,0.0,10 shared columns
+draw_checks.csv,80,True,True,0.0,115 shared columns
+"example_sets (v5units, shared combinations)",8,True,True,0.0,byte for byte

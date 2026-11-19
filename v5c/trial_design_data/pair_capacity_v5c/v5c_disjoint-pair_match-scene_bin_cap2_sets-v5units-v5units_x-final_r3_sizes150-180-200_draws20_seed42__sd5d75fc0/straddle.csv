@@ -1,0 +1,16 @@
+threshold_set,type,pairs,straddle_contrast_level,straddle_contrast_measured,straddle_colour_level,straddle_colour_measured,includes_original,includes_original_as_A,includes_original_as_B
+v5units,sat_only,3290,0,1,2626,2638,94,47,47
+v5units,fog_only,3976,2230,2256,0,0,187,93,94
+v5units,together,20283,8651,8878,8844,8930,831,408,423
+v5units,conflict,8571,4200,4214,4059,4108,425,203,222
+v5units,all,36120,15081,15349,15529,15676,1537,751,786
+v5units_x,sat_only,2938,0,1,2347,2358,84,42,42
+v5units_x,fog_only,3632,2053,2077,0,0,167,83,84
+v5units_x,together,18149,7757,7948,7899,7973,741,363,378
+v5units_x,conflict,7666,3752,3766,3631,3677,381,182,199
+v5units_x,all,32385,13562,13792,13877,14008,1373,670,703
+final_r3,sat_only,1680,0,0,1050,1054,84,0,84
+final_r3,fog_only,1498,911,915,0,0,83,41,42
+final_r3,together,882,210,221,210,215,84,42,42
+final_r3,conflict,882,210,212,210,218,84,42,42
+final_r3,all,4942,1331,1348,1470,1487,335,125,210

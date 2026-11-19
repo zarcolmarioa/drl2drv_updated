@@ -1,0 +1,52 @@
+threshold_set,type,step,unordered_pairs
+v5units,sat_only,1 typed by measured differences,6909
+v5units,sat_only,2 |d_sat| >= 0.794 SD,3290
+v5units,sat_only,9 scenes,47
+v5units,fog_only,1 typed by measured differences,5889
+v5units,fog_only,2 |d_con| >= 0.449 SD,3976
+v5units,fog_only,9 scenes,47
+v5units,together,1 typed by measured differences,20894
+v5units,together,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,20283
+v5units,together,9 scenes,47
+v5units,conflict,1 typed by measured differences,21580
+v5units,conflict,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,18715
+v5units,conflict,3 balanced,8571
+v5units,conflict,9 scenes,47
+v5units_x,sat_only,1 typed by measured differences,6909
+v5units_x,sat_only,2 |d_sat| >= 0.794 SD,3290
+v5units_x,sat_only,5 excluded scenes (5) and images (0) removed,2938
+v5units_x,sat_only,9 scenes,42
+v5units_x,fog_only,1 typed by measured differences,5889
+v5units_x,fog_only,2 |d_con| >= 0.449 SD,3976
+v5units_x,fog_only,5 excluded scenes (5) and images (0) removed,3632
+v5units_x,fog_only,9 scenes,42
+v5units_x,together,1 typed by measured differences,20894
+v5units_x,together,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,20283
+v5units_x,together,5 excluded scenes (5) and images (0) removed,18149
+v5units_x,together,9 scenes,42
+v5units_x,conflict,1 typed by measured differences,21580
+v5units_x,conflict,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,18715
+v5units_x,conflict,3 balanced,8571
+v5units_x,conflict,5 excluded scenes (5) and images (0) removed,7666
+v5units_x,conflict,9 scenes,42
+final_r3,sat_only,1 typed by measured differences,6909
+final_r3,sat_only,2 |d_sat| >= 0.300 SD,6739
+final_r3,sat_only,"4 final rules (levels, shared level, cap, +-3)",1880
+final_r3,sat_only,5 excluded scenes (5) and images (0) removed,1680
+final_r3,sat_only,9 scenes,42
+final_r3,fog_only,1 typed by measured differences,5889
+final_r3,fog_only,2 |d_con| >= 0.450 SD,3976
+final_r3,fog_only,"4 final rules (levels, shared level, cap, +-3)",1644
+final_r3,fog_only,5 excluded scenes (5) and images (0) removed,1498
+final_r3,fog_only,9 scenes,42
+final_r3,together,1 typed by measured differences,20894
+final_r3,together,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,20283
+final_r3,together,"4 final rules (levels, shared level, cap, +-3)",987
+final_r3,together,5 excluded scenes (5) and images (0) removed,882
+final_r3,together,9 scenes,42
+final_r3,conflict,1 typed by measured differences,21580
+final_r3,conflict,2 |d_sat| >= 0.204 and |d_con| >= 0.321 SD,18715
+final_r3,conflict,3 balanced,8571
+final_r3,conflict,"4 final rules (levels, shared level, cap, +-3)",987
+final_r3,conflict,5 excluded scenes (5) and images (0) removed,882
+final_r3,conflict,9 scenes,42

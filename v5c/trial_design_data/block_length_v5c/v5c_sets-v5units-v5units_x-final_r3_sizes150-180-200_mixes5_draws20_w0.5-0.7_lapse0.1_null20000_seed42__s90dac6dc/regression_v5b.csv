@@ -1,0 +1,7 @@
+file,rows,equal,max_abs_diff,exact,note
+feasibility.csv,10,True,0.0,True,9 columns
+lists.csv,400,True,1.1102230246251565e-16,False,40 columns
+paired_power.csv,9636,True,1.1102230246251565e-16,False,17 columns
+rescaled_weights.csv,10,True,0.0,True,13 columns
+normality_leak.csv,800,True,0.0,True,10 columns
+v4_reference_list.csv,1,True,0.0,True,38 columns
