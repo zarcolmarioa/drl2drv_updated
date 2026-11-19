@@ -1,0 +1,83 @@
+section,check,status,detail
+regression (v5b_180),"paired_power.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"4224 of 4224 rows matched, 6 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"thresholds_adjusted.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"4 of 4 rows matched, 3 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"secondary_sign.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"3696 of 3696 rows matched, 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"block_measures.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"1152 of 1152 rows matched, 17 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"sanity_explore.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"36 of 36 rows matched, 9 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"pool_replicates.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"132 of 132 rows matched, 11 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"episode_strategy.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"48 of 48 rows matched, 8 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"leak.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"8 of 8 rows matched, 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"rescale_factors.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"1 of 1 rows matched, 10 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"fatigue_calibration.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"3 of 3 rows matched, 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"scenarios.csv equals v5b's (paired_adj_v5b): rates identical, other values within 1e-12",PASS,"96 of 96 rows matched, 23 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),the regression run passed every check,PASS,"data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c: 81 PASS, 0 FAIL"
+stimulus set,stimulus_manifest.csv and reference_stimulus_path.csv exist,PASS,data/stimulus_set_v5/7fd72262ba
+stimulus set,stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json),PASS,"69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2..."
+stimulus set,"corpus SDs equal the predictors' (39.182, 9.348)",PASS,"median [66.448242, 26.908877], SD [39.181906, 9.348022]"
+stimulus set,one original per scene (47 scenes),PASS,47
+package v5c 180,every non-image file matches checksums.sha256,PASS,61 of 61 match
+package v5c 180,every image present matches checksums.sha256 (images are not needed here),PASS,"632 of 632 present, 0 differ"
+package v5c 180,every file read here is listed in checksums.sha256,PASS,12 files
+package v5c 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5c_180
+package v5c 180,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)",PASS,max |difference| 6.0e-06
+package v5c 180,N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists),PASS,max |difference| 1.4e-07 (corpus SD)
+package v5c 180,set A: the analysed rows' N equal items.csv's,PASS,180 items
+package v5c 180,set B: the analysed rows' N equal items.csv's,PASS,180 items
+package v5c 180,"the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)",PASS,max |difference| 4.8e-07
+package v5c 180,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs,the packages record the same stimulus set and the same imported scripts,PASS,stimulus_set_v5/7fd72262ba
+package v5 180,every non-image file matches checksums.sha256,PASS,47 of 47 match
+package v5 180,every image present matches checksums.sha256 (images are not needed here),PASS,"628 of 628 present, 0 differ"
+package v5 180,every file read here is listed in checksums.sha256,PASS,11 files
+package v5 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5_180
+package v5 180,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5 180,"the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)",PASS,max |difference| 1.4e-14
+package v5 180,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs,simulate_power_v4_n10_20.py exists,PASS,simulate_power_v4_n10_20.py
+inputs,"simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk 852f3b33eb349153..., expected 852f3b33eb349153..."
+inputs,analyse_pair_capacity_v5c.py exists,PASS,analyse_pair_capacity_v5c.py
+inputs,"analyse_pair_capacity_v5c.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk d12a047011880dc7..., expected d12a047011880dc7..."
+inputs,explore_block_length_v5c.py exists,PASS,explore_block_length_v5c.py
+inputs,explore_block_length_v5c.py is the expected version (SHA-256),PASS,"on disk 133ab46e447e73de..., expected 133ab46e447e73de..."
+inputs,thresholds_v5c.py exists,PASS,thresholds_v5c.py
+inputs,thresholds_v5c.py is the expected version (SHA-256),PASS,"on disk 551a658b86703ad1..., expected 551a658b86703ad1..."
+inputs,script 1's thresholds.csv exists,PASS,data/power_v5c/thresholds_v5c/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sae818c7e/thresholds.csv
+inputs,script 1's run passed every check,PASS,"62 PASS, 0 FAIL"
+inputs,script 1's run was made on this package (the same checksums.sha256) in the matching mode,PASS,"script 1 mode v5c, package data/frozen_trial_lists_v5c/v5c_180"
+inputs,"script 1's rule recommendation (information only: the registered model is the adjusted model, chosen in v5b)",PASS,script 1's rule: two-weight
+inputs,thresholds found for every size and set (side and adjusted models),PASS,"adjusted: 180 A: sat +0.411/-0.421, con +0.410/-0.413; 180 B: sat +0.418/-0.410, con +0.403/-0.402"
+inputs,explore's paired_power.csv exists,PASS,data/block_length_v5c/v5c_sets-v5units-v5units_x-final_r3_sizes150-180-200_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__s90dac6dc/paired_power.csv
+inputs,"v5b's registered run (paired_adj_v5b) exists (paired_power.csv, secondary_sign.csv, thresholds_adjusted.csv, checks.csv, run_meta.json)",PASS,data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b
+inputs,v5b's registered run (paired_adj_v5b) passed every check,PASS,"113 PASS, 0 FAIL"
+tools,explore's vectorised Wilcoxon equals SciPy's exact test,PASS,max |difference| in p 0.0e+00
+tools,the paired t-test equals SciPy's,PASS,
+tools,"sign-test critical values: none below 5 detections, 5 of 5 at d = 5 (v4's Table 4 rule)",PASS,"d=5..10: [5.0, 6.0, 7.0, 7.0, 8.0, 9.0]"
+tools,the side-model fit equals v4's single-person fit_firth,PASS,max |difference| 1.4e-12
+tools,the adjusted-model fit equals v4's single-person fit_firth,PASS,max |difference| 2.1e-12
+rescaled weights,the rescaled weights give v4's choice probabilities on the lists' typical informative trial,PASS,"180: k_sat 1.443, k_con 0.964"
+fatigue,block 1's mean lapse is unchanged and block 2's mean lapse and preference factor follow the formula,PASS,max |difference| 1.4e-17
+thresholds,every random chooser's adjusted-model fit converged,PASS,unconverged share 0.00000
+thresholds,"the adjusted model's thresholds recomputed here equal script 1's (same 20,000 random choosers)",PASS,max |difference| 0.0e+00
+workers,"one worker gives the same result as 32 (180 trials, 'no nuisances', no effect)",PASS,"power, sign test, block measures and pool means compared"
+sanity,this script reproduces explore_block_length_v5b's functions under its simplified model (power and false positives on the frozen lists),PASS,36 comparisons; largest |z| 1.52; 0.0% beyond 1.96; mean z -0.11
+sanity,the frozen lists' power lies within explore's range over its draws of the same size and mix (+/- 3 SE),PASS,36 of 36 cells; draws per cell 20-20
+reproduction,the v5-list rows (side model; the same lists and streams as v5b) equal v5b's registered run (paired_adj_v5b),PASS,528 of 528 rows matched; max |difference| 0.0e+00
+Monte Carlo,headline cells agree between two independent pools (pool-to-pool error is small),PASS,132 comparisons; largest |z| 2.28; 3.8% beyond 1.96; SD z 0.98
+results,"with no effect and no nuisances, both tests stay at or below 0.05 + 3 SE (measured Monte Carlo SE) at every N",PASS,"largest rate 0.0533, largest z +0.83; mean rate t 0.0488, Wilcoxon 0.0450"
+results,power rises with N (within 3 SE of Monte Carlo noise between neighbouring N),PASS,32 of 32 series
+results,"the share excluded for 3+ catch failures matches the lapse model (about 5% at mean lapse 0.1, no nuisances)",PASS,"share excluded, no nuisances: [0.048]"

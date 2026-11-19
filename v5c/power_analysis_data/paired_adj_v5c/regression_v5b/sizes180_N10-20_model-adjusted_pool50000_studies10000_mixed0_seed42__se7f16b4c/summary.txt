@@ -1,0 +1,14 @@
+THE PRIMARY PAIRED TEST, ADJUSTED MODEL (simulate_power_paired_v5c_adj.py, REGRESSION ON v5b_180): IN PLAIN WORDS
+
+* Checks: 81 of 81 pass.
+* Registered per-person model: the strategy-adjusted model (side model + N_corpus + N_orig per block, Firth, no intercept); side and N terms are nuisance terms, never results. Chosen in v5b; not re-decided here.
+* adjusted model thresholds (2.5% per tail, script 1's run, the same 20,000 random choosers as design.json; sign test only): 180 A: sat +0.298/-0.303, con +0.327/-0.331; 180 B: sat +0.300/-0.296, con +0.323/-0.329.
+* Primary test (v5's amended rule, at most 3 of 54 cells over the limit): t. Cells over the limit: t 0, wilcoxon 0. Under the original rule (no cell): t.
+* Power at N = 20, planning, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.88 (rescaled 0.68); 180 saturation 0.83 (rescaled 0.83).
+* Power at N = 20, half shift, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.48 (rescaled 0.28); 180 saturation 0.41 (rescaled 0.44).
+* False positives with no effect over the rule rows (model 'adjusted', t test): mean 0.050, largest 0.063.
+* Episode-dependent strategy, v5b lists, model 'adjusted' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.059 at k 0.25, 0.061 at k 0.5, 0.052 at k 1.
+* Episode-dependent strategy, v5 lists, model 'side' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.999 at k 0.25, 1.000 at k 0.5, 1.000 at k 1.
+* Mixed model: not rerun; not part of the registration (assessed in v5b).
+* Rescale factors (script 2's rescale_factors on the lists): 180: saturation x0.963, contrast x0.654.
+* Regression on v5b_180: PASS (11 of 11 files reproduce v5b's paired_adj_v5b run: rates identical, other values within 1e-12).

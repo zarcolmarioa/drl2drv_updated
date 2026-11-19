@@ -1,0 +1,829 @@
+THE PRIMARY PAIRED TEST  (simulate_power_paired_v5c_adj.py, v5c script 2, adjusted model)  [REGRESSION ON v5b_180]
+==============================================================================
+run       2026-11-19 23:02:14  (2.4 min, 32 worker process(es), one thread each)
+output    data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c
+python    3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+packages  data/frozen_trial_lists_v5b/v5b_180; comparison: data/frozen_trial_lists_v5/v5_180
+
+0. IN PLAIN WORDS
+------------------------------------------------------------------------------
+* Checks: 81 of 81 pass.
+* Registered per-person model: the strategy-adjusted model (side model + N_corpus + N_orig per block, Firth, no intercept); side and N terms are nuisance terms, never results. Chosen in v5b; not re-decided here.
+* adjusted model thresholds (2.5% per tail, script 1's run, the same 20,000 random choosers as design.json; sign test only): 180 A: sat +0.298/-0.303, con +0.327/-0.331; 180 B: sat +0.300/-0.296, con +0.323/-0.329.
+* Primary test (v5's amended rule, at most 3 of 54 cells over the limit): t. Cells over the limit: t 0, wilcoxon 0. Under the original rule (no cell): t.
+* Power at N = 20, planning, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.88 (rescaled 0.68); 180 saturation 0.83 (rescaled 0.83).
+* Power at N = 20, half shift, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.48 (rescaled 0.28); 180 saturation 0.41 (rescaled 0.44).
+* False positives with no effect over the rule rows (model 'adjusted', t test): mean 0.050, largest 0.063.
+* Episode-dependent strategy, v5b lists, model 'adjusted' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.059 at k 0.25, 0.061 at k 0.5, 0.052 at k 1.
+* Episode-dependent strategy, v5 lists, model 'side' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.999 at k 0.25, 1.000 at k 0.5, 1.000 at k 1.
+* Mixed model: not rerun; not part of the registration (assessed in v5b).
+* Rescale factors (script 2's rescale_factors on the lists): 180: saturation x0.963, contrast x0.654.
+* Regression on v5b_180: PASS (11 of 11 files reproduce v5b's paired_adj_v5b run: rates identical, other values within 1e-12).
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. No image-choice data exist.
+The responder shares and shifts, taste spread, lapse rates and every nuisance
+value below were chosen for planning; every power and false-positive rate here
+depends on them.
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+Per-person model: adjusted model, Firth, no intercept, fitted per block on the analysed
+trials (columns x_sat, x_con, side, N_corpus, N_orig, in item order, per block and set, as script 7b).
+Thresholds (secondary sign test only): script 1's (thresholds_v5c.py, the same 20,000 random choosers as design.json),
+recomputed here as a check (data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624); they replace the frozen two-weight
+thresholds for the sign test; the lists are not re-frozen. The pools and studies use
+v5b's streams (the same simulated people as v5b's run; only the lists differ).
+
+MODEL. The registered per-person model is the strategy-adjusted model: the side model
+plus two nuisance terms per block, N_corpus and N_orig (Firth, no intercept, item order).
+The side and N terms are nuisance terms; their estimates are never results. It was
+chosen in v5b (scripts 6, 7 and 7b, before any data were collected) and is not re-decided
+here; scripts 7 and 7b are not rerun. The N terms only remove strategies that act
+linearly on N_corpus or N_orig (in the logit).
+Script 1's rule (information only): two-weight model.
+
+Primary test per feature: one-sided, derealization-block weight minus ordinary-
+block weight, alpha 0.05, uncorrected; paired t-test and exact Wilcoxon.
+Pools of 50,000 people per scenario and size, each fitted on both blocks; 10,000
+studies per cell drawn from the pool. Every rate's Monte Carlo SE is measured from
+20 disjoint sub-pools (it includes the pool's own error): largest power SE 0.0199,
+largest SE of a no-effect rate 0.0180 (columns 'se' in the CSV files).
+Recruitment: each participant takes the next slot of the frozen assignment table;
+anyone with 3+ catch failures of 10 is excluded and uses up the slot.
+N = 10-20 analysable people; tables show N = 10, 15, 20, paired_power.csv has every N.
+The person model is in the script's docstring. Values:
+  taste SD (0.143, 0.244); personal lapse Gamma, mean 0.1, SD 0.5 x mean;
+  catch p(fail) = 0.75 x lapse, 5 per block.
+  Nuisances at their defaults [ASSUMPTIONS]:
+    taste_corr         0.7
+    scene_sd_mult      1.0
+    side_sd            0.25
+    dull               (0.25, 0.35)
+    typical_share      0.25
+    less_edited_share  0.25
+    fatigue_lapse      0.03
+    fatigue_scale      0.939
+  (scene SD = scene_sd_mult x taste SD; dull in per-SD weight units; side in logit;
+  strategies: k per unit of N, N in corpus SD; fatigue per 100 main trials)
+
+  STRATEGIES (replace v5's 'edited looks odd'). 'More typical': +k x N_corpus;
+  'less edited': +k x N_orig; N = dist(B) - dist(A), so +k favours the image nearer
+  the corpus median or the scene's original. Separate quarters at the defaults.
+
+  FATIGUE (replaces v5's 'block order'). Per 100 main trials of the session: lapse +0.03,
+  preferences x0.939, anchored at block 1's mean position. Calibrated so that at 150
+  trials block 2 has v5's 'block order' values (lapse +0.05, preferences x0.90). Block means:
+   size  main_trials_per_block                  fatigue  block 1 lapse change  block 1 preference factor (mean)  block 1 preference factor (at mean position)  block 2 lapse change  block 2 preference factor (mean)  block 2 preference factor (at mean position)
+    180                    200                  default                0.0000                            1.0007                                        1.0000                0.0600                            0.8823                                        0.8817
+    180                    200                  doubled                0.0000                            1.0026                                        1.0000                0.1200                            0.7795                                        0.7774
+    180                    200 50% recovery at the rest                0.0000                            1.0007                                        1.0000                0.0300                            0.9396                                        0.9390
+
+  RESCALED WEIGHTS: script 2's rescale_factors on the frozen lists (the factors k
+  multiply the effect parts of planning and half shift, so the typical informative
+  trial gives v4's choice probabilities 0.6191 / 0.6104):
+   size  median_sat  k_sat  median_con  k_con  p_fixed_sat  p_fixed_con
+    180      1.0091 0.9627      0.9802 0.6544       0.6235       0.6651
+
+  THE V5 LISTS (comparison rows only): their N is computed from their manifest.csv
+  (each image's sat_mean and contrast_local); the scenes' originals are not in the v5
+  lists, so their features come from the v5b stimulus set table (data/stimulus_set_v5/7fd72262ba),
+  the same 47 scenes, measured on the stimulus path photograph -> 512 px -> 256 px.
+  The same computation reproduces the v5b lists' N (check in section 2).
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [stimulus set] stimulus_manifest.csv and reference_stimulus_path.csv exist
+          data/stimulus_set_v5/7fd72262ba
+  PASS  [stimulus set] stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json)
+          69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2...
+  PASS  [stimulus set] corpus SDs equal the predictors' (39.182, 9.348)
+          median [66.448242, 26.908877], SD [39.181906, 9.348022]
+  PASS  [stimulus set] one original per scene (47 scenes)
+          47
+  PASS  [package v5b 180] every non-image file matches checksums.sha256
+          54 of 54 match
+  PASS  [package v5b 180] every image present matches checksums.sha256 (images are not needed here)
+          656 of 656 present, 0 differ
+  PASS  [package v5b 180] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5b 180] FROZEN.json records the hash of this checksums.sha256
+          package v5b_180
+  PASS  [package v5b 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5b 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 9.1e-06
+  PASS  [package v5b 180] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.4e-07 (corpus SD)
+  PASS  [package v5b 180] set A: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] set B: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5b 180] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 5.0e-07
+  PASS  [package v5b 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] the packages record the same stimulus set and the same imported scripts
+          stimulus_set_v5/7fd72262ba
+  PASS  [package v5 180] every non-image file matches checksums.sha256
+          47 of 47 match
+  PASS  [package v5 180] every image present matches checksums.sha256 (images are not needed here)
+          628 of 628 present, 0 differ
+  PASS  [package v5 180] every file read here is listed in checksums.sha256
+          11 files
+  PASS  [package v5 180] FROZEN.json records the hash of this checksums.sha256
+          package v5_180
+  PASS  [package v5 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 1.4e-14
+  PASS  [package v5 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)
+          on disk 852f3b33eb349153..., expected 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5b.py exists
+          analyse_pair_capacity_v5b.py
+  PASS  [inputs] analyse_pair_capacity_v5b.py is the expected version (SHA-256, FROZEN.json)
+          on disk f7ab2c91e5a0be23..., expected f7ab2c91e5a0be23...
+  PASS  [inputs] explore_block_length_v5b.py exists
+          explore_block_length_v5b.py
+  PASS  [inputs] explore_block_length_v5b.py is the expected version (SHA-256)
+          on disk dc38cc67b547eaa3..., expected dc38cc67b547eaa3...
+  PASS  [inputs] thresholds_v5c.py exists
+          thresholds_v5c.py
+  PASS  [inputs] thresholds_v5c.py is the expected version (SHA-256)
+          on disk 551a658b86703ad1..., expected 551a658b86703ad1...
+  PASS  [inputs] script 1's thresholds.csv exists
+          data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624/thresholds.csv
+  PASS  [inputs] script 1's run passed every check
+          61 PASS, 0 FAIL
+  PASS  [inputs] script 1's run was made on this package (the same checksums.sha256) in the matching mode
+          script 1 mode regression, package data/frozen_trial_lists_v5b/v5b_180
+  PASS  [inputs] script 1's rule recommendation (information only: the registered model is the adjusted model, chosen in v5b)
+          script 1's rule: two-weight
+  PASS  [inputs] thresholds found for every size and set (side and adjusted models)
+          adjusted: 180 A: sat +0.298/-0.303, con +0.327/-0.331; 180 B: sat +0.300/-0.296, con +0.323/-0.329
+  PASS  [inputs] explore's paired_power.csv exists
+          data/block_length_v5b/v5b_sets-v5units-sd060_sizes120-150-180_mixes5_draws20_w0.5-0.7_lapse0.1_null20000_seed42__sad6f14a4/paired_power.csv
+  PASS  [inputs] v5b's registered run (paired_adj_v5b) exists (paired_power.csv, secondary_sign.csv, thresholds_adjusted.csv, checks.csv, run_meta.json)
+          data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b
+  PASS  [inputs] v5b's registered run (paired_adj_v5b) passed every check
+          113 PASS, 0 FAIL
+  PASS  [tools] explore's vectorised Wilcoxon equals SciPy's exact test
+          max |difference| in p 0.0e+00
+  PASS  [tools] the paired t-test equals SciPy's
+  PASS  [tools] sign-test critical values: none below 5 detections, 5 of 5 at d = 5 (v4's Table 4 rule)
+          d=5..10: [5.0, 6.0, 7.0, 7.0, 8.0, 9.0]
+  PASS  [tools] the side-model fit equals v4's single-person fit_firth
+          max |difference| 2.0e-12
+  PASS  [tools] the adjusted-model fit equals v4's single-person fit_firth
+          max |difference| 5.1e-12
+  PASS  [rescaled weights] the rescaled weights give v4's choice probabilities on the lists' typical informative trial
+          180: k_sat 0.963, k_con 0.654
+  PASS  [fatigue] block 1's mean lapse is unchanged and block 2's mean lapse and preference factor follow the formula
+          max |difference| 1.4e-17
+  PASS  [thresholds] every random chooser's adjusted-model fit converged
+          unconverged share 0.00000
+  PASS  [thresholds] the adjusted model's thresholds recomputed here equal script 1's (same 20,000 random choosers)
+          max |difference| 0.0e+00
+  PASS  [workers] one worker gives the same result as 32 (180 trials, 'no nuisances', no effect)
+          power, sign test, block measures and pool means compared
+  PASS  [sanity] this script reproduces explore_block_length_v5b's functions under its simplified model (power and false positives on the frozen lists)
+          36 comparisons; largest |z| 2.30; 5.6% beyond 1.96; mean z -0.53
+  PASS  [sanity] the frozen lists' power lies within explore's range over its draws of the same size and mix (+/- 3 SE)
+          36 of 36 cells; draws per cell 20-20
+  PASS  [reproduction] the v5-list rows (side model; the same lists and streams as v5b) equal v5b's registered run (paired_adj_v5b)
+          528 of 528 rows matched; max |difference| 0.0e+00
+  PASS  [Monte Carlo] headline cells agree between two independent pools (pool-to-pool error is small)
+          132 comparisons; largest |z| 2.39; 2.3% beyond 1.96; SD z 0.98
+  PASS  [results] with no effect and no nuisances, both tests stay at or below 0.05 + 3 SE (measured Monte Carlo SE) at every N
+          largest rate 0.0570, largest z +1.65; mean rate t 0.0493, Wilcoxon 0.0456
+  PASS  [results] power rises with N (within 3 SE of Monte Carlo noise between neighbouring N)
+          32 of 32 series
+  PASS  [results] the share excluded for 3+ catch failures matches the lapse model (about 5% at mean lapse 0.1, no nuisances)
+          share excluded, no nuisances: [0.048]
+  PASS  [regression (v5b_180)] paired_power.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          4224 of 4224 rows matched (4224 here), 6 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] thresholds_adjusted.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          4 of 4 rows matched (4 here), 3 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] secondary_sign.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          3696 of 3696 rows matched (3696 here), 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] block_measures.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          1152 of 1152 rows matched (1152 here), 17 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] sanity_explore.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          36 of 36 rows matched (36 here), 9 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] pool_replicates.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          132 of 132 rows matched (132 here), 11 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] episode_strategy.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          48 of 48 rows matched (48 here), 8 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] leak.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          8 of 8 rows matched (8 here), 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] rescale_factors.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          1 of 1 rows matched (1 here), 10 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] fatigue_calibration.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          3 of 3 rows matched (3 here), 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] scenarios.csv equals v5b's (paired_adj_v5b, 180 trials): rates identical, other values within 1e-12
+          96 of 96 rows matched (96 here), 23 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+
+  81 PASS, 0 FAIL
+
+3. SANITY CHECK: explore_block_length_v5b's simplified model on the frozen lists
+------------------------------------------------------------------------------
+explore_functions: explore's paired_pool / study_index / paired_tests run
+unmodified (its pool and study settings set to 50,000 and 10,000); this_script: this script's simulation
+set to the same model (two-weight fit, lapse 0.1 for everyone, taste the same in
+both blocks, no exclusion). draws: explore's range over its draws (balanced_mixed, v5units, fixed weights).
+   size   scenario  N     test    feature  explore_functions  this_script  se_each      z  draws_min  draws_max
+    180  no effect 10        t saturation              0.049        0.044    0.003 -0.959      0.041      0.060
+    180  no effect 10 wilcoxon saturation              0.040        0.037    0.003 -0.550      0.033      0.050
+    180  no effect 10        t   contrast              0.046        0.052    0.005  0.911      0.040      0.058
+    180  no effect 10 wilcoxon   contrast              0.040        0.045    0.005  0.810      0.034      0.051
+    180  no effect 15        t saturation              0.047        0.040    0.003 -1.736      0.038      0.058
+    180  no effect 15 wilcoxon saturation              0.044        0.041    0.003 -0.954      0.035      0.054
+    180  no effect 15        t   contrast              0.046        0.050    0.003  0.874      0.039      0.059
+    180  no effect 15 wilcoxon   contrast              0.044        0.047    0.003  0.708      0.037      0.057
+    180  no effect 20        t saturation              0.047        0.046    0.004 -0.278      0.042      0.057
+    180  no effect 20 wilcoxon saturation              0.045        0.045    0.004 -0.140      0.040      0.057
+    180  no effect 20        t   contrast              0.046        0.054    0.004  1.440      0.042      0.067
+    180  no effect 20 wilcoxon   contrast              0.044        0.053    0.003  1.912      0.041      0.065
+    180   planning 10        t saturation              0.657        0.652    0.017 -0.207      0.621      0.684
+    180   planning 10 wilcoxon saturation              0.589        0.579    0.017 -0.432      0.555      0.615
+    180   planning 10        t   contrast              0.739        0.719    0.013 -1.042      0.711      0.753
+    180   planning 10 wilcoxon   contrast              0.659        0.638    0.014 -1.064      0.626      0.665
+    180   planning 15        t saturation              0.844        0.828    0.013 -0.855      0.802      0.863
+    180   planning 15 wilcoxon saturation              0.800        0.781    0.014 -0.959      0.753      0.815
+    180   planning 15        t   contrast              0.902        0.886    0.009 -1.175      0.882      0.914
+    180   planning 15 wilcoxon   contrast              0.854        0.838    0.009 -1.182      0.826      0.869
+    180   planning 20        t saturation              0.927        0.920    0.008 -0.564      0.900      0.938
+    180   planning 20 wilcoxon saturation              0.894        0.889    0.010 -0.356      0.869      0.909
+    180   planning 20        t   contrast              0.963        0.961    0.004 -0.372      0.953      0.971
+    180   planning 20 wilcoxon   contrast              0.936        0.932    0.005 -0.576      0.924      0.944
+    180 half shift 10        t saturation              0.372        0.346    0.015 -1.152      0.328      0.384
+    180 half shift 10 wilcoxon saturation              0.327        0.307    0.014 -0.947      0.283      0.338
+    180 half shift 10        t   contrast              0.456        0.442    0.013 -0.773      0.424      0.481
+    180 half shift 10 wilcoxon   contrast              0.404        0.384    0.014 -1.051      0.378      0.428
+    180 half shift 15        t saturation              0.510        0.493    0.009 -1.300      0.435      0.537
+    180 half shift 15 wilcoxon saturation              0.480        0.464    0.010 -1.172      0.406      0.506
+    180 half shift 15        t   contrast              0.619        0.601    0.016 -0.776      0.578      0.647
+    180 half shift 15 wilcoxon   contrast              0.581        0.561    0.018 -0.775      0.549      0.614
+    180 half shift 20        t saturation              0.625        0.596    0.011 -2.003      0.559      0.648
+    180 half shift 20 wilcoxon saturation              0.603        0.567    0.011 -2.297      0.530      0.617
+    180 half shift 20        t   contrast              0.744        0.743    0.011 -0.064      0.703      0.767
+    180 half shift 20 wilcoxon   contrast              0.706        0.706    0.011  0.025      0.670      0.733
+
+4. FALSE POSITIVES WITH NO EFFECT
+------------------------------------------------------------------------------
+Share of studies where the one-sided paired test is significant. t = paired
+t-test, W = Wilcoxon; con = contrast (H1), sat = saturation (H2). Monte Carlo SE about
+0.0042. Rule limit per cell 0.05 + 2 SE: 0.0551-0.0631.
+
+  Rows used by the test-choice rule (each default nuisance alone, then all)
+
+  180 trials per block
+  col                                                                  t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                   model                                                                                                                                       
+  no nuisances                                               adjusted      0.052      0.051      0.055      0.044      0.049      0.052      0.046      0.047      0.048      0.037      0.045      0.045
+  taste stability 0.7                                        adjusted      0.052      0.055      0.056      0.045      0.053      0.056      0.049      0.052      0.054      0.037      0.050      0.052
+  scene dependence (SD x1, stability 0.7)                    adjusted      0.049      0.048      0.040      0.042      0.047      0.039      0.054      0.048      0.052      0.046      0.045      0.048
+  side bias (SD 0.25)                                        adjusted      0.052      0.054      0.049      0.041      0.050      0.048      0.054      0.060      0.060      0.044      0.058      0.058
+  memory makes it duller (+0.25/+0.35, everyone)             adjusted      0.047      0.047      0.050      0.039      0.043      0.047      0.047      0.052      0.056      0.041      0.051      0.055
+  strategy: more typical (a quarter, k 0.5)                  adjusted      0.050      0.049      0.054      0.041      0.046      0.054      0.054      0.056      0.051      0.046      0.051      0.050
+  strategy: less edited (a quarter, k 0.5)                   adjusted      0.048      0.051      0.055      0.042      0.050      0.054      0.046      0.046      0.052      0.039      0.044      0.052
+  fatigue (per 100 trials: lapse +0.030, preferences x0.939) adjusted      0.046      0.047      0.045      0.037      0.042      0.043      0.049      0.048      0.051      0.041      0.049      0.048
+  all nuisances (defaults)                                   adjusted      0.052      0.046      0.045      0.043      0.044      0.043      0.054      0.044      0.048      0.046      0.045      0.047
+
+  Sensitivity rows (the ranges; not used by the rule)
+
+  180 trials per block
+  col                                                                          t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                           model                                                                                                                                       
+  taste stability 0.5                                                adjusted      0.049      0.050      0.051      0.041      0.045      0.048      0.046      0.045      0.041      0.039      0.041      0.040
+  taste stability 0.3                                                adjusted      0.050      0.046      0.045      0.041      0.044      0.044      0.045      0.051      0.048      0.038      0.048      0.047
+  taste stability 0                                                  adjusted      0.053      0.052      0.051      0.046      0.050      0.048      0.054      0.052      0.054      0.043      0.048      0.053
+  scene dependence SD x0.5                                           adjusted      0.049      0.051      0.050      0.041      0.049      0.048      0.055      0.055      0.051      0.047      0.053      0.049
+  scene dependence SD x2                                             adjusted      0.051      0.052      0.052      0.043      0.048      0.048      0.053      0.052      0.052      0.044      0.051      0.054
+  scene dependence, stability 0                                      adjusted      0.051      0.053      0.053      0.040      0.049      0.051      0.047      0.045      0.047      0.038      0.044      0.042
+  scene dependence, stability 1                                      adjusted      0.046      0.045      0.051      0.037      0.041      0.048      0.057      0.057      0.055      0.051      0.055      0.053
+  common scene effect SD 0.1                                         adjusted      0.049      0.051      0.051      0.041      0.048      0.051      0.054      0.048      0.056      0.045      0.045      0.053
+  side bias SD 0.5                                                   adjusted      0.048      0.044      0.050      0.040      0.043      0.048      0.050      0.048      0.051      0.043      0.046      0.051
+  side bias SD 0.25, mean 0.2                                        adjusted      0.051      0.053      0.056      0.042      0.052      0.053      0.053      0.050      0.052      0.043      0.046      0.050
+  memory makes it duller +0.5/+0.7                                   adjusted      0.050      0.049      0.049      0.043      0.045      0.047      0.044      0.040      0.048      0.040      0.036      0.048
+  strategy: more typical, half (k 0.5)                               adjusted      0.058      0.051      0.054      0.048      0.048      0.052      0.046      0.043      0.044      0.039      0.040      0.043
+  strategy: more typical, a quarter, k 0.25                          adjusted      0.047      0.052      0.047      0.038      0.049      0.045      0.053      0.053      0.053      0.044      0.051      0.057
+  strategy: more typical, a quarter, k 1.0                           adjusted      0.051      0.053      0.055      0.044      0.049      0.054      0.054      0.057      0.052      0.046      0.052      0.048
+  strategy: less edited, half (k 0.5)                                adjusted      0.049      0.054      0.056      0.041      0.049      0.053      0.049      0.047      0.049      0.039      0.044      0.051
+  strategy: less edited, a quarter, k 0.25                           adjusted      0.053      0.051      0.056      0.046      0.049      0.051      0.051      0.053      0.056      0.042      0.050      0.056
+  strategy: less edited, a quarter, k 1.0                            adjusted      0.052      0.056      0.052      0.043      0.052      0.050      0.052      0.052      0.051      0.043      0.050      0.048
+  fatigue doubled (per 100 trials: lapse +0.060, preferences x0.882) adjusted      0.045      0.047      0.045      0.038      0.043      0.047      0.058      0.056      0.057      0.049      0.055      0.053
+  fatigue, 50% recovery at the rest                                  adjusted      0.044      0.046      0.048      0.038      0.046      0.048      0.056      0.058      0.057      0.049      0.053      0.056
+  lapse rising across the block (+0.10)                              adjusted      0.051      0.048      0.049      0.044      0.046      0.048      0.057      0.045      0.048      0.048      0.042      0.045
+  pair-specific preferences SD 1.0                                   adjusted      0.051      0.051      0.053      0.045      0.049      0.051      0.051      0.051      0.049      0.043      0.047      0.047
+  pair-specific preferences SD 2.0                                   adjusted      0.047      0.054      0.046      0.041      0.050      0.045      0.052      0.046      0.054      0.043      0.045      0.051
+  all nuisances (high ends)                                          adjusted      0.040      0.031      0.031      0.035      0.031      0.032      0.039      0.029      0.033      0.034      0.028      0.033
+  all nuisances (defaults), no fatigue                               adjusted      0.046      0.048      0.047      0.041      0.046      0.046      0.052      0.052      0.045      0.044      0.050      0.043
+  all nuisances (defaults), fatigue doubled                          adjusted      0.047      0.034      0.038      0.039      0.034      0.036      0.044      0.036      0.037      0.034      0.036      0.036
+  all nuisances (defaults), fatigue, 50% recovery at the rest        adjusted      0.046      0.042      0.048      0.041      0.041      0.047      0.049      0.039      0.046      0.041      0.037      0.045
+  all nuisances (defaults) + pair-specific preferences SD 1.5        adjusted      0.052      0.040      0.041      0.043      0.038      0.039      0.044      0.052      0.049      0.035      0.047      0.045
+
+  THREATS NO TEST CAN REMOVE (more lapses in the derealization block,
+alone and with a shared bias; a bias that differs between episodes)
+
+  180 trials per block
+  col                                                                                t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                                 model                                                                                                                                       
+  derealization lapse +0.05                                                adjusted      0.058      0.060      0.057      0.050      0.056      0.055      0.055      0.056      0.059      0.046      0.052      0.056
+  derealization lapse +0.1                                                 adjusted      0.046      0.049      0.050      0.038      0.045      0.049      0.049      0.048      0.050      0.041      0.047      0.048
+  derealization lapse +0.15                                                adjusted      0.051      0.050      0.051      0.042      0.047      0.048      0.057      0.061      0.059      0.048      0.054      0.056
+  derealization lapse +0.05, with both strategies (defaults)               adjusted      0.047      0.044      0.044      0.039      0.042      0.041      0.055      0.051      0.048      0.045      0.046      0.046
+  derealization lapse +0.1, with both strategies (defaults)                adjusted      0.049      0.050      0.049      0.038      0.048      0.048      0.056      0.054      0.058      0.047      0.051      0.056
+  derealization lapse +0.15, with both strategies (defaults)               adjusted      0.054      0.047      0.047      0.046      0.046      0.047      0.048      0.049      0.049      0.040      0.048      0.048
+  derealization lapse +0.05, with memory makes it duller                   adjusted      0.025      0.024      0.021      0.021      0.022      0.021      0.033      0.032      0.023      0.025      0.030      0.024
+  derealization lapse +0.1, with memory makes it duller                    adjusted      0.020      0.013      0.011      0.018      0.013      0.012      0.026      0.018      0.015      0.022      0.016      0.016
+  derealization lapse +0.15, with memory makes it duller                   adjusted      0.011      0.007      0.004      0.009      0.007      0.005      0.014      0.009      0.009      0.011      0.009      0.008
+  all nuisances (defaults), derealization lapse +0.1                       adjusted      0.024      0.018      0.014      0.021      0.017      0.015      0.023      0.018      0.016      0.019      0.019      0.016
+  all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14) adjusted      0.270      0.361      0.449      0.237      0.342      0.427      0.225      0.313      0.398      0.195      0.298      0.385
+  derealization lapse +0.05, with pair-specific preferences SD 1.5         adjusted      0.053      0.048      0.054      0.044      0.044      0.054      0.050      0.044      0.043      0.041      0.041      0.044
+  derealization lapse +0.1, with pair-specific preferences SD 1.5          adjusted      0.049      0.045      0.047      0.040      0.043      0.043      0.059      0.060      0.059      0.048      0.059      0.058
+  derealization lapse +0.15, with pair-specific preferences SD 1.5         adjusted      0.051      0.047      0.046      0.042      0.042      0.045      0.045      0.049      0.048      0.039      0.047      0.048
+
+  Why the threat rows are threats: a bias present in both blocks cancels in the
+  difference only if both blocks express it equally. More lapses in the
+  derealization block shrink its weights towards zero: a shared preference for the
+  predicted image ('duller') then looks like a negative difference; a strategy acts
+  on the weights only through the lists' leak, so its interaction with lapses is
+  small. A bias stronger in one episode is indistinguishable from an effect.
+  Section 11 shows how well the per-block attention measures pick up a lapse difference.
+
+5. THE EPISODE-DEPENDENT STRATEGY: v5b LISTS AGAINST v5 LISTS (a threat no test can remove)
+------------------------------------------------------------------------------
+Everyone uses a strategy that differs between the episodes: main rows, -k x N in the
+derealization block and +k x N in the ordinary block (picks the less typical / more
+edited image when derealized); reverse rows the other way round (information). A
+strategy reaches a model WITHOUT N terms only through the leak b (N regressed on the
+predictors, no intercept): the weight difference it creates is about (k_D - k_O) x b,
+before logistic attenuation and lapses ('leak_shift'; 'mean_diff' is the simulated mean
+difference of the estimates). The v5b lists were built with |b| <= 0.05; v5's were not.
+model: adjusted (this run, v5b lists); the v5 lists use the side model, as in v5b
+(the same lists and streams as v5b's run; checked in section 2).
+  The adjusted model's N terms take up a strategy that is linear in N, so its mean_diff
+  stays near 0.
+
+  The leak (mean over the two sets is used for leak_shift):
+  lists  size set definition   b_sat   b_con   N_sd   n
+    v5b   180   A     corpus  0.0373 -0.0370 0.5358 180
+    v5b   180   A       orig -0.0337  0.0292 0.4561 180
+    v5b   180   B     corpus  0.0372 -0.0375 0.6224 180
+    v5b   180   B       orig -0.0365  0.0334 0.5029 180
+     v5   180   A     corpus -0.2738 -0.6300 0.3589 180
+     v5   180   A       orig -0.5274 -0.6243 0.4524 180
+     v5   180   B     corpus -0.2503 -0.6126 0.3175 180
+     v5   180   B       orig -0.5128 -0.6232 0.4225 180
+
+  lists  size direction definition     k    feature    model  t:N10  t:N15  t:N20  W:N10  W:N15  W:N20  mean_diff  leak_shift
+    v5b   180      main     corpus 0.250   contrast adjusted  0.053  0.050  0.056  0.048  0.050  0.056      0.003       0.019
+    v5b   180      main     corpus 0.250 saturation adjusted  0.047  0.048  0.052  0.040  0.044  0.049      0.000      -0.019
+    v5b   180      main     corpus 0.500   contrast adjusted  0.054  0.052  0.057  0.043  0.051  0.056      0.003       0.037
+    v5b   180      main     corpus 0.500 saturation adjusted  0.045  0.041  0.050  0.039  0.038  0.049     -0.003      -0.037
+    v5b   180      main     corpus 1.000   contrast adjusted  0.049  0.050  0.046  0.040  0.045  0.045      0.001       0.074
+    v5b   180      main     corpus 1.000 saturation adjusted  0.044  0.050  0.046  0.037  0.047  0.047     -0.001      -0.075
+    v5b   180      main       orig 0.250   contrast adjusted  0.055  0.057  0.058  0.046  0.054  0.057      0.003      -0.016
+    v5b   180      main       orig 0.250 saturation adjusted  0.047  0.047  0.054  0.039  0.045  0.053     -0.002       0.018
+    v5b   180      main       orig 0.500   contrast adjusted  0.053  0.059  0.061  0.046  0.057  0.059      0.003      -0.031
+    v5b   180      main       orig 0.500 saturation adjusted  0.055  0.053  0.058  0.046  0.054  0.056      0.000       0.035
+    v5b   180      main       orig 1.000   contrast adjusted  0.048  0.048  0.049  0.041  0.047  0.046     -0.001      -0.063
+    v5b   180      main       orig 1.000 saturation adjusted  0.051  0.054  0.052  0.044  0.051  0.051      0.004       0.070
+    v5b   180   reverse     corpus 0.250   contrast adjusted  0.055  0.049  0.050  0.047  0.046  0.049      0.002      -0.019
+    v5b   180   reverse     corpus 0.250 saturation adjusted  0.050  0.046  0.047  0.040  0.043  0.045     -0.001       0.019
+    v5b   180   reverse     corpus 0.500   contrast adjusted  0.059  0.054  0.055  0.047  0.052  0.053      0.005      -0.037
+    v5b   180   reverse     corpus 0.500 saturation adjusted  0.058  0.056  0.050  0.048  0.053  0.047      0.005       0.037
+    v5b   180   reverse     corpus 1.000   contrast adjusted  0.055  0.055  0.050  0.046  0.053  0.051      0.002      -0.074
+    v5b   180   reverse     corpus 1.000 saturation adjusted  0.048  0.046  0.047  0.041  0.042  0.045     -0.002       0.075
+    v5b   180   reverse       orig 0.250   contrast adjusted  0.051  0.051  0.051  0.043  0.050  0.050      0.002       0.016
+    v5b   180   reverse       orig 0.250 saturation adjusted  0.058  0.059  0.059  0.048  0.053  0.053      0.004      -0.018
+    v5b   180   reverse       orig 0.500   contrast adjusted  0.050  0.051  0.049  0.043  0.048  0.045      0.002       0.031
+    v5b   180   reverse       orig 0.500 saturation adjusted  0.048  0.050  0.047  0.041  0.047  0.044      0.001      -0.035
+    v5b   180   reverse       orig 1.000   contrast adjusted  0.048  0.054  0.049  0.042  0.049  0.045     -0.000       0.063
+    v5b   180   reverse       orig 1.000 saturation adjusted  0.053  0.054  0.048  0.045  0.051  0.049      0.002      -0.070
+     v5   180      main     corpus 0.250   contrast     side  0.779  0.917  0.967  0.727  0.898  0.960      0.278       0.311
+     v5   180      main     corpus 0.250 saturation     side  0.475  0.644  0.760  0.422  0.617  0.738      0.120       0.131
+     v5   180      main     corpus 0.500   contrast     side  0.999  1.000  1.000  0.999  1.000  1.000      0.561       0.621
+     v5   180      main     corpus 0.500 saturation     side  0.945  0.992  0.999  0.922  0.990  0.999      0.242       0.262
+     v5   180      main     corpus 1.000   contrast     side  1.000  1.000  1.000  1.000  1.000  1.000      1.110       1.243
+     v5   180      main     corpus 1.000 saturation     side  1.000  1.000  1.000  1.000  1.000  1.000      0.469       0.524
+     v5   180      main       orig 0.250   contrast     side  0.778  0.918  0.971  0.737  0.902  0.965      0.278       0.312
+     v5   180      main       orig 0.250 saturation     side  0.933  0.989  0.999  0.903  0.985  0.998      0.235       0.260
+     v5   180      main       orig 0.500   contrast     side  0.999  1.000  1.000  0.998  1.000  1.000      0.557       0.624
+     v5   180      main       orig 0.500 saturation     side  1.000  1.000  1.000  1.000  1.000  1.000      0.465       0.520
+     v5   180      main       orig 1.000   contrast     side  1.000  1.000  1.000  1.000  1.000  1.000      1.097       1.248
+     v5   180      main       orig 1.000 saturation     side  1.000  1.000  1.000  1.000  1.000  1.000      0.927       1.040
+     v5   180   reverse     corpus 0.250   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.281      -0.311
+     v5   180   reverse     corpus 0.250 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.122      -0.131
+     v5   180   reverse     corpus 0.500   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.554      -0.621
+     v5   180   reverse     corpus 0.500 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.241      -0.262
+     v5   180   reverse     corpus 1.000   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -1.100      -1.243
+     v5   180   reverse     corpus 1.000 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.473      -0.524
+     v5   180   reverse       orig 0.250   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.274      -0.312
+     v5   180   reverse       orig 0.250 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.231      -0.260
+     v5   180   reverse       orig 0.500   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.561      -0.624
+     v5   180   reverse       orig 0.500 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.467      -0.520
+     v5   180   reverse       orig 1.000   contrast     side  0.000  0.000  0.000  0.000  0.000  0.000     -1.104      -1.248
+     v5   180   reverse       orig 1.000 saturation     side  0.000  0.000  0.000  0.000  0.000  0.000     -0.921      -1.040
+
+6. POWER [responder shares and shifts: ASSUMPTIONS]
+------------------------------------------------------------------------------
+
+  All nuisances at their defaults, fixed weights (the headline)
+
+  180 trials per block
+  col                                                              t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                 effect                        model                                                                                                                                       
+  all nuisances (defaults) planning                      adjusted      0.616      0.774      0.882      0.550      0.732      0.847      0.521      0.696      0.826      0.464      0.654      0.786
+                           half shift                    adjusted      0.291      0.360      0.477      0.250      0.332      0.437      0.266      0.326      0.410      0.228      0.301      0.384
+                           a quarter respond             adjusted      0.250      0.336      0.427      0.209      0.293      0.369      0.211      0.296      0.387      0.174      0.263      0.349
+                           a quarter respond, half shift adjusted      0.121      0.139      0.179      0.105      0.124      0.166      0.117      0.135      0.178      0.098      0.126      0.167
+                           all respond                   adjusted      1.000      1.000      1.000      0.999      1.000      1.000      0.997      1.000      1.000      0.994      1.000      1.000
+                           all respond, half shift       adjusted      0.770      0.899      0.962      0.712      0.877      0.949      0.691      0.819      0.922      0.635      0.793      0.906
+
+  All nuisances at their defaults, rescaled weights (cautious; beside the headline)
+
+  180 trials per block
+  col                                                              t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                 effect                        model                                                                                                                                       
+  all nuisances (defaults) planning (rescaled weights)   adjusted      0.409      0.563      0.682      0.359      0.523      0.648      0.547      0.708      0.835      0.485      0.663      0.800
+                           half shift (rescaled weights) adjusted      0.194      0.233      0.284      0.170      0.220      0.267      0.261      0.339      0.438      0.227      0.313      0.410
+
+  No nuisances
+
+  180 trials per block
+  col                                                  t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario     effect                        model                                                                                                                                       
+  no nuisances planning                      adjusted      0.714      0.889      0.959      0.629      0.834      0.926      0.663      0.841      0.927      0.595      0.795      0.899
+               half shift                    adjusted      0.444      0.624      0.733      0.392      0.582      0.696      0.354      0.481      0.584      0.311      0.446      0.557
+               a quarter respond             adjusted      0.332      0.472      0.601      0.272      0.397      0.502      0.298      0.407      0.528      0.248      0.355      0.462
+               a quarter respond, half shift adjusted      0.184      0.247      0.305      0.155      0.224      0.277      0.144      0.199      0.229      0.120      0.182      0.212
+               all respond                   adjusted      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000      1.000
+               all respond, half shift       adjusted      0.969      0.997      1.000      0.952      0.996      0.999      0.878      0.975      0.993      0.839      0.968      0.991
+
+  All nuisances at their defaults plus pair-specific preferences, or with fatigue changed (sensitivity rows)
+
+  180 trials per block
+  col                                                                              t:con:N10  t:con:N15  t:con:N20  W:con:N10  W:con:N15  W:con:N20  t:sat:N10  t:sat:N15  t:sat:N20  W:sat:N10  W:sat:N15  W:sat:N20
+  scenario                                                    effect     model                                                                                                                                       
+  all nuisances (defaults) + pair-specific preferences SD 1.5 planning   adjusted      0.519      0.682      0.805      0.464      0.644      0.768      0.455      0.595      0.747      0.401      0.556      0.714
+                                                              half shift adjusted      0.254      0.331      0.405      0.215      0.301      0.375      0.219      0.279      0.348      0.187      0.258      0.331
+  all nuisances (defaults), no fatigue                        planning   adjusted      0.654      0.816      0.909      0.584      0.773      0.879      0.580      0.779      0.882      0.517      0.737      0.848
+                                                              half shift adjusted      0.317      0.446      0.547      0.280      0.420      0.521      0.281      0.391      0.476      0.243      0.365      0.454
+  all nuisances (defaults), fatigue doubled                   planning   adjusted      0.518      0.680      0.819      0.456      0.624      0.770      0.473      0.621      0.755      0.415      0.573      0.703
+                                                              half shift adjusted      0.211      0.269      0.350      0.174      0.236      0.307      0.205      0.254      0.328      0.171      0.223      0.293
+  all nuisances (defaults), fatigue, 50% recovery at the rest planning   adjusted      0.627      0.801      0.901      0.561      0.754      0.866      0.576      0.742      0.848      0.514      0.698      0.815
+                                                              half shift adjusted      0.326      0.424      0.539      0.285      0.392      0.498      0.276      0.372      0.454      0.235      0.343      0.427
+
+  Planning and half shift at every N (all nuisances at defaults; fixed and rescaled):
+  test                                         t            wilcoxon           
+  feature                               contrast saturation contrast saturation
+  size effect                        N                                         
+  180  half shift                    10    0.291      0.266    0.250      0.228
+                                     11    0.315      0.284    0.269      0.239
+                                     12    0.326      0.297    0.296      0.268
+                                     13    0.339      0.308    0.311      0.286
+                                     14    0.351      0.325    0.318      0.293
+                                     15    0.360      0.326    0.332      0.301
+                                     16    0.390      0.346    0.353      0.319
+                                     17    0.409      0.367    0.382      0.345
+                                     18    0.424      0.377    0.392      0.352
+                                     19    0.456      0.396    0.412      0.366
+                                     20    0.477      0.410    0.437      0.384
+       half shift (rescaled weights) 10    0.194      0.261    0.170      0.227
+                                     11    0.210      0.296    0.178      0.255
+                                     12    0.212      0.312    0.194      0.285
+                                     13    0.216      0.320    0.205      0.294
+                                     14    0.232      0.331    0.207      0.299
+                                     15    0.233      0.339    0.220      0.313
+                                     16    0.246      0.362    0.226      0.330
+                                     17    0.252      0.374    0.240      0.353
+                                     18    0.264      0.400    0.251      0.377
+                                     19    0.268      0.412    0.248      0.383
+                                     20    0.284      0.438    0.267      0.410
+       planning                      10    0.616      0.521    0.550      0.464
+                                     11    0.664      0.576    0.592      0.510
+                                     12    0.691      0.614    0.643      0.575
+                                     13    0.729      0.647    0.686      0.604
+                                     14    0.746      0.667    0.690      0.620
+                                     15    0.774      0.696    0.732      0.654
+                                     16    0.803      0.733    0.761      0.690
+                                     17    0.829      0.758    0.794      0.725
+                                     18    0.850      0.784    0.817      0.748
+                                     19    0.862      0.807    0.823      0.764
+                                     20    0.882      0.826    0.847      0.786
+       planning (rescaled weights)   10    0.409      0.547    0.359      0.485
+                                     11    0.443      0.594    0.387      0.529
+                                     12    0.478      0.622    0.443      0.576
+                                     13    0.506      0.660    0.473      0.619
+                                     14    0.541      0.679    0.495      0.634
+                                     15    0.563      0.708    0.523      0.663
+                                     16    0.595      0.735    0.554      0.692
+                                     17    0.610      0.762    0.578      0.726
+                                     18    0.638      0.790    0.613      0.754
+                                     19    0.663      0.809    0.625      0.772
+                                     20    0.682      0.835    0.648      0.800
+
+7. THE CHOICE OF PRIMARY TEST
+------------------------------------------------------------------------------
+The rule (v5's, as amended): a test qualifies if, over the rule rows (section 4),
+at N = 10, 15, 20, both sizes and both features, no more of its cells exceed 0.05 + 2 SE
+(that cell's Monte Carlo SE) than chance gives in 95% of runs for a test whose false-
+positive rate is exactly 0.05. Among qualifying tests, the higher mean power over planning
+and half shift (all nuisances at defaults, fixed weights, same N, sizes, features) wins; within 0.02
+of each other, the wilcoxon test. The original rule (no cell over the limit) is shown beside it.
+  Cells per test: 54; about 1.2 expected over the limit by chance, at most 3 in 95% of runs.
+  t         qualifies (amended): yes; (original): yes; cells over the limit 0; worst 0.0598 (side bias (SD 0.25), 180, N=15, saturation);
+            mean false-positive rate 0.0504; mean power 0.5370
+  wilcoxon  qualifies (amended): yes; (original): yes; cells over the limit 0; worst 0.0578 (side bias (SD 0.25), 180, N=20, saturation);
+            mean false-positive rate 0.0463; mean power 0.4972
+
+  RECOMMENDED PRIMARY TEST: t (power gap +0.0398).
+  Under the original rule: t.
+
+8. THE MIXED-EFFECTS LOGISTIC MODEL (alternative)
+------------------------------------------------------------------------------
+  Not rerun. The mixed model is not part of the registration (it has no N terms).
+  It was assessed in v5b, outside this rerun.
+
+9. SECONDARY: SIGN TEST ON DETECTED COUNTS WITHIN EACH BLOCK
+------------------------------------------------------------------------------
+Per block, each person's weight is classified with the per-set thresholds of
+the adjusted model (script 1's, from the same random choosers as design.json); the claim needs
+d >= 5 detections and the exact one-sided
+binomial (v4's Table 4 rule). Derealization block: the secondary H1/H2.
+Ordinary block: the same rule, as a reference.
+Note: within one block the sign test asks whether a directional preference exists;
+it cannot tell a preference shared by both episodes (e.g. 'memory makes it duller',
+one of the default nuisances) from a derealization effect, so with nuisances at
+their defaults it claims in many studies with no derealization effect (second table).
+That is why the paired test is primary.
+
+  col                                                          der:con:N10  der:con:N15  der:con:N20  der:sat:N10  der:sat:N15  der:sat:N20  ord:con:N10  ord:con:N15  ord:con:N20  ord:sat:N10  ord:sat:N15  ord:sat:N20
+  size scenario                 effect                                                                                                                                                                                   
+  180  all nuisances (defaults) planning                             0.932        0.997        1.000        0.836        0.987        0.999        0.385        0.781        0.926        0.157        0.496        0.753
+                                half shift                           0.930        0.997        1.000        0.829        0.983        0.999        0.813        0.982        0.999        0.561        0.910        0.985
+                                a quarter respond                    0.720        0.957        0.993        0.511        0.863        0.972        0.390        0.774        0.929        0.142        0.476        0.728
+                                a quarter respond, half shift        0.703        0.944        0.992        0.483        0.860        0.973        0.613        0.918        0.984        0.331        0.758        0.933
+                                all respond                          1.000        1.000        1.000        1.000        1.000        1.000        0.397        0.783        0.927        0.132        0.462        0.730
+                                all respond, half shift              1.000        1.000        1.000        1.000        1.000        1.000        0.993        1.000        1.000        0.933        0.999        1.000
+
+  col                                      der:con:N10  der:con:N15  der:con:N20  der:sat:N10  der:sat:N15  der:sat:N20  ord:con:N10  ord:con:N15  ord:con:N20  ord:sat:N10  ord:sat:N15  ord:sat:N20
+  size scenario                 effect                                                                                                                                                               
+  180  no nuisances             no effect        0.001        0.007        0.013        0.000        0.001        0.004        0.002        0.005        0.011        0.000        0.001        0.003
+       all nuisances (defaults) no effect        0.386        0.742        0.920        0.158        0.466        0.733        0.384        0.768        0.930        0.154        0.493        0.747
+
+10. MONTE CARLO CHECK: headline cells on two independent pools
+------------------------------------------------------------------------------
+   size     effect  N     test    feature  rate_1  rate_2   se_1       z
+    180  no effect 10        t saturation  0.0540  0.0472 0.0038 -1.3201
+    180  no effect 10        t   contrast  0.0516  0.0504 0.0040 -0.2186
+    180  no effect 10 wilcoxon saturation  0.0463  0.0394 0.0035 -1.3720
+    180  no effect 10 wilcoxon   contrast  0.0429  0.0406 0.0032 -0.5527
+    180  no effect 15        t saturation  0.0444  0.0471 0.0030  0.4947
+    180  no effect 15        t   contrast  0.0458  0.0513 0.0040  1.0226
+    180  no effect 15 wilcoxon saturation  0.0447  0.0456 0.0030  0.1724
+    180  no effect 15 wilcoxon   contrast  0.0441  0.0487 0.0040  0.8876
+    180  no effect 20        t saturation  0.0484  0.0495 0.0047  0.1810
+    180  no effect 20        t   contrast  0.0455  0.0526 0.0041  1.2815
+    180  no effect 20 wilcoxon saturation  0.0468  0.0472 0.0047  0.0668
+    180  no effect 20 wilcoxon   contrast  0.0435  0.0496 0.0041  1.0897
+    180   planning 10        t saturation  0.5207  0.5229 0.0190  0.0900
+    180   planning 10        t   contrast  0.6164  0.5852 0.0154 -1.4119
+    180   planning 10 wilcoxon saturation  0.4644  0.4657 0.0190  0.0543
+    180   planning 10 wilcoxon   contrast  0.5502  0.5132 0.0147 -1.6722
+    180   planning 15        t saturation  0.6955  0.6986 0.0123  0.1767
+    180   planning 15        t   contrast  0.7738  0.7589 0.0140 -0.8502
+    180   planning 15 wilcoxon saturation  0.6543  0.6530 0.0131 -0.0689
+    180   planning 15 wilcoxon   contrast  0.7318  0.7080 0.0141 -1.2973
+    180   planning 20        t saturation  0.8257  0.8227 0.0113 -0.2038
+    180   planning 20        t   contrast  0.8819  0.8714 0.0104 -0.8234
+    180   planning 20 wilcoxon saturation  0.7860  0.7872 0.0126  0.0737
+    180   planning 20 wilcoxon   contrast  0.8472  0.8318 0.0111 -1.0787
+    180 half shift 10        t saturation  0.2658  0.2448 0.0128 -1.2744
+    180 half shift 10        t   contrast  0.2913  0.2978 0.0118  0.3840
+    180 half shift 10 wilcoxon saturation  0.2278  0.2063 0.0115 -1.3897
+    180 half shift 10 wilcoxon   contrast  0.2503  0.2576 0.0113  0.4726
+    180 half shift 15        t saturation  0.3258  0.3225 0.0137 -0.1718
+    180 half shift 15        t   contrast  0.3598  0.4011 0.0111  2.3864
+    180 half shift 15 wilcoxon saturation  0.3013  0.2904 0.0133 -0.5846
+    180 half shift 15 wilcoxon   contrast  0.3317  0.3639 0.0118  1.8015
+    180 half shift 20        t saturation  0.4100  0.4057 0.0137 -0.2160
+    180 half shift 20        t   contrast  0.4775  0.4997 0.0119  1.2572
+    180 half shift 20 wilcoxon saturation  0.3842  0.3755 0.0144 -0.4308
+    180 half shift 20 wilcoxon   contrast  0.4370  0.4652 0.0124  1.5908
+
+11. PER-BLOCK ATTENTION MEASURES
+------------------------------------------------------------------------------
+Means over analysable people in each pool: lapse rate, catch failures (of 5),
+consistency (share of repeats answered the same way), per block; and the share
+excluded. Then, per study, how often each measure flags more lapses in the
+derealization block (consistency: one-sided paired t; catch: one-sided sign test; alpha 0.05).
+   size                                                                                                              scenario  excluded_share  lapse_D  lapse_O  catch_D  catch_O  agree_D  agree_O
+    180                                                                                                          no nuisances           0.048    0.097    0.097    0.311    0.311    0.507    0.507
+    180                                                                                                   taste stability 0.7           0.048    0.097    0.097    0.311    0.314    0.507    0.508
+    180                                                                               scene dependence (SD x1, stability 0.7)           0.049    0.097    0.097    0.312    0.312    0.512    0.513
+    180                                                                                                   side bias (SD 0.25)           0.049    0.098    0.098    0.310    0.312    0.501    0.501
+    180                                                                        memory makes it duller (+0.25/+0.35, everyone)           0.047    0.097    0.097    0.310    0.307    0.518    0.518
+    180                                                                             strategy: more typical (a quarter, k 0.5)           0.047    0.097    0.097    0.313    0.310    0.509    0.510
+    180                                                                              strategy: less edited (a quarter, k 0.5)           0.048    0.097    0.097    0.315    0.315    0.509    0.509
+    180                                                            fatigue (per 100 trials: lapse +0.030, preferences x0.939)           0.079    0.126    0.126    0.385    0.386    0.507    0.506
+    180                                                                                              all nuisances (defaults)           0.078    0.126    0.126    0.395    0.383    0.519    0.520
+    180                                                                                                   taste stability 0.5           0.047    0.097    0.097    0.317    0.314    0.507    0.508
+    180                                                                                                   taste stability 0.3           0.049    0.097    0.097    0.310    0.312    0.506    0.506
+    180                                                                                                     taste stability 0           0.048    0.097    0.097    0.315    0.310    0.508    0.507
+    180                                                                                              scene dependence SD x0.5           0.048    0.097    0.097    0.307    0.319    0.508    0.508
+    180                                                                                                scene dependence SD x2           0.049    0.097    0.097    0.311    0.313    0.528    0.528
+    180                                                                                         scene dependence, stability 0           0.049    0.097    0.097    0.312    0.308    0.513    0.513
+    180                                                                                         scene dependence, stability 1           0.050    0.097    0.097    0.311    0.309    0.513    0.513
+    180                                                                                            common scene effect SD 0.1           0.050    0.097    0.097    0.318    0.309    0.510    0.511
+    180                                                                                                      side bias SD 0.5           0.049    0.097    0.097    0.311    0.305    0.483    0.484
+    180                                                                                           side bias SD 0.25, mean 0.2           0.048    0.097    0.097    0.308    0.312    0.496    0.497
+    180                                                                                      memory makes it duller +0.5/+0.7           0.049    0.097    0.097    0.312    0.312    0.550    0.549
+    180                                                                                  strategy: more typical, half (k 0.5)           0.049    0.097    0.097    0.311    0.312    0.511    0.512
+    180                                                                             strategy: more typical, a quarter, k 0.25           0.049    0.097    0.097    0.313    0.310    0.506    0.507
+    180                                                                              strategy: more typical, a quarter, k 1.0           0.048    0.097    0.097    0.310    0.310    0.516    0.516
+    180                                                                                   strategy: less edited, half (k 0.5)           0.048    0.097    0.097    0.313    0.309    0.511    0.509
+    180                                                                              strategy: less edited, a quarter, k 0.25           0.049    0.097    0.097    0.315    0.315    0.507    0.507
+    180                                                                               strategy: less edited, a quarter, k 1.0           0.049    0.097    0.097    0.318    0.311    0.512    0.512
+    180                                                    fatigue doubled (per 100 trials: lapse +0.060, preferences x0.882)           0.119    0.155    0.155    0.461    0.454    0.505    0.505
+    180                                                                                     fatigue, 50% recovery at the rest           0.063    0.111    0.111    0.349    0.349    0.506    0.507
+    180                                                                                 lapse rising across the block (+0.10)           0.047    0.097    0.097    0.318    0.312    0.507    0.507
+    180                                                                                      pair-specific preferences SD 1.0           0.047    0.097    0.097    0.314    0.309    0.574    0.575
+    180                                                                                      pair-specific preferences SD 2.0           0.047    0.097    0.097    0.313    0.309    0.664    0.662
+    180                                                                                             all nuisances (high ends)           0.116    0.155    0.155    0.458    0.460    0.551    0.551
+    180                                                                                  all nuisances (defaults), no fatigue           0.048    0.097    0.097    0.309    0.312    0.523    0.524
+    180                                                                             all nuisances (defaults), fatigue doubled           0.119    0.155    0.155    0.454    0.456    0.518    0.518
+    180                                                           all nuisances (defaults), fatigue, 50% recovery at the rest           0.063    0.111    0.111    0.349    0.349    0.522    0.521
+    180                                                                                             derealization lapse +0.05           0.072    0.146    0.096    0.457    0.298    0.507    0.506
+    180                                                                                              derealization lapse +0.1           0.103    0.195    0.095    0.592    0.272    0.506    0.506
+    180                                                                                             derealization lapse +0.15           0.141    0.244    0.094    0.718    0.254    0.505    0.508
+    180                                                            derealization lapse +0.05, with both strategies (defaults)           0.070    0.146    0.096    0.456    0.298    0.510    0.511
+    180                                                             derealization lapse +0.1, with both strategies (defaults)           0.105    0.196    0.096    0.598    0.275    0.509    0.511
+    180                                                            derealization lapse +0.15, with both strategies (defaults)           0.139    0.244    0.094    0.723    0.251    0.508    0.511
+    180                                                                derealization lapse +0.05, with memory makes it duller           0.074    0.146    0.096    0.464    0.292    0.516    0.517
+    180                                                                 derealization lapse +0.1, with memory makes it duller           0.101    0.195    0.095    0.592    0.273    0.515    0.519
+    180                                                                derealization lapse +0.15, with memory makes it duller           0.140    0.245    0.095    0.719    0.254    0.513    0.518
+    180                                                                    all nuisances (defaults), derealization lapse +0.1           0.153    0.225    0.125    0.655    0.340    0.516    0.521
+    180                                              all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)           0.079    0.126    0.126    0.390    0.390    0.530    0.519
+    180                                                      derealization lapse +0.05, with pair-specific preferences SD 1.5           0.073    0.146    0.096    0.458    0.292    0.608    0.622
+    180                                                       derealization lapse +0.1, with pair-specific preferences SD 1.5           0.106    0.196    0.096    0.599    0.271    0.597    0.623
+    180                                                      derealization lapse +0.15, with pair-specific preferences SD 1.5           0.142    0.245    0.095    0.720    0.260    0.584    0.623
+    180          episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical           0.047    0.097    0.097    0.317    0.313    0.510    0.510
+    180           episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical           0.050    0.097    0.097    0.314    0.313    0.516    0.516
+    180             episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical           0.048    0.097    0.097    0.314    0.314    0.542    0.543
+    180              episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited           0.049    0.098    0.098    0.311    0.313    0.508    0.508
+    180               episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited           0.049    0.097    0.097    0.309    0.309    0.513    0.513
+    180                 episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited           0.049    0.097    0.097    0.310    0.312    0.533    0.533
+    180 episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical           0.047    0.097    0.097    0.313    0.309    0.510    0.510
+    180  episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical           0.048    0.097    0.097    0.311    0.312    0.516    0.517
+    180    episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical           0.049    0.097    0.097    0.308    0.309    0.543    0.541
+    180     episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited           0.049    0.097    0.097    0.311    0.310    0.508    0.508
+    180      episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited           0.048    0.097    0.097    0.314    0.312    0.514    0.514
+    180        episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited           0.048    0.097    0.097    0.308    0.310    0.532    0.532
+    180                                                           all nuisances (defaults) + pair-specific preferences SD 1.5           0.079    0.126    0.126    0.386    0.386    0.617    0.617
+
+                                                                                                                             consistency_flags             catch_flags            
+  N                                                                                                                                         10    15    20          10    15    20
+  size scenario                                                                                                                                                                   
+  180  no nuisances                                                                                                                      0.048 0.054 0.052       0.008 0.013 0.016
+       taste stability 0.7                                                                                                               0.047 0.052 0.056       0.009 0.014 0.019
+       scene dependence (SD x1, stability 0.7)                                                                                           0.046 0.053 0.055       0.008 0.016 0.024
+       side bias (SD 0.25)                                                                                                               0.052 0.051 0.050       0.007 0.014 0.021
+       memory makes it duller (+0.25/+0.35, everyone)                                                                                    0.053 0.055 0.059       0.011 0.017 0.020
+       strategy: more typical (a quarter, k 0.5)                                                                                         0.050 0.054 0.054       0.010 0.017 0.023
+       strategy: less edited (a quarter, k 0.5)                                                                                          0.044 0.043 0.043       0.007 0.014 0.019
+       fatigue (per 100 trials: lapse +0.030, preferences x0.939)                                                                        0.054 0.045 0.051       0.011 0.018 0.020
+       all nuisances (defaults)                                                                                                          0.049 0.050 0.050       0.010 0.021 0.025
+       taste stability 0.5                                                                                                               0.059 0.055 0.054       0.011 0.022 0.025
+       taste stability 0.3                                                                                                               0.047 0.051 0.048       0.006 0.013 0.016
+       taste stability 0                                                                                                                 0.045 0.046 0.048       0.008 0.015 0.022
+       scene dependence SD x0.5                                                                                                          0.045 0.045 0.043       0.006 0.011 0.016
+       scene dependence SD x2                                                                                                            0.045 0.048 0.050       0.007 0.013 0.020
+       scene dependence, stability 0                                                                                                     0.049 0.048 0.050       0.009 0.015 0.018
+       scene dependence, stability 1                                                                                                     0.051 0.059 0.055       0.010 0.018 0.024
+       common scene effect SD 0.1                                                                                                        0.048 0.049 0.045       0.008 0.019 0.024
+       side bias SD 0.5                                                                                                                  0.050 0.052 0.052       0.009 0.017 0.018
+       side bias SD 0.25, mean 0.2                                                                                                       0.053 0.050 0.051       0.009 0.015 0.021
+       memory makes it duller +0.5/+0.7                                                                                                  0.056 0.052 0.050       0.011 0.017 0.021
+       strategy: more typical, half (k 0.5)                                                                                              0.049 0.051 0.051       0.008 0.015 0.019
+       strategy: more typical, a quarter, k 0.25                                                                                         0.057 0.059 0.056       0.010 0.018 0.023
+       strategy: more typical, a quarter, k 1.0                                                                                          0.051 0.049 0.049       0.006 0.018 0.018
+       strategy: less edited, half (k 0.5)                                                                                               0.044 0.045 0.042       0.010 0.018 0.018
+       strategy: less edited, a quarter, k 0.25                                                                                          0.048 0.050 0.051       0.009 0.014 0.019
+       strategy: less edited, a quarter, k 1.0                                                                                           0.049 0.050 0.053       0.009 0.020 0.021
+       fatigue doubled (per 100 trials: lapse +0.060, preferences x0.882)                                                                0.044 0.047 0.048       0.010 0.019 0.023
+       fatigue, 50% recovery at the rest                                                                                                 0.052 0.051 0.049       0.012 0.019 0.021
+       lapse rising across the block (+0.10)                                                                                             0.044 0.045 0.041       0.011 0.016 0.021
+       pair-specific preferences SD 1.0                                                                                                  0.048 0.054 0.051       0.009 0.019 0.024
+       pair-specific preferences SD 2.0                                                                                                  0.051 0.050 0.043       0.012 0.018 0.020
+       all nuisances (high ends)                                                                                                         0.043 0.048 0.044       0.009 0.018 0.019
+       all nuisances (defaults), no fatigue                                                                                              0.055 0.056 0.059       0.009 0.016 0.018
+       all nuisances (defaults), fatigue doubled                                                                                         0.043 0.054 0.052       0.009 0.016 0.021
+       all nuisances (defaults), fatigue, 50% recovery at the rest                                                                       0.049 0.050 0.046       0.011 0.020 0.020
+       derealization lapse +0.05                                                                                                         0.049 0.045 0.047       0.049 0.082 0.120
+       derealization lapse +0.1                                                                                                          0.046 0.042 0.049       0.132 0.221 0.316
+       derealization lapse +0.15                                                                                                         0.057 0.061 0.061       0.233 0.406 0.562
+       derealization lapse +0.05, with both strategies (defaults)                                                                        0.050 0.051 0.056       0.046 0.081 0.127
+       derealization lapse +0.1, with both strategies (defaults)                                                                         0.060 0.062 0.059       0.117 0.215 0.314
+       derealization lapse +0.15, with both strategies (defaults)                                                                        0.053 0.059 0.055       0.241 0.394 0.549
+       derealization lapse +0.05, with memory makes it duller                                                                            0.054 0.051 0.059       0.048 0.078 0.122
+       derealization lapse +0.1, with memory makes it duller                                                                             0.059 0.060 0.058       0.118 0.221 0.326
+       derealization lapse +0.15, with memory makes it duller                                                                            0.056 0.054 0.056       0.229 0.391 0.535
+       all nuisances (defaults), derealization lapse +0.1                                                                                0.055 0.060 0.058       0.104 0.191 0.273
+       all nuisances (defaults), dulling stronger in derealization (+0.1/+0.14)                                                          0.033 0.030 0.026       0.011 0.015 0.019
+       derealization lapse +0.05, with pair-specific preferences SD 1.5                                                                  0.086 0.090 0.102       0.054 0.091 0.128
+       derealization lapse +0.1, with pair-specific preferences SD 1.5                                                                   0.112 0.133 0.154       0.121 0.224 0.324
+       derealization lapse +0.15, with pair-specific preferences SD 1.5                                                                  0.166 0.206 0.234       0.221 0.382 0.551
+       episode-dependent strategy (corpus, k 0.25): derealization picks the less typical, ordinary the more typical                      0.042 0.045 0.044       0.009 0.017 0.023
+       episode-dependent strategy (corpus, k 0.5): derealization picks the less typical, ordinary the more typical                       0.048 0.052 0.049       0.010 0.018 0.020
+       episode-dependent strategy (corpus, k 1): derealization picks the less typical, ordinary the more typical                         0.044 0.049 0.052       0.010 0.017 0.020
+       episode-dependent strategy (orig, k 0.25): derealization picks the more edited, ordinary the less edited                          0.056 0.052 0.049       0.008 0.015 0.021
+       episode-dependent strategy (orig, k 0.5): derealization picks the more edited, ordinary the less edited                           0.045 0.049 0.052       0.007 0.015 0.015
+       episode-dependent strategy (orig, k 1): derealization picks the more edited, ordinary the less edited                             0.049 0.052 0.051       0.011 0.018 0.019
+       episode-dependent strategy (corpus, k 0.25, reverse): derealization picks the more typical, ordinary the less typical             0.051 0.050 0.045       0.009 0.015 0.019
+       episode-dependent strategy (corpus, k 0.5, reverse): derealization picks the more typical, ordinary the less typical              0.054 0.047 0.054       0.008 0.018 0.023
+       episode-dependent strategy (corpus, k 1, reverse): derealization picks the more typical, ordinary the less typical                0.037 0.042 0.042       0.009 0.016 0.019
+       episode-dependent strategy (orig, k 0.25, reverse): derealization picks the less edited, ordinary the more edited                 0.053 0.051 0.057       0.012 0.019 0.023
+       episode-dependent strategy (orig, k 0.5, reverse): derealization picks the less edited, ordinary the more edited                  0.050 0.050 0.050       0.008 0.016 0.025
+       episode-dependent strategy (orig, k 1, reverse): derealization picks the less edited, ordinary the more edited                    0.048 0.047 0.044       0.008 0.014 0.018
+       all nuisances (defaults) + pair-specific preferences SD 1.5                                                                       0.049 0.050 0.050       0.013 0.018 0.020
+
+13. REGRESSION ON v5b_180 (proves the copy did not change the method)
+------------------------------------------------------------------------------
+This run IS the regression: this script on v5b_180 with v5b's inputs (script 1's
+regression run, explore_block_length_v5b.py and its run), compared with data/power_v5b/paired_adj_v5b/sizes150-180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s7c42ae4b,
+every row of 180 trials: rates and shares identical, other values within 1e-12 (v5b's
+'exact apart from the last bits'; another CPU or numerical library changes only the
+last bits of a floating-point sum).
+
+                     what  rows_ref  rows_matched  columns_compared  max_abs_diff  max_abs_diff_rates  identical status
+         paired_power.csv      4224          4224                 6       0.0e+00             0.0e+00       True   PASS
+  thresholds_adjusted.csv         4             4                 3       0.0e+00             0.0e+00       True   PASS
+       secondary_sign.csv      3696          3696                 4       0.0e+00             0.0e+00       True   PASS
+       block_measures.csv      1152          1152                17       0.0e+00             0.0e+00       True   PASS
+       sanity_explore.csv        36            36                 9       0.0e+00             0.0e+00       True   PASS
+      pool_replicates.csv       132           132                11       0.0e+00             0.0e+00       True   PASS
+     episode_strategy.csv        48            48                 8       0.0e+00             0.0e+00       True   PASS
+                 leak.csv         8             8                 4       0.0e+00             0.0e+00       True   PASS
+      rescale_factors.csv         1             1                10       0.0e+00             0.0e+00       True   PASS
+  fatigue_calibration.csv         3             3                 7       0.0e+00             0.0e+00       True   PASS
+            scenarios.csv        96            96                23       0.0e+00             0.0e+00       True   PASS
+
+  Regression: PASS (a FAIL stops the v5c run).
+
+15. FILES
+------------------------------------------------------------------------------
+  block_measures.csv
+  block_measures.png
+  checks.csv
+  episode_strategy.csv
+  episode_strategy.png
+  false_positives.png
+  fatigue_calibration.csv
+  leak.csv
+  paired_power.csv
+  pool_replicates.csv
+  power_vs_n.png
+  regression.csv
+  report.txt
+  rescale_factors.csv
+  run_meta.json
+  sanity_explore.csv
+  scenarios.csv
+  secondary_sign.csv
+  settings.json
+  summary.txt
+  thresholds_adjusted.csv

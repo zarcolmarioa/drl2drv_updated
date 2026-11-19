@@ -1,0 +1,26 @@
+THE PRIMARY PAIRED TEST, ADJUSTED MODEL (simulate_power_paired_v5c_adj.py): IN PLAIN WORDS
+
+* Checks: 82 of 82 pass.
+* Registered per-person model: the strategy-adjusted model (side model + N_corpus + N_orig per block, Firth, no intercept); side and N terms are nuisance terms, never results. Chosen in v5b; not re-decided here.
+* adjusted model thresholds (2.5% per tail, script 1's run, the same 20,000 random choosers as design.json; sign test only): 180 A: sat +0.411/-0.421, con +0.410/-0.413; 180 B: sat +0.418/-0.410, con +0.403/-0.402.
+* Primary test (v5's amended rule, at most 3 of 54 cells over the limit): t. Cells over the limit: t 2, wilcoxon 0. Under the original rule (no cell): wilcoxon.
+* Power at N = 20, planning, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.84 (rescaled 0.82); 180 saturation 0.71 (rescaled 0.89).
+* Power at N = 20, half shift, all nuisances at defaults (adjusted model, t test; ASSUMPTIONS): 180 contrast 0.44 (rescaled 0.40); 180 saturation 0.30 (rescaled 0.49).
+* False positives with no effect over the rule rows (model 'adjusted', t test): mean 0.051, largest 0.064.
+* Episode-dependent strategy, v5c lists, model 'adjusted' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.054 at k 0.25, 0.057 at k 0.5, 0.055 at k 1.
+* Episode-dependent strategy, v5 lists, model 'side' (both definitions and directions, paired t, N = 20): largest false-positive rate 0.999 at k 0.25, 1.000 at k 0.5, 1.000 at k 1.
+* Mixed model: not rerun; not part of the registration (assessed in v5b).
+* Rescale factors (script 2's rescale_factors on the lists): 180: saturation x1.443, contrast x0.964.
+* Regression on v5b_180: PASS (11 of 11 files reproduce v5b's paired_adj_v5b run; data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c).
+* v5c against v5b (in brackets), paired t-test, 180 trials:
+    planning, nuisances at defaults: contrast N10 0.56 (0.62), N15 0.73 (0.77), N20 0.84 (0.88); colour N10 0.44 (0.52), N15 0.59 (0.70), N20 0.71 (0.83).
+    half shift, nuisances at defaults: contrast N10 0.28 (0.29), N15 0.35 (0.36), N20 0.44 (0.48); colour N10 0.19 (0.27), N15 0.25 (0.33), N20 0.30 (0.41).
+    cautious (rescaled), planning: contrast N10 0.51 (0.41), N15 0.70 (0.56), N20 0.82 (0.68); colour N10 0.59 (0.55), N15 0.77 (0.71), N20 0.89 (0.83).
+    cautious (rescaled), half shift: contrast N10 0.26 (0.19), N15 0.31 (0.23), N20 0.40 (0.28); colour N10 0.30 (0.26), N15 0.39 (0.34), N20 0.49 (0.44).
+    planning, no nuisances: contrast N10 0.66 (0.71), N15 0.84 (0.89), N20 0.93 (0.96); colour N10 0.52 (0.66), N15 0.71 (0.84), N20 0.82 (0.93).
+    half shift, no nuisances: contrast N10 0.37 (0.44), N15 0.51 (0.62), N20 0.62 (0.73); colour N10 0.29 (0.35), N15 0.38 (0.48), N20 0.45 (0.58).
+* false positives, no effect (rule rows), N 10/15/20: v5c mean 0.051, largest 0.062; v5b mean 0.050, largest 0.060.
+* odd vs normal (episode-dependent strategy), N 10/15/20: v5c mean 0.050, largest 0.060; v5b mean 0.052, largest 0.061.
+* pair-specific preferences, no effect, N 10/15/20: v5c mean 0.049, largest 0.059; v5b mean 0.049, largest 0.060.
+* threats (lapses / duller in the derealization block), N 10/15/20: v5c mean 0.060, largest 0.403; v5b mean 0.062, largest 0.449.
+* 436 of 2024 compared values changed by more than 0.05 (report section 14, comparison.csv). 150 against 180 trials: not applicable.
