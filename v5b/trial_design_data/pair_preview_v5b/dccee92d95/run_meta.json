@@ -1,0 +1,20 @@
+{
+  "script": "preview_pair_rules_r3_v5b.py",
+  "script_sha256": "aee5194d387e13bf284fb6ea5c8f8b8b3c2c9e91a01740e1a6fd8457ae67ebb3",
+  "settings_hash": "dccee92d95",
+  "round": 3,
+  "manifest_sha256": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+  "anchors_files": [
+    "ratings_f8c2aa13ca.csv",
+    "ratings_b5493951ff.csv"
+  ],
+  "anchors_sha256": [
+    "9bc75549f4e855af922d125de9bf3b0ee716e82234858aa0440ce9ff344007ff",
+    "d1bdf13e0b03adf5e27ff5a99c9e67f4a08d8027aa9a2dac33ad5229394dd264"
+  ],
+  "python": "3.11.15",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "started": "2026-11-19 11:58:14",
+  "base_settings_hash": "2883e744a4"
+}

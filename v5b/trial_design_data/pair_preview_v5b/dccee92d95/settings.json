@@ -1,0 +1,351 @@
+{
+  "settings": {
+    "MANIFEST_CSV": "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv",
+    "OUTPUT_ROOT": "data/pair_preview_v5b",
+    "V5B180_DIRS": [
+      "data/frozen_trial_lists_v5b/v5b_180",
+      "v5b/trial_design_data/frozen_trial_lists_v5b/v5b_180"
+    ],
+    "ROUND": 3,
+    "ROUND1_HASH": "f8c2aa13ca",
+    "ROUND2_HASH": "b5493951ff",
+    "ROUND1_GALLERY": "data/pair_preview_v5b/f8c2aa13ca",
+    "ROUND2_GALLERY": "data/pair_preview_v5b/b5493951ff",
+    "RANDOM_SEED": 42,
+    "SD_SAT": 39.182,
+    "SD_FOG": 9.348,
+    "FOG_SIGN": -1.0,
+    "SAT_TOL_SD": 0.07656576999642693,
+    "CON_TOL_SD": 0.07702182284980744,
+    "BALANCE_LO": 0.6,
+    "BALANCE_HI": 1.7,
+    "CURRENT_MIN": {
+      "sat_only": 0.7937318156296258,
+      "fog_only": 0.4492939666238768,
+      "mixed_sat": 0.20417538665713847,
+      "mixed_con": 0.32092426187419765
+    },
+    "NORMALITY_DEFS": [
+      "corpus",
+      "orig"
+    ],
+    "EXPECTED_CURRENT": {
+      "sat_only": 3290,
+      "fog_only": 3976,
+      "together": 20283,
+      "conflict": 8571
+    },
+    "MAX_LEVEL": 3,
+    "COLOUR_ONLY_LEVELS": [
+      3,
+      4
+    ],
+    "COLOUR_ONLY_LOWER_MAX": -1,
+    "COLOUR_ONLY_ALLOW_LOW_2": true,
+    "COLOUR_ONLY_LOW_2_MAX_HIGH": 0,
+    "COLOUR_ONLY_ALLOW_HIGH_3": false,
+    "COLOUR_ONLY_MIN_SD": 0.3,
+    "COLOUR_ONLY_SHARED_CONTRAST_MAX": 2,
+    "CONTRAST_ONLY_LEVELS": [
+      3,
+      4
+    ],
+    "CONTRAST_ONLY_ALLOW_LOW_2": true,
+    "CONTRAST_ONLY_LOW_2_MAX_HIGH": -1,
+    "CONTRAST_ONLY_MIN_SD": 0.45,
+    "CONTRAST_ONLY_SHARED_COLOUR_MAX": 2,
+    "TOGETHER_LEVELS": [
+      [
+        2,
+        2
+      ]
+    ],
+    "CONFLICT_LEVELS": [
+      [
+        2,
+        2
+      ]
+    ],
+    "MIXED_MIN_SAT_SD": 0.20417538665713847,
+    "MIXED_MIN_CON_SD": 0.32092426187419765,
+    "MIXED_MAX_SD": 1.2,
+    "CONFLICT_BALANCED": true,
+    "EXPECTED_CANDIDATES": {
+      "sat_only": 1880,
+      "fog_only": 1644,
+      "together": 987,
+      "conflict": 987
+    },
+    "LEAK_LIMIT": 0.05,
+    "TYPE_LIMITS": {
+      "sat_only": [
+        "sat",
+        0.05
+      ],
+      "fog_only": [
+        "con",
+        0.05
+      ],
+      "conflict": [
+        "con",
+        0.1
+      ]
+    },
+    "LEAK_SET_SIZES": {
+      "sat_only": 54,
+      "fog_only": 54,
+      "together": 36,
+      "conflict": 36
+    },
+    "LEAK_N_DRAWS": 100,
+    "LEAK_MAX_SWAPS": 150,
+    "LEAK_TRY_MEMBERS": null,
+    "LEAK_SWAP_TARGET": 0.8,
+    "LEAK_BUDGETS": [
+      0,
+      10,
+      20,
+      40,
+      80,
+      150
+    ],
+    "LEAK_MOST": 0.5,
+    "LEAK_N_HELPERS": 15,
+    "LEVERS": [
+      "COLOUR_ONLY_ALLOW_HIGH_3",
+      "COLOUR_ONLY_ALLOW_LOW_2",
+      "CONTRAST_ONLY_ALLOW_LOW_2"
+    ],
+    "EXCLUDED_CATEGORIES": {
+      "sat_only": [
+        {
+          "name": "2 levels straddling or above 0",
+          "replaces": [
+            "levels"
+          ],
+          "levels": [
+            2
+          ],
+          "where": [
+            "straddling",
+            "high"
+          ]
+        },
+        {
+          "name": "0 vs +3",
+          "replaces": [
+            "levels"
+          ],
+          "levels": [
+            3
+          ],
+          "where": [
+            "high"
+          ]
+        },
+        {
+          "name": "5 levels apart",
+          "replaces": [
+            "levels"
+          ],
+          "levels": [
+            5
+          ]
+        }
+      ],
+      "fog_only": [
+        {
+          "name": "2 levels, higher image at 0",
+          "replaces": [
+            "levels"
+          ],
+          "levels": [
+            2
+          ],
+          "high_eq": 0
+        },
+        {
+          "name": "5 levels apart",
+          "replaces": [
+            "levels"
+          ],
+          "levels": [
+            5
+          ]
+        }
+      ],
+      "together": [
+        {
+          "name": "2/1",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "name": "1/2",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "name": "3/2",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              3,
+              2
+            ]
+          ]
+        }
+      ],
+      "conflict": [
+        {
+          "name": "2/1",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "name": "1/2",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "name": "3/2",
+          "replaces": [
+            "levels"
+          ],
+          "combos": [
+            [
+              3,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    "N_TYPICAL": 15,
+    "N_ODD": 0,
+    "N_EXCLUDED": 10,
+    "ANCHORS_FROM_R1": {
+      "agree": 4,
+      "disagree": 2
+    },
+    "ANCHORS_FROM_R2": {
+      "Too similar": 3,
+      "Fine": 3
+    },
+    "TYPICAL_DIMS": {
+      "sat_only": [
+        "levels",
+        "where",
+        "position"
+      ],
+      "fog_only": [
+        "levels",
+        "where",
+        "position"
+      ],
+      "together": [
+        "position",
+        "where"
+      ],
+      "conflict": [
+        "position",
+        "where"
+      ]
+    },
+    "ODDNESS_WEIGHTS": {
+      "abs_z_sat": 1.0,
+      "abs_z_con": 1.0,
+      "comp_boost": 1.0,
+      "clip_2lv": 1.0,
+      "abs_colour_dev": 1.0,
+      "abs_contrast_dev": 1.0,
+      "dist_orig": 1.0,
+      "envelope_n": 1.0
+    },
+    "IMAGE_PX": 512,
+    "GAP_PX": 32,
+    "BACKGROUND": "#7f7f7f",
+    "RATINGS": [
+      "Fine",
+      "Too similar",
+      "Too different",
+      "Looks odd"
+    ],
+    "DEFAULT_ORDER": "shuffled",
+    "EXCLUDE_SCENES": [
+      "auditorium_00001394",
+      "bathroom_00001909",
+      "dining_hall_00001273",
+      "gymnasium_indoor_00003333",
+      "shower_00000779"
+    ],
+    "EXCLUDE_IMAGES": []
+  },
+  "settings_hash": "dccee92d95",
+  "exclusion": {
+    "EXCLUDE_SCENES": [
+      "bathroom_00001909",
+      "dining_hall_00001273",
+      "gymnasium_indoor_00003333",
+      "shower_00000779",
+      "auditorium_00001394"
+    ],
+    "EXCLUDE_IMAGES": [],
+    "EXCLUDE_REASON": "edits look too similar to the unedited photo and to each other in the preview galleries (rounds 1-3)",
+    "BASE_RUN": "data/pair_preview_v5b/2883e744a4",
+    "base_settings_hash": "2883e744a4"
+  },
+  "scene_check": {
+    "SCENE_CHECK_SCENES": [
+      "bathroom_00001909",
+      "dining_hall_00001273",
+      "gymnasium_indoor_00003333",
+      "shower_00000779",
+      "auditorium_00001394"
+    ],
+    "comparison_scenes": [
+      "bedroom_00001289",
+      "shopping_mall_indoor_00003139",
+      "dining_hall_00001301",
+      "cafeteria_00002762",
+      "restaurant_00000867"
+    ],
+    "SCENE_CHECK_N_COMPARISON": 5,
+    "SCENE_CHECK_EXTRA_TYPES": [
+      "sat_only",
+      "fog_only"
+    ],
+    "SCENE_CHECK_RULE_MIN": 4,
+    "rule": "exclude a scene if >= 4 of its 6 pairs are rated 'Too similar' (fixed before rating)"
+  }
+}

@@ -1,0 +1,55 @@
+section,check,status,detail
+rounds,the settings hash differs from rounds 1 and 2,PASS,"dccee92d95 vs f8c2aa13ca, b5493951ff"
+rounds,the output folder is not round 1's or round 2's,PASS,data/pair_preview_v5b/dccee92d95
+inputs,the stimulus manifest exists,PASS,data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv
+inputs,the manifest has the columns used,PASS,81 columns
+inputs,"47 scenes x 49 images, file names unique",PASS,"47 scenes, 2,303 images"
+inputs,checksums.sha256 exists,PASS,data/stimulus_set_v5/7fd72262ba/checksums.sha256
+inputs,the manifest matches checksums.sha256,PASS,69f0529f9f539ad2...
+inputs,the manifest is the frozen stimulus set's (FROZEN.json),PASS,set 7fd72262ba
+inputs,"every image file exists (2,303)",PASS,0 missing
+inputs,"all 2,303 images match checksums.sha256",PASS,0 differ
+exclusion,the excluded scenes and images are in the manifest (else the run would have stopped),PASS,"5 scenes, 0 images"
+exclusion,the settings hash with the exclusion differs from the base run's,PASS,dccee92d95 vs 2883e744a4
+anchors,the round-1 ratings file exists,PASS,ratings_f8c2aa13ca.csv
+anchors,"the round-1 file has pair_key, type, rating",PASS,140 rows
+anchors,the round-1 file belongs to its gallery (data/pair_preview_v5b/f8c2aa13ca),PASS,140 rows
+anchors,the round-2 ratings file exists,PASS,ratings_b5493951ff.csv
+anchors,"the round-2 file has pair_key, type, rating",PASS,132 rows
+anchors,the round-2 file belongs to its gallery (data/pair_preview_v5b/b5493951ff),PASS,132 rows
+anchors,round 2's anchors are known,PASS,12 from data/pair_preview_v5b/b5493951ff/examples.csv
+typing,the pair typing reproduces the current counts (EXPECTED_CURRENT),PASS,"colour only 3,290, contrast only 3,976, together 20,283, conflict 8,571"
+typing,the final-rule candidate counts are as reported (EXPECTED_CANDIDATES),PASS,"colour only 1,880, contrast only 1,644, together 987, conflict 987"
+leak,v5b_180 FROZEN.json and package/items.csv exist,PASS,using data/frozen_trial_lists_v5b/v5b_180
+leak,"the leak function reproduces the shipped v5b_180 leaks (FROZEN.json, 20 values)",PASS,"20 values, largest difference 5.0e-07"
+leak,the reference pool reproduces the current counts,PASS,"colour only 3,290, contrast only 3,976, together 20,283, conflict 8,571"
+leak,"every drawn set has the set sizes, from its pool, pairs unique",PASS,180 per set
+leak,sets A and B of every draw are disjoint,PASS,
+leak,the leak check is reproducible (first draw of the default rules again),PASS,"[0.7947, 0.7989]"
+leak,the reference pool reproduces the current counts (after the exclusion),PASS,"colour only 2,938, contrast only 3,632, together 18,149, conflict 7,666"
+leak,"every drawn set has the set sizes, from its pool, pairs unique (after the exclusion)",PASS,180 per set
+leak,sets A and B of every draw are disjoint (after the exclusion),PASS,
+leak,the leak check is reproducible (first draw of the default rules again) (after the exclusion),PASS,"[0.7957, 0.7837]"
+selection,"the selection is reproducible (same settings, same pairs)",PASS,112 pairs
+selection,every typical pair meets the final rules (and is of its type),PASS,60 pairs
+selection,every excluded pair breaks exactly the rule it is listed under,PASS,40 pairs
+anchors,the anchors are found in the round-1 and round-2 files with the ratings used,PASS,"12 anchors: agree 4, Too similar 3, Fine 3, disagree 2"
+anchors,the anchors' typing agrees with the ratings files,PASS,
+anchors,"12 anchors, or the report says why fewer",PASS,12
+selection,no pair is shown twice (anchors included),PASS,112 pairs
+selection,"the number of pairs per type and group is as set, or the report (section 4) says why it is lower",PASS,all as set
+anchors,the anchors' images exist (stimuli and copied),PASS,24 images
+gallery,the images used are copied to images/ unchanged,PASS,209 images
+exclusion,the settings without the exclusion give the base run's hash,PASS,2883e744a4 vs 2883e744a4 (data/pair_preview_v5b/2883e744a4)
+exclusion,the leak check uses the base run's number of draws,PASS,100
+exclusion,"the results without the exclusion equal the base run, file by file (11 files)",PASS,identical
+exclusion,supply and pool leak after the exclusion = before minus the removed pairs (every rule set; the pool leak recomputed),PASS,"removed per rule set: REFERENCE v5units 3,735, F:off C2:off K2:off 481, F:off C2:off K2:on 506, F:off C2:on K2:off 531, F:off C2:on K2:on (default) 556, F:on C2:off K2:off 506, F:on C2:off K2:on 531, F:on C2:on K2:off 556, F:on C2:on K2:on 581"
+exclusion,"no gallery pair, anchor or example uses an excluded scene or image",PASS,112 pairs
+exclusion,"anchors from excluded scenes are replaced, from the same source round, rating and type where any is left (else relaxed and listed in section E5)",PASS,"2 replaced, 0 relaxed"
+exclusion,every drawn set uses each scene once per type before any twice (after the exclusion),PASS,1800 sets
+exclusion,after the swaps no scene exceeds the per-type cap,PASS,
+scene check,"6 pairs under the final rules per scene (5 checked, 5 comparison)",PASS,60 pairs
+scene check,"comparison scenes are other scenes, matched for indoor/outdoor where possible",PASS,"checked indoor, indoor, indoor, indoor, indoor; comparison indoor, indoor, indoor, indoor, indoor"
+rounds,the folder data/pair_preview_v5b/f8c2aa13ca is untouched,PASS,data/pair_preview_v5b/f8c2aa13ca
+rounds,the folder data/pair_preview_v5b/b5493951ff is untouched,PASS,data/pair_preview_v5b/b5493951ff
+rounds,the folder data/pair_preview_v5b/2883e744a4 is untouched,PASS,data/pair_preview_v5b/2883e744a4

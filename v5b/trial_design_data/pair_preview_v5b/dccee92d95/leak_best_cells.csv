@@ -1,0 +1,465 @@
+rules,draw,set,cell,pairs drawn,pairs after swaps
+reference: v5b_180 pool (v5units),87,A,colour only | 2 | high,1,1
+reference: v5b_180 pool (v5units),87,A,colour only | 3 | high,5,4
+reference: v5b_180 pool (v5units),87,A,colour only | 3 | low,9,8
+reference: v5b_180 pool (v5units),87,A,colour only | 3 | straddling,12,14
+reference: v5b_180 pool (v5units),87,A,colour only | 4 | straddling,15,15
+reference: v5b_180 pool (v5units),87,A,colour only | 5 | straddling,8,8
+reference: v5b_180 pool (v5units),87,A,colour only | 6 | straddling,4,4
+reference: v5b_180 pool (v5units),87,A,conflict | 1/1 | middle | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 1/2 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 2/2 | middle | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 2/2 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 2/2 | touching +-3 | contrast low,2,1
+reference: v5b_180 pool (v5units),87,A,conflict | 2/2 | touching +-3 | contrast straddling,0,1
+reference: v5b_180 pool (v5units),87,A,conflict | 2/3 | touching +-3 | contrast low,2,2
+reference: v5b_180 pool (v5units),87,A,conflict | 2/3 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,A,conflict | 3/2 | touching +-3 | contrast high,4,3
+reference: v5b_180 pool (v5units),87,A,conflict | 3/2 | touching +-3 | contrast straddling,1,2
+reference: v5b_180 pool (v5units),87,A,conflict | 3/3 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 3/3 | touching +-3 | contrast high,2,2
+reference: v5b_180 pool (v5units),87,A,conflict | 3/3 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 3/4 | touching +-3 | contrast straddling,4,4
+reference: v5b_180 pool (v5units),87,A,conflict | 3/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 4/3 | middle | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,A,conflict | 4/4 | touching +-3 | contrast straddling,3,3
+reference: v5b_180 pool (v5units),87,A,conflict | 4/5 | touching +-3 | contrast straddling,3,3
+reference: v5b_180 pool (v5units),87,A,conflict | 4/6 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 5/4 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 5/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,conflict | 6/6 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,contrast only | 2 | high,7,14
+reference: v5b_180 pool (v5units),87,A,contrast only | 2 | low,10,3
+reference: v5b_180 pool (v5units),87,A,contrast only | 2 | straddling,3,3
+reference: v5b_180 pool (v5units),87,A,contrast only | 3 | high,1,3
+reference: v5b_180 pool (v5units),87,A,contrast only | 3 | low,2,1
+reference: v5b_180 pool (v5units),87,A,contrast only | 3 | straddling,7,6
+reference: v5b_180 pool (v5units),87,A,contrast only | 4 | straddling,11,11
+reference: v5b_180 pool (v5units),87,A,contrast only | 5 | straddling,9,9
+reference: v5b_180 pool (v5units),87,A,contrast only | 6 | straddling,4,4
+reference: v5b_180 pool (v5units),87,A,together | 1/1 | middle | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 1/1 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,together | 1/1 | touching +-3 | contrast low,3,3
+reference: v5b_180 pool (v5units),87,A,together | 1/2 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 1/3 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 1/3 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 1/3 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/1 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/1 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/2 | middle | contrast low,2,2
+reference: v5b_180 pool (v5units),87,A,together | 2/2 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/2 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/3 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/3 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 2/4 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,A,together | 3/1 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,A,together | 3/2 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 3/3 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 3/4 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 4/2 | middle | contrast high,2,2
+reference: v5b_180 pool (v5units),87,A,together | 4/3 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,together | 4/4 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 4/4 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,A,together | 4/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,A,together | 4/6 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,A,together | 5/1 | touching +-3 | contrast high,2,2
+reference: v5b_180 pool (v5units),87,A,together | 5/1 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,A,together | 6/4 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,colour only | 2 | high,1,1
+reference: v5b_180 pool (v5units),87,B,colour only | 3 | high,5,4
+reference: v5b_180 pool (v5units),87,B,colour only | 3 | low,4,5
+reference: v5b_180 pool (v5units),87,B,colour only | 3 | straddling,10,10
+reference: v5b_180 pool (v5units),87,B,colour only | 4 | straddling,17,17
+reference: v5b_180 pool (v5units),87,B,colour only | 5 | straddling,12,12
+reference: v5b_180 pool (v5units),87,B,colour only | 6 | straddling,5,5
+reference: v5b_180 pool (v5units),87,B,conflict | 1/1 | middle | contrast low,2,2
+reference: v5b_180 pool (v5units),87,B,conflict | 1/1 | touching +-3 | contrast high,3,3
+reference: v5b_180 pool (v5units),87,B,conflict | 1/1 | touching +-3 | contrast low,3,3
+reference: v5b_180 pool (v5units),87,B,conflict | 2/2 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 2/3 | middle | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,B,conflict | 2/3 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,B,conflict | 3/2 | middle | contrast high,2,0
+reference: v5b_180 pool (v5units),87,B,conflict | 3/2 | middle | contrast straddling,1,2
+reference: v5b_180 pool (v5units),87,B,conflict | 3/2 | touching +-3 | contrast high,0,2
+reference: v5b_180 pool (v5units),87,B,conflict | 3/2 | touching +-3 | contrast low,3,3
+reference: v5b_180 pool (v5units),87,B,conflict | 3/2 | touching +-3 | contrast straddling,1,0
+reference: v5b_180 pool (v5units),87,B,conflict | 3/3 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 3/4 | touching +-3 | contrast straddling,3,3
+reference: v5b_180 pool (v5units),87,B,conflict | 3/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 4/3 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 4/3 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 4/3 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,B,conflict | 4/4 | touching +-3 | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,B,conflict | 4/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 5/4 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 5/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 5/6 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,conflict | 6/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,contrast only | 2 | high,7,10
+reference: v5b_180 pool (v5units),87,B,contrast only | 2 | low,8,5
+reference: v5b_180 pool (v5units),87,B,contrast only | 2 | straddling,6,6
+reference: v5b_180 pool (v5units),87,B,contrast only | 3 | high,1,2
+reference: v5b_180 pool (v5units),87,B,contrast only | 3 | low,3,3
+reference: v5b_180 pool (v5units),87,B,contrast only | 3 | straddling,9,8
+reference: v5b_180 pool (v5units),87,B,contrast only | 4 | straddling,11,11
+reference: v5b_180 pool (v5units),87,B,contrast only | 5 | straddling,6,6
+reference: v5b_180 pool (v5units),87,B,contrast only | 6 | straddling,3,3
+reference: v5b_180 pool (v5units),87,B,together | 1/1 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/2 | middle | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/2 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/2 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/2 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/3 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/4 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/4 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 1/6 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 2/1 | middle | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 2/2 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 2/2 | touching +-3 | contrast high,2,2
+reference: v5b_180 pool (v5units),87,B,together | 2/2 | touching +-3 | contrast low,2,2
+reference: v5b_180 pool (v5units),87,B,together | 2/3 | middle | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 2/5 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 2/6 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 3/1 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 3/1 | touching +-3 | contrast low,4,4
+reference: v5b_180 pool (v5units),87,B,together | 3/2 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 3/2 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 3/3 | middle | contrast straddling,2,2
+reference: v5b_180 pool (v5units),87,B,together | 4/1 | middle | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 4/1 | touching +-3 | contrast high,2,2
+reference: v5b_180 pool (v5units),87,B,together | 4/2 | touching +-3 | contrast high,1,1
+reference: v5b_180 pool (v5units),87,B,together | 4/3 | touching +-3 | contrast straddling,1,1
+reference: v5b_180 pool (v5units),87,B,together | 5/1 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 5/2 | touching +-3 | contrast low,1,1
+reference: v5b_180 pool (v5units),87,B,together | 6/1 | touching +-3 | contrast high,1,0
+reference: v5b_180 pool (v5units),87,B,together | 6/1 | touching +-3 | contrast low,0,1
+reference: v5b_180 pool (v5units),87,B,together | 6/2 | touching +-3 | contrast low,1,0
+reference: v5b_180 pool (v5units),87,B,together | 6/2 | touching +-3 | contrast straddling,0,1
+fallback off · colour low-2 off · contrast low-2 off,45,A,colour only | 3 | low,13,12
+fallback off · colour low-2 off · contrast low-2 off,45,A,colour only | 3 | straddling,16,17
+fallback off · colour low-2 off · contrast low-2 off,45,A,colour only | 4 | straddling,25,25
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | middle | contrast high,7,6
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | middle | contrast low,8,5
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | middle | contrast straddling,5,5
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | touching +-3 | contrast high,6,9
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | touching +-3 | contrast low,5,5
+fallback off · colour low-2 off · contrast low-2 off,45,A,conflict | 2/2 | touching +-3 | contrast straddling,5,6
+fallback off · colour low-2 off · contrast low-2 off,45,A,contrast only | 3 | high,7,7
+fallback off · colour low-2 off · contrast low-2 off,45,A,contrast only | 3 | low,6,6
+fallback off · colour low-2 off · contrast low-2 off,45,A,contrast only | 3 | straddling,22,22
+fallback off · colour low-2 off · contrast low-2 off,45,A,contrast only | 4 | straddling,19,19
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | middle | contrast high,2,2
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | middle | contrast low,5,5
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | middle | contrast straddling,6,8
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | touching +-3 | contrast high,11,10
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | touching +-3 | contrast low,8,6
+fallback off · colour low-2 off · contrast low-2 off,45,A,together | 2/2 | touching +-3 | contrast straddling,4,5
+fallback off · colour low-2 off · contrast low-2 off,45,B,colour only | 3 | low,7,5
+fallback off · colour low-2 off · contrast low-2 off,45,B,colour only | 3 | straddling,19,21
+fallback off · colour low-2 off · contrast low-2 off,45,B,colour only | 4 | straddling,28,28
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | middle | contrast high,5,6
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | middle | contrast low,6,4
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | middle | contrast straddling,3,4
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | touching +-3 | contrast high,10,10
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | touching +-3 | contrast low,6,7
+fallback off · colour low-2 off · contrast low-2 off,45,B,conflict | 2/2 | touching +-3 | contrast straddling,6,5
+fallback off · colour low-2 off · contrast low-2 off,45,B,contrast only | 3 | high,7,11
+fallback off · colour low-2 off · contrast low-2 off,45,B,contrast only | 3 | low,14,11
+fallback off · colour low-2 off · contrast low-2 off,45,B,contrast only | 3 | straddling,17,16
+fallback off · colour low-2 off · contrast low-2 off,45,B,contrast only | 4 | straddling,16,16
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | middle | contrast high,8,8
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | middle | contrast low,2,2
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | middle | contrast straddling,3,5
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | touching +-3 | contrast high,7,7
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | touching +-3 | contrast low,10,9
+fallback off · colour low-2 off · contrast low-2 off,45,B,together | 2/2 | touching +-3 | contrast straddling,6,5
+fallback off · colour low-2 off · contrast low-2 on,40,A,colour only | 3 | low,11,9
+fallback off · colour low-2 off · contrast low-2 on,40,A,colour only | 3 | straddling,15,17
+fallback off · colour low-2 off · contrast low-2 on,40,A,colour only | 4 | straddling,28,28
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | middle | contrast high,6,5
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | middle | contrast low,6,4
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | middle | contrast straddling,4,5
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | touching +-3 | contrast high,11,9
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | touching +-3 | contrast low,7,7
+fallback off · colour low-2 off · contrast low-2 on,40,A,conflict | 2/2 | touching +-3 | contrast straddling,2,6
+fallback off · colour low-2 off · contrast low-2 on,40,A,contrast only | 2 | low,7,7
+fallback off · colour low-2 off · contrast low-2 on,40,A,contrast only | 3 | high,6,13
+fallback off · colour low-2 off · contrast low-2 on,40,A,contrast only | 3 | low,9,8
+fallback off · colour low-2 off · contrast low-2 on,40,A,contrast only | 3 | straddling,19,13
+fallback off · colour low-2 off · contrast low-2 on,40,A,contrast only | 4 | straddling,13,13
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | middle | contrast high,4,4
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | middle | contrast low,5,5
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | middle | contrast straddling,2,2
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | touching +-3 | contrast high,10,10
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | touching +-3 | contrast low,9,9
+fallback off · colour low-2 off · contrast low-2 on,40,A,together | 2/2 | touching +-3 | contrast straddling,6,6
+fallback off · colour low-2 off · contrast low-2 on,40,B,colour only | 3 | low,9,8
+fallback off · colour low-2 off · contrast low-2 on,40,B,colour only | 3 | straddling,20,21
+fallback off · colour low-2 off · contrast low-2 on,40,B,colour only | 4 | straddling,25,25
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | middle | contrast high,5,5
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | middle | contrast low,8,4
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | middle | contrast straddling,5,5
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | touching +-3 | contrast high,6,7
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | touching +-3 | contrast low,11,12
+fallback off · colour low-2 off · contrast low-2 on,40,B,conflict | 2/2 | touching +-3 | contrast straddling,1,3
+fallback off · colour low-2 off · contrast low-2 on,40,B,contrast only | 2 | low,7,7
+fallback off · colour low-2 off · contrast low-2 on,40,B,contrast only | 3 | high,6,8
+fallback off · colour low-2 off · contrast low-2 on,40,B,contrast only | 3 | low,6,5
+fallback off · colour low-2 off · contrast low-2 on,40,B,contrast only | 3 | straddling,15,14
+fallback off · colour low-2 off · contrast low-2 on,40,B,contrast only | 4 | straddling,20,20
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | middle | contrast high,10,10
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | middle | contrast low,2,2
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | middle | contrast straddling,7,9
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | touching +-3 | contrast high,5,4
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | touching +-3 | contrast low,11,10
+fallback off · colour low-2 off · contrast low-2 on,40,B,together | 2/2 | touching +-3 | contrast straddling,1,1
+fallback off · colour low-2 on · contrast low-2 off,43,A,colour only | 2 | low,8,8
+fallback off · colour low-2 on · contrast low-2 off,43,A,colour only | 3 | low,6,5
+fallback off · colour low-2 on · contrast low-2 off,43,A,colour only | 3 | straddling,12,13
+fallback off · colour low-2 on · contrast low-2 off,43,A,colour only | 4 | straddling,28,28
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | middle | contrast high,2,2
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | middle | contrast low,6,5
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | middle | contrast straddling,7,7
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | touching +-3 | contrast high,11,10
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | touching +-3 | contrast low,7,9
+fallback off · colour low-2 on · contrast low-2 off,43,A,conflict | 2/2 | touching +-3 | contrast straddling,3,3
+fallback off · colour low-2 on · contrast low-2 off,43,A,contrast only | 3 | high,9,11
+fallback off · colour low-2 on · contrast low-2 off,43,A,contrast only | 3 | low,6,5
+fallback off · colour low-2 on · contrast low-2 off,43,A,contrast only | 3 | straddling,16,15
+fallback off · colour low-2 on · contrast low-2 off,43,A,contrast only | 4 | straddling,23,23
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | middle | contrast high,6,6
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | middle | contrast low,6,5
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | middle | contrast straddling,3,5
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | touching +-3 | contrast high,9,9
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | touching +-3 | contrast low,9,9
+fallback off · colour low-2 on · contrast low-2 off,43,A,together | 2/2 | touching +-3 | contrast straddling,3,2
+fallback off · colour low-2 on · contrast low-2 off,43,B,colour only | 2 | low,8,8
+fallback off · colour low-2 on · contrast low-2 off,43,B,colour only | 3 | low,11,3
+fallback off · colour low-2 on · contrast low-2 off,43,B,colour only | 3 | straddling,15,23
+fallback off · colour low-2 on · contrast low-2 off,43,B,colour only | 4 | straddling,20,20
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | middle | contrast high,4,4
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | middle | contrast low,4,3
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | middle | contrast straddling,5,5
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | touching +-3 | contrast high,11,8
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | touching +-3 | contrast low,9,9
+fallback off · colour low-2 on · contrast low-2 off,43,B,conflict | 2/2 | touching +-3 | contrast straddling,3,7
+fallback off · colour low-2 on · contrast low-2 off,43,B,contrast only | 3 | high,8,7
+fallback off · colour low-2 on · contrast low-2 off,43,B,contrast only | 3 | low,11,11
+fallback off · colour low-2 on · contrast low-2 off,43,B,contrast only | 3 | straddling,13,14
+fallback off · colour low-2 on · contrast low-2 off,43,B,contrast only | 4 | straddling,22,22
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | middle | contrast high,4,4
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | middle | contrast low,2,2
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | middle | contrast straddling,11,10
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | touching +-3 | contrast high,10,8
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | touching +-3 | contrast low,6,6
+fallback off · colour low-2 on · contrast low-2 off,43,B,together | 2/2 | touching +-3 | contrast straddling,3,6
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,colour only | 2 | low,17,17
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,colour only | 3 | low,4,2
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,colour only | 3 | straddling,9,11
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,colour only | 4 | straddling,24,24
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | middle | contrast high,3,3
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | middle | contrast low,4,3
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | middle | contrast straddling,8,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | touching +-3 | contrast high,8,10
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | touching +-3 | contrast low,9,11
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,conflict | 2/2 | touching +-3 | contrast straddling,4,4
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,contrast only | 2 | low,5,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,contrast only | 3 | high,8,13
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,contrast only | 3 | low,10,7
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,contrast only | 3 | straddling,9,7
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,contrast only | 4 | straddling,22,22
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | middle | contrast high,4,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | middle | contrast low,7,3
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | middle | contrast straddling,7,8
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | touching +-3 | contrast high,5,7
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | touching +-3 | contrast low,10,9
+fallback off · colour low-2 on · contrast low-2 on (default),93,A,together | 2/2 | touching +-3 | contrast straddling,3,4
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,colour only | 2 | low,15,15
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,colour only | 3 | low,6,2
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,colour only | 3 | straddling,16,20
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,colour only | 4 | straddling,17,17
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | middle | contrast high,7,4
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | middle | contrast low,3,4
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | middle | contrast straddling,5,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | touching +-3 | contrast high,8,11
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | touching +-3 | contrast low,11,11
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,conflict | 2/2 | touching +-3 | contrast straddling,2,1
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,contrast only | 2 | low,5,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,contrast only | 3 | high,7,8
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,contrast only | 3 | low,7,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,contrast only | 3 | straddling,16,17
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,contrast only | 4 | straddling,19,19
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | middle | contrast high,3,3
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | middle | contrast low,7,6
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | middle | contrast straddling,2,4
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | touching +-3 | contrast high,5,5
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | touching +-3 | contrast low,13,11
+fallback off · colour low-2 on · contrast low-2 on (default),93,B,together | 2/2 | touching +-3 | contrast straddling,6,7
+fallback on · colour low-2 off · contrast low-2 off,27,A,colour only | 3 | high,5,5
+fallback on · colour low-2 off · contrast low-2 off,27,A,colour only | 3 | low,12,10
+fallback on · colour low-2 off · contrast low-2 off,27,A,colour only | 3 | straddling,19,21
+fallback on · colour low-2 off · contrast low-2 off,27,A,colour only | 4 | straddling,18,18
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | middle | contrast high,5,4
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | middle | contrast low,3,4
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | middle | contrast straddling,4,3
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | touching +-3 | contrast high,8,10
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | touching +-3 | contrast low,11,7
+fallback on · colour low-2 off · contrast low-2 off,27,A,conflict | 2/2 | touching +-3 | contrast straddling,5,8
+fallback on · colour low-2 off · contrast low-2 off,27,A,contrast only | 3 | high,8,10
+fallback on · colour low-2 off · contrast low-2 off,27,A,contrast only | 3 | low,13,11
+fallback on · colour low-2 off · contrast low-2 off,27,A,contrast only | 3 | straddling,10,10
+fallback on · colour low-2 off · contrast low-2 off,27,A,contrast only | 4 | straddling,23,23
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | middle | contrast high,4,4
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | middle | contrast low,3,3
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | middle | contrast straddling,3,3
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | touching +-3 | contrast high,9,9
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | touching +-3 | contrast low,12,12
+fallback on · colour low-2 off · contrast low-2 off,27,A,together | 2/2 | touching +-3 | contrast straddling,5,5
+fallback on · colour low-2 off · contrast low-2 off,27,B,colour only | 3 | high,9,8
+fallback on · colour low-2 off · contrast low-2 off,27,B,colour only | 3 | low,8,9
+fallback on · colour low-2 off · contrast low-2 off,27,B,colour only | 3 | straddling,20,20
+fallback on · colour low-2 off · contrast low-2 off,27,B,colour only | 4 | straddling,17,17
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | middle | contrast high,4,5
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | middle | contrast low,8,5
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | middle | contrast straddling,5,6
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | touching +-3 | contrast high,9,10
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | touching +-3 | contrast low,8,7
+fallback on · colour low-2 off · contrast low-2 off,27,B,conflict | 2/2 | touching +-3 | contrast straddling,2,3
+fallback on · colour low-2 off · contrast low-2 off,27,B,contrast only | 3 | high,7,10
+fallback on · colour low-2 off · contrast low-2 off,27,B,contrast only | 3 | low,11,7
+fallback on · colour low-2 off · contrast low-2 off,27,B,contrast only | 3 | straddling,13,14
+fallback on · colour low-2 off · contrast low-2 off,27,B,contrast only | 4 | straddling,23,23
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | middle | contrast high,3,3
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | middle | contrast low,9,8
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | middle | contrast straddling,2,2
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | touching +-3 | contrast high,13,13
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | touching +-3 | contrast low,8,9
+fallback on · colour low-2 off · contrast low-2 off,27,B,together | 2/2 | touching +-3 | contrast straddling,1,1
+fallback on · colour low-2 off · contrast low-2 on,69,A,colour only | 3 | high,8,6
+fallback on · colour low-2 off · contrast low-2 on,69,A,colour only | 3 | low,12,11
+fallback on · colour low-2 off · contrast low-2 on,69,A,colour only | 3 | straddling,14,17
+fallback on · colour low-2 off · contrast low-2 on,69,A,colour only | 4 | straddling,20,20
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | middle | contrast high,7,5
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | middle | contrast low,3,2
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | middle | contrast straddling,6,6
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | touching +-3 | contrast high,10,10
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | touching +-3 | contrast low,8,11
+fallback on · colour low-2 off · contrast low-2 on,69,A,conflict | 2/2 | touching +-3 | contrast straddling,2,2
+fallback on · colour low-2 off · contrast low-2 on,69,A,contrast only | 2 | low,4,4
+fallback on · colour low-2 off · contrast low-2 on,69,A,contrast only | 3 | high,12,16
+fallback on · colour low-2 off · contrast low-2 on,69,A,contrast only | 3 | low,10,8
+fallback on · colour low-2 off · contrast low-2 on,69,A,contrast only | 3 | straddling,16,14
+fallback on · colour low-2 off · contrast low-2 on,69,A,contrast only | 4 | straddling,12,12
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | middle | contrast high,6,6
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | middle | contrast low,4,4
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | middle | contrast straddling,5,6
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | touching +-3 | contrast high,7,7
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | touching +-3 | contrast low,8,7
+fallback on · colour low-2 off · contrast low-2 on,69,A,together | 2/2 | touching +-3 | contrast straddling,6,6
+fallback on · colour low-2 off · contrast low-2 on,69,B,colour only | 3 | high,10,8
+fallback on · colour low-2 off · contrast low-2 on,69,B,colour only | 3 | low,7,7
+fallback on · colour low-2 off · contrast low-2 on,69,B,colour only | 3 | straddling,19,21
+fallback on · colour low-2 off · contrast low-2 on,69,B,colour only | 4 | straddling,18,18
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | middle | contrast high,5,3
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | middle | contrast low,5,7
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | middle | contrast straddling,4,5
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | touching +-3 | contrast high,10,10
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | touching +-3 | contrast low,8,6
+fallback on · colour low-2 off · contrast low-2 on,69,B,conflict | 2/2 | touching +-3 | contrast straddling,4,5
+fallback on · colour low-2 off · contrast low-2 on,69,B,contrast only | 2 | low,9,9
+fallback on · colour low-2 off · contrast low-2 on,69,B,contrast only | 3 | high,7,10
+fallback on · colour low-2 off · contrast low-2 on,69,B,contrast only | 3 | low,6,5
+fallback on · colour low-2 off · contrast low-2 on,69,B,contrast only | 3 | straddling,14,12
+fallback on · colour low-2 off · contrast low-2 on,69,B,contrast only | 4 | straddling,18,18
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | middle | contrast high,3,3
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | middle | contrast low,4,4
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | middle | contrast straddling,6,7
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | touching +-3 | contrast high,10,9
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | touching +-3 | contrast low,10,10
+fallback on · colour low-2 off · contrast low-2 on,69,B,together | 2/2 | touching +-3 | contrast straddling,3,3
+fallback on · colour low-2 on · contrast low-2 off,34,A,colour only | 2 | low,13,13
+fallback on · colour low-2 on · contrast low-2 off,34,A,colour only | 3 | high,8,7
+fallback on · colour low-2 on · contrast low-2 off,34,A,colour only | 3 | low,6,6
+fallback on · colour low-2 on · contrast low-2 off,34,A,colour only | 3 | straddling,8,9
+fallback on · colour low-2 on · contrast low-2 off,34,A,colour only | 4 | straddling,19,19
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | middle | contrast high,6,3
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | middle | contrast low,4,4
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | middle | contrast straddling,5,7
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | touching +-3 | contrast high,9,11
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | touching +-3 | contrast low,10,9
+fallback on · colour low-2 on · contrast low-2 off,34,A,conflict | 2/2 | touching +-3 | contrast straddling,2,2
+fallback on · colour low-2 on · contrast low-2 off,34,A,contrast only | 3 | high,7,9
+fallback on · colour low-2 on · contrast low-2 off,34,A,contrast only | 3 | low,13,11
+fallback on · colour low-2 on · contrast low-2 off,34,A,contrast only | 3 | straddling,16,16
+fallback on · colour low-2 on · contrast low-2 off,34,A,contrast only | 4 | straddling,18,18
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | middle | contrast high,4,4
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | middle | contrast low,4,4
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | middle | contrast straddling,6,7
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | touching +-3 | contrast high,13,12
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | touching +-3 | contrast low,4,4
+fallback on · colour low-2 on · contrast low-2 off,34,A,together | 2/2 | touching +-3 | contrast straddling,5,5
+fallback on · colour low-2 on · contrast low-2 off,34,B,colour only | 2 | low,14,14
+fallback on · colour low-2 on · contrast low-2 off,34,B,colour only | 3 | high,5,4
+fallback on · colour low-2 on · contrast low-2 off,34,B,colour only | 3 | low,5,4
+fallback on · colour low-2 on · contrast low-2 off,34,B,colour only | 3 | straddling,17,19
+fallback on · colour low-2 on · contrast low-2 off,34,B,colour only | 4 | straddling,13,13
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | middle | contrast high,7,4
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | middle | contrast low,4,4
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | middle | contrast straddling,5,8
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | touching +-3 | contrast high,8,9
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | touching +-3 | contrast low,8,8
+fallback on · colour low-2 on · contrast low-2 off,34,B,conflict | 2/2 | touching +-3 | contrast straddling,4,3
+fallback on · colour low-2 on · contrast low-2 off,34,B,contrast only | 3 | high,8,12
+fallback on · colour low-2 on · contrast low-2 off,34,B,contrast only | 3 | low,10,8
+fallback on · colour low-2 on · contrast low-2 off,34,B,contrast only | 3 | straddling,16,14
+fallback on · colour low-2 on · contrast low-2 off,34,B,contrast only | 4 | straddling,20,20
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | middle | contrast high,2,2
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | middle | contrast low,8,7
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | middle | contrast straddling,5,6
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | touching +-3 | contrast high,12,12
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | touching +-3 | contrast low,6,6
+fallback on · colour low-2 on · contrast low-2 off,34,B,together | 2/2 | touching +-3 | contrast straddling,3,3
+fallback on · colour low-2 on · contrast low-2 on,19,A,colour only | 2 | low,8,8
+fallback on · colour low-2 on · contrast low-2 on,19,A,colour only | 3 | high,8,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,colour only | 3 | low,3,3
+fallback on · colour low-2 on · contrast low-2 on,19,A,colour only | 3 | straddling,14,16
+fallback on · colour low-2 on · contrast low-2 on,19,A,colour only | 4 | straddling,21,21
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | middle | contrast high,5,3
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | middle | contrast low,5,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | middle | contrast straddling,9,5
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | touching +-3 | contrast high,6,11
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | touching +-3 | contrast low,7,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,conflict | 2/2 | touching +-3 | contrast straddling,4,5
+fallback on · colour low-2 on · contrast low-2 on,19,A,contrast only | 2 | low,6,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,contrast only | 3 | high,7,7
+fallback on · colour low-2 on · contrast low-2 on,19,A,contrast only | 3 | low,8,7
+fallback on · colour low-2 on · contrast low-2 on,19,A,contrast only | 3 | straddling,14,15
+fallback on · colour low-2 on · contrast low-2 on,19,A,contrast only | 4 | straddling,19,19
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | middle | contrast high,7,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | middle | contrast low,5,6
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | middle | contrast straddling,6,5
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | touching +-3 | contrast high,7,7
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | touching +-3 | contrast low,9,9
+fallback on · colour low-2 on · contrast low-2 on,19,A,together | 2/2 | touching +-3 | contrast straddling,2,3
+fallback on · colour low-2 on · contrast low-2 on,19,B,colour only | 2 | low,15,15
+fallback on · colour low-2 on · contrast low-2 on,19,B,colour only | 3 | high,6,6
+fallback on · colour low-2 on · contrast low-2 on,19,B,colour only | 3 | low,4,4
+fallback on · colour low-2 on · contrast low-2 on,19,B,colour only | 3 | straddling,13,13
+fallback on · colour low-2 on · contrast low-2 on,19,B,colour only | 4 | straddling,16,16
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | middle | contrast high,2,4
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | middle | contrast low,5,4
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | middle | contrast straddling,9,7
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | touching +-3 | contrast high,8,9
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | touching +-3 | contrast low,10,11
+fallback on · colour low-2 on · contrast low-2 on,19,B,conflict | 2/2 | touching +-3 | contrast straddling,2,1
+fallback on · colour low-2 on · contrast low-2 on,19,B,contrast only | 2 | low,9,9
+fallback on · colour low-2 on · contrast low-2 on,19,B,contrast only | 3 | high,6,8
+fallback on · colour low-2 on · contrast low-2 on,19,B,contrast only | 3 | low,8,6
+fallback on · colour low-2 on · contrast low-2 on,19,B,contrast only | 3 | straddling,12,12
+fallback on · colour low-2 on · contrast low-2 on,19,B,contrast only | 4 | straddling,19,19
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | middle | contrast high,5,5
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | middle | contrast low,5,5
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | middle | contrast straddling,3,4
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | touching +-3 | contrast high,8,8
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | touching +-3 | contrast low,14,13
+fallback on · colour low-2 on · contrast low-2 on,19,B,together | 2/2 | touching +-3 | contrast straddling,1,1

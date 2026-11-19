@@ -1,0 +1,29 @@
+type,levels,where,position,pairs,scenes
+colour only,all,all,all,1880,47
+colour only,2,low,middle,235,47
+colour only,2,low,touching +-3,235,47
+colour only,3,low,touching +-3,235,47
+colour only,3,straddling,middle,470,47
+colour only,4,straddling,middle,235,47
+colour only,4,straddling,touching +-3,470,47
+contrast only,all,all,all,1644,47
+contrast only,2,low,touching +-3,233,47
+contrast only,3,high,touching +-3,200,47
+contrast only,3,low,touching +-3,220,47
+contrast only,3,straddling,middle,409,47
+contrast only,4,straddling,middle,196,47
+contrast only,4,straddling,touching +-3,386,47
+together,all,all,all,987,47
+together,2/2,high,middle,141,47
+together,2/2,high,touching +-3,235,47
+together,2/2,low,middle,141,47
+together,2/2,low,touching +-3,235,47
+together,2/2,straddling,middle,141,47
+together,2/2,straddling,touching +-3,94,47
+conflict,all,all,all,987,47
+conflict,2/2,high,middle,141,47
+conflict,2/2,high,touching +-3,235,47
+conflict,2/2,low,middle,141,47
+conflict,2/2,low,touching +-3,235,47
+conflict,2/2,straddling,middle,141,47
+conflict,2/2,straddling,touching +-3,94,47

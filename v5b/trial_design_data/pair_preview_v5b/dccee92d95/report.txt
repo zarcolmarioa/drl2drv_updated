@@ -1,0 +1,786 @@
+PAIR PREVIEW, ROUND 3: FINAL RULES AND A LEAK CHECK  (preview_pair_rules_r3_v5b.py)
+==============================================================================
+run       2026-11-19 12:00:19  (2.1 min)
+output    data/pair_preview_v5b/dccee92d95
+settings  dccee92d95  (round 1: f8c2aa13ca, round 2: b5493951ff)
+manifest  data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv (SHA-256 69f0529f9f539ad2...)
+anchors   ratings_f8c2aa13ca.csv, ratings_b5493951ff.csv
+checks    54 PASS, 0 FAIL
+
+CONCLUSION OF THE LEAK CHECK (indicative)
+------------------------------------------------------------------------------
+  Reference, the v5b_180 pool (the shipped lists met every limit from it with
+  build_trials_v5b.py's exact repair): plain draws meet every limit in both
+  sets in 0% of draws; with the swap step it takes median 49 swaps per set; 2%
+  of sets never meet them within 150 (of 180 pairs). With 80 swaps per set the
+  reference meets every limit in 60% of draws; that is the yardstick below: a
+  rule set that needs many more swaps than the reference is that much harder
+  for build_trials_v5b.py. Shares are +-10% or so (100 draws).
+
+  Final rules at their defaults: every limit met in both sets in 0% of plain
+  draws, 96% with 80 swaps per set, 100% with up to 150; median 49 swaps per
+  set. With 80 swaps the binding limit is colour only (missed in 2% of sets);
+  after all swaps its best |b| is 0.027 and the median 0.038 (limit 0.05).
+
+  Median swaps per set needed to meet every limit: REFERENCE v5units 49; F:off
+  C2:off K2:off 39; F:off C2:off K2:on 38; F:off C2:on K2:off 46; F:off C2:on
+  K2:on (default) 49; F:on C2:off K2:off 37; F:on C2:off K2:on 37; F:on C2:on
+  K2:off 37; F:on C2:on K2:on 40 (F = fallback, C2 = colour 2-level low pairs,
+  K2 = contrast -3/-1 pairs).
+
+  Combinations meeting every limit in most draws with 80 swaps per set (as the
+  reference): fallback off · colour low-2 off · contrast low-2 off (99%);
+  fallback off · colour low-2 off · contrast low-2 on (100%); fallback off ·
+  colour low-2 on · contrast low-2 off (94%); fallback off · colour low-2 on ·
+  contrast low-2 on (default) (96%); fallback on · colour low-2 off · contrast
+  low-2 off (98%); fallback on · colour low-2 off · contrast low-2 on (97%);
+  fallback on · colour low-2 on · contrast low-2 off (98%); fallback on ·
+  colour low-2 on · contrast low-2 on (97%). The most reliable: fallback off ·
+  colour low-2 off · contrast low-2 on.
+
+  This is indicative: the draws and the swap step are simpler than
+  build_trials_v5b.py (no magnitude bins, information or position constraints,
+  no exact repair). build_trials_v5b.py is the real test.
+
+EXCLUSION
+------------------------------------------------------------------------------
+  reason: edits look too similar to the unedited photo and to each other in the preview galleries (rounds 1-3)
+  base run (no exclusion): data/pair_preview_v5b/2883e744a4 (settings 2883e744a4); everything below is after
+  the exclusion unless marked 'before'. The results without the exclusion equal the base run file by file.
+
+  E1. Scenes and images left out
+                   scene_id         category    group indoor
+            bathroom_00001909         bathroom domestic indoor
+         dining_hall_00001273      dining_hall academic indoor
+    gymnasium_indoor_00003333 gymnasium/indoor academic indoor
+              shower_00000779           shower domestic indoor
+          auditorium_00001394       auditorium academic indoor
+    indoor / outdoor / ambiguous scenes: 22 / 22 / 3 before, 17 / 22 / 3 after
+    scene groups: academic 9 -> 6; domestic 10 -> 8 (others unchanged)
+    categories that disappear: auditorium, bathroom, gymnasium/indoor, shower
+    categories that remain with fewer scenes: dining_hall (1 left)
+
+  E2. Supply under the final rules (default levers): pairs and scenes per type
+           type  pairs before  pairs after  removed  scenes before  scenes after
+      colour only          1880         1680      200             47            42
+    contrast only          1644         1498      146             47            42
+         together           987          882      105             47            42
+         conflict           987          882      105             47            42
+    the current (v5units) pool: colour only 3,290 -> 2,938, contrast only 3,976 -> 3,632, together 20,283 -> 18,149, conflict 8,571 -> 7,666
+
+  E3. Leak before and after (same draws and seeds; 100 draws per rule set)
+    Pool leak, the limited b (corpus / orig), before -> after:
+                        rules          type                               b_sat                               b_con
+              REFERENCE v5units   colour only +0.186 -> +0.172 / +0.004 -> +0.004                                    
+              REFERENCE v5units contrast only                                     -0.093 -> -0.105 / -0.026 -> -0.025
+              REFERENCE v5units      conflict                                     -0.299 -> -0.297 / -0.052 -> -0.049
+              REFERENCE v5units       overall +0.183 -> +0.170 / -0.000 -> -0.000 -0.111 -> -0.123 / -0.038 -> -0.036
+            F:off C2:off K2:off   colour only +0.145 -> +0.129 / -0.082 -> -0.082                                    
+            F:off C2:off K2:off contrast only                                     -0.111 -> -0.124 / -0.030 -> -0.028
+            F:off C2:off K2:off      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+            F:off C2:off K2:off       overall +0.165 -> +0.150 / -0.054 -> -0.054 -0.111 -> -0.124 / -0.031 -> -0.028
+             F:off C2:off K2:on   colour only +0.145 -> +0.129 / -0.082 -> -0.082                                    
+             F:off C2:off K2:on contrast only                                     -0.143 -> -0.155 / -0.072 -> -0.069
+             F:off C2:off K2:on      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+             F:off C2:off K2:on       overall +0.166 -> +0.150 / -0.053 -> -0.053 -0.133 -> -0.146 / -0.060 -> -0.057
+             F:off C2:on K2:off   colour only +0.094 -> +0.078 / -0.144 -> -0.144                                    
+             F:off C2:on K2:off contrast only                                     -0.111 -> -0.124 / -0.030 -> -0.028
+             F:off C2:on K2:off      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+             F:off C2:on K2:off       overall +0.128 -> +0.112 / -0.100 -> -0.100 -0.111 -> -0.124 / -0.031 -> -0.029
+    F:off C2:on K2:on (default)   colour only +0.094 -> +0.078 / -0.144 -> -0.144                                    
+    F:off C2:on K2:on (default) contrast only                                     -0.143 -> -0.155 / -0.072 -> -0.069
+    F:off C2:on K2:on (default)      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+    F:off C2:on K2:on (default)       overall +0.128 -> +0.112 / -0.099 -> -0.099 -0.133 -> -0.146 / -0.060 -> -0.057
+             F:on C2:off K2:off   colour only +0.207 -> +0.192 / +0.003 -> +0.003                                    
+             F:on C2:off K2:off contrast only                                     -0.111 -> -0.124 / -0.030 -> -0.028
+             F:on C2:off K2:off      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+             F:on C2:off K2:off       overall +0.208 -> +0.193 / +0.005 -> +0.005 -0.111 -> -0.124 / -0.030 -> -0.028
+              F:on C2:off K2:on   colour only +0.207 -> +0.192 / +0.003 -> +0.003                                    
+              F:on C2:off K2:on contrast only                                     -0.143 -> -0.155 / -0.072 -> -0.069
+              F:on C2:off K2:on      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+              F:on C2:off K2:on       overall +0.208 -> +0.193 / +0.005 -> +0.005 -0.133 -> -0.146 / -0.059 -> -0.056
+              F:on C2:on K2:off   colour only +0.156 -> +0.140 / -0.060 -> -0.060                                    
+              F:on C2:on K2:off contrast only                                     -0.111 -> -0.124 / -0.030 -> -0.028
+              F:on C2:on K2:off      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+              F:on C2:on K2:off       overall +0.170 -> +0.155 / -0.041 -> -0.041 -0.111 -> -0.124 / -0.031 -> -0.028
+               F:on C2:on K2:on   colour only +0.156 -> +0.140 / -0.060 -> -0.060                                    
+               F:on C2:on K2:on contrast only                                     -0.143 -> -0.155 / -0.072 -> -0.069
+               F:on C2:on K2:on      conflict                                     -0.319 -> -0.318 / -0.031 -> -0.029
+               F:on C2:on K2:on       overall +0.171 -> +0.155 / -0.041 -> -0.041 -0.133 -> -0.146 / -0.060 -> -0.057
+
+    Achievable leak, before -> after: draws meeting every limit with 80 swaps per set (the
+    reference's yardstick before the exclusion) and with 150; median swaps to meet every
+    limit; sets meeting each limit with 80 swaps, and whether that is easier, harder or
+    no clear change (beyond 2 standard errors of the difference, 200 sets each):
+                        rules    draws @80   draws @150 median swaps                      overall                  colour only                contrast only                     conflict
+              REFERENCE v5units   70% -> 60%   97% -> 97%     46 -> 49   84% -> 77% no clear change   84% -> 80% no clear change   89% -> 88% no clear change   86% -> 79% no clear change
+            F:off C2:off K2:off  100% -> 99% 100% -> 100%     32 -> 39 100% -> 100% no clear change 100% -> 100% no clear change 100% -> 100% no clear change 100% -> 100% no clear change
+             F:off C2:off K2:on 100% -> 100% 100% -> 100%     36 -> 38 100% -> 100% no clear change 100% -> 100% no clear change 100% -> 100% no clear change 100% -> 100% no clear change
+             F:off C2:on K2:off   96% -> 94% 100% -> 100%     41 -> 46   98% -> 98% no clear change   98% -> 98% no clear change  100% -> 99% no clear change   98% -> 98% no clear change
+    F:off C2:on K2:on (default)   92% -> 96% 100% -> 100%     46 -> 49   96% -> 98% no clear change   96% -> 98% no clear change  97% -> 100% no clear change   98% -> 98% no clear change
+             F:on C2:off K2:off  100% -> 98% 100% -> 100%     28 -> 37  100% -> 99% no clear change 100% -> 100% no clear change 100% -> 100% no clear change  100% -> 99% no clear change
+              F:on C2:off K2:on  100% -> 97% 100% -> 100%     34 -> 37  100% -> 98% no clear change  100% -> 98% no clear change  100% -> 99% no clear change  100% -> 98% no clear change
+              F:on C2:on K2:off   97% -> 98% 100% -> 100%     35 -> 37   98% -> 99% no clear change  98% -> 100% no clear change  98% -> 100% no clear change   98% -> 99% no clear change
+               F:on C2:on K2:on   99% -> 97% 100% -> 100%     36 -> 40  100% -> 98% no clear change  100% -> 99% no clear change  100% -> 99% no clear change  100% -> 98% no clear change
+
+    (36 comparisons: about 2 would pass 2 standard errors by chance alone.)
+    No limit becomes clearly easier or harder to meet after the exclusion, under any rule
+    set (all differences within Monte Carlo error).
+    Default rules: every limit met in 92% -> 96% of draws with 80 swaps; median swaps 46 -> 49.
+
+  E4. Lists: scene use per type and set (after the exclusion, default rules, every draw)
+           type  pairs per set  scenes scenes used twice, drawn each once before any twice most uses after swaps (cap)
+      colour only             54      42                    12-12                       100%                       2 (2)
+    contrast only             54      42                    12-12                       100%                       2 (2)
+         together             36      42                      0-0                       100%                       1 (1)
+         conflict             36      42                      0-0                       100%                       1 (1)
+    Two disjoint sets were drawn in all 100 draws of every rule set (see the checks).
+
+  E5. Gallery pairs replaced (the others are as in the base run, with the same number and
+      side; replacements.csv):
+           type    group                 old scene                        new scene                                                       matched
+      colour only  typical       auditorium_00001394              laundromat_00004208 same cell (levels 4, where straddling, position touching +-3)
+      colour only  typical      dining_hall_00001273               boardwalk_00001503       same cell (levels 4, where straddling, position middle)
+    contrast only  typical gymnasium_indoor_00003333             picnic_area_00000702       same cell (levels 3, where straddling, position middle)
+    contrast only  typical       auditorium_00001394               crosswalk_00001791       same cell (levels 3, where high, position touching +-3)
+    contrast only excluded gymnasium_indoor_00003333                  campus_00004529                   same category (2 levels, higher image at 0)
+         together  typical           shower_00000779               cafeteria_00002762                        same cell (position middle, where low)
+         together  typical       auditorium_00001394          train_interior_00004637                 same cell (position touching +-3, where high)
+         together excluded gymnasium_indoor_00003333  train_station_platform_00003977                                           same category (2/1)
+         conflict  typical           shower_00000779    shopping_mall_indoor_00003139                       same cell (position middle, where high)
+         conflict excluded      dining_hall_00001273 subway_station_platform_00004871                                           same category (2/1)
+         conflict excluded         bathroom_00001909  parking_garage_outdoor_00003825                                           same category (2/1)
+      colour only   anchor       auditorium_00001394                  campus_00003823                          same source, rating (agree) and type
+      colour only   anchor      dining_hall_00001273               crosswalk_00001791                    same source, rating (Too similar) and type
+
+1. FINAL RULES (settings; levers: COLOUR_ONLY_ALLOW_HIGH_3 = False, COLOUR_ONLY_ALLOW_LOW_2 = True, CONTRAST_ONLY_ALLOW_LOW_2 = True)
+------------------------------------------------------------------------------
+  colour only:
+    [levels] colour 3-4 levels apart with the lower image at -1 or below, or 2 with both at or below 0
+    [min] colour >= 0.3 SD measured
+    [shared] same contrast level, within +-2
+  contrast only:
+    [levels] contrast 3-4 levels apart, or 2 with the higher image at -1 or below
+    [min] contrast >= 0.45 SD measured
+    [shared] same colour level, within +-2
+  together:
+    [levels] levels apart (colour/contrast) 2/2
+    [min] measured >= 0.20 SD colour and >= 0.32 SD contrast
+    [cap] measured <= 1.2 SD on each feature
+    [pm3] at most one feature reaches +-3
+  conflict:
+    [levels] levels apart (colour/contrast) 2/2
+    [min] measured >= 0.20 SD colour and >= 0.32 SD contrast
+    [cap] measured <= 1.2 SD on each feature
+    [pm3] at most one feature reaches +-3
+    [balanced] balanced [0.6, 1.7]
+  Where a pair sits (changing feature; contrast for mixed pairs): low = both at or below 0,
+  high = both at or above 0, otherwise straddling.
+
+2. SUPPLY UNDER THE FINAL RULES (default levers)
+------------------------------------------------------------------------------
+           type  pairs  scenes
+    colour only   1680      42
+  contrast only   1498      42
+       together    882      42
+       conflict    882      42
+  Before the exclusion (as expected): colour only 1,880, contrast only 1,644, together 987, conflict 987
+  Current counts reproduced: colour only 3,290, contrast only 3,976, together 20,283, conflict 8,571
+    colour only: levels 2 420, 3 630, 4 630; where low 630, straddling 1050; position middle 840, touching +-3 840
+    contrast only: levels 2 208, 3 754, 4 536; where low 406, straddling 911, high 181; position middle 557, touching +-3 941
+    together: levels 2/2 882; where low 336, straddling 210, high 336; position middle 378, touching +-3 504
+    conflict: levels 2/2 882; where low 336, straddling 210, high 336; position middle 378, touching +-3 504
+
+3. LEAK CHECK
+------------------------------------------------------------------------------
+  A = the image predicted by the type's driver (colour only: less saturated; others: lower
+  contrast). N = dist(B) - dist(A): positive when A is the more typical. Limits per set and
+  definition: overall |b_sat|, |b_con| <= 0.05; colour only on x_sat alone <= 0.05; contrast only on x_con alone <= 0.05; conflict on x_con alone <= 0.1.
+
+  3.1 The shipped v5b_180 sets, recomputed here (they met the limits from the reference pool):
+  set definition                     fit  term  b here  b FROZEN.json   n
+    A     corpus    overall (both terms) b_sat  0.0373         0.0373 180
+    A     corpus    overall (both terms) b_con -0.0370        -0.0370 180
+    A     corpus sat_only on x_sat alone b_sat  0.0475         0.0475  54
+    A     corpus fog_only on x_con alone b_con -0.0381        -0.0381  54
+    A     corpus conflict on x_con alone b_con -0.0675        -0.0675  36
+    A       orig    overall (both terms) b_sat -0.0337        -0.0337 180
+    A       orig    overall (both terms) b_con  0.0292         0.0292 180
+    A       orig sat_only on x_sat alone b_sat -0.0473        -0.0473  54
+    A       orig fog_only on x_con alone b_con  0.0437         0.0437  54
+    A       orig conflict on x_con alone b_con  0.0386         0.0386  36
+    B     corpus    overall (both terms) b_sat  0.0372         0.0372 180
+    B     corpus    overall (both terms) b_con -0.0375        -0.0375 180
+    B     corpus sat_only on x_sat alone b_sat  0.0470         0.0470  54
+    B     corpus fog_only on x_con alone b_con -0.0457        -0.0457  54
+    B     corpus conflict on x_con alone b_con  0.0033         0.0033  36
+    B       orig    overall (both terms) b_sat -0.0365        -0.0365 180
+    B       orig    overall (both terms) b_con  0.0334         0.0334 180
+    B       orig sat_only on x_sat alone b_sat -0.0430        -0.0430  54
+    B       orig fog_only on x_con alone b_con  0.0432         0.0432  54
+    B       orig conflict on x_con alone b_con  0.0906         0.0906  36
+
+  3.2 Pool leak (every candidate pair; b of the limited fit; together is fitted on both terms
+      and not limited). Rule sets: F = fallback (0 vs +3), C2 = colour 2-level low pairs,
+      K2 = contrast -3/-1 pairs.
+                        rules          type  pairs   terms  b_sat corpus  b_sat orig  b_con corpus  b_con orig  share A more typical corpus  share A more typical orig
+            REFERENCE v5units   colour only   2938     sat         0.172       0.004           NaN         NaN                        0.653                      0.500
+            REFERENCE v5units contrast only   3632     con           NaN         NaN        -0.105      -0.025                        0.409                      0.400
+            REFERENCE v5units      together  18149 sat+con         0.152      -0.030        -0.110      -0.010                        0.518                      0.471
+            REFERENCE v5units      conflict   7666     con           NaN         NaN        -0.297      -0.049                        0.330                      0.469
+            REFERENCE v5units       overall  32385 sat+con         0.170      -0.000        -0.123      -0.036                        0.473                      0.465
+          F:off C2:off K2:off   colour only   1260     sat         0.129      -0.082           NaN         NaN                        0.584                      0.418
+          F:off C2:off K2:off contrast only   1290     con           NaN         NaN        -0.124      -0.028                        0.411                      0.420
+          F:off C2:off K2:off      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+          F:off C2:off K2:off      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+          F:off C2:off K2:off       overall   4314 sat+con         0.150      -0.054        -0.124      -0.028                        0.480                      0.442
+           F:off C2:off K2:on   colour only   1260     sat         0.129      -0.082           NaN         NaN                        0.584                      0.418
+           F:off C2:off K2:on contrast only   1498     con           NaN         NaN        -0.155      -0.069                        0.360                      0.362
+           F:off C2:off K2:on      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+           F:off C2:off K2:on      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+           F:off C2:off K2:on       overall   4522 sat+con         0.150      -0.053        -0.146      -0.057                        0.460                      0.421
+           F:off C2:on K2:off   colour only   1680     sat         0.078      -0.144           NaN         NaN                        0.489                      0.314
+           F:off C2:on K2:off contrast only   1290     con           NaN         NaN        -0.124      -0.028                        0.411                      0.420
+           F:off C2:on K2:off      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+           F:off C2:on K2:off      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+           F:off C2:on K2:off       overall   4734 sat+con         0.112      -0.100        -0.124      -0.029                        0.456                      0.402
+  F:off C2:on K2:on (default)   colour only   1680     sat         0.078      -0.144           NaN         NaN                        0.489                      0.314
+  F:off C2:on K2:on (default) contrast only   1498     con           NaN         NaN        -0.155      -0.069                        0.360                      0.362
+  F:off C2:on K2:on (default)      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+  F:off C2:on K2:on (default)      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+  F:off C2:on K2:on (default)       overall   4942 sat+con         0.112      -0.099        -0.146      -0.057                        0.438                      0.385
+           F:on C2:off K2:off   colour only   1470     sat         0.192       0.003           NaN         NaN                        0.644                      0.501
+           F:on C2:off K2:off contrast only   1290     con           NaN         NaN        -0.124      -0.028                        0.411                      0.420
+           F:on C2:off K2:off      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+           F:on C2:off K2:off      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+           F:on C2:off K2:off       overall   4524 sat+con         0.193       0.005        -0.124      -0.028                        0.504                      0.468
+            F:on C2:off K2:on   colour only   1470     sat         0.192       0.003           NaN         NaN                        0.644                      0.501
+            F:on C2:off K2:on contrast only   1498     con           NaN         NaN        -0.155      -0.069                        0.360                      0.362
+            F:on C2:off K2:on      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+            F:on C2:off K2:on      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+            F:on C2:off K2:on       overall   4732 sat+con         0.193       0.005        -0.146      -0.056                        0.484                      0.447
+            F:on C2:on K2:off   colour only   1890     sat         0.140      -0.060           NaN         NaN                        0.546                      0.390
+            F:on C2:on K2:off contrast only   1290     con           NaN         NaN        -0.124      -0.028                        0.411                      0.420
+            F:on C2:on K2:off      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+            F:on C2:on K2:off      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+            F:on C2:on K2:off       overall   4944 sat+con         0.155      -0.041        -0.124      -0.028                        0.479                      0.428
+             F:on C2:on K2:on   colour only   1890     sat         0.140      -0.060           NaN         NaN                        0.546                      0.390
+             F:on C2:on K2:on contrast only   1498     con           NaN         NaN        -0.155      -0.069                        0.360                      0.362
+             F:on C2:on K2:on      together    882 sat+con        -6.089      -7.544         6.025       7.367                        0.544                      0.474
+             F:on C2:on K2:on      conflict    882     con           NaN         NaN        -0.318      -0.029                        0.368                      0.474
+             F:on C2:on K2:on       overall   5152 sat+con         0.155      -0.041        -0.146      -0.057                        0.461                      0.411
+
+  3.3 Achievable leak: 100 draws per rule set, two disjoint sets per draw (54 colour only, 54 contrast only, 36 together, 36 conflict),
+      then the swap step: one pair at a time, within type and levels apart, scenes capped as in
+      the draw; stops when every |b| <= 0.8 x its limit, or after 150 swaps.
+      DRAWS in which both sets meet every limit, by swaps allowed per set (0 = plain draws):
+                        rules @0 @10 @20 @40  @80 @150 median swaps to meet all sets never
+            REFERENCE v5units 0%  0%  3% 18%  60%  97%                       49         2%
+          F:off C2:off K2:off 0%  0%  0% 33%  99% 100%                       39         0%
+           F:off C2:off K2:on 0%  0%  0% 30% 100% 100%                       38         0%
+           F:off C2:on K2:off 0%  0%  0% 12%  94% 100%                       46         0%
+  F:off C2:on K2:on (default) 0%  0%  0%  9%  96% 100%                       49         0%
+           F:on C2:off K2:off 0%  0%  0% 36%  98% 100%                       37         0%
+            F:on C2:off K2:on 0%  0%  0% 32%  97% 100%                       37         0%
+            F:on C2:on K2:off 0%  0%  1% 37%  98% 100%                       37         0%
+             F:on C2:on K2:on 0%  0%  0% 22%  97% 100%                       40         0%
+
+      SETS meeting each limit with 80 swaps per set (the reference's yardstick) and, in
+      brackets, with plain draws:
+                        rules   overall colour only contrast only  conflict
+            REFERENCE v5units  77% (0%)    80% (0%)      88% (6%)  79% (0%)
+          F:off C2:off K2:off 100% (0%)   100% (0%)     100% (2%) 100% (0%)
+           F:off C2:off K2:on 100% (0%)   100% (0%)     100% (0%) 100% (0%)
+           F:off C2:on K2:off  98% (0%)    98% (0%)      99% (2%)  98% (0%)
+  F:off C2:on K2:on (default)  98% (0%)    98% (0%)     100% (0%)  98% (0%)
+           F:on C2:off K2:off  99% (0%)   100% (0%)     100% (2%)  99% (0%)
+            F:on C2:off K2:on  98% (0%)    98% (0%)      99% (2%)  98% (0%)
+            F:on C2:on K2:off  99% (0%)   100% (0%)     100% (2%)  99% (0%)
+             F:on C2:on K2:on  98% (0%)    99% (0%)      99% (2%)  98% (0%)
+
+      Best / median worst |b| after the swap step (over both definitions; limit in brackets):
+                        rules              overall          colour only        contrast only             conflict
+            REFERENCE v5units 0.035 / 0.039 (0.05) 0.019 / 0.038 (0.05) 0.007 / 0.037 (0.05) 0.016 / 0.077 (0.10)
+          F:off C2:off K2:off 0.032 / 0.039 (0.05) 0.027 / 0.038 (0.05) 0.012 / 0.036 (0.05) 0.060 / 0.078 (0.10)
+           F:off C2:off K2:on 0.034 / 0.039 (0.05) 0.027 / 0.038 (0.05) 0.011 / 0.036 (0.05) 0.043 / 0.078 (0.10)
+           F:off C2:on K2:off 0.032 / 0.039 (0.05) 0.021 / 0.039 (0.05) 0.015 / 0.037 (0.05) 0.054 / 0.078 (0.10)
+  F:off C2:on K2:on (default) 0.031 / 0.039 (0.05) 0.027 / 0.038 (0.05) 0.005 / 0.036 (0.05) 0.058 / 0.078 (0.10)
+           F:on C2:off K2:off 0.030 / 0.039 (0.05) 0.025 / 0.038 (0.05) 0.017 / 0.036 (0.05) 0.063 / 0.078 (0.10)
+            F:on C2:off K2:on 0.032 / 0.039 (0.05) 0.019 / 0.038 (0.05) 0.005 / 0.034 (0.05) 0.050 / 0.077 (0.10)
+            F:on C2:on K2:off 0.031 / 0.039 (0.05) 0.024 / 0.038 (0.05) 0.017 / 0.037 (0.05) 0.052 / 0.078 (0.10)
+             F:on C2:on K2:on 0.029 / 0.039 (0.05) 0.023 / 0.038 (0.05) 0.012 / 0.037 (0.05) 0.059 / 0.078 (0.10)
+
+  3.4 What drives the leak (default rules): each cell's pull on its type's b (sum of x N over
+      the cell / sum of x^2 over the type; the pulls add up to the type's pool b). Together
+      has no limit of its own and its joint fit is unstable (x_sat ~ x_con at 2/2), so its
+      cells are shown on x_sat for orientation only. Largest first:
+    colour only:
+                          cell  pairs  share of x^2  pull corpus  pull orig  share A more typical corpus  share A more typical orig
+    colour only | 4 | straddling    630         0.579        0.111      0.001                        0.659                      0.503
+           colour only | 3 | low    210         0.108       -0.042     -0.076                        0.181                      0.000
+           colour only | 2 | low    420         0.096       -0.039     -0.070                        0.205                      0.000
+    colour only | 3 | straddling    420         0.216        0.048      0.001                        0.674                      0.500
+    contrast only:
+                            cell  pairs  share of x^2  pull corpus  pull orig  share A more typical corpus  share A more typical orig
+           contrast only | 3 | low    198         0.111       -0.068     -0.080                        0.096                      0.000
+          contrast only | 3 | high    181         0.100        0.043      0.071                        0.851                      1.000
+    contrast only | 4 | straddling    536         0.529       -0.063     -0.013                        0.403                      0.325
+           contrast only | 2 | low    208         0.052       -0.038     -0.043                        0.048                      0.000
+    contrast only | 3 | straddling    375         0.208       -0.030     -0.004                        0.376                      0.499
+    together:
+                                                 cell  pairs  share of x^2  pull corpus  pull orig  share A more typical corpus  share A more typical orig
+           together | 2/2 | touching +-3 | contrast low    210         0.253       -0.117     -0.174                        0.271                      0.200
+          together | 2/2 | touching +-3 | contrast high    210         0.225        0.141      0.148                        0.824                      0.800
+                 together | 2/2 | middle | contrast low    126         0.149       -0.047     -0.102                        0.310                      0.294
+                together | 2/2 | middle | contrast high    126         0.138        0.067      0.090                        0.778                      0.667
+    together | 2/2 | touching +-3 | contrast straddling     84         0.093       -0.010     -0.010                        0.560                      0.500
+          together | 2/2 | middle | contrast straddling    126         0.142        0.004     -0.006                        0.524                      0.357
+    conflict:
+                                                 cell  pairs  share of x^2  pull corpus  pull orig  share A more typical corpus  share A more typical orig
+           conflict | 2/2 | touching +-3 | contrast low    210         0.241       -0.194     -0.175                        0.157                      0.200
+          conflict | 2/2 | touching +-3 | contrast high    210         0.238        0.072      0.164                        0.652                      0.800
+                 conflict | 2/2 | middle | contrast low    126         0.144       -0.109     -0.101                        0.143                      0.302
+                conflict | 2/2 | middle | contrast high    126         0.141        0.004      0.093                        0.508                      0.667
+          conflict | 2/2 | middle | contrast straddling    126         0.142       -0.062     -0.005                        0.325                      0.349
+    conflict | 2/2 | touching +-3 | contrast straddling     84         0.095       -0.029     -0.005                        0.381                      0.500
+
+      Which pairs would help: for every allowed, just-excluded or fallback pair, the change in
+      |b| (both definitions, scaled by the limit) if it were added to the pool (together: the
+      overall fit). By cell, the cells that help most first (share of their pairs that help):
+    colour only:
+                          cell                                   status  pairs  share that help  share A more typical corpus  share A more typical orig
+          colour only | 3 | high                        excluded: 0 vs +3    210            0.800                        1.000                      1.000
+    colour only | 5 | straddling                 excluded: 5 levels apart    420            0.583                        0.676                      0.500
+          colour only | 3 | high                         fallback 0 vs +3     84            0.750                        1.000                      1.000
+          colour only | 2 | high excluded: 2 levels straddling or above 0    420            0.802                        0.995                      1.000
+    colour only | 4 | straddling                                  allowed    630            0.584                        0.659                      0.503
+    colour only | 3 | straddling                                  allowed    420            0.538                        0.674                      0.500
+    contrast only:
+                            cell                                status  pairs  share that help  share A more typical corpus  share A more typical orig
+          contrast only | 3 | high                               allowed    181            1.000                        0.851                      1.000
+    contrast only | 5 | straddling              excluded: 5 levels apart    334            0.557                        0.377                      0.479
+    contrast only | 4 | straddling                               allowed    536            0.526                        0.403                      0.325
+    contrast only | 3 | straddling                               allowed    375            0.533                        0.376                      0.499
+           contrast only | 2 | low excluded: 2 levels, higher image at 0    205            0.078                        0.176                      0.000
+           contrast only | 2 | low                               allowed    208            0.000                        0.048                      0.000
+    together:
+                                           cell        status  pairs  share that help  share A more typical corpus  share A more typical orig
+    together | 3/2 | touching +-3 | contrast high excluded: 3/2    168            0.750                        0.780                      0.750
+    together | 2/2 | touching +-3 | contrast high       allowed    210            0.800                        0.824                      0.800
+          together | 2/2 | middle | contrast high       allowed    126            1.000                        0.778                      0.667
+    together | 1/2 | touching +-3 | contrast high excluded: 1/2    242            0.876                        0.847                      0.826
+          together | 3/2 | middle | contrast high excluded: 3/2     84            1.000                        0.786                      1.000
+          together | 1/2 | middle | contrast high excluded: 1/2    167            0.970                        0.760                      1.000
+    conflict:
+                                           cell        status  pairs  share that help  share A more typical corpus  share A more typical orig
+    conflict | 2/2 | touching +-3 | contrast high       allowed    210            0.810                        0.652                      0.800
+    conflict | 3/2 | touching +-3 | contrast high excluded: 3/2    168            0.738                        0.589                      0.750
+          conflict | 2/2 | middle | contrast high       allowed    126            0.794                        0.508                      0.667
+          conflict | 3/2 | middle | contrast high excluded: 3/2     84            0.762                        0.476                      1.000
+          conflict | 2/1 | middle | contrast high excluded: 2/1      1            1.000                        1.000                      1.000
+          conflict | 1/2 | middle | contrast high excluded: 1/2      2            1.000                        0.500                      1.000
+      The 15 single pairs that help most per type: leak_helpers.csv.
+
+  3.5 What a feasible list looks like: mean pairs per set in each cell, in the sets that met
+      every limit after the swaps, against the plain draws (changes of 0.5 or more; all cells in
+      leak_feasible_cells.csv):
+    REFERENCE v5units (197 of 200 sets met every limit):
+                          cell  mean pairs per set, drawn  mean pairs per set, sets meeting all limits  change
+         contrast only | 2 | low                        8.8                                          6.1    -2.7
+          colour only | 3 | high                        5.2                                          3.6    -1.6
+         contrast only | 3 | low                        3.8                                          2.7    -1.1
+           colour only | 3 | low                        5.4                                          6.1     0.6
+    colour only | 3 | straddling                       10.9                                         11.9     0.9
+        contrast only | 3 | high                        3.6                                          4.9     1.3
+        contrast only | 2 | high                        7.9                                         10.3     2.4
+    F:off C2:on K2:on (default) (200 of 200 sets met every limit):
+                                                 cell  mean pairs per set, drawn  mean pairs per set, sets meeting all limits  change
+                                  colour only | 3 | low                        6.9                                          4.3    -2.6
+                                contrast only | 3 | low                        7.4                                          5.8    -1.6
+                conflict | 2/2 | middle | contrast high                        5.0                                          4.0    -1.0
+           together | 2/2 | touching +-3 | contrast low                        8.6                                          8.1    -0.6
+                         contrast only | 3 | straddling                       13.2                                         12.7    -0.5
+          conflict | 2/2 | touching +-3 | contrast high                        9.0                                          9.6     0.6
+          together | 2/2 | middle | contrast straddling                        5.0                                          6.0     1.0
+    conflict | 2/2 | touching +-3 | contrast straddling                        3.2                                          4.2     1.0
+                               contrast only | 3 | high                        6.4                                          8.5     2.1
+                           colour only | 3 | straddling                       13.1                                         15.7     2.6
+
+  3.6 The best draw per rule set (lowest worst score over A and B): the pairs the swap step
+      took out and brought in, net by cell (every pair in leak_best_swaps.csv):
+    REFERENCE v5units: 76 swaps; net: contrast only | 2 | low -10; colour
+      only | 3 | high -2; contrast only | 3 | straddling -2; conflict | 3/2
+      | middle | contrast high -2; together | 6/1 | touching +-3 | contrast
+      high -1; contrast only | 3 | low -1; conflict | 2/2 | touching +-3 |
+      contrast low -1; together | 6/2 | touching +-3 | contrast low -1;
+      conflict | 2/2 | touching +-3 | contrast straddling +1; together | 6/1
+      | touching +-3 | contrast low +1; conflict | 3/2 | middle | contrast
+      straddling +1; conflict | 3/2 | touching +-3 | contrast high +1;
+      together | 6/2 | touching +-3 | contrast straddling +1; colour only |
+      3 | straddling +2; contrast only | 3 | high +3; contrast only | 2 |
+      high +10
+    F:off C2:off K2:off: 78 swaps; net: conflict | 2/2 | middle | contrast
+      low -5; colour only | 3 | low -3; contrast only | 3 | low -3; together
+      | 2/2 | touching +-3 | contrast low -3; contrast only | 3 | straddling
+      -1; together | 2/2 | touching +-3 | contrast high -1; conflict | 2/2 |
+      touching +-3 | contrast low +1; conflict | 2/2 | middle | contrast
+      straddling +1; colour only | 3 | straddling +3; conflict | 2/2 |
+      touching +-3 | contrast high +3; contrast only | 3 | high +4; together
+      | 2/2 | middle | contrast straddling +4
+    F:off C2:off K2:on: 79 swaps; net: contrast only | 3 | straddling -7;
+      conflict | 2/2 | middle | contrast low -6; colour only | 3 | low -3;
+      contrast only | 3 | low -2; together | 2/2 | touching +-3 | contrast
+      high -1; together | 2/2 | touching +-3 | contrast low -1; conflict |
+      2/2 | middle | contrast high -1; conflict | 2/2 | touching +-3 |
+      contrast high -1; conflict | 2/2 | middle | contrast straddling +1;
+      conflict | 2/2 | touching +-3 | contrast low +1; together | 2/2 |
+      middle | contrast straddling +2; colour only | 3 | straddling +3;
+      conflict | 2/2 | touching +-3 | contrast straddling +6; contrast only
+      | 3 | high +9
+    F:off C2:on K2:off: 62 swaps; net: colour only | 3 | low -9; conflict |
+      2/2 | touching +-3 | contrast high -4; conflict | 2/2 | middle |
+      contrast low -2; together | 2/2 | touching +-3 | contrast high -2;
+      together | 2/2 | middle | contrast low -1; contrast only | 3 | low -1;
+      contrast only | 3 | high +1; together | 2/2 | middle | contrast
+      straddling +1; conflict | 2/2 | touching +-3 | contrast low +2;
+      together | 2/2 | touching +-3 | contrast straddling +2; conflict | 2/2
+      | touching +-3 | contrast straddling +4; colour only | 3 | straddling
+      +9
+    F:off C2:on K2:on (default): 74 swaps; net: colour only | 3 | low -6;
+      contrast only | 3 | low -5; together | 2/2 | middle | contrast low -5;
+      conflict | 2/2 | middle | contrast high -3; conflict | 2/2 | middle |
+      contrast straddling -3; together | 2/2 | touching +-3 | contrast low
+      -3; contrast only | 3 | straddling -1; conflict | 2/2 | touching +-3 |
+      contrast straddling -1; together | 2/2 | middle | contrast high +1;
+      together | 2/2 | touching +-3 | contrast high +2; together | 2/2 |
+      touching +-3 | contrast straddling +2; conflict | 2/2 | touching +-3 |
+      contrast low +2; together | 2/2 | middle | contrast straddling +3;
+      conflict | 2/2 | touching +-3 | contrast high +5; contrast only | 3 |
+      high +6; colour only | 3 | straddling +6
+    F:on C2:off K2:off: 60 swaps; net: contrast only | 3 | low -6; conflict
+      | 2/2 | touching +-3 | contrast low -5; conflict | 2/2 | middle |
+      contrast low -2; colour only | 3 | low -1; together | 2/2 | middle |
+      contrast low -1; colour only | 3 | high -1; together | 2/2 | touching
+      +-3 | contrast low +1; contrast only | 3 | straddling +1; colour only
+      | 3 | straddling +2; conflict | 2/2 | touching +-3 | contrast high +3;
+      conflict | 2/2 | touching +-3 | contrast straddling +4; contrast only
+      | 3 | high +5
+    F:on C2:off K2:on: 59 swaps; net: colour only | 3 | high -4; conflict |
+      2/2 | middle | contrast high -4; contrast only | 3 | straddling -4;
+      contrast only | 3 | low -3; together | 2/2 | touching +-3 | contrast
+      high -1; together | 2/2 | touching +-3 | contrast low -1; colour only
+      | 3 | low -1; conflict | 2/2 | middle | contrast low +1; conflict |
+      2/2 | middle | contrast straddling +1; conflict | 2/2 | touching +-3 |
+      contrast straddling +1; conflict | 2/2 | touching +-3 | contrast low
+      +1; together | 2/2 | middle | contrast straddling +2; colour only | 3
+      | straddling +5; contrast only | 3 | high +7
+    F:on C2:on K2:off: 60 swaps; net: conflict | 2/2 | middle | contrast
+      high -6; contrast only | 3 | low -4; contrast only | 3 | straddling
+      -2; colour only | 3 | high -2; conflict | 2/2 | touching +-3 |
+      contrast low -1; together | 2/2 | middle | contrast low -1; colour
+      only | 3 | low -1; conflict | 2/2 | touching +-3 | contrast straddling
+      -1; together | 2/2 | touching +-3 | contrast high -1; together | 2/2 |
+      middle | contrast straddling +2; colour only | 3 | straddling +3;
+      conflict | 2/2 | touching +-3 | contrast high +3; conflict | 2/2 |
+      middle | contrast straddling +5; contrast only | 3 | high +6
+    F:on C2:on K2:on: 69 swaps; net: conflict | 2/2 | middle | contrast
+      straddling -6; contrast only | 3 | low -3; colour only | 3 | high -2;
+      together | 2/2 | middle | contrast high -1; together | 2/2 | touching
+      +-3 | contrast low -1; contrast only | 3 | straddling +1; together |
+      2/2 | middle | contrast low +1; together | 2/2 | touching +-3 |
+      contrast straddling +1; colour only | 3 | straddling +2; contrast only
+      | 3 | high +2; conflict | 2/2 | touching +-3 | contrast high +6
+    Default rules, the best draw's pairs per cell (A + B):
+                                                 cell  pairs drawn  pairs after swaps
+                                  colour only | 2 | low           32                 32
+                                  colour only | 3 | low           10                  4
+                           colour only | 3 | straddling           25                 31
+                           colour only | 4 | straddling           41                 41
+                conflict | 2/2 | middle | contrast high           10                  7
+                 conflict | 2/2 | middle | contrast low            7                  7
+          conflict | 2/2 | middle | contrast straddling           13                 10
+          conflict | 2/2 | touching +-3 | contrast high           16                 21
+           conflict | 2/2 | touching +-3 | contrast low           20                 22
+    conflict | 2/2 | touching +-3 | contrast straddling            6                  5
+                                contrast only | 2 | low           10                 10
+                               contrast only | 3 | high           15                 21
+                                contrast only | 3 | low           17                 12
+                         contrast only | 3 | straddling           25                 24
+                         contrast only | 4 | straddling           41                 41
+                together | 2/2 | middle | contrast high            7                  8
+                 together | 2/2 | middle | contrast low           14                  9
+          together | 2/2 | middle | contrast straddling            9                 12
+          together | 2/2 | touching +-3 | contrast high           10                 12
+           together | 2/2 | touching +-3 | contrast low           23                 20
+    together | 2/2 | touching +-3 | contrast straddling            9                 11
+
+4. THE PAIRS SHOWN
+------------------------------------------------------------------------------
+  per type and group (set: typical 15, odd 0, excluded 10; anchors 12 in all):
+                             pairs  scenes
+  type          selected_as               
+  colour only   typical         15      15
+                excluded        10      10
+                anchor           3       3
+  contrast only typical         15      15
+                excluded        10      10
+                anchor           3       3
+  together      typical         15      15
+                excluded        10      10
+                anchor           3       3
+  conflict      typical         15      15
+                excluded        10      10
+                anchor           3       3
+  Typical pairs per dimension:
+    colour only: levels 2 5, 3 5, 4 5; where low 7, straddling 8; position middle 8, touching +-3 7
+    contrast only: levels 2 5, 3 5, 4 5; where low 5, straddling 6, high 4; position middle 6, touching +-3 9
+    together: position middle 7, touching +-3 8; where low 5, straddling 5, high 5
+    conflict: position middle 7, touching +-3 8; where low 5, straddling 5, high 5
+           type selected_as levels_apart      where     position  pairs
+    colour only     typical            2        low       middle      2
+    colour only     typical            2        low touching +-3      3
+    colour only     typical            3        low touching +-3      2
+    colour only     typical            3 straddling       middle      3
+    colour only     typical            4 straddling       middle      3
+    colour only     typical            4 straddling touching +-3      2
+    colour only    excluded            2 straddling       middle      4
+    colour only    excluded            3       high touching +-3      3
+    colour only    excluded            5 straddling touching +-3      3
+  contrast only     typical            2        low touching +-3      5
+  contrast only     typical            3       high touching +-3      4
+  contrast only     typical            3 straddling       middle      1
+  contrast only     typical            4 straddling       middle      5
+  contrast only    excluded            2        low       middle      5
+  contrast only    excluded            5 straddling touching +-3      5
+       together     typical          2/2       high       middle      3
+       together     typical          2/2       high touching +-3      2
+       together     typical          2/2        low       middle      2
+       together     typical          2/2        low touching +-3      3
+       together     typical          2/2 straddling       middle      2
+       together     typical          2/2 straddling touching +-3      3
+       together    excluded          1/2       high touching +-3      1
+       together    excluded          1/2        low touching +-3      2
+       together    excluded          2/1       high       middle      1
+       together    excluded          2/1       high touching +-3      1
+       together    excluded          2/1        low touching +-3      2
+       together    excluded          3/2       high touching +-3      1
+       together    excluded          3/2        low touching +-3      1
+       together    excluded          3/2 straddling touching +-3      1
+       conflict     typical          2/2       high       middle      2
+       conflict     typical          2/2       high touching +-3      3
+       conflict     typical          2/2        low       middle      3
+       conflict     typical          2/2        low touching +-3      2
+       conflict     typical          2/2 straddling       middle      2
+       conflict     typical          2/2 straddling touching +-3      3
+       conflict    excluded          1/2        low touching +-3      1
+       conflict    excluded          1/2 straddling       middle      1
+       conflict    excluded          1/2 straddling touching +-3      1
+       conflict    excluded          2/1       high       middle      1
+       conflict    excluded          2/1       high touching +-3      3
+       conflict    excluded          3/2       high touching +-3      1
+       conflict    excluded          3/2 straddling       middle      1
+       conflict    excluded          3/2 straddling touching +-3      1
+  by indoor class (the 47 scenes: outdoor 22, indoor 22, ambiguous 3):
+  indoor                     ambiguous  indoor  outdoor
+  type          selected_as                            
+  colour only   typical              1       6        8
+                excluded             0       5        5
+                anchor               0       0        3
+  contrast only typical              1       5        9
+                excluded             0       4        6
+                anchor               1       1        1
+  together      typical              1       7        7
+                excluded             1       4        5
+                anchor               0       1        2
+  conflict      typical              1       7        7
+                excluded             1       3        6
+                anchor               0       1        2
+
+5. JUST EXCLUDED
+------------------------------------------------------------------------------
+  Each pair meets every final condition except the one its category replaces. Split evenly
+  in the order listed (shortfalls passed on); at random, one scene each, indoor balanced.
+           type                       category replaces  candidates  scenes  shown
+    colour only 2 levels straddling or above 0   levels         630      42      4
+    colour only                        0 vs +3   levels         210      42      3
+    colour only                 5 levels apart   levels         420      42      3
+  contrast only    2 levels, higher image at 0   levels         205      42      5
+  contrast only                 5 levels apart   levels         334      42      5
+       together                            2/1   levels        1067      42      4
+       together                            1/2   levels        1072      42      3
+       together                            3/2   levels         672      42      3
+       conflict                            2/1   levels           9       6      4
+       conflict                            1/2   levels          90      29      3
+       conflict                            3/2   levels         657      42      3
+
+6. ANCHORS
+------------------------------------------------------------------------------
+           type                     anchor_source anchor_round1_rating anchor_round2_rating                               scene levels_apart      where    group
+    colour only round 1 (rated in rounds 1 and 2)                 Fine                 Fine                     campus_00003823            2        low  typical
+    colour only                           round 2                                      Fine apartment_building_outdoor_00004677            2       high excluded
+    colour only                           round 2                               Too similar                  crosswalk_00001791            3       high excluded
+  contrast only round 1 (rated in rounds 1 and 2)                 Fine                 Fine                dining_hall_00001301            3 straddling  typical
+  contrast only                           round 2                               Too similar                   driveway_00003009            3       high  typical
+  contrast only                           round 2                                      Fine    subway_station_platform_00003408            2        low excluded
+       together round 1 (rated in rounds 1 and 2)                 Fine          Too similar   residential_neighborhood_00001583          1/1        low excluded
+       together round 1 (rated in rounds 1 and 2)          Too similar          Too similar                picnic_area_00000702          1/1       high excluded
+       together                           round 2                               Too similar           balcony_interior_00004440          1/1       high excluded
+       conflict round 1 (rated in rounds 1 and 2)                 Fine          Too similar             elevator_lobby_00003556          1/1        low excluded
+       conflict round 1 (rated in rounds 1 and 2)          Too similar          Too similar                  boardwalk_00001503          1/1       high excluded
+       conflict                           round 2                                      Fine                       yard_00000709          2/2       high  typical
+
+SCENE CHECK (scene_check.html, scene_check.csv)
+------------------------------------------------------------------------------
+  The rule, fixed before any rating: a scene is excluded if 4 or more of its
+  6 pairs are rated 'Too similar'. Its purpose is a documented, pre-data
+  reason for the exclusion. The pairs meet the final rules: one per type,
+  plus one more colour-only and one more contrast-only pair at another
+  distance; shuffled, sides at random, labels hidden until rated. Comparison
+  scenes: drawn with the seed from the scenes not checked or excluded,
+  matched for indoor/outdoor where possible.
+                          scene       role             category indoor                                                                       pairs (levels apart)
+              bathroom_00001909    checked             bathroom indoor colour only 2, contrast only 3, colour only 3, contrast only 4, conflict 2/2, together 2/2
+           dining_hall_00001273    checked          dining_hall indoor contrast only 4, colour only 2, conflict 2/2, together 2/2, contrast only 2, colour only 3
+      gymnasium_indoor_00003333    checked     gymnasium/indoor indoor contrast only 2, together 2/2, contrast only 3, conflict 2/2, colour only 3, colour only 4
+                shower_00000779    checked               shower indoor contrast only 4, conflict 2/2, together 2/2, colour only 2, contrast only 3, colour only 3
+            auditorium_00001394    checked           auditorium indoor contrast only 2, together 2/2, contrast only 3, colour only 4, conflict 2/2, colour only 3
+               bedroom_00001289 comparison              bedroom indoor together 2/2, colour only 3, contrast only 4, colour only 4, contrast only 3, conflict 2/2
+  shopping_mall_indoor_00003139 comparison shopping_mall/indoor indoor together 2/2, contrast only 4, contrast only 3, colour only 2, colour only 3, conflict 2/2
+           dining_hall_00001301 comparison          dining_hall indoor colour only 2, contrast only 4, conflict 2/2, contrast only 3, colour only 3, together 2/2
+             cafeteria_00002762 comparison            cafeteria indoor conflict 2/2, together 2/2, contrast only 3, colour only 3, colour only 4, contrast only 4
+            restaurant_00000867 comparison           restaurant indoor together 2/2, conflict 2/2, contrast only 4, contrast only 2, colour only 4, colour only 3
+
+7. CHECKS
+------------------------------------------------------------------------------
+  PASS  [rounds] the settings hash differs from rounds 1 and 2
+          dccee92d95 vs f8c2aa13ca, b5493951ff
+  PASS  [rounds] the output folder is not round 1's or round 2's
+          data/pair_preview_v5b/dccee92d95
+  PASS  [inputs] the stimulus manifest exists
+          data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv
+  PASS  [inputs] the manifest has the columns used
+          81 columns
+  PASS  [inputs] 47 scenes x 49 images, file names unique
+          47 scenes, 2,303 images
+  PASS  [inputs] checksums.sha256 exists
+          data/stimulus_set_v5/7fd72262ba/checksums.sha256
+  PASS  [inputs] the manifest matches checksums.sha256
+          69f0529f9f539ad2...
+  PASS  [inputs] the manifest is the frozen stimulus set's (FROZEN.json)
+          set 7fd72262ba
+  PASS  [inputs] every image file exists (2,303)
+          0 missing
+  PASS  [inputs] all 2,303 images match checksums.sha256
+          0 differ
+  PASS  [exclusion] the excluded scenes and images are in the manifest (else the run would have stopped)
+          5 scenes, 0 images
+  PASS  [exclusion] the settings hash with the exclusion differs from the base run's
+          dccee92d95 vs 2883e744a4
+  PASS  [anchors] the round-1 ratings file exists
+          ratings_f8c2aa13ca.csv
+  PASS  [anchors] the round-1 file has pair_key, type, rating
+          140 rows
+  PASS  [anchors] the round-1 file belongs to its gallery (data/pair_preview_v5b/f8c2aa13ca)
+          140 rows
+  PASS  [anchors] the round-2 ratings file exists
+          ratings_b5493951ff.csv
+  PASS  [anchors] the round-2 file has pair_key, type, rating
+          132 rows
+  PASS  [anchors] the round-2 file belongs to its gallery (data/pair_preview_v5b/b5493951ff)
+          132 rows
+  PASS  [anchors] round 2's anchors are known
+          12 from data/pair_preview_v5b/b5493951ff/examples.csv
+  PASS  [typing] the pair typing reproduces the current counts (EXPECTED_CURRENT)
+          colour only 3,290, contrast only 3,976, together 20,283, conflict 8,571
+  PASS  [typing] the final-rule candidate counts are as reported (EXPECTED_CANDIDATES)
+          colour only 1,880, contrast only 1,644, together 987, conflict 987
+  PASS  [leak] v5b_180 FROZEN.json and package/items.csv exist
+          using data/frozen_trial_lists_v5b/v5b_180
+  PASS  [leak] the leak function reproduces the shipped v5b_180 leaks (FROZEN.json, 20 values)
+          20 values, largest difference 5.0e-07
+  PASS  [leak] the reference pool reproduces the current counts
+          colour only 3,290, contrast only 3,976, together 20,283, conflict 8,571
+  PASS  [leak] every drawn set has the set sizes, from its pool, pairs unique
+          180 per set
+  PASS  [leak] sets A and B of every draw are disjoint
+  PASS  [leak] the leak check is reproducible (first draw of the default rules again)
+          [0.7947, 0.7989]
+  PASS  [leak] the reference pool reproduces the current counts (after the exclusion)
+          colour only 2,938, contrast only 3,632, together 18,149, conflict 7,666
+  PASS  [leak] every drawn set has the set sizes, from its pool, pairs unique (after the exclusion)
+          180 per set
+  PASS  [leak] sets A and B of every draw are disjoint (after the exclusion)
+  PASS  [leak] the leak check is reproducible (first draw of the default rules again) (after the exclusion)
+          [0.7957, 0.7837]
+  PASS  [selection] the selection is reproducible (same settings, same pairs)
+          112 pairs
+  PASS  [selection] every typical pair meets the final rules (and is of its type)
+          60 pairs
+  PASS  [selection] every excluded pair breaks exactly the rule it is listed under
+          40 pairs
+  PASS  [anchors] the anchors are found in the round-1 and round-2 files with the ratings used
+          12 anchors: agree 4, Too similar 3, Fine 3, disagree 2
+  PASS  [anchors] the anchors' typing agrees with the ratings files
+  PASS  [anchors] 12 anchors, or the report says why fewer
+          12
+  PASS  [selection] no pair is shown twice (anchors included)
+          112 pairs
+  PASS  [selection] the number of pairs per type and group is as set, or the report (section 4) says why it is lower
+          all as set
+  PASS  [anchors] the anchors' images exist (stimuli and copied)
+          24 images
+  PASS  [gallery] the images used are copied to images/ unchanged
+          209 images
+  PASS  [exclusion] the settings without the exclusion give the base run's hash
+          2883e744a4 vs 2883e744a4 (data/pair_preview_v5b/2883e744a4)
+  PASS  [exclusion] the leak check uses the base run's number of draws
+          100
+  PASS  [exclusion] the results without the exclusion equal the base run, file by file (11 files)
+          identical
+  PASS  [exclusion] supply and pool leak after the exclusion = before minus the removed pairs (every rule set; the pool leak recomputed)
+          removed per rule set: REFERENCE v5units 3,735, F:off C2:off K2:off 481, F:off C2:off K2:on 506, F:off C2:on K2:off 531, F:off C2:on K2:on (default) 556, F:on C2:off K2:off 506, F:on C2:off K2:on 531, F:on C2:on K2:off 556, F:on C2:on K2:on 581
+  PASS  [exclusion] no gallery pair, anchor or example uses an excluded scene or image
+          112 pairs
+  PASS  [exclusion] anchors from excluded scenes are replaced, from the same source round, rating and type where any is left (else relaxed and listed in section E5)
+          2 replaced, 0 relaxed
+  PASS  [exclusion] every drawn set uses each scene once per type before any twice (after the exclusion)
+          1800 sets
+  PASS  [exclusion] after the swaps no scene exceeds the per-type cap
+  PASS  [scene check] 6 pairs under the final rules per scene (5 checked, 5 comparison)
+          60 pairs
+  PASS  [scene check] comparison scenes are other scenes, matched for indoor/outdoor where possible
+          checked indoor, indoor, indoor, indoor, indoor; comparison indoor, indoor, indoor, indoor, indoor
+  PASS  [rounds] the folder data/pair_preview_v5b/f8c2aa13ca is untouched
+          data/pair_preview_v5b/f8c2aa13ca
+  PASS  [rounds] the folder data/pair_preview_v5b/b5493951ff is untouched
+          data/pair_preview_v5b/b5493951ff
+  PASS  [rounds] the folder data/pair_preview_v5b/2883e744a4 is untouched
+          data/pair_preview_v5b/2883e744a4
+
+8. FILES
+------------------------------------------------------------------------------
+  checks.csv
+  examples.csv
+  gallery.html
+  images
+  leak_achievable.csv
+  leak_achievable_before_exclusion.csv
+  leak_best_cells.csv
+  leak_best_swaps.csv
+  leak_cells.csv
+  leak_draws.csv
+  leak_draws_before_exclusion.csv
+  leak_feasible_cells.csv
+  leak_helper_cells.csv
+  leak_helpers.csv
+  leak_pool.csv
+  leak_pool_before_exclusion.csv
+  leak_scene_reuse.csv
+  replacements.csv
+  report.txt
+  run_meta.json
+  scene_check.csv
+  scene_check.html
+  settings.json
+  supply.csv
+  supply_before_exclusion.csv
