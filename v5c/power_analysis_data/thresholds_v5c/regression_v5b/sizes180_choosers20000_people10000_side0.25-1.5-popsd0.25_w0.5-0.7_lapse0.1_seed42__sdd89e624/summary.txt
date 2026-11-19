@@ -1,0 +1,16 @@
+THRESHOLDS AND THE PER-PERSON MODEL (thresholds_v5c.py, REGRESSION ON v5b_180): IN PLAIN WORDS
+
+* Checks: 61 of 61 pass.
+* The frozen thresholds in design.json were reproduced exactly for 2 of 2 block size x set lists (same rows, same random stream as build_trials_v5c.py / build_trials_v5b.py).
+* Thresholds (two-weight model; a person counts as using a feature when the weight is above the upper one; 2.5% of random choosers are):
+    180 trials, set A: saturation +0.293/-0.294, contrast +0.318/-0.329
+    180 trials, set B: saturation +0.296/-0.288, contrast +0.319/-0.325
+* Rule (fixed before the run, unchanged from v5): the two-weight model is recommended. (For information only: the registered model is the adjusted model, chosen in v5b; its thresholds are below.)
+    (a) side bias 0.5 logit, two-weight model: worst false-detection rate 0.0292 (limit 0.035; 180 B, contrast, left 0.5), worst weight shift 0.0398 (limit 0.05; 180 B, contrast, planning weights, right 0.5) -> does not hold.
+    (b) the side model's largest detection loss -0.0001 (limit 0.01; 180 B, contrast) -> holds.
+    For information, 180 trials alone: worst tail 0.0292, worst shift 0.0398 (180 B, contrast, planning weights, right 0.5) -> the rule would choose the two-weight model.
+* 180 trials, planning weights 0.5/0.7 and lapse 0.1: detected for saturation 82%, contrast 96% of people (mean of the two sets).
+* Run with 32 worker process(es); the result does not depend on that number (checked by rerunning one task in one process).
+* ADJUSTED MODEL (registered) thresholds, 2.5% per tail (the same 20,000 random choosers): 180 set A saturation +0.298/-0.303; 180 set A contrast +0.327/-0.331; 180 set B saturation +0.300/-0.296; 180 set B contrast +0.323/-0.329.
+* Adjusted model, detection at the planning weights 0.5/0.7, lapse 0.1 (ASSUMPTIONS): set A saturation 81.3%; set A contrast 94.7%; set B saturation 81.0%; set B contrast 95.1%.
+* Regression on v5b_180: PASS (6 of 6 comparisons identical to v5b's script-6 and 7b runs).

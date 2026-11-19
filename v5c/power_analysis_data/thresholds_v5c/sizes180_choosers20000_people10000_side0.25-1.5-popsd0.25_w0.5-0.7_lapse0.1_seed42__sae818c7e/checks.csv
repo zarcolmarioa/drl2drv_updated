@@ -1,0 +1,63 @@
+section,check,status,detail
+regression (v5b_180),"thresholds.csv (two-weight and side models; registered, reproduced, independent seed) equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/thresholds.csv (v5b): rates identical, other values within 1e-12",PASS,"16 of 16 rows matched, 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"precision_detection.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/precision_detection.csv (v5b): rates identical, other values within 1e-12",PASS,"8 of 8 rows matched, 10 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"side_sweep.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/side_sweep.csv (v5b): rates identical, other values within 1e-12",PASS,"216 of 216 rows matched, 8 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"order_check.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/order_check.csv (v5b): rates identical, other values within 1e-12",PASS,"24 of 24 rows matched, 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"detection_curve.csv (side model, v5b's chosen model) equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/detection_curve.csv (v5b): rates identical, other values within 1e-12",PASS,"60 of 60 rows matched, 6 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"thresholds_adjusted.csv (adjusted and side models: thresholds, null SD, detection at the planning weights) equals data/power_v5b/adjusted_model_v5b/side-vs-adjusted_seed42__sce30772f/thresholds_detection.csv (v5b): rates identical, other values within 1e-12",PASS,"8 of 8 rows matched, 9 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),the regression run passed every check,PASS,"data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624: 61 PASS, 0 FAIL"
+package 180,every non-image file matches checksums.sha256,PASS,61 of 61 match
+package 180,every image present matches checksums.sha256 (images are not needed here),PASS,"632 of 632 images present, 0 differ"
+package 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5c_180
+package 180,every file read here is listed in checksums.sha256,PASS,10 files
+package 180,design.json is for this block size,PASS,"block_size 180, analysed 180"
+package 180,the predictors' definition is the expected one,PASS,"pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice"
+lists 180,"A_o1: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"A_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o2: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"A_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o3: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'conflict': 36, 'together': 36}"
+lists 180,"A_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,"A_o4: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"A_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 4.4e-16
+lists 180,set A: the 4 orders hold the same items with identical predictors and sides,PASS,"180 items, 42 scenes"
+lists 180,"set A: the analysed rows equal items.csv's (item_id, predictors, sides, N_corpus, N_orig)",PASS,180 items in items.csv
+lists 180,"B_o1: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 3.3e-16
+lists 180,"B_o2: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 3.3e-16
+lists 180,"B_o3: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}"
+lists 180,"B_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 3.3e-16
+lists 180,"B_o4: 200 rows, analysed counts by type equal design.json",PASS,"180 analysed {'sat_only': 54, 'fog_only': 54, 'conflict': 36, 'together': 36}"
+lists 180,"B_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image",PASS,max |difference| 3.3e-16
+lists 180,set B: the 4 orders hold the same items with identical predictors and sides,PASS,"180 items, 42 scenes"
+lists 180,"set B: the analysed rows equal items.csv's (item_id, predictors, sides, N_corpus, N_orig)",PASS,180 items in items.csv
+inputs,the packages record the same imported scripts (scripts_sha256),PASS,"simulate_power_v4_n10_20.py 852f3b33eb34..., analyse_pair_capacity_v5c.py d12a04701188..."
+inputs,simulate_power_v4_n10_20.py exists,PASS,simulate_power_v4_n10_20.py
+inputs,simulate_power_v4_n10_20.py is the version that built the frozen packages (SHA-256 in their FROZEN.json),PASS,"on disk 852f3b33eb349153..., recorded 852f3b33eb349153..."
+inputs,analyse_pair_capacity_v5c.py exists,PASS,analyse_pair_capacity_v5c.py
+inputs,analyse_pair_capacity_v5c.py is the version that built the frozen packages (SHA-256 in their FROZEN.json),PASS,"on disk d12a047011880dc7..., recorded d12a047011880dc7..."
+estimator,fit_firth_batch_k with two predictors equals v4's fit_firth_batch,PASS,max |difference| 4.4e-16 over 200 people
+estimator,fit_firth_batch_k with three predictors (side model) equals v4's single-person fit_firth,PASS,max |difference| 1.6e-12 over 60 people
+estimator,respond() with no side bias equals v4's simulate_lapsing on the same random numbers,PASS,"50 people, identical responses"
+workers,"one worker gives the same result as 32 (task 180 trials, set A)",PASS,"thresholds (adjusted model included), order checks, side sweep and checks identical"
+thresholds 180,"set A: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 1.1e-16
+thresholds 180,set A: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 180,set A: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0106, largest |z| 1.96 (SE of a difference 0.0054-0.0056)"
+thresholds 180,set A: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 180,"set B: reproduction equals design.json (same inputs, same stream)",PASS,max |difference| 5.6e-17
+thresholds 180,set B: every random chooser's fit converged (reproduction),PASS,unconverged share 0.00000
+thresholds 180,set B: independent seed agrees with design.json within 4 SE,PASS,"max |difference| 0.0132, largest |z| 2.10 (SE of a difference 0.0056-0.0068)"
+thresholds 180,set B: every random chooser's fit converged (side model),PASS,unconverged share 0.00000
+thresholds 180,two-weight model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 1.4%
+thresholds 180,side model: the two sets' upper thresholds agree within 5%,PASS,largest relative difference 1.3%
+order 180,two-weight model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 3.9e-16 over 20,000 people x 8 lists"
+order 180,side model: the same answers per item give the same weight for every person in orders 1-4,PASS,"max |difference| 5.1e-16 over 20,000 people x 8 lists"
+order 180,independent random choosers on each order give thresholds within 4 SE of the registered ones,PASS,"max |difference| 0.0131, largest |z| 2.28"
+side sweep 180,every fit converged,PASS,largest unconverged share 0.00000
+side sweep 180,the side model's side estimate rises with the simulated side bias and is near 0 without one (estimator check; never a result),PASS,mean side estimate -1.28 at -1.5 to +1.27 at +1.5
+side sweep 180,"without side bias, random choosers fall beyond each threshold 2.5% of the time (within 3 SE + threshold error)",PASS,largest |rate - 0.025| 0.0032 (SE 0.0016)
+detection curve,at true weight 0 the share beyond each threshold is 0.025 within 3 SE + threshold error,PASS,largest |rate - 0.025| 0.0051 (SE 0.0016)
+detection curve,detection rises with the true weight (within Monte Carlo error),PASS,
+adjusted model,"every fit converged (random choosers and planning people, side and adjusted models)",PASS,largest unconverged share 0.00000
+adjusted model,the side-model thresholds of 7b's part 1 equal this script's side-model thresholds (the same random choosers),PASS,max |difference| 0.0e+00

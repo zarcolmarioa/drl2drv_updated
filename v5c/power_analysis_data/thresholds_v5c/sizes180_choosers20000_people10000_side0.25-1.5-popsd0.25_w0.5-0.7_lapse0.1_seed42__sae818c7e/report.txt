@@ -1,0 +1,679 @@
+THRESHOLDS AND THE PER-PERSON MODEL  (thresholds_v5c.py, v5c script 1; copy of v5b script 6)
+==========================================================================
+run       2026-11-19 22:47:39  (1.9 min, 32 worker process(es), one thread each)
+output    data/power_v5c/thresholds_v5c/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sae818c7e
+python    3.11.15, numpy 2.4.4, pandas 3.0.3
+packages  data/frozen_trial_lists_v5c/v5c_180
+
+0. IN PLAIN WORDS
+--------------------------------------------------------------------------
+* Checks: 62 of 62 pass.
+* The frozen thresholds in design.json were reproduced exactly for 2 of 2 block size x set lists (same rows, same random stream as build_trials_v5c.py / build_trials_v5b.py).
+* Thresholds (two-weight model; a person counts as using a feature when the weight is above the upper one; 2.5% of random choosers are):
+    180 trials, set A: saturation +0.410/-0.412, contrast +0.404/-0.410
+    180 trials, set B: saturation +0.416/-0.402, contrast +0.401/-0.400
+* Rule (fixed before the run, unchanged from v5): the two-weight model is recommended. (For information only: the registered model is the adjusted model, chosen in v5b; its thresholds are below.)
+    (a) side bias 0.5 logit, two-weight model: worst false-detection rate 0.0267 (limit 0.035; 180 B, saturation, left 0.5), worst weight shift 0.0397 (limit 0.05; 180 B, contrast, planning weights, left 0.5) -> does not hold.
+    (b) the side model's largest detection loss +0.0016 (limit 0.01; 180 A, contrast) -> holds.
+    For information, 180 trials alone: worst tail 0.0267, worst shift 0.0397 (180 B, contrast, planning weights, left 0.5) -> the rule would choose the two-weight model.
+* 180 trials, planning weights 0.5/0.7 and lapse 0.1: detected for saturation 56%, contrast 85% of people (mean of the two sets).
+* Run with 32 worker process(es); the result does not depend on that number (checked by rerunning one task in one process).
+* ADJUSTED MODEL (registered) thresholds, 2.5% per tail (the same 20,000 random choosers): 180 set A saturation +0.411/-0.421; 180 set A contrast +0.410/-0.413; 180 set B saturation +0.418/-0.410; 180 set B contrast +0.403/-0.402.
+* Adjusted model, detection at the planning weights 0.5/0.7, lapse 0.1 (ASSUMPTIONS): set A saturation 56.5%; set A contrast 83.4%; set B saturation 55.1%; set B contrast 83.8%.
+* Regression on v5b_180: PASS (6 of 6 comparisons identical to v5b's script-6 and 7b runs; data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624).
+* Compared with v5b's registered results at 180 trials: 127 of 192 values changed by more than 0.05 (comparison.csv; report section 11).
+    adjusted model: upper thresholds v5b A sat 0.298, A con 0.327, B sat 0.300, B con 0.323 -> v5c 0.411, 0.410, 0.418, 0.403; detection v5b 81.3%, 94.7%, 81.0%, 95.1% -> v5c 56.5%, 83.4%, 55.1%, 83.8%.
+    side model: upper thresholds v5b A sat 0.293, A con 0.318, B sat 0.295, B con 0.319 -> v5c 0.410, 0.405, 0.416, 0.401; detection v5b 82.9%, 95.8%, 82.3%, 95.7% -> v5c 57.0%, 84.3%, 55.4%, 85.2%.
+    two-weight model: upper thresholds v5b A sat 0.293, A con 0.318, B sat 0.296, B con 0.319 -> v5c 0.410, 0.404, 0.416, 0.401; detection v5b 82.8%, 95.7%, 82.1%, 95.7% -> v5c 57.0%, 84.5%, 55.4%, 85.2%.
+* 150 against 180 trials: not applicable (v5c has only the 180-trial package).
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. The planning
+weights (0.5 saturation, 0.7 contrast per corpus SD), the lapse rate (0.1), the side
+biases (0.25, 0.5, 0.75, 1, 1.5 logit, both directions) and their population SD (0.25) were
+chosen for planning; no image-choice data exist. Every number below
+that involves simulated people with a preference depends on them.
+
+1. WHAT WAS DONE
+--------------------------------------------------------------------------
+For each block size (180) and set (A, B), on the analysed trials of the frozen lists:
+  * thresholds from 20,000 random choosers (2.5% per tail): reproduced with build_trials_v5b's
+    own inputs and stream, rerun with an independent seed, and computed for
+    the side model (two weights + a side term, +1 when A is on the left), fitted
+    to the same random choosers as the registered thresholds;
+  * 10,000 people per cell at the planning weights (lapse 0.1) and 10,000 random
+    choosers, each with every side bias, fitted with both models on the same
+    random numbers;
+  * the order checks on orders 1-4;
+  * the rule below, then the detection curve for the chosen model.
+Fits: Firth logistic regression without intercept (v4's fit_firth_batch for
+two predictors; fit_firth_batch_k, checked against v4's fit_firth, for three).
+
+2. CHECKS
+--------------------------------------------------------------------------
+  PASS  [regression (v5b_180)] thresholds.csv (two-weight and side models; registered, reproduced, independent seed) equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/thresholds.csv (v5b): rates identical, other values within 1e-12
+          16 of 16 rows matched, 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] precision_detection.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/precision_detection.csv (v5b): rates identical, other values within 1e-12
+          8 of 8 rows matched, 10 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] side_sweep.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/side_sweep.csv (v5b): rates identical, other values within 1e-12
+          216 of 216 rows matched, 8 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] order_check.csv equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/order_check.csv (v5b): rates identical, other values within 1e-12
+          24 of 24 rows matched, 7 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] detection_curve.csv (side model, v5b's chosen model) equals data/power_v5b/thresholds_v5b/sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a/detection_curve.csv (v5b): rates identical, other values within 1e-12
+          60 of 60 rows matched, 6 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] thresholds_adjusted.csv (adjusted and side models: thresholds, null SD, detection at the planning weights) equals data/power_v5b/adjusted_model_v5b/side-vs-adjusted_seed42__sce30772f/thresholds_detection.csv (v5b): rates identical, other values within 1e-12
+          8 of 8 rows matched, 9 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] the regression run passed every check
+          data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624: 61 PASS, 0 FAIL
+  PASS  [package 180] every non-image file matches checksums.sha256
+          61 of 61 match
+  PASS  [package 180] every image present matches checksums.sha256 (images are not needed here)
+          632 of 632 images present, 0 differ
+  PASS  [package 180] FROZEN.json records the hash of this checksums.sha256
+          package v5c_180
+  PASS  [package 180] every file read here is listed in checksums.sha256
+          10 files
+  PASS  [package 180] design.json is for this block size
+          block_size 180, analysed 180
+  PASS  [package 180] the predictors' definition is the expected one
+          pred_sat = -d_sat / 39.182, pred_fog = d_fog / 9.348; positive = image A is the predicted choice
+  PASS  [lists 180] A_o1: 200 rows, analysed counts by type equal design.json
+          180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] A_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 4.4e-16
+  PASS  [lists 180] A_o2: 200 rows, analysed counts by type equal design.json
+          180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] A_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 4.4e-16
+  PASS  [lists 180] A_o3: 200 rows, analysed counts by type equal design.json
+          180 analysed {'fog_only': 54, 'sat_only': 54, 'conflict': 36, 'together': 36}
+  PASS  [lists 180] A_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 4.4e-16
+  PASS  [lists 180] A_o4: 200 rows, analysed counts by type equal design.json
+          180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] A_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 4.4e-16
+  PASS  [lists 180] set A: the 4 orders hold the same items with identical predictors and sides
+          180 items, 42 scenes
+  PASS  [lists 180] set A: the analysed rows equal items.csv's (item_id, predictors, sides, N_corpus, N_orig)
+          180 items in items.csv
+  PASS  [lists 180] B_o1: 200 rows, analysed counts by type equal design.json
+          180 analysed {'sat_only': 54, 'fog_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] B_o1: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 3.3e-16
+  PASS  [lists 180] B_o2: 200 rows, analysed counts by type equal design.json
+          180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] B_o2: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 3.3e-16
+  PASS  [lists 180] B_o3: 200 rows, analysed counts by type equal design.json
+          180 analysed {'fog_only': 54, 'sat_only': 54, 'together': 36, 'conflict': 36}
+  PASS  [lists 180] B_o3: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 3.3e-16
+  PASS  [lists 180] B_o4: 200 rows, analysed counts by type equal design.json
+          180 analysed {'sat_only': 54, 'fog_only': 54, 'conflict': 36, 'together': 36}
+  PASS  [lists 180] B_o4: predictors rebuild from d_sat, d_fog and a_is_left agrees with the left image
+          max |difference| 3.3e-16
+  PASS  [lists 180] set B: the 4 orders hold the same items with identical predictors and sides
+          180 items, 42 scenes
+  PASS  [lists 180] set B: the analysed rows equal items.csv's (item_id, predictors, sides, N_corpus, N_orig)
+          180 items in items.csv
+  PASS  [inputs] the packages record the same imported scripts (scripts_sha256)
+          simulate_power_v4_n10_20.py 852f3b33eb34..., analyse_pair_capacity_v5c.py d12a04701188...
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the version that built the frozen packages (SHA-256 in their FROZEN.json)
+          on disk 852f3b33eb349153..., recorded 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5c.py exists
+          analyse_pair_capacity_v5c.py
+  PASS  [inputs] analyse_pair_capacity_v5c.py is the version that built the frozen packages (SHA-256 in their FROZEN.json)
+          on disk d12a047011880dc7..., recorded d12a047011880dc7...
+  PASS  [estimator] fit_firth_batch_k with two predictors equals v4's fit_firth_batch
+          max |difference| 4.4e-16 over 200 people
+  PASS  [estimator] fit_firth_batch_k with three predictors (side model) equals v4's single-person fit_firth
+          max |difference| 1.6e-12 over 60 people
+  PASS  [estimator] respond() with no side bias equals v4's simulate_lapsing on the same random numbers
+          50 people, identical responses
+  PASS  [workers] one worker gives the same result as 32 (task 180 trials, set A)
+          thresholds (adjusted model included), order checks, side sweep and checks identical
+  PASS  [thresholds 180] set A: reproduction equals design.json (same inputs, same stream)
+          max |difference| 1.1e-16
+  PASS  [thresholds 180] set A: every random chooser's fit converged (reproduction)
+          unconverged share 0.00000
+  PASS  [thresholds 180] set A: independent seed agrees with design.json within 4 SE
+          max |difference| 0.0106, largest |z| 1.96 (SE of a difference 0.0054-0.0056)
+  PASS  [thresholds 180] set A: every random chooser's fit converged (side model)
+          unconverged share 0.00000
+  PASS  [thresholds 180] set B: reproduction equals design.json (same inputs, same stream)
+          max |difference| 5.6e-17
+  PASS  [thresholds 180] set B: every random chooser's fit converged (reproduction)
+          unconverged share 0.00000
+  PASS  [thresholds 180] set B: independent seed agrees with design.json within 4 SE
+          max |difference| 0.0132, largest |z| 2.10 (SE of a difference 0.0056-0.0068)
+  PASS  [thresholds 180] set B: every random chooser's fit converged (side model)
+          unconverged share 0.00000
+  PASS  [thresholds 180] two-weight model: the two sets' upper thresholds agree within 5%
+          largest relative difference 1.4%
+  PASS  [thresholds 180] side model: the two sets' upper thresholds agree within 5%
+          largest relative difference 1.3%
+  PASS  [order 180] two-weight model: the same answers per item give the same weight for every person in orders 1-4
+          max |difference| 3.9e-16 over 20,000 people x 8 lists
+  PASS  [order 180] side model: the same answers per item give the same weight for every person in orders 1-4
+          max |difference| 5.1e-16 over 20,000 people x 8 lists
+  PASS  [order 180] independent random choosers on each order give thresholds within 4 SE of the registered ones
+          max |difference| 0.0131, largest |z| 2.28
+  PASS  [side sweep 180] every fit converged
+          largest unconverged share 0.00000
+  PASS  [side sweep 180] the side model's side estimate rises with the simulated side bias and is near 0 without one (estimator check; never a result)
+          mean side estimate -1.28 at -1.5 to +1.27 at +1.5
+  PASS  [side sweep 180] without side bias, random choosers fall beyond each threshold 2.5% of the time (within 3 SE + threshold error)
+          largest |rate - 0.025| 0.0032 (SE 0.0016)
+  PASS  [detection curve] at true weight 0 the share beyond each threshold is 0.025 within 3 SE + threshold error
+          largest |rate - 0.025| 0.0051 (SE 0.0016)
+  PASS  [detection curve] detection rises with the true weight (within Monte Carlo error)
+  PASS  [adjusted model] every fit converged (random choosers and planning people, side and adjusted models)
+          largest unconverged share 0.00000
+  PASS  [adjusted model] the side-model thresholds of 7b's part 1 equal this script's side-model thresholds (the same random choosers)
+          max |difference| 0.0e+00
+
+  62 PASS, 0 FAIL
+
+3. THRESHOLDS
+--------------------------------------------------------------------------
+Registered = design.json. The reproduction uses the same inputs and random
+stream as build_trials_v5b.py; the independent seed is this script's own. The side
+model is fitted to the same random choosers as the registered thresholds, so the
+two models' thresholds differ only because the models differ (a random chooser's
+answers do not depend on the side).
+
+  180 trials per block
+  set      model                       source    feature  upper   lower  se_upper  null_sd
+    A two-weight     design.json (registered) saturation 0.4099 -0.4123    0.0041   0.2079
+    A two-weight     design.json (registered)   contrast 0.4043 -0.4096    0.0036   0.2061
+    A two-weight     reproduced (same stream) saturation 0.4099 -0.4123    0.0041   0.2079
+    A two-weight     reproduced (same stream)   contrast 0.4043 -0.4096    0.0036   0.2061
+    A two-weight             independent seed saturation 0.4065 -0.4017    0.0039   0.2058
+    A two-weight             independent seed   contrast 0.4027 -0.4026    0.0040   0.2065
+    A       side same choosers as design.json saturation 0.4102 -0.4121    0.0041   0.2080
+    A       side same choosers as design.json   contrast 0.4049 -0.4092    0.0039   0.2061
+    B two-weight     design.json (registered) saturation 0.4156 -0.4023    0.0042   0.2089
+    B two-weight     design.json (registered)   contrast 0.4013 -0.4001    0.0037   0.2039
+    B two-weight     reproduced (same stream) saturation 0.4156 -0.4023    0.0042   0.2089
+    B two-weight     reproduced (same stream)   contrast 0.4013 -0.4001    0.0037   0.2039
+    B two-weight             independent seed saturation 0.4023 -0.4043    0.0047   0.2075
+    B two-weight             independent seed   contrast 0.4103 -0.4003    0.0042   0.2073
+    B       side same choosers as design.json saturation 0.4157 -0.4023    0.0044   0.2089
+    B       side same choosers as design.json   contrast 0.4010 -0.3996    0.0038   0.2039
+
+  se_upper: Monte Carlo SE of the upper threshold, from the choosers' own weights.
+
+  Rounded to 3 decimals, as v4 registered them (two-weight model):
+    180 set A: saturation +0.410 / -0.412   contrast +0.404 / -0.410
+    180 set B: saturation +0.416 / -0.402   contrast +0.401 / -0.400
+
+4. THE TWO MODELS AT THE PLANNING WEIGHTS (no side bias, lapse 0.1)
+--------------------------------------------------------------------------
+null_sd: SD of random choosers' weights (precision without an effect);
+planning_sd: SD of the weights of people at the planning weights;
+detection: share above the upper threshold; opposite: below the lower;
+side_corr: correlation of the side term with that predictor in the list.
+[planning weights and lapse: ASSUMPTIONS]
+
+  180 trials per block
+  set    feature      model  upper  null_sd  planning_mean  planning_sd  detection  opposite  side_corr_with_predictor
+    A saturation two-weight 0.4099   0.2079         0.4509       0.2158     0.5699    0.0000                    0.0198
+    A   contrast two-weight 0.4043   0.2061         0.6227       0.2156     0.8450    0.0000                    0.0037
+    A saturation       side 0.4102   0.2080         0.4510       0.2159     0.5696    0.0000                    0.0198
+    A   contrast       side 0.4049   0.2061         0.6226       0.2156     0.8434    0.0000                    0.0037
+    B saturation two-weight 0.4156   0.2089         0.4476       0.2120     0.5538    0.0000                    0.0016
+    B   contrast two-weight 0.4013   0.2039         0.6253       0.2186     0.8525    0.0000                   -0.0130
+    B saturation       side 0.4157   0.2089         0.4476       0.2120     0.5539    0.0000                    0.0016
+    B   contrast       side 0.4010   0.2039         0.6254       0.2187     0.8525    0.0000                   -0.0130
+
+  Side model minus two-weight model:
+   size set    feature  detection  planning_sd  null_sd
+    180   A   contrast    -0.0016      -0.0000   0.0000
+    180   A saturation    -0.0003       0.0001   0.0001
+    180   B   contrast     0.0000       0.0001   0.0001
+    180   B saturation     0.0001      -0.0000   0.0000
+
+5. WHAT SIDE BIAS DOES TO EACH MODEL
+--------------------------------------------------------------------------
+Each person has a fixed side bias (logit; + = prefers the left image),
+lapse 0.1. Random choosers have no feature weights; planning-weight
+people have (0.5, 0.7). upper/lower: share beyond each threshold (for
+random choosers both are false detections; nominal 0.025). shift: the mean
+weight minus its value without side bias, same model, same random numbers.
+[side biases and planning weights: ASSUMPTIONS]
+
+  random choosers, 180 trials, set A  (two = two-weight model, sid = side model)
+                      two:sat:upper  two:sat:lower  two:sat:shift  two:con:upper  two:con:lower  two:con:shift  sid:sat:upper  sid:sat:lower  sid:sat:shift  sid:con:upper  sid:con:lower  sid:con:shift
+  side_bias                                                                                                                                                                                             
+  none                        0.024          0.022          0.000          0.023          0.023          0.000          0.023          0.022          0.000          0.023          0.023          0.000
+  left 0.25                   0.025          0.021          0.006          0.022          0.022          0.000          0.024          0.024          0.000          0.023          0.024         -0.000
+  right 0.25                  0.023          0.024         -0.004          0.024          0.022         -0.000          0.026          0.024          0.001          0.026          0.023          0.001
+  left 0.5                    0.025          0.017          0.011          0.021          0.019         -0.000          0.027          0.024          0.000          0.028          0.026         -0.002
+  right 0.5                   0.018          0.022         -0.008          0.021          0.021          0.000          0.028          0.025          0.003          0.026          0.026          0.001
+  left 0.75                   0.023          0.014          0.016          0.019          0.017         -0.000          0.032          0.029         -0.000          0.032          0.030         -0.003
+  right 0.75                  0.016          0.023         -0.016          0.019          0.020         -0.001          0.030          0.032          0.000          0.030          0.030          0.001
+  left 1                      0.021          0.011          0.020          0.017          0.015          0.000          0.036          0.035         -0.001          0.038          0.036         -0.003
+  right 1                     0.011          0.018         -0.020          0.016          0.015         -0.001          0.036          0.033          0.001          0.037          0.034          0.002
+  left 1.5                    0.012          0.005          0.029          0.008          0.007          0.002          0.051          0.054          0.000          0.052          0.055         -0.002
+  right 1.5                   0.006          0.010         -0.027          0.008          0.007         -0.004          0.052          0.050          0.001          0.051          0.052         -0.001
+  population SD 0.25          0.023          0.021          0.001          0.022          0.023         -0.001          0.024          0.023          0.001          0.024          0.025         -0.001
+
+  random choosers, 180 trials, set B  (two = two-weight model, sid = side model)
+                      two:sat:upper  two:sat:lower  two:sat:shift  two:con:upper  two:con:lower  two:con:shift  sid:sat:upper  sid:sat:lower  sid:sat:shift  sid:con:upper  sid:con:lower  sid:con:shift
+  side_bias                                                                                                                                                                                             
+  none                        0.022          0.027          0.000          0.024          0.024          0.000          0.022          0.027          0.000          0.024          0.024          0.000
+  left 0.25                   0.022          0.027          0.000          0.025          0.024         -0.002          0.024          0.029         -0.000          0.028          0.025          0.001
+  right 0.25                  0.026          0.026         -0.001          0.025          0.023          0.002          0.028          0.027         -0.000          0.026          0.025         -0.000
+  left 0.5                    0.023          0.027         -0.000          0.021          0.022         -0.003          0.028          0.034         -0.001          0.031          0.027          0.001
+  right 0.5                   0.022          0.023         -0.001          0.022          0.022          0.004          0.029          0.027          0.000          0.028          0.030         -0.001
+  left 0.75                   0.017          0.021          0.000          0.019          0.021         -0.006          0.029          0.037         -0.001          0.036          0.033          0.001
+  right 0.75                  0.019          0.019         -0.001          0.021          0.021          0.006          0.031          0.033          0.000          0.033          0.035         -0.000
+  left 1                      0.012          0.019          0.000          0.015          0.018         -0.008          0.033          0.041         -0.002          0.041          0.040          0.001
+  right 1                     0.017          0.018         -0.002          0.018          0.015          0.007          0.040          0.043         -0.000          0.037          0.038         -0.002
+  left 1.5                    0.007          0.008          0.001          0.006          0.009         -0.013          0.050          0.057         -0.003          0.055          0.056         -0.001
+  right 1.5                   0.010          0.009         -0.003          0.011          0.007          0.011          0.054          0.060         -0.001          0.057          0.053          0.000
+  population SD 0.25          0.022          0.025          0.001          0.024          0.023          0.001          0.023          0.026          0.001          0.026          0.025          0.001
+
+  people at the planning weights, 180 trials, set A  (two = two-weight model, sid = side model; upper = detection)
+                      two:sat:upper  two:sat:shift  two:con:upper  two:con:shift  sid:sat:upper  sid:sat:shift  sid:con:upper  sid:con:shift
+  side_bias                                                                                                                                 
+  none                        0.570          0.000          0.845          0.000          0.570          0.000          0.843          0.000
+  left 0.25                   0.565         -0.002          0.838         -0.010          0.563         -0.002          0.842         -0.003
+  right 0.25                  0.553         -0.011          0.832         -0.008          0.569         -0.001          0.838         -0.000
+  left 0.5                    0.545         -0.016          0.807         -0.036          0.559         -0.005          0.828         -0.009
+  right 0.5                   0.512         -0.036          0.807         -0.035          0.564         -0.006          0.830         -0.006
+  left 0.75                   0.492         -0.041          0.753         -0.077          0.542         -0.012          0.808         -0.019
+  right 0.75                  0.441         -0.071          0.752         -0.074          0.549         -0.014          0.817         -0.013
+  left 1                      0.428         -0.074          0.677         -0.125          0.525         -0.022          0.785         -0.031
+  right 1                     0.360         -0.112          0.675         -0.125          0.530         -0.023          0.790         -0.027
+  left 1.5                    0.265         -0.151          0.446         -0.238          0.472         -0.053          0.718         -0.068
+  right 1.5                   0.176         -0.203          0.434         -0.241          0.475         -0.052          0.718         -0.066
+  population SD 0.25          0.559         -0.006          0.836         -0.010          0.569         -0.001          0.840         -0.003
+
+  people at the planning weights, 180 trials, set B  (two = two-weight model, sid = side model; upper = detection)
+                      two:sat:upper  two:sat:shift  two:con:upper  two:con:shift  sid:sat:upper  sid:sat:shift  sid:con:upper  sid:con:shift
+  side_bias                                                                                                                                 
+  none                        0.554          0.000          0.853          0.000          0.554          0.000          0.853          0.000
+  left 0.25                   0.535         -0.005          0.841         -0.012          0.543         -0.000          0.848         -0.003
+  right 0.25                  0.533         -0.007          0.846         -0.007          0.544         -0.001          0.849         -0.001
+  left 0.5                    0.509         -0.024          0.810         -0.040          0.545         -0.004          0.835         -0.008
+  right 0.5                   0.502         -0.025          0.821         -0.031          0.540         -0.004          0.837         -0.006
+  left 0.75                   0.452         -0.054          0.752         -0.083          0.529         -0.012          0.819         -0.019
+  right 0.75                  0.453         -0.054          0.774         -0.070          0.532         -0.010          0.822         -0.016
+  left 1                      0.379         -0.089          0.672         -0.135          0.515         -0.020          0.793         -0.031
+  right 1                     0.376         -0.090          0.702         -0.121          0.517         -0.019          0.791         -0.031
+  left 1.5                    0.210         -0.171          0.429         -0.253          0.471         -0.049          0.720         -0.071
+  right 1.5                   0.202         -0.174          0.480         -0.232          0.475         -0.047          0.721         -0.069
+  population SD 0.25          0.535         -0.007          0.845         -0.009          0.543         -0.002          0.851         -0.002
+
+6. TRIAL ORDER
+--------------------------------------------------------------------------
+(i) The same random choosers answering every item the same way, fitted on
+each order's presentation sequence: the largest difference in any person's
+weight and in any threshold. (ii) Independent random choosers on each order:
+the largest difference from the registered thresholds.
+Why the thresholds cannot depend on the order: a random chooser's answers
+do not depend on a trial's position, and the fit does not depend on the
+order of the rows. Order could matter for real people (fatigue, practice
+within a block); that is a question for script 7, not for the thresholds.
+   size                 check      model  max_person_diff  max_threshold_diff
+    180  independent choosers two-weight              NaN            1.31e-02
+    180 same answers per item       side         5.13e-16            2.78e-16
+    180 same answers per item two-weight         3.89e-16            1.67e-16
+
+7. RECOMMENDATION
+--------------------------------------------------------------------------
+The rule, fixed before the run: register the side model only if
+  (a) at a side bias of 0.5 logit (either direction) the two-weight model's
+      false-detection rate exceeds 0.035 in either tail, or a weight moves
+      by more than 0.05; AND
+  (b) the side model loses at most 0.01 of detection at the planning
+      weights in every set, size and feature.
+  (a) worst tail rate 0.0267 (180 B, saturation, left 0.5); worst weight shift 0.0397
+      (180 B, contrast, planning weights, left 0.5)  ->  (a) does not hold
+  (b) largest detection loss +0.0016 (180 A, contrast)  ->  (b) HOLDS
+  For comparison, a population whose side biases vary between people (SD 0.25 logit,
+  an assumption): two-weight model, worst tail rate 0.0249, worst weight shift 0.0102.
+
+  Not part of the rule, for both models: worst false-detection rate of random
+  choosers (either tail, any set and size) at each fixed side bias (either
+  direction), and whether it is lopsided (one tail) or symmetric:
+    two-weight: 0: 0.027 (tails differ by up to 0.005); 0.25: 0.027 (tails differ by up to 0.005); 0.5: 0.027 (tails differ by up to 0.008)
+      0.75: 0.023 (tails differ by up to 0.009); 1: 0.021 (tails differ by up to 0.010); 1.5: 0.012 (tails differ by up to 0.008)
+    side: 0: 0.027 (tails differ by up to 0.005); 0.25: 0.029 (tails differ by up to 0.005); 0.5: 0.034 (tails differ by up to 0.006)
+      0.75: 0.037 (tails differ by up to 0.008); 1: 0.043 (tails differ by up to 0.008); 1.5: 0.060 (tails differ by up to 0.007)
+  A lopsided rise pushes weights in one direction (a bias); a symmetric rise
+  widens the spread (more detections in both directions). Under strong side
+  bias the side model's random choosers spread more, because one-sided answers
+  carry less information about the features.
+
+  RECOMMENDED: the two-weight model (current), with the thresholds frozen in
+  design.json. A side bias of the size tested does not move the two-weight model's
+  false-detection rates or weights beyond the rule's limits, because the side
+  of image A is nearly uncorrelated with the predictors in every list.
+
+8. DETECTION CURVE (two-weight model (current); and the side model, v5b's chosen model, for the comparison)
+--------------------------------------------------------------------------
+One feature at the true weight, the other 0, no side bias. detected: share
+above the upper threshold; opposite: share below the lower. 10,000 people per point.
+[true weights and lapse rates: ASSUMPTIONS for planning]
+
+  180 trials per block
+       model set  lapse  true_weight  con_detected  con_opposite  sat_detected  sat_opposite
+  two-weight   A  0.000        0.000         0.026         0.024         0.026         0.024
+  two-weight   A  0.000        0.200         0.159         0.002         0.157         0.002
+  two-weight   A  0.000        0.300         0.303         0.000         0.295         0.001
+  two-weight   A  0.000        0.400         0.484         0.000         0.477         0.000
+  two-weight   A  0.000        0.500         0.666         0.000         0.657         0.000
+  two-weight   A  0.000        0.600         0.813         0.000         0.802         0.000
+  two-weight   A  0.000        0.700         0.911         0.000         0.911         0.000
+  two-weight   A  0.000        0.800         0.967         0.000         0.962         0.000
+  two-weight   A  0.000        1.000         0.997         0.000         0.997         0.000
+  two-weight   A  0.000        1.200         1.000         0.000         1.000         0.000
+  two-weight   A  0.100        0.000         0.026         0.024         0.025         0.026
+  two-weight   A  0.100        0.200         0.138         0.002         0.136         0.002
+  two-weight   A  0.100        0.300         0.255         0.001         0.243         0.001
+  two-weight   A  0.100        0.400         0.400         0.000         0.401         0.000
+  two-weight   A  0.100        0.500         0.572         0.000         0.567         0.000
+  two-weight   A  0.100        0.600         0.728         0.000         0.720         0.000
+  two-weight   A  0.100        0.700         0.845         0.000         0.838         0.000
+  two-weight   A  0.100        0.800         0.924         0.000         0.922         0.000
+  two-weight   A  0.100        1.000         0.989         0.000         0.985         0.000
+  two-weight   A  0.100        1.200         0.998         0.000         0.999         0.000
+  two-weight   A  0.200        0.000         0.025         0.023         0.022         0.026
+  two-weight   A  0.200        0.200         0.116         0.003         0.122         0.003
+  two-weight   A  0.200        0.300         0.208         0.001         0.204         0.001
+  two-weight   A  0.200        0.400         0.338         0.000         0.325         0.001
+  two-weight   A  0.200        0.500         0.469         0.000         0.462         0.000
+  two-weight   A  0.200        0.600         0.615         0.000         0.607         0.000
+  two-weight   A  0.200        0.700         0.743         0.000         0.742         0.000
+  two-weight   A  0.200        0.800         0.853         0.000         0.836         0.000
+  two-weight   A  0.200        1.000         0.959         0.000         0.955         0.000
+  two-weight   A  0.200        1.200         0.991         0.000         0.991         0.000
+  two-weight   B  0.000        0.000         0.025         0.028         0.025         0.026
+  two-weight   B  0.000        0.200         0.162         0.001         0.151         0.002
+  two-weight   B  0.000        0.300         0.312         0.000         0.291         0.000
+  two-weight   B  0.000        0.400         0.494         0.000         0.471         0.000
+  two-weight   B  0.000        0.500         0.681         0.000         0.646         0.000
+  two-weight   B  0.000        0.600         0.825         0.000         0.794         0.000
+  two-weight   B  0.000        0.700         0.917         0.000         0.905         0.000
+  two-weight   B  0.000        0.800         0.963         0.000         0.965         0.000
+  two-weight   B  0.000        1.000         0.998         0.000         0.995         0.000
+  two-weight   B  0.000        1.200         1.000         0.000         1.000         0.000
+  two-weight   B  0.100        0.000         0.026         0.029         0.020         0.025
+  two-weight   B  0.100        0.200         0.141         0.003         0.125         0.002
+  two-weight   B  0.100        0.300         0.254         0.001         0.242         0.001
+  two-weight   B  0.100        0.400         0.414         0.000         0.390         0.000
+  two-weight   B  0.100        0.500         0.581         0.000         0.559         0.000
+  two-weight   B  0.100        0.600         0.734         0.000         0.716         0.000
+  two-weight   B  0.100        0.700         0.848         0.000         0.832         0.000
+  two-weight   B  0.100        0.800         0.922         0.000         0.915         0.000
+  two-weight   B  0.100        1.000         0.986         0.000         0.984         0.000
+  two-weight   B  0.100        1.200         0.999         0.000         0.998         0.000
+  two-weight   B  0.200        0.000         0.025         0.024         0.022         0.027
+  two-weight   B  0.200        0.200         0.116         0.003         0.110         0.003
+  two-weight   B  0.200        0.300         0.219         0.001         0.198         0.001
+  two-weight   B  0.200        0.400         0.348         0.000         0.320         0.000
+  two-weight   B  0.200        0.500         0.480         0.000         0.454         0.000
+  two-weight   B  0.200        0.600         0.626         0.000         0.601         0.000
+  two-weight   B  0.200        0.700         0.758         0.000         0.724         0.000
+  two-weight   B  0.200        0.800         0.853         0.000         0.832         0.000
+  two-weight   B  0.200        1.000         0.960         0.000         0.952         0.000
+  two-weight   B  0.200        1.200         0.993         0.000         0.988         0.000
+        side   A  0.000        0.000         0.027         0.024         0.026         0.025
+        side   A  0.000        0.200         0.159         0.002         0.157         0.002
+        side   A  0.000        0.300         0.303         0.000         0.295         0.001
+        side   A  0.000        0.400         0.483         0.000         0.476         0.000
+        side   A  0.000        0.500         0.667         0.000         0.656         0.000
+        side   A  0.000        0.600         0.813         0.000         0.802         0.000
+        side   A  0.000        0.700         0.911         0.000         0.910         0.000
+        side   A  0.000        0.800         0.967         0.000         0.961         0.000
+        side   A  0.000        1.000         0.997         0.000         0.997         0.000
+        side   A  0.000        1.200         1.000         0.000         1.000         0.000
+        side   A  0.100        0.000         0.026         0.025         0.025         0.026
+        side   A  0.100        0.200         0.138         0.002         0.136         0.002
+        side   A  0.100        0.300         0.254         0.001         0.242         0.001
+        side   A  0.100        0.400         0.402         0.000         0.401         0.000
+        side   A  0.100        0.500         0.572         0.000         0.566         0.000
+        side   A  0.100        0.600         0.728         0.000         0.719         0.000
+        side   A  0.100        0.700         0.846         0.000         0.838         0.000
+        side   A  0.100        0.800         0.924         0.000         0.922         0.000
+        side   A  0.100        1.000         0.989         0.000         0.985         0.000
+        side   A  0.100        1.200         0.998         0.000         0.999         0.000
+        side   A  0.200        0.000         0.025         0.023         0.023         0.026
+        side   A  0.200        0.200         0.115         0.003         0.121         0.003
+        side   A  0.200        0.300         0.208         0.001         0.203         0.001
+        side   A  0.200        0.400         0.338         0.000         0.325         0.001
+        side   A  0.200        0.500         0.469         0.000         0.463         0.000
+        side   A  0.200        0.600         0.616         0.000         0.605         0.000
+        side   A  0.200        0.700         0.745         0.000         0.740         0.000
+        side   A  0.200        0.800         0.853         0.000         0.835         0.000
+        side   A  0.200        1.000         0.959         0.000         0.955         0.000
+        side   A  0.200        1.200         0.991         0.000         0.991         0.000
+        side   B  0.000        0.000         0.025         0.028         0.025         0.026
+        side   B  0.000        0.200         0.162         0.001         0.152         0.002
+        side   B  0.000        0.300         0.312         0.000         0.292         0.000
+        side   B  0.000        0.400         0.494         0.000         0.470         0.000
+        side   B  0.000        0.500         0.682         0.000         0.646         0.000
+        side   B  0.000        0.600         0.825         0.000         0.793         0.000
+        side   B  0.000        0.700         0.917         0.000         0.905         0.000
+        side   B  0.000        0.800         0.963         0.000         0.965         0.000
+        side   B  0.000        1.000         0.998         0.000         0.996         0.000
+        side   B  0.000        1.200         1.000         0.000         1.000         0.000
+        side   B  0.100        0.000         0.026         0.030         0.020         0.025
+        side   B  0.100        0.200         0.140         0.003         0.126         0.002
+        side   B  0.100        0.300         0.255         0.001         0.241         0.001
+        side   B  0.100        0.400         0.416         0.000         0.389         0.000
+        side   B  0.100        0.500         0.582         0.000         0.559         0.000
+        side   B  0.100        0.600         0.734         0.000         0.715         0.000
+        side   B  0.100        0.700         0.850         0.000         0.832         0.000
+        side   B  0.100        0.800         0.923         0.000         0.914         0.000
+        side   B  0.100        1.000         0.986         0.000         0.984         0.000
+        side   B  0.100        1.200         0.999         0.000         0.998         0.000
+        side   B  0.200        0.000         0.025         0.025         0.022         0.027
+        side   B  0.200        0.200         0.116         0.003         0.110         0.003
+        side   B  0.200        0.300         0.220         0.001         0.198         0.001
+        side   B  0.200        0.400         0.348         0.000         0.320         0.000
+        side   B  0.200        0.500         0.481         0.000         0.453         0.000
+        side   B  0.200        0.600         0.626         0.000         0.601         0.000
+        side   B  0.200        0.700         0.758         0.000         0.724         0.000
+        side   B  0.200        0.800         0.853         0.000         0.833         0.000
+        side   B  0.200        1.000         0.960         0.000         0.952         0.000
+        side   B  0.200        1.200         0.993         0.000         0.988         0.000
+
+9. THE ADJUSTED MODEL (registered; script 7b's part 1, code copied into this script)
+--------------------------------------------------------------------------
+Side model plus two nuisance terms per block, N_corpus and N_orig (Firth, no intercept,
+item order). Thresholds: 2.5% per tail of the SAME 20,000 random choosers as design.json;
+detection: 10,000 people at the planning weights (0.5, 0.7) (lapse 0.1, no side bias) from 7b's stream, the
+same responses fitted with both models. The N terms' estimates are nuisance terms, never
+results. [planning weights and lapse: ASSUMPTIONS]
+   size set    model    feature  upper   lower  null_sd  planning_mean  planning_sd  detection  opposite
+    180   A     side saturation 0.4102 -0.4121   0.2080         0.4519       0.2153     0.5650    0.0001
+    180   A     side   contrast 0.4049 -0.4092   0.2061         0.6215       0.2181     0.8409    0.0000
+    180   A adjusted saturation 0.4110 -0.4212   0.2108         0.4514       0.2181     0.5647    0.0001
+    180   A adjusted   contrast 0.4103 -0.4133   0.2090         0.6224       0.2214     0.8338    0.0000
+    180   B     side saturation 0.4157 -0.4023   0.2089         0.4478       0.2155     0.5533    0.0001
+    180   B     side   contrast 0.4010 -0.3996   0.2039         0.6212       0.2191     0.8435    0.0000
+    180   B adjusted saturation 0.4177 -0.4097   0.2113         0.4484       0.2190     0.5509    0.0001
+    180   B adjusted   contrast 0.4035 -0.4022   0.2060         0.6213       0.2206     0.8383    0.0000
+
+  Detection, side model minus adjusted model (the cost of the N terms):
+   size set    feature    loss
+    180   A   contrast +0.0071
+    180   A saturation +0.0003
+    180   B   contrast +0.0052
+    180   B saturation +0.0024
+
+  Correlation of the N terms with the other columns (analysed trials, item order):
+    180 A: N_corpus with x_sat +0.084, x_con +0.008, side -0.087; N_orig with x_sat -0.032, x_con +0.150, side +0.010; N_corpus with N_orig +0.796
+    180 B: N_corpus with x_sat +0.076, x_con -0.000, side +0.068; N_orig with x_sat -0.031, x_con +0.134, side +0.062; N_corpus with N_orig +0.793
+
+10. REGRESSION ON v5b_180 (proves the copy did not change the method)
+--------------------------------------------------------------------------
+Regression run reused: data/power_v5c/thresholds_v5c/regression_v5b/sizes180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__sdd89e624
+  (the same script file, SHA-256 551a658b86703ad1...; 61 PASS, 0 FAIL)
+
+                                                                                                        what  rows_ref  rows_matched  columns_compared  max_abs_diff  max_abs_diff_rates  identical status
+                       thresholds.csv (two-weight and side models; registered, reproduced, independent seed)        16            16                 7       0.0e+00             0.0e+00       True   PASS
+                                                                                     precision_detection.csv         8             8                10       0.0e+00             0.0e+00       True   PASS
+                                                                                              side_sweep.csv       216           216                 8       0.0e+00             0.0e+00       True   PASS
+                                                                                             order_check.csv        24            24                 7       0.0e+00             0.0e+00       True   PASS
+                                                        detection_curve.csv (side model, v5b's chosen model)        60            60                 6       0.0e+00             0.0e+00       True   PASS
+  thresholds_adjusted.csv (adjusted and side models: thresholds, null SD, detection at the planning weights)         8             8                 9       0.0e+00             0.0e+00       True   PASS
+
+  Regression: PASS (a FAIL stops the v5c run).
+  Not compared: the rule's recommendation and the curve of the chosen model. v5b's rule used
+  both sizes (150 and 180) and chose the side model; on 180 trials alone it chooses the
+  two-weight model (v5b's report says so too). The side model's curve is computed and compared.
+
+11. COMPARISON WITH v5b'S REGISTERED RESULTS (180 trials per block)
+--------------------------------------------------------------------------
+v5b: script 6's run (sizes150-180_choosers20000_people10000_side0.25-1.5-popsd0.25_w0.5-0.7_lapse0.1_seed42__s02abb51a) and script 7b's run (side-vs-adjusted_seed42__sce30772f),
+rows of 180 trials (v5b_180). v5c: this run (v5c_180). change = v5c - v5b; changes larger than 0.05 are flagged.
+The same random choosers' streams and seeds are used, so the differences come from the lists.
+Comparisons of 150 with 180 trials: not applicable (there is no v5c package of 150 trials).
+
+  thresholds
+       model set    feature                  quantity     v5b     v5c  change           flag
+  two-weight   A saturation           upper threshold +0.2932 +0.4099 +0.1166 CHANGED > 0.05
+  two-weight   A saturation           lower threshold -0.2942 -0.4123 -0.1181 CHANGED > 0.05
+  two-weight   A saturation null SD (random choosers) +0.1492 +0.2079 +0.0587 CHANGED > 0.05
+  two-weight   A   contrast           upper threshold +0.3184 +0.4043 +0.0859 CHANGED > 0.05
+  two-weight   A   contrast           lower threshold -0.3287 -0.4096 -0.0810 CHANGED > 0.05
+  two-weight   A   contrast null SD (random choosers) +0.1647 +0.2061 +0.0414               
+  two-weight   B saturation           upper threshold +0.2959 +0.4156 +0.1196 CHANGED > 0.05
+  two-weight   B saturation           lower threshold -0.2882 -0.4023 -0.1141 CHANGED > 0.05
+  two-weight   B saturation null SD (random choosers) +0.1493 +0.2089 +0.0596 CHANGED > 0.05
+  two-weight   B   contrast           upper threshold +0.3186 +0.4013 +0.0827 CHANGED > 0.05
+  two-weight   B   contrast           lower threshold -0.3246 -0.4001 -0.0756 CHANGED > 0.05
+  two-weight   B   contrast null SD (random choosers) +0.1639 +0.2039 +0.0400               
+        side   A saturation           upper threshold +0.2925 +0.4102 +0.1177 CHANGED > 0.05
+        side   A saturation           lower threshold -0.2940 -0.4121 -0.1180 CHANGED > 0.05
+        side   A saturation null SD (random choosers) +0.1492 +0.2080 +0.0588 CHANGED > 0.05
+        side   A   contrast           upper threshold +0.3181 +0.4049 +0.0868 CHANGED > 0.05
+        side   A   contrast           lower threshold -0.3290 -0.4092 -0.0802 CHANGED > 0.05
+        side   A   contrast null SD (random choosers) +0.1647 +0.2061 +0.0414               
+        side   B saturation           upper threshold +0.2952 +0.4157 +0.1205 CHANGED > 0.05
+        side   B saturation           lower threshold -0.2885 -0.4023 -0.1138 CHANGED > 0.05
+        side   B saturation null SD (random choosers) +0.1493 +0.2089 +0.0596 CHANGED > 0.05
+        side   B   contrast           upper threshold +0.3187 +0.4010 +0.0823 CHANGED > 0.05
+        side   B   contrast           lower threshold -0.3244 -0.3996 -0.0752 CHANGED > 0.05
+        side   B   contrast null SD (random choosers) +0.1639 +0.2039 +0.0400               
+    adjusted   A saturation           upper threshold +0.2982 +0.4110 +0.1129 CHANGED > 0.05
+    adjusted   A saturation           lower threshold -0.3031 -0.4212 -0.1181 CHANGED > 0.05
+    adjusted   A saturation null SD (random choosers) +0.1519 +0.2108 +0.0588 CHANGED > 0.05
+    adjusted   A   contrast           upper threshold +0.3272 +0.4103 +0.0831 CHANGED > 0.05
+    adjusted   A   contrast           lower threshold -0.3313 -0.4133 -0.0820 CHANGED > 0.05
+    adjusted   A   contrast null SD (random choosers) +0.1672 +0.2090 +0.0418               
+    adjusted   B saturation           upper threshold +0.2999 +0.4177 +0.1178 CHANGED > 0.05
+    adjusted   B saturation           lower threshold -0.2957 -0.4097 -0.1140 CHANGED > 0.05
+    adjusted   B saturation null SD (random choosers) +0.1522 +0.2113 +0.0590 CHANGED > 0.05
+    adjusted   B   contrast           upper threshold +0.3235 +0.4035 +0.0800 CHANGED > 0.05
+    adjusted   B   contrast           lower threshold -0.3294 -0.4022 -0.0727 CHANGED > 0.05
+    adjusted   B   contrast null SD (random choosers) +0.1664 +0.2060 +0.0396               
+
+  detection (planning weights 0.5/0.7, lapse 0.1)
+       model set    feature                              quantity     v5b     v5c  change           flag
+  two-weight   A saturation     detection at the planning weights +0.8279 +0.5699 -0.2580 CHANGED > 0.05
+  two-weight   A saturation          opposite-direction detection +0.0000 +0.0000 +0.0000               
+  two-weight   A saturation SD of weights at the planning weights +0.1612 +0.2158 +0.0546 CHANGED > 0.05
+  two-weight   A   contrast     detection at the planning weights +0.9571 +0.8450 -0.1121 CHANGED > 0.05
+  two-weight   A   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+  two-weight   A   contrast SD of weights at the planning weights +0.1808 +0.2156 +0.0348               
+  two-weight   B saturation     detection at the planning weights +0.8214 +0.5538 -0.2676 CHANGED > 0.05
+  two-weight   B saturation          opposite-direction detection +0.0000 +0.0000 +0.0000               
+  two-weight   B saturation SD of weights at the planning weights +0.1578 +0.2120 +0.0542 CHANGED > 0.05
+  two-weight   B   contrast     detection at the planning weights +0.9570 +0.8525 -0.1045 CHANGED > 0.05
+  two-weight   B   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+  two-weight   B   contrast SD of weights at the planning weights +0.1844 +0.2186 +0.0342               
+        side   A saturation     detection at the planning weights +0.8290 +0.5696 -0.2594 CHANGED > 0.05
+        side   A saturation          opposite-direction detection +0.0000 +0.0000 +0.0000               
+        side   A saturation SD of weights at the planning weights +0.1613 +0.2159 +0.0546 CHANGED > 0.05
+        side   A   contrast     detection at the planning weights +0.9575 +0.8434 -0.1141 CHANGED > 0.05
+        side   A   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+        side   A   contrast SD of weights at the planning weights +0.1809 +0.2156 +0.0346               
+        side   B saturation     detection at the planning weights +0.8226 +0.5539 -0.2687 CHANGED > 0.05
+        side   B saturation          opposite-direction detection +0.0000 +0.0000 +0.0000               
+        side   B saturation SD of weights at the planning weights +0.1579 +0.2120 +0.0541 CHANGED > 0.05
+        side   B   contrast     detection at the planning weights +0.9571 +0.8525 -0.1046 CHANGED > 0.05
+        side   B   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+        side   B   contrast SD of weights at the planning weights +0.1845 +0.2187 +0.0342               
+    adjusted   A saturation     detection at the planning weights +0.8131 +0.5647 -0.2484 CHANGED > 0.05
+    adjusted   A saturation          opposite-direction detection +0.0000 +0.0001 +0.0001               
+    adjusted   A saturation SD of weights at the planning weights +0.1651 +0.2181 +0.0530 CHANGED > 0.05
+    adjusted   A   contrast     detection at the planning weights +0.9471 +0.8338 -0.1133 CHANGED > 0.05
+    adjusted   A   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+    adjusted   A   contrast SD of weights at the planning weights +0.1855 +0.2214 +0.0359               
+    adjusted   B saturation     detection at the planning weights +0.8103 +0.5509 -0.2594 CHANGED > 0.05
+    adjusted   B saturation          opposite-direction detection +0.0000 +0.0001 +0.0001               
+    adjusted   B saturation SD of weights at the planning weights +0.1625 +0.2190 +0.0565 CHANGED > 0.05
+    adjusted   B   contrast     detection at the planning weights +0.9510 +0.8383 -0.1127 CHANGED > 0.05
+    adjusted   B   contrast          opposite-direction detection +0.0000 +0.0000 +0.0000               
+    adjusted   B   contrast SD of weights at the planning weights +0.1850 +0.2206 +0.0356               
+
+  detection curve, side model (v5b's chosen model), lapse 0.1 (every lapse in comparison.csv)
+  set    feature  true_weight    v5b    v5c  change           flag
+    A   contrast       +0.000 +0.029 +0.026  -0.003               
+    A saturation       +0.000 +0.025 +0.025  +0.000               
+    A   contrast       +0.200 +0.197 +0.138  -0.059 CHANGED > 0.05
+    A saturation       +0.200 +0.230 +0.136  -0.094 CHANGED > 0.05
+    A   contrast       +0.300 +0.381 +0.254  -0.127 CHANGED > 0.05
+    A saturation       +0.300 +0.431 +0.242  -0.189 CHANGED > 0.05
+    A   contrast       +0.400 +0.579 +0.402  -0.177 CHANGED > 0.05
+    A saturation       +0.400 +0.660 +0.401  -0.259 CHANGED > 0.05
+    A   contrast       +0.500 +0.773 +0.572  -0.200 CHANGED > 0.05
+    A saturation       +0.500 +0.840 +0.566  -0.274 CHANGED > 0.05
+    A   contrast       +0.600 +0.895 +0.728  -0.167 CHANGED > 0.05
+    A saturation       +0.600 +0.937 +0.719  -0.218 CHANGED > 0.05
+    A   contrast       +0.700 +0.962 +0.846  -0.116 CHANGED > 0.05
+    A saturation       +0.700 +0.982 +0.838  -0.143 CHANGED > 0.05
+    A   contrast       +0.800 +0.985 +0.924  -0.061 CHANGED > 0.05
+    A saturation       +0.800 +0.995 +0.922  -0.073 CHANGED > 0.05
+    A   contrast       +1.000 +1.000 +0.989  -0.011               
+    A saturation       +1.000 +1.000 +0.985  -0.014               
+    A   contrast       +1.200 +1.000 +0.998  -0.002               
+    A saturation       +1.200 +1.000 +0.999  -0.001               
+    B   contrast       +0.000 +0.025 +0.026  +0.002               
+    B saturation       +0.000 +0.021 +0.020  -0.000               
+    B   contrast       +0.200 +0.196 +0.140  -0.056 CHANGED > 0.05
+    B saturation       +0.200 +0.218 +0.126  -0.092 CHANGED > 0.05
+    B   contrast       +0.300 +0.373 +0.255  -0.118 CHANGED > 0.05
+    B saturation       +0.300 +0.430 +0.241  -0.189 CHANGED > 0.05
+    B   contrast       +0.400 +0.585 +0.416  -0.169 CHANGED > 0.05
+    B saturation       +0.400 +0.657 +0.389  -0.269 CHANGED > 0.05
+    B   contrast       +0.500 +0.765 +0.582  -0.183 CHANGED > 0.05
+    B saturation       +0.500 +0.830 +0.559  -0.271 CHANGED > 0.05
+    B   contrast       +0.600 +0.894 +0.734  -0.160 CHANGED > 0.05
+    B saturation       +0.600 +0.938 +0.715  -0.222 CHANGED > 0.05
+    B   contrast       +0.700 +0.957 +0.850  -0.107 CHANGED > 0.05
+    B saturation       +0.700 +0.981 +0.832  -0.148 CHANGED > 0.05
+    B   contrast       +0.800 +0.987 +0.923  -0.064 CHANGED > 0.05
+    B saturation       +0.800 +0.996 +0.914  -0.082 CHANGED > 0.05
+    B   contrast       +1.000 +0.999 +0.986  -0.013               
+    B saturation       +1.000 +1.000 +0.984  -0.016               
+    B   contrast       +1.200 +1.000 +0.999  -0.001               
+    B saturation       +1.200 +1.000 +0.998  -0.002               
+
+  127 of 192 compared values changed by more than 0.05; the largest change is -0.284 (detected, side model, set B, saturation).
+  The rule: v5b (150 and 180 together) chose the side model; v5c (180 only) chooses the two-weight model. The registered model is the adjusted model
+  in both (chosen in v5b by the researcher, after script 7b); the rule is for information.
+
+12. FILES
+--------------------------------------------------------------------------
+  checks.csv
+  comparison.csv
+  detection_curve.csv
+  detection_curve.png
+  order_check.csv
+  precision_detection.csv
+  report.txt
+  run_meta.json
+  settings.json
+  side_sweep.csv
+  side_sweep.png
+  summary.txt
+  thresholds.csv
+  thresholds_adjusted.csv
