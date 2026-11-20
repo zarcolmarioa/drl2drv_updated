@@ -1,0 +1,18 @@
+C1 WITH A SHARED PREFERENCE AND UNEQUAL ATTENTION (simulate_c1_attention_v5c.py, REGRESSION ON v5b_180): IN PLAIN WORDS
+
+* Checks: 47 of 47 pass.
+* Situation: both groups share a preference towards the predicted image; the comparison group lapses more (report group 0.1). Registered check = both parts, Holm. Rates at report N = 20, comparison N 20 and 30, both sizes (ASSUMPTIONS).
+* no effect, shared +0.25/+0.35, comparison lapse 0.1 (false claims, either feature): before the check 0.043-0.049; after 0.041-0.046; catch-only check 0.042-0.046; the check fires in 0.045-0.048 (catch part 0.026-0.027, under-300-ms part 0.025-0.027).
+* no effect, shared +0.25/+0.35, comparison lapse 0.15 (false claims, either feature): before the check 0.070-0.072; after 0.025-0.030; catch-only check 0.056-0.057; the check fires in 0.526-0.600 (catch part 0.159-0.183, under-300-ms part 0.501-0.582).
+* no effect, shared +0.25/+0.35, comparison lapse 0.2 (false claims, either feature): before the check 0.108-0.110; after 0.004-0.006; catch-only check 0.062-0.063; the check fires in 0.908-0.955 (catch part 0.376-0.422, under-300-ms part 0.903-0.952).
+* no effect, shared +0.5/+0.7, comparison lapse 0.1 (false claims, either feature): before the check 0.043-0.047; after 0.042-0.044; catch-only check 0.042-0.044; the check fires in 0.041-0.049 (catch part 0.022-0.025, under-300-ms part 0.023-0.029).
+* no effect, shared +0.5/+0.7, comparison lapse 0.15 (false claims, either feature): before the check 0.110-0.112; after 0.032-0.042; catch-only check 0.083-0.085; the check fires in 0.532-0.612 (catch part 0.172-0.191, under-300-ms part 0.507-0.592).
+* no effect, shared +0.5/+0.7, comparison lapse 0.2 (false claims, either feature): before the check 0.191-0.192; after 0.004-0.009; catch-only check 0.103-0.109; the check fires in 0.918-0.960 (catch part 0.388-0.435, under-300-ms part 0.913-0.958).
+* planning, shared +0.25/+0.35, comparison lapse 0.1 (power, either feature): before the check 0.832-0.875; after 0.795-0.834; catch-only check 0.793-0.831; the check fires in 0.045-0.045 (catch part 0.026-0.028, under-300-ms part 0.023-0.025).
+* planning, shared +0.25/+0.35, comparison lapse 0.15 (power, either feature): before the check 0.871-0.912; after 0.360-0.411; catch-only check 0.696-0.721; the check fires in 0.521-0.603 (catch part 0.168-0.182, under-300-ms part 0.495-0.583).
+* planning, shared +0.25/+0.35, comparison lapse 0.2 (power, either feature): before the check 0.904-0.941; after 0.042-0.074; catch-only check 0.508-0.538; the check fires in 0.917-0.955 (catch part 0.395-0.454, under-300-ms part 0.912-0.953).
+* planning, shared +0.5/+0.7, comparison lapse 0.1 (power, either feature): before the check 0.787-0.839; after 0.753-0.802; catch-only check 0.755-0.800; the check fires in 0.041-0.043 (catch part 0.022-0.024, under-300-ms part 0.023-0.024).
+* planning, shared +0.5/+0.7, comparison lapse 0.15 (power, either feature): before the check 0.892-0.932; after 0.349-0.407; catch-only check 0.716-0.723; the check fires in 0.536-0.619 (catch part 0.167-0.197, under-300-ms part 0.512-0.600).
+* planning, shared +0.5/+0.7, comparison lapse 0.2 (power, either feature): before the check 0.940-0.961; after 0.041-0.076; catch-only check 0.544-0.581; the check fires in 0.915-0.956 (catch part 0.374-0.428, under-300-ms part 0.911-0.954).
+* As a sensitivity analysis (no gate), C1 is the 'before' rate; the gate's verdict beside it flags the share 'claim_flagged_by_gate' of studies (report section 5).
+* Regression on v5b_180: PASS (1 of 1 files reproduce v5b's c1_attention_v5b run at 180 trials: rates identical, other values within 1e-12).

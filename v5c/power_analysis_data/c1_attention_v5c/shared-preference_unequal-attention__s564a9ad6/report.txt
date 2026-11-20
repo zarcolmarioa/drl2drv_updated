@@ -1,0 +1,590 @@
+C1 WITH A SHARED PREFERENCE AND UNEQUAL ATTENTION  (simulate_c1_attention_v5c.py, v5c script 4; copy of v5b script 8b)
+==============================================================================
+run       2026-11-20 12:10:24  (2.0 min, 32 worker process(es), one thread each)
+output    data/power_v5c/c1_attention_v5c/shared-preference_unequal-attention__s564a9ad6
+python    3.11.15, numpy 2.4.4, scipy 1.17.1, pandas 3.0.3
+script 8  data/power_v5c/c1_v5c/sizes180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sb3711eee
+package   data/frozen_trial_lists_v5c/v5c_180
+Script numbers in this report are v5b's: script 6 = thresholds_v5c.py (v5c script 1), script 7 = simulate_power_paired_v5c_adj.py (v5c script 2), script 8 = simulate_c1_v5c.py (v5c script 3), script 8b = simulate_c1_attention_v5c.py (v5c script 4).
+
+0. IN PLAIN WORDS
+------------------------------------------------------------------------------
+* Checks: 48 of 48 pass.
+* Situation: both groups share a preference towards the predicted image; the comparison group lapses more (report group 0.1). Registered check = both parts, Holm. Rates at report N = 20, comparison N 20 and 30, both sizes (ASSUMPTIONS).
+* no effect, shared +0.25/+0.35, comparison lapse 0.1 (false claims, either feature): before the check 0.044-0.046; after 0.041-0.044; catch-only check 0.042-0.044; the check fires in 0.045-0.048 (catch part 0.026-0.027, under-300-ms part 0.025-0.027).
+* no effect, shared +0.25/+0.35, comparison lapse 0.15 (false claims, either feature): before the check 0.065-0.065; after 0.022-0.029; catch-only check 0.050-0.051; the check fires in 0.526-0.600 (catch part 0.159-0.183, under-300-ms part 0.501-0.582).
+* no effect, shared +0.25/+0.35, comparison lapse 0.2 (false claims, either feature): before the check 0.095-0.096; after 0.004-0.006; catch-only check 0.054-0.056; the check fires in 0.908-0.955 (catch part 0.376-0.422, under-300-ms part 0.903-0.952).
+* no effect, shared +0.5/+0.7, comparison lapse 0.1 (false claims, either feature): before the check 0.043-0.045; after 0.039-0.042; catch-only check 0.040-0.043; the check fires in 0.041-0.049 (catch part 0.022-0.025, under-300-ms part 0.023-0.029).
+* no effect, shared +0.5/+0.7, comparison lapse 0.15 (false claims, either feature): before the check 0.090-0.093; after 0.030-0.034; catch-only check 0.070-0.070; the check fires in 0.532-0.612 (catch part 0.172-0.191, under-300-ms part 0.507-0.592).
+* no effect, shared +0.5/+0.7, comparison lapse 0.2 (false claims, either feature): before the check 0.163-0.165; after 0.004-0.009; catch-only check 0.089-0.096; the check fires in 0.918-0.960 (catch part 0.388-0.435, under-300-ms part 0.913-0.958).
+* planning, shared +0.25/+0.35, comparison lapse 0.1 (power, either feature): before the check 0.794-0.852; after 0.759-0.813; catch-only check 0.757-0.810; the check fires in 0.045-0.045 (catch part 0.026-0.028, under-300-ms part 0.023-0.025).
+* planning, shared +0.25/+0.35, comparison lapse 0.15 (power, either feature): before the check 0.836-0.886; after 0.348-0.396; catch-only check 0.666-0.699; the check fires in 0.521-0.603 (catch part 0.168-0.182, under-300-ms part 0.495-0.583).
+* planning, shared +0.25/+0.35, comparison lapse 0.2 (power, either feature): before the check 0.871-0.914; after 0.041-0.070; catch-only check 0.494-0.519; the check fires in 0.917-0.955 (catch part 0.395-0.454, under-300-ms part 0.912-0.953).
+* planning, shared +0.5/+0.7, comparison lapse 0.1 (power, either feature): before the check 0.771-0.829; after 0.738-0.792; catch-only check 0.739-0.791; the check fires in 0.041-0.043 (catch part 0.022-0.024, under-300-ms part 0.023-0.024).
+* planning, shared +0.5/+0.7, comparison lapse 0.15 (power, either feature): before the check 0.858-0.908; after 0.339-0.391; catch-only check 0.688-0.704; the check fires in 0.536-0.619 (catch part 0.167-0.197, under-300-ms part 0.512-0.600).
+* planning, shared +0.5/+0.7, comparison lapse 0.2 (power, either feature): before the check 0.912-0.946; after 0.040-0.075; catch-only check 0.535-0.563; the check fires in 0.915-0.956 (catch part 0.374-0.428, under-300-ms part 0.911-0.954).
+* As a sensitivity analysis (no gate), C1 is the 'before' rate; the gate's verdict beside it flags the share 'claim_flagged_by_gate' of studies (report section 5).
+* Regression on v5b_180: PASS (1 of 1 files reproduce v5b's c1_attention_v5b run at 180 trials; data/power_v5c/c1_attention_v5c/regression_v5b/shared-preference_unequal-attention__see2da0be).
+* v5c against v5b (in brackets), 180 trials, report N 20, comparison groups of 20 / 30:
+    no effect, false claim before the check: shared +0.25/+0.35, comparison lapse 0.1: 0.04 (0.04) / 0.05 (0.05); shared +0.25/+0.35, comparison lapse 0.15: 0.07 (0.07) / 0.07 (0.07); shared +0.25/+0.35, comparison lapse 0.2: 0.10 (0.11) / 0.10 (0.11); shared +0.5/+0.7, comparison lapse 0.1: 0.04 (0.04) / 0.04 (0.05); shared +0.5/+0.7, comparison lapse 0.15: 0.09 (0.11) / 0.09 (0.11); shared +0.5/+0.7, comparison lapse 0.2: 0.16 (0.19) / 0.17 (0.19); shared none, comparison lapse 0.1: 0.05 (0.05) / 0.05 (0.05); shared none, comparison lapse 0.15: 0.05 (0.04) / 0.05 (0.05); shared none, comparison lapse 0.2: 0.05 (0.05) / 0.05 (0.05).
+    no effect, false claim after the check: shared +0.25/+0.35, comparison lapse 0.1: 0.04 (0.04) / 0.04 (0.05); shared +0.25/+0.35, comparison lapse 0.15: 0.03 (0.03) / 0.02 (0.03); shared +0.25/+0.35, comparison lapse 0.2: 0.01 (0.01) / 0.00 (0.00); shared +0.5/+0.7, comparison lapse 0.1: 0.04 (0.04) / 0.04 (0.04); shared +0.5/+0.7, comparison lapse 0.15: 0.03 (0.04) / 0.03 (0.03); shared +0.5/+0.7, comparison lapse 0.2: 0.01 (0.01) / 0.00 (0.00); shared none, comparison lapse 0.1: 0.05 (0.05) / 0.05 (0.04); shared none, comparison lapse 0.15: 0.02 (0.02) / 0.02 (0.02); shared none, comparison lapse 0.2: 0.01 (0.01) / 0.00 (0.00).
+    planning, power after the check: shared +0.25/+0.35, comparison lapse 0.1: 0.76 (0.79) / 0.81 (0.83); shared +0.25/+0.35, comparison lapse 0.15: 0.40 (0.41) / 0.35 (0.36); shared +0.25/+0.35, comparison lapse 0.2: 0.07 (0.07) / 0.04 (0.04); shared +0.5/+0.7, comparison lapse 0.1: 0.74 (0.75) / 0.79 (0.80); shared +0.5/+0.7, comparison lapse 0.15: 0.39 (0.41) / 0.34 (0.35); shared +0.5/+0.7, comparison lapse 0.2: 0.07 (0.08) / 0.04 (0.04); shared none, comparison lapse 0.1: 0.78 (0.82) / 0.82 (0.85); shared none, comparison lapse 0.15: 0.38 (0.40) / 0.34 (0.35); shared none, comparison lapse 0.2: 0.08 (0.08) / 0.04 (0.04).
+    no effect, the check fires: shared +0.25/+0.35, comparison lapse 0.1: 0.05 (0.05) / 0.04 (0.04); shared +0.25/+0.35, comparison lapse 0.15: 0.53 (0.53) / 0.60 (0.60); shared +0.25/+0.35, comparison lapse 0.2: 0.91 (0.91) / 0.96 (0.96); shared +0.5/+0.7, comparison lapse 0.1: 0.04 (0.04) / 0.05 (0.05); shared +0.5/+0.7, comparison lapse 0.15: 0.53 (0.53) / 0.61 (0.61); shared +0.5/+0.7, comparison lapse 0.2: 0.92 (0.92) / 0.96 (0.96); shared none, comparison lapse 0.1: 0.04 (0.04) / 0.04 (0.04); shared none, comparison lapse 0.15: 0.53 (0.53) / 0.63 (0.63); shared none, comparison lapse 0.2: 0.90 (0.90) / 0.95 (0.95).
+* 15 of 972 compared values changed by more than 0.05 (report section 14, comparison.csv). 150 against 180 trials: not applicable.
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES: the shared preference, the lapse
+rates, the response-time model and the effect are chosen for planning.
+
+1. WHAT WAS DONE
+------------------------------------------------------------------------------
+Script 8's pools, recruitment, C1 test and registered attention check (imported).
+Every person in both groups has a preference towards the predicted image in every
+block (shared, +0.25/+0.35 or +0.5/+0.7 per SD); script 8's strategy quarters as in its
+main rows; report group mean lapse 0.1, comparison group 0.1, 0.15, 0.2.
+Columns: raw_* = C1 before the check (per feature after Holm; either = at least one);
+gated_* = after the registered check (C1 counts only if the check does not fire);
+gate_fires (any part), gate_fires_catch / gate_fires_rt = the parts as Holm'd in the
+check; catch_alone_fires / rt_alone_fires = each part on its own at 0.05;
+catchonly_* = C1 under the catch-only check (information only); claim_flagged_by_gate
+= share of studies with a C1 claim that the gate would flag (the check as a
+sensitivity analysis; C1 is then the raw rate). shared 'none' rows are script 8's.
+
+2. CHECKS
+------------------------------------------------------------------------------
+  PASS  [regression (v5b_180)] c1_attention_shared.csv equals v5b's (c1_attention_v5b): rates identical, other values within 1e-12
+          396 of 396 rows matched, 44 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] the regression run passed every check
+          data/power_v5c/c1_attention_v5c/regression_v5b/shared-preference_unequal-attention__see2da0be: 47 PASS, 0 FAIL
+  PASS  [inputs] simulate_c1_v5c.py exists
+          simulate_c1_v5c.py
+  PASS  [inputs] simulate_c1_v5c.py is the version run for script 3 (SHA-256)
+          28c6a7dd5f833a72...
+  PASS  [inputs] simulate_power_paired_v5c_adj.py exists
+          simulate_power_paired_v5c_adj.py
+  PASS  [inputs] simulate_power_paired_v5c_adj.py is the expected version (SHA-256)
+          58a5640be3351ac8...
+  PASS  [inputs] scripts 3 and 2 (imported as scripts 8 and 7) run in this script's mode, on the matching package, with the same block size
+          modes v5c / v5c, package data/frozen_trial_lists_v5c/v5c_180
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py exists
+          simulate_c1_post_exclusion_v4.py
+  PASS  [inputs] simulate_c1_post_exclusion_v4.py is the expected version (SHA-256)
+          4d6c6fcee68d29c6...
+  PASS  [stimulus set] stimulus_manifest.csv and reference_stimulus_path.csv exist
+          data/stimulus_set_v5/7fd72262ba
+  PASS  [stimulus set] stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json)
+          69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2...
+  PASS  [stimulus set] corpus SDs equal the predictors' (39.182, 9.348)
+          median [66.448242, 26.908877], SD [39.181906, 9.348022]
+  PASS  [stimulus set] one original per scene (47 scenes)
+          47
+  PASS  [package v5c 180] every non-image file matches checksums.sha256
+          61 of 61 match
+  PASS  [package v5c 180] every image present matches checksums.sha256 (images are not needed here)
+          632 of 632 present, 0 differ
+  PASS  [package v5c 180] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5c 180] FROZEN.json records the hash of this checksums.sha256
+          package v5c_180
+  PASS  [package v5c 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 6.0e-06
+  PASS  [package v5c 180] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.4e-07 (corpus SD)
+  PASS  [package v5c 180] set A: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5c 180] set B: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5c 180] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 4.8e-07
+  PASS  [package v5c 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)
+          on disk 852f3b33eb349153..., expected 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5c.py exists
+          analyse_pair_capacity_v5c.py
+  PASS  [inputs] analyse_pair_capacity_v5c.py is the expected version (SHA-256, FROZEN.json)
+          on disk d12a047011880dc7..., expected d12a047011880dc7...
+  PASS  [inputs] explore_block_length_v5c.py exists
+          explore_block_length_v5c.py
+  PASS  [inputs] explore_block_length_v5c.py is the expected version (SHA-256)
+          on disk 133ab46e447e73de..., expected 133ab46e447e73de...
+  PASS  [inputs] thresholds_v5c.py exists
+          thresholds_v5c.py
+  PASS  [inputs] thresholds_v5c.py is the expected version (SHA-256)
+          on disk 551a658b86703ad1..., expected 551a658b86703ad1...
+  PASS  [package 180] assignment table: 64 slots for the comparison group
+          64 rows
+  PASS  [inputs] script 8's run exists (c1.csv, checks.csv, run_meta.json)
+          data/power_v5c/c1_v5c/sizes180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sb3711eee
+  PASS  [inputs] script 8's run passed every check
+          63 PASS, 0 FAIL
+  PASS  [inputs] script 8's run used the adjusted model
+          adjusted
+  PASS  [workers] one worker gives the same result as 32
+          180 trials, 'no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15'
+  PASS  [check] the gate recomputed from its two p-values (Holm) equals v4's _c1_gate in every study
+          396 cells
+  PASS  [reproduction] script 8's scenarios rerun here equal its c1.csv (every column, every N)
+          176 of 176 cells, 26 columns; max |difference| 0.0e+00
+  PASS  [results] no shared preference, equal attention: the catch-only check fires at about 0.05 (within 3 SE)
+          largest 0.0487
+  PASS  [results] the gate fires at least as often when the comparison group lapses more (0.2 against 0.15, every cell)
+
+  48 PASS, 0 FAIL
+
+3. NO EFFECT: FALSE CLAIMS BEFORE AND AFTER THE CHECK
+------------------------------------------------------------------------------
+   size      shared  lapse_comparison  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_either  catchonly_either  claim_flagged_by_gate
+    180 +0.25/+0.35             0.100            20        10         0.024           0.021       0.043         0.040             0.040                  0.003
+    180 +0.25/+0.35             0.100            20        15         0.024           0.020       0.042         0.040             0.040                  0.002
+    180 +0.25/+0.35             0.100            20        20         0.024           0.021       0.044         0.041             0.042                  0.004
+    180 +0.25/+0.35             0.100            30        10         0.022           0.022       0.042         0.040             0.040                  0.002
+    180 +0.25/+0.35             0.100            30        15         0.023           0.021       0.043         0.041             0.040                  0.002
+    180 +0.25/+0.35             0.100            30        20         0.025           0.022       0.046         0.044             0.044                  0.002
+    180 +0.25/+0.35             0.150            20        10         0.033           0.029       0.059         0.035             0.050                  0.023
+    180 +0.25/+0.35             0.150            20        15         0.033           0.029       0.060         0.031             0.050                  0.029
+    180 +0.25/+0.35             0.150            20        20         0.035           0.032       0.065         0.029             0.051                  0.036
+    180 +0.25/+0.35             0.150            30        10         0.040           0.038       0.074         0.041             0.061                  0.034
+    180 +0.25/+0.35             0.150            30        15         0.037           0.031       0.065         0.027             0.051                  0.038
+    180 +0.25/+0.35             0.150            30        20         0.037           0.031       0.065         0.022             0.050                  0.043
+    180 +0.25/+0.35             0.200            20        10         0.040           0.038       0.073         0.016             0.050                  0.057
+    180 +0.25/+0.35             0.200            20        15         0.044           0.049       0.089         0.009             0.057                  0.079
+    180 +0.25/+0.35             0.200            20        20         0.053           0.048       0.095         0.006             0.056                  0.089
+    180 +0.25/+0.35             0.200            30        10         0.045           0.043       0.083         0.014             0.058                  0.069
+    180 +0.25/+0.35             0.200            30        15         0.055           0.053       0.102         0.008             0.063                  0.093
+    180 +0.25/+0.35             0.200            30        20         0.051           0.051       0.096         0.004             0.054                  0.092
+    180   +0.5/+0.7             0.100            20        10         0.021           0.021       0.041         0.038             0.039                  0.002
+    180   +0.5/+0.7             0.100            20        15         0.021           0.020       0.040         0.038             0.038                  0.002
+    180   +0.5/+0.7             0.100            20        20         0.023           0.023       0.045         0.042             0.043                  0.003
+    180   +0.5/+0.7             0.100            30        10         0.023           0.020       0.041         0.039             0.040                  0.002
+    180   +0.5/+0.7             0.100            30        15         0.025           0.023       0.047         0.043             0.044                  0.004
+    180   +0.5/+0.7             0.100            30        20         0.023           0.021       0.043         0.039             0.040                  0.004
+    180   +0.5/+0.7             0.150            20        10         0.037           0.042       0.074         0.041             0.061                  0.033
+    180   +0.5/+0.7             0.150            20        15         0.041           0.045       0.081         0.038             0.064                  0.043
+    180   +0.5/+0.7             0.150            20        20         0.044           0.052       0.090         0.034             0.070                  0.056
+    180   +0.5/+0.7             0.150            30        10         0.039           0.045       0.080         0.039             0.063                  0.040
+    180   +0.5/+0.7             0.150            30        15         0.048           0.049       0.090         0.036             0.070                  0.054
+    180   +0.5/+0.7             0.150            30        20         0.049           0.051       0.093         0.030             0.070                  0.063
+    180   +0.5/+0.7             0.200            20        10         0.070           0.057       0.115         0.019             0.078                  0.096
+    180   +0.5/+0.7             0.200            20        15         0.094           0.077       0.153         0.012             0.093                  0.141
+    180   +0.5/+0.7             0.200            20        20         0.100           0.081       0.163         0.009             0.096                  0.154
+    180   +0.5/+0.7             0.200            30        10         0.078           0.062       0.130         0.015             0.083                  0.115
+    180   +0.5/+0.7             0.200            30        15         0.103           0.080       0.166         0.008             0.096                  0.158
+    180   +0.5/+0.7             0.200            30        20         0.107           0.078       0.165         0.004             0.089                  0.161
+    180        none             0.100            20        10         0.024           0.024       0.046         0.044             0.044                  0.003
+    180        none             0.100            20        15         0.025           0.025       0.047         0.045             0.045                  0.002
+    180        none             0.100            20        20         0.025           0.028       0.052         0.050             0.050                  0.002
+    180        none             0.100            30        10         0.027           0.024       0.050         0.048             0.048                  0.002
+    180        none             0.100            30        15         0.026           0.027       0.052         0.050             0.050                  0.002
+    180        none             0.100            30        20         0.024           0.026       0.048         0.046             0.046                  0.002
+    180        none             0.150            20        10         0.026           0.021       0.044         0.028             0.038                  0.017
+    180        none             0.150            20        15         0.029           0.017       0.045         0.025             0.036                  0.020
+    180        none             0.150            20        20         0.025           0.022       0.045         0.020             0.037                  0.026
+    180        none             0.150            30        10         0.027           0.024       0.049         0.029             0.040                  0.020
+    180        none             0.150            30        15         0.024           0.022       0.046         0.022             0.037                  0.023
+    180        none             0.150            30        20         0.026           0.024       0.049         0.018             0.039                  0.032
+    180        none             0.200            20        10         0.027           0.024       0.049         0.014             0.034                  0.035
+    180        none             0.200            20        15         0.029           0.026       0.053         0.009             0.033                  0.044
+    180        none             0.200            20        20         0.023           0.026       0.047         0.005             0.029                  0.042
+    180        none             0.200            30        10         0.024           0.023       0.045         0.010             0.030                  0.034
+    180        none             0.200            30        15         0.024           0.026       0.049         0.005             0.030                  0.044
+    180        none             0.200            30        20         0.024           0.023       0.045         0.002             0.024                  0.043
+
+4. PLANNING: POWER BEFORE AND AFTER THE CHECK
+------------------------------------------------------------------------------
+   size      shared  lapse_comparison  comparison_n  report_n  raw_contrast  raw_saturation  raw_either  gated_contrast  gated_saturation  gated_either  catchonly_either  claim_flagged_by_gate
+    180 +0.25/+0.35             0.100            20        10         0.482           0.436       0.589           0.460             0.416         0.562             0.560                  0.026
+    180 +0.25/+0.35             0.100            20        15         0.608           0.550       0.714           0.576             0.522         0.678             0.674                  0.036
+    180 +0.25/+0.35             0.100            20        20         0.691           0.635       0.794           0.659             0.607         0.759             0.757                  0.036
+    180 +0.25/+0.35             0.100            30        10         0.538           0.489       0.648           0.515             0.469         0.621             0.616                  0.027
+    180 +0.25/+0.35             0.100            30        15         0.670           0.625       0.771           0.637             0.592         0.732             0.727                  0.040
+    180 +0.25/+0.35             0.100            30        20         0.763           0.714       0.852           0.727             0.680         0.813             0.810                  0.039
+    180 +0.25/+0.35             0.150            20        10         0.523           0.484       0.633           0.325             0.298         0.394             0.537                  0.239
+    180 +0.25/+0.35             0.150            20        15         0.663           0.611       0.766           0.348             0.318         0.403             0.634                  0.363
+    180 +0.25/+0.35             0.150            20        20         0.733           0.686       0.836           0.344             0.323         0.396             0.666                  0.441
+    180 +0.25/+0.35             0.150            30        10         0.595           0.542       0.699           0.342             0.308         0.401             0.582                  0.298
+    180 +0.25/+0.35             0.150            30        15         0.729           0.674       0.824           0.343             0.311         0.388             0.660                  0.435
+    180 +0.25/+0.35             0.150            30        20         0.813           0.760       0.886           0.317             0.296         0.348             0.699                  0.538
+    180 +0.25/+0.35             0.200            20        10         0.591           0.560       0.707           0.125             0.119         0.153             0.502                  0.554
+    180 +0.25/+0.35             0.200            20        15         0.710           0.659       0.807           0.093             0.085         0.106             0.519                  0.701
+    180 +0.25/+0.35             0.200            20        20         0.782           0.731       0.871           0.062             0.056         0.070             0.519                  0.800
+    180 +0.25/+0.35             0.200            30        10         0.646           0.611       0.757           0.108             0.103         0.130             0.513                  0.627
+    180 +0.25/+0.35             0.200            30        15         0.773           0.727       0.859           0.054             0.051         0.061             0.518                  0.798
+    180 +0.25/+0.35             0.200            30        20         0.845           0.807       0.914           0.037             0.035         0.041             0.494                  0.874
+    180   +0.5/+0.7             0.100            20        10         0.451           0.438       0.571           0.430             0.418         0.545             0.544                  0.026
+    180   +0.5/+0.7             0.100            20        15         0.576           0.551       0.698           0.550             0.526         0.667             0.666                  0.031
+    180   +0.5/+0.7             0.100            20        20         0.654           0.610       0.771           0.625             0.583         0.738             0.739                  0.034
+    180   +0.5/+0.7             0.100            30        10         0.509           0.503       0.645           0.486             0.479         0.616             0.615                  0.029
+    180   +0.5/+0.7             0.100            30        15         0.641           0.609       0.756           0.608             0.579         0.719             0.720                  0.037
+    180   +0.5/+0.7             0.100            30        20         0.733           0.698       0.829           0.700             0.666         0.792             0.791                  0.037
+    180   +0.5/+0.7             0.150            20        10         0.561           0.526       0.672           0.334             0.315         0.404             0.568                  0.268
+    180   +0.5/+0.7             0.150            20        15         0.707           0.652       0.802           0.344             0.318         0.397             0.649                  0.405
+    180   +0.5/+0.7             0.150            20        20         0.764           0.717       0.858           0.342             0.322         0.391             0.688                  0.467
+    180   +0.5/+0.7             0.150            30        10         0.614           0.580       0.726           0.330             0.311         0.394             0.595                  0.331
+    180   +0.5/+0.7             0.150            30        15         0.761           0.720       0.854           0.337             0.320         0.382             0.678                  0.472
+    180   +0.5/+0.7             0.150            30        20         0.834           0.794       0.908           0.307             0.290         0.339             0.704                  0.569
+    180   +0.5/+0.7             0.200            20        10         0.643           0.593       0.745           0.134             0.121         0.158             0.525                  0.587
+    180   +0.5/+0.7             0.200            20        15         0.782           0.715       0.867           0.100             0.092         0.113             0.558                  0.754
+    180   +0.5/+0.7             0.200            20        20         0.842           0.784       0.912           0.067             0.063         0.075             0.563                  0.837
+    180   +0.5/+0.7             0.200            30        10         0.696           0.641       0.794           0.116             0.106         0.135             0.542                  0.659
+    180   +0.5/+0.7             0.200            30        15         0.829           0.787       0.904           0.061             0.058         0.068             0.548                  0.837
+    180   +0.5/+0.7             0.200            30        20         0.891           0.848       0.946           0.036             0.034         0.040             0.535                  0.906
+    180        none             0.100            20        10         0.515           0.493       0.633           0.493             0.470         0.604             0.606                  0.029
+    180        none             0.100            20        15         0.636           0.598       0.749           0.612             0.575         0.720             0.721                  0.029
+    180        none             0.100            20        20         0.709           0.672       0.816           0.681             0.646         0.783             0.786                  0.033
+    180        none             0.100            30        10         0.561           0.535       0.683           0.539             0.514         0.657             0.655                  0.027
+    180        none             0.100            30        15         0.705           0.676       0.809           0.676             0.648         0.775             0.773                  0.034
+    180        none             0.100            30        20         0.770           0.745       0.863           0.735             0.711         0.824             0.825                  0.039
+    180        none             0.150            20        10         0.517           0.480       0.627           0.324             0.299         0.391             0.541                  0.236
+    180        none             0.150            20        15         0.630           0.586       0.739           0.341             0.317         0.400             0.629                  0.339
+    180        none             0.150            20        20         0.720           0.656       0.816           0.338             0.302         0.381             0.674                  0.435
+    180        none             0.150            30        10         0.579           0.532       0.689           0.342             0.316         0.410             0.589                  0.279
+    180        none             0.150            30        15         0.702           0.654       0.800           0.334             0.311         0.378             0.662                  0.421
+    180        none             0.150            30        20         0.776           0.731       0.865           0.308             0.291         0.344             0.692                  0.520
+    180        none             0.200            20        10         0.520           0.491       0.629           0.124             0.113         0.147             0.450                  0.482
+    180        none             0.200            20        15         0.636           0.595       0.745           0.086             0.081         0.101             0.490                  0.644
+    180        none             0.200            20        20         0.730           0.674       0.828           0.069             0.063         0.077             0.520                  0.750
+    180        none             0.200            30        10         0.567           0.536       0.680           0.096             0.090         0.114             0.465                  0.566
+    180        none             0.200            30        15         0.715           0.671       0.813           0.056             0.052         0.063             0.503                  0.750
+    180        none             0.200            30        20         0.783           0.742       0.865           0.035             0.033         0.038             0.491                  0.828
+
+5. HOW OFTEN THE CHECK AND ITS PARTS FIRE
+------------------------------------------------------------------------------
+
+  no effect
+   size      shared  lapse_comparison  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  catch_alone_fires  rt_alone_fires
+    180 +0.25/+0.35             0.100            20        10       0.047             0.024          0.028              0.050           0.053
+    180 +0.25/+0.35             0.100            20        15       0.049             0.029          0.027              0.052           0.049
+    180 +0.25/+0.35             0.100            20        20       0.048             0.027          0.027              0.049           0.053
+    180 +0.25/+0.35             0.100            30        10       0.048             0.025          0.028              0.049           0.056
+    180 +0.25/+0.35             0.100            30        15       0.047             0.027          0.024              0.053           0.049
+    180 +0.25/+0.35             0.100            30        20       0.045             0.026          0.025              0.050           0.048
+    180 +0.25/+0.35             0.150            20        10       0.371             0.108          0.345              0.143           0.469
+    180 +0.25/+0.35             0.150            20        15       0.457             0.137          0.429              0.169           0.559
+    180 +0.25/+0.35             0.150            20        20       0.526             0.159          0.501              0.189           0.615
+    180 +0.25/+0.35             0.150            30        10       0.409             0.124          0.382              0.162           0.505
+    180 +0.25/+0.35             0.150            30        15       0.513             0.157          0.490              0.187           0.615
+    180 +0.25/+0.35             0.150            30        20       0.600             0.183          0.582              0.208           0.695
+    180 +0.25/+0.35             0.200            20        10       0.758             0.263          0.745              0.285           0.839
+    180 +0.25/+0.35             0.200            20        15       0.860             0.333          0.852              0.346           0.913
+    180 +0.25/+0.35             0.200            20        20       0.908             0.376          0.903              0.386           0.946
+    180 +0.25/+0.35             0.200            30        10       0.814             0.305          0.805              0.320           0.882
+    180 +0.25/+0.35             0.200            30        15       0.914             0.379          0.909              0.386           0.951
+    180 +0.25/+0.35             0.200            30        20       0.955             0.422          0.952              0.426           0.974
+    180   +0.5/+0.7             0.100            20        10       0.046             0.024          0.026              0.049           0.050
+    180   +0.5/+0.7             0.100            20        15       0.042             0.024          0.024              0.047           0.045
+    180   +0.5/+0.7             0.100            20        20       0.041             0.022          0.023              0.045           0.046
+    180   +0.5/+0.7             0.100            30        10       0.048             0.026          0.027              0.050           0.052
+    180   +0.5/+0.7             0.100            30        15       0.047             0.026          0.026              0.050           0.050
+    180   +0.5/+0.7             0.100            30        20       0.049             0.025          0.029              0.048           0.049
+    180   +0.5/+0.7             0.150            20        10       0.374             0.115          0.345              0.154           0.467
+    180   +0.5/+0.7             0.150            20        15       0.465             0.159          0.438              0.193           0.558
+    180   +0.5/+0.7             0.150            20        20       0.532             0.172          0.507              0.201           0.625
+    180   +0.5/+0.7             0.150            30        10       0.413             0.129          0.388              0.166           0.517
+    180   +0.5/+0.7             0.150            30        15       0.529             0.171          0.506              0.200           0.629
+    180   +0.5/+0.7             0.150            30        20       0.612             0.191          0.592              0.217           0.705
+    180   +0.5/+0.7             0.200            20        10       0.783             0.289          0.772              0.306           0.857
+    180   +0.5/+0.7             0.200            20        15       0.883             0.354          0.877              0.365           0.929
+    180   +0.5/+0.7             0.200            20        20       0.918             0.388          0.913              0.395           0.954
+    180   +0.5/+0.7             0.200            30        10       0.829             0.311          0.821              0.327           0.892
+    180   +0.5/+0.7             0.200            30        15       0.934             0.393          0.929              0.399           0.962
+    180   +0.5/+0.7             0.200            30        20       0.960             0.435          0.958              0.439           0.980
+    180        none             0.100            20        10       0.036             0.018          0.023              0.039           0.044
+    180        none             0.100            20        15       0.039             0.020          0.024              0.043           0.044
+    180        none             0.100            20        20       0.042             0.023          0.022              0.044           0.045
+    180        none             0.100            30        10       0.042             0.021          0.025              0.043           0.049
+    180        none             0.100            30        15       0.044             0.024          0.024              0.049           0.048
+    180        none             0.100            30        20       0.043             0.025          0.024              0.047           0.045
+    180        none             0.150            20        10       0.373             0.113          0.345              0.145           0.473
+    180        none             0.150            20        15       0.466             0.143          0.442              0.172           0.558
+    180        none             0.150            20        20       0.534             0.158          0.514              0.183           0.631
+    180        none             0.150            30        10       0.417             0.128          0.391              0.165           0.512
+    180        none             0.150            30        15       0.540             0.167          0.520              0.195           0.641
+    180        none             0.150            30        20       0.626             0.198          0.608              0.224           0.716
+    180        none             0.200            20        10       0.733             0.267          0.719              0.287           0.818
+    180        none             0.200            20        15       0.842             0.338          0.832              0.352           0.897
+    180        none             0.200            20        20       0.905             0.381          0.899              0.390           0.941
+    180        none             0.200            30        10       0.796             0.299          0.785              0.316           0.864
+    180        none             0.200            30        15       0.898             0.371          0.893              0.381           0.940
+    180        none             0.200            30        20       0.950             0.439          0.947              0.444           0.973
+
+  planning
+   size      shared  lapse_comparison  comparison_n  report_n  gate_fires  gate_fires_catch  gate_fires_rt  catch_alone_fires  rt_alone_fires
+    180 +0.25/+0.35             0.100            20        10       0.040             0.022          0.020              0.047           0.041
+    180 +0.25/+0.35             0.100            20        15       0.048             0.028          0.026              0.054           0.046
+    180 +0.25/+0.35             0.100            20        20       0.045             0.026          0.025              0.047           0.050
+    180 +0.25/+0.35             0.100            30        10       0.039             0.022          0.021              0.047           0.040
+    180 +0.25/+0.35             0.100            30        15       0.050             0.030          0.026              0.056           0.045
+    180 +0.25/+0.35             0.100            30        20       0.045             0.028          0.023              0.049           0.042
+    180 +0.25/+0.35             0.150            20        10       0.361             0.108          0.335              0.143           0.460
+    180 +0.25/+0.35             0.150            20        15       0.462             0.138          0.438              0.170           0.562
+    180 +0.25/+0.35             0.150            20        20       0.521             0.168          0.495              0.197           0.614
+    180 +0.25/+0.35             0.150            30        10       0.415             0.128          0.384              0.165           0.507
+    180 +0.25/+0.35             0.150            30        15       0.523             0.163          0.499              0.194           0.619
+    180 +0.25/+0.35             0.150            30        20       0.603             0.182          0.583              0.209           0.694
+    180 +0.25/+0.35             0.200            20        10       0.767             0.271          0.756              0.291           0.847
+    180 +0.25/+0.35             0.200            20        15       0.862             0.343          0.854              0.355           0.918
+    180 +0.25/+0.35             0.200            20        20       0.917             0.395          0.912              0.401           0.954
+    180 +0.25/+0.35             0.200            30        10       0.823             0.306          0.813              0.323           0.894
+    180 +0.25/+0.35             0.200            30        15       0.923             0.393          0.918              0.400           0.957
+    180 +0.25/+0.35             0.200            30        20       0.955             0.454          0.953              0.459           0.975
+    180   +0.5/+0.7             0.100            20        10       0.040             0.020          0.025              0.042           0.049
+    180   +0.5/+0.7             0.100            20        15       0.042             0.023          0.024              0.045           0.047
+    180   +0.5/+0.7             0.100            20        20       0.041             0.022          0.023              0.041           0.045
+    180   +0.5/+0.7             0.100            30        10       0.040             0.020          0.025              0.043           0.049
+    180   +0.5/+0.7             0.100            30        15       0.048             0.025          0.026              0.047           0.049
+    180   +0.5/+0.7             0.100            30        20       0.043             0.024          0.024              0.047           0.051
+    180   +0.5/+0.7             0.150            20        10       0.384             0.119          0.358              0.157           0.484
+    180   +0.5/+0.7             0.150            20        15       0.492             0.161          0.466              0.188           0.587
+    180   +0.5/+0.7             0.150            20        20       0.536             0.167          0.512              0.195           0.630
+    180   +0.5/+0.7             0.150            30        10       0.436             0.137          0.412              0.177           0.537
+    180   +0.5/+0.7             0.150            30        15       0.541             0.170          0.516              0.201           0.638
+    180   +0.5/+0.7             0.150            30        20       0.619             0.197          0.600              0.223           0.716
+    180   +0.5/+0.7             0.200            20        10       0.767             0.269          0.754              0.287           0.845
+    180   +0.5/+0.7             0.200            20        15       0.866             0.340          0.859              0.350           0.919
+    180   +0.5/+0.7             0.200            20        20       0.915             0.374          0.911              0.382           0.952
+    180   +0.5/+0.7             0.200            30        10       0.815             0.292          0.806              0.311           0.885
+    180   +0.5/+0.7             0.200            30        15       0.922             0.382          0.916              0.389           0.956
+    180   +0.5/+0.7             0.200            30        20       0.956             0.428          0.954              0.432           0.977
+    180        none             0.100            20        10       0.043             0.021          0.027              0.042           0.051
+    180        none             0.100            20        15       0.040             0.020          0.025              0.038           0.048
+    180        none             0.100            20        20       0.040             0.020          0.025              0.036           0.047
+    180        none             0.100            30        10       0.040             0.018          0.026              0.043           0.052
+    180        none             0.100            30        15       0.042             0.021          0.024              0.046           0.052
+    180        none             0.100            30        20       0.045             0.024          0.026              0.044           0.049
+    180        none             0.150            20        10       0.370             0.103          0.348              0.133           0.470
+    180        none             0.150            20        15       0.457             0.122          0.436              0.150           0.561
+    180        none             0.150            20        20       0.525             0.146          0.504              0.173           0.625
+    180        none             0.150            30        10       0.402             0.114          0.381              0.148           0.508
+    180        none             0.150            30        15       0.524             0.145          0.508              0.172           0.632
+    180        none             0.150            30        20       0.602             0.175          0.586              0.199           0.700
+    180        none             0.200            20        10       0.767             0.263          0.755              0.283           0.847
+    180        none             0.200            20        15       0.862             0.329          0.856              0.339           0.919
+    180        none             0.200            20        20       0.905             0.369          0.900              0.375           0.945
+    180        none             0.200            30        10       0.830             0.301          0.821              0.318           0.896
+    180        none             0.200            30        15       0.920             0.373          0.916              0.381           0.957
+    180        none             0.200            30        20       0.957             0.425          0.954              0.430           0.978
+
+6. POOL MEANS PER GROUP (lapse, catch failures of 10, share of responses under 300 ms,
+   exclusions, mean ordinary-block weights: the comparison group's shrink with its lapses)
+------------------------------------------------------------------------------
+   size                                                                     scenario      group  lapse_mean  catch_mean  fast_share  excluded_share  mean_weight_sat  mean_weight_con
+    180                                                                    no effect     report       0.097       0.612       0.043           0.047            0.000           -0.000
+    180                                                                    no effect comparison       0.097       0.621       0.043           0.048           -0.000           -0.001
+    180                                                                     planning     report       0.097       0.624       0.043           0.049            0.001            0.001
+    180                                                                     planning comparison       0.097       0.621       0.043           0.048           -0.000           -0.001
+    180                                     no effect, both groups share +0.25/+0.35     report       0.097       0.621       0.043           0.048            0.225            0.314
+    180                                     no effect, both groups share +0.25/+0.35 comparison       0.097       0.620       0.043           0.049            0.225            0.316
+    180                                       no effect, both groups share +0.5/+0.7     report       0.097       0.622       0.043           0.050            0.449            0.623
+    180                                       no effect, both groups share +0.5/+0.7 comparison       0.097       0.623       0.043           0.048            0.447            0.623
+    180                                no effect, lapse report 0.1 / comparison 0.15     report       0.097       0.625       0.043           0.048           -0.004            0.001
+    180                                no effect, lapse report 0.1 / comparison 0.15 comparison       0.140       0.814       0.060           0.117           -0.000            0.000
+    180                                 no effect, lapse report 0.1 / comparison 0.2     report       0.097       0.620       0.043           0.048           -0.001            0.001
+    180                                 no effect, lapse report 0.1 / comparison 0.2 comparison       0.177       0.965       0.075           0.206           -0.000           -0.001
+    180                                 planning, lapse report 0.1 / comparison 0.15     report       0.097       0.622       0.043           0.047            0.000           -0.000
+    180                                 planning, lapse report 0.1 / comparison 0.15 comparison       0.140       0.814       0.060           0.117           -0.000            0.000
+    180                                  planning, lapse report 0.1 / comparison 0.2     report       0.097       0.630       0.043           0.047           -0.000           -0.001
+    180                                  planning, lapse report 0.1 / comparison 0.2 comparison       0.177       0.965       0.075           0.206           -0.000           -0.001
+    180 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.619       0.043           0.050            0.225            0.316
+    180 no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.816       0.060           0.120            0.214            0.297
+    180  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.628       0.043           0.048            0.226            0.313
+    180  no effect, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.957       0.075           0.205            0.204            0.286
+    180   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.618       0.043           0.049            0.446            0.626
+    180   no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.818       0.060           0.118            0.423            0.594
+    180    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.623       0.043           0.048            0.448            0.624
+    180    no effect, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.205            0.404            0.564
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1     report       0.097       0.620       0.043           0.048            0.225            0.314
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.1 comparison       0.097       0.620       0.043           0.049            0.225            0.316
+    180  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15     report       0.097       0.621       0.043           0.049            0.225            0.313
+    180  planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.15 comparison       0.140       0.816       0.060           0.120            0.214            0.297
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2     report       0.097       0.621       0.043           0.048            0.224            0.315
+    180   planning, both groups share +0.25/+0.35, lapse report 0.1 / comparison 0.2 comparison       0.177       0.957       0.075           0.205            0.204            0.286
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1     report       0.097       0.626       0.043           0.048            0.448            0.624
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.1 comparison       0.097       0.623       0.043           0.048            0.447            0.623
+    180    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15     report       0.097       0.625       0.043           0.047            0.450            0.623
+    180    planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.15 comparison       0.139       0.818       0.060           0.118            0.423            0.594
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2     report       0.097       0.627       0.043           0.047            0.448            0.624
+    180     planning, both groups share +0.5/+0.7, lapse report 0.1 / comparison 0.2 comparison       0.177       0.955       0.075           0.205            0.404            0.564
+
+7. REGRESSION ON v5b_180 (proves the copy did not change the method)
+------------------------------------------------------------------------------
+Regression run reused: data/power_v5c/c1_attention_v5c/regression_v5b/shared-preference_unequal-attention__see2da0be
+  (the same script file, SHA-256 600d3880e187ea6f...; 47 PASS, 0 FAIL)
+every row of 180 trials (the slice reproduced is all of v5b's 180-trial cells): rates
+and shares identical, other values within 1e-12 (v5b's 'exact apart from the last
+bits'; another CPU or numerical library changes only the last bits of a floating-point sum).
+
+                     what  rows_ref  rows_matched  columns_compared  max_abs_diff  max_abs_diff_rates  identical status
+  c1_attention_shared.csv       396           396                44       0.0e+00             0.0e+00       True   PASS
+
+  Regression: PASS (a FAIL stops the v5c run).
+
+8. COMPARISON WITH v5b'S REGISTERED RESULTS (c1_attention_v5b, 180 trials per block)
+------------------------------------------------------------------------------
+v5b: shared-preference_unequal-attention__s8e477098, rows of 180 trials. v5c: this run. The same streams and
+seeds, so the differences come from the lists. Shares of studies at report N 10/15/20
+(every N in comparison.csv); '*': a change larger than 0.05. raw = C1 before the check,
+gated = after it (registered), gate_fires = the check fires; lapse_c = the comparison
+group's mean lapse (the report group's is 0.1). Comparisons of 150 with 180: not applicable.
+
+  NO EFFECT: false claims
+       shared  lapse_c  comparison_n      measure  v5b N10  v5b N15  v5b N20  v5c N10  v5c N15  v5c N20  max|chg| flag
+  +0.25/+0.35    0.100            20   raw_either    0.041    0.042    0.043    0.043    0.042    0.044     0.002     
+  +0.25/+0.35    0.100            20 gated_either    0.037    0.039    0.041    0.040    0.040    0.041     0.003     
+  +0.25/+0.35    0.100            20   gate_fires    0.047    0.049    0.048    0.047    0.049    0.048     0.000     
+  +0.25/+0.35    0.100            30   raw_either    0.042    0.043    0.049    0.042    0.043    0.046     0.002     
+  +0.25/+0.35    0.100            30 gated_either    0.041    0.040    0.046    0.040    0.041    0.044     0.002     
+  +0.25/+0.35    0.100            30   gate_fires    0.048    0.047    0.045    0.048    0.047    0.045     0.000     
+  +0.25/+0.35    0.150            20   raw_either    0.066    0.067    0.070    0.059    0.060    0.065     0.007     
+  +0.25/+0.35    0.150            20 gated_either    0.040    0.032    0.030    0.035    0.031    0.029     0.004     
+  +0.25/+0.35    0.150            20   gate_fires    0.371    0.457    0.526    0.371    0.457    0.526     0.000     
+  +0.25/+0.35    0.150            30   raw_either    0.077    0.072    0.072    0.074    0.065    0.065     0.007     
+  +0.25/+0.35    0.150            30 gated_either    0.041    0.029    0.025    0.041    0.027    0.022     0.003     
+  +0.25/+0.35    0.150            30   gate_fires    0.409    0.513    0.600    0.409    0.513    0.600     0.000     
+  +0.25/+0.35    0.200            20   raw_either    0.082    0.094    0.108    0.073    0.089    0.095     0.013     
+  +0.25/+0.35    0.200            20 gated_either    0.016    0.011    0.006    0.016    0.009    0.006     0.001     
+  +0.25/+0.35    0.200            20   gate_fires    0.758    0.860    0.908    0.758    0.860    0.908     0.000     
+  +0.25/+0.35    0.200            30   raw_either    0.095    0.110    0.110    0.083    0.102    0.096     0.015     
+  +0.25/+0.35    0.200            30 gated_either    0.016    0.007    0.004    0.014    0.008    0.004     0.001     
+  +0.25/+0.35    0.200            30   gate_fires    0.814    0.914    0.955    0.814    0.914    0.955     0.000     
+    +0.5/+0.7    0.100            20   raw_either    0.038    0.041    0.043    0.041    0.040    0.045     0.003     
+    +0.5/+0.7    0.100            20 gated_either    0.035    0.037    0.042    0.038    0.038    0.042     0.003     
+    +0.5/+0.7    0.100            20   gate_fires    0.046    0.042    0.041    0.046    0.042    0.041     0.000     
+    +0.5/+0.7    0.100            30   raw_either    0.044    0.045    0.047    0.041    0.047    0.043     0.004     
+    +0.5/+0.7    0.100            30 gated_either    0.040    0.042    0.044    0.039    0.043    0.039     0.004     
+    +0.5/+0.7    0.100            30   gate_fires    0.048    0.047    0.049    0.048    0.047    0.049     0.000     
+    +0.5/+0.7    0.150            20   raw_either    0.083    0.099    0.112    0.074    0.081    0.090     0.022     
+    +0.5/+0.7    0.150            20 gated_either    0.046    0.046    0.042    0.041    0.038    0.034     0.008     
+    +0.5/+0.7    0.150            20   gate_fires    0.374    0.465    0.532    0.374    0.465    0.532     0.000     
+    +0.5/+0.7    0.150            30   raw_either    0.100    0.106    0.110    0.080    0.090    0.093     0.020     
+    +0.5/+0.7    0.150            30 gated_either    0.049    0.040    0.032    0.039    0.036    0.030     0.010     
+    +0.5/+0.7    0.150            30   gate_fires    0.413    0.529    0.612    0.413    0.529    0.612     0.000     
+    +0.5/+0.7    0.200            20   raw_either    0.142    0.170    0.192    0.115    0.153    0.163     0.029     
+    +0.5/+0.7    0.200            20 gated_either    0.020    0.012    0.009    0.019    0.012    0.009     0.001     
+    +0.5/+0.7    0.200            20   gate_fires    0.783    0.883    0.918    0.783    0.883    0.918     0.000     
+    +0.5/+0.7    0.200            30   raw_either    0.153    0.189    0.191    0.130    0.166    0.165     0.026     
+    +0.5/+0.7    0.200            30 gated_either    0.017    0.007    0.004    0.015    0.008    0.004     0.002     
+    +0.5/+0.7    0.200            30   gate_fires    0.829    0.934    0.960    0.829    0.934    0.960     0.000     
+         none    0.100            20   raw_either    0.044    0.044    0.050    0.046    0.047    0.052     0.003     
+         none    0.100            20 gated_either    0.043    0.043    0.048    0.044    0.045    0.050     0.003     
+         none    0.100            20   gate_fires    0.036    0.039    0.042    0.036    0.039    0.042     0.000     
+         none    0.100            30   raw_either    0.044    0.049    0.046    0.050    0.052    0.048     0.006     
+         none    0.100            30 gated_either    0.043    0.046    0.045    0.048    0.050    0.046     0.005     
+         none    0.100            30   gate_fires    0.042    0.044    0.043    0.042    0.044    0.043     0.000     
+         none    0.150            20   raw_either    0.042    0.045    0.045    0.044    0.045    0.045     0.003     
+         none    0.150            20 gated_either    0.025    0.024    0.018    0.028    0.025    0.020     0.003     
+         none    0.150            20   gate_fires    0.373    0.466    0.534    0.373    0.466    0.534     0.000     
+         none    0.150            30   raw_either    0.043    0.050    0.046    0.049    0.046    0.049     0.006     
+         none    0.150            30 gated_either    0.025    0.021    0.015    0.029    0.022    0.018     0.005     
+         none    0.150            30   gate_fires    0.417    0.540    0.626    0.417    0.540    0.626     0.000     
+         none    0.200            20   raw_either    0.049    0.051    0.048    0.049    0.053    0.047     0.002     
+         none    0.200            20 gated_either    0.013    0.009    0.006    0.014    0.009    0.005     0.001     
+         none    0.200            20   gate_fires    0.733    0.842    0.905    0.733    0.842    0.905     0.000     
+         none    0.200            30   raw_either    0.046    0.053    0.048    0.045    0.049    0.045     0.004     
+         none    0.200            30 gated_either    0.008    0.005    0.002    0.010    0.005    0.002     0.002     
+         none    0.200            30   gate_fires    0.796    0.898    0.950    0.796    0.898    0.950     0.000     
+
+  PLANNING: power
+       shared  lapse_c  comparison_n          measure  v5b N10  v5b N15  v5b N20  v5c N10  v5c N15  v5c N20  max|chg| flag
+  +0.25/+0.35    0.100            20     gated_either    0.605    0.723    0.795    0.562    0.678    0.759     0.045     
+  +0.25/+0.35    0.100            20       gate_fires    0.040    0.048    0.045    0.040    0.048    0.045     0.000     
+  +0.25/+0.35    0.100            20   gated_contrast    0.488    0.612    0.689    0.460    0.576    0.659     0.035     
+  +0.25/+0.35    0.100            20 gated_saturation    0.489    0.615    0.691    0.416    0.522    0.607     0.092    *
+  +0.25/+0.35    0.100            30     gated_either    0.668    0.774    0.834    0.621    0.732    0.813     0.047     
+  +0.25/+0.35    0.100            30       gate_fires    0.039    0.050    0.045    0.039    0.050    0.045     0.000     
+  +0.25/+0.35    0.100            30   gated_contrast    0.544    0.668    0.744    0.515    0.637    0.727     0.032     
+  +0.25/+0.35    0.100            30 gated_saturation    0.553    0.675    0.746    0.469    0.592    0.680     0.084    *
+  +0.25/+0.35    0.150            20     gated_either    0.428    0.421    0.411    0.394    0.403    0.396     0.034     
+  +0.25/+0.35    0.150            20       gate_fires    0.361    0.462    0.521    0.361    0.462    0.521     0.000     
+  +0.25/+0.35    0.150            20   gated_contrast    0.350    0.365    0.359    0.325    0.348    0.344     0.025     
+  +0.25/+0.35    0.150            20 gated_saturation    0.345    0.359    0.358    0.298    0.318    0.323     0.047     
+  +0.25/+0.35    0.150            30     gated_either    0.428    0.405    0.360    0.401    0.388    0.348     0.027     
+  +0.25/+0.35    0.150            30       gate_fires    0.415    0.523    0.603    0.415    0.523    0.603     0.000     
+  +0.25/+0.35    0.150            30   gated_contrast    0.362    0.356    0.331    0.342    0.343    0.317     0.020     
+  +0.25/+0.35    0.150            30 gated_saturation    0.350    0.351    0.325    0.308    0.311    0.296     0.042     
+  +0.25/+0.35    0.200            20     gated_either    0.164    0.112    0.074    0.153    0.106    0.070     0.010     
+  +0.25/+0.35    0.200            20       gate_fires    0.767    0.862    0.917    0.767    0.862    0.917     0.000     
+  +0.25/+0.35    0.200            20   gated_contrast    0.140    0.100    0.067    0.125    0.093    0.062     0.015     
+  +0.25/+0.35    0.200            20 gated_saturation    0.133    0.093    0.063    0.119    0.085    0.056     0.014     
+  +0.25/+0.35    0.200            30     gated_either    0.136    0.065    0.042    0.130    0.061    0.041     0.006     
+  +0.25/+0.35    0.200            30       gate_fires    0.823    0.923    0.955    0.823    0.923    0.955     0.000     
+  +0.25/+0.35    0.200            30   gated_contrast    0.116    0.058    0.039    0.108    0.054    0.037     0.008     
+  +0.25/+0.35    0.200            30 gated_saturation    0.111    0.055    0.038    0.103    0.051    0.035     0.008     
+    +0.5/+0.7    0.100            20     gated_either    0.575    0.691    0.753    0.545    0.667    0.738     0.030     
+    +0.5/+0.7    0.100            20       gate_fires    0.040    0.042    0.041    0.040    0.042    0.041     0.000     
+    +0.5/+0.7    0.100            20   gated_contrast    0.458    0.576    0.636    0.430    0.550    0.625     0.028     
+    +0.5/+0.7    0.100            20 gated_saturation    0.461    0.567    0.627    0.418    0.526    0.583     0.044     
+    +0.5/+0.7    0.100            30     gated_either    0.627    0.741    0.802    0.616    0.719    0.792     0.022     
+    +0.5/+0.7    0.100            30       gate_fires    0.040    0.048    0.043    0.040    0.048    0.043     0.000     
+    +0.5/+0.7    0.100            30   gated_contrast    0.509    0.633    0.709    0.486    0.608    0.700     0.024     
+    +0.5/+0.7    0.100            30 gated_saturation    0.509    0.629    0.700    0.479    0.579    0.666     0.051    *
+    +0.5/+0.7    0.150            20     gated_either    0.423    0.411    0.407    0.404    0.397    0.391     0.019     
+    +0.5/+0.7    0.150            20       gate_fires    0.384    0.492    0.536    0.384    0.492    0.536     0.000     
+    +0.5/+0.7    0.150            20   gated_contrast    0.346    0.363    0.361    0.334    0.344    0.342     0.019     
+    +0.5/+0.7    0.150            20 gated_saturation    0.351    0.351    0.358    0.315    0.318    0.322     0.037     
+    +0.5/+0.7    0.150            30     gated_either    0.409    0.394    0.349    0.394    0.382    0.339     0.015     
+    +0.5/+0.7    0.150            30       gate_fires    0.436    0.541    0.619    0.436    0.541    0.619     0.000     
+    +0.5/+0.7    0.150            30   gated_contrast    0.347    0.350    0.318    0.330    0.337    0.307     0.016     
+    +0.5/+0.7    0.150            30 gated_saturation    0.341    0.350    0.314    0.311    0.320    0.290     0.030     
+    +0.5/+0.7    0.200            20     gated_either    0.169    0.115    0.076    0.158    0.113    0.075     0.011     
+    +0.5/+0.7    0.200            20       gate_fires    0.767    0.866    0.915    0.767    0.866    0.915     0.000     
+    +0.5/+0.7    0.200            20   gated_contrast    0.142    0.104    0.068    0.134    0.100    0.067     0.009     
+    +0.5/+0.7    0.200            20 gated_saturation    0.139    0.101    0.068    0.121    0.092    0.063     0.018     
+    +0.5/+0.7    0.200            30     gated_either    0.141    0.069    0.041    0.135    0.068    0.040     0.006     
+    +0.5/+0.7    0.200            30       gate_fires    0.815    0.922    0.956    0.815    0.922    0.956     0.000     
+    +0.5/+0.7    0.200            30   gated_contrast    0.120    0.062    0.038    0.116    0.061    0.036     0.004     
+    +0.5/+0.7    0.200            30 gated_saturation    0.116    0.061    0.037    0.106    0.058    0.034     0.010     
+         none    0.100            20     gated_either    0.644    0.752    0.818    0.604    0.720    0.783     0.040     
+         none    0.100            20       gate_fires    0.043    0.040    0.040    0.043    0.040    0.040     0.000     
+         none    0.100            20   gated_contrast    0.521    0.639    0.717    0.493    0.612    0.681     0.036     
+         none    0.100            20 gated_saturation    0.540    0.645    0.717    0.470    0.575    0.646     0.071    *
+         none    0.100            30     gated_either    0.687    0.807    0.853    0.657    0.775    0.824     0.032     
+         none    0.100            30       gate_fires    0.040    0.042    0.045    0.040    0.042    0.045     0.000     
+         none    0.100            30   gated_contrast    0.565    0.703    0.765    0.539    0.676    0.735     0.031     
+         none    0.100            30 gated_saturation    0.585    0.718    0.780    0.514    0.648    0.711     0.072    *
+         none    0.150            20     gated_either    0.413    0.422    0.401    0.391    0.400    0.381     0.023     
+         none    0.150            20       gate_fires    0.370    0.457    0.525    0.370    0.457    0.525     0.000     
+         none    0.150            20   gated_contrast    0.343    0.358    0.351    0.324    0.341    0.338     0.019     
+         none    0.150            20 gated_saturation    0.342    0.363    0.348    0.299    0.317    0.302     0.046     
+         none    0.150            30     gated_either    0.427    0.394    0.353    0.410    0.378    0.344     0.017     
+         none    0.150            30       gate_fires    0.402    0.524    0.602    0.402    0.524    0.602     0.000     
+         none    0.150            30   gated_contrast    0.358    0.349    0.319    0.342    0.334    0.308     0.016     
+         none    0.150            30 gated_saturation    0.358    0.340    0.319    0.316    0.311    0.291     0.043     
+         none    0.200            20     gated_either    0.158    0.110    0.083    0.147    0.101    0.077     0.011     
+         none    0.200            20       gate_fires    0.767    0.862    0.905    0.767    0.862    0.905     0.000     
+         none    0.200            20   gated_contrast    0.129    0.095    0.073    0.124    0.086    0.069     0.009     
+         none    0.200            20 gated_saturation    0.134    0.094    0.073    0.113    0.081    0.063     0.021     
+         none    0.200            30     gated_either    0.120    0.068    0.039    0.114    0.063    0.038     0.006     
+         none    0.200            30       gate_fires    0.830    0.920    0.957    0.830    0.920    0.957     0.000     
+         none    0.200            30   gated_contrast    0.101    0.060    0.035    0.096    0.056    0.035     0.005     
+         none    0.200            30 gated_saturation    0.100    0.059    0.036    0.090    0.052    0.033     0.010     
+
+  In all: 15 of 972 compared values (report N = 10/15/20) changed by more than 0.05.
+
+9. FILES
+------------------------------------------------------------------------------
+  c1_attention_shared.csv
+  c1_attention_shared.png
+  checks.csv
+  comparison.csv
+  report.txt
+  run_meta.json
+  settings.json
+  summary.txt

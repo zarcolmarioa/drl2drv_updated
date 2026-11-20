@@ -1,0 +1,90 @@
+{
+  "PROJECT_ROOT": null,
+  "SCRIPT8": "simulate_c1_v5c.py",
+  "EXPECTED_SHA256": {
+    "simulate_c1_v5c.py": "28c6a7dd5f833a728d9a1209d116e531f0189a0e57156dd439e5f84f82a88e9c"
+  },
+  "C1_RUN_DIR": "data/power_v5c/c1_v5c/regression_v5b/sizes180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sf93ddddc",
+  "OUTPUT_ROOT": "data/power_v5c/c1_attention_v5c/regression_v5b",
+  "MAKE_FIGURES": true,
+  "FIG_DPI": 150,
+  "N_WORKERS": null,
+  "CHECK_ONE_WORKER": true,
+  "SHARED": [
+    [
+      0.25,
+      0.35
+    ],
+    [
+      0.5,
+      0.7
+    ]
+  ],
+  "LAPSE_REPORT": 0.1,
+  "LAPSE_COMPARISON": [
+    0.1,
+    0.15,
+    0.2
+  ],
+  "EFFECTS_RUN": [
+    "no effect",
+    "planning"
+  ],
+  "CONTEXT_ROWS": [
+    "no effect",
+    "planning",
+    "no effect, both groups share +0.25/+0.35",
+    "no effect, both groups share +0.5/+0.7",
+    "no effect, lapse report 0.1 / comparison 0.15",
+    "no effect, lapse report 0.1 / comparison 0.2",
+    "planning, lapse report 0.1 / comparison 0.15",
+    "planning, lapse report 0.1 / comparison 0.2"
+  ],
+  "CATCH_ONLY_ALPHA": 0.05,
+  "TABLE_REPORT_N": [
+    10,
+    15,
+    20
+  ],
+  "RATE_TOL": 0.0,
+  "MODE": "regression",
+  "BLOCK_SIZES": [
+    180
+  ],
+  "REF_RUN": "data/power_v5b/c1_attention_v5b/shared-preference_unequal-attention__s8e477098",
+  "COMPARE_FLAG": 0.05,
+  "REGRESSION_ROOT": "data/power_v5c/c1_attention_v5c/regression_v5b",
+  "REGRESSION_FILES": [
+    [
+      "c1_attention_shared.csv",
+      [
+        "size",
+        "scenario",
+        "report_n",
+        "comparison_n"
+      ]
+    ]
+  ],
+  "REGRESSION_EXACT_COLS": [
+    "raw_saturation",
+    "raw_contrast",
+    "raw_either",
+    "gated_saturation",
+    "gated_contrast",
+    "gated_either",
+    "gate_fires",
+    "gate_fires_catch",
+    "gate_fires_rt",
+    "secondary_saturation",
+    "secondary_contrast",
+    "secondary_either",
+    "catch_alone_fires",
+    "rt_alone_fires",
+    "catchonly_saturation",
+    "catchonly_contrast",
+    "catchonly_either",
+    "claim_flagged_by_gate"
+  ],
+  "REGRESSION_TOL": 1e-12,
+  "REGRESSION_RUN_FIRST": true
+}
