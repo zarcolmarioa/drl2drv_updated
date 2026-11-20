@@ -1,0 +1,15 @@
+effect,nuisance,label,recovery,recovery_se,rank
+half shift,fatigue,fatigue building over the session,0.06795,0.003936058749502116,1
+half shift,dull,a shared preference for the duller image,0.06241666666666666,0.004801247096766686,2
+half shift,taste,taste that differs between the two episodes,0.03729999999999999,0.0035926256504578208,3
+half shift,typical,a quarter of people picking the more typical image,0.0032666666666666664,0.0015060501766219225,4
+half shift,side,a preference for one side of the screen,0.0028333333333333327,0.0026169152859875093,5
+half shift,less_edited,a quarter of people picking the less edited image,0.00020000000000000017,0.0014167750216559805,6
+half shift,scene,scene-specific preferences,-0.0028666666666666662,0.0028111515610893703,7
+planning,fatigue,fatigue building over the session,0.04226666666666667,0.002309730244242732,1
+planning,taste,taste that differs between the two episodes,0.03944999999999999,0.002463330484531743,2
+planning,dull,a shared preference for the duller image,0.034449999999999995,0.0023494773588287935,3
+planning,side,a preference for one side of the screen,0.0032666666666666664,0.0028331372481167705,4
+planning,less_edited,a quarter of people picking the less edited image,-0.0011833333333333335,0.0015646823940186861,5
+planning,typical,a quarter of people picking the more typical image,-0.0018833333333333334,0.0014761802691861529,6
+planning,scene,scene-specific preferences,-0.004616666666666668,0.0032394024248579303,7

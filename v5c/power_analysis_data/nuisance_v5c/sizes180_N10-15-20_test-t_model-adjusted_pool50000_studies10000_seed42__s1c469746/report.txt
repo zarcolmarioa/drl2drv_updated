@@ -1,0 +1,396 @@
+WHICH NUISANCES COST THE PRIMARY TEST POWER, AND 150 AGAINST 180  (nuisance_power_v5c.py, v5c script 5)
+==============================================================================
+run       2026-11-20 12:23:50  (1.4 min, 32 worker process(es), one thread each, 32 cores)
+output    data/power_v5c/nuisance_v5c/sizes180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__s1c469746
+model     adjusted (registered; side + N_corpus + N_orig per block, Firth, no intercept)
+script 7  data/power_v5c/paired_adj_v5c/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s13156d40
+package   data/frozen_trial_lists_v5c/v5c_180
+Script numbers in this report are v5b's: script 6 = thresholds_v5c.py (v5c script 1), script 7 = simulate_power_paired_v5c_adj.py (v5c script 2), script 8 = simulate_c1_v5c.py (v5c script 3), script 8b = simulate_c1_attention_v5c.py (v5c script 4).
+checks    55 PASS, 0 FAIL (section 7)
+
+PLANNING ASSUMPTIONS ARE ASSUMPTIONS, NOT ESTIMATES. The nuisances and their
+default sizes are planning assumptions from script 7; this ranks the assumed
+nuisances at their assumed sizes, not anything measured in participants.
+
+1. SUMMARY
+------------------------------------------------------------------------------
+  Under planning, all nuisances together cost the primary test 0.096 of power
+  on average (half shift: 0.122). The largest costs come from fatigue building
+  over the session (0.048); taste that differs between the two episodes
+  (0.029); a shared preference for the duller image (0.020) (power returned
+  when each is switched off on its own; average over 180 trials per block, N =
+  10, 15, 20 and both features). Almost nothing (less than 0.01 either way) is
+  lost to a quarter of people picking the less edited image, a quarter of
+  people picking the more typical image, a preference for one side of the
+  screen and scene-specific preferences. The order differs: taste that differs
+  between the two episodes and a shared preference for the duller image swap
+  places under half shift (difference there +0.006, SE 0.006; within 2 SE); a
+  quarter of people picking the less edited image and a quarter of people
+  picking the more typical image swap places under half shift (difference
+  there +0.001, SE 0.001; within 2 SE); a quarter of people picking the less
+  edited image and scene-specific preferences swap places under half shift
+  (difference there +0.001, SE 0.002; within 2 SE); a quarter of people
+  picking the more typical image and scene-specific preferences swap places
+  under half shift (difference there +0.001, SE 0.002; within 2 SE); a
+  preference for one side of the screen and scene-specific preferences swap
+  places under half shift (difference there +0.004, SE 0.003; within 2 SE).
+  The seven costs add up to the total drop approximately.
+
+  150 against 180 trials per block: NOT APPLICABLE (v5c has only the 180-trial
+  package). Fatigue itself costs planning 0.048 (SE 0.003); half shift 0.056
+  (SE 0.004) at 180 trials (power returned when it is switched off; average of
+  6 cells). [ASSUMPTIONS: the effect, the nuisances and the fatigue model are
+  planning values.]
+
+  Suggested sentence for the supplement:
+    "Most of the power lost to the assumed nuisances came from fatigue building
+    over the session, taste that differs between the two episodes and a shared
+    preference for the duller image: switching any one of these off restored
+    about 0.02 to 0.05 of the 0.10 lost under the planning scenario (average
+    over 180 trials per block, sample sizes of 10 to 20 and both features). A
+    quarter of people picking the less edited image, a quarter of people picking
+    the more typical image, a preference for one side of the screen and
+    scene-specific preferences cost almost no power."
+
+2. WHAT WAS DONE
+------------------------------------------------------------------------------
+  Paired t-test (the registered primary test), power only, fixed weights,
+  planning and half shift, block size(s) 180, N = 10, 15, 20, both features;
+  pair-specific preferences off; the registered adjusted model. Nine
+  conditions: all nuisances at script 7's defaults; each of the seven switched
+  off on its own (to script 7's 'off' value); no nuisances. Power returned by
+  a nuisance = power with it off minus power with all defaults. Ranked by the
+  unweighted average over the 6 cells. Script 7's person model, pools of
+  50,000 people, 10,000 studies per cell, SE from 20 sub-pools.
+  v5's 'edited looks odd' and 'block order' no longer exist in v5b: the two
+  strategies ('more typical', 'less edited', a quarter each at k = 0.5 per
+  unit of N) replace the first, and fatigue (lapse +0.03 and preferences
+  x0.939 per 100 main trials, anchored at block 1's mean) replaces the second.
+  Common random numbers: within an effect and block size, all nine conditions
+  use the same random draws and the same study draws, so each recovery is a
+  paired difference and its SE is that of the difference. 'Scene dependence
+  off' is SD x 1e-09 rather than exactly 0, because script 7 draws the scene
+  deviations only when they are on and a 0 would shift every later draw; at x
+  1e-9 the deviations are numerically nothing. Switching fatigue off changes
+  the lapse rate and so catch failures and who is excluded: in the fatigue-off
+  and no-nuisance conditions some studies sample different people (section 6),
+  which makes those two paired differences somewhat noisier.
+
+3. RANKING (power returned when switched off; average of 6 cells, with SE)
+------------------------------------------------------------------------------
+
+  planning
+    1. fatigue building over the session                              +0.0481 (SE 0.0034)
+    2. taste that differs between the two episodes                    +0.0294 (SE 0.0031)
+    3. a shared preference for the duller image                       +0.0201 (SE 0.0037)
+    4. a quarter of people picking the less edited image              +0.0037 (SE 0.0017) (costs almost nothing)
+    5. a quarter of people picking the more typical image             +0.0029 (SE 0.0022) (costs almost nothing)
+    6. a preference for one side of the screen                        +0.0017 (SE 0.0026) (costs almost nothing)
+    7. scene-specific preferences                                     -0.0034 (SE 0.0021) (costs almost nothing)
+
+  half shift
+    1. fatigue building over the session                              +0.0563 (SE 0.0035)
+    2. a shared preference for the duller image                       +0.0345 (SE 0.0046)
+    3. taste that differs between the two episodes                    +0.0289 (SE 0.0039)
+    4. scene-specific preferences                                     +0.0028 (SE 0.0027) (costs almost nothing)
+    5. a quarter of people picking the more typical image             +0.0019 (SE 0.0021) (costs almost nothing)
+    6. a quarter of people picking the less edited image              +0.0014 (SE 0.0017) (costs almost nothing)
+    7. a preference for one side of the screen                        -0.0008 (SE 0.0024) (costs almost nothing)
+
+  The order differs: taste that differs between the two episodes and a shared
+  preference for the duller image swap places under half shift (difference
+  there +0.006, SE 0.006; within 2 SE); a quarter of people picking the less
+  edited image and a quarter of people picking the more typical image swap
+  places under half shift (difference there +0.001, SE 0.001; within 2 SE); a
+  quarter of people picking the less edited image and scene-specific
+  preferences swap places under half shift (difference there +0.001, SE 0.002;
+  within 2 SE); a quarter of people picking the more typical image and
+  scene-specific preferences swap places under half shift (difference there
+  +0.001, SE 0.002; within 2 SE); a preference for one side of the screen and
+  scene-specific preferences swap places under half shift (difference there
+  +0.004, SE 0.003; within 2 SE).
+
+  At N = 20 (per block size and feature, planning):
+   size    feature  taste  scene   side   dull  typical  less_edited  fatigue  total drop
+    180 saturation +0.023 -0.005 +0.000 +0.018   +0.009       +0.006   +0.063      +0.101
+    180   contrast +0.034 +0.001 +0.003 +0.020   +0.001       +0.004   +0.036      +0.084
+
+  At N = 20 (per block size and feature, half shift):
+   size    feature  taste  scene   side   dull  typical  less_edited  fatigue  total drop
+    180 saturation +0.023 -0.001 -0.009 +0.034   +0.009       +0.004   +0.058      +0.105
+    180   contrast +0.055 +0.010 +0.008 +0.058   -0.003       -0.003   +0.084      +0.202
+
+4. DO THE SEVEN ADD UP?
+------------------------------------------------------------------------------
+  Total drop = power with no nuisances minus power with all defaults. If the
+  nuisances acted independently, the seven recoveries would sum to it.
+  'Interacting' if the sum differs from the total by more than 2 SE and by
+  more than 0.01.
+  planning    total drop 0.0956 (SE 0.0028); sum of the seven 0.1025 (SE 0.0084);
+              sum minus total +0.0069 (SE 0.0077); ratio 1.07 -> approximately additive
+  half shift  total drop 0.1219 (SE 0.0063); sum of the seven 0.1249 (SE 0.0125);
+              sum minus total +0.0030 (SE 0.0092); ratio 1.02 -> approximately additive
+  A ratio above 1 means switching nuisances off one at a time returns more
+  power in total than switching them all off together (they overlap); below 1,
+  that they compound (each costs more in the presence of the others).
+
+5. 150 AGAINST 180 TRIALS PER BLOCK, WITH FATIGUE COUNTED
+------------------------------------------------------------------------------
+  Power of the paired t-test at each size and the difference (180 minus 150),
+  with its SE (independent pools: sqrt(SE1^2 + SE2^2)); differences of 0.02 or
+  less are ties (script 2's rule). The four conditions are script 7's
+  scenarios; their rows are taken from script 7's adjusted run, after
+  rerunning them with script 7's own streams and checking they match exactly
+  (section 7). The extra 30 trials per block take about 4 minutes per session,
+  6 when responses are slow, by script 2's session estimate. [ASSUMPTIONS]
+  NOT APPLICABLE in v5c: there is only the 180-trial package, so there is
+  no 150 to compare with (size_comparison.csv is empty, figure_sizes.png is not made).
+  Fatigue's own cost at 180 trials is below.
+
+  Fatigue's own power cost at each size (matched family: power returned when fatigue
+  is switched off; average of 6 cells, then per cell):
+      effect  size  fatigue_cost  fatigue_cost_se
+    planning   180       +0.0481          +0.0034
+  half shift   180       +0.0563          +0.0035
+      effect  size  N    feature  fatigue_cost  fatigue_cost_se
+    planning   180 10 saturation       +0.0420          +0.0053
+    planning   180 10   contrast       +0.0348          +0.0051
+    planning   180 15 saturation       +0.0665          +0.0053
+    planning   180 15   contrast       +0.0464          +0.0044
+    planning   180 20 saturation       +0.0630          +0.0052
+    planning   180 20   contrast       +0.0357          +0.0033
+  half shift   180 10 saturation       +0.0266          +0.0047
+  half shift   180 10   contrast       +0.0474          +0.0069
+  half shift   180 15 saturation       +0.0441          +0.0052
+  half shift   180 15   contrast       +0.0772          +0.0053
+  half shift   180 20 saturation       +0.0584          +0.0046
+  half shift   180 20   contrast       +0.0838          +0.0066
+
+6. COMMON DRAWS: HOW CLOSE THE MATCHING IS (exclusions)
+------------------------------------------------------------------------------
+  Share of pool members whose exclusion (3+ catch failures) differs from all
+  defaults, and share of studies that sample exactly the same people. Only
+  conditions that change the lapse rate (fatigue off, no nuisances) can
+  differ.
+  condition        people excluded differently   studies with the same people
+  all defaults                          0.00%                         100.0%
+  dull                                  0.00%                         100.0%
+  fatigue                               3.00%                          60.9%
+  less_edited                           0.00%                         100.0%
+  none                                  3.00%                          60.9%
+  scene                                 0.00%                         100.0%
+  side                                  0.00%                         100.0%
+  taste                                 0.00%                         100.0%
+  typical                               0.00%                         100.0%
+
+7. CHECKS
+------------------------------------------------------------------------------
+  PASS  [regression (v5b_180)] recoveries.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12
+          12 of 12 rows matched, 36 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] anchors.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12
+          464 of 464 rows matched, 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] fatigue_cost.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12
+          14 of 14 rows matched, 2 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)
+  PASS  [regression (v5b_180)] the regression run passed every check
+          data/power_v5c/nuisance_v5c/regression_v5b/sizes180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__s2b9ff9ab: 54 PASS, 0 FAIL
+  PASS  [inputs] simulate_power_paired_v5c_adj.py exists
+          simulate_power_paired_v5c_adj.py
+  PASS  [inputs] simulate_power_paired_v5c_adj.py is the expected version (SHA-256)
+          58a5640be3351ac8...
+  PASS  [inputs] script 2 (imported as script 7) runs in this script's mode, on the matching package
+          script 2 mode v5c, package data/frozen_trial_lists_v5c/v5c_180
+  PASS  [stimulus set] stimulus_manifest.csv and reference_stimulus_path.csv exist
+          data/stimulus_set_v5/7fd72262ba
+  PASS  [stimulus set] stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json)
+          69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2...
+  PASS  [stimulus set] corpus SDs equal the predictors' (39.182, 9.348)
+          median [66.448242, 26.908877], SD [39.181906, 9.348022]
+  PASS  [stimulus set] one original per scene (47 scenes)
+          47
+  PASS  [package v5c 180] every non-image file matches checksums.sha256
+          61 of 61 match
+  PASS  [package v5c 180] every image present matches checksums.sha256 (images are not needed here)
+          632 of 632 present, 0 differ
+  PASS  [package v5c 180] every file read here is listed in checksums.sha256
+          12 files
+  PASS  [package v5c 180] FROZEN.json records the hash of this checksums.sha256
+          package v5c_180
+  PASS  [package v5c 180] A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A
+          180 analysed, 15 repeats, 5 catch, 200 main trials
+  PASS  [package v5c 180] the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)
+          max |difference| 6.0e-06
+  PASS  [package v5c 180] N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists)
+          max |difference| 1.4e-07 (corpus SD)
+  PASS  [package v5c 180] set A: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5c 180] set B: the analysed rows' N equal items.csv's
+          180 items
+  PASS  [package v5c 180] the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)
+          max |difference| 4.8e-07
+  PASS  [package v5c 180] assignment table: 64 slots for the participant group, each with a derealization and an ordinary block
+          64 rows
+  PASS  [inputs] simulate_power_v4_n10_20.py exists
+          simulate_power_v4_n10_20.py
+  PASS  [inputs] simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)
+          on disk 852f3b33eb349153..., expected 852f3b33eb349153...
+  PASS  [inputs] analyse_pair_capacity_v5c.py exists
+          analyse_pair_capacity_v5c.py
+  PASS  [inputs] analyse_pair_capacity_v5c.py is the expected version (SHA-256, FROZEN.json)
+          on disk d12a047011880dc7..., expected d12a047011880dc7...
+  PASS  [inputs] explore_block_length_v5c.py exists
+          explore_block_length_v5c.py
+  PASS  [inputs] explore_block_length_v5c.py is the expected version (SHA-256)
+          on disk 133ab46e447e73de..., expected 133ab46e447e73de...
+  PASS  [inputs] thresholds_v5c.py exists
+          thresholds_v5c.py
+  PASS  [inputs] thresholds_v5c.py is the expected version (SHA-256)
+          on disk 551a658b86703ad1..., expected 551a658b86703ad1...
+  PASS  [inputs] script 7's person model is the registered adjusted model
+          adjusted
+  PASS  [inputs] script 7's adjusted run exists (paired_power.csv, thresholds_adjusted.csv, checks.csv, run_meta.json)
+          data/power_v5c/paired_adj_v5c/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s13156d40
+  PASS  [inputs] script 7's adjusted run passed every check
+          82 PASS, 0 FAIL
+  PASS  [inputs] script 7's run used the adjusted model
+          adjusted
+  PASS  [inputs] script 7's run was made in this mode (v5c)
+          its mode v5c
+  PASS  [inputs] script 7's run read the same frozen package files
+          14 files
+  PASS  [setup] the nine conditions differ from all defaults only in the nuisance switched off
+  PASS  [setup] the size-comparison and anchor scenarios exist in script 7's run
+          5 scenarios
+  PASS  [setup] script 7's fatigue variants are the size comparison's (no fatigue, doubled, 50% recovery)
+          {'no fatigue': {'fatigue_lapse': 0.0, 'fatigue_scale': 1.0}, 'fatigue doubled': {'fatigue_lapse': 0.06, 'fatigue_scale': 0.8817209999999999}, 'fatigue, 50% recovery at the rest': {'fatigue_lapse': 0.03, 'fatigue_scale': 0.939, 'fatigue_recovery': 0.5}}
+  PASS  [workers] one worker gives the same result as 32
+          (180, 'planning', 'all defaults')
+  PASS  [anchors] rerun with script 7's own stream keys, the anchors and the size-comparison conditions reproduce script 7's adjusted run exactly (every N, both tests, both features)
+          440 of 440 cells; largest |diff| 0.0e+00
+  PASS  [common draws] 180 trials, planning: identical responders in all 9 conditions
+  PASS  [common draws] 180 trials, half shift: identical responders in all 9 conditions
+  PASS  [common draws] exclusions identical to all defaults wherever the lapse rate is unchanged (all but fatigue off and no nuisances)
+          largest share differing 0.0000
+  PASS  [common draws] studies sample the same people as with all defaults wherever exclusions are unchanged
+          fatigue off / no nuisances: 3.0% of people excluded differently, 60.9% of studies with the same people
+  PASS  [anchors] the matched family's anchors agree with script 7 within Monte Carlo error (scene off as SD x1e-9 in no nuisances)
+          24 cells; largest |z| 2.01; 4% beyond 1.96
+  PASS  [results] nuisances cost power: total drop positive for both effects
+          planning 0.096, half shift 0.122
+  PASS  [figure] figure text uses plain labels
+
+  Matched family's anchors against script 7 (paired t-test):
+      effect                   anchor  size  N    feature  this_script  script7      z
+    planning all nuisances (defaults)   180 10 saturation        0.467    0.442  1.274
+    planning all nuisances (defaults)   180 10   contrast        0.558    0.558  0.017
+    planning all nuisances (defaults)   180 15 saturation        0.601    0.589  0.562
+    planning all nuisances (defaults)   180 15   contrast        0.722    0.732 -0.624
+    planning all nuisances (defaults)   180 20 saturation        0.723    0.714  0.483
+    planning all nuisances (defaults)   180 20   contrast        0.841    0.844 -0.230
+    planning             no nuisances   180 10 saturation        0.540    0.519  0.941
+    planning             no nuisances   180 10   contrast        0.650    0.659 -0.606
+    planning             no nuisances   180 15 saturation        0.714    0.707  0.379
+    planning             no nuisances   180 15   contrast        0.832    0.837 -0.430
+    planning             no nuisances   180 20 saturation        0.824    0.816  0.518
+    planning             no nuisances   180 20   contrast        0.925    0.928 -0.389
+  half shift all nuisances (defaults)   180 10 saturation        0.214    0.187  1.888
+  half shift all nuisances (defaults)   180 10   contrast        0.265    0.278 -0.834
+  half shift all nuisances (defaults)   180 15 saturation        0.268    0.248  1.293
+  half shift all nuisances (defaults)   180 15   contrast        0.327    0.354 -1.808
+  half shift all nuisances (defaults)   180 20 saturation        0.339    0.304  2.007
+  half shift all nuisances (defaults)   180 20   contrast        0.428    0.439 -0.586
+  half shift             no nuisances   180 10 saturation        0.260    0.286 -1.490
+  half shift             no nuisances   180 10   contrast        0.381    0.366  0.662
+  half shift             no nuisances   180 15 saturation        0.350    0.376 -1.460
+  half shift             no nuisances   180 15   contrast        0.507    0.511 -0.147
+  half shift             no nuisances   180 20 saturation        0.444    0.449 -0.274
+  half shift             no nuisances   180 20   contrast        0.631    0.619  0.515
+
+8. RUN TIME
+------------------------------------------------------------------------------
+  This run: 1.4 min with 32 worker process(es) (18 matched-family pools and 10 of script 7's pools rerun).
+
+10. REGRESSION ON v5b_180 (proves the copy did not change the method)
+------------------------------------------------------------------------------
+Regression run reused: data/power_v5c/nuisance_v5c/regression_v5b/sizes180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__s2b9ff9ab
+  (the same script file, SHA-256 ddaed1cd26b07aeb...; 54 PASS, 0 FAIL)
+every row of 180 trials (the slice reproduced is all of v5b's 180-trial cells): rates
+and shares identical, other values within 1e-12 (v5b's 'exact apart from the last
+bits'; another CPU or numerical library changes only the last bits of a floating-point sum).
+
+              what  rows_ref  rows_matched  columns_compared  max_abs_diff  max_abs_diff_rates  identical status
+    recoveries.csv        12            12                36       0.0e+00             0.0e+00       True   PASS
+       anchors.csv       464           464                 4       0.0e+00             0.0e+00       True   PASS
+  fatigue_cost.csv        14            14                 2       0.0e+00             0.0e+00       True   PASS
+
+  Regression: PASS (a FAIL stops the v5c run).
+
+11. COMPARISON WITH v5b'S REGISTERED RESULTS (nuisance_v5b)
+------------------------------------------------------------------------------
+v5b: sizes150-180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__sbb19480e. v5b ranked the nuisances over 150 and 180 trials (12 cells);
+v5c has 180 trials only (6 cells: N = 10, 15, 20 x 2 features), so the like-for-like v5b
+value ('v5b') is v5b's average over its 6 cells at 180 trials, from its recoveries.csv. v5b's
+registered 12-cell value is shown beside it. The same streams and seeds, so the differences
+come from the lists. '*'/flag: a change larger than 0.05. 150 against 180 trials: not applicable.
+
+  planning
+                                                     label  v5b (150+180)  v5b (180)  v5c (180)  change  rank_v5b  rank_v5c flag
+               taste that differs between the two episodes         +0.038     +0.039     +0.029  -0.010         2         2     
+                                scene-specific preferences         -0.001     -0.005     -0.003  +0.001         7         7     
+                   a preference for one side of the screen         +0.003     +0.003     +0.002  -0.002         4         6     
+                  a shared preference for the duller image         +0.034     +0.034     +0.020  -0.014         3         3     
+        a quarter of people picking the more typical image         -0.000     -0.002     +0.003  +0.005         6         5     
+         a quarter of people picking the less edited image         +0.000     -0.001     +0.004  +0.005         5         4     
+                         fatigue building over the session         +0.041     +0.042     +0.048  +0.006         1         1     
+  all nuisances together (no nuisances minus all defaults)            NaN     +0.110     +0.096  -0.014      <NA>      <NA>     
+
+  half shift
+                                                     label  v5b (150+180)  v5b (180)  v5c (180)  change  rank_v5b  rank_v5c           flag
+               taste that differs between the two episodes         +0.040     +0.037     +0.029  -0.008         3         3               
+                                scene-specific preferences         -0.000     -0.003     +0.003  +0.006         7         4               
+                   a preference for one side of the screen         +0.001     +0.003     -0.001  -0.004         5         7               
+                  a shared preference for the duller image         +0.055     +0.062     +0.035  -0.028         2         2               
+        a quarter of people picking the more typical image         +0.001     +0.003     +0.002  -0.001         4         5               
+         a quarter of people picking the less edited image         +0.001     +0.000     +0.001  +0.001         6         6               
+                         fatigue building over the session         +0.065     +0.068     +0.056  -0.012         1         1               
+  all nuisances together (no nuisances minus all defaults)            NaN     +0.195     +0.122  -0.073      <NA>      <NA> CHANGED > 0.05
+
+  Per cell (180 trials, N 10/15/20, both features): 23 of 120 recoveries and powers changed by more than 0.05 (comparison.csv).
+  Power with all nuisances at defaults and with none (paired t-test):
+                                          row  v5b N10  v5b N15  v5b N20  v5c N10  v5c N15  v5c N20  max|chg| flag
+    half shift, power: all defaults, contrast    0.277    0.370    0.477    0.265    0.327    0.428     0.049     
+  half shift, power: all defaults, saturation    0.234    0.313    0.409    0.214    0.268    0.339     0.070    *
+      planning, power: all defaults, contrast    0.614    0.787    0.895    0.558    0.722    0.841     0.065    *
+    planning, power: all defaults, saturation    0.537    0.703    0.820    0.467    0.601    0.723     0.103    *
+            half shift, power: none, contrast    0.448    0.620    0.727    0.381    0.507    0.631     0.112    *
+          half shift, power: none, saturation    0.349    0.495    0.610    0.260    0.350    0.444     0.167    *
+              planning, power: none, contrast    0.743    0.896    0.970    0.650    0.832    0.925     0.093    *
+            planning, power: none, saturation    0.657    0.825    0.924    0.540    0.714    0.824     0.117    *
+
+12. FILES
+------------------------------------------------------------------------------
+  anchors.csv
+  checks.csv
+  comparison.csv
+  fatigue_cost.csv
+  figure_nuisances.png
+  ranking.csv
+  recoveries.csv
+  report.txt
+  run_meta.json
+  settings.json
+  size_comparison.csv
+  summary.txt

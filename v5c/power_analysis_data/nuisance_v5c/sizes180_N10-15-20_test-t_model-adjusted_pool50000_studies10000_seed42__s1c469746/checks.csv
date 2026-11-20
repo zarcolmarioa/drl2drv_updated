@@ -1,0 +1,56 @@
+section,check,status,detail
+regression (v5b_180),"recoveries.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12",PASS,"12 of 12 rows matched, 36 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"anchors.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12",PASS,"464 of 464 rows matched, 4 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),"fatigue_cost.csv equals v5b's (nuisance_v5b): rates identical, other values within 1e-12",PASS,"14 of 14 rows matched, 2 columns, max |difference| 0.0e+00 (rates 0.0e+00; bit-identical: yes)"
+regression (v5b_180),the regression run passed every check,PASS,"data/power_v5c/nuisance_v5c/regression_v5b/sizes180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__s2b9ff9ab: 54 PASS, 0 FAIL"
+inputs,simulate_power_paired_v5c_adj.py exists,PASS,simulate_power_paired_v5c_adj.py
+inputs,simulate_power_paired_v5c_adj.py is the expected version (SHA-256),PASS,58a5640be3351ac8...
+inputs,"script 2 (imported as script 7) runs in this script's mode, on the matching package",PASS,"script 2 mode v5c, package data/frozen_trial_lists_v5c/v5c_180"
+stimulus set,stimulus_manifest.csv and reference_stimulus_path.csv exist,PASS,data/stimulus_set_v5/7fd72262ba
+stimulus set,stimulus_manifest.csv is the one the packages were built from (SHA-256 in FROZEN.json),PASS,"69f0529f9f539ad2..., FROZEN.json 69f0529f9f539ad2..."
+stimulus set,"corpus SDs equal the predictors' (39.182, 9.348)",PASS,"median [66.448242, 26.908877], SD [39.181906, 9.348022]"
+stimulus set,one original per scene (47 scenes),PASS,47
+package v5c 180,every non-image file matches checksums.sha256,PASS,61 of 61 match
+package v5c 180,every image present matches checksums.sha256 (images are not needed here),PASS,"632 of 632 present, 0 differ"
+package v5c 180,every file read here is listed in checksums.sha256,PASS,12 files
+package v5c 180,FROZEN.json records the hash of this checksums.sha256,PASS,package v5c_180
+package v5c 180,"A_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"A_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o1: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o2: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o3: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"B_o4: analysed, consistency and catch counts equal design.json; every repeat shows the same image A",PASS,"180 analysed, 15 repeats, 5 catch, 200 main trials"
+package v5c 180,"the lists' d_sat and d_fog equal manifest.csv's features (A - B saturation, B - A contrast)",PASS,max |difference| 6.0e-06
+package v5c 180,N_corpus and N_orig rebuilt from manifest.csv and the stimulus table's originals equal the lists' (validates the computation used for the v5 lists),PASS,max |difference| 1.4e-07 (corpus SD)
+package v5c 180,set A: the analysed rows' N equal items.csv's,PASS,180 items
+package v5c 180,set B: the analysed rows' N equal items.csv's,PASS,180 items
+package v5c 180,"the leak recomputed here equals FROZEN.json's normality.recomputed (overall fit, both definitions)",PASS,max |difference| 4.8e-07
+package v5c 180,"assignment table: 64 slots for the participant group, each with a derealization and an ordinary block",PASS,64 rows
+inputs,simulate_power_v4_n10_20.py exists,PASS,simulate_power_v4_n10_20.py
+inputs,"simulate_power_v4_n10_20.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk 852f3b33eb349153..., expected 852f3b33eb349153..."
+inputs,analyse_pair_capacity_v5c.py exists,PASS,analyse_pair_capacity_v5c.py
+inputs,"analyse_pair_capacity_v5c.py is the expected version (SHA-256, FROZEN.json)",PASS,"on disk d12a047011880dc7..., expected d12a047011880dc7..."
+inputs,explore_block_length_v5c.py exists,PASS,explore_block_length_v5c.py
+inputs,explore_block_length_v5c.py is the expected version (SHA-256),PASS,"on disk 133ab46e447e73de..., expected 133ab46e447e73de..."
+inputs,thresholds_v5c.py exists,PASS,thresholds_v5c.py
+inputs,thresholds_v5c.py is the expected version (SHA-256),PASS,"on disk 551a658b86703ad1..., expected 551a658b86703ad1..."
+inputs,script 7's person model is the registered adjusted model,PASS,adjusted
+inputs,"script 7's adjusted run exists (paired_power.csv, thresholds_adjusted.csv, checks.csv, run_meta.json)",PASS,data/power_v5c/paired_adj_v5c/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__s13156d40
+inputs,script 7's adjusted run passed every check,PASS,"82 PASS, 0 FAIL"
+inputs,script 7's run used the adjusted model,PASS,adjusted
+inputs,script 7's run was made in this mode (v5c),PASS,its mode v5c
+inputs,script 7's run read the same frozen package files,PASS,14 files
+setup,the nine conditions differ from all defaults only in the nuisance switched off,PASS,
+setup,the size-comparison and anchor scenarios exist in script 7's run,PASS,5 scenarios
+setup,"script 7's fatigue variants are the size comparison's (no fatigue, doubled, 50% recovery)",PASS,"{'no fatigue': {'fatigue_lapse': 0.0, 'fatigue_scale': 1.0}, 'fatigue doubled': {'fatigue_lapse': 0.06, 'fatigue_scale': 0.8817209999999999}, 'fatigue, 50% recovery at the rest': {'fatigue_lapse': 0.03, 'fatigue_scale': 0.939, 'fatigue_recovery': 0.5}}"
+workers,one worker gives the same result as 32,PASS,"(180, 'planning', 'all defaults')"
+anchors,"rerun with script 7's own stream keys, the anchors and the size-comparison conditions reproduce script 7's adjusted run exactly (every N, both tests, both features)",PASS,440 of 440 cells; largest |diff| 0.0e+00
+common draws,"180 trials, planning: identical responders in all 9 conditions",PASS,
+common draws,"180 trials, half shift: identical responders in all 9 conditions",PASS,
+common draws,exclusions identical to all defaults wherever the lapse rate is unchanged (all but fatigue off and no nuisances),PASS,largest share differing 0.0000
+common draws,studies sample the same people as with all defaults wherever exclusions are unchanged,PASS,"fatigue off / no nuisances: 3.0% of people excluded differently, 60.9% of studies with the same people"
+anchors,the matched family's anchors agree with script 7 within Monte Carlo error (scene off as SD x1e-9 in no nuisances),PASS,24 cells; largest |z| 2.01; 4% beyond 1.96
+results,nuisances cost power: total drop positive for both effects,PASS,"planning 0.096, half shift 0.122"
+figure,figure text uses plain labels,PASS,

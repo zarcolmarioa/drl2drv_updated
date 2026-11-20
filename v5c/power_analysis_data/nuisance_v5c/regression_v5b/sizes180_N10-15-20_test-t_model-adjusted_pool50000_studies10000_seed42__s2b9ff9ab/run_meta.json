@@ -1,0 +1,198 @@
+{
+  "started": "2026-11-20 12:23:50",
+  "minutes": 0.7423722227414449,
+  "workers": 32,
+  "python": "3.11.15",
+  "numpy": "2.4.4",
+  "pandas": "3.0.3",
+  "platform": "Linux-7.2.11-arch1-1-x86_64-with-glibc2.44",
+  "cpu_count": 32,
+  "output_dir": "data/power_v5c/nuisance_v5c/regression_v5b/sizes180_N10-15-20_test-t_model-adjusted_pool50000_studies10000_seed42__s2b9ff9ab",
+  "person_model": "adjusted",
+  "input_sha256": {
+    "simulate_power_paired_v5c_adj.py": "58a5640be3351ac80af350064fc8664409e1ac02f43039278bbe304f2bb98414",
+    "data/stimulus_set_v5/7fd72262ba/stimulus_manifest.csv": "69f0529f9f539ad25e830806517f8f759389b3a5c9011b31e8ede5596727cfa6",
+    "data/stimulus_set_v5/7fd72262ba/reference_stimulus_path.csv": "a73ef75d4cefccde36743693ab0d0f0b3a5fa029640ba0eec15af9d84781279a",
+    "data/frozen_trial_lists_v5b/v5b_180/FROZEN.json": "b060366f8ffa4b0e155e87e640a7d01154b8be5eec4a5ebe9d25d7e933913720",
+    "data/frozen_trial_lists_v5b/v5b_180/checksums.sha256": "88eb7ec1e8db95aa1414600fd9c630080f38b1813c2d5be9d35a54c95eebbaec",
+    "data/frozen_trial_lists_v5b/v5b_180/package/design.json": "87062ee23b078db9bfb30ad81f51af36fcd752ef1263ef0d514f8ab617f2ca60",
+    "data/frozen_trial_lists_v5b/v5b_180/package/assignment.csv": "cc16a9bf3b6c878ac8ead0c696c24fe1a9920eb9f6c510ee27c46d0056e45a5b",
+    "data/frozen_trial_lists_v5b/v5b_180/package/manifest.csv": "8a39739e46b6bdc8333ee452f7ef2d162d19da122d384e8106db5d4a445fe067",
+    "data/frozen_trial_lists_v5b/v5b_180/package/items.csv": "b124f2fbcbb5b870ea4c851470476984173275632421214862d0c20bbbaaeefe",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/A_o1.json": "f175858f0137575a6bc7bfbf7048b15ed5786ee255864e1319c14cadb893b03a",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/A_o2.json": "7b67abe61aca99d230be5ed0cbf91cf86ffa2488753900f3d20a848afe46f7b0",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/A_o3.json": "917c84c755c4e35c92b40b668d2796eb28efd76481fe2e7c02ef8dd5fe8f9be6",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/A_o4.json": "06b74f22fd59acb9edeb49e6b5ad6e66b2d20023ac81bdfe9b572b9b28418f19",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/B_o1.json": "106afe1ac92527374ab10aa110107ea850dc4b236ac838bdafcbe3f2004385f1",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/B_o2.json": "3fe53c2753eb1163eca83177d9cba4a94bd34f8278e158b781d7d6d153e8f6cd",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/B_o3.json": "32fed972f4806c7f7f385cd6ad8141629fc2f691b31d6d1424a00eea5c18cac8",
+    "data/frozen_trial_lists_v5b/v5b_180/package/lists/B_o4.json": "9989139ce1368627388af414506d1300a99108401f5198a82e7a01f3d6d69fa4",
+    "simulate_power_v4_n10_20.py": "852f3b33eb349153fbff9f95c50e1cd3c4f84f68b204d79a23f020f471bd1730",
+    "analyse_pair_capacity_v5b.py": "f7ab2c91e5a0be23e1d0f08ff96876d785487633c0dadff2781cf16826f45df4",
+    "explore_block_length_v5b.py": "dc38cc67b547eaa39cf0743143838fb0eeee84b4585ee5172613e3996024c526",
+    "thresholds_v5c.py": "551a658b86703ad1394468f219c537582e32329f840569f80b90bfdf858d55c4",
+    "data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c/paired_power.csv": "6bef6d52ea01ea6688c442f082e9337dac84af19af9a34108b0f52e42a254fcf",
+    "data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c/thresholds_adjusted.csv": "99c6406bb6752eaaa2d6f59d7b329e1ef926fbb34c16e368fea908a3fb7dd769",
+    "data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c/checks.csv": "dd3c8a91aed5690e206aa36952aab29e34dd1a79c7fb7c148f65cbd9f6df1bc9",
+    "data/power_v5c/paired_adj_v5c/regression_v5b/sizes180_N10-20_model-adjusted_pool50000_studies10000_mixed0_seed42__se7f16b4c/run_meta.json": "56b7f159a8a02e6d37ae000db96fd9eeda1d363ff7b1dfb9653bf5ab730a7375"
+  },
+  "ranking": [
+    {
+      "effect": "half shift",
+      "nuisance": "fatigue",
+      "label": "fatigue building over the session",
+      "recovery": 0.06795,
+      "recovery_se": 0.003936058749502116,
+      "rank": 1
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "dull",
+      "label": "a shared preference for the duller image",
+      "recovery": 0.06241666666666666,
+      "recovery_se": 0.004801247096766686,
+      "rank": 2
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "taste",
+      "label": "taste that differs between the two episodes",
+      "recovery": 0.03729999999999999,
+      "recovery_se": 0.0035926256504578208,
+      "rank": 3
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "typical",
+      "label": "a quarter of people picking the more typical image",
+      "recovery": 0.0032666666666666664,
+      "recovery_se": 0.0015060501766219225,
+      "rank": 4
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "side",
+      "label": "a preference for one side of the screen",
+      "recovery": 0.0028333333333333327,
+      "recovery_se": 0.0026169152859875093,
+      "rank": 5
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "less_edited",
+      "label": "a quarter of people picking the less edited image",
+      "recovery": 0.00020000000000000017,
+      "recovery_se": 0.0014167750216559805,
+      "rank": 6
+    },
+    {
+      "effect": "half shift",
+      "nuisance": "scene",
+      "label": "scene-specific preferences",
+      "recovery": -0.0028666666666666662,
+      "recovery_se": 0.0028111515610893703,
+      "rank": 7
+    },
+    {
+      "effect": "planning",
+      "nuisance": "fatigue",
+      "label": "fatigue building over the session",
+      "recovery": 0.04226666666666667,
+      "recovery_se": 0.002309730244242732,
+      "rank": 1
+    },
+    {
+      "effect": "planning",
+      "nuisance": "taste",
+      "label": "taste that differs between the two episodes",
+      "recovery": 0.03944999999999999,
+      "recovery_se": 0.002463330484531743,
+      "rank": 2
+    },
+    {
+      "effect": "planning",
+      "nuisance": "dull",
+      "label": "a shared preference for the duller image",
+      "recovery": 0.034449999999999995,
+      "recovery_se": 0.0023494773588287935,
+      "rank": 3
+    },
+    {
+      "effect": "planning",
+      "nuisance": "side",
+      "label": "a preference for one side of the screen",
+      "recovery": 0.0032666666666666664,
+      "recovery_se": 0.0028331372481167705,
+      "rank": 4
+    },
+    {
+      "effect": "planning",
+      "nuisance": "less_edited",
+      "label": "a quarter of people picking the less edited image",
+      "recovery": -0.0011833333333333335,
+      "recovery_se": 0.0015646823940186861,
+      "rank": 5
+    },
+    {
+      "effect": "planning",
+      "nuisance": "typical",
+      "label": "a quarter of people picking the more typical image",
+      "recovery": -0.0018833333333333334,
+      "recovery_se": 0.0014761802691861529,
+      "rank": 6
+    },
+    {
+      "effect": "planning",
+      "nuisance": "scene",
+      "label": "scene-specific preferences",
+      "recovery": -0.004616666666666668,
+      "recovery_se": 0.0032394024248579303,
+      "rank": 7
+    }
+  ],
+  "additivity": [
+    {
+      "effect": "planning",
+      "total_drop": 0.10976666666666668,
+      "total_drop_se": 0.0033163691129859544,
+      "sum_of_seven": 0.11174999999999999,
+      "sum_se": 0.006970903395690316,
+      "sum_minus_total": 0.0019833333333333326,
+      "sum_minus_total_se": 0.006815079384537194,
+      "ratio": 1.0180686304281807,
+      "interacting": false
+    },
+    {
+      "effect": "half shift",
+      "total_drop": 0.19456666666666667,
+      "total_drop_se": 0.006892113469043833,
+      "sum_of_seven": 0.17110000000000003,
+      "sum_se": 0.011043139756089053,
+      "sum_minus_total": -0.02346666666666667,
+      "sum_minus_total_se": 0.009746896342123145,
+      "ratio": 0.8793900976529041,
+      "interacting": true
+    }
+  ],
+  "fatigue_cost": [
+    {
+      "effect": "planning",
+      "size": 180,
+      "fatigue_cost": 0.04226666666666667,
+      "fatigue_cost_se": 0.002309730244242732
+    },
+    {
+      "effect": "half shift",
+      "size": 180,
+      "fatigue_cost": 0.06795,
+      "fatigue_cost_se": 0.003936058749502116
+    }
+  ],
+  "mode": "regression",
+  "script": "nuisance_power_v5c.py",
+  "script_sha256": "ddaed1cd26b07aeba7e1953941cb32368567825f3fe6337187b1ab49e508c61b",
+  "regression_pass": true,
+  "regression_run": null,
+  "checks_pass": 54,
+  "checks_fail": 0
+}

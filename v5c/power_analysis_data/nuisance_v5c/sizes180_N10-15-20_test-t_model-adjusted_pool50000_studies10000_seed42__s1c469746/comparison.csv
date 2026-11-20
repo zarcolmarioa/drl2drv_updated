@@ -1,0 +1,137 @@
+group,effect,nuisance,label,v5b_registered_150_180,v5b,v5c,rank_v5b,rank_v5c,change,flag,N,feature,measure
+ranking (average recovery),planning,taste,taste that differs between the two episodes,0.038091666666666676,0.03945,0.029433333333333332,2,2,-0.010016666666666667,,,,
+ranking (average recovery),planning,scene,scene-specific preferences,-0.0011166666666666666,-0.004616666666666667,-0.0033666666666666662,7,7,0.0012500000000000011,,,,
+ranking (average recovery),planning,side,a preference for one side of the screen,0.003033333333333333,0.0032666666666666664,0.0017000000000000008,4,6,-0.0015666666666666656,,,,
+ranking (average recovery),planning,dull,a shared preference for the duller image,0.03426666666666667,0.03445,0.02008333333333333,3,3,-0.01436666666666667,,,,
+ranking (average recovery),planning,typical,a quarter of people picking the more typical image,-0.0001416666666666668,-0.0018833333333333339,0.002866666666666667,6,5,0.004750000000000001,,,,
+ranking (average recovery),planning,less_edited,a quarter of people picking the less edited image,0.00019999999999999974,-0.0011833333333333331,0.0037166666666666667,5,4,0.0049,,,,
+ranking (average recovery),planning,fatigue,fatigue building over the session,0.04115833333333334,0.042266666666666675,0.04806666666666667,1,1,0.005799999999999993,,,,
+ranking (average recovery),planning,total drop,all nuisances together (no nuisances minus all defaults),,0.10976666666666667,0.09564999999999999,,,-0.01411666666666668,,,,
+ranking (average recovery),half shift,taste,taste that differs between the two episodes,0.03953333333333334,0.0373,0.028933333333333332,3,3,-0.008366666666666668,,,,
+ranking (average recovery),half shift,scene,scene-specific preferences,-0.00022499999999999942,-0.0028666666666666667,0.002783333333333333,7,4,0.00565,,,,
+ranking (average recovery),half shift,side,a preference for one side of the screen,0.000983333333333333,0.002833333333333333,-0.0008166666666666666,5,7,-0.0036499999999999996,,,,
+ranking (average recovery),half shift,dull,a shared preference for the duller image,0.055433333333333334,0.06241666666666667,0.03453333333333333,2,2,-0.027883333333333336,,,,
+ranking (average recovery),half shift,typical,a quarter of people picking the more typical image,0.0012333333333333332,0.0032666666666666664,0.0018833333333333328,4,5,-0.0013833333333333336,,,,
+ranking (average recovery),half shift,less_edited,a quarter of people picking the less edited image,0.0006250000000000002,0.0002000000000000001,0.0013666666666666669,6,6,0.0011666666666666668,,,,
+ranking (average recovery),half shift,fatigue,fatigue building over the session,0.06473333333333334,0.06795,0.05625,1,1,-0.011699999999999995,,,,
+ranking (average recovery),half shift,total drop,all nuisances together (no nuisances minus all defaults),,0.19456666666666667,0.12193333333333337,,,-0.0726333333333333,CHANGED > 0.05,,,
+per cell (180 trials),half shift,,,,0.0364,0.0272,,,-0.009200000000000003,,10.0,contrast,recovery: taste
+per cell (180 trials),half shift,,,,0.0087,0.0051,,,-0.003599999999999999,,10.0,saturation,recovery: taste
+per cell (180 trials),half shift,,,,0.0618,0.048,,,-0.0138,,15.0,contrast,recovery: taste
+per cell (180 trials),half shift,,,,0.0233,0.0156,,,-0.007700000000000002,,15.0,saturation,recovery: taste
+per cell (180 trials),half shift,,,,0.0706,0.0551,,,-0.015499999999999993,,20.0,contrast,recovery: taste
+per cell (180 trials),half shift,,,,0.023,0.0226,,,-0.00040000000000000105,,20.0,saturation,recovery: taste
+per cell (180 trials),planning,,,,0.0418,0.036,,,-0.0058,,10.0,contrast,recovery: taste
+per cell (180 trials),planning,,,,0.0371,0.02,,,-0.0171,,10.0,saturation,recovery: taste
+per cell (180 trials),planning,,,,0.046,0.0354,,,-0.010599999999999998,,15.0,contrast,recovery: taste
+per cell (180 trials),planning,,,,0.0409,0.0276,,,-0.0133,,15.0,saturation,recovery: taste
+per cell (180 trials),planning,,,,0.0365,0.0343,,,-0.0022000000000000006,,20.0,contrast,recovery: taste
+per cell (180 trials),planning,,,,0.0344,0.0233,,,-0.011099999999999999,,20.0,saturation,recovery: taste
+per cell (180 trials),half shift,,,,0.0025,0.0045,,,0.0019999999999999996,,10.0,contrast,recovery: scene
+per cell (180 trials),half shift,,,,0.0006,-0.0024,,,-0.0029999999999999996,,10.0,saturation,recovery: scene
+per cell (180 trials),half shift,,,,-0.0066,0.0045,,,0.011099999999999999,,15.0,contrast,recovery: scene
+per cell (180 trials),half shift,,,,0.0014,0.0009,,,-0.0005,,15.0,saturation,recovery: scene
+per cell (180 trials),half shift,,,,-0.0127,0.0103,,,0.023,,20.0,contrast,recovery: scene
+per cell (180 trials),half shift,,,,-0.0024,-0.0011,,,0.0012999999999999997,,20.0,saturation,recovery: scene
+per cell (180 trials),planning,,,,-0.0063,-0.0008,,,0.0055,,10.0,contrast,recovery: scene
+per cell (180 trials),planning,,,,-0.0063,-0.011,,,-0.004699999999999999,,10.0,saturation,recovery: scene
+per cell (180 trials),planning,,,,-0.0023,0.0019,,,0.0042,,15.0,contrast,recovery: scene
+per cell (180 trials),planning,,,,-0.0082,-0.0063,,,0.0019000000000000006,,15.0,saturation,recovery: scene
+per cell (180 trials),planning,,,,-0.0037,0.0012,,,0.0049,,20.0,contrast,recovery: scene
+per cell (180 trials),planning,,,,-0.0009,-0.0052,,,-0.0043,,20.0,saturation,recovery: scene
+per cell (180 trials),half shift,,,,0.0031,0.0056,,,0.0025,,10.0,contrast,recovery: side
+per cell (180 trials),half shift,,,,-0.0001,-0.0077,,,-0.0076,,10.0,saturation,recovery: side
+per cell (180 trials),half shift,,,,-0.004,0.0071,,,0.0111,,15.0,contrast,recovery: side
+per cell (180 trials),half shift,,,,0.0104,-0.0095,,,-0.0199,,15.0,saturation,recovery: side
+per cell (180 trials),half shift,,,,-0.0027,0.0083,,,0.011,,20.0,contrast,recovery: side
+per cell (180 trials),half shift,,,,0.0103,-0.0087,,,-0.019,,20.0,saturation,recovery: side
+per cell (180 trials),planning,,,,-0.0033,-0.0008,,,0.0025,,10.0,contrast,recovery: side
+per cell (180 trials),planning,,,,0.0099,0.0005,,,-0.0094,,10.0,saturation,recovery: side
+per cell (180 trials),planning,,,,-0.002,-0.0002,,,0.0018,,15.0,contrast,recovery: side
+per cell (180 trials),planning,,,,0.0019,0.0073,,,0.0054,,15.0,saturation,recovery: side
+per cell (180 trials),planning,,,,0.0037,0.0034,,,-0.00030000000000000035,,20.0,contrast,recovery: side
+per cell (180 trials),planning,,,,0.0094,0.0,,,-0.0094,,20.0,saturation,recovery: side
+per cell (180 trials),half shift,,,,0.0514,0.0241,,,-0.0273,,10.0,contrast,recovery: dull
+per cell (180 trials),half shift,,,,0.0413,0.0146,,,-0.0267,,10.0,saturation,recovery: dull
+per cell (180 trials),half shift,,,,0.076,0.0534,,,-0.022599999999999995,,15.0,contrast,recovery: dull
+per cell (180 trials),half shift,,,,0.0623,0.0234,,,-0.038900000000000004,,15.0,saturation,recovery: dull
+per cell (180 trials),half shift,,,,0.0751,0.0579,,,-0.0172,,20.0,contrast,recovery: dull
+per cell (180 trials),half shift,,,,0.0684,0.0338,,,-0.034600000000000006,,20.0,saturation,recovery: dull
+per cell (180 trials),planning,,,,0.0327,0.0197,,,-0.013000000000000001,,10.0,contrast,recovery: dull
+per cell (180 trials),planning,,,,0.0386,0.0102,,,-0.0284,,10.0,saturation,recovery: dull
+per cell (180 trials),planning,,,,0.035,0.0308,,,-0.004200000000000002,,15.0,contrast,recovery: dull
+per cell (180 trials),planning,,,,0.0377,0.0213,,,-0.016399999999999998,,15.0,saturation,recovery: dull
+per cell (180 trials),planning,,,,0.0233,0.02,,,-0.003300000000000001,,20.0,contrast,recovery: dull
+per cell (180 trials),planning,,,,0.0394,0.0185,,,-0.0209,,20.0,saturation,recovery: dull
+per cell (180 trials),half shift,,,,0.0095,0.0022,,,-0.007299999999999999,,10.0,contrast,recovery: typical
+per cell (180 trials),half shift,,,,0.0023,0.0033,,,0.001,,10.0,saturation,recovery: typical
+per cell (180 trials),half shift,,,,0.0059,-0.0017,,,-0.0076,,15.0,contrast,recovery: typical
+per cell (180 trials),half shift,,,,0.0012,0.0016,,,0.0004000000000000002,,15.0,saturation,recovery: typical
+per cell (180 trials),half shift,,,,0.0014,-0.0032,,,-0.0046,,20.0,contrast,recovery: typical
+per cell (180 trials),half shift,,,,-0.0007,0.0091,,,0.0098,,20.0,saturation,recovery: typical
+per cell (180 trials),planning,,,,-0.0066,-0.0022,,,0.004399999999999999,,10.0,contrast,recovery: typical
+per cell (180 trials),planning,,,,0.0031,0.003,,,-9.999999999999983e-05,,10.0,saturation,recovery: typical
+per cell (180 trials),planning,,,,-0.0041,0.0017,,,0.0058000000000000005,,15.0,contrast,recovery: typical
+per cell (180 trials),planning,,,,-0.0025,0.005,,,0.0075,,15.0,saturation,recovery: typical
+per cell (180 trials),planning,,,,-0.0019,0.0007,,,0.0026,,20.0,contrast,recovery: typical
+per cell (180 trials),planning,,,,0.0007,0.009,,,0.0083,,20.0,saturation,recovery: typical
+per cell (180 trials),half shift,,,,0.0037,0.0051,,,0.0014000000000000002,,10.0,contrast,recovery: less_edited
+per cell (180 trials),half shift,,,,0.0015,0.0004,,,-0.0011,,10.0,saturation,recovery: less_edited
+per cell (180 trials),half shift,,,,0.0008,-0.0001,,,-0.0009000000000000001,,15.0,contrast,recovery: less_edited
+per cell (180 trials),half shift,,,,-0.0006,0.001,,,0.0015999999999999999,,15.0,saturation,recovery: less_edited
+per cell (180 trials),half shift,,,,-0.0003,-0.0025,,,-0.0022,,20.0,contrast,recovery: less_edited
+per cell (180 trials),half shift,,,,-0.0039,0.0043,,,0.008199999999999999,,20.0,saturation,recovery: less_edited
+per cell (180 trials),planning,,,,-0.0016,0.0015,,,0.0031000000000000003,,10.0,contrast,recovery: less_edited
+per cell (180 trials),planning,,,,0.0008,0.0027,,,0.0019000000000000002,,10.0,saturation,recovery: less_edited
+per cell (180 trials),planning,,,,-0.0024,0.0049,,,0.007299999999999999,,15.0,contrast,recovery: less_edited
+per cell (180 trials),planning,,,,-0.0063,0.0029,,,0.0092,,15.0,saturation,recovery: less_edited
+per cell (180 trials),planning,,,,0.0025,0.0043,,,0.0018,,20.0,contrast,recovery: less_edited
+per cell (180 trials),planning,,,,-0.0001,0.006,,,0.0061,,20.0,saturation,recovery: less_edited
+per cell (180 trials),half shift,,,,0.0476,0.0474,,,-0.00020000000000000573,,10.0,contrast,recovery: fatigue
+per cell (180 trials),half shift,,,,0.0489,0.0266,,,-0.0223,,10.0,saturation,recovery: fatigue
+per cell (180 trials),half shift,,,,0.0752,0.0772,,,0.0020000000000000018,,15.0,contrast,recovery: fatigue
+per cell (180 trials),half shift,,,,0.0741,0.0441,,,-0.03,,15.0,saturation,recovery: fatigue
+per cell (180 trials),half shift,,,,0.076,0.0838,,,0.007800000000000001,,20.0,contrast,recovery: fatigue
+per cell (180 trials),half shift,,,,0.0859,0.0584,,,-0.027500000000000004,,20.0,saturation,recovery: fatigue
+per cell (180 trials),planning,,,,0.034,0.0348,,,0.0007999999999999952,,10.0,contrast,recovery: fatigue
+per cell (180 trials),planning,,,,0.0485,0.042,,,-0.006499999999999999,,10.0,saturation,recovery: fatigue
+per cell (180 trials),planning,,,,0.0402,0.0464,,,0.006199999999999997,,15.0,contrast,recovery: fatigue
+per cell (180 trials),planning,,,,0.0539,0.0665,,,0.0126,,15.0,saturation,recovery: fatigue
+per cell (180 trials),planning,,,,0.0285,0.0357,,,0.0072000000000000015,,20.0,contrast,recovery: fatigue
+per cell (180 trials),planning,,,,0.0485,0.063,,,0.014499999999999999,,20.0,saturation,recovery: fatigue
+per cell (180 trials),half shift,,,,0.1704,0.116,,,-0.05439999999999999,CHANGED > 0.05,10.0,contrast,total drop
+per cell (180 trials),half shift,,,,0.1146,0.0457,,,-0.06889999999999999,CHANGED > 0.05,10.0,saturation,total drop
+per cell (180 trials),half shift,,,,0.2492,0.1808,,,-0.06840000000000002,CHANGED > 0.05,15.0,contrast,total drop
+per cell (180 trials),half shift,,,,0.1819,0.0818,,,-0.10010000000000001,CHANGED > 0.05,15.0,saturation,total drop
+per cell (180 trials),half shift,,,,0.2496,0.2022,,,-0.0474,,20.0,contrast,total drop
+per cell (180 trials),half shift,,,,0.2017,0.1051,,,-0.09659999999999999,CHANGED > 0.05,20.0,saturation,total drop
+per cell (180 trials),planning,,,,0.1296,0.092,,,-0.037599999999999995,,10.0,contrast,total drop
+per cell (180 trials),planning,,,,0.1201,0.0737,,,-0.0464,,10.0,saturation,total drop
+per cell (180 trials),planning,,,,0.1091,0.11,,,0.000899999999999998,,15.0,contrast,total drop
+per cell (180 trials),planning,,,,0.1212,0.1136,,,-0.007599999999999996,,15.0,saturation,total drop
+per cell (180 trials),planning,,,,0.075,0.0837,,,0.0087,,20.0,contrast,total drop
+per cell (180 trials),planning,,,,0.1036,0.1009,,,-0.002699999999999994,,20.0,saturation,total drop
+per cell (180 trials),half shift,,,,0.2774,0.2651,,,-0.012299999999999978,,10.0,contrast,power: all defaults
+per cell (180 trials),half shift,,,,0.234,0.2143,,,-0.019700000000000023,,10.0,saturation,power: all defaults
+per cell (180 trials),half shift,,,,0.3704,0.3266,,,-0.043800000000000006,,15.0,contrast,power: all defaults
+per cell (180 trials),half shift,,,,0.3134,0.2681,,,-0.04530000000000001,,15.0,saturation,power: all defaults
+per cell (180 trials),half shift,,,,0.4773,0.4285,,,-0.04880000000000001,,20.0,contrast,power: all defaults
+per cell (180 trials),half shift,,,,0.4087,0.3387,,,-0.07,CHANGED > 0.05,20.0,saturation,power: all defaults
+per cell (180 trials),planning,,,,0.6136,0.5584,,,-0.05520000000000003,CHANGED > 0.05,10.0,contrast,power: all defaults
+per cell (180 trials),planning,,,,0.5373,0.4665,,,-0.07079999999999997,CHANGED > 0.05,10.0,saturation,power: all defaults
+per cell (180 trials),planning,,,,0.7873,0.7219,,,-0.06540000000000001,CHANGED > 0.05,15.0,contrast,power: all defaults
+per cell (180 trials),planning,,,,0.7034,0.6005,,,-0.10289999999999999,CHANGED > 0.05,15.0,saturation,power: all defaults
+per cell (180 trials),planning,,,,0.8949,0.841,,,-0.05390000000000006,CHANGED > 0.05,20.0,contrast,power: all defaults
+per cell (180 trials),planning,,,,0.8203,0.7229,,,-0.09740000000000004,CHANGED > 0.05,20.0,saturation,power: all defaults
+per cell (180 trials),half shift,,,,0.4478,0.3811,,,-0.06669999999999998,CHANGED > 0.05,10.0,contrast,power: none
+per cell (180 trials),half shift,,,,0.3486,0.26,,,-0.08860000000000001,CHANGED > 0.05,10.0,saturation,power: none
+per cell (180 trials),half shift,,,,0.6196,0.5074,,,-0.11220000000000008,CHANGED > 0.05,15.0,contrast,power: none
+per cell (180 trials),half shift,,,,0.4953,0.3499,,,-0.14540000000000003,CHANGED > 0.05,15.0,saturation,power: none
+per cell (180 trials),half shift,,,,0.7269,0.6307,,,-0.09619999999999995,CHANGED > 0.05,20.0,contrast,power: none
+per cell (180 trials),half shift,,,,0.6104,0.4438,,,-0.16660000000000008,CHANGED > 0.05,20.0,saturation,power: none
+per cell (180 trials),planning,,,,0.7432,0.6504,,,-0.0928,CHANGED > 0.05,10.0,contrast,power: none
+per cell (180 trials),planning,,,,0.6574,0.5402,,,-0.11719999999999997,CHANGED > 0.05,10.0,saturation,power: none
+per cell (180 trials),planning,,,,0.8964,0.8319,,,-0.0645,CHANGED > 0.05,15.0,contrast,power: none
+per cell (180 trials),planning,,,,0.8246,0.7141,,,-0.11050000000000004,CHANGED > 0.05,15.0,saturation,power: none
+per cell (180 trials),planning,,,,0.9699,0.9247,,,-0.04520000000000002,,20.0,contrast,power: none
+per cell (180 trials),planning,,,,0.9239,0.8238,,,-0.10010000000000008,CHANGED > 0.05,20.0,saturation,power: none
