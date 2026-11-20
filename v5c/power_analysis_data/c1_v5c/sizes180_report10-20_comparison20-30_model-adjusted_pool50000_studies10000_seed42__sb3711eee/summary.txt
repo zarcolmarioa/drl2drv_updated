@@ -1,0 +1,19 @@
+C1 UNDER THE v5c DESIGN (simulate_c1_v5c.py): IN PLAIN WORDS
+
+* Checks: 63 of 63 pass.
+* Per-person model: the registered adjusted model (side model + N_corpus + N_orig per block; side and N terms are nuisance terms, never results), from script 7's adjusted run (primary test there: t).
+* C1 power after the attention check, planning, report N = 20 (ASSUMPTIONS): 180, 20 comparison: contrast 0.68, saturation 0.65; 180, 30 comparison: contrast 0.73, saturation 0.71.
+* C1 power after the attention check, half shift, report N = 20 (ASSUMPTIONS): 180, 20 comparison: contrast 0.69, saturation 0.64; 180, 30 comparison: contrast 0.76, saturation 0.72.
+* No effect, equal attention: a C1 claim on either feature in 0.044-0.052 of studies; the attention check fires in 0.036-0.048.
+* Episode-dependent strategy across the groups (report D -kN, comparison O +kN; no effect; every N): largest false-claim rate on either feature 0.051 at k 0.25 (after the check 0.049), 0.053 at k 0.5 (after the check 0.051), 0.059 at k 1 (after the check 0.057).
+* Unequal attention, no effect: C1 claim before the check up to 0.054, after it up to 0.052; the check fires in up to 0.950 of studies.
+* Part B, paired t-test at N = 20, planning, all defaults + pair-specific preferences: SD 1: 0.64-0.77; SD 1.5: 0.56-0.74; SD 2: 0.48-0.65.
+* Regression on v5b_180: PASS (4 of 4 files reproduce v5b's c1_v5b run at 180 trials; data/power_v5c/c1_v5c/regression_v5b/sizes180_report10-20_comparison20-30_model-adjusted_pool50000_studies10000_seed42__sf93ddddc).
+* v5c against v5b (in brackets), 180 trials, C1 after the attention check (report group N 10/15/20):
+    planning, comparison group 20: contrast N10 0.49 (0.52), N15 0.61 (0.64), N20 0.68 (0.72); colour N10 0.47 (0.54), N15 0.58 (0.65), N20 0.65 (0.72).
+    planning, comparison group 30: contrast N10 0.54 (0.56), N15 0.68 (0.70), N20 0.73 (0.77); colour N10 0.51 (0.59), N15 0.65 (0.72), N20 0.71 (0.78).
+    half shift, comparison group 20: contrast N10 0.49 (0.53), N15 0.61 (0.65), N20 0.69 (0.72); colour N10 0.46 (0.52), N15 0.58 (0.64), N20 0.64 (0.72).
+    half shift, comparison group 30: contrast N10 0.56 (0.59), N15 0.66 (0.70), N20 0.76 (0.79); colour N10 0.53 (0.59), N15 0.63 (0.70), N20 0.72 (0.78).
+    no effect, comparison group 20: a claim on either feature before the check N10 0.05 (0.04), N15 0.05 (0.04), N20 0.05 (0.05); after it N10 0.04 (0.04), N15 0.05 (0.04), N20 0.05 (0.05).
+    no effect, comparison group 30: a claim on either feature before the check N10 0.05 (0.04), N15 0.05 (0.05), N20 0.05 (0.05); after it N10 0.05 (0.04), N15 0.05 (0.05), N20 0.05 (0.04).
+* 203 of 1638 compared values changed by more than 0.05 (report section 14, comparison.csv). 150 against 180 trials: not applicable.
